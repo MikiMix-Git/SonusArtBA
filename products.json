@@ -566,5 +566,85 @@
       "Težina": "17.8 kg po komadu",
       "Karakteristike": "P2P™ (Point to Point) Bracing, HPE™ (Helmholtz Pressure Equalizer)"
     }
+  },
+  {
+    "id": "audio-technica-ath-wp900",
+    "name": "Audio-Technica ATH-WP900",
+    "category": "Slušalice",
+    "shortDescription": "Visoko-kvalitetne drvene over-ear slušalice za audiofile.",
+    "longDescription": "Audio-Technica ATH-WP900 su premium over-ear slušalice dizajnirane za izuzetno muzičko iskustvo. Poseduju kućišta od plamenog javora (flamed maple) koja ne samo da izgledaju prelepo, već i doprinose prirodnoj akustici zvuka. Opremljene su 53mm drajverima sa DLC (Diamond-Like Carbon) premazom za pun i detaljan zvuk. Lagane i udobne, idealne su za duge sesije slušanja kod kuće.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Audio-Technica+WP900",
+    "specs": {
+      "Tip": "Over-Ear Dinamičke (Zatvorene)",
+      "Drajveri": "53mm (sa DLC premazom)",
+      "Kućište": "Flamed Maple Drvo",
+      "Frekventni Odziv": "5 Hz - 50 kHz",
+      "Impedansa": "38 Ohma",
+      "Osjetljivost": "100 dB/mW",
+      "Maksimalna Ulazna Snaga": "1,000 mW",
+      "Kabl": "1.2 m sa 3.5mm stereo mini-plug, 1.2 m sa 4.4mm balansirani plug",
+      "Težina": "243 g (bez kabla)"
+    }
+  },
+  {
+    "id": "audio-technica-at-vm95ml",
+    "name": "Audio-Technica AT-VM95ML",
+    "category": "Gramofonske Zvučnice",
+    "shortDescription": "Moving Magnet zvučnica sa MicroLine™ iglom za preciznu reprodukciju.",
+    "longDescription": "Audio-Technica AT-VM95ML je Moving Magnet (MM) fono zvučnica sa visoko-preciznom MicroLine™ iglom. Ova igla omogućava izuzetno precizno praćenje brazde, rezultirajući izvanrednom jasnoćom, smanjenim habanjem ploče i minimalnom distorzijom. Idealna je za audiofile koji žele da iz svoje kolekcije vinila izvuku maksimum detalja i dinamičkog raspona. VM serija omogućava laku zamenu igle.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Audio-Technica+VM95ML",
+    "specs": {
+      "Tip": "VM Dual Magnet (MM)",
+      "Frekventni Odziv": "20 - 25,000 Hz",
+      "Tip Igle": "MicroLine™",
+      "Preporučena Sila Praćenja": "1.8 - 2.2 g (standardno 2.0 g)",
+      "Izlazni Napon": "3.5 mV (1 kHz, 5 cm/sec)",
+      "Separacija Kanala": "23 dB (1 kHz)",
+      "Balans Kanala": "2.0 dB (1 kHz)",
+      "Težina": "6.1 g",
+      "Impedansa Opterećenja": "47,000 Ohma",
+      "Kapacitet Opterećenja": "100 - 200 pF",
+      "Materijal Nosača Igle": "Aluminijumska cijev"
+    }
+  },
+  {
+    "id": "audio-technica-at-lpw50pb",
+    "name": "Audio-Technica AT-LPW50PB",
+    "category": "Gramofoni",
+    "shortDescription": "Potpuno manuelni gramofon sa elegantnom crnom sjajnom završnicom.",
+    "longDescription": "Audio-Technica AT-LPW50PB je elegantan potpuno manuelni gramofon dizajniran za optimalnu Hi-Fi reprodukciju vinila. Ima remenski pogon za stabilnu rotaciju i motor sa senzorom brzine za održavanje precizne brzine rotacije. Sa anti-rezonantnom MDF bazom, debelim gumenim matom i visoko-kvalitetnom AT-VM95E zvučnicom, pruža bogat i detaljan zvuk. Ugrađeno fono pretpojačalo je preklopno, što omogućava fleksibilno povezivanje.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Audio-Technica+LPW50PB",
+    "specs": {
+      "Tip": "Potpuno manuelni, Remenski (Belt-drive)",
+      "Motor": "DC servo motor, kontrolisan senzorom brzine",
+      "Brzine": "33 1/3, 45 RPM",
+      "Fono Pretpojačalo": "Ugrađeno (preklopno)",
+      "Povezivanje": "RCA izlaz (za fono i linijski nivo)",
+      "Ručica": "Mat crna, ravna sa hidrauličnim prigušenjem",
+      "Uložak": "AT-VM95E (predmontiran)",
+      "Šasija": "Anti-rezonantna 30mm debela MDF (Medium Density Fibreboard)",
+      "Dimenzije": "420 x 340 x 126 mm (Š x D x V)",
+      "Težina": "5.5 kg"
+    }
+  },
+  {
+    "id": "audio-technica-ath-adx5000",
+    "name": "Audio-Technica ATH-ADX5000",
+    "category": "Slušalice",
+    "shortDescription": "Referentne otvorene slušalice za ultimativno audiofilsko iskustvo.",
+    "longDescription": "Audio-Technica ATH-ADX5000 su referentne otvorene slušalice, dizajnirane za najzahtjevnije audiofile. Opremljene su novorazvijenim 58mm Tungsten-Coated drajverima i integrisanom Unity Motion strukturom, koje pružaju izuzetnu prostornost, preciznost i dinamiku. Lako aluminijumsko kućište sa perforiranim dizajnom osigurava maksimalnu prozračnost i udobnost, čineći ih idealnim za dugotrajno, imerzivno slušanje muzike sa najvišim nivoom detalja.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Audio-Technica+ADX5000",
+    "specs": {
+      "Tip": "Otvorene Dinamičke",
+      "Drajveri": "58mm (sa Tungsten premazom i Unity Motion strukturom)",
+      "Frekventni Odziv": "5 Hz - 50 kHz",
+      "Impedansa": "420 Ohma",
+      "Osjetljivost": "100 dB/mW",
+      "Maksimalna Ulazna Snaga": "1,000 mW",
+      "Kabl": "3.0 m sa 6.3mm stereo plugom (odvojiv), XLR balanced kabl uključen",
+      "Materijal Kućišta": "Aluminijum / Magnesium",
+      "Jastučići": "Alcantara®",
+      "Težina": "270 g (bez kabla)"
+    }
   }
 ]
