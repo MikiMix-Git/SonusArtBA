@@ -1,5 +1,116 @@
 [
   {
+    "id": "marantz-pm4000",
+    "name": "Marantz PM4000",
+    "category": "Integrisani Pojačivači",
+    "shortDescription": "Klasični stereo pojačivač za početnike.",
+    "longDescription": "Marantz PM4000 je klasični integrisani stereo pojačivač dizajniran za one koji ulaze u svijet Hi-Fi zvuka. Nudi pouzdanu performansu i čisti, dinamični zvuk po kojem je Marantz poznat. Sa osnovnim setom analognih ulaza i izlaza, uključujući fono ulaz za gramofon, PM4000 je jednostavan za korištenje i pruža solidnu osnovu za Hi-Fi sistem, idealan za studente ili kao drugi sistem.",
+    "imageUrl": "https://placehold.co/400x300/e0e0e0/333333?text=Marantz+PM4000",
+    "specs": {
+      "Izlazna Snaga (8 Ω)": "2 x 30 W",
+      "Frekventni Odziv": "10 Hz - 50 kHz",
+      "Totalna Harmonička Distorzija (THD)": "0.05%",
+      "Ulazi": "5 x analogni, 1 x Phono (MM)",
+      "Izlazi": "Zvučnici A/B, Rec Out, Slušalice"
+    }
+  },
+  {
+    "id": "marantz-m-cr511",
+    "name": "Marantz M-CR511 (Melody Stream)",
+    "category": "Mrežni Risiveri",
+    "shortDescription": "Kompaktni mrežni risiver bez CD plejera, sa Wi-Fi i Bluetoothom.",
+    "longDescription": "Marantz M-CR511, poznat kao Melody Stream, je kompaktan mrežni risiver koji se fokusira isključivo na digitalni striming. Iako nema CD plejer ili radio tjuner, nudi pristup širokom spektru online muzike putem Wi-Fi-ja i Ethernet konekcije. Podržava AirPlay, Spotify Connect i DLNA za striming sa lokalne mreže. Idealan je za one koji su prešli na digitalnu muziku i žele minimalističko, ali moćno rješenje za svoj audio sistem.",
+    "imageUrl": "https://placehold.co/400x300/e0e0e0/333333?text=Marantz+Melody+Stream",
+    "specs": {
+      "Izlazna Snaga (8 Ω)": "2 x 60 W",
+      "Mrežni Striming": "AirPlay, Spotify Connect, DLNA, Internet Radio",
+      "Ulazi": "2 x optički, 1 x USB-A (prednji), 1 x analogni",
+      "Izlazi": "Zvučnici, Slušalice, Subwoofer Pre Out",
+      "Povezivost": "Ethernet, Wi-Fi, Bluetooth"
+    }
+  },
+  {
+    "id": "marantz-pm-12se",
+    "name": "Marantz PM-12SE",
+    "category": "Integrisani Pojačivači",
+    "shortDescription": "Specijalno izdanje integrisanog pojačivača, fokusirano na čisti analogni zvuk.",
+    "longDescription": "Marantz PM-12 Special Edition je integrisani pojačivač koji je pažljivo podešen od strane Marantz zvučnih majstora, s fokusom na čisti analogni zvuk. Implementira vlasničku Current Feedback topologiju i Marantz HDAM-SA3 module za dinamičan i detaljan performans. Njegov beskompromisan dizajn uključuje masivno napajanje i robustnu šasiju, osiguravajući stabilnost i minimalne smetnje. PM-12SE je idealan izbor za audiofile koji cijene vrhunsku muzikalnost i izvanrednu kvalitetu izrade.",
+    "imageUrl": "https://placehold.co/400x300/e0e0e0/333333?text=Marantz+PM-12SE",
+    "specs": {
+      "Izlazna Snaga (8 Ω)": "2 x 100 W",
+      "Frekventni Odziv": "5 Hz - 50 kHz",
+      "Totalna Harmonička Distorzija (THD)": "0.005%",
+      "Ulazi": "5 x analogni, 1 x Phono (MM/MC)",
+      "Izlazi": "Zvučnici A/B, Pre Out",
+      "Karakteristike": "Current Feedback topologija, HDAM-SA3, Toroidalni transformator"
+    }
+  },
+  {
+    "id": "marantz-sr5015",
+    "name": "Marantz SR5015",
+    "category": "AV Risiveri",
+    "shortDescription": "7.2-kanalni 8K AV risiver sa 3D zvukom i HEOS.",
+    "longDescription": "Marantz SR5015 je svestrani 7.2-kanalni AV risiver koji donosi impresivan surround zvuk i napredne video mogućnosti u vaše kućno kino. Sa podrškom za 8K/60Hz video i sve najnovije HDMI formate, spreman je za buduće generacije medija. Podržava Dolby Atmos i DTS:X, pružajući uvučeno 3D zvučno iskustvo. Ugrađeni HEOS omogućava pristup muzičkim servisima i strimingu u više soba, dok Marantzova pažnja na detalje osigurava muzikalno i dinamično zvučno iskustvo.",
+    "imageUrl": "https://placehold.co/400x300/e0e0e0/333333?text=Marantz+SR5015",
+    "specs": {
+      "Kanali": "7.2",
+      "Izlazna Snaga (8 Ω)": "100 W po kanalu",
+      "Video Podrška": "8K/60Hz, 4K/120Hz, HDR10+, Dolby Vision, HLG, Dynamic HDR, HDCP 2.3",
+      "Audio Formati": "Dolby Atmos, DTS:X, Dolby Atmos Height Virtualization, DTS Virtual:X",
+      "Ulazi": "6 x HDMI (1 x 8K), 4 x analogni, 2 x optički, 1 x koaksijalni, USB-A, Phono (MM)",
+      "Izlazi": "2 x HDMI (1 x 8K), 2.2 kanalni Pre Out, Slušalice",
+      "Povezivost": "Ethernet, Wi-Fi, Bluetooth, HEOS Built-in, AirPlay 2, Spotify Connect",
+      "Kalibracija Sobe": "Audyssey MultEQ XT"
+    }
+  },
+  {
+    "id": "marantz-pm-ki-pearl-lite",
+    "name": "Marantz PM-KI Pearl Lite",
+    "category": "Integrisani Pojačivači",
+    "shortDescription": "Kompaktni Ken Ishiwata Special Edition pojačivač.",
+    "longDescription": "Marantz PM-KI Pearl Lite je Ken Ishiwata Special Edition integrisani pojačivač koji donosi dio magije 'Pearl' serije u pristupačnijem pakovanju. Dizajniran da pruži izuzetnu kvalitetu zvuka, koristi selektovane komponente i HDAM module za jasnu i dinamičnu reprodukciju. Iako je 'lite' verzija, i dalje nosi pečat Kena Ishiwate, fokusirajući se na muzikalnost i vjernost, čineći ga odličnim izborom za audiofile sa ograničenim budžetom.",
+    "imageUrl": "https://placehold.co/400x300/e0e0e0/333333?text=Marantz+PM-KI+Pearl+Lite",
+    "specs": {
+      "Izlazna Snaga (8 Ω)": "2 x 70 W",
+      "Frekventni Odziv": "5 Hz - 100 kHz",
+      "Totalna Harmonička Distorzija (THD)": "0.02%",
+      "Ulazi": "5 x analogni, 1 x Phono (MM)",
+      "Izlazi": "Zvučnici A/B, Rec Out, Slušalice",
+      "Karakteristike": "Ken Ishiwata Special Edition, HDAM-SA3"
+    }
+  },
+  {
+    "id": "marantz-cd-ki-pearl-lite",
+    "name": "Marantz CD-KI Pearl Lite",
+    "category": "CD Plejeri",
+    "shortDescription": "Ken Ishiwata Special Edition CD plejer.",
+    "longDescription": "Marantz CD-KI Pearl Lite je Ken Ishiwata Special Edition CD plejer, dizajniran da dopuni PM-KI Pearl Lite pojačivač. Njegov fokus je na izvlačenju maksimalnog kvaliteta zvuka iz CD formata. Koristi visokokvalitetne komponente i Marantz HDAM-SA2 module za preciznu obradu signala. Čvrsta konstrukcija i centralno postavljena ladica za disk smanjuju vibracije, osiguravajući čist i detaljan zvuk koji je zaštitni znak Marantz Pearl serije.",
+    "imageUrl": "https://placehold.co/400x300/e0e0e0/333333?text=Marantz+CD-KI+Pearl+Lite",
+    "specs": {
+      "Podržani Diskovi": "CD, CD-R/RW",
+      "D/A Konverter": "CS4398",
+      "Frekventni Odziv": "2 Hz - 20 kHz",
+      "Izlazi": "Analogni (RCA), Optički, Koaksijalni, Slušalice",
+      "Karakteristike": "Ken Ishiwata Special Edition, HDAM-SA2"
+    }
+  },
+  {
+    "id": "marantz-pm8005",
+    "name": "Marantz PM8005",
+    "category": "Integrisani Pojačivači",
+    "shortDescription": "Moćan integrisani pojačivač sa Current Feedback topologijom.",
+    "longDescription": "Marantz PM8005 je moćan integrisani stereo pojačivač koji isporučuje izvanredan kvalitet zvuka sa izuzetnom dinamikom. Koristi Marantzovu vlasničku Current Feedback topologiju i HDAM-SA3 module, osiguravajući brzu i preciznu obradu signala. Njegovo masivno napajanje i trostruki kontroleri tona omogućavaju precizno podešavanje zvuka. Sa visokokvalitetnim fono ulazom, PM8005 je spreman da oživi vašu vinil kolekciju.",
+    "imageUrl": "https://placehold.co/400x300/e0e0e0/333333?text=Marantz+PM8005",
+    "specs": {
+      "Izlazna Snaga (8 Ω)": "2 x 70 W",
+      "Frekventni Odziv": "5 Hz - 100 kHz",
+      "Totalna Harmonička Distorzija (THD)": "0.02%",
+      "Ulazi": "5 x analogni, 1 x Phono (MM)",
+      "Izlazi": "Zvučnici A/B, Rec Out, Slušalice",
+      "Kontrola Tona": "Bas, Srednji, Visoki",
+      "Karakteristike": "Current Feedback topologija, HDAM-SA3"
+    }
+  }{
     "id": "marantz-pm7000n",
     "name": "Marantz PM7000N",
     "category": "Integrisani Pojačivači",
