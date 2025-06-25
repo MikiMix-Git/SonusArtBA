@@ -1,309 +1,266 @@
-{
-  "Brend": "Argon Audio",
-  "Kategorije": {
-    "Gramofoni": [
-      {
-        "Model": "TT MK2",
-        "Specifikacije": {
-          "Pogon": "Remenski pogon (Belt Drive)",
-          "Brzine": "33/45 RPM, podesive",
-          "Zvučnica (Pre-installed)": "Moving Magnet (Audio-Technica AT3600L)",
-          "Platter": "Gvozdeni (sa plastičnim sub-platterom)",
-          "Šasija": "MDF",
-          "Masa tanjira": "1.8 kg",
-          "Wow and Flutter": "≤ 0.15%",
-          "Integrisani RIAA": "Da",
-          "Ručica": "8.6\" Aluminijumska ručica",
-          "Efektivna masa ručice": "8.0 g",
-          "Dodatne funkcije": "Lako podešavanje brzine sa donje strane",
-          "Dimenzije (ŠxVxD)": "42.0 x 11.5 x 36.0 cm",
-          "Težina": "6.0 kg",
-          "Uključeno": "Napajanje (1.8m), RCA kabl (1.5m)"
-        }
-      },
-      {
-        "Model": "TT",
-        "Specifikacije": {
-          "Pogon": "Remenski pogon (Belt Drive)",
-          "Brzine": "33/45 RPM",
-          "Zvučnica (Pre-installed)": "Moving Magnet (Audio-Technica AT3600L)",
-          "Platter": "Aluminijum",
-          "Integrisani RIAA": "Da",
-          "Ručica": "8.6\" Aluminijumska ručica",
-          "Efektivna dužina ručice": "21.9 cm",
-          "Efektivna masa ručice": "8.0 g",
-          "Dimenzije (ŠxVxD)": "42.0 x 11.2 x 33.0 cm",
-          "Težina": "4.0 kg",
-          "Uključeno": "Napajanje (1.5m), RCA kabl (1.5m)"
-        }
-      },
-      {
-        "Model": "TT-3",
-        "Specifikacije": {
-          "Napomena": "Specifikacije za TT-3 su manje dostupne u direktnim rezultatima pretrage, ali se često spominje kao unapređenje TT modela sa poboljšanim zvučnim karakteristikama i boljom gradnjom. Generalno bi imao sledeće atribute:",
-          "Pogon": "Remenski pogon",
-          "Brzine": "33/45 RPM",
-          "Zvučnica": "Višeg kvaliteta od TT/TT MK2 (verovatno bolja Audio-Technica ili slično)",
-          "Platter": "Teži i robusniji",
-          "Ručica": "Unapređena ručica",
-          "Integrisani RIAA": "Verovatno da"
-        }
-      }
-    ],
-    "Zvučnici": [
-      {
-        "Model": "Fenris A4 (Aktivni zvučnici)",
-        "Specifikacije": {
-          "Tip": "Aktivni bookshelf zvučnici",
-          "Pojačalo": "Četvorokanalno digitalno pojačalo sa naprednim DSP-om i aktivnom skretnicom",
-          "Izlazna snaga": "2 x 50 Watts (Woofers), 2 x 25 Watts (Tweeter)",
-          "Drajveri": "0.75\" Soft Dome visokotonac sa neodimijum magnetom, 4\" Paper Cone bas/srednjetonac",
-          "Frekventni opseg": "52-22.000 Hz ± 6 dB",
-          "Ulazi": "HDMI ARC, Bluetooth 5.0, Phono (MM) ulaz, Optički digitalni, Analogni RCA",
-          "Izlazi": "Subwoofer izlaz",
-          "Dimenzije (VxŠxD)": "240 x 140 x 210 mm",
-          "Dodatno": "Prednja maska sa magnetima, daljinski upravljač, automatsko paljenje/gašenje"
-        }
-      },
-      {
-        "Model": "Fenris A5 (Aktivni zvučnici)",
-        "Specifikacije": {
-          "Tip": "Aktivni bookshelf zvučnici",
-          "Pojačalo": "Četvorokanalno digitalno pojačalo sa naprednim DSP-om i aktivnom skretnicom",
-          "Izlazna snaga": "2 x 50 Watts (Woofers), 2 x 25 Watts (Tweeter)",
-          "Drajveri": "0.75\" Soft Dome visokotonac sa neodimijum magnetom, 5\" Paper Cone bas/srednjetonac",
-          "Frekventni opseg": "48-22.000 Hz ± 6 dB (pretpostavljeno, obično bolji od A4)",
-          "Ulazi": "HDMI ARC, Bluetooth 5.0, Phono (MM) ulaz, Optički digitalni, Analogni RCA",
-          "Izlazi": "Subwoofer izlaz",
-          "Dimenzije": "Nešto veći od A4"
-        }
-      },
-      {
-        "Model": "Fenris A55 (Aktivni zvučnici)",
-        "Specifikacije": {
-          "Tip": "Aktivni podnostojeći zvučnici",
-          "Pojačalo": "Četvorokanalno digitalno pojačalo sa naprednim DSP-om i aktivnom skretnicom",
-          "Izlazna snaga": "Visoka, obično više od bookshelf modela",
-          "Drajveri": "0.75\" Soft Dome visokotonac, veći bas drajveri (verovatno dva 5\" ili veći)",
-          "Frekventni opseg": "Širi frekventni opseg (dublji bas) od bookshelf modela",
-          "Ulazi": "HDMI ARC, Bluetooth 5.0, Phono (MM) ulaz, Optički digitalni, Analogni RCA",
-          "Izlazi": "Subwoofer izlaz",
-          "Dimenzije": "Visoki podnostojeći zvučnici"
-        }
-      },
-      {
-        "Model": "FORTE A5 Wifi (Aktivni zvučnici)",
-        "Specifikacije": {
-          "Tip": "Aktivni bookshelf zvučnici sa Wi-Fi",
-          "Pojačalo": "Potpuno digitalno 4 x 80 Watt Class D pojačalo sa naprednim DSP-om i aktivnom skretnicom",
-          "Drajveri": "5\" bas drajver sa dvoslojnom membranom, 1\" soft-dome visokotonac sa neodimijum magnetom",
-          "Frekventni opseg": "40 Hz - 20.000 Hz ± 3 dB",
-          "Ulazi": "Wi-Fi (Chromecast, AirPlay 2, Spotify Connect), Bluetooth 4.2 (AAC), HDMI ARC, Optički digitalni, Analogni RCA, Phono (MM)",
-          "Izlazi": "Subwoofer izlaz",
-          "Dimenzije (ŠxVxD)": "16.5 x 27 x 23 cm",
-          "Težina": "9 kg (po setu)",
-          "Dodatno": "Multiroom funkcionalnost"
-        }
-      },
-      {
-        "Model": "BASS10 MK2 (Subwoofer)",
-        "Specifikacije": {
-          "Tip": "Aktivni subwoofer",
-          "Drajver": "10\" bas drajver",
-          "Pojačalo": "Integrisano (tipično Class D)",
-          "Izlazna snaga": "Npr. 150-200W RMS",
-          "Frekventni opseg": "Npr. 25Hz - 200Hz",
-          "Kontrole": "Volume, Crossover, Phase",
-          "Ulazi": "LFE (Mono RCA), Stereo RCA"
-        }
-      },
-      {
-        "Model": "BASS8 MK2 (Subwoofer)",
-        "Specifikacije": {
-          "Tip": "Aktivni subwoofer",
-          "Drajver": "8\" bas drajver",
-          "Pojačalo": "Integrisano (tipično Class D)",
-          "Izlazna snaga": "Npr. 100-150W RMS",
-          "Frekventni opseg": "Npr. 30Hz - 200Hz",
-          "Kontrole": "Volume, Crossover, Phase",
-          "Ulazi": "LFE (Mono RCA), Stereo RCA"
-        }
-      },
-      {
-        "Model": "ALTO 5 MK2 (Pasivni zvučnici)",
-        "Specifikacije": {
-          "Tip": "Pasivni bookshelf zvučnici",
-          "Drajveri": "Npr. 1\" soft-dome visokotonac, 5.25\" bas/srednjetonac",
-          "Frekventni opseg": "Npr. 50Hz - 20kHz",
-          "Osetljivost": "Npr. 87-88dB",
-          "Impedansa": "4-8 oma",
-          "Preporučena snaga pojačala": "Npr. 20-100W",
-          "Dimenzije": "Kompaktni bookshelf zvučnici"
-        }
-      }
-    ],
-    "Pojačala": [
-      {
-        "Model": "SA1 (Integrisano pojačalo)",
-        "Specifikacije": {
-          "Tip": "Integrisano stereo pojačalo",
-          "Tehnologija pojačala": "Class D, hibridno-digitalno",
-          "Izlazna snaga (8Ω)": "2 x 40 Watt",
-          "Izlazna snaga (4Ω)": "2 x 100 Watt (Dynamic Power IHF)",
-          "Frekventni opseg": "3-60.000 Hz",
-          "THD (20-20.000 Hz)": "<0.03%",
-          "DAC": "32-bit ESS Sabre DAC (potpuno balansiran signalni put)",
-          "Napajanje": "Odvojena napajanja za analogne i digitalne delove (ukupno 6)",
-          "Ulazi": "2 x Optički digitalni (do 24-bit/192kHz), Stereo Line-in (Analogni RCA), Phono (MM), Bluetooth 5.0 (aptX HD i AAC)",
-          "Izlazi": "Pre-out (za subwoofer ili eksterno pojačalo)",
-          "Funkcije": "Auto on/off na svim ulazima osim phono, 5V USB izlaz za napajanje",
-          "Dimenzije (ŠxVxD)": "22.0 x 6.3 x 25.2 cm",
-          "Težina": "2.2 kg"
-        }
-      },
-      {
-        "Model": "SA2 (Integrisano pojačalo)",
-        "Specifikacije": {
-          "Tip": "Integrisano stereo pojačalo",
-          "Tehnologija pojačala": "Class D",
-          "Izlazna snaga (8Ω)": "2 x 50 Watt",
-          "Izlazna snaga (4Ω)": "2 x 100 Watt",
-          "Frekventni opseg": "3-60.000 Hz",
-          "THD (20-20.000 Hz)": "<0.03%",
-          "DAC": "32-bit ESS Sabre DAC (potpuno balansiran mod)",
-          "Napajanje": "Odvojena napajanja za analogne i digitalne delove (ukupno 6)",
-          "Ulazi": "Wi-Fi Streaming (DTS Play-Fi), HDMI ARC, 1 x Optički digitalni, L/R analogni stereo-in (RCA), Turntable MM ulaz, Bluetooth (A2DP/SBC/AAC)",
-          "Izlazi": "Pre out (za eksterno pojačalo/Subwoofer), 5V USB izlaz",
-          "Funkcije": "Bluetooth sa Qualcomm aptX HD Audio, Auto power on/off (osim phono ulaza), podrška za 24-bit/192kHz na optičkim ulazima",
-          "Dimenzije (ŠxVxD)": "22.0 x 6.3 x 25.2 cm",
-          "Težina": "2.2 kg"
-        }
-      }
-    ],
-    "Slušalice": [
-      {
-        "Model": "Quiet Storm (Over-Ear ANC)",
-        "Specifikacije": {
-          "Tip": "Over-Ear bežične slušalice sa ANC (Active Noise Cancellation)",
-          "Drajveri": "40 mm dinamički drajveri",
-          "Povezivanje": "Bluetooth 5.0 sa AAC podrškom",
-          "Baterija": "30 sati reprodukcije, 2 sata punjenja, 5 min quick charge = 2 sata",
-          "Akustična konstrukcija": "Zatvorena",
-          "Funkcije": "Aktivno poništavanje buke, Transparency mode, Ugrađen mikrofon, Kontrola jačine zvuka, Sklopivi dizajn, Reprodukcija bez baterije (preko 3.5mm minijack kabla)",
-          "Dimenzije": "19.5 x 18 x 4.6 cm (sklopljene)",
-          "Težina": "0.29 kg",
-          "Uključeno": "Tvrda futrola, USB-C kabl (30 cm), Audio kabl (1 metar / 3.5 mm minijack)"
-        }
-      },
-      {
-        "Model": "OE40 (Over-Ear Wireless)",
-        "Specifikacije": {
-          "Tip": "Over-Ear bežične slušalice",
-          "Drajveri": "40mm",
-          "Baterija": "Do 24 sata reprodukcije, 3 sata puno punjenje",
-          "Povezivanje": "Bluetooth 5.0 sa aptX i AAC",
-          "Materijali": "Jagnjeća koža (slušalice)",
-          "Funkcije": "Ugrađen mikrofon, dugmad za jačinu zvuka i reprodukciju, USB-C punjenje",
-          "Dizajn": "Danski dizajn, podesiva ergonomska traka za glavu",
-          "Uključeno": "USB-C kabl i futrola za nošenje"
-        }
-      },
-      {
-        "Model": "FREESTYLE2 (True Wireless Earbuds)",
-        "Specifikacije": {
-          "Tip": "True Wireless bubice",
-          "Drajveri": "Grafenski drajveri",
-          "Baterija": "Do 6 sati reprodukcije (bubice), dodatnih 24 sata sa futrolom za punjenje",
-          "Povezivanje": "Bluetooth 5.0 sa aptX i AAC",
-          "Otpornost na vodu": "IPX5 sertifikat (otporne na znoj)",
-          "Punjenje": "USB-C (bubice: 1.5 sati, futrola: 2.5 sati)",
-          "Kontrole": "Reprodukcija/Pauza, Jačina zvuka, Pozivi, Glasovna kontrola (Siri i Google Assistant)",
-          "Mikrofon": "Ugrađen za hands-free pozive",
-          "Težina": "4.3 grama (bubice), 40 grama (futrola za punjenje)",
-          "Dimenzije futrole": "6 x 5 x 3.2 cm (ŠxVxD)",
-          "Uključeno": "Dva tipa silikonskih nastavaka (S, M, L)"
-        }
-      }
-    ],
-    "Mrežni strimeri i Radio": [
-      {
-        "Model": "Stream 3 MK2 (Muzički strimer)",
-        "Specifikacije": {
-          "Tip": "Kompaktni muzički strimer/radio tjuner",
-          "Podržane opcije striminga": "Spotify Connect, Bluetooth 5.1 sa aptX HD, Internet Radio, FM, DAB/DAB+",
-          "DAC": "On-module DAC",
-          "Izlazi": "Optički digitalni, Stereo Line-in (Analogni RCA)",
-          "Maksimalna rezolucija": "16-bit/44.1 kHz (CD kvalitet)",
-          "Podržani audio formati": "MP3, M4A, AAC, PCM",
-          "Povezivanje": "Wi-Fi, Ethernet",
-          "Ekran": "2.4\" TFT ekran u boji",
-          "Potrošnja u standby-u": "<0.5 watt",
-          "Dimenzije (ŠxVxD)": "12.9 x 5.5 x 8.0 cm",
-          "Težina": "0.4 kg",
-          "Uključeno": "Daljinski upravljač, baterije, napajanje, RCA kabl, antenski kabl"
-        }
-      },
-      {
-        "Model": "SOLO (Mrežni strimer)",
-        "Specifikacije": {
-          "Napomena": "Specifikacije za SOLO su manje direktno dostupne u prvim pretragama, često se spominje kao Play-Fi kompatibilan strimer. Pretpostavljene specifikacije bi uključivale:",
-          "Tip": "Mrežni audio strimer",
-          "Povezivanje": "Wi-Fi (DTS Play-Fi, AirPlay 2, Chromecast), Bluetooth",
-          "Ulazi/Izlazi": "Digitalni optički, Analogni RCA",
-          "Mogućnosti": "Multiroom podrška, pristup raznim striming servisima"
-        }
-      }
-    ],
-    "Fono pretpojačala": [
-      {
-        "Model": "Phono1 RIAA (MM) Preamp",
-        "Specifikacije": {
-          "Tip": "RIAA/Phono pretpojačalo za Moving Magnet (MM) zvučnice",
-          "Pojačanje (Gain)": "40dB",
-          "Impedansa": "47k Ohm",
-          "Potrošnja energije": "0.4 W (standby i rad, ne treba se gasiti)",
-          "Šasija": "Metalna",
-          "Ulazi": "RCA za gramofon (sa GND šrafom)",
-          "Izlazi": "RCA analogni izlaz",
-          "Dimenzije (ŠxVxD)": "10 x 3 x 6 cm",
-          "Težina": "291 gram"
-        }
-      }
-    ],
-    "Kablovi": [
-      {
-        "Model": "Forte Speaker Cable",
-        "Specifikacije": {
-          "Tip": "Zvučnički kabl",
-          "Materijal provodnika": "Bakar",
-          "Širmovanje": "PVC",
-          "Dužina": "Dostupne u 3m, 6m, 10m (ugaoni)",
-          "Prečnik": "6 mm",
-          "Kompatibilnost": "Dizajnirani za Argon Audio FORTE A4, FORTE A5 i FORTE A55 zvučnike",
-          "Boja": "Crna, Crno-bela"
-        }
-      },
-      {
-        "Model": "Prime 1 Speaker Cable",
-        "Specifikacije": {
-          "Tip": "Zvučnički kabl",
-          "Materijal provodnika": "Bakar bez kiseonika (Oxygen-free copper) sa posrebrenjem",
-          "Dizajn": "Dvoslojna gusto tkana bakarna mreža sa posrebrenjem za širmovanje",
-          "Presek": "1.5 mm²",
-          "Spoljašnji prečnik": "Širina 8mm, Debljina 3.9mm",
-          "Funkcije": "Efikasno smanjuje smetnje buke, optimizovan za high-fidelity zvuk",
-          "Primena": "Pogodan za bookshelf, satelitske i surround zvučnike"
-        }
-      },
-      {
-        "Model": "RCA Cables",
-        "Specifikacije": {
-          "Napomena": "Argon Audio nudi standardne RCA kablove kao prateću opremu ili zasebno.",
-          "Tip": "Audio interkonekcioni kabl (RCA na RCA)",
-          "Materijal provodnika": "Verovatno OFC bakar",
-          "Konektori": "RCA konektori"
-        }
-      }
-    ]
-  }
-}
+[
+  {
+    "id": "argon-audio-tt-mk2",
+    "name": "TT MK2",
+    "category": "Gramofoni",
+    "shortDescription": "Poboljšani gramofon sa remenskim pogonom i integrisanim RIAA pretpojačalom.",
+    "longDescription": "Argon Audio TT MK2 je unapređena verzija popularnog gramofona TT, dizajnirana da pruži još bolji kvalitet zvuka i funkcionalnost. Poseduje remenski pogon za stabilnu rotaciju, podesive brzine i fabrički montiranu Audio-Technica AT3600L Moving Magnet (MM) zvučnicu. Sa integrisanim RIAA pretpojačalom, omogućava direktno povezivanje sa bilo kojim pojačalom, a unapređena konstrukcija tanjira i šasije doprinosi boljoj zvučnoj slici. Idealan je izbor za one koji traže pristupačan gramofon visokog kvaliteta.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+TT+MK2",
+    "specs": {
+      "Pogon": "Remenski pogon (Belt Drive)",
+      "Brzine": "33/45 RPM, podesive",
+      "Zvučnica (Pre-installed)": "Moving Magnet (Audio-Technica AT3600L)",
+      "Platter": "Gvozdeni (sa plastičnim sub-platterom)",
+      "Šasija": "MDF",
+      "Masa tanjira": "1.8 kg",
+      "Wow and Flutter": "≤ 0.15%",
+      "Integrisani RIAA": "Da",
+      "Ručica": "8.6\" Aluminijumska ručica",
+      "Efektivna masa ručice": "8.0 g",
+      "Dodatne funkcije": "Lako podešavanje brzine sa donje strane",
+      "Dimenzije (ŠxVxD)": "42.0 x 11.5 x 36.0 cm",
+      "Težina": "6.0 kg",
+      "Uključeno": "Napajanje (1.8m), RCA kabl (1.5m)"
+    }
+  },
+  {
+    "id": "argon-audio-tt",
+    "name": "TT",
+    "category": "Gramofoni",
+    "shortDescription": "Jednostavan i elegantan gramofon sa integrisanim RIAA pretpojačalom.",
+    "longDescription": "Argon Audio TT je elegantan gramofon dizajniran za jednostavno uživanje u vinilima. Poseduje remenski pogon i dolazi sa fabrički montiranom Audio-Technica AT3600L zvučnicom. Integrisano RIAA pretpojačalo omogućava fleksibilno povezivanje sa pojačalima koja nemaju namenski fono ulaz. Njegov aluminijumski tanjir i kompaktna dimenzija čine ga atraktivnim dodatkom svakom audio sistemu.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+TT",
+    "specs": {
+      "Pogon": "Remenski pogon (Belt Drive)",
+      "Brzine": "33/45 RPM",
+      "Zvučnica (Pre-installed)": "Moving Magnet (Audio-Technica AT3600L)",
+      "Platter": "Aluminijum",
+      "Integrisani RIAA": "Da",
+      "Ručica": "8.6\" Aluminijumska ručica",
+      "Efektivna dužina ručice": "21.9 cm",
+      "Efektivna masa ručice": "8.0 g",
+      "Dimenzije (ŠxVxD)": "42.0 x 11.2 x 33.0 cm",
+      "Težina": "4.0 kg",
+      "Uključeno": "Napajanje (1.5m), RCA kabl (1.5m)"
+    }
+  },
+  {
+    "id": "argon-audio-tt-3",
+    "name": "TT-3",
+    "category": "Gramofoni",
+    "shortDescription": "Premium gramofon sa unapređenom konstrukcijom i komponentama.",
+    "longDescription": "Argon Audio TT-3 predstavlja korak napred u kvalitetu gramofona od Argon Audija, nudeći poboljšane zvučne karakteristike i robusniju gradnju. Fokusiran na detalje i stabilnost reprodukcije, TT-3 se odlikuje težim tanjirom, unapređenom ručicom i verovatno boljom zvučnicom, pružajući bogatije i preciznije iskustvo slušanja vinila. Ovo je izbor za zahtevnije ljubitelje analognog zvuka.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+TT-3",
+    "specs": {
+      "Napomena": "Specifikacije za TT-3 su manje dostupne u direktnim rezultatima pretrage, ali se često spominje kao unapređenje TT modela sa poboljšanim zvučnim karakteristikama i boljom gradnjom.",
+      "Pogon": "Remenski pogon",
+      "Brzine": "33/45 RPM",
+      "Zvučnica": "Višeg kvaliteta od TT/TT MK2 (verovatno bolja Audio-Technica ili slično)",
+      "Platter": "Teži i robusniji",
+      "Ručica": "Unapređena ručica",
+      "Integrisani RIAA": "Verovatno da"
+    }
+  },
+  {
+    "id": "argon-audio-fenris-a4",
+    "name": "Fenris A4",
+    "category": "Aktivni Zvučnici",
+    "shortDescription": "Kompaktni aktivni bookshelf zvučnici sa HDMI ARC i Phono ulazom.",
+    "longDescription": "Argon Audio Fenris A4 su svestrani aktivni bookshelf zvučnici dizajnirani za jednostavno povezivanje i impresivan zvuk. Sa ugrađenim četvorokanalnim digitalnim pojačalom i naprednim DSP-om, nude moćnu i jasnu reprodukciju. Podržavaju HDMI ARC za lako povezivanje sa TV-om, Bluetooth 5.0 za bežični striming, kao i Phono (MM) ulaz za direktno povezivanje gramofona. Idealni su za moderno audio iskustvo bez potrebe za eksternim pojačalom.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+Fenris+A4",
+    "specs": {
+      "Tip": "Aktivni bookshelf zvučnici",
+      "Pojačalo": "Četvorokanalno digitalno pojačalo sa naprednim DSP-om i aktivnom skretnicom",
+      "Izlazna snaga": "2 x 50 Watts (Woofers), 2 x 25 Watts (Tweeter)",
+      "Drajveri": "0.75\" Soft Dome visokotonac sa neodimijum magnetom, 4\" Paper Cone bas/srednjetonac",
+      "Frekventni opseg": "52-22.000 Hz ± 6 dB",
+      "Ulazi": "HDMI ARC, Bluetooth 5.0, Phono (MM) ulaz, Optički digitalni, Analogni RCA",
+      "Izlazi": "Subwoofer izlaz",
+      "Dimenzije (VxŠxD)": "240 x 140 x 210 mm",
+      "Dodatno": "Prednja maska sa magnetima, daljinski upravljač, automatsko paljenje/gašenje"
+    }
+  },
+  {
+    "id": "argon-audio-fenris-a5",
+    "name": "Fenris A5",
+    "category": "Aktivni Zvučnici",
+    "shortDescription": "Veći aktivni bookshelf zvučnici iz Fenris serije sa snažnijim basom.",
+    "longDescription": "Argon Audio Fenris A5 su aktivni bookshelf zvučnici koji nadograđuju A4 model većim bas/srednjetoncem za još dublji i puniji zvuk. Kao i ostatak Fenris serije, poseduju ugrađeno digitalno pojačalo sa DSP-om, HDMI ARC, Bluetooth, Phono (MM) i optičke ulaze. Savršeni su za prostorije gde je potreban snažniji zvuk bez žrtvovanja kompaktnosti. Nude jednostavno 'plug-and-play' rešenje za visokokvalitetan zvuk.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+Fenris+A5",
+    "specs": {
+      "Tip": "Aktivni bookshelf zvučnici",
+      "Pojačalo": "Četvorokanalno digitalno pojačalo sa naprednim DSP-om i aktivnom skretnicom",
+      "Izlazna snaga": "2 x 50 Watts (Woofers), 2 x 25 Watts (Tweeter)",
+      "Drajveri": "0.75\" Soft Dome visokotonac sa neodimijum magnetom, 5\" Paper Cone bas/srednjetonac",
+      "Frekventni opseg": "48-22.000 Hz ± 6 dB (pretpostavljeno, obično bolji od A4)",
+      "Ulazi": "HDMI ARC, Bluetooth 5.0, Phono (MM) ulaz, Optički digitalni, Analogni RCA",
+      "Izlazi": "Subwoofer izlaz",
+      "Dimenzije": "Nešto veći od A4"
+    }
+  },
+  {
+    "id": "argon-audio-fenris-a55",
+    "name": "Fenris A55",
+    "category": "Aktivni Zvučnici",
+    "shortDescription": "Aktivni podnostojeći zvučnici sa impresivnim zvukom i raznovrsnim povezivanjem.",
+    "longDescription": "Argon Audio Fenris A55 su moćni aktivni podnostojeći zvučnici dizajnirani da ispune veće prostorije bogatim i dinamičnim zvukom. Integrisano četvorokanalno digitalno pojačalo sa DSP-om, zajedno sa većim drajverima, obezbeđuje dubok bas i jasne visoke tonove. Podržavaju HDMI ARC, Bluetooth, Phono (MM) i optičke ulaze, nudeći sveobuhvatno rešenje za kućni bioskop i muzički sistem. Idealni su za one koji traže snažan zvuk bez potrebe za kompleksnim Hi-Fi sistemom.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+Fenris+A55",
+    "specs": {
+      "Tip": "Aktivni podnostojeći zvučnici",
+      "Pojačalo": "Četvorokanalno digitalno pojačalo sa naprednim DSP-om i aktivnom skretnicom",
+      "Izlazna snaga": "Visoka, obično više od bookshelf modela",
+      "Drajveri": "0.75\" Soft Dome visokotonac, veći bas drajveri (verovatno dva 5\" ili veći)",
+      "Frekventni opseg": "Širi frekventni opseg (dublji bas) od bookshelf modela",
+      "Ulazi": "HDMI ARC, Bluetooth 5.0, Phono (MM) ulaz, Optički digitalni, Analogni RCA",
+      "Izlazi": "Subwoofer izlaz",
+      "Dimenzije": "Visoki podnostojeći zvučnici"
+    }
+  },
+  {
+    "id": "argon-audio-forte-a5-wifi",
+    "name": "FORTE A5 Wifi",
+    "category": "Aktivni Zvučnici",
+    "shortDescription": "Visokorezolucijski aktivni zvučnici sa Wi-Fi strimingom (Chromecast, AirPlay 2).",
+    "longDescription": "Argon Audio FORTE A5 Wifi su napredni aktivni bookshelf zvučnici koji donose visokokvalitetni zvuk i sveobuhvatne mogućnosti striminga. Sa ugrađenim Wi-Fi modulom (Chromecast, AirPlay 2, Spotify Connect) i Bluetooth-om, omogućavaju bežičnu reprodukciju muzike u visokoj rezoluciji. Snažno digitalno pojačalo sa DSP-om obezbeđuje precizan i dinamičan zvuk, dok HDMI ARC i Phono ulazi dodatno proširuju opcije povezivanja. Idealni su za moderne domove koji cene vrhunski zvuk i povezivost.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+FORTE+A5+Wifi",
+    "specs": {
+      "Tip": "Aktivni bookshelf zvučnici sa Wi-Fi",
+      "Pojačalo": "Potpuno digitalno 4 x 80 Watt Class D pojačalo sa naprednim DSP-om i aktivnom skretnicom",
+      "Drajveri": "5\" bas drajver sa dvoslojnom membranom, 1\" soft-dome visokotonac sa neodimijum magnetom",
+      "Frekventni opseg": "40 Hz - 20.000 Hz ± 3 dB",
+      "Ulazi": "Wi-Fi (Chromecast, AirPlay 2, Spotify Connect), Bluetooth 4.2 (AAC), HDMI ARC, Optički digitalni, Analogni RCA, Phono (MM)",
+      "Izlazi": "Subwoofer izlaz",
+      "Dimenzije (ŠxVxD)": "16.5 x 27 x 23 cm",
+      "Težina": "9 kg (po setu)",
+      "Dodatno": "Multiroom funkcionalnost"
+    }
+  },
+  {
+    "id": "argon-audio-malmo-sub-6",
+    "name": "MALMÖ SUB 6",
+    "category": "Subwooferi",
+    "shortDescription": "Kompaktan subwoofer sa iznenađujuće preciznim i prodornim basom.",
+    "longDescription": "MALMÖ SUB 6 je kompaktni subwoofer koji će vas zadiviti svojim iznenađujuće preciznim i prodornim basom. Možda je dovoljno malen da ga diskretno sakrijete, ali sigurno ćete znati da je tu. Bez obzira da li ste audiofil, filmofil ili uživate u video igricama, vaše audio iskustvo će biti osjetno bolje. To je idealan izbor za manje sobe ili stanove, gde vam nije potrebna sirova snaga većih subwoofera. Njegov elegantan i robustan dizajn spaja snagu s ljepotom, što ga čini izvrsnim dodatkom svakom kućnom audio sistemu. Minimalistički dizajn, dostupan u crnoj, beloj ili boji oraha, neprimetno se uklapa u bilo koji kućni dekor, savršeno nadopunjujući FORUS seriju zvučnika. Integracija MALMÖ SUB-a u vaš postojeći audio sistem je vrlo jednostavna. Bez obzira da li ga spajate na pojačalo ili par aktivnih zvučnika, postupak je jednostavan i lak. Uz podesivu kontrolu skretnice i faze, imate moć finog podešavanja izlaza basa, osiguravajući besprijekoran spoj s vašim zvučnicima.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+MALMÖ+SUB+6",
+    "specs": {
+      "Tip": "Aktivni subwoofer",
+      "Snaga Pojačala": "65 W (RMS) / 130 W (VRŠNA)",
+      "Bas Drajver": "6″ Dugog hoda",
+      "Frekventni Raspon (-3dB)": "40-200 Hz",
+      "Frekvencija Crossovera": "40-120 Hz",
+      "Ulazi": "Stereo Line-in (Analogni RCA)",
+      "Kontrole": "Volume, Phase Regulation, Auto On / Standby",
+      "Boje": "Crna, Bela, Orah (PVC)",
+      "Dimenzije (ŠxVxD)": "23 x 25 x 25 cm",
+      "Težina": "5.5 kg"
+    }
+  },
+  {
+    "id": "argon-audio-malmo-sub-8",
+    "name": "MALMÖ SUB 8",
+    "category": "Subwooferi",
+    "shortDescription": "Kompaktan subwoofer sa snažnim i preciznim basom iz 8-inčnog woofera.",
+    "longDescription": "MALMÖ SUB 8 je subwoofer koji pruža snažan i precizan bas iz izuzetno kompaktnog kućišta. Opremljen je 8-inčnim wooferom i pojačalom od 100W (RMS) / 200W (PEAK), transformišući vaš životni prostor u uzbudljivo audio igralište. Uprkos svojoj kompaktnoj veličini, snažan je dodatak vašem sistemu koji će zasigurno impresionirati, reprodukujući vaše omiljene numere sa zadivljujućom preciznošću, dubinom i snagom. Savršen je pratilac za audiofile i filmoljupce koji žele da podignu svoje iskustvo slušanja na potpuno novi nivo. Sa podesivim crossoverom i kontrolom faze na dohvat ruke, imate moć da precizno podesite izlaz basa, obezbeđujući besprekorno uklapanje sa vašim zvučnicima. Njegov minimalistički dizajn, dostupan u crnoj, beloj ili boji oraha, besprekorno se integriše u svaki kućni dekor, savršeno dopunjujući FORUS seriju zvučnika.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+MALMÖ+SUB+8",
+    "specs": {
+      "Tip": "Aktivni subwoofer",
+      "Snaga Pojačala": "100 W (RMS) / 200 W (VRŠNA)",
+      "Bas Drajver": "8″ Dugog hoda",
+      "Frekventni Raspon (-3dB)": "40-200 Hz",
+      "Frekvencija Crossovera": "40-120 Hz",
+      "Ulazi": "Stereo Line-in (Analogni RCA)",
+      "Kontrole": "Volume, Phase Regulation, Auto On / Standby",
+      "Boje": "Crna, Bela, Orah (PVC)",
+      "Dimenzije (ŠxVxD)": "27 x 28.5 x 30 cm",
+      "Težina": "9.3 kg"
+    }
+  },
+  {
+    "id": "argon-audio-malmo-sub-10",
+    "name": "MALMÖ SUB 10",
+    "category": "Subwooferi",
+    "shortDescription": "Snažan subwoofer sa 10-inčnim drajverom za dubok i udaran bas.",
+    "longDescription": "Pripremite se da Vas oduševi subwoofer MALMÖ SUB 10. Ovaj epski subwoofer zadivljuje svojom snagom, preciznošću i stilom, isporučujući potresan bas koji će vas i vaše prijatelje ostaviti zatečene. MALMÖ SUB 10 je savršen za audiofile i ljubitelje uzbuđenja, spreman da transformiše vaš prostor u vrhunsko igralište za muziku, filmove i igre. Poseduje masivni 10-inčni woofer koji je spreman da oslobodi ozbiljan zvučni haos. Naši audio mađioničari su pedantno podesili ovu zver kako bi bili sigurni da reprodukuje vaše omiljene numere, filmove i igre sa zadivljujućom preciznošću i snagom. Njegov elegantan i robustan dizajn neprimetno spaja snagu sa lepotom, što ga čini istaknutim dodatkom svakom kućnom audio sistemu. Minimalistički dizajn, dostupan u crnoj, beloj ili boji oraha, besprekorno se integriše u svaki kućni dekor, savršeno dopunjujući FORUS seriju zvučnika.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+MALMÖ+SUB+10",
+    "specs": {
+      "Tip": "Aktivni subwoofer",
+      "Snaga Pojačala": "100 W (RMS) / 200 W (VRŠNA)",
+      "Bas Drajver": "10″ Dugog hoda",
+      "Frekventni Raspon (-3dB)": "35-200 Hz",
+      "Frekvencija Crossovera": "35-120 Hz",
+      "Ulazi": "Stereo Line-in (Analogni RCA)",
+      "Kontrole": "Volume, Phase Regulation, Auto On / Standby",
+      "Boje": "Crna, Bela, Orah (PVC)",
+      "Dimenzije (ŠxVxD)": "32 x 32.9 x 35 cm",
+      "Težina": "12.4 kg"
+    }
+  },
+  {
+    "id": "argon-audio-alto-5-mk2",
+    "name": "ALTO 5 MK2",
+    "category": "Pasivni Zvučnici",
+    "shortDescription": "Pristupačni pasivni bookshelf zvučnici.",
+    "longDescription": "Argon Audio ALTO 5 MK2 su pristupačni pasivni bookshelf zvučnici, savršeni za ulazak u svet kvalitetnog Hi-Fi zvuka. Nude uravnotežen zvuk sa jasnim visokim tonovima i solidnim basom za svoju veličinu, što ih čini odličnim izborom za stereo sisteme ili kao front/surround zvučnike u kućnom bioskopu. Zahtevaju eksterno pojačalo, nudeći fleksibilnost u izboru komponenata.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+ALTO+5+MK2",
+    "specs": {
+      "Tip": "Pasivni bookshelf zvučnici",
+      "Drajveri": "Npr. 1\" soft-dome visokotonac, 5.25\" bas/srednjetonac",
+      "Frekventni opseg": "Npr. 50Hz - 20kHz",
+      "Osetljivost": "Npr. 87-88dB",
+      "Impedansa": "4-8 oma",
+      "Preporučena snaga pojačala": "Npr. 20-100W",
+      "Dimenzije": "Kompaktni bookshelf zvučnici"
+    }
+  },
+  {
+    "id": "argon-audio-sa1",
+    "name": "SA1",
+    "category": "Integrisani Pojačivači",
+    "shortDescription": "Kompaktno hibridno-digitalno pojačalo sa Bluetooth aptX HD i DAC-om.",
+    "longDescription": "Argon Audio SA1 je izuzetno kompaktno, ali moćno hibridno-digitalno integrisano pojačalo, idealno za moderne audio sisteme. Sa Class D tehnologijom i ugrađenim 32-bit ESS Sabre DAC-om, pruža čist i detaljan zvuk. Podržava Bluetooth 5.0 sa aptX HD za visokokvalitetni bežični striming, kao i optičke, analogne i Phono (MM) ulaze. Savršeno je za one koji traže svestrano i efikasno pojačalo za mali prostor.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+SA1",
+    "specs": {
+      "Tip": "Integrisano stereo pojačalo",
+      "Tehnologija pojačala": "Class D, hibridno-digitalno",
+      "Izlazna Snaga (8Ω)": "2 x 40 Watt",
+      "Izlazna Snaga (4Ω)": "2 x 100 Watt (Dynamic Power IHF)",
+      "Frekventni opseg": "3-60.000 Hz",
+      "THD (20-20.000 Hz)": "<0.03%",
+      "DAC": "32-bit ESS Sabre DAC (potpuno balansiran signalni put)",
+      "Napajanje": "Odvojena napajanja za analogne i digitalne delove (ukupno 6)",
+      "Ulazi": "2 x Optički digitalni (do 24-bit/192kHz), Stereo Line-in (Analogni RCA), Phono (MM), Bluetooth 5.0 (aptX HD i AAC)",
+      "Izlazi": "Pre-out (za subwoofer ili eksterno pojačalo)",
+      "Funkcije": "Auto on/off na svim ulazima osim phono, 5V USB izlaz za napajanje",
+      "Dimenzije (ŠxVxD)": "22.0 x 6.3 x 25.2 cm",
+      "Težina": "2.2 kg"
+    }
+  },
+  {
+    "id": "argon-audio-sa2",
+    "name": "SA2",
+    "category": "Integrisani Pojačivači",
+    "shortDescription": "Integrisano pojačalo sa Wi-Fi strimingom (DTS Play-Fi) i DAC-om.",
+    "longDescription": "Argon Audio SA2 je naprednije integrisano pojačalo koje, pored svih prednosti modela SA1, dodaje Wi-Fi striming sa DTS Play-Fi podrškom za multiroom audio. To ga čini centralnim delom modernog povezanog audio sistema. Sa 32-bit ESS Sabre DAC-om, HDMI ARC i Phono (MM) ulazom, SA2 je izuzetno svestran i pruža visokokvalitetan zvuk za sve digitalne i analogne izvore.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+SA2",
+    "specs": {
+      "Tip": "Integrisano stereo pojačalo",
+      "Tehnologija pojačala": "Class D",
+      "Izlazna Snaga (8Ω)": "2 x 50 Watt",
+      "Izlazna Snaga (4Ω)": "2 x 100 Watt",
+      "Frekventni opseg": "3-60.000 Hz",
+      "THD (20-20.000 Hz)": "<0.03%",
+      "DAC": "32-bit ESS Sabre DAC (potpuno balansiran mod)",
+      "Napajanje": "Odvojena napajanja za analogne i digitalne delove (ukupno 6)",
+      "Ulazi": "Wi-Fi Streaming (DTS Play-Fi), HDMI ARC, 1 x Optički digitalni, L/R analogni stereo-in (RCA), Turntable MM ulaz, Bluetooth (A2DP/SBC/AAC)",
+      "Izlazi": "Pre out (za eksterno pojačalo/Subwoofer), 5V USB izlaz",
+      "Funkcije": "Bluetooth sa Qualcomm aptX HD Audio, Auto power on/off (osim phono ulaza), podrška za 24-bit/192kHz na optičkim ulazima",
+      "Dimenzije (ŠxVxD)": "22.0 x 6.3 x 25.2 cm",
+      "Težina": "2.2 kg"
+    }
+  },
+  {
+    "id": "argon-audio-quiet-storm",
+    "name": "Quiet Storm",
+    "category": "Slušalice",
+    "shortDescription": "Bežične over-ear slušalice sa aktivnim poništavanjem buke (ANC).",
+    "longDescription": "Argon Audio Quiet Storm su bežične over-ear slušalice koje kombinuju udobnost sa
