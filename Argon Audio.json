@@ -262,5 +262,19 @@
     "id": "argon-audio-quiet-storm",
     "name": "Quiet Storm",
     "category": "Slušalice",
-    "shortDescription": "Bežične over-ear slušalice sa aktivnim poništavanjem buke (ANC).",
-    "longDescription": "Argon Audio Quiet Storm su bežične over-ear slušalice koje kombinuju udobnost sa
+    "shortDescription": "Bežične over-ear slušalice sa aktivnim poništavanjem buke (ANC) i izuzetnim zvukom.",
+    "longDescription": "Argon Audio Quiet Storm su bežične over-ear slušalice koje kombinuju udobnost sa najsavremenijim aktivnim poništavanjem buke (ANC) za impresivno audio iskustvo. Opremljene su Bluetooth 5.0 tehnologijom sa podrškom za aptX HD kodek, pružajući visokokvalitetan bežični zvuk bez kompromisa. Sa dugotrajnom baterijom, intuitivnim kontrolama i elegantnim dizajnom, Quiet Storm su savršene za svakodnevno slušanje muzike, putovanja ili fokusirani rad. Nude uravnotežen zvučni profil sa dubokim basom, jasnim srednjim tonovima i čistim visokim tonovima.",
+    "image": "https://placehold.co/400x300/e0e0e0/333333?text=Argon+Quiet+Storm",
+    "specs": {
+      "Tip": "Bežične Over-ear slušalice sa ANC",
+      "Povezivost": "Bluetooth 5.0 (aptX HD, AAC, SBC)",
+      "Poništavanje buke": "Aktivno poništavanje buke (ANC)",
+      "Trajanje baterije": "Npr. 20-30 sati (sa ANC)",
+      "Drajveri": "Npr. 40mm dinamički drajveri",
+      "Frekventni opseg": "Npr. 20Hz - 20kHz",
+      "Kontrole": "Kontrole na slušalici (reprodukcija, jačina zvuka, ANC)",
+      "Punjenje": "USB-C",
+      "Uključeno": "Futrola za nošenje, audio kabl, USB kabl za punjenje"
+    }
+  }
+]
