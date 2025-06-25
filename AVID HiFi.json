@@ -1,0 +1,580 @@
+{
+  "Brend": "AVID HiFi",
+  "Kategorije": {
+    "Gramofoni": [
+      {
+        "Model": "Acutus Reference Mono",
+        "Specifikacije": {
+          "Pogon": "Dvostruki remenski pogon (Twin Belt Drive)",
+          "Brzine": "33.3 i 45.0 RPM, podesive",
+          "Masa tanjira": "10.0 kg, aluminijum, hromirana završna obrada",
+          "Ležaj": "Inverzni nerđajući čelik",
+          "Tačka potiska": "Volfram karbid / Safir",
+          "Suspenzija": "Trostruka opružna suspenzija (Vertikalna 2.5 Hz, Lateralna 4.5 Hz)",
+          "Priključak za ručicu": "Standardno sečeno za SME šablon (adapteri za jednu ili dve ručice)",
+          "Motor": "Ručno izrađen 24V 140mNm AC sinhroni motor",
+          "Napajanje": "DSP Vari-Speed kontrolna jedinica sa dvostrukim mono napajanjem",
+          "Ulazni napon": "100-240VAC 50/60Hz, maksimalno 20 W",
+          "Dimenzije (ŠxDxV) - Gramofon": "460 x 400 x 210 mm",
+          "Dimenzije (ŠxDxV) - Gramofon osnova": "410 x 360 mm",
+          "Dimenzije (ŠxDxV) - PSU": "500 x 450 x 240 mm",
+          "Neto težina - Gramofon": "19.0 kg",
+          "Neto težina - PSU": "52.0 kg"
+        }
+      },
+      {
+        "Model": "Acutus Reference",
+        "Specifikacije": {
+          "Pogon": "Remenski pogon sa eksternom DSP varijabilnom kontrolnom jedinicom za brzinu",
+          "Brzine": "33.3 i 45.0 RPM, podesive",
+          "Masa tanjira": "10.0 kg, aluminijum, hromirana završna obrada",
+          "Ležaj": "Inverzni safirni ležaj sa safirnom kuglicom",
+          "Tačka potiska": "Volfram karbid / Safir",
+          "Suspenzija": "Trostruka opružna suspenzija",
+          "Motor": "Visoko-obrtni momenat, ručno izrađen 24V AC sinhroni motor",
+          "Napajanje": "Eksterna DSP Vari-Speed kontrolna jedinica sa punim referentnim napajanjem",
+          "Priključak za ručicu": "Standardno sečeno za SME šablon (adapteri za različite ručice)",
+          "Dimenzije (ŠxDxV) - Gramofon": "460 x 400 x 210 mm",
+          "Dimenzije (ŠxDxV) - Gramofon osnova": "410 x 360 mm",
+          "Dimenzije (ŠxDxV) - PSU": "250 x 250 x 95 mm",
+          "Neto težina - Gramofon": "19.0 kg",
+          "Neto težina - PSU": "6.5 kg"
+        }
+      },
+      {
+        "Model": "Acutus Classic",
+        "Specifikacije": {
+          "Pogon": "Remenski pogon sa eksternom DSP varijabilnom kontrolnom jedinicom za brzinu",
+          "Brzine": "33.3 i 45.0 RPM, elektronski podesive",
+          "Masa tanjira": "10.0 kg, mašinski obrađen aluminijum",
+          "Ležaj": "Inverzni safirni ležaj sa safirnom kuglicom",
+          "Tačka potiska": "Volfram karbid / Safir",
+          "Suspenzija": "Trostruka opružna suspenzija",
+          "Motor": "Visoko-obrtni momenat, ručno izrađen 24V AC sinhroni motor",
+          "Napajanje": "Eksterna DSP Vari-Speed kontrolna jedinica sa punim referentnim napajanjem",
+          "Priključak za ručicu": "Standardno sečeno za SME šablon (adapteri za druge ručice)",
+          "Dimenzije (ŠxDxV) - Gramofon": "460 x 400 x 210 mm",
+          "Dimenzije (ŠxDxV) - Gramofon osnova": "410 x 360 mm",
+          "Dimenzije (ŠxDxV) - PSU": "250 x 250 x 95 mm",
+          "Neto težina - Gramofon": "19.0 kg",
+          "Neto težina - PSU": "6.5 kg"
+        }
+      },
+      {
+        "Model": "Acutus Dark Iron",
+        "Specifikacije": {
+          "Pogon": "Remenski pogon sa eksternom DSP Vari-Speed kontrolnom jedinicom",
+          "Brzine": "33.3 i 45.0 RPM, elektronski podesive",
+          "Masa tanjira": "10.0 kg, aluminijum, 'Dark Iron' završni sloj",
+          "Ležaj": "Inverzni safirni ležaj sa safirnom kuglicom",
+          "Tačka potiska": "Volfram karbid / Safir",
+          "Suspenzija": "Trostruka opružna suspenzija",
+          "Motor": "Visoko-obrtni momenat, ručno izrađen 24V AC sinhroni motor",
+          "Napajanje": "Eksterna DSP Vari-Speed kontrolna jedinica sa punim referentnim napajanjem",
+          "Priključak za ručicu": "Standardno sečeno za SME šablon (adapteri za druge ručice)",
+          "Dimenzije (ŠxDxV) - Gramofon": "460 x 400 x 210 mm",
+          "Dimenzije (ŠxDxV) - Gramofon osnova": "410 x 360 mm",
+          "Dimenzije (ŠxDxV) - PSU": "250 x 250 x 95 mm",
+          "Neto težina - Gramofon": "19.0 kg",
+          "Neto težina - PSU": "6.5 kg"
+        }
+      },
+      {
+        "Model": "Sequel",
+        "Specifikacije": {
+          "Pogon": "Remenski pogon sa eksternom DSP varijabilnom kontrolnom jedinicom za brzinu",
+          "Brzine": "33.3 i 45.0 RPM, elektronski podesive",
+          "Masa tanjira": "6.7 kg, mašinski obrađen aluminijum",
+          "Ležaj": "Inverzni safirni ležaj sa safirnom kuglicom",
+          "Tačka potiska": "Volfram karbid / Safir",
+          "Suspenzija": "Trostruka opružna suspenzija sa podešavanjem frekvencije",
+          "Motor": "Visoko-obrtni momenat, ručno izrađen 24V AC sinhroni motor",
+          "Napajanje": "Eksterna DSP Vari-Speed kontrolna jedinica sa punim referentnim napajanjem",
+          "Priključak za ručicu": "Standardno sečeno za SME šablon (adapteri za druge ručice)",
+          "Dimenzije (ŠxDxV) - Gramofon": "460 x 400 x 170 mm",
+          "Dimenzije (ŠxDxV) - PSU": "250 x 250 x 95 mm",
+          "Neto težina - Gramofon": "12.0 kg",
+          "Neto težina - PSU": "6.5 kg"
+        }
+      },
+      {
+        "Model": "Volvere",
+        "Specifikacije": {
+          "Pogon": "Remenski pogon sa eksternom digitalno kontrolisanom jedinicom za napajanje i kontrolu brzine",
+          "Brzine": "33.3 i 45.0 RPM, elektronski podesive",
+          "Masa tanjira": "6.7 kg, mašinski obrađen aluminijum",
+          "Ležaj": "Inverzni safirni ležaj sa safirnom kuglicom",
+          "Tačka potiska": "Volfram karbid / Safir",
+          "Suspenzija": "Trostruka opružna suspenzija",
+          "Motor": "Visoko-obrtni momenat, 24V AC sinhroni motor",
+          "Napajanje": "Eksterno regulisano napajanje sa finom kontrolom brzine",
+          "Priključak za ručicu": "Standardno sečeno za SME šablon (adapteri za širok spektar ručica)",
+          "Dimenzije (ŠxDxV) - Gramofon": "460 x 400 x 140 mm",
+          "Dimenzije (ŠxDxV) - PSU": "250 x 250 x 95 mm",
+          "Neto težina - Gramofon": "12.0 kg",
+          "Neto težina - PSU": "6.5 kg"
+        }
+      },
+      {
+        "Model": "Diva II SP",
+        "Specifikacije": {
+          "Pogon": "Dvostruki remenski pogon sa eksternom DSP varijabilnom kontrolnom jedinicom za brzinu",
+          "Brzine": "33.3 i 45.0 RPM, elektronski podesive",
+          "Masa tanjira": "6.7 kg, mašinski obrađen aluminijum",
+          "Ležaj": "Inverzni safirni ležaj sa safirnom kuglicom",
+          "Tačka potiska": "Volfram karbid / Safir",
+          "Suspenzija": "Opružna suspenzija (elastomerom)",
+          "Motor": "Visoko-obrtni momenat, 24V AC sinhroni motor",
+          "Napajanje": "Eksterna DSP Vari-Speed kontrolna jedinica",
+          "Priključak za ručicu": "Standardno sečeno za SME šablon (adapteri za druge ručice)",
+          "Dimenzije (ŠxDxV) - Gramofon": "460 x 400 x 140 mm",
+          "Dimenzije (ŠxDxV) - PSU": "250 x 250 x 95 mm",
+          "Neto težina - Gramofon": "10.0 kg",
+          "Neto težina - PSU": "6.5 kg"
+        }
+      },
+      {
+        "Model": "Diva II",
+        "Specifikacije": {
+          "Pogon": "Remenski pogon sa eksternom kontrolom brzine",
+          "Brzine": "33.3 i 45.0 RPM, elektronski podesive",
+          "Masa tanjira": "6.7 kg, mašinski obrađen aluminijum",
+          "Ležaj": "Inverzni safirni ležaj sa safirnom kuglicom",
+          "Tačka potiska": "Volfram karbid / Safir",
+          "Suspenzija": "Opružna suspenzija (elastomerom)",
+          "Motor": "24V AC sinhroni motor",
+          "Napajanje": "Eksterno napajanje za motor",
+          "Priključak za ručicu": "Standardno sečeno za SME šablon (adapteri za druge ručice)",
+          "Dimenzije (ŠxDxV) - Gramofon": "460 x 400 x 140 mm",
+          "Dimenzije (ŠxDxV) - PSU": "150 x 150 x 70 mm",
+          "Neto težina - Gramofon": "10.0 kg",
+          "Neto težina - PSU": "2.5 kg"
+        }
+      },
+      {
+        "Model": "Ingenium Plug&Play",
+        "Specifikacije": {
+          "Pogon": "Remenski pogon",
+          "Brzine": "33.3 i 45.0 RPM, elektronski podesive",
+          "Masa tanjira": "2.5 kg, aluminijum",
+          "Ležaj": "Inverzni safirni ležaj sa safirnom kuglicom",
+          "Tačka potiska": "Volfram karbid / Safir",
+          "Suspenzija": "Bez suspenzije (rigidni dizajn)",
+          "Motor": "Visoko-obrtni momenat, 24V AC sinhroni motor",
+          "Napajanje": "Eksterno, kompaktno napajanje za motor",
+          "Priključak za ručicu": "Često se isporučuje sa unapred montiranom AVID tonearm ručicom i zvučnicom",
+          "Dimenzije (ŠxDxV) - Gramofon": "370 x 370 x 130 mm",
+          "Neto težina - Gramofon": "6.0 kg"
+        }
+      }
+    ],
+    "Ručice": [
+      {
+        "Model": "NEXUS v2",
+        "Specifikacije": {
+          "Tip ručice": "Unipivot dizajn (jednostruki pivot)",
+          "Efektivna dužina": "253 mm",
+          "Offset ugao": "22.5 stepeni",
+          "Overhang": "17.3 mm",
+          "Masa": "Srednja masa",
+          "Materijali": "Visokokvalitetni aluminijum i nerđajući čelik",
+          "Ožičenje": "Interno ožičenje od visokokvalitetnih bakarnih provodnika ili srebra",
+          "Podešavanja": "Fina podešavanja VTA, Azimuth-a i antiskejtinga",
+          "Kontra-teg": "Precizno mašinski obrađen kontra-teg"
+        }
+      },
+      {
+        "Model": "ALTUS v2",
+        "Specifikacije": {
+          "Tip ručice": "Unipivot dizajn (jednostruki pivot)",
+          "Efektivna dužina": "253 mm",
+          "Offset ugao": "22.5 stepeni",
+          "Overhang": "17.3 mm",
+          "Masa": "Srednja masa",
+          "Materijali": "Visokokvalitetni aluminijum",
+          "Ožičenje": "Interno ožičenje visokog kvaliteta",
+          "Podešavanja": "Precizno podešavanje VTA, Azimuth-a i antiskejtinga",
+          "Kontra-teg": "Pažljivo dizajniran kontra-teg"
+        }
+      }
+    ],
+    "Zvučnice": [
+      {
+        "Model": "Reference Ruby",
+        "Specifikacije": {
+          "Tip zvučnice": "Moving Coil (MC)",
+          "Cantilever": "Rubin (Ruby)",
+          "Stylus (Igla)": "Specijalno brušeni dijamantski vrh (npr. Micro-ridge ili Line-contact)",
+          "Izlazni napon": "Nizak (npr. 0.3mV - 0.4mV)",
+          "Frekventni odziv": "Širok i linearan (npr. 20Hz do 30kHz ili šire)",
+          "Separacija kanala": "Visoka (>30dB)",
+          "Preporučena sila praćenja (Tracking Force)": "1.8g - 2.2g",
+          "Preporučeno opterećenje (Loading)": "100 - 400 oma",
+          "Telo zvučnice": "Aluminijum ili legura"
+        }
+      },
+      {
+        "Model": "Boron",
+        "Specifikacije": {
+          "Tip zvučnice": "Moving Coil (MC)",
+          "Cantilever": "Boron (bor)",
+          "Stylus (Igla)": "Tipično Micro-ridge ili sličan napredni profil dijamantskog vrha",
+          "Izlazni napon": "Nizak (npr. 0.3mV - 0.4mV)",
+          "Frekventni odziv": "Širok, sa dobrom ekstenzijom",
+          "Separacija kanala": "Vrlo dobra",
+          "Preporučena sila praćenja (Tracking Force)": "Oko 2.0g",
+          "Preporučeno opterećenje (Loading)": "100 - 400 oma",
+          "Telo zvučnice": "Robusno"
+        }
+      },
+      {
+        "Model": "Ionic",
+        "Specifikacije": {
+          "Tip zvučnice": "Moving Coil (MC)",
+          "Cantilever": "Aluminijum ili legura",
+          "Stylus (Igla)": "Tipično Elliptical ili Fine Line dijamantski vrh",
+          "Izlazni napon": "Nizak (npr. 0.3mV - 0.5mV)",
+          "Frekventni odziv": "Dobar i uravnotežen",
+          "Separacija kanala": "Solidna",
+          "Preporučena sila praćenja (Tracking Force)": "2.0g - 2.2g",
+          "Preporučeno opterećenje (Loading)": "100 - 500 oma",
+          "Telo zvučnice": "Dizajnirano da minimizira rezonancu"
+        }
+      }
+    ],
+    "Fono pretpojačala": [
+      {
+        "Model": "Pellar Phono Stage",
+        "Specifikacije": {
+          "Tip": "Phono pretpojačalo za Moving Magnet (MM) i Moving Coil (MC) zvučnice",
+          "Pojačanje (Gain)": "Podesivo za MM i MC (npr. 40dB za MM, 60dB+ za MC)",
+          "Ulazno opterećenje (Input Loading)": "Podesivo za MC (npr. 100Ω, 500Ω, 1kΩ) i standardno za MM (47kΩ)",
+          "Frekventni odziv": "Precizna RIAA ekvilizacija (<0.5dB odstupanje)",
+          "Odnos signal/šum (SNR)": "Visok (>80dB za MM, >70dB za MC)",
+          "THD (Total Harmonic Distortion)": "Niska",
+          "Napajanje": "Interno ili eksterno, dizajnirano za stabilnost i nisku buku",
+          "Izlaz": "RCA"
+        }
+      }
+    ],
+    "Pojačala": [
+      {
+        "Model": "Reference Pre",
+        "Specifikacije": {
+          "Tip": "Stereofonsko pretpojačalo",
+          "Ulazi": "Višestruki analogni ulazi (RCA, XLR balansirani), obično 5+ ulaza",
+          "Izlazi": "Balansirani (XLR) i nebalansirani (RCA) izlazi",
+          "Frekventni odziv": "Izuzetno širok i linearan",
+          "Odnos signal/šum (SNR)": "Ekstremno visok",
+          "THD (Total Harmonic Distortion)": "Izuzetno niska",
+          "Kontrola jačine zvuka": "Precizna kontrola jačine zvuka",
+          "Napajanje": "Eksterno, super-regulisano napajanje (PSU)",
+          "Konstrukcija": "Robusno šasija sa izolacionim nogama"
+        }
+      },
+      {
+        "Model": "Reference Mono",
+        "Specifikacije": {
+          "Tip": "Monofonsko pojačalo snage (Mono Power Amplifier)",
+          "Izlazna snaga": "Izuzetno velika (npr. 300W+ po kanalu na 8Ω, udvostručava se na 4Ω)",
+          "Frekventni odziv": "Širok i linearan",
+          "Odnos signal/šum (SNR)": "Izuzetno visok",
+          "THD (Total Harmonic Distortion)": "Izuzetno niska",
+          "Ulazi": "Balansirani (XLR) i nebalansirani (RCA) ulazi",
+          "Izlazi za zvučnike": "Visokokvalitetni binding postovi",
+          "Napajanje": "Masivni toroidalni transformatori i visoki kapacitet filtracije",
+          "Konstrukcija": "Izuzetno robusno, anti-rezonantno kućište"
+        }
+      },
+      {
+        "Model": "Reference Stereo",
+        "Specifikacije": {
+          "Tip": "Stereofonsko pojačalo snage (Stereo Power Amplifier)",
+          "Izlazna snaga": "Visoka (npr. 150W+ po kanalu na 8Ω, udvostručava se na 4Ω)",
+          "Frekventni odziv": "Širok i linearan",
+          "Odnos signal/šum (SNR)": "Visok",
+          "THD (Total Harmonic Distortion)": "Niska",
+          "Ulazi": "Balansirani (XLR) i nebalansirani (RCA) ulazi",
+          "Izlazi za zvučnike": "Visokokvalitetni binding postovi",
+          "Napajanje": "Robusno napajanje sa velikim toroidalnim transformatorom",
+          "Konstrukcija": "Čvrsto, anti-rezonantno kućište"
+        }
+      },
+      {
+        "Model": "Celsus Pre",
+        "Specifikacije": {
+          "Tip": "Stereofonsko pretpojačalo (Preamplifier)",
+          "Ulazi": "Višestruki analogni ulazi (RCA i/ili XLR)",
+          "Izlazi": "Balansirani (XLR) i nebalansirani (RCA) izlazi",
+          "Frekventni odziv": "Širok i precizan",
+          "Odnos signal/šum (SNR)": "Visok",
+          "THD (Total Harmonic Distortion)": "Niska",
+          "Kontrola jačine zvuka": "Precizna i glatka",
+          "Napajanje": "Stabilno, interno ili eksterno regulisano",
+          "Konstrukcija": "Čvrsta šasija"
+        }
+      },
+      {
+        "Model": "Celsus Stereo",
+        "Specifikacije": {
+          "Tip": "Stereofonsko pojačalo snage (Stereo Power Amplifier)",
+          "Izlazna snaga": "Dovoljno snažna (npr. 100W - 150W po kanalu na 8Ω)",
+          "Frekventni odziv": "Širok i linearan",
+          "Odnos signal/šum (SNR)": "Visok",
+          "THD (Total Harmonic Distortion)": "Niska",
+          "Ulazi": "Analogni ulazi (RCA i/ili XLR)",
+          "Izlazi za zvučnike": "Kvalitetni terminali",
+          "Napajanje": "Robusno interno napajanje sa velikim toroidalnim transformatorom",
+          "Konstrukcija": "Izdržljivo kućište"
+        }
+      },
+      {
+        "Model": "Sigsum Integrated",
+        "Specifikacije": {
+          "Tip": "Integrisano pojačalo (Integrated Amplifier)",
+          "Izlazna snaga": "Snažna (npr. 100W+ po kanalu na 8Ω)",
+          "Ulazi": "Višestruki analogni ulazi (RCA i/ili XLR), često sa ugrađenim fono pretpojačalom",
+          "Izlazi": "Izlazi za zvučnike, ponekad Pre-out i/ili Record-out",
+          "Frekventni odziv": "Širok i linearan",
+          "Odnos signal/šum (SNR)": "Visok",
+          "THD (Total Harmonic Distortion)": "Niska",
+          "Napajanje": "Robusno, visoko-kvalitetno interno napajanje",
+          "Konstrukcija": "Čvrsto i anti-rezonantno kućište"
+        }
+      },
+      {
+        "Model": "Integra Integrated",
+        "Specifikacije": {
+          "Tip": "Integrisano pojačalo (Integrated Amplifier)",
+          "Izlazna snaga": "Solidna (npr. 70W - 100W po kanalu na 8Ω)",
+          "Ulazi": "Višestruki analogni ulazi (RCA), često sa integrisanim MM/MC fono pretpojačalom",
+          "Izlazi": "Izlazi za zvučnike",
+          "Frekventni odziv": "Širok i precizan",
+          "Odnos signal/šum (SNR)": "Visok",
+          "THD (Total Harmonic Distortion)": "Niska",
+          "Napajanje": "Kvalitetno interno napajanje",
+          "Konstrukcija": "Solidna šasija"
+        }
+      },
+      {
+        "Model": "Accent Integrated",
+        "Specifikacije": {
+          "Tip": "Integrisano pojačalo (Integrated Amplifier)",
+          "Izlazna snaga": "Dovoljna (npr. 50W - 70W po kanalu na 8Ω)",
+          "Ulazi": "Višestruki analogni ulazi (RCA), često sa MM fono ulazom",
+          "Izlazi": "Izlazi za zvučnike",
+          "Frekventni odziv": "Dobar i uravnotežen",
+          "Odnos signal/šum (SNR)": "Solidan",
+          "THD (Total Harmonic Distortion)": "Prihvatljivo niska",
+          "Napajanje": "Stabilno interno napajanje",
+          "Konstrukcija": "Kompaktna i čvrsta šasija"
+        }
+      }
+    ],
+    "Zvučnici": [
+      {
+        "Model": "Reference One",
+        "Specifikacije": {
+          "Tip": "Samostojeći, 3-sistemski ili 4-sistemski",
+          "Drajveri": "Visokokvalitetne jedinice (npr. kupolasti visokotonac, srednjetonac, bas drajveri)",
+          "Frekventni odziv": "Izuzetno širok i linearan (npr. 20Hz - 40kHz ±3dB)",
+          "Osetljivost": "Visoka (npr. 90dB - 92dB @ 2.83V/1m)",
+          "Nominalna impedansa": "4-8 oma, stabilna",
+          "Preporučena snaga pojačala": "Širok raspon (npr. 50W - 500W)",
+          "Konstrukcija kabineta": "Izuzetno čvrsta, rezonanciono prigušena šasija",
+          "Priključci": "Bi-wiring ili bi-amping terminali visokog kvaliteta",
+          "Dimenzije i težina": "Velike i teške jedinice"
+        }
+      },
+      {
+        "Model": "Reference Two",
+        "Specifikacije": {
+          "Tip": "Samostojeći, 3-sistemski dizajn",
+          "Drajveri": "Visokokvalitetne jedinice",
+          "Frekventni odziv": "Širok i linearan (npr. 25Hz - 35kHz ±3dB)",
+          "Osetljivost": "Visoka (npr. 89dB - 91dB @ 2.83V/1m)",
+          "Nominalna impedansa": "4-8 oma, stabilna",
+          "Preporučena snaga pojačala": "Širok raspon (npr. 50W - 400W)",
+          "Konstrukcija kabineta": "Veoma čvrsta, rezonanciono prigušena šasija",
+          "Priključci": "Bi-wiring terminali visokog kvaliteta",
+          "Dimenzije i težina": "Robustne i teške jedinice"
+        }
+      },
+      {
+        "Model": "Reference Three",
+        "Specifikacije": {
+          "Tip": "Samostojeći, 3-sistemski dizajn",
+          "Drajveri": "Visokokvalitetne jedinice",
+          "Frekventni odziv": "Dobar i uravnotežen (npr. 30Hz - 30kHz ±3dB)",
+          "Osetljivost": "Visoka (npr. 88dB - 90dB @ 2.83V/1m)",
+          "Nominalna impedansa": "4-8 oma",
+          "Preporučena snaga pojačala": "Npr. 50W - 300W",
+          "Konstrukcija kabineta": "Čvrsta i dobro prigušena šasija",
+          "Priključci": "Visokokvalitetni terminali"
+        }
+      },
+      {
+        "Model": "Reference Four",
+        "Specifikacije": {
+          "Tip": "Samostojeći, 2-sistemski ili 2.5-sistemski dizajn",
+          "Drajveri": "Visokokvalitetne jedinice",
+          "Frekventni odziv": "Dobar i uravnotežen (npr. 40Hz - 30kHz ±3dB)",
+          "Osetljivost": "Npr. 87dB - 89dB @ 2.83V/1m",
+          "Nominalna impedansa": "6-8 oma",
+          "Preporučena snaga pojačala": "Npr. 30W - 200W",
+          "Konstrukcija kabineta": "Čvrsta i dobro prigušena šasija",
+          "Priključci": "Kvalitetni terminali"
+        }
+      },
+      {
+        "Model": "EVO THREE",
+        "Specifikacije": {
+          "Tip": "Samostojeći, 2.5-sistemski dizajn",
+          "Drajveri": "Kvalitetne jedinice",
+          "Frekventni odziv": "Širok i uravnotežen (npr. 35Hz - 25kHz)",
+          "Osetljivost": "Dobra (npr. 88dB @ 2.83V/1m)",
+          "Nominalna impedansa": "6 oma",
+          "Preporučena snaga pojačala": "30W - 150W",
+          "Konstrukcija kabineta": "Robusno MDF kućište",
+          "Priključci": "Kvalitetni terminali za zvučnike"
+        }
+      },
+      {
+        "Model": "EVO FOUR",
+        "Specifikacije": {
+          "Tip": "Bookshelf (regalni), 2-sistemski dizajn",
+          "Drajveri": "Kvalitetne jedinice",
+          "Frekventni odziv": "Dobar (npr. 45Hz - 25kHz)",
+          "Osetljivost": "Npr. 87dB @ 2.83V/1m",
+          "Nominalna impedansa": "6 oma",
+          "Preporučena snaga pojačala": "25W - 120W",
+          "Konstrukcija kabineta": "Čvrsto MDF kućište",
+          "Priključci": "Kvalitetni terminali za zvučnike"
+        }
+      }
+    ],
+    "Postolja/Nosači": [
+      {
+        "Model": "Platform",
+        "Specifikacije": {
+          "Tip": "Izolaciona platforma za audio komponente",
+          "Konstrukcija": "Višeslojna konstrukcija (aluminijum, elastomeri, kompoziti)",
+          "Dimenzije": "Različite dimenzije dostupne",
+          "Nosivost": "Velika nosivost",
+          "Izolacija": "Ciljano smanjenje prenosa vibracija"
+        }
+      },
+      {
+        "Model": "Isorak",
+        "Specifikacije": {
+          "Tip": "Modularni audio stalak",
+          "Konstrukcija": "Modularni sistem sa policama (aluminijum, kompozitni materijali, izolacioni elementi)",
+          "Izolacija": "Svaka polica nezavisno izolovana",
+          "Dimenzije": "Dostupan u različitim visinama i širinama polica",
+          "Nosivost": "Visoka nosivost po polici"
+        }
+      },
+      {
+        "Model": "Isopuk",
+        "Specifikacije": {
+          "Tip": "Izolacioni podmetači/noge",
+          "Konstrukcija": "Više slojeva različitih materijala (aluminijum i elastomeri)",
+          "Primena": "Postavljaju se ispod komponenti ili zvučnika"
+        }
+      }
+    ],
+    "Kablovi": [
+      {
+        "Model": "SCT Balanced Interconnect",
+        "Specifikacije": {
+          "Tip": "Balansirani interkonekcioni kabl (XLR na XLR)",
+          "Provodnik": "Visokokvalitetni bakar (npr. OFC ili PC-OCC), često posrebreni",
+          "Izolacija": "Dielektrični materijali niske dielektrične konstante (npr. FEP, PTFE)",
+          "Geometrija": "Precizna geometrija kabla",
+          "Širmovanje": "Višeslojno širmovanje",
+          "Konektori": "Visokokvalitetni XLR konektori sa pozlaćenim kontaktima"
+        }
+      },
+      {
+        "Model": "SCT Interconnect",
+        "Specifikacije": {
+          "Tip": "Nebalansirani interkonekcioni kabl (RCA na RCA)",
+          "Provodnik": "Visokokvalitetni bakar (npr. OFC ili PC-OCC)",
+          "Izolacija": "Efektivni dielektrični materijali",
+          "Geometrija": "Pažljivo optimizovana geometrija kabla",
+          "Širmovanje": "Efikasno širmovanje",
+          "Konektori": "Visokokvalitetni RCA konektori sa pozlaćenim kontaktima"
+        }
+      },
+      {
+        "Model": "ASC Loudspeaker Cable",
+        "Specifikacije": {
+          "Tip": "Zvučnički kabl (Speaker Cable)",
+          "Provodnik": "Visokokvalitetni bakar (npr. OFC ili PC-OCC), sa debljim presecima",
+          "Izolacija": "Robustna i efikasna izolacija",
+          "Geometrija": "Pažljivo dizajnirana geometrija kabla",
+          "Konektori": "Kvalitetni banana utikači ili spade konektori, često pozlaćeni"
+        }
+      }
+    ],
+    "Poklopci": [
+      {
+        "Model": "Acutus Turntable Cover",
+        "Specifikacije": {
+          "Materijal": "Visokokvalitetni akril ili pleksiglas, često providni",
+          "Dizajn": "Precizno izrađen za Acutus gramofone",
+          "Funkcija": "Zaštita od prašine i fizičkih oštećenja"
+        }
+      },
+      {
+        "Model": "Sequel Turntable Cover",
+        "Specifikacije": {
+          "Materijal": "Čvrst akril ili pleksiglas",
+          "Dizajn": "Precizno oblikovan za Sequel gramofon",
+          "Funkcija": "Zaštita od prašine i fizičkih uticaja"
+        }
+      },
+      {
+        "Model": "Diva II Turntable Cover",
+        "Specifikacije": {
+          "Materijal": "Visokokvalitetni akril ili pleksiglas",
+          "Dizajn": "Oblikovan da savršeno pristaje Diva II gramofonu",
+          "Funkcija": "Štiti gramofon od prašine i spoljnih uticaja"
+        }
+      },
+      {
+        "Model": "Universal Flat Cover",
+        "Specifikacije": {
+          "Materijal": "Akril ili sličan transparentan materijal",
+          "Dizajn": "Jednostavan, ravan dizajn",
+          "Funkcija": "Osnovna zaštita od prašine"
+        }
+      },
+      {
+        "Model": "Ingenium Cover",
+        "Specifikacije": {
+          "Materijal": "Visokokvalitetni akril ili pleksiglas",
+          "Dizajn": "Prilagođen specifičnom obliku i dimenzijama Ingenium gramofona",
+          "Funkcija": "Zaštita od prašine i očuvanje integriteta gramofona"
+        }
+      }
+    ],
+    "Dodaci": [
+      {
+        "Model": "Razni dodaci",
+        "Specifikacije": {
+          "Napomena": "Specifične liste dodataka nisu detaljno navedene sa punim specifikacijama na glavnom sajtu, često su grupisani kao 'Upgrades' ili rezervni delovi.",
+          "Tipovi artikala": [
+            "Remeni za gramofone (rezervni)",
+            "Ulja za ležajeve (specijalna ulja za gramofone)",
+            "Stezaljke za ploče (Record Clamps/Weights)",
+            "Četke za čišćenje ploča i zvučnica",
+            "Alati za podešavanje gramofona (npr. protaktori, vage za silu praćenja)",
+            "Dodatni utezi za ručice",
+            "Filteri za napajanje (kao dodatak za poboljšanje)"
+          ]
+        }
+      }
+    ]
+  }
+}
