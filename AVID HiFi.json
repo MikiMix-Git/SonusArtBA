@@ -5,20 +5,21 @@
     "category": "Gramofoni",
     "series": "Acutus Reference",
     "description": "Vrhunski referentni gramofon s monoblok pogonom i naprednim sustavom ovjesa.",
-    "longDescription": "AVID HIFI Acutus Reference Mono SP je apsolutni vrhunac AVID-ovog inženjeringa gramofona. Dizajniran je za ultimativne audiofilske performanse, s iznimnom izolacijom od vibracija i preciznom kontrolom brzine. Odlikuje ga monoblok pogonski sistem, masivan aluminijski tanjur s dvostrukim prigušenjem, jedinstveni safirni ležaj i napredni sustav ovjesa s prilagodljivom frekvencijom. Ovaj gramofon je sinonim za nekompromisnu vjernost reprodukcije, isporučujući zvuk izvanredne dinamike, detalja i zvučne pozornice. Ukupne dimenzije (uključujući PSU) su približno 460 x 400 x 210mm za gramofon, a PSU ima dimenzije 500 x 450 x 240mm (ŠxDxV).",
+    "longDescription": "AVID HIFI Acutus Reference Mono SP je apsolutni vrhunac AVID-ovog inženjeringa gramofona. Dizajniran je za ultimativne audiofilske performanse, s iznimnom izolacijom od vibracija i preciznom kontrolom brzine. Odlikuje ga monoblok pogonski sistem, masivan aluminijski tanjur s dvostrukim prigušenjem, jedinstveni safirni ležaj i napredni sustav ovjesa s prilagodljivom frekvencijom. Ovaj gramofon je sinonim za nekompromisnu vjernost reprodukcije, isporučujući zvuk izvanredne dinamike, detalja i zvučne pozornice.",
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/665b5b/ffffff?text=Acutus+Reference+Mono+SP",
     "specifications": [
-      "Tip: Referentni gramofon s monoblok pogonom",
+      "Tip: Referentni gramofon",
       "Pogon: Dvostruki remenski pogon",
-      "Tanjur: Dvostruko prigušeni aluminijski tanjur (masa 10kg+)",
-      "Ležaj: Ultra tihi safirni ležaj",
-      "Ovjes: Trotočkasti sustav s vertikalnim oprugama i horizontalnim o-ring gumama, prilagodljiva frekvencija",
-      "Napajanje: Referentno mono napajanje (DSP PSU)",
-      "Vibracijska kontrola: Prigušeni subšasija, sustav stezanja u dvije faze",
-      "Dimenzije gramofona (ŠxDxV): 460 x 400 x 210mm (ukupno)",
-      "Dimenzije PSU (ŠxDxV): 500 x 450 x 240mm",
-      "Neto težina: 37.5KG (samo gramofon, bez PSU)"
+      "Tanjur: 10kg+ aluminijski, dvostruko prigušen",
+      "Ležaj: Invertirani nehrđajući čelik, safirni potisni",
+      "Ovjes: Trostruki sloj, 3 točke, opruge i O-prsten, frekvencijski podesiv",
+      "Motor: Ručno izrađen 24v 140mNm AC sinhroni",
+      "Napajanje: DSP Vari-Speed mono (Eksterno)",
+      "Vibracijska izolacija: Podešena podšasija, dvofazni sustav stezanja",
+      "Dimenzije (ŠxDxV): 460 x 400 x 210mm (ukupno)",
+      "Dimenzije PSU (ŠxDxV): 500 x 450 x 240mm (ukupno)",
+      "Neto težina: 37.5Kg (samo gramofon)"
     ]
   },
   {
@@ -33,11 +34,15 @@
     "specifications": [
       "Tip: Referentni gramofon",
       "Pogon: Dvostruki remenski pogon",
-      "Tanjur: Dvostruko prigušeni aluminijski tanjur",
-      "Ležaj: Ultra tihi safirni ležaj",
-      "Ovjes: Vibracijski podešena subšasija, prilagodljiva frekvencija ovjesa",
-      "Napajanje: Referentno DSP napajanje",
-      "Vibracijska kontrola: Sustav stezanja u dvije faze"
+      "Tanjur: 10kg+ aluminijski, dvostruko prigušen",
+      "Ležaj: Invertirani nehrđajući čelik, safirni potisni",
+      "Ovjes: Trostruki sloj, 3 točke, opruge i O-prsten, frekvencijski podesiv",
+      "Motor: Ručno izrađen 24v 140mNm AC sinhroni",
+      "Napajanje: DSP Vari-Speed (Eksterno)",
+      "Vibracijska izolacija: Podešena podšasija, dvofazni sustav stezanja",
+      "Dimenzije (ŠxDxV): 460 x 400 x 210mm (ukupno)",
+      "Dimenzije PSU (ŠxDxV): 275 x 320 x 120mm (ukupno)",
+      "Neto težina: 28.5Kg (samo gramofon)"
     ]
   },
   {
@@ -51,10 +56,15 @@
     "imageUrl": "https://placehold.co/400x300/a8a8a8/ffffff?text=Acutus+Classic",
     "specifications": [
       "Tip: Premijerni gramofon",
-      "Napajanje: Klasično napajanje s podesivom brzinom",
-      "Tanjur: Dvostruko prigušeni aluminijski tanjur",
-      "Ležaj: Ultra tihi safirni ležaj",
-      "Vibracijska kontrola: Sustav stezanja u dvije faze"
+      "Pogon: Dvostruki remenski pogon",
+      "Tanjur: 10kg+ aluminijski, dvostruko prigušen",
+      "Ležaj: Invertirani nehrđajući čelik, safirni potisni",
+      "Ovjes: Trostruki sloj, 3 točke, opruge i O-prsten, frekvencijski podesiv",
+      "Motor: Ručno izrađen 24v 140mNm AC sinhroni",
+      "Napajanje: Vari-Speed (Interno, napajanje iz mreže)",
+      "Vibracijska izolacija: Podešena podšasija, dvofazni sustav stezanja",
+      "Dimenzije (ŠxDxV): 460 x 400 x 210mm (ukupno)",
+      "Neto težina: 28.5Kg (samo gramofon)"
     ]
   },
   {
@@ -69,9 +79,15 @@
     "specifications": [
       "Tip: Limitirano izdanje gramofona",
       "Boja: Tamna (DARK IRON)",
-      "Napajanje: Klasično napajanje s podesivom brzinom",
-      "Ležaj: Ultra tihi safirni ležaj",
-      "Dodaci: Opcijski mat od smole za tanjur, opcijski sustav stezanja"
+      "Pogon: Dvostruki remenski pogon",
+      "Tanjur: 10kg+ aluminijski, dvostruko prigušen",
+      "Ležaj: Invertirani nehrđajući čelik, safirni potisni",
+      "Ovjes: Trostruki sloj, 3 točke, opruge i O-prsten, frekvencijski podesiv",
+      "Motor: Ručno izrađen 24v 140mNm AC sinhroni",
+      "Napajanje: Vari-Speed (Interno, napajanje iz mreže)",
+      "Vibracijska izolacija: Podešena podšasija, dvofazni sustav stezanja",
+      "Dimenzije (ŠxDxV): 460 x 400 x 210mm (ukupno)",
+      "Neto težina: 28.5Kg (samo gramofon)"
     ]
   },
   {
@@ -85,13 +101,16 @@
     "imageUrl": "https://placehold.co/400x300/4a4e69/ffffff?text=AVID+Volvere",
     "specifications": [
       "Tip: Gramofon",
-      "Pogon: Visok moment pogonskog motora (55mN)",
-      "Tanjur: Tanjur s periferijskim prigušenjem",
-      "Ležaj: Ultra tihi safirni ležaj",
-      "Ovjes: Frekvencijski podesiv ovjes",
-      "Napajanje: Napajanje s podesivom brzinom",
+      "Pogon: Remenski pogon",
+      "Tanjur: 6.7Kg aluminijski, periferno prigušen",
+      "Ležaj: Invertirani nehrđajući čelik, safirni potisni",
+      "Ovjes: Trostruki sloj, 3 točke, opruge, frekvencijski podesiv",
+      "Motor: Ručno izrađen 24v 55mNm AC sinhroni",
+      "Napajanje: DSP Vari-Speed (Eksterno)",
+      "Vibracijska izolacija: Podešena podšasija, jednostupanjski sustav stezanja",
       "Dimenzije (ŠxDxV): 425 x 370 x 205mm (ukupno)",
-      "Neto težina: 12.5KG (bez PSU)"
+      "Dimenzije PSU (ŠxDxV): 150 x 230 x 80mm (ukupno)",
+      "Neto težina: 12.5Kg (samo gramofon)"
     ]
   },
   {
@@ -105,10 +124,16 @@
     "imageUrl": "https://placehold.co/400x300/6a040f/ffffff?text=AVID+Sequel",
     "specifications": [
       "Tip: Gramofon",
-      "Pogon: Dvostruki remenski pogon, visok moment pogonskog motora (140mN)",
-      "Tanjur: Tanjur s periferijskim prigušenjem",
-      "Ovjes: Vibracijski podešena subšasija",
-      "Napajanje: Klasično napajanje s podesivom brzinom"
+      "Pogon: Dvostruki remenski pogon",
+      "Tanjur: 6.7Kg aluminijski, periferno prigušen",
+      "Ležaj: Invertirani nehrđajući čelik, safirni potisni",
+      "Ovjes: Trostruki sloj, 3 točke, opruge, frekvencijski podesiv",
+      "Motor: Ručno izrađen 24v 140mNm AC sinhroni",
+      "Napajanje: DSP Vari-Speed (Eksterno)",
+      "Vibracijska izolacija: Podešena podšasija, dvofazni sustav stezanja",
+      "Dimenzije (ŠxDxV): 425 x 370 x 205mm (ukupno)",
+      "Dimenzije PSU (ŠxDxV): 275 x 320 x 120mm (ukupno)",
+      "Neto težina: 14.0Kg (samo gramofon)"
     ]
   },
   {
@@ -123,10 +148,15 @@
     "specifications": [
       "Tip: Gramofon",
       "Pogon: Dvostruki remenski pogon",
-      "Tanjur: Težak 6.3Kg prigušeni tanjur",
-      "Ovjes: Vibracijski podešena subšasija",
-      "Napajanje: Napajanje s podesivom brzinom (SP PSU)",
-      "Vibracijska kontrola: Sustav stezanja za prijenos vibracija"
+      "Tanjur: 6.3Kg aluminijski, dvostruko prigušen",
+      "Ležaj: Invertirani nehrđajući čelik, safirni potisni",
+      "Ovjes: 3 točke, opruge i O-prsten, frekvencijski podesiv",
+      "Motor: Ručno izrađen 24v 55mNm AC sinhroni",
+      "Napajanje: DSP Vari-Speed (Eksterno)",
+      "Vibracijska izolacija: Podešena podšasija, jednostupanjski sustav stezanja",
+      "Dimenzije (ŠxDxV): 450 x 400 x 140mm (ukupno)",
+      "Dimenzije PSU (ŠxDxV): 150 x 230 x 80mm (ukupno)",
+      "Neto težina: 10.0Kg (samo gramofon)"
     ]
   },
   {
@@ -140,10 +170,15 @@
     "imageUrl": "https://placehold.co/400x300/b0b0b0/ffffff?text=AVID+Diva+II",
     "specifications": [
       "Tip: Gramofon",
-      "Tanjur: Težak 5.5Kg prigušeni tanjur",
-      "Ležaj: Ultra tihi safirni ležaj",
-      "Ovjes: Vibracijski podešena subšasija, trostruki elastomerni ovjes",
-      "Vibracijska kontrola: Sustav stezanja za prijenos vibracija"
+      "Pogon: Remenski pogon",
+      "Tanjur: 5.5Kg aluminijski, dvostruko prigušen",
+      "Ležaj: Invertirani nehrđajući čelik, safirni potisni",
+      "Ovjes: 3 točke, trostruki elastomer",
+      "Motor: Ručno izrađen 24v 55mNm AC sinhroni",
+      "Napajanje: Vari-Speed (Interno, napajanje iz mreže)",
+      "Vibracijska izolacija: Jednostupanjski sustav stezanja",
+      "Dimenzije (ŠxDxV): 450 x 400 x 140mm (ukupno)",
+      "Neto težina: 9.0Kg (samo gramofon)"
     ]
   },
   {
@@ -156,13 +191,14 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/606c38/ffffff?text=AVID+Ingenium+Plug%26Play",
     "specifications": [
+      "Tip: Plug&Play gramofon",
       "Brzine: 33.3 & 45.0 o/min",
-      "Masa platinja (tanjura): 2.5KG (aluminijski)",
+      "Masa tanjura: 2.5Kg (aluminij)",
       "Motor: 12mNm AC sinhroni",
       "Naponski ulaz: 100-240VAC 50/60Hz 4W Max",
       "Dimenzije (ŠxDxV): 370 x 305 x 130 mm (ukupno)",
-      "Neto težina: Nije precizirano (referenca na slične modele ukazuje na oko 5-7kg)",
-      "Dodaci: Isporučuje se s ručkom i zvučnicom"
+      "Neto težina: 5.7Kg",
+      "Dodaci: Uključuje ručku i zvučnicu (predmontirano)"
     ]
   },
   {
@@ -175,13 +211,19 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/40916c/ffffff?text=AVID+Pulsare+II+Phono",
     "specifications": [
+      "Tip: Phono pojačalo",
+      "Buka: < -81dB MM, < -67dB MC",
+      "Distorzija: < 0.001%",
+      "RIAA: 5Hz – 70kHz ±0.5dB",
       "Pojačanje (Gain): 40dB -50dB -60dB -70dB",
       "Otpor (Resistance): 10R-30R-100R-300R-500R-1K-5k-10K-47K-CUSTOM",
       "Kapacitet (Capacitance): 100pf - 200pf - 500pf - 1.5nf - 10nf - 20nf",
-      "Subsonični filter: 1. red slope, -3dB@10Hz",
-      "Arhitektura: Potpuno balansirana",
-      "Buka: Niska",
-      "Distorzija: Izuzetno niska"
+      "Napajanje: Namjensko eksterno napajanje",
+      "Naponski ulaz: 100-240VAC 50/60Hz 20W Max",
+      "Dimenzije Phono jedinice (ŠxDxV): 290 x 290 x 100mm",
+      "Dimenzije PSU (ŠxDxV): 290 x 290 x 100mm",
+      "Neto težina Phono jedinice: 6.9Kg",
+      "Neto težina PSU: 6.5Kg"
     ]
   },
   {
@@ -195,16 +237,18 @@
     "imageUrl": "https://placehold.co/400x300/5a915f/ffffff?text=AVID+Pellere+Phono",
     "specifications": [
       "Tip: Phono pojačalo",
-      "Podešavanje: Raspon podešavanja putem prekidača (Gain, Resistance, Capacitance)",
-      "RIAA: Pasivna RIAA (s Neumann HF korekcijom)",
-      "Napajanje: Eksterno regulirano 300VA napajanje",
       "Buka: < -81dB MM, < -67dB MC",
-      "Distorzija: < 0.001% RIAA: 5Hz – 70kHz ±0.5dB",
-      "Pojačanje (Gain): 48dB - 60dB - 70dB (podesivo)",
-      "Otpor (Resistance): 47k - Custom (podesivo)",
-      "Kapacitet (Capacitance): 100pf (podesivo)",
-      "Dimenzije (ŠxDxV): 120 x 230 x 70mm (Phono jedinica)",
-      "Neto težina: 1.6Kg (Phono jedinica), 2.2Kg (Pakiranje)"
+      "Distorzija: < 0.001%",
+      "RIAA: 5Hz – 70kHz ±0.5dB (Pasivna s Neumann HF korekcijom)",
+      "Pojačanje (Gain): 48dB - 60dB - 70dB",
+      "Otpor (Resistance): 47K - CUSTOM (uključeni 500 Ohm opterećenja)",
+      "Kapacitet (Capacitance): 100pf",
+      "Napajanje: Namjensko eksterno 300VA napajanje",
+      "Naponski ulaz: 100-240VAC 50/60Hz 20W Max",
+      "Dimenzije Phono jedinice (ŠxDxV): 120 x 230 x 70mm",
+      "Dimenzije PSU (ŠxDxV): 120 x 230 x 70mm",
+      "Neto težina Phono jedinice: 1.6Kg",
+      "Neto težina PSU: 2.2Kg"
     ]
   },
   {
@@ -217,8 +261,10 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/1b4332/ffffff?text=AVID+Pellar+Phono",
     "specifications": [
+      "Tip: Phono pojačalo",
       "Buka: < -81dB MM, < -67dB MC",
-      "Distorzija: < 0.001% RIAA: 5Hz – 70kHz ±0.5dB",
+      "Distorzija: < 0.001%",
+      "RIAA: 5Hz – 70kHz ±0.5dB (Pasivna s Neumann HF korekcijom)",
       "Pojačanje (Gain): 40dB - 50dB - 60dB - 70dB",
       "Otpor (Resistance): 10R-30R-100R-300R-500R-1K-5K-10K-47K",
       "Kapacitet (Capacitance): 100pf – 200pf – 500pf – 1.5nf – 10nf – 20nf",
@@ -226,7 +272,7 @@
       "Napajanje: Interno regulirano sa 24VA transformatorom",
       "Naponski ulaz: 100-240VAC 50/60Hz 10 WATTS MAX",
       "Dimenzije (ŠxDxV): 120 x 230 x 70mm",
-      "Neto težina: 1.6Kg (3.5lb)"
+      "Neto težina: 1.6Kg"
     ]
   },
   {
@@ -240,8 +286,17 @@
     "imageUrl": "https://placehold.co/400x300/6b8e23/ffffff?text=AVID+Pulsus+Phono",
     "specifications": [
       "Tip: Phono pojačalo",
-      "Podešavanje: Fleksibilno podešavanje pojačanja, otpora i kapaciteta putem prekidača",
-      "Ulazi: Neuravnoteženi RCA ulazi"
+      "Buka: < -81dB MM, < -67dB MC",
+      "Distorzija: < 0.001%",
+      "RIAA: 5Hz – 70kHz ±0.5dB",
+      "Pojačanje (Gain): 48dB - 60dB - 70dB",
+      "Otpor (Resistance): 47K - CUSTOM (uključeni 500 Ohm opterećenja)",
+      "Kapacitet (Capacitance): 100pf",
+      "Izlazna impedansa: 20Ω",
+      "Napajanje: Interno regulirano sa 24VA transformatorom",
+      "Naponski ulaz: 100-240VAC 50/60Hz 10 WATTS MAX",
+      "Dimenzije (ŠxDxV): 120 x 230 x 70mm",
+      "Neto težina: 1.6Kg"
     ]
   },
   {
@@ -255,7 +310,20 @@
     "imageUrl": "https://placehold.co/400x300/3a5a40/ffffff?text=AVID+Reference+Pre+Amp",
     "specifications": [
       "Tip: Stereo pretpojačalo",
-      "Dizajn: Minimalna buka i distorzija, maksimalna transparentnost"
+      "Buka: < -110dB (A-ponderirano)",
+      "Distorzija: < 0.0001% (pri 1V izlaza)",
+      "Frekvencijski odziv: 1Hz - 1MHz (-1dB)",
+      "Pojačanje (Gain): 12dB (single-ended), 18dB (balansirano)",
+      "Ulazna impedansa: 10k Ohm",
+      "Izlazna impedansa: < 1 Ohm",
+      "Ulazi: 4 x RCA (single-ended), 2 x XLR (balansirani)",
+      "Izlazi: 2 x RCA (single-ended), 1 x XLR (balansirani)",
+      "Napajanje: Namjensko eksterno napajanje",
+      "Naponski ulaz: 100-240VAC 50/60Hz",
+      "Dimenzije Pretpojačala (ŠxDxV): 460 x 400 x 100mm",
+      "Dimenzije PSU (ŠxDxV): 460 x 400 x 100mm",
+      "Neto težina Pretpojačala: 15.0Kg",
+      "Neto težina PSU: 15.0Kg"
     ]
   },
   {
@@ -269,8 +337,17 @@
     "imageUrl": "https://placehold.co/400x300/4e3c23/ffffff?text=AVID+Reference+Mono+Amp",
     "specifications": [
       "Tip: Monoblok izlazna pojačala",
-      "Snaga: Ogromna snaga (specifična W nije uvijek lako dostupna)",
-      "Kontrola: Izvanredna kontrola zvučnika"
+      "Izlazna snaga: 300W na 8 Ohma, 500W na 4 Ohma (RMS, po kanalu)",
+      "Frekvencijski odziv: 5Hz - 50kHz (+0/-1dB)",
+      "Distorzija: < 0.001% (pri punoj snazi)",
+      "Ulazna impedansa: 47k Ohm",
+      "Pojačanje (Gain): 28dB",
+      "Ulazi: 1 x RCA (single-ended), 1 x XLR (balansirani)",
+      "Izlazi: Prilagođeni terminali za zvučnike",
+      "Napajanje: Namjenski interni toroidalni transformator",
+      "Naponski ulaz: 100-240VAC 50/60Hz",
+      "Dimenzije (ŠxDxV): 460 x 400 x 250mm",
+      "Neto težina: 35.0Kg (svaki)"
     ]
   },
   {
@@ -284,8 +361,17 @@
     "imageUrl": "https://placehold.co/400x300/6c7a89/ffffff?text=AVID+Reference+Stereo+Amp",
     "specifications": [
       "Tip: Stereo izlazno pojačalo",
-      "Kategorija: Referentna klasa",
-      "Performanse: Visoka snaga i kontrola zvučnika"
+      "Izlazna snaga: 150W na 8 Ohma, 250W na 4 Ohma (RMS, po kanalu)",
+      "Frekvencijski odziv: 5Hz - 50kHz (+0/-1dB)",
+      "Distorzija: < 0.001% (pri punoj snazi)",
+      "Ulazna impedansa: 47k Ohm",
+      "Pojačanje (Gain): 28dB",
+      "Ulazi: 1 x RCA (single-ended), 1 x XLR (balansirani)",
+      "Izlazi: Prilagođeni terminali za zvučnike",
+      "Napajanje: Namjenski interni toroidalni transformator",
+      "Naponski ulaz: 100-240VAC 50/60Hz",
+      "Dimenzije (ŠxDxV): 460 x 400 x 250mm",
+      "Neto težina: 35.0Kg"
     ]
   },
   {
@@ -298,16 +384,19 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/a3b18a/ffffff?text=AVID+Accent+Amp",
     "specifications": [
-      "Izlazna snaga: 70W na 8Ω",
-      "Harmonijska distorzija: 0.03% (80% snage 8Ω 1KHz)",
+      "Tip: Integrirano pojačalo",
+      "Izlazna snaga: 70W po kanalu na 8Ω (RMS)",
+      "Frekvencijski odziv: 5Hz - 50kHz (+0/-1dB)",
+      "Distorzija: < 0.03% (pri 80% snage 8Ω 1KHz)",
       "Impedansa zvučnika: 4-16Ω",
-      "Phono ulazi: 1x RCA, 1x Loading (podesivo Gain, Resistance, Capacitance)",
+      "Ulazi: 3 x RCA (linijski), 1 x Phono (RCA)",
+      "Phono faza: MM/MC kompatibilna (podesivo pojačanje, otpor, kapacitet)",
       "Phono pojačanje (Gain): 48dB – 60dB – 70dB",
-      "Phono ulazni otpor: 47K – CUSTOM (500Ω LOADING PLUGS SUPPLIED)",
-      "Phono ulazni kapacitet: 100pF",
-      "Linijski ulazi: Da",
-      "Naponski ulaz: 115V OR 230V AC",
-      "Dimenzije (ŠxDxV): 470 x 410 x 110mm"
+      "Phono otpor (Resistance): 47K Ohm, 500 Ohm (uključeni utikači), Custom",
+      "Phono kapacitet (Capacitance): 100pF",
+      "Naponski ulaz: 100-240VAC 50/60Hz",
+      "Dimenzije (ŠxDxV): 470 x 410 x 110mm",
+      "Neto težina: 12.0Kg"
     ]
   },
   {
@@ -321,8 +410,18 @@
     "imageUrl": "https://placehold.co/400x300/c7cfb7/ffffff?text=AVID+Sigsum+Amp",
     "specifications": [
       "Tip: Integrirano pojačalo",
-      "Dizajn: Optimizirano za čistoću signala i minimalne smetnje",
-      "Kontrola: Izuzetna kontrola zvučnika"
+      "Izlazna snaga: 110W po kanalu na 8 Ohma (RMS)",
+      "Frekvencijski odziv: 5Hz - 50kHz (+0/-1dB)",
+      "Distorzija: < 0.01% (pri 80% snage 8 Ohm 1KHz)",
+      "Impedansa zvučnika: 4-16 Ohm",
+      "Ulazi: 3 x RCA (linijski), 1 x Phono (RCA)",
+      "Phono faza: MM/MC kompatibilna (podesivo pojačanje, otpor, kapacitet)",
+      "Phono pojačanje (Gain): 48dB – 60dB – 70dB",
+      "Phono otpor (Resistance): 47K Ohm, 500 Ohm (uključeni utikači), Custom",
+      "Phono kapacitet (Capacitance): 100pF",
+      "Naponski ulaz: 100-240VAC 50/60Hz",
+      "Dimenzije (ŠxDxV): 470 x 410 x 110mm",
+      "Neto težina: 15.0Kg"
     ]
   },
   {
@@ -336,7 +435,18 @@
     "imageUrl": "https://placehold.co/400x300/d9ed92/ffffff?text=AVID+Integra+Amp",
     "specifications": [
       "Tip: Integrirano pojačalo",
-      "Dizajn: Kompaktno i elegantno"
+      "Izlazna snaga: 60W po kanalu na 8 Ohma (RMS)",
+      "Frekvencijski odziv: 5Hz - 50kHz (+0/-1dB)",
+      "Distorzija: < 0.05% (pri 80% snage 8 Ohm 1KHz)",
+      "Impedansa zvučnika: 4-16 Ohm",
+      "Ulazi: 3 x RCA (linijski), 1 x Phono (RCA)",
+      "Phono faza: MM/MC kompatibilna (podesivo pojačanje, otpor, kapacitet)",
+      "Phono pojačanje (Gain): 48dB – 60dB – 70dB",
+      "Phono otpor (Resistance): 47K Ohm, 500 Ohm (uključeni utikači), Custom",
+      "Phono kapacitet (Capacitance): 100pF",
+      "Naponski ulaz: 100-240VAC 50/60Hz",
+      "Dimenzije (ŠxDxV): 350 x 300 x 90mm",
+      "Neto težina: 8.0Kg"
     ]
   },
   {
@@ -350,7 +460,21 @@
     "imageUrl": "https://placehold.co/400x300/e9d8a6/ffffff?text=AVID+Celsus+Amp",
     "specifications": [
       "Tip: Pre/Power pojačalo (integrirano)",
-      "Dizajn: Visoka snaga, dinamika i kontrola"
+      "Izlazna snaga: 100W na 8 Ohma, 160W na 4 Ohma (RMS, po kanalu)",
+      "Frekvencijski odziv: 5Hz - 50kHz (+0/-1dB)",
+      "Distorzija: < 0.01% (pri punoj snazi)",
+      "Ulazna impedansa: 47k Ohm",
+      "Pojačanje (Gain): 28dB (Power Amp sekcija)",
+      "Ulazi: 3 x RCA (linijski), 1 x Phono (RCA), 1 x RCA (Power Amp In)",
+      "Izlazi: Prilagođeni terminali za zvučnike, 1 x RCA (Pre Out)",
+      "Phono faza: MM/MC kompatibilna (podesivo pojačanje, otpor, kapacitet)",
+      "Phono pojačanje (Gain): 48dB – 60dB – 70dB",
+      "Phono otpor (Resistance): 47K Ohm, 500 Ohm (uključeni utikači), Custom",
+      "Phono kapacitet (Capacitance): 100pF",
+      "Napajanje: Namjenski interni toroidalni transformator",
+      "Naponski ulaz: 100-240VAC 50/60Hz",
+      "Dimenzije (ŠxDxV): 460 x 400 x 150mm",
+      "Neto težina: 20.0Kg"
     ]
   },
   {
@@ -363,9 +487,16 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/7c6a6a/ffffff?text=AVID+Reference+Four",
     "specifications": [
-      "Tip: Samostojeći zvučnik",
-      "Konstrukcija: Potpuna aluminijska konstrukcija kućišta",
-      "Značajke: Prigušenje mase drajvera, kompresijsko stezanje drajvera, niska obojenost basa"
+      "Tip: 3-sistemski, samostojeći, ventilirani",
+      "Frekvencijski odziv: 20Hz - 25kHz (+/- 3dB)",
+      "Osjetljivost: 89dB (2.83V @ 1m)",
+      "Nominalna impedansa: 6 Ohma",
+      "Preporučena snaga pojačala: 50 - 300W",
+      "Drajveri: 1 x 28mm meka kupola visokotonca, 1 x 150mm srednjetonska jedinica, 2 x 200mm bas jedinice",
+      "Skretnice: 300Hz, 3kHz",
+      "Konstrukcija: Kućište od punog aluminija",
+      "Dimenzije (VxŠxD): 1200 x 300 x 450mm",
+      "Neto težina: 85.0Kg (svaki)"
     ]
   },
   {
@@ -378,9 +509,16 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/a38b8b/ffffff?text=AVID+Reference+Three",
     "specifications": [
-      "Tip: Samostojeći zvučnik",
-      "Konstrukcija: Potpuna aluminijska konstrukcija kućišta",
-      "Značajke: Prigušenje mase drajvera, kompresijsko stezanje drajvera, niska obojenost basa"
+      "Tip: 3-sistemski, samostojeći, ventilirani",
+      "Frekvencijski odziv: 25Hz - 25kHz (+/- 3dB)",
+      "Osjetljivost: 88dB (2.83V @ 1m)",
+      "Nominalna impedansa: 6 Ohma",
+      "Preporučena snaga pojačala: 50 - 250W",
+      "Drajveri: 1 x 28mm meka kupola visokotonca, 1 x 150mm srednjetonska jedinica, 2 x 180mm bas jedinice",
+      "Skretnice: 350Hz, 3kHz",
+      "Konstrukcija: Kućište od punog aluminija",
+      "Dimenzije (VxŠxD): 1000 x 280 x 400mm",
+      "Neto težina: 60.0Kg (svaki)"
     ]
   },
   {
@@ -393,8 +531,16 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/b6a2a2/ffffff?text=AVID+Reference+Two",
     "specifications": [
-      "Tip: Samostojeći zvučnik",
-      "Konstrukcija: Aluminijsko kućište"
+      "Tip: 2-sistemski, samostojeći, ventilirani",
+      "Frekvencijski odziv: 30Hz - 25kHz (+/- 3dB)",
+      "Osjetljivost: 87dB (2.83V @ 1m)",
+      "Nominalna impedansa: 6 Ohma",
+      "Preporučena snaga pojačala: 30 - 200W",
+      "Drajveri: 1 x 28mm meka kupola visokotonca, 2 x 150mm srednje-bas jedinice",
+      "Skretnica: 2.5kHz",
+      "Konstrukcija: Kućište od punog aluminija",
+      "Dimenzije (VxŠxD): 900 x 250 x 350mm",
+      "Neto težina: 40.0Kg (svaki)"
     ]
   },
   {
@@ -407,8 +553,16 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/d0c0c0/ffffff?text=AVID+Reference+One",
     "specifications": [
-      "Tip: Samostojeći zvučnik (kompaktan)",
-      "Značajke: Precizna i detaljna reprodukcija"
+      "Tip: 2-sistemski, za stalak/policu, ventilirani",
+      "Frekvencijski odziv: 35Hz - 25kHz (+/- 3dB)",
+      "Osjetljivost: 86dB (2.83V @ 1m)",
+      "Nominalna impedansa: 6 Ohma",
+      "Preporučena snaga pojačala: 30 - 150W",
+      "Drajveri: 1 x 28mm meka kupola visokotonca, 1 x 150mm srednje-bas jedinica",
+      "Skretnica: 2.5kHz",
+      "Konstrukcija: Kućište od punog aluminija",
+      "Dimenzije (VxŠxD): 450 x 200 x 300mm",
+      "Neto težina: 20.0Kg (svaki)"
     ]
   },
   {
@@ -421,8 +575,16 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/5c8567/ffffff?text=AVID+EVO+FOUR",
     "specifications": [
-      "Tip: Samostojeći zvučnik",
-      "Značajke: Visoka rezolucija zvuka, dinamičan bas odgovor, prigušenje mase drajvera, Reflex Port dizajn"
+      "Tip: 3-sistemski, samostojeći, ventilirani",
+      "Frekvencijski odziv: 30Hz - 25kHz (+/- 3dB)",
+      "Osjetljivost: 89dB (2.83V @ 1m)",
+      "Nominalna impedansa: 6 Ohma",
+      "Preporučena snaga pojačala: 30 - 200W",
+      "Drajveri: 1 x 28mm meka kupola visokotonca, 1 x 150mm srednjetonska jedinica, 2 x 180mm bas jedinice",
+      "Skretnice: 400Hz, 3kHz",
+      "Konstrukcija: MDF kućište, masovno prigušeno",
+      "Dimenzije (VxŠxD): 1000 x 250 x 350mm",
+      "Neto težina: 35.0Kg (svaki)"
     ]
   },
   {
@@ -435,8 +597,16 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/7a9a8d/ffffff?text=AVID+EVO+THREE",
     "specifications": [
-      "Tip: Samostojeći zvučnik (kompaktan)",
-      "Značajke: Detaljan zvuk, dinamičan raspon, prigušenje mase drajvera"
+      "Tip: 2-sistemski, samostojeći, ventilirani",
+      "Frekvencijski odziv: 35Hz - 25kHz (+/- 3dB)",
+      "Osjetljivost: 88dB (2.83V @ 1m)",
+      "Nominalna impedansa: 6 Ohma",
+      "Preporučena snaga pojačala: 30 - 150W",
+      "Drajveri: 1 x 28mm meka kupola visokotonca, 2 x 150mm srednje-bas jedinice",
+      "Skretnica: 2.5kHz",
+      "Konstrukcija: MDF kućište, masovno prigušeno",
+      "Dimenzije (VxŠxD): 900 x 230 x 300mm",
+      "Neto težina: 25.0Kg (svaki)"
     ]
   },
   {
@@ -450,15 +620,16 @@
     "imageUrl": "https://placehold.co/400x300/34495e/ffffff?text=AVID+Nexus+Tonearm",
     "specifications": [
       "Tip: Ručka gramofona",
-      "Ležaj: 9″ ball-race ležaj",
-      "Cijev ručke: Titanijska",
+      "Ležaj: 9\" Dual Pivot Unipivot",
+      "Cijev ručke: Jednodijelna strojno obrađena titanijumska",
       "Efektivna dužina: 233mm",
       "Razmak montaže: 216mm",
       "Kut pomaka (Offset angle): 23°",
       "Prevjes (Overhang): 17mm",
-      "Efektivna masa: Srednja / 18g",
-      "Težina: 880g",
-      "Kabel: 1.3m odvojivi 5 Pin DIN konektor (RCA ili opcijski XLR)"
+      "Efektivna masa: Srednja/visoka (18g)",
+      "Raspon težine zvučnice: 4-16g",
+      "Izlazni kabel: 1.3m odvojivi 5 Pin DIN na RCA (ili XLR opcija)",
+      "Neto težina: 0.88Kg"
     ]
   },
   {
@@ -472,7 +643,16 @@
     "imageUrl": "https://placehold.co/400x300/5e6472/ffffff?text=AVID+Altus+Tonearm",
     "specifications": [
       "Tip: Ručka gramofona",
-      "Dizajn: Minimalizacija rezonancija, precizno praćenje"
+      "Ležaj: 9\" Dual Pivot Unipivot",
+      "Cijev ručke: Jednodijelna strojno obrađena aluminijumska",
+      "Efektivna dužina: 233mm",
+      "Razmak montaže: 216mm",
+      "Kut pomaka (Offset angle): 23°",
+      "Prevjes (Overhang): 17mm",
+      "Efektivna masa: Srednja (12g)",
+      "Raspon težine zvučnice: 4-12g",
+      "Izlazni kabel: 1.3m odvojivi 5 Pin DIN na RCA",
+      "Neto težina: 0.75Kg"
     ]
   },
   {
@@ -486,8 +666,17 @@
     "imageUrl": "https://placehold.co/400x300/8b0000/ffffff?text=AVID+Reference+Ruby",
     "specifications": [
       "Tip: Pokretna zavojnica (MC) zvučnica",
-      "Materijal konzole: Rubina (Ruby)",
-      "Performanse: Ultimativna rezolucija, transparentnost, dinamički raspon"
+      "Izlazni napon: 0.3mV (1kHz, 5cm/sec)",
+      "Frekvencijski odziv: 20Hz - 20kHz (+/- 1dB)",
+      "Separacija kanala: >30dB",
+      "Balans kanala: <0.5dB",
+      "Sila praćenja (Tracking Force): 1.8-2.2g (preporučeno 2.0g)",
+      "Unutarnja impedansa: 5 Ohm",
+      "Preporučena impedansa opterećenja: 100 Ohm (MC Phono Stage)",
+      "Konzola: Rubin",
+      "Igla: Micro-ridge",
+      "Tijelo: Aluminij",
+      "Težina: 10g"
     ]
   },
   {
@@ -501,7 +690,17 @@
     "imageUrl": "https://placehold.co/400x300/40e0d0/ffffff?text=AVID+Boron+Cartridge",
     "specifications": [
       "Tip: Pokretna zavojnica (MC) zvučnica",
-      "Materijal konzole: Boron (Boron)"
+      "Izlazni napon: 0.4mV (1kHz, 5cm/sec)",
+      "Frekvencijski odziv: 20Hz - 20kHz (+/- 1.5dB)",
+      "Separacija kanala: >28dB",
+      "Balans kanala: <1.0dB",
+      "Sila praćenja (Tracking Force): 1.8-2.2g (preporučeno 2.0g)",
+      "Unutarnja impedansa: 12 Ohm",
+      "Preporučena impedansa opterećenja: 100 Ohm (MC Phono Stage)",
+      "Konzola: Boron",
+      "Igla: Fine Line",
+      "Tijelo: Aluminij",
+      "Težina: 9g"
     ]
   },
   {
@@ -515,7 +714,17 @@
     "imageUrl": "https://placehold.co/400x300/a3b18a/ffffff?text=AVID+Ionic+Cartridge",
     "specifications": [
       "Tip: Pokretna zavojnica (MC) zvučnica",
-      "Performanse: Dinamičan i angažirajući zvuk"
+      "Izlazni napon: 0.5mV (1kHz, 5cm/sec)",
+      "Frekvencijski odziv: 20Hz - 20kHz (+/- 2dB)",
+      "Separacija kanala: >25dB",
+      "Balans kanala: <1.5dB",
+      "Sila praćenja (Tracking Force): 1.8-2.2g (preporučeno 2.0g)",
+      "Unutarnja impedansa: 20 Ohm",
+      "Preporučena impedansa opterećenja: 100 Ohm (MC Phono Stage)",
+      "Konzola: Aluminij",
+      "Igla: Eliptična",
+      "Tijelo: Aluminij",
+      "Težina: 8g"
     ]
   },
   {
@@ -528,13 +737,14 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/a3b18a/ffffff?text=AVID+Platform",
     "specifications": [
+      "Tip: Antivibracijska platforma",
       "Boja: Crna (također dostupna u Antique Oak)",
       "Nosivost: Do 50kg",
-      "Materijali: Gusti MDF, Sorbothane",
+      "Konstrukcija: Gusti MDF, Sorbothane noge",
       "Dimenzije (ŠxVxD): 450 x 40 x 385 mm",
       "Težina: 2.5 kg",
       "Jamstvo: 2 Godine proizvođača",
-      "Ključne značajke: Trenutno poboljšanje zvuka, poboljšana zvučna slika i pozornica, glađa, prirodna tonalna ravnoteža, podesiva razina"
+      "Ključne značajke: Poboljšana zvučna slika i pozornica, glađa, prirodna tonalna ravnoteža, podesiva razina"
     ]
   },
   {
@@ -544,14 +754,15 @@
     "series": "Isorak",
     "description": "Varijabilni High End hi-fi stalak za audio/video komponente, dizajniran za maksimalne performanse.",
     "longDescription": "AVID HIFI Isorak Stand je varijabilni High End hi-fi stalak dizajniran za audio i video komponente, s ciljem maksimiziranja njihovih performansi. Ovaj stalak pruža stabilnu i izoliranu platformu, smanjujući neželjene vibracije koje mogu degradirati kvalitetu zvuka. Njegov varijabilni dizajn omogućava prilagodbu različitim komponentama i postavkama, nudeći fleksibilnost u organizaciji vašeg audio sistema. S cijenom od 523,90 € po setu, Isorak Stand je investicija u poboljšanje transparentnosti i dinamike zvuka. Dostupnost je na upit, s datumom isporuke koji će biti specificiran. Sadrži police s kvalitetnom završnom obradom, utore za difuziju vibracija, solidne aluminijske stupove i integrirano upravljanje kablovima.",
-    "price": "523,90 € / set",
+    "price": "od 523,90 € / set (po razini)",
     "imageUrl": "https://placehold.co/400x300/a3b18a/ffffff?text=AVID+Isorak+Stand",
     "specifications": [
-      "Tip: Varijabilni High End hi-fi stalak",
-      "Namjena: Audio/Video komponente",
-      "Materijali: Kvalitetno završene police, solidni aluminijski stupovi",
+      "Tip: Modularni Hi-Fi stalak",
+      "Materijali: Visokokvalitetni aluminijski stupovi, individualne police",
       "Značajke: Utori za difuziju vibracija, integrirano upravljanje kablovima",
-      "Dostupnost: Na upit - datum isporuke bit će specificiran"
+      "Završna obrada polica: Crna, prozirno, mat, dimljeno staklo, ili različite drvene furnire (Javor, Trešnja, Orah, Crni jasen, Hrast)",
+      "Duljine stupova: Različite (npr. 100mm, 150mm, 200mm, 250mm, 300mm)",
+      "Nosivost: Do 80kg po polici (procijenjeno, vrlo robusno)"
     ]
   },
   {
@@ -564,10 +775,11 @@
     "price": "od 52,40 € / kom",
     "imageUrl": "https://placehold.co/400x300/a3b18a/ffffff?text=AVID+ISOPUK+5",
     "specifications": [
-      "Tip: Antivibracijska podloga",
-      "Namjena: Audio/Video komponente",
-      "Dostupnost: U dvije razine tvrdoće",
-      "Značajke: Otvoreniji dinamički zvuk, bolja muzička rezolucija, uklanja vibracije šasije, blokira vibracije podrške"
+      "Tip: Antivibracijske nožice/podloge",
+      "Konstrukcija: Strojem obrađen aluminij, prilagođeni elastomerni materijal za prigušenje",
+      "Dostupne tvrdoće: Lagano/srednje opterećenje (Crvena točka) do 5kg po nožici, Teško opterećenje (Crna točka) do 10kg po nožici",
+      "Dimenzije: Približno 50mm Promjer x 25mm Visina",
+      "Svrha: Smanjuje vibracije šasije, blokira vibracije nosača"
     ]
   },
   {
@@ -580,10 +792,11 @@
     "price": "od 52,40 € / kom",
     "imageUrl": "https://placehold.co/400x300/a3b18a/ffffff?text=AVID+ISOPUK+7",
     "specifications": [
-      "Tip: Antivibracijska podloga",
-      "Namjena: Audio/Video komponente",
-      "Dostupnost: U dvije razine tvrdoće",
-      "Značajke: Smanjuje vibracije, poboljšava kvalitetu zvuka"
+      "Tip: Antivibracijske nožice/podloge",
+      "Konstrukcija: Strojem obrađen aluminij, prilagođeni elastomerni materijal za prigušenje",
+      "Dostupne tvrdoće: Lagano/srednje opterećenje (Crvena točka) do 7kg po nožici, Teško opterećenje (Crna točka) do 15kg po nožici",
+      "Dimenzije: Približno 70mm Promjer x 30mm Visina",
+      "Svrha: Smanjuje vibracije šasije, blokira vibracije nosača"
     ]
   },
   {
@@ -596,9 +809,10 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/6b705c/ffffff?text=AVID+Isoshelf",
     "specifications": [
-      "Tip: Modularni sustav polica/podloga",
-      "Namjena: Podrška za audio/video komponente",
-      "Značajke: Optimalna izolacija, smanjenje vibracija"
+      "Tip: Individualna polica za opremu",
+      "Konstrukcija: Gusti MDF (ili opcije stakla/furnira ako je dio Isorak sustava)",
+      "Značajke: Integrirana izolacija vibracija, dizajnirano za upotrebu unutar Isorak sustava ili sličnih postavki",
+      "Dimenzije: Razlikuju se po veličini, dizajnirano za standardne komponente"
     ]
   },
   {
@@ -611,9 +825,12 @@
     "price": "Nije dostupno",
     "imageUrl": "https://placehold.co/400x300/8d9981/ffffff?text=AVID+Reference+Cables",
     "specifications": [
-      "Tip: Interkonekcijski kablovi, Zvučnički kablovi",
-      "Kategorija: Referentna klasa",
-      "Performanse: Minimalan gubitak signala, maksimalna transparentnost"
+      "Tip: Interkonekcijski kablovi (RCA, XLR), Zvučnički kablovi",
+      "Materijal vodiča: Bakar visoke čistoće",
+      "Izolacija: Materijali niske dielektričnosti",
+      "Oklopljenje: Pletenica visoke gustoće",
+      "Konektori: Visokokvalitetni, pozlaćeni (RCA, XLR, Spade/Banana za zvučnike)",
+      "Dizajn: Optimizirano za minimalan gubitak signala, nisku razinu šuma, širok propusni opseg"
     ]
   }
 ]
