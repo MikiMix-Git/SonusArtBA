@@ -6,7 +6,7 @@
     "series": "A&ultima",
     "description": "Najnoviji flagship DAP s naprednom Octa audio arhitekturom i poboljšanom optimizacijom signala.",
     "longDescription": "Astell&Kern A&ultima SP4000 je najnoviji flagship digitalni audio player, nadograđen na SP3000 s novom 'Octa' audio arhitekturom za još čišći i detaljniji zvuk. Koristi poboljšani 1:1 dizajn kruga s AK4191 digitalnim procesorom i AK4499EX DAC čipovima, što rezultira superiornim odvajanjem signala i smanjenjem šuma. Podržava visoku rezoluciju PCM-a do 32-bit/768kHz i Native DSD512. Integrira 'New Advanced Digital Audio Remaster' tehnologiju za prirodniji zvuk i 'Enhanced Signal Alignment' tehnologiju za minimalno kašnjenje grupe. Kućište je izrađeno od nehrđajućeg čelika s PVD-obloženom keramičkom pozadinom. Autonomija baterije je oko 10 sati.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Arhitektura: Octa Audio Circuit (1:1 digitalni procesor i DAC)",
       "DAC: AK4191, AK4499EX (detaljan broj čipova varira, ali naglasak na 1:1 uparivanju)",
@@ -25,7 +25,7 @@
     "series": "A&ultima",
     "description": "Hibridni DAP s realnom vakuumskom cijevi i trostrukim sustavom pojačala.",
     "longDescription": "Astell&Kern A&ultima SP3000T je prijenosni audio player koji kombinira toplinu analognog zvuka vakuumske cijevi s preciznošću digitalne obrade. Jedinstven je po svom 'Triple Amp System' koji omogućuje prebacivanje između OP-AMP načina (za čistoću i dinamiku), TUBE-AMP načina (za toplinu i muzikalnost) i HYBRID AMP načina (za optimalnu kombinaciju). Koristi ESS ES9039MPRO Dual-DAC konfiguraciju i KORG Nutube 6P1 vakuumske cijevi. Podržava PCM do 32-bit/768kHz i Native DSD512. Ima 4.1-inčni zaslon, Wi-Fi, Bluetooth 5.0 (aptX HD, LDAC) i razne ulaze/izlaze za slušalice i linijske veze.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: ESS ES9039MPRO x2 (Dual-DAC)",
       "Vakuumske cijevi: KORG Nutube 6P1 x2",
@@ -49,7 +49,7 @@
     "series": "A&ultima",
     "description": "Vrhunski digitalni audio player s inovativnom audio arhitekturom i 904L kućištem od nehrđajućeg čelika.",
     "longDescription": "Astell&Kern A&ultima SP3000 je flagship digitalni audio player koji postavlja nove standarde u prijenosnom Hi-Fi-ju. Prvi je DAP na svijetu koji koristi nehrđajući čelik 904L za kućište, poznat po svojoj izdržljivosti i otpornosti na koroziju. Pokreće ga Snapdragon 6125 osmojezgreni CPU i sadrži potpuno odvojenu digitalnu i analognu obradu signala. Integrira dva AKM AK4191 i četiri AK4499EX DAC čipa za vrhunsku audio preciznost. Podržava PCM do 32-bit/768kHz i Native DSD512. Uključuje Digital Audio Remaster (DAR) tehnologiju za poboljšani zvuk. Ima 5.46\" Full HD zaslon, Wi-Fi, Bluetooth 5.0 (aptX HD, LDAC) i 256GB interne memorije proširive do 1TB putem microSD kartice. Nudi balansirane (2.5mm, 4.4mm) i nebalansirane (3.5mm optičke) izlaze.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Zaslon: 5.46” Full HD 1080x1920 dodirni zaslon",
       "CPU: Osmojezgreni",
@@ -75,7 +75,7 @@
     "series": "A&ultima",
     "description": "Kompaktna verzija flagship SP3000, nudi istu vrhunsku audio kvalitetu u prenosivijem pakiranju.",
     "longDescription": "Astell&Kern A&ultima SP3000M donosi superiornu audio arhitekturu i kvalitetu zvuka SP3000 u kompaktnijem i prenosivijem formatu. Ima Qualcomm 6125 osmojezgreni CPU i koristi iste AK4191EQ x2 i AK4499EX x4 DAC čipove za iznimne performanse. Podržava Native DSD512 i PCM do 32-bit/768kHz. Manji 4.1-inčni HD zaslon (720x1280) olakšava rukovanje jednom rukom. Kućište je izrađeno od aluminija. Podržava QC 3.0 brzo punjenje. Idealan je za audiofile koji traže vrhunski zvuk bez kompromisa u prenosivosti.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "CPU: Qualcomm 6125 Osmojezgreni",
       "DAC: AKM AK4191EQ x2, AK4499EX x4",
@@ -99,7 +99,7 @@
     "series": "A&futura",
     "description": "Inovativni DAP s R-2R DAC-om i dvostrukim pojačalima klase A/AB.",
     "longDescription": "Astell&Kern A&futura SE300 predstavlja evoluciju Hi-Fi-ja s ultra-rafiniranim R-2R DAC-om, koji koristi mrežu preciznih otpornika umjesto tradicionalnog DAC čipa za autentičnu reprodukciju zvuka. Posjeduje Astell&Kern-ovu vlasničku TERATON ALPHA tehnologiju i dvostruka pojačala klase A/AB, te samorazvijenu FPGA tehnologiju za optimizaciju. Podržava PCM do 32-bit/384kHz i Native DSD256. Ima 5.46-inčni HD zaslon i nudi balansirane (2.5mm, 4.4mm) i nebalansirane (3.5mm optičke) izlaze. Dostupan je u Platinum Silver i Titan bojama.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: Potpuno diskretni R-2R DAC",
       "Pojačala: Dvostruka pojačala klase A/AB",
@@ -122,7 +122,7 @@
     "series": "A&futura",
     "description": "Modularni DAP s izmjenjivim DAC modulima i TERATON ALPHA tehnologijom.",
     "longDescription": "Astell&Kern A&futura SE180 je inovativni modularni digitalni audio player koji omogućuje korisnicima izmjenu DAC modula ('SEM') za prilagodbu zvučnog potpisa. Uključuje Astell&Kern-ovu vlasničku TERATON ALPHA tehnologiju koja optimizira napajanje, pojačanje i obradu zvuka. Podržava do 32-bit/384kHz PCM i Native DSD256 (ovisno o modulu). Ima 5-inčni Full HD dodirni zaslon, Wi-Fi i Bluetooth 5.0. Nudi balansirane i nebalansirane izlaze. Idealan je za audiofile koji žele fleksibilnost i mogućnost nadogradnje u prijenosnom formatu.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Modularni dizajn: Izmjenjivi DAC moduli (SEM1, SEM2, SEM3, itd.)",
       "DAC: Ovisi o modulu (npr. AKM AK4497EQ x1 za SEM1, ESS ES9038Q2M x4 za SEM2)",
@@ -143,7 +143,7 @@
     "series": "A&futura",
     "description": "Prvi multi-DAC DAP na svijetu s izmjenjivim DAC-ovima i pojačalima.",
     "longDescription": "Astell&Kern A&futura SE200 bio je revolucionaran kao prvi DAP na svijetu s multi-DAC konfiguracijom, nudeći izbor između AKM AK4499EQ DAC-a i dva ESS ES9068AS DAC-a. Ova inovativna značajka omogućuje korisnicima prilagodbu zvučnog potpisa. Svaki DAC ima zasebno optimizirane sklopove pojačala. Podržava PCM do 32-bit/384kHz i Native DSD256. Ima 5-inčni dodirni zaslon, Wi-Fi i Bluetooth 5.0. SE200 je dizajniran za audiofile koji cijene eksperimentiranje sa zvukom i vrhunske performanse u prijenosnom uređaju.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: 1x AKM AK4499EQ + 2x ESS ES9068AS (izmjenjivi/odabirni)",
       "PCM Sample Rate: Do 32-bit/384kHz",
@@ -163,7 +163,7 @@
     "series": "A&norma",
     "description": "Kompaktan, prenosiv DAP s Quad-DAC arhitekturom i dugim trajanjem baterije.",
     "longDescription": "Astell&Kern A&norma SR35 je najnoviji prijenosni audio player u A&norma seriji, dizajniran za maksimalnu prenosivost i kvalitetan Hi-Fi zvuk. Po prvi put u ovoj seriji koristi Quad DAC arhitekturu s četiri Cirrus Logic CS43198 DAC čipa. Posjeduje novu generaciju Amp tehnologije i nudi dvostupanjsku kontrolu pojačanja (Normal i High) za optimizaciju s različitim slušalicama. Podržava PCM do 32-bit/384kHz i Native DSD256. Ima 3.6-inčni HD dodirni zaslon, Wi-Fi i Bluetooth 5.0 (aptX HD, LDAC). Nudi izlaze 3.5mm (nebalansirano) i 2.5mm/4.4mm (balansirano). Trajanje baterije je do 20 sati.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Zaslon: 3.6-inčni HD 720 x 1280 dodirni zaslon",
       "CPU: Četverojezgreni",
@@ -187,7 +187,7 @@
     "series": "A&norma",
     "description": "Poboljšana verzija popularnog SR25 DAP-a s boljom snagom i povezivošću.",
     "longDescription": "Astell&Kern A&norma SR25 MKII je poboljšana verzija visoko cijenjenog SR25 DAP-a, nudeći značajna poboljšanja u snazi, povezivosti i brzini. Zadržava kompaktnu formu i dugo trajanje baterije. Posjeduje Cirrus Logic CS43198 Dual-DAC konfiguraciju i podržava PCM do 32-bit/384kHz te Native DSD256. Dodani su novi audio krugovi za bolji zvuk i poboljšano RF performanse za stabilniju Bluetooth vezu. Ima 3.6-inčni zaslon i nudi balansirane (2.5mm, 4.4mm) i nebalansirane (3.5mm) izlaze. Idealan je za one koji žele izvanredan zvuk u iznimno prenosivom pakiranju.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: Cirrus Logic CS43198 x2 (Dual-DAC)",
       "PCM Sample Rate: Do 32-bit/384kHz",
@@ -208,7 +208,7 @@
     "series": "KANN",
     "description": "Najmoćniji DAP u KANN seriji, s trostrukim izlazom zvuka i optimiziranim procesorom.",
     "longDescription": "Astell&Kern KANN ULTRA je peti model u KANN seriji, poznat po izuzetnoj snazi. Nudi najvišu izlaznu snagu do sada (do 15Vrms balansirano) i inovativan 'Triple Output Sound' sustav koji omogućuje različite konfiguracije izlaza. Sadrži optimizirani procesor i poboljšano UI/UX iskustvo. Dizajniran je za pogon najzahtjevnijih slušalica, pružajući moćan i jasan zvuk. Detaljne specifikacije DAC-a i memorije su slične ostalim KANN modelima, fokusirajući se na sirovu snagu i performanse.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Izlazna snaga: Najviša u seriji KANN (do 15Vrms balansirano)",
       "DAC: Nije specifično navedeno, ali vjerojatno ESS ili Cirrus Logic",
@@ -225,7 +225,7 @@
     "series": "KANN",
     "description": "Moćan prijenosni DAP s izuzetnom izlaznom snagom i Quad-DAC konfiguracijom.",
     "longDescription": "Astell&Kern KANN MAX je peti proizvod u KANN seriji, poznatoj po svojoj izlaznoj snazi. Pruža najvišu izlaznu snagu od svih Astell&Kern playera, s podrškom do 15Vrms (balansirano). Integrira četiri ESS ES9038Q2M DAC čipa u Quad-DAC konfiguraciji. Podržava bit-to-bit reprodukciju do 32-bit/768kHz PCM i Native DSD512. Opremljen je 4.1-inčnim dodirnim zaslonom (720x1280), Wi-Fi (2.4GHz) i Bluetooth 5.0 (aptX HD, LDAC). Nudi višestruke izlazne razine (Low, Mid, High, Super) za optimalno usklađivanje s različitim slušalicama. Ima 64GB interne memorije, proširive do 1TB putem microSD kartice. Baterija traje do 13 sati.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Zaslon: 4.1-inčni 720 x 1280 dodirni zaslon",
       "CPU: Četverojezgreni",
@@ -251,7 +251,7 @@
     "series": "KANN",
     "description": "Prvi Astell&Kern DAP s 4.4mm balansiranim izlazom, nudi izuzetnu snagu.",
     "longDescription": "Astell&Kern KANN Alpha je prvi Astell&Kern digitalni audio player koji ima 4.4mm balansirani izlaz, uz 2.5mm balansirani i 3.5mm nebalansirani izlaz. Poznat je po svojoj impresivnoj izlaznoj snazi, do 12Vrms. Koristi dva Cirrus Logic CS43198 DAC čipa u Dual-DAC konfiguraciji. Podržava PCM do 32-bit/384kHz i Native DSD256. Ima 3.6-inčni HD dodirni zaslon, Wi-Fi i Bluetooth 5.0 (aptX HD, LDAC). KANN Alpha je dizajniran za audiofile koji traže svestranost u izlazima i moć za pogon najzahtjevnijih slušalica.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: Cirrus Logic CS43198 x2 (Dual-DAC)",
       "PCM Sample Rate: Do 32-bit/384kHz",
@@ -273,7 +273,7 @@
     "series": "KANN",
     "description": "Desktop i prijenosni DAP s masivnom izlaznom snagom i izmjenjivim pojačalom.",
     "longDescription": "Astell&Kern KANN CUBE je jedinstven DAP koji spaja značajke desktop DAC/AMP-a s prenosivošću. Poznat je po svojoj ogromnoj izlaznoj snazi, s tri konfigurabilna izlaza (High, Mid, Low) i izmjenjivom jedinicom pojačala. Koristi dual ESS ES9038PRO DAC čipa. Podržava PCM do 32-bit/384kHz i Native DSD256. Ima 5-inčni dodirni zaslon, Wi-Fi i Bluetooth 4.2. KANN CUBE je dizajniran za pogon najzahtjevnijih planarnih magnetskih slušalica i nudi vrhunske performanse za kućnu i prijenosnu upotrebu.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: ESS ES9038PRO x2 (Dual-DAC)",
       "PCM Sample Rate: Do 32-bit/384kHz",
@@ -295,7 +295,7 @@
     "series": "PD",
     "description": "Novi DAP/streamer dizajniran za fleksibilnost korištenja kao prijenosni player ili stolni audio sustav.",
     "longDescription": "Astell&Kern PD10 je inovativni digitalni audio player koji se može koristiti kao prijenosni uređaj ili se postaviti u priloženu Cradle bazu za korištenje kao stolni glazbeni streamer. Sadrži 'HEXA Audio Circuitry' i podržava PCM do 32-bit/768kHz te Native DSD512. Ima 256GB interne memorije (proširivo do 2TB putem microSD kartice), dual-band Wi-Fi, DLNA podršku, Apple AirPlay i Bluetooth 5.3. Baterija od 5,770mAh omogućava do 15 sati reprodukcije. Dizajniran je za slušatelje koji traže fleksibilnost bez žongliranja s više uređaja.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: HEXA Audio Circuitry (detaljan DAC čip nije naveden)",
       "PCM Sample Rate: Do 32-bit/768kHz",
@@ -315,7 +315,7 @@
     "series": "ACRO",
     "description": "Transportabilno pojačalo za slušalice s vakuumskom cijevi i DAC-om, s višestrukim ulazima/izlazima.",
     "longDescription": "Astell&Kern ACRO CA1000T je svestrano 'transportabilno' pojačalo za slušalice s ugrađenim DAC-om, dizajnirano za pružanje vrhunskog zvuka kod kuće ili u pokretu. Jedinstven je po integraciji KORG Nutube 6P1 vakuumske cijevi, koja omogućuje biranje između OP-AMP načina (za čistoću i dinamiku), TUBE-AMP načina (za toplinu i muzikalnost) i HYBRID AMP načina (za optimalnu kombinaciju). Koristi dual ESS ES9039MPRO DAC-ove. Podržava PCM do 32-bit/768kHz i Native DSD512. Ima 4.1-inčni zaslon osjetljiv na dodir, Wi-Fi i Bluetooth 5.0. Nudi širok raspon izlaznih razina za slušalice (do 15Vrms balansirano) te analogne (RCA, XLR) i digitalne (koaksijalni, optički, USB-C) ulaze i izlaze. Idealan je za zahtjevne slušalice i kao centralni hub za vaš audio sustav.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: ESS ES9039MPRO x2 (Dual-DAC)",
       "Vakuumske cijevi: KORG Nutube 6P1 x2",
@@ -343,7 +343,7 @@
     "series": "ACRO",
     "description": "Prijenosno pojačalo za slušalice klase A, dizajnirano za pogon zahtjevnih slušalica.",
     "longDescription": "Astell&Kern ACRO PA10 je prvo prijenosno pojačalo u Astell&Kern asortimanu koje koristi pojačanje klase A. Dizajnirano je da pruži bogat, moćan i detaljan zvuk, posebno optimizirano za pogon zahtjevnih slušalica. ACRO PA10 se fokusira na kvalitetu izlaznog signala i nudi različite razine pojačanja. Ima ulaze od 3.5mm i 4.4mm te odgovarajuće izlaze, pružajući fleksibilnost. Idealno je za audiofile koji žele maksimizirati performanse svojih slušalica u prijenosnom okruženju.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Tip pojačala: Klasa A",
       "Ulazi: 3.5mm (nebalansirano), 4.4mm (balansirano)",
@@ -360,7 +360,7 @@
     "series": "HB",
     "description": "Prijenosni Bluetooth DAC/AMP s LDAC i aptX HD podrškom, te 3.5mm i 4.4mm izlazima.",
     "longDescription": "Astell&Kern AK HB1 je prijenosni Bluetooth DAC/AMP koji pruža visoku kvalitetu bežičnog zvuka za vaše slušalice. Koristi ESS ES9281AC PRO DAC. Podržava LDAC i aptX™ HD kodeke za streamanje Hi-Res audio datoteka preko Bluetootha. Ima i 3.5mm i 4.4mm balansirane analogne izlaze, omogućujući kompatibilnost s raznim slušalicama. Kompaktan dizajn i jednostavnost korištenja čine ga idealnim dodatkom za mobilne uređaje, pretvarajući ih u Hi-Fi izvore.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: ESS ES9281AC PRO",
       "Bluetooth kodeci: LDAC, aptX™ HD",
@@ -377,7 +377,7 @@
     "series": "HC",
     "description": "Najnoviji prijenosni Hi-Fi USB DAC kabel s Real-Time Conversion i 4.4mm balansiranim izlazom.",
     "longDescription": "Astell&Kern AK HC4 je najnoviji prijenosni USB DAC kabel koji nudi visoku vjernost zvuka za mobilne uređaje i računala. Sadrži Dual-DAC konfiguraciju s Cirrus Logic CS43198 DAC čipovima. Ističe se funkcijom 'Real-Time Conversion' koja optimizira audio signal. Podržava PCM do 32-bit/384kHz i Native DSD256. Posjeduje 4.4mm balansirani izlaz uz standardni 3.5mm izlaz. Dizajniran za minimalan šum i maksimalnu kvalitetu zvuka, idealan je za audiofile u pokretu.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: Cirrus Logic CS43198 (Dual-DAC)",
       "PCM Sample Rate: Do 32-bit/384kHz",
@@ -394,7 +394,7 @@
     "series": "HC",
     "description": "Kompaktan, ali snažan USB Dual DAC/AMP za mobilne uređaje, s podrškom za Hi-Res audio i mikrofon.",
     "longDescription": "Astell&Kern AK HC3 je ultra-kompaktan, ali moćan prijenosni USB DAC/AMP dizajniran za poboljšanje audio iskustva na pametnim telefonima, tabletima i računalima. Koristi dva ESS SABRE HiFi® ES9219MQ DAC čipa (Dual-DAC) za isporuku zvuka visoke rezolucije, uključujući Native DSD256 i PCM do 32-bit/384kHz. Odlikuje ga stražnji audio izlazni dizajn za minimiziranje šuma i dvostruko oklopljeni kabel. Podržava MQA 8X rendering i kompatibilan je s 3-polnim i 4-polnim 3.5mm slušalicama, uključujući funkcije in-line kontrolera i mikrofona. Posjeduje LED indikator za status reprodukcije (Standby, PCM, DSD, MQA).",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: ESS ES9219MQ x2 (Dual-DAC)",
       "PCM Sample Rate: Do 32-bit/384kHz",
@@ -421,7 +421,7 @@
     "series": "HC",
     "description": "Prijenosni USB DAC/AMP s balansiranim 4.4mm izlazom za Hi-Res audio.",
     "longDescription": "Astell&Kern AK HC2 je prijenosni USB DAC/AMP dizajniran za entuzijaste koji traže snažan i čist zvuk na svojim mobilnim uređajima. Koristi dva Cirrus Logic CS43198 MasterHiFi DAC čipa (Dual-DAC) i podržava Native DSD256 te PCM do 32-bit/384kHz. Ključna značajka je visokokvalitetni 4.4mm balansirani Pentaconn izlaz, koji omogućuje pogon širokog spektra slušalica i IEM-ova s izvrsnom snagom i dinamikom. Dolazi s kratkim, neuklonjivim USB-C kabelom i adapterom za Apple Lightning uređaje. Aplikacija za Android omogućuje detaljniju kontrolu glasnoće.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "DAC: Cirrus Logic CS43198 x2 (Dual-DAC)",
       "PCM Sample Rate: Do 32-bit/384kHz",
@@ -442,7 +442,7 @@
     "series": "Kolaboracije",
     "description": "Zatvorene dinamičke slušalice visokih performansi, kolaboracija s Ultrasone, s 40mm titan-platičnim Mylar driverom.",
     "longDescription": "Astell&Kern VIRTUOSO su zatvorene dinamičke slušalice nastale u kolaboraciji s Ultrasone, dizajnirane da pruže Hi-Fi audio iskustvo s umjetničkom preciznošću. Sadrže 40mm titan-platični Mylar driver naslijeđen iz Ultrasone Edition serije, osiguravajući širok frekvencijski raspon, detaljan zvuk i nisku distorziju. Posebnost je S-Logic®3 tehnologija koja pruža prirodan prostorni efekt i smanjuje zvučni pritisak do 40%, minimizirajući umor pri slušanju. Dizajn spaja moderne linije i profinjene teksture.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Tip drivera: 40mm Titanium-Plated Mylar Dynamic Driver",
       "Tehnologija: S-Logic®3",
@@ -458,7 +458,7 @@
     "series": "Kolaboracije",
     "description": "Druga generacija zatvorenih Tesla slušalica, kolaboracija s Beyerdynamic, optimizirane za prijenosne playere.",
     "longDescription": "Astell&Kern AK T5p 2nd Generation su zatvorene over-ear slušalice razvijene u suradnji s Beyerdynamicom. Koriste Beyerdynamicovu renomiranu Tesla tehnologiju drajvera, ali su posebno optimizirane s nižom impedancijom za korištenje s prijenosnim digitalnim audio playerima. Nude iznimnu jasnoću, detalje i široku zvučnu pozornicu, tipičnu za Tesla drajvere, uz visoku učinkovitost za mobilnu upotrebu. Idealan su partner za Astell&Kern DAP-ove, pružajući audiofilsko iskustvo u pokretu.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Tip drivera: Dinamički, Tesla tehnologija",
       "Dizajn: Zatvoreni, over-ear",
@@ -473,7 +473,7 @@
     "series": "Kolaboracije",
     "description": "Visokokvalitetne in-ear monitor slušalice, kolaboracija s Ultrasone.",
     "longDescription": "Astell&Kern LUNA su in-ear monitor (IEM) slušalice koje predstavljaju treći proizvod u Astell&Kern IEM seriji, nastavljajući filozofiju vjernosti originalnom zvuku. Dizajnirane su u kolaboraciji s Ultrasone i teže pružanju iznimno detaljnog i preciznog zvučnog iskustva. Namijenjene su audiofilima koji traže vrhunski prijenosni zvuk s bogatom teksturom i vjernom reprodukcijom.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Tip drivera: Nije specifično navedeno, ali fokus na detaljima",
       "Materijal: Nije detaljno navedeno",
@@ -487,7 +487,7 @@
     "series": "Kolaboracije",
     "description": "Flagship in-ear monitor slušalice, kolaboracija s Empire Ears, s 13 drivera i 24K pozlatom.",
     "longDescription": "Astell&Kern x Empire Ears NOVUS su flagship in-ear monitor (IEM) slušalice, rezultat kolaboracije s Empire Ears, ograničene na 600 jedinica globalno. Posjeduju impresivan 'Quadbrid' dizajn s 13 drivera i dvostrukim sustavom koštane provodljivosti: dva W9+ subwoofera, pet balansiranih armatura, četiri elektrostatička drivera i dva High Mass Bone Conductors. Prednje ploče su 24K pozlaćene sa safirnim staklom, a kućište je od 6061-T6 aluminija s DLC završnom obradom. Dolaze s 4-žičnim hibridnim kabelom od bakra, zlata i srebra. NOVUS obećava neusporedivu zvučnu reprodukciju i luksuzan dizajn inspiriran haute horlogerie.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Driveri: 13 drivera Quadbrid (2x W9+, 5x BA, 4x EST, 2x Bone Conductor)",
       "Frekvencijski odziv: 5Hz-100kHz",
@@ -504,7 +504,7 @@
     "series": "Kolaboracije",
     "description": "In-ear monitor slušalice razvijene s VISION EARS, nudeći jedinstveno audio iskustvo.",
     "longDescription": "Astell&Kern AURA su in-ear monitor (IEM) slušalice koje su rezultat kolaboracije s renomiranim njemačkim proizvođačem VISION EARS. Dizajnirane su s fokusom na inovaciju, sofisticiran stil i vrhunsku tehnologiju kako bi pružile audio iskustvo kakvo nema nijedno drugo. AURA utjelovljuje preciznu njemačku izradu i Astell&Kern-ovu posvećenost zvučnoj vjernosti, nudeći iznimno detaljan i glazbeno angažirajući zvuk.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Driveri: Nije specifično navedeno, ali naglasak na inovaciji i preciznosti",
       "Razvijeno s: VISION EARS",
@@ -519,7 +519,7 @@
     "series": "Kolaboracije",
     "description": "Vrhunske in-ear monitor slušalice, kolaboracija s Empire Ears, s 10 drivera.",
     "longDescription": "Astell&Kern x Empire Ears ODYSSEY su high-end in-ear monitor (IEM) slušalice nastale u kolaboraciji s Empire Ears. Odlikuje ih vlasnički 'Quadbrid' sustav s ukupno 10 drivera: dva W9+ subwoofera, pet balansiranih armatura, dva elektrostatička drivera i jedan W10 Bone Conductor Ultra Driver. Ova složena konfiguracija omogućuje izvanredan frekvencijski odziv od 5Hz-100kHz i poboljšava sliku zvuka, pozornicu, detalje, ekstenziju niskih frekvencija i reverb putem koštane provodljivosti. Dizajnirane su s 9-slojnim optičkim jezgrom i 'ENIGMA' prednjom pločom. Dolaze s vrhunskim UPOCC Copper Litz kabelom i bogatim setom dodataka.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Driveri: 10 drivera Quadbrid (2x W9+ Subwoofer, 5x Balansirana armatura, 2x Elektrostatička, 1x W10 Bone Conductor)",
       "Frekvencijski odziv: 5Hz-100kHz",
@@ -536,7 +536,7 @@
     "series": "Kolaboracije",
     "description": "Hibridne in-ear monitor slušalice, kolaboracija s Campfire Audio, za izniman zvuk.",
     "longDescription": "Astell&Kern PATHFINDER su hibridne in-ear monitor (IEM) slušalice razvijene u suradnji s Campfire Audiom, poznatim po inovativnom dizajnu drivera. Ove slušalice teže pružanju izvanredne zvučne preciznosti i dubine. Kombiniraju različite tipove drivera kako bi pokrile širok frekvencijski raspon s maksimalnom koherentnošću i dinamikom. Dizajnirane su s visokokvalitetnim materijalima i pažnjom na akustične detalje, pružajući vrhunsko slušno iskustvo za audiofile.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Tip drivera: Hibridni (detalji variraju, ali uključuje više tipova)",
       "Razvijeno s: Campfire Audio",
@@ -551,7 +551,7 @@
     "series": "ZERO",
     "description": "Quad-hibridne in-ear monitor slušalice s naprednom konfiguracijom drivera.",
     "longDescription": "Astell&Kern AK ZERO2 su in-ear monitor (IEM) slušalice koje koriste 'Quad-hibridni' dizajn s naprednom konfiguracijom drivera. Sadrže mikro-pravokutni planarni dinamički driver, dva balansirana armatura drivera i jedan dinamički driver za sveobuhvatnu i preciznu reprodukciju zvuka. Driveri su precizno smješteni u 3D-printane akustične komore unutar aluminijskog kućišta kako bi se smanjila rezonancija i osigurale stabilne performanse. ZERO2 pruža prirodan zvučni potpis s posvećenim driverima za upravljanje frekvencijama, nudeći kristalno čiste vokale, minimalnu distorziju i duboke, kontrolirane niske frekvencije.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Tip drivera: Quad-hibridni (1x Planarni dinamički, 2x Balansirana armatura, 1x Dinamički)",
       "Kućište: Aluminij s 3D-printanom smolom",
@@ -566,7 +566,7 @@
     "series": "ZERO",
     "description": "Hibridne in-ear monitor slušalice s inovativnim dizajnom drivera i vrhunskom konstrukcijom.",
     "longDescription": "Astell&Kern AK ZERO1 su in-ear monitor (IEM) slušalice koje se ističu svojim hibridnim dizajnom drivera i vrhunskom konstrukcijom. Kombiniraju mikro-pravokutni planarni dinamički driver, dva balansirana armatura drivera i jedan dinamički driver u jedinstvenoj konfiguraciji. Driveri su smješteni u 3D-printane akustične komore, osiguravajući stabilne performanse i minimalnu rezonanciju. Kućište je izrađeno od aluminija pomoću Astell&Kern-ove napredne tehnologije rafiniranja, dodatno smanjujući rezonanciju. ZERO1 pruža prirodan, detaljan i životopisan zvuk s jasnim vokalima i dubokim basom.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "Tip drivera: Hibridni (1x Planarni dinamički, 2x Balansirana armatura, 1x Dinamički)",
       "Kućište: Aluminij s 3D-printanom smolom",
@@ -581,7 +581,7 @@
     "series": "UW",
     "description": "Potpuno bežične in-ear slušalice s 32-bitnim DAC-om i Knowles BA driverom.",
     "longDescription": "Astell&Kern AK UW100MKII su potpuno bežične in-ear slušalice koje se temelje na Astell&Kern-ovoj audio tehnologiji, dizajnirane za Hi-Fi zvuk u pokretu. Posjeduju Knowles Balanced Armature driver i 32-bitni AKM AK4332ECB DAC za vrhunsku audio kvalitetu. Podržavaju Bluetooth 5.2 s aptX™ Adaptive kodekom za bežično streamanje visoke kvalitete. Nude 'Ambient Mode' za slušanje okoline i 'MultiPoint' funkciju za spajanje na dva uređaja istovremeno. Imaju IPX4 vodootpornost, trajanje baterije do 9.5 sati (29 sati s kućištem za punjenje) i podržavaju bežično punjenje.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "BT Čipset: Qualcomm 5141",
       "Driver: Knowles Balanced Armature",
@@ -603,7 +603,7 @@
     "series": "UW",
     "description": "Originalne potpuno bežične in-ear slušalice s Knowles BA driverom i 32-bitnim DAC-om.",
     "longDescription": "Astell&Kern AK UW100 su prve potpuno bežične in-ear slušalice tvrtke Astell&Kern, koje su postavile temelje za premium Hi-Fi bežični zvuk. Koriste Knowles Balanced Armature driver za detaljnu reprodukciju i 32-bitni DAC za obradu zvuka visoke rezolucije. Podržavaju Bluetooth 5.2 s aptX™ Adaptive kodekom. Nude do 6 sati reprodukcije na jednoj bateriji slušalica i do ukupno 24 sata s kućištem za punjenje. Posjeduju premium Qualcomm QCC5141 Bluetooth čipset za stabilnu vezu i pasivnu izolaciju buke.",
-    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg"
+    "imageUrl": "https://github.com/MikiMix-Git/SonusArtBA/blob/main/logos/Astell%26Kern.svg",
     "specifications": [
       "BT Čipset: Qualcomm 5141",
       "Driver: Knowles Balanced Armature",
