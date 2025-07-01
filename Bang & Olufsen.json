@@ -1,0 +1,606 @@
+[
+  {
+    "name": "Beoplay H95",
+    "brand": "Bang & Olufsen",
+    "category": "Bežične slušalice (Over-Ear)",
+    "series": "Beoplay",
+    "description": "Vrhunske bežične slušalice sa adaptivnim poništavanjem buke i luksuznim dizajnom.",
+    "longDescription": "Bang & Olufsen Beoplay H95 su flagship bežične slušalice dizajnirane da pruže vrhunski kvalitet zvuka, izuzetnu udobnost i najnaprednije adaptivno poništavanje buke. Izrađene su od premium materijala poput aluminijuma, titana i jagnjeće kože, pružajući luksuzan osećaj i izdržljivost. Sa posebno razvijenim 40mm drajverima od titana, H95 nude moćan, precizan i detaljan zvuk. Baterija traje do 38 sati sa uključenim ANC-om, a sklopivi dizajn sa tvrdom futrolom čini ih idealnim za putovanja. Intuitivne kontrole na dodir i rotirajući točkići za jačinu zvuka i ANC nivoe doprinose premium iskustvu.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip drajvera: Elektrodinamički, 40mm titanijumski",
+      "Dizajn: Zatvorene, Over-ear",
+      "Povezivanje: Bluetooth 5.1 (aptX™ Adaptive, AAC, SBC), 3.5mm žičano",
+      "Poništavanje buke: Adaptivno aktivno poništavanje buke (ANC)",
+      "Frekventni odziv: 20 - 22,000 Hz",
+      "Impedansa: 12 Ohm",
+      "Baterija: Do 38 sati sa ANC, 50 sati bez ANC",
+      "Materijali: Aluminijum, titanijum, jagnjeća koža, memorijska pena",
+      "Težina: 323g"
+    ]
+  },
+  {
+    "name": "Beoplay EX",
+    "brand": "Bang & Olufsen",
+    "category": "Bežične slušalice (TWS)",
+    "series": "Beoplay",
+    "description": "Premium True Wireless slušalice sa adaptivnim ANC-om i elegantnim dizajnom.",
+    "longDescription": "Bang & Olufsen Beoplay EX su premium True Wireless in-ear slušalice koje kombinuju izuzetan kvalitet zvuka, efikasno adaptivno poništavanje buke i prepoznatljiv B&O dizajn. Sa 9.2mm drajverima, nude bogat, detaljan zvuk sa snažnim basom. Ergonomski dizajn obezbeđuje udobno i sigurno pristajanje, idealno za sport i svakodnevnu upotrebu. Kućište za punjenje podržava bežično punjenje, a baterija slušalica traje do 6 sati sa ANC-om (20 sati sa kućištem). Vodootpornost po IP57 standardu dodatno povećava njihovu svestranost.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip drajvera: Elektrodinamički, 9.2mm",
+      "Dizajn: In-ear (TWS)",
+      "Povezivanje: Bluetooth 5.2 (aptX™ Adaptive, AAC, SBC)",
+      "Poništavanje buke: Adaptivno aktivno poništavanje buke (ANC)",
+      "Baterija: Do 6 sati sa ANC (slušalice), do 20 sati sa kućištem (ukupno)",
+      "Otpornost: IP57 (otpornost na prašinu i vodu)",
+      "Mikrofoni: 6 mikrofona (3 po slušalici)",
+      "Punjenje kućišta: USB-C, Qi bežično"
+    ]
+  },
+  {
+    "name": "Beosound A5",
+    "brand": "Bang & Olufsen",
+    "category": "Prenosni zvučnik",
+    "series": "Beosound",
+    "description": "Prenosni Wi-Fi zvučnik sa 360 stepeni zvukom i dugotrajnom baterijom, luksuznog dizajna.",
+    "longDescription": "Bang & Olufsen Beosound A5 je prenosni Wi-Fi zvučnik koji kombinuje izuzetan kvalitet zvuka sa elegantnim i luksuznim dizajnom inspirisanim nordijskom prirodom. Pruža impresivan 360-stepeni zvuk, ispunjavajući prostoriju bogatim tonovima. Nudi do 12 sati trajanja baterije i podržava bežično punjenje telefona na gornjoj površini. Sa Wi-Fi povezivanjem, omogućava pristup AirPlay 2, Chromecast i Spotify Connect, dok Bluetooth omogućava jednostavno povezivanje. Izrađen je od materijala poput hrasta, aluminijuma i tehnoloških vlakana, otporan na prašinu i vodu po IP65 standardu.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Prenosni Wi-Fi zvučnik",
+      "Drajveri: 1 x 5.25\" woofer, 2 x 2\" srednjetonci, 1 x 3/4\" tviter",
+      "Pojačalo: Class D (ukupno 280W)",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth 5.2",
+      "Baterija: Do 12 sati",
+      "Otpornost: IP65 (otpornost na prašinu i vodu)",
+      "Dimenzije: 285 x 187 x 135 mm"
+    ]
+  },
+  {
+    "name": "Beolit 20",
+    "brand": "Bang & Olufsen",
+    "category": "Prenosni zvučnik",
+    "series": "Beolit",
+    "description": "Kompaktan, moćan prenosni Bluetooth zvučnik sa ugrađenim bežičnim punjenjem.",
+    "longDescription": "Bang & Olufsen Beolit 20 je kompaktan, ali izuzetno moćan prenosni Bluetooth zvučnik koji nudi bogat i prostran True360 zvuk. Nadograđen je u odnosu na prethodne modele sa poboljšanim trajanjem baterije (do 37 sati pri umerenoj jačini) i integrisanom bežičnom punjaču na gornjoj površini, idealnom za punjenje telefona. Elegantan dizajn sa aluminijumskom rešetkom i kožnim kaišem čini ga savršenim za kućnu upotrebu i putovanja. Mogućnost stereo uparivanja sa drugim Beolit 20 ili Beolit 17 zvučnicima.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Prenosni Bluetooth zvučnik",
+      "Drajveri: 1 x 5.5\" full-range woofer, 3 x 1.5\" full-range drajveri, 2 x 4\" pasivni radijatori",
+      "Pojačalo: 2 x 35W Class D (visoki i bas)",
+      "Povezivanje: Bluetooth 4.2, 3.5mm audio ulaz",
+      "Baterija: Do 37 sati (pri umerenoj jačini)",
+      "Funkcije: Bežično punjenje telefona (Qi kompatibilno), stereo uparivanje",
+      "Dimenzije: 135 x 230 x 189 mm"
+    ]
+  },
+  {
+    "name": "Beosound Level",
+    "brand": "Bang & Olufsen",
+    "category": "Prenosni zvučnik (Modularni)",
+    "series": "Beosound",
+    "description": "Modularni, pametni Wi-Fi zvučnik sa adaptivnim zvukom, dizajniran za dugovečnost.",
+    "longDescription": "Bang & Olufsen Beosound Level je modularni, prenosni Wi-Fi zvučnik dizajniran za prilagodljivost i dugovečnost. Može se postaviti u različitim pozicijama (ležeći, stojeći, okačen na zid), a pametna tehnologija detektuje orijentaciju i prilagođava zvuk za optimalne performanse. Sa AirPlay 2, Chromecast i Spotify Connect, nudi bogate mogućnosti strimovanja. Jedna od ključnih karakteristika je modularni dizajn, koji omogućava laku zamenu baterije i potencijalnu nadogradnju komponenti, čime se produžava vek trajanja proizvoda. Baterija traje do 16 sati, a otpornost na prašinu i prskanje (IP54) ga čini pogodnim za različita okruženja.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Prenosni Wi-Fi zvučnik (Modularni)",
+      "Drajveri: 2 x 4\" wooferi, 2 x 2\" full-range, 1 x 0.8\" tviter",
+      "Pojačalo: 4 x Class D (ukupno 105W)",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth 5.0",
+      "Baterija: Do 16 sati",
+      "Otpornost: IP54 (prašina i prskanje)",
+      "Dodatno: Modularni dizajn (zamenjiva baterija), adaptivni zvuk"
+    ]
+  },
+  {
+    "name": "Beosound Balance",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Wi-Fi)",
+    "series": "Beosound",
+    "description": "Pametan kućni Wi-Fi zvučnik sa elegantnim dizajnom i snažnim zvukom od 360 stepeni.",
+    "longDescription": "Bang & Olufsen Beosound Balance je pametan kućni Wi-Fi zvučnik koji spaja izuzetan kvalitet zvuka sa prelepim, skulpturalnim dizajnom. Inspirisan nordijskim minimalističkim dizajnom, izgleda kao umetničko delo. Pruža impresivan i dinamičan zvuk od 360 stepeni, ispunjavajući celu prostoriju. Poseduje tehnologiju aktivne kompenzacije prostorije, koja optimizuje zvuk prema akustici sobe. Sa ugrađenim Google Assistantom, AirPlay 2 i Chromecastom, nudi bogate pametne funkcije i mogućnosti strimovanja. Izrađen od drveta i anodizovanog aluminijuma.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Kućni Wi-Fi zvučnik (Pametan)",
+      "Drajveri: 2 x 5.25\" wooferi, 2 x 3\" full-range, 2 x 2\" full-range, 1 x 0.75\" tviter",
+      "Pojačalo: 7 x Class D (ukupno 880W)",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth 5.0",
+      "Pametni asistent: Ugrađen Google Assistant",
+      "Dodatno: Aktivna kompenzacija prostorije",
+      "Materijali: Hrast ili aluminijum, tekstil"
+    ]
+  },
+  {
+    "name": "Beolab 28",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Aktivni)",
+    "series": "Beolab",
+    "description": "Napredne aktivne bežične stereo zvučnike sa moćnim zvukom i prilagodljivim akustičnim sočivom.",
+    "longDescription": "Bang & Olufsen Beolab 28 su napredni aktivni bežični stereo zvučnici koji spajaju vrhunski zvuk, skulpturalni dizajn i pametne funkcije. Poseduju inovativno akustično sočivo koje se prilagođava širini zvučne scene (Narrow ili Wide mod), omogućavajući optimizaciju zvuka za različite pozicije slušanja. Sa moćnim drajverima i ugrađenim pojačalima (ukupno 1250W po zvučniku), isporučuju izuzetno bogat i detaljan zvuk. Integrisane funkcije strimovanja (AirPlay 2, Chromecast, Spotify Connect) i minimalistički, elegantan dizajn čine ih centralnim delom svakog Hi-Fi sistema.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Aktivni stereo zvučnik (bežični)",
+      "Drajveri: 1 x 6.5\" woofer, 3 x 3\" full-range, 1 x 1\" tviter",
+      "Pojačalo: Ukupno 1250W (Class D) po zvučniku",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth 5.0, Optički, RCA",
+      "Karakteristike: Adaptivno akustično sočivo, Active Room Compensation",
+      "Materijali: Aluminijum, drvo, tkanina"
+    ]
+  },
+  {
+    "name": "Beosound Theatre",
+    "brand": "Bang & Olufsen",
+    "category": "Soundbar / Kućni bioskop",
+    "series": "Beosound",
+    "description": "Modularni high-end soundbar sistem, dizajniran da bude centralna tačka kućnog bioskopa.",
+    "longDescription": "Bang & Olufsen Beosound Theatre je izvanredan high-end soundbar sistem, dizajniran kao moćna i modularna centralna tačka kućnog bioskopa. Nudi impresivan višekanalni zvuk sa podrškom za Dolby Atmos, virtuelizujući prostor sa izuzetnom jasnoćom i dubinom. Njegov modularni dizajn omogućava prilagođavanje različitim veličinama televizora, a može se proširiti dodavanjem Beolab zvučnika za pravi surround sistem. Poseduje napredne tehnologije za optimizaciju zvuka u prostoru i bežičnu povezivost sa drugim B&O zvučnicima, što ga čini fleksibilnim i otpornim na budućnost.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Soundbar / Sistem kućnog bioskopa",
+      "Zvučni kanali: 12 drajvera, 7.1.4 Dolby Atmos dekodiranje (virtuelno)",
+      "Pojačalo: 12 x Class D (ukupno 800W)",
+      "Povezivanje: HDMI (eARC), Ethernet, Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth",
+      "Karakteristike: Modularni dizajn, Active Room Compensation, Bass Management",
+      "Materijali: Aluminijum, drvo, tkanina"
+    ]
+  },
+  {
+    "name": "Beoplay H100",
+    "brand": "Bang & Olufsen",
+    "category": "Bežične slušalice (Over-Ear)",
+    "series": "Beoplay",
+    "description": "Bežične Over-Ear slušalice sa potpisom Bang & Olufsen zvuka, dizajnirane za udobnost i svakodnevno slušanje.",
+    "longDescription": "Beoplay H100 predstavljaju najnoviji dodatak Bang & Olufsen porodici bežičnih Over-Ear slušalica, donoseći prepoznatljivu kombinaciju premium zvuka i elegantnog dizajna. Kreirane su za udobnost tokom dugotrajnog nošenja, sa mekanim jastučićima i podesivom trakom za glavu. Pružaju jasan i bogat audio doživljaj, idealan za muziku i pozive. Opremljene su Bluetooth tehnologijom za stabilno bežično povezivanje i dugotrajnom baterijom koja obezbeđuje sate neprekidnog uživanja.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip drajvera: Dinamički",
+      "Dizajn: Zatvorene, Over-ear",
+      "Povezivanje: Bluetooth",
+      "Baterija: Dugo trajanje baterije",
+      "Kontrole: Intuitivne kontrole na slušalici"
+    ]
+  },
+  {
+    "name": "Beoplay Eleven",
+    "brand": "Bang & Olufsen",
+    "category": "Prenosni zvučnik",
+    "series": "Beoplay",
+    "description": "Kompaktan prenosni zvučnik sa prepoznatljivim Bang & Olufsen zvukom i dizajnom.",
+    "longDescription": "Beoplay Eleven je elegantan i prenosiv zvučnik dizajniran da donese prepoznatljiv Bang & Olufsen zvuk u bilo koji prostor. Sa svojom kompaktnom veličinom i izdržljivim materijalima, idealan je za putovanja i korišćenje u pokretu, ali i kao stilski dodatak kućnom okruženju. Pruža bogat i balansiran zvuk sa dovoljno snage za svoju veličinu, omogućavajući uživanje u muzici gde god da se nalazite. Lako se povezuje putem Bluetooth-a i ima solidnu autonomiju baterije.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Prenosni Bluetooth zvučnik",
+      "Dizajn: Kompaktan i prenosiv",
+      "Povezivanje: Bluetooth",
+      "Baterija: Solidno trajanje baterije",
+      "Zvuk: Potpisan Bang & Olufsen zvuk"
+    ]
+  },
+  {
+    "name": "Beoplay HX",
+    "brand": "Bang & Olufsen",
+    "category": "Bežične slušalice (Over-Ear)",
+    "series": "Beoplay",
+    "description": "Napredne bežične Over-Ear slušalice sa digitalnim adaptivnim poništavanjem buke i udobnošću.",
+    "longDescription": "Bang & Olufsen Beoplay HX su sofisticirane bežične Over-Ear slušalice koje nude izuzetan audio doživljaj, poboljšanu udobnost i efikasno digitalno adaptivno poništavanje buke. Sa pažljivo odabranim materijalima poput anodizovanog recikliranog aluminijuma i jagnjeće kože, HX su dizajnirane za dugotrajno nošenje bez umora. Pružaju jasan i precizan zvuk, idealan za putovanja, rad od kuće ili jednostavno uživanje u muzici u miru. Integrisani mikrofoni obezbeđuju kristalno jasne pozive, dok multipoint povezivanje omogućava istovremeno povezivanje sa dva uređaja.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip drajvera: Elektrodinamički, 40mm",
+      "Dizajn: Zatvorene, Over-ear",
+      "Povezivanje: Bluetooth 5.1 (aptX™ Adaptive, AAC, SBC)",
+      "Poništavanje buke: Digitalno adaptivno aktivno poništavanje buke (ANC)",
+      "Frekventni odziv: 20 - 22,000 Hz",
+      "Baterija: Do 35 sati sa ANC, 40 sati bez ANC",
+      "Materijali: Reciklirani aluminijum, jagnjeća koža, memorijska pena",
+      "Težina: 285g",
+      "Dodatno: Multipoint povezivanje"
+    ]
+  },
+  {
+    "name": "Beosound Stage",
+    "brand": "Bang & Olufsen",
+    "category": "Soundbar",
+    "series": "Beosound",
+    "description": "Moćan soundbar sa Dolby Atmos podrškom i integrisanim strimingom, dizajniran za poboljšanje TV zvuka.",
+    "longDescription": "Bang & Olufsen Beosound Stage je snažan i elegantan soundbar koji transformiše doživljaj kućnog bioskopa. Nudi impresivan zvuk sa Dolby Atmos podrškom za trodimenzionalni audio doživljaj. Integrisane funkcije poput AirPlay 2, Chromecast i Bluetooth omogućavaju lako strimovanje muzike direktno na soundbar. Dizajniran je da se besprekorno uklopi ispod televizora, bilo na zidu ili na polici, sa prepoznatljivim B&O minimalističkim stilom. Izrađen je od premium materijala poput aluminijuma i drveta.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Soundbar",
+      "Zvuk: Dolby Atmos",
+      "Povezivanje: HDMI (eARC), Wi-Fi (AirPlay 2, Chromecast), Bluetooth",
+      "Pojačalo: Prilagođena pojačala, ukupno 550W",
+      "Drajveri: 11 drajvera"
+    ]
+  },
+  {
+    "name": "Beosound Theatre Ferrari Edition",
+    "brand": "Bang & Olufsen",
+    "category": "Soundbar / Kućni bioskop",
+    "series": "Beosound",
+    "description": "Ekskluzivno Ferrari izdanje modularnog high-end soundbar sistema Beosound Theatre.",
+    "longDescription": "Beosound Theatre Ferrari Edition je specijalno izdanje već izvanrednog Beosound Theatre soundbar sistema, kreirano u saradnji sa Ferrarijem. Nudi iste vrhunske performanse i modularnost kao standardni model, ali sa ekskluzivnim dizajnom inspirisanim Ferrarijem, uključujući prepoznatljive boje i materijale. Pruža impresivan višekanalni zvuk sa Dolby Atmos podrškom, dizajniran da bude centralna tačka luksuznog kućnog bioskopa. Ograničeno izdanje koje kombinuje audio inženjering i automobilsku estetiku.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Soundbar / Sistem kućnog bioskopa (Specijalno izdanje)",
+      "Zvučni kanali: 12 drajvera, 7.1.4 Dolby Atmos dekodiranje (virtuelno)",
+      "Pojačalo: 12 x Class D (ukupno 800W)",
+      "Povezivanje: HDMI (eARC), Ethernet, Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth",
+      "Karakteristike: Modularni dizajn, Active Room Compensation, Bass Management",
+      "Materijali: Aluminijum, drvo, tkanina, Ferrari-specifični detalji"
+    ]
+  },
+  {
+    "name": "Beosound A1 3rd Gen",
+    "brand": "Bang & Olufsen",
+    "category": "Prenosni zvučnik",
+    "series": "Beosound",
+    "description": "Prenosni Bluetooth zvučnik sa 360-stepeni zvukom i izdržljivom baterijom, idealan za avanture.",
+    "longDescription": "Beosound A1 3. generacije je najnovija iteracija popularnog prenosnog Bluetooth zvučnika Bang & Olufsen. Nudi poboljšani 360-stepeni zvuk koji ispunjava prostoriju, kao i izuzetno izdržljivu bateriju koja omogućava dugotrajno slušanje. Sa vodootpornošću i otpornošću na prašinu, savršen je saputnik za sve aktivnosti na otvorenom. Poseduje integrisani mikrofon za hands-free pozive i podržava glasovne asistente.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Prenosni Bluetooth zvučnik",
+      "Zvuk: True360 omnidirekcioni zvuk",
+      "Baterija: Dugo trajanje baterije (do 48 sati pri umerenoj jačini)",
+      "Otpornost: IP67 (otpornost na vodu i prašinu)",
+      "Mikrofon: Ugrađen, za pozive",
+      "Povezivanje: Bluetooth 5.1, USB-C"
+    ]
+  },
+  {
+    "name": "Beosound A9",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Wi-Fi)",
+    "series": "Beosound",
+    "description": "Ikonican bežični kućni zvučnik sa moćnim zvukom i prilagodljivim dizajnom.",
+    "longDescription": "Beosound A9 je statement komad i moćan bežični kućni zvučnik, prepoznatljiv po svom kružnom dizajnu i mogućnosti prilagođavanja izgledu kroz zamenjive frontove i nogice. Pruža izuzetno bogat i detaljan zvuk koji ispunjava celu prostoriju, zahvaljujući tehnologiji aktivne kompenzacije prostorije. Podržava širok spektar opcija strimovanja putem Wi-Fi (AirPlay 2, Chromecast, Spotify Connect) i Bluetooth. Dizajniran je da bude centralni deo kućnog audio sistema i vizuelno se ističe u svakom enterijeru.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Kućni Wi-Fi zvučnik",
+      "Drajveri: 1 x 8\" woofer, 2 x 3\" mid-range, 2 x 1.5\" full-range, 2 x 0.75\" tviter",
+      "Pojačalo: Class D (ukupno 1500W)",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth 4.2",
+      "Karakteristike: Active Room Compensation, promenljivi dizajn"
+    ]
+  },
+  {
+    "name": "Beosound Explore",
+    "brand": "Bang & Olufsen",
+    "category": "Prenosni zvučnik",
+    "series": "Beosound",
+    "description": "Ultra-izdržljiv prenosni Bluetooth zvučnik za avanture na otvorenom.",
+    "longDescription": "Beosound Explore je robustan i ultra-izdržljiv prenosni Bluetooth zvučnik, dizajniran da izdrži najzahtevnije uslove na otvorenom. Sa IP67 sertifikatom za vodootpornost i otpornost na prašinu, otporan je na padove, uranjanje u vodu i prljavštinu. Kućište od anodizovanog aluminijuma i integrisana traka za nošenje čine ga idealnim za planinarenje, plažu ili bilo koju avanturu. Pruža bogat zvuk od 360 stepeni i nudi do 27 sati trajanja baterije.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Prenosni Bluetooth zvučnik",
+      "Otpornost: IP67 (vodootporan i otporan na prašinu)",
+      "Baterija: Do 27 sati",
+      "Zvuk: True360 omnidirekcioni zvuk",
+      "Materijali: Anodizovani aluminijum, guma"
+    ]
+  },
+  {
+    "name": "Beosound 2",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Wi-Fi)",
+    "series": "Beosound",
+    "description": "Elegantan kućni Wi-Fi zvučnik sa 360-stepeni zvukom i integrisanim pametnim funkcijama.",
+    "longDescription": "Beosound 2 je prelepo izrađen bežični kućni zvučnik koji pruža impresivan 360-stepeni zvuk iz kompaktnog, konusnog oblika. Sa aluminijumskim kućištem i preciznom izradom, predstavlja estetski dodatak svakom prostoru. Nudi superioran audio kvalitet sa aktivnom kompenzacijom prostorije koja optimizuje zvuk prema okruženju. Integrisane funkcije Wi-Fi striminga (AirPlay 2, Chromecast, Spotify Connect) i intuitivne kontrole osetljive na dodir čine ga centralnim delom modernog pametnog doma.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Kućni Wi-Fi zvučnik",
+      "Drajveri: 1 x 5.25\" woofer, 2 x 2\" mid-range, 1 x 0.75\" tviter",
+      "Pojačalo: Class D (ukupno 102W)",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth 4.2",
+      "Karakteristike: Active Room Compensation, akustično sočivo"
+    ]
+  },
+  {
+    "name": "Beosound 2 Ferrari Edition",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Wi-Fi)",
+    "series": "Beosound",
+    "description": "Ekskluzivno Ferrari izdanje ikoničnog kućnog zvučnika Beosound 2.",
+    "longDescription": "Beosound 2 Ferrari Edition je specijalno, ograničeno izdanje bežičnog kućnog zvučnika Beosound 2, dizajnirano u saradnji sa Ferrarijem. Kombinuje prepoznatljivu estetiku Bang & Olufsena sa luksuznim detaljima i bojama inspirisanim Ferrarijem. Pruža isti izvanredan 360-stepeni zvuk i pametne funkcije kao i standardni Beosound 2, ali sa jedinstvenim vizuelnim identitetom koji slavi strast prema inženjeringu i dizajnu oba brenda. Predstavlja kolekcionarski komad za ljubitelje Hi-Fi zvuka i automobilskog luksuza.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Kućni Wi-Fi zvučnik (Specijalno izdanje)",
+      "Drajveri: 1 x 5.25\" woofer, 2 x 2\" mid-range, 1 x 0.75\" tviter",
+      "Pojačalo: Class D (ukupno 102W)",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth 4.2",
+      "Karakteristike: Active Room Compensation, akustično sočivo, Ferrari-specifični dizajn"
+    ]
+  },
+  {
+    "name": "Beosound Emerge",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Wi-Fi)",
+    "series": "Beosound",
+    "description": "Ultra-tanak kućni zvučnik dizajniran da se diskretno uklopi u bilo koji enterijer.",
+    "longDescription": "Beosound Emerge je elegantan i izuzetno tanak kućni Wi-Fi zvučnik, dizajniran da se neprimetno uklopi na policu za knjige ili na radni sto. Inspirisan izgledom knjige, pruža iznenađujuće pun i bogat zvuk za svoju veličinu, sa širokim zvučnim rasipanjem koje ispunjava prostoriju. Integrisane opcije Wi-Fi striminga (AirPlay 2, Chromecast, Spotify Connect) i minimalistički dizajn čine ga savršenim za manje prostore ili kao deo multi-room sistema.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Kućni Wi-Fi zvučnik (Kompaktan)",
+      "Drajveri: 1 x 4\" woofer, 1 x 1.45\" mid-range, 1 x 0.6\" tviter",
+      "Pojačalo: Class D (ukupno 120W)",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast, Spotify Connect), Bluetooth 5.0",
+      "Karakteristike: Active Room Compensation",
+      "Dimenzije: 25.4 x 16.5 x 6.7 cm"
+    ]
+  },
+  {
+    "name": "Beolab 8",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Aktivni)",
+    "series": "Beolab",
+    "description": "Kompaktni aktivni stereo zvučnici sa naprednom akustikom i prepoznatljivim dizajnom.",
+    "longDescription": "Beolab 8 su svestrani aktivni zvučnici koji spajaju kompaktne dimenzije sa impresivnim Bang & Olufsen zvukom. Dizajnirani da se besprekorno uklope u različite prostore i postavke, pružaju bogat i detaljan audio doživljaj, bilo kao samostalni stereo par, deo multi-room sistema ili kao zadnji zvučnici u kućnom bioskopu. Opremljeni su naprednim drajverima i pojačalima, kao i mogućnostima bežičnog povezivanja (Wi-Fi i Bluetooth) i Active Room Compensation tehnologijom za optimizaciju zvuka.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Aktivni stereo zvučnik (bežični)",
+      "Drajveri: 1 x 5.25\" mid-range/woofer, 1 x 1\" tviter",
+      "Pojačalo: Class D (ukupno 300W)",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast), Bluetooth 5.3, Powerlink, USB-C",
+      "Karakteristike: Active Room Compensation, Bass Port",
+      "Materijali: Aluminijum, drvo, tkanina"
+    ]
+  },
+  {
+    "name": "Beolab 18",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Aktivni)",
+    "series": "Beolab",
+    "description": "Ikonican bežični aktivni zvučnik sa akustičnim sočivom, vrhunskog zvuka i dizajna.",
+    "longDescription": "Beolab 18 je remek-delo dizajna i akustičkog inženjeringa, poznat po svom karakterističnom akustičnom sočivu koje raspršuje zvuk ravnomerno po prostoriji. Ovi bežični aktivni zvučnici pružaju izuzetan audio kvalitet sa bogatim basom i kristalno jasnim visokim tonovima. Izrađeni od luksuznih materijala poput anodizovanog aluminijuma i drveta, predstavljaju vizuelno impresivan dodatak svakom modernom domu. Podržavaju bežičnu povezanost sa B&O audio sistemima i televizorima.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Aktivni stereo zvučnik (bežični)",
+      "Drajveri: 2 x 4\" wooferi, 1 x 0.75\" tviter",
+      "Pojačalo: 2 x Class D (ukupno 320W)",
+      "Povezivanje: Wireless Power Link, Power Link (žičano)",
+      "Karakteristike: Akustično sočivo",
+      "Materijali: Aluminijum, drvo"
+    ]
+  },
+  {
+    "name": "Beolab 50 Ferrari Edition",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Aktivni)",
+    "series": "Beolab",
+    "description": "Ekskluzivno Ferrari izdanje high-end aktivnog zvučnika Beolab 50.",
+    "longDescription": "Beolab 50 Ferrari Edition je specijalno, ograničeno izdanje ultra-premium aktivnog zvučnika Beolab 50, razvijeno u saradnji sa Ferrarijem. Nudi vrhunske akustičke performanse i inovativne tehnologije poput akustičnog sočiva koje se podiže i spušta, prilagođavajući zvučnu disperziju. Dizajniran sa ekskluzivnim Ferrari bojama i detaljima, predstavlja simbol luksuza i inženjerske izvrsnosti. Pruža neverovatan stereo zvuk sa dubokim basom i preciznim visokim tonovima, savršen za najzahtevnije audiofile.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Aktivni stereo zvučnik (bežični)",
+      "Drajveri: 1 x 10\" woofer, 3 x 4.5\" mid-range, 1 x 0.75\" tviter",
+      "Pojačalo: Class D (ukupno 2100W)",
+      "Povezivanje: Wireless Power Link, Power Link (žičano), Optički, RCA",
+      "Karakteristike: Acoustic Lens Technology (ALT), Active Room Compensation, Beam Width Control",
+      "Materijali: Aluminijum, Ferrari-specifični detalji"
+    ]
+  },
+  {
+    "name": "Beolab 50",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Aktivni)",
+    "series": "Beolab",
+    "description": "Sofisticirani high-end aktivni zvučnici sa adaptivnom akustikom i ikoničnim dizajnom.",
+    "longDescription": "Beolab 50 su napredni aktivni zvučnici koji donose izvanredan audio doživljaj sa prefinjenim dizajnom. Karakteriše ih Acoustic Lens Technology (ALT) koja se podiže i spušta, prilagođavajući širinu zvučnog polja za optimalno slušanje. Sa moćnim ugrađenim pojačalima i Active Room Compensation tehnologijom, pružaju izuzetno precizan i dinamičan zvuk u bilo kom prostoru. Dizajnirani su da budu centralni deo luksuznog kućnog bioskopa ili stereo sistema, sa mogućnostima bežičnog i žičanog povezivanja.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Aktivni stereo zvučnik (bežični)",
+      "Drajveri: 1 x 10\" woofer, 3 x 4.5\" mid-range, 1 x 0.75\" tviter",
+      "Pojačalo: Class D (ukupno 2100W)",
+      "Povezivanje: Wireless Power Link, Power Link (žičano), Optički, RCA",
+      "Karakteristike: Acoustic Lens Technology (ALT), Active Room Compensation, Beam Width Control",
+      "Materijali: Aluminijum, drvo, tkanina"
+    ]
+  },
+  {
+    "name": "Beolab 90",
+    "brand": "Bang & Olufsen",
+    "category": "Kućni zvučnik (Aktivni)",
+    "series": "Beolab",
+    "description": "Vrhunski flagship aktivni zvučnici sa nenadmašnim zvukom i adaptivnim akustičkim performansama.",
+    "longDescription": "Beolab 90 su Bang & Olufsen flagship aktivni zvučnici, kreirani da pruže najautentičnije i najmoćnije audio iskustvo. Sa 18 drajvera i 8200 W snage po zvučniku, ovi zvučnici su tehnološko remek-delo. Poseduju napredne tehnologije kao što su Beam Width Control (kontrola širine snopa zvuka) i Active Room Compensation, koje omogućavaju potpunu kontrolu nad zvučnom scenom i optimalnu akustiku u bilo kojoj prostoriji. Njihov jedinstven, skulpturalni dizajn čini ih centralnim delom svakog luksuznog enterijera.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Aktivni stereo zvučnik (bežični)",
+      "Drajveri: 7 x 30mm tviteri, 7 x 86mm mid-range, 3 x 212mm wooferi, 1 x 260mm front woofer",
+      "Pojačalo: Ukupno 8200W (Class D) po zvučniku",
+      "Povezivanje: Wireless Power Link, Power Link (žičano), Optički, RCA, USB Audio",
+      "Karakteristike: Beam Width Control, Active Room Compensation, Acoustic Lens Technology",
+      "Materijali: Aluminijum, drvo, kompozitni materijali"
+    ]
+  },
+  {
+    "name": "Beosound Shape",
+    "brand": "Bang & Olufsen",
+    "category": "Modularni zidni zvučni sistem",
+    "series": "Beosound",
+    "description": "Prilagodljiv, modularni zidni zvučni sistem koji spaja umetnost i zvuk.",
+    "longDescription": "Beosound Shape je jedinstven modularni zidni zvučni sistem koji omogućava korisnicima da kreiraju sopstveni dizajn i zvučnu konfiguraciju. Sastoji se od heksagonalnih pločica koje mogu biti zvučnici, akustični dampeneri ili samo dekorativni paneli. Pruža impresivan i prilagodljiv zvuk, dok istovremeno služi kao umetnička instalacija na zidu. Savršen je za velike prostore, nudi Wi-Fi striming (AirPlay 2, Chromecast) i može se proširivati po potrebi.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Modularni zidni zvučni sistem",
+      "Dizajn: Prilagodljiv heksagonalni moduli",
+      "Povezivanje: Wi-Fi (AirPlay 2, Chromecast), Bluetooth",
+      "Komponente: Zvučnici, akustični dampeneri, Core hub",
+      "Karakteristike: Integracija sa zidom, umetnički dizajn"
+    ]
+  },
+  {
+    "name": "Beosystem 3000c",
+    "brand": "Bang & Olufsen",
+    "category": "Audio sistem / Gramofon",
+    "series": "Beosystem",
+    "description": "Reinterpretacija klasičnog gramofona Beogram 3000, sa savremenom tehnologijom.",
+    "longDescription": "Beosystem 3000c je moderna reinterpretacija klasičnog Bang & Olufsen gramofona Beogram 3000 iz 1970-ih. Spaja vintidž dizajn sa najnovijom audio tehnologijom, omogućavajući bežično povezivanje sa savremenim B&O zvučnicima (npr. Beolab 28, Beolab 50). Uključuje ugrađeno fono pretpojačalo i pruža autentičan analogni zvuk vinila, integrisan u digitalni ekosistem. Idealan je za audiofile koji cene i estetiku i performanse.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Gramofon sa integrisanim sistemom",
+      "Dizajn: Reinterpretacija klasičnog modela",
+      "Povezivanje: Wireless Power Link, RCA, USB-C (za napajanje)",
+      "Uložak: Originalni Bang & Olufsen MMC uložak",
+      "Karakteristike: Integrisano fono pretpojačalo, podrška za bežične zvučnike"
+    ]
+  },
+  {
+    "name": "Beogram 4000c",
+    "brand": "Bang & Olufsen",
+    "category": "Gramofon",
+    "series": "Beogram",
+    "description": "Restauriran i modernizovan klasični gramofon sa tangencijalnom ručicom.",
+    "longDescription": "Beogram 4000c je deo Bang & Olufsen Classics programa, gde se originalni, ikonični gramofoni iz 1970-ih pažljivo restauriraju i modernizuju za savremenu upotrebu. Karakteriše ga jedinstvena tangencijalna ručica koja obezbeđuje precizno praćenje brazde vinila. Modernizovana verzija uključuje integrisano fono pretpojačalo i opcije povezivanja sa savremenim B&O zvučnicima, omogućavajući ljubiteljima vinila da uživaju u autentičnom analognom zvuku u modernom okruženju.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Gramofon (Restauriran)",
+      "Ručica: Tangencijalna ručica",
+      "Godina originalnog izdanja: 1970-te",
+      "Povezivanje: RCA, Wireless Power Link (preko Beosystem hub-a)",
+      "Karakteristike: Restauriran originalni model, integrisano fono pretpojačalo"
+    ]
+  },
+  {
+    "name": "Beosystem 9000c",
+    "brand": "Bang & Olufsen",
+    "category": "Audio sistem / CD Changer",
+    "series": "Beosystem",
+    "description": "Restauriran i modernizovan ikonični CD changer sistem sa šest diskova.",
+    "longDescription": "Beosystem 9000c je deo Bang & Olufsen Classics programa, predstavljajući restauriranu i modernizovanu verziju ikoničnog CD changera sa šest diskova, BeoSound 9000. Ovaj sistem je bio simbol elegancije i funkcionalnosti u 1990-im, a sada je osvežen za savremeni Hi-Fi doživljaj. Poseduje vrhunski CD plejer i integrisani tjuner, uz dodatak bežičnog modula koji omogućava povezivanje sa savremenim B&O zvučnicima. Nudi besprekornu reprodukciju muzike sa CD-ova, uz prepoznatljiv minimalistički dizajn i beskompromisan kvalitet zvuka.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Audio sistem (CD Changer)",
+      "Mediji: 6 CD-ova, FM/AM tjuner",
+      "Godina originalnog izdanja: 1990-te",
+      "Povezivanje: Wireless Power Link (preko Beosystem hub-a), RCA, Optički",
+      "Karakteristike: Restauriran originalni model, integracija sa savremenim zvučnicima"
+    ]
+  },
+  {
+    "name": "Beosound Bollard",
+    "brand": "Bang & Olufsen",
+    "category": "Spoljni zvučnik",
+    "series": "Beosound",
+    "description": "Diskretan spoljni zvučnik za integraciju u pejzaž, otporan na vremenske uslove.",
+    "longDescription": "Beosound Bollard je dizajniran za diskretnu integraciju u spoljne prostore, pružajući visokokvalitetan zvuk na terasama, baštama ili oko bazena. Njegov robustan dizajn otporan je na sve vremenske uslove, obezbeđujući dugotrajnost i pouzdanost. Sa usmerenim zvukom, obezbeđuje optimalnu pokrivenost u određenim zonama, bez narušavanja estetike okoline. Idealan je za stvaranje ambijentalne muzike u spoljnim životnim prostorima.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Spoljni zvučnik",
+      "Otpornost: Otporan na vremenske uslove",
+      "Dizajn: Integracija u pejzaž (bolard stil)",
+      "Povezivanje: Žično (prilagođeno za spoljnu instalaciju)",
+      "Zvuk: Usmereni zvuk"
+    ]
+  },
+  {
+    "name": "Beolab 19",
+    "brand": "Bang & Olufsen",
+    "category": "Subwoofer (Aktivni)",
+    "series": "Beolab",
+    "description": "Snažan bežični subwoofer sa dvostrukim drajverima za dubok i precizan bas.",
+    "longDescription": "Beolab 19 je elegantan i moćan bežični subwoofer dizajniran da pruži izuzetno dubok i precizan bas, dopunjujući Bang & Olufsen zvučne sisteme. Njegov dodekaedarski dizajn ne samo da izgleda impresivno, već i akustički optimizuje disperziju zvuka. Sa dvostrukim drajverima i ugrađenim Class D pojačalom, isporučuje jasan i kontrolisan bas bez izobličenja. Bežična povezivost ga čini fleksibilnim za postavljanje u bilo koji prostor, bez potrebe za kablovima.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Aktivni subwoofer (bežični)",
+      "Drajveri: 2 x 8\" wooferi",
+      "Pojačalo: 2 x 160W Class D",
+      "Povezivanje: Wireless Power Link, Power Link (žičano), RCA",
+      "Karakteristike: Akustični dizajn kućišta, kontrola basa"
+    ]
+  },
+  {
+    "name": "Celestial",
+    "brand": "Bang & Olufsen",
+    "category": "Arhitektonski zvučnici (Ugradni)",
+    "series": "Celestial",
+    "description": "Serija visokokvalitetnih ugradnih zvučnika za diskretnu integraciju u enterijer.",
+    "longDescription": "Celestial serija predstavlja Bang & Olufsen rešenje za ugradne zvučnike, dizajnirane za diskretnu integraciju u zidove ili plafone. Ovi zvučnici pružaju izuzetan kvalitet zvuka, zadržavajući estetiku prostora netaknutom. Idealni su za prilagođene instalacije u domovima i poslovnim prostorima, nudeći širok spektar modela za različite audio potrebe – od pozadinske muzike do komponenti kućnog bioskopa. Dostupni su u različitim veličinama i konfiguracijama za optimalne akustičke performanse.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Ugradni zvučnici (za zid/plafon)",
+      "Dizajn: Diskretna integracija",
+      "Primena: Multi-room audio, kućni bioskop",
+      "Povezivanje: Žično (instalacijsko)",
+      "Karakteristike: Optimizovana disperzija zvuka"
+    ]
+  },
+  {
+    "name": "Palatial",
+    "brand": "Bang & Olufsen",
+    "category": "Arhitektonski zvučnici (Ugradni)",
+    "series": "Palatial",
+    "description": "Premium serija ugradnih zvučnika za velike prostore, sa moćnim zvukom i diskretnim dizajnom.",
+    "longDescription": "Palatial serija Bang & Olufsen ugradnih zvučnika predstavlja vrhunac diskretnog zvuka, dizajnirana da pruži moćan i detaljan audio doživljaj u velikim i luksuznim prostorima. Sa naprednim akustičkim tehnologijama i mogućnošću potpunog prilagođavanja, ovi zvučnici se neprimetno integrišu u zidove ili plafone, postajući praktično nevidljivi. Idealni su za high-end kućne bioskope ili multi-room sisteme gde je vrhunski zvuk podjednako važan kao i nenametljiva estetika.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Ugradni zvučnici (za zid/plafon)",
+      "Dizajn: Diskretna integracija (visokoprofilna)",
+      "Primena: Veliki prostori, high-end kućni bioskop",
+      "Povezivanje: Žično (instalacijsko)",
+      "Karakteristike: Visoke performanse, optimizovana akustika za velike prostore"
+    ]
+  },
+  {
+    "name": "Beovision Harmony",
+    "brand": "Bang & Olufsen",
+    "category": "Televizor",
+    "series": "Beovision",
+    "description": "Luksuzni televizor sa integrisanim zvučnicima koji se transformišu i otkrivaju ekran.",
+    "longDescription": "Beovision Harmony je Bang & Olufsen luksuzni televizor koji spaja umetnost i tehnologiju na jedinstven način. Kada je isključen, ekran je diskretno sakriven iza prelepo izrađenih zvučnih panela od drveta ili tkanine. Kada se uključi, paneli se magično razmiču u stranu, otkrivajući ekran i stvarajući impresivnu zvučnu scenu. Nudi vrhunski kvalitet slike i zvuka, sa podrškom za najnovije standarde, i može se neprimetno integrisati u kompletan B&O sistem kućnog bioskopa.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: OLED Televizor sa integrisanim zvučnicima",
+      "Dostupne veličine: 65\", 77\", 83\", 88\", 97\"",
+      "Zvučnici: Integrisani, sa pokretnim panelima",
+      "Povezivanje: HDMI, Wi-Fi, Ethernet",
+      "Karakteristike: Pokretni zvučnici, dizajn umetničkog dela"
+    ]
+  },
+  {
+    "name": "Beovision Theatre Ferrari Edition",
+    "brand": "Bang & Olufsen",
+    "category": "Televizor",
+    "series": "Beovision",
+    "description": "Ekskluzivno Ferrari izdanje modularnog Beovision Theatre televizora.",
+    "longDescription": "Beovision Theatre Ferrari Edition je specijalno, ograničeno izdanje modularnog televizora Beovision Theatre, razvijeno u saradnji sa Ferrarijem. Kombinuje vrhunsku Bang & Olufsen tehnologiju televizora sa prepoznatljivom estetikom Ferrarija, uključujući ekskluzivne boje i materijale. Nudi izvanredan kvalitet slike i zvuka, sa modularnim dizajnom koji omogućava prilagođavanje veličinama ekrana i integraciju sa Beosound Theatre soundbarom za ultimativno iskustvo kućnog bioskopa. Pravi kolekcionarski komad za ljubitelje luksuza.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: Televizor (Specijalno izdanje)",
+      "Dizajn: Modularni, sa Ferrari-specifičnim detaljima",
+      "Kvalitet slike: Vrhunski",
+      "Povezivanje: HDMI, Wi-Fi, Ethernet",
+      "Kompatibilnost: Integracija sa Beosound Theatre soundbarom"
+    ]
+  },
+  {
+    "name": "Beovision Theatre",
+    "brand": "Bang & Olufsen",
+    "category": "Televizor",
+    "series": "Beovision",
+    "description": "Modularni televizor dizajniran da bude srce kompletnog kućnog bioskopa, sa vrhunskim zvukom i slikom.",
+    "longDescription": "Beovision Theatre je inovativni modularni televizor od Bang & Olufsena, osmišljen da bude centralna tačka kompletnog kućnog bioskopa. Nudi izvanredan kvalitet slike (OLED) i omogućava integraciju sa Beosound Theatre soundbarom (koji se može kupiti odvojeno ili u kompletu) za vrhunski audio doživljaj. Fleksibilan dizajn omogućava različite opcije montaže i prilagođavanje veličinama ekrana. Poseduje napredne funkcije povezivanja i optimizacije zvuka u prostoru, čineći ga izuzetno svestranim rešenjem za premium zabavu.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: OLED Televizor (Modularni)",
+      "Dostupne veličine: 55\", 65\", 77\"",
+      "Povezivanje: HDMI, Wi-Fi, Ethernet",
+      "Karakteristike: Integracija sa Beosound Theatre soundbarom, motorizovani stalci/nosači"
+    ]
+  },
+  {
+    "name": "Beovision Contour",
+    "brand": "Bang & Olufsen",
+    "category": "Televizor",
+    "series": "Beovision",
+    "description": "Elegantan i kompaktan televizor sa integrisanim, snažnim zvučnicima, idealan za manje prostore.",
+    "longDescription": "Beovision Contour je dizajniran kao elegantan i kompaktan televizor za prostore gde je stil jednako važan kao i performanse. Poseduje integrisane, moćne zvučnike koji pružaju impresivan zvuk direktno iz samog televizora, eliminišući potrebu za dodatnim soundbarom. Sa minimalističkim dizajnom i vrhunskim kvalitetom slike (OLED), idealan je za spavaće sobe, kuhinje ili manje dnevne sobe. Nudi lako povezivanje i pristup popularnim striming servisima, sa prepoznatljivom B&O estetikom.",
+    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bang%20%26%20Olufsen.svg",
+    "specifications": [
+      "Tip: OLED Televizor sa integrisanim zvučnicima",
+      "Dostupne veličine: 48\", 55\"",
+      "Zvučnici: Snažni integrisani zvučnici",
+      "Povezivanje: HDMI, Wi-Fi, Ethernet",
+      "Karakteristike: Kompaktan dizajn, all-in-one rešenje"
+    ]
+  }
+]
