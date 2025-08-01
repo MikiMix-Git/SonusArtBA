@@ -1,6 +1,3 @@
-Naravno. Ažurirao sam podatke koje ste mi poslali, dopunio ih nedostajućim detaljima i ispravio neke manje nepreciznosti. Evo kompletnog JSON koda s dopunjenim informacijama:
-
-```json
 [
   {
     "name": "TT-4",
@@ -391,4 +388,3 @@ Naravno. Ažurirao sam podatke koje ste mi poslali, dopunio ih nedostajućim det
     ]
   }
 ]
-```
