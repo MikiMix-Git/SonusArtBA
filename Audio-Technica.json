@@ -2,26 +2,29 @@
   {
     "name": "ATH-M50xBT2",
     "brand": "Audio-Technica",
-    "category": "Bežične slušalice (Over-Ear)",
+    "category": "Bežične slušalice",
+    "subcategory": "Over-Ear",
     "series": "M-Series",
     "description": "Bežična verzija legendarnih ATH-M50x studijskih slušalica, sa poboljšanom funkcionalnošću.",
     "longDescription": "Audio-Technica ATH-M50xBT2 su bežična verzija kritički hvaljenih ATH-M50x monitor slušalica, nudeći isti legendarni zvuk sa dodatnom slobodom Bluetooth povezivanja. Pružaju izuzetnu jasnoću u celom proširenom frekventnom opsegu, sa dubokim i preciznim bas odzivom. Poboljšane funkcije uključuju do 50 sati trajanja baterije, brzo punjenje, multipoint povezivanje, kontrolu mikrofona sa bočnim tonom i podršku za glasovne asistente. Idealan su izbor za studijski rad, casual slušanje i putovanja.",
     "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Audio-Technica.svg",
     "specifications": [
-      "Tip drajvera: Dinamički, 45mm",
+      "Tip drajvera: Elektrodinamički, 40mm titanijumski",
       "Dizajn: Zatvorene, Over-ear",
       "Povezivanje: Bluetooth 5.0 (LDAC, AAC, SBC), 3.5mm žičano",
       "Frekventni odziv: 15 - 28,000 Hz",
       "Impedansa: 38 Ohm",
       "Osetljivost: 99 dB/mW",
-      "Baterija: Do 50 sati (kontinuirana upotreba)",
-      "Mikrofon: Ugrađen, sa bočnim tonom"
+      "Baterija: Do 38 sati sa ANC, 50 sati bez ANC",
+      "Materijali: Aluminijum, titanijum, jagnjeća koža, memorijska pena",
+      "Težina: 323g"
     ]
   },
   {
     "name": "ATH-M50x",
     "brand": "Audio-Technica",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear",
     "series": "M-Series",
     "description": "Legendarna studijska monitor slušalica, cenjena zbog preciznosti i udobnosti.",
     "longDescription": "Audio-Technica ATH-M50x su najpopularnije studijske monitor slušalice na svetu, omiljene među audio profesionalcima i entuzijastima zbog svoje izuzetne preciznosti, detaljnosti i udobnosti. Ove slušalice pružaju izuzetan kvalitet zvuka sa uravnoteženim frekventnim odzivom, preciznim basom i jasnim visokim tonovima. Sklopivi dizajn i odvojivi kablovi čine ih praktičnim za prenos i skladištenje, a robusna konstrukcija obezbeđuje dugotrajnost. Idealan su izbor za miksanje, mastering, snimanje i svakodnevno slušanje.",
@@ -39,7 +42,8 @@
   {
     "name": "ATH-M20x",
     "brand": "Audio-Technica",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear",
     "series": "M-Series",
     "description": "Ulazni nivo studijskih monitor slušalica, idealne za snimanje i miksanje.",
     "longDescription": "Audio-Technica ATH-M20x su osnovni model iz cenjene M-serije studijskih monitor slušalica, dizajnirane da pruže solidan kvalitet zvuka i udobnost po pristupačnoj ceni. Idealne su za praćenje snimanja, miksanje i povremeno slušanje. Karakteriše ih poboljšana zvučna izolacija i robustna konstrukcija, što ih čini pogodnim za duge studijske sesije. Fokus je na preciznoj reprodukciji basa i srednjih tonova, sa minimalnim izobličenjem.",
@@ -57,7 +61,8 @@
   {
     "name": "ATH-ADX5000",
     "brand": "Audio-Technica",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Otvorene (Referentne)",
     "series": "Air Dynamic (Reference)",
     "description": "Referentne otvorene slušalice, flagšip model za audiofile, sa izuzetnom zvučnom scenom.",
     "longDescription": "Audio-Technica ATH-ADX5000 su referentne otvorene slušalice, vrhunac Audio-Technica inženjeringa u 'Air Dynamic' seriji. Dizajnirane su za najzahtevnije audiofile, nudeći izuzetno prostranu i preciznu zvučnu scenu, transparentnost i prirodnu reprodukciju zvuka. Koriste novo razvijene 58mm Tungsten-coated drajvere i laganu konstrukciju od magnezijuma za minimalnu rezonancu i maksimalnu udobnost. Predstavljaju vrhunac otvorenih slušalica sa dinamičkim drajverima.",
@@ -75,7 +80,8 @@
   {
     "name": "ATH-AD700X",
     "brand": "Audio-Technica",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Otvorene",
     "series": "Air Dynamic",
     "description": "Otvorene slušalice, idealne za gejming i kritičko slušanje zbog široke zvučne scene.",
     "longDescription": "Audio-Technica ATH-AD700X su otvorene slušalice iz 'Air Dynamic' serije, poznate po svojoj izuzetno širokoj i preciznoj zvučnoj sceni, što ih čini popularnim izborom za gejmere i audiofile koji cene prirodan i prostran zvuk. Lagana konstrukcija sa 3D wing sistemom obezbeđuje izuzetnu udobnost čak i tokom dugih sesija slušanja. Iako nemaju dubok bas kao zatvoreni modeli, njihov neutralan tonski balans i otvorenost pružaju impresivno realistično audio iskustvo.",
@@ -93,7 +99,8 @@
   {
     "name": "ATH-WP900",
     "brand": "Audio-Technica",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Drvene (Prenosive)",
     "series": "Portable Wooden Headphones",
     "description": "Premium prenosive slušalice sa kućištem od flamed javora, izuzetnog zvuka.",
     "longDescription": "Audio-Technica ATH-WP900 su prenosive premium slušalice koje kombinuju izuzetnu akustičnu izvedbu sa prelepim dizajnom kućišta od flamed javora. Ovo drvo ne samo da doprinosi estetici, već ima i zvučne karakteristike koje poboljšavaju jasnost i prirodnost zvuka. Opremljene su 53mm drajverima sa DLC (Diamond-like Carbon) premazom dijafragme, pružajući bogat, detaljan zvuk. Sklopivi dizajn i odvojivi kablovi čine ih idealnim za audiofile u pokretu.",
@@ -112,7 +119,8 @@
   {
     "name": "ATH-AWKT",
     "brand": "Audio-Technica",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Drvene (Referentne)",
     "series": "Wooden Headphones (Reference)",
     "description": "Vrhunske slušalice sa kućištem od Kokutan (Striped Ebony) drveta, izvanrednog audiofilskog kvaliteta.",
     "longDescription": "Audio-Technica ATH-AWKT su vrhunske slušalice iz A-T linije drvenih slušalica, sa kućištem izrađenim od prelepog Kokutan (Striped Ebony) drveta. Ovo gusto drvo, tradicionalno korišćeno za instrumente, pruža izuzetne akustične karakteristike koje doprinose čistom, prirodnom i rezonantnom zvuku. Opremljene su 53mm drajverima sa visokoefikasnim Permendur magnetnim kolom i DLC premazom dijafragme, nudeći izuzetnu audiofilsku rezoluciju i dinamiku. Dizajnirane su za najzahtevnije ljubitelje muzike.",
@@ -131,7 +139,8 @@
   {
     "name": "ATH-TWX9",
     "brand": "Audio-Technica",
-    "category": "Bežične slušalice (TWS)",
+    "category": "Bežične slušalice",
+    "subcategory": "TWS (In-Ear)",
     "series": "True Wireless",
     "description": "Flagship TWS slušalice sa hibridnim poništavanjem buke i UV sterilizacijom.",
     "longDescription": "Audio-Technica ATH-TWX9 su premium True Wireless slušalice koje kombinuju izvanredan kvalitet zvuka sa naprednim funkcijama. Poseduju hibridno digitalno poništavanje buke za efikasnu izolaciju, kao i inovativnu UV sterilizaciju u kućištu za punjenje. Sa 5.8mm drajverima visokog kvaliteta i podrškom za Qualcomm® Snapdragon Sound™, nude detaljan i impresivan zvuk. Idealne su za svakodnevnu upotrebu, putovanja i pozive, nudeći do 6 sati slušanja (sa ANC) i ukupno 18.5 sati sa kućištem.",
@@ -149,7 +158,8 @@
   {
     "name": "ATH-SQ1TW",
     "brand": "Audio-Technica",
-    "category": "Bežične slušalice (TWS)",
+    "category": "Bežične slušalice",
+    "subcategory": "TWS (In-Ear)",
     "series": "True Wireless",
     "description": "Kompaktne i pristupačne True Wireless slušalice sa dobrim kvalitetom zvuka.",
     "longDescription": "Audio-Technica ATH-SQ1TW su kompaktne i stilizovane True Wireless slušalice koje donose prepoznatljiv Audio-Technica zvuk po pristupačnijoj ceni. Sa 5.8mm drajverima, nude jasan i energičan zvuk, pogodan za svakodnevno slušanje muzike i pozive. Jednostavne su za upotrebu, sa intuitivnim kontrolama na dodir i funkcijom Hear-through za slušanje okoline. Otporne su na prskanje (IPX4), što ih čini pogodnim za aktivnosti na otvorenom. Pružaju do 6.5 sati slušanja na jednoj bateriji i ukupno do 19.5 sati sa kućištem za punjenje.",
@@ -166,7 +176,8 @@
   {
     "name": "ATH-CKS50TW",
     "brand": "Audio-Technica",
-    "category": "Bežične slušalice (TWS)",
+    "category": "Bežične slušalice",
+    "subcategory": "TWS (In-Ear)",
     "series": "Solid Bass True Wireless",
     "description": "True Wireless slušalice sa naglašenim basom i dugotrajnom baterijom.",
     "longDescription": "Audio-Technica ATH-CKS50TW su True Wireless slušalice iz 'Solid Bass' serije, dizajnirane za ljubitelje muzike koji cene dubok i moćan bas. Pored impresivnog basa, nude jasan vokal i detaljne visoke tonove zahvaljujući velikim 9mm Solid Bass HD TWS drajverima. Najistaknutija karakteristika je neverovatno dugo trajanje baterije – do 20 sati na jednoj bateriji slušalica i ukupno do 50 sati sa kućištem za punjenje. Poseduju i funkciju poništavanja buke i Hear-through mod.",
@@ -184,7 +195,8 @@
   {
     "name": "AT-LP120XBT-USB",
     "brand": "Audio-Technica",
-    "category": "Gramofon",
+    "category": "Gramofoni",
+    "subcategory": "DJ/Hi-Fi",
     "series": "USB & Bluetooth Turntables",
     "description": "Profesionalni DJ/Hi-Fi gramofon sa direktnim pogonom, Bluetooth i USB izlazom.",
     "longDescription": "Audio-Technica AT-LP120XBT-USB je svestrani gramofon sa direktnim pogonom, idealan za DJ-eve, Hi-Fi entuzijaste i sve koji žele da digitalizuju svoju vinil kolekciju. Uključuje Bluetooth povezivanje za bežično slušanje i USB izlaz za direktno povezivanje sa računarom. Poseduje podesivu dinamičku anti-skate kontrolu, kontrolu pitcha sa kvarcnom brzinom, stroboskopski tanjir i odvojivo ciljno svetlo. Dolazi sa AT-VM95E dual magnetnom phono kartridžom, pružajući izvrstan kvalitet zvuka direktno iz kutije.",
@@ -202,7 +214,8 @@
   {
     "name": "AT-LP60XBT",
     "brand": "Audio-Technica",
-    "category": "Gramofon",
+    "category": "Gramofoni",
+    "subcategory": "Automatski",
     "series": "USB & Bluetooth Turntables",
     "description": "Potpuno automatski bežični gramofon sa Bluetooth i ugrađenim pretpojačalom.",
     "longDescription": "Audio-Technica AT-LP60XBT je potpuno automatski gramofon sa remenskim pogonom koji nudi izuzetnu lakoću korišćenja i bežičnu Bluetooth konekciju. Idealan je za početnike u svetu vinila i one koji žele praktično rešenje za slušanje ploča. Poseduje ugrađeno Phono pretpojačalo koje se može uključiti ili isključiti, omogućavajući direktno povezivanje sa zvučnicima, kućnim stereo sistemom ili aktivnim zvučnicima. Kompaktan dizajn i jednostavna operacija čine ga popularnim izborom za uživanje u muzici sa vinila.",
