@@ -1,0 +1,1946 @@
+<!-- Verzija 1.61 - AI Asistent za Postavku Sistema -->
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonus Art - Audio Proizvodi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .controls {
+            margin-bottom: 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        input, select, textarea { /* Dodan textarea */
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 5px;
+        }
+        input {
+            width: 200px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 80px;
+            resize: vertical;
+        }
+        .toggle-btn, .overview-product-btn, .recommend-product-btn, .setup-assistant-btn { /* Dodan .setup-assistant-btn */
+            font-size: 14px;
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px; /* Mali razmak između gumba */
+        }
+        .toggle-btn:hover, .overview-product-btn:hover, .recommend-product-btn:hover, .setup-assistant-btn:hover {
+            background-color: #218838;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative; /* Za pozicioniranje checkboxa */
+        }
+        .product h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .product p {
+            margin: 5px 0;
+        }
+        .product .spec-item { /* Novi stil za pojedinačne specifikacije */
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .long-description {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .long-description.show {
+            display: block;
+        }
+        .clickable {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .clickable:hover {
+            color: #0056b3;
+        }
+        .error, .no-products {
+            text-align: center;
+            color: #ff0000;
+        }
+
+        /* Stilovi za usporedbu */
+        .compare-checkbox {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        #comparisonTableContainer {
+            overflow-x: auto; /* Omogućava skrolovanje tabele */
+        }
+        #comparisonTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        #comparisonTable th, #comparisonTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        #comparisonTable th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            white-space: nowrap; /* Sprečava prelamanje teksta u zaglavljima */
+        }
+        #comparisonTable td ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        /* Stilovi za plutajuće dugmad */
+        #floatingComparisonControls {
+            position: fixed; /* Fiksirana pozicija */
+            bottom: 20px; /* 20px od dna */
+            right: 20px; /* 20px od desne strane */
+            display: flex;
+            flex-direction: column; /* Dugmad jedno ispod drugog */
+            gap: 10px;
+            z-index: 1000; /* Osigurava da je iznad ostalog sadržaja */
+            background-color: rgba(255, 255, 255, 0.9); /* Blago prozirna pozadina */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        #floatingComparisonControls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none; /* Ukloni podrazumevanu ivicu */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Blaga senka na dugmadima */
+        }
+        #compareButton {
+            background-color: #007bff;
+            color: white;
+        }
+        #compareButton:hover {
+            background-color: #0056b3;
+        }
+        #compareButton:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #clearComparisonButton {
+            background-color: #dc3545;
+            color: white;
+        }
+        #clearComparisonButton:hover {
+            background-color: #c82333;
+        }
+        #clearComparisonButton:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #setupAssistantButton { /* Stil za novo dugme */
+            background-color: #ffc107; /* Žuta boja */
+            color: #333;
+        }
+        #setupAssistantButton:hover {
+            background-color: #e0a800;
+        }
+
+        /* Stilovi za poruke */
+        .message-area {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .message-area.error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .message-area.info-message {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        /* Stilovi za Modal */
+        .modal-overlay {
+            display: none; /* Sakriveno po defaultu */
+            position: fixed;
+            z-index: 1001; /* Iznad plutajućih dugmadi */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7); /* Zatamnjena pozadina */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 8px;
+            width: 90%; /* Širina modala */
+            max-width: 900px; /* Maksimalna širina */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            max-height: 90vh; /* Maksimalna visina, da se omogući skrolovanje unutar modala */
+            overflow-y: auto; /* Omogućava skrolovanje sadržaja modala */
+        }
+        @keyframes animatetop {
+            from {top: -300px; opacity: 0}
+            to {top: 0; opacity: 1}
+        }
+        .modal-close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+        .modal-close-btn:hover,
+        .modal-close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Stilovi za Gemini analizu */
+        #geminiAnalysisContainer, #productOverviewContainer, #recommendationContainer, #setupAdviceContainer { /* Dodan #setupAdviceContainer */
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9f7ef; /* Svijetlo zelena pozadina */
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            text-align: left;
+            white-space: pre-wrap; /* Omogućava prelamanje teksta i čuva razake */
+            font-size: 14px;
+            color: #155724; /* Tamno zeleni tekst */
+        }
+        #geminiAnalysisContainer.loading, #productOverviewContainer.loading, #recommendationContainer.loading, #setupAdviceContainer.loading { /* Dodan #setupAdviceContainer.loading */
+            text-align: center;
+            font-style: italic;
+            color: #6c757d;
+        }
+        .analysis-buttons, .product-overview-buttons, .recommendation-buttons, .setup-assistant-buttons { /* Dodan .setup-assistant-buttons */
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .analysis-buttons button, .product-overview-buttons button, .recommendation-buttons button, .setup-assistant-buttons button { /* Dodan .setup-assistant-buttons button */
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #analyzeComparisonButton {
+            background-color: #6f42c1; /* Ljubičasta boja */
+            color: white;
+        }
+        #analyzeComparisonButton:hover {
+            background-color: #5a359c;
+        }
+        #analyzeComparisonButton:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #generateSetupAdviceButton { /* Stil za dugme za generisanje saveta */
+            background-color: #007bff;
+            color: white;
+        }
+        #generateSetupAdviceButton:hover {
+            background-color: #0056b3;
+        }
+        #generateSetupAdviceButton:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        /* Stilovi za prikaz preporučenih proizvoda unutar modala */
+        .recommended-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .recommended-product-card {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer; /* Dodano: kursor pokazivača za klikabilne kartice */
+        }
+        .recommended-product-card:hover { /* Dodano: efekat lebdenja */
+            background-color: #e2e6ea;
+        }
+        .recommended-product-card img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 3px;
+            margin-bottom: 5px;
+        }
+        .recommended-product-card h4 {
+            margin: 5px 0;
+            color: #333;
+            font-size: 16px;
+        }
+        .recommended-product-card p {
+            margin: 2px 0;
+            font-size: 13px;
+            color: #555;
+        }
+        .form-group { /* Stil za grupisanje formi */
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: calc(100% - 10px); /* Podesi širinu uzimajući u obzir padding */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Uključi padding i border u širinu */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sonus Art - Audio Proizvodi</h1>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Pretraži po nazivu...">
+            <label for="categoryFilter">Kategorija:</label>
+            <select id="categoryFilter">
+                <option value="">Sve kategorije</option>
+            </select>
+            <label for="seriesFilter">Serija:</label>
+            <select id="seriesFilter">
+                <option value="">Sve serije</option>
+            </select>
+            <label for="brandFilter">Brend:</label>
+            <select id="brandFilter">
+                <option value="">Svi brendovi</option>
+                <!-- Opcije za brendove će se sada dinamički popunjavati putem JavaScripta -->
+            </select>
+            <label for="seriesSort">Sortiraj po seriji:</label>
+            <select id="seriesSort">
+                <option value="">Podrazumevano</option>
+                <option value="asc">Serija (A-Ž)</option>
+                <option value="desc">Serija (Ž-A)</option>
+            </select>
+        </div>
+        <!-- Nova oblast za poruke -->
+        <div id="mainMessageArea" class="message-area"></div>
+        <div id="products" class="products"></div>
+    </div>
+
+    <!-- Plutajuće dugmad za usporedbu -->
+    <div id="floatingComparisonControls">
+        <button id="compareButton" onclick="showComparisonModal()" disabled>Usporedi (0)</button>
+        <button id="clearComparisonButton" onclick="clearComparison()" disabled>Očisti usporedbu</button>
+        <button id="setupAssistantButton" onclick="showSetupAssistantModal()">AI Asistent za Postavku Sistema</button> <!-- Novo dugme -->
+    </div>
+
+    <!-- Modal za usporedbu -->
+    <div id="comparisonModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close-btn" onclick="closeComparisonModal()">&times;</span>
+            <h2>Usporedba proizvoda</h2>
+            <div id="comparisonMessageArea" class="message-area"></div>
+            <div id="comparisonTableContainer">
+                <!-- Tabela za usporedbu će biti generisana ovde -->
+            </div>
+            <div class="analysis-buttons">
+                <button id="analyzeComparisonButton" onclick="analyzeComparisonWithGemini()" disabled>Analiziraj usporedbu</button>
+                <!-- Uklonjeno dugme za audio analizu -->
+            </div>
+            <div id="geminiAnalysisContainer"></div>
+        </div>
+    </div>
+
+    <!-- Novi Modal za AI Review Proizvoda -->
+    <div id="productOverviewModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close-btn" onclick="closeProductOverviewModal()">&times;</span>
+            <h2 id="productOverviewTitle">AI Review proizvoda</h2>
+            <div id="productOverviewMessageArea" class="message-area"></div>
+            <div class="product-overview-buttons">
+                <!-- Uklonjeno dugme za audio review proizvoda -->
+            </div>
+            <div id="productOverviewContainer"></div>
+        </div>
+    </div>
+
+    <!-- Novi Modal za Preporuke Proizvoda -->
+    <div id="recommendationModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close-btn" onclick="closeRecommendationModal()">&times;</span>
+            <h2 id="recommendationTitle">Preporučeni proizvodi</h2>
+            <div id="recommendationMessageArea" class="message-area"></div>
+            <div class="recommendation-buttons">
+                <!-- Uklonjeno dugme za audio preporuke -->
+            </div>
+            <div id="recommendationContainer">
+                <!-- Preporučeni proizvodi će biti prikazani ovde -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Novi Modal za AI Asistent za Postavku Sistema -->
+    <div id="setupAssistantModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close-btn" onclick="closeSetupAssistantModal()">&times;</span>
+            <h2 id="setupAssistantTitle">AI Asistent za Postavku Sistema</h2>
+            <div id="setupAssistantMessageArea" class="message-area"></div>
+            
+            <div class="form-group">
+                <label for="selectProductForSetup">Odaberite proizvod za savet o postavci:</label>
+                <select id="selectProductForSetup"></select>
+            </div>
+
+            <h3>Detalji o prostoriji (u metrima):</h3>
+            <div class="form-group">
+                <label for="roomLength">Dužina sobe:</label>
+                <input type="number" id="roomLength" placeholder="npr. 5.0" step="0.1" min="1">
+            </div>
+            <div class="form-group">
+                <label for="roomWidth">Širina sobe:</label>
+                <input type="number" id="roomWidth" placeholder="npr. 4.0" step="0.1" min="1">
+            </div>
+            <div class="form-group">
+                <label for="roomHeight">Visina sobe:</label>
+                <input type="number" id="roomHeight" placeholder="npr. 2.5" step="0.1" min="1">
+            </div>
+
+            <div class="form-group">
+                <label for="floorType">Tip poda:</label>
+                <select id="floorType">
+                    <option value="Hardwood">Tvrdo drvo / Laminat</option>
+                    <option value="Carpet">Tepih</option>
+                    <option value="Tile">Pločice</option>
+                    <option value="Mixed">Mešano</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="furnitureDensity">Gustina nameštaja:</label>
+                <select id="furnitureDensity">
+                    <option value="Minimal">Minimalna (malo nameštaja)</option>
+                    <option value="Moderate">Umerena (standardan nameštaj)</option>
+                    <option value="Dense">Gusta (mnogo nameštaja)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="listeningPreferences">Vaše preferencije slušanja (npr. 'Volim snažan bas i jasne vokale', 'Slušam uglavnom klasičnu muziku'):</label>
+                <textarea id="listeningPreferences" placeholder="Opišite svoje preferencije..."></textarea>
+            </div>
+
+            <div class="setup-assistant-buttons">
+                <button id="generateSetupAdviceButton" onclick="generateSetupAdvice()">Generiši savet za postavku</button>
+            </div>
+            <div id="setupAdviceContainer"></div>
+        </div>
+    </div>
+
+    <script>
+        // Verzija 1.61
+        // URL-ovi JSON fajlova sa podacima o proizvodima
+        const jsonUrls = [
+            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/AVID%20HiFi.json",
+            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Argon%20Audio.json",
+            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Astell%26Kern.json",
+            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Bowers%20%26%20Wilkins.json",
+            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Audio-Technica.json",
+            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Audioquest.json",
+            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Bang%20%26%20Olufsen.json"
+        ];
+
+        // Globalna varijabla za sve učitane proizvode
+        let allProductsData = [];
+        // Globalna varijabla za proizvode odabrane za usporedbu
+        let productsToCompare = [];
+        const MAX_PRODUCTS_TO_COMPARE = 4; // Maksimalan broj proizvoda za usporedbu
+        // Globalna varijabla za praćenje izabranog filtera specifikacije (ključ i vrednost)
+        let currentSelectedSpecFilter = { key: null, value: null };
+        /* Uklonjene globalne varijable za SpeechSynthesisUtterance */
+
+        // Nova globalna varijabla za indeksiranje proizvoda
+        const productIndex = new Map();
+
+        // Fallback podaci su uklonjeni. Aplikacija će sada zavisiti isključivo od JSON fajlova.
+        // const fallbackDataJsonString = `...`;
+        // const fallbackData = JSON.parse(fallbackDataJsonString);
+
+        /**
+         * Prikazuje poruku u definisanom delu UI-ja.
+         * @param {string} message - Tekst poruke.
+         * @param {string} type - Tip poruke ('error' ili 'info').
+         * @param {string} targetAreaId - ID elementa u kojem će se prikazati poruka (npr. 'comparisonMessageArea', 'productOverviewMessageArea', 'recommendationMessageArea', 'setupAssistantMessageArea').
+         */
+        function displayUIMessage(message, type, targetAreaId = "comparisonMessageArea") {
+            const messageArea = document.getElementById(targetAreaId);
+            if (messageArea) {
+                messageArea.textContent = message;
+                messageArea.className = `message-area ${type}-message`; // Dodaj klase za stilizovanje
+                // Sakrij poruku nakon 5 sekundi
+                setTimeout(() => {
+                    messageArea.textContent = '';
+                    messageArea.className = 'message-area';
+                }, 5000);
+            }
+        }
+
+        /**
+         * Pomoćna funkcija za normalizaciju specifikacija u objekat ključ-vrednost.
+         * Prihvata specifikacije kao niz stringova ("Ključ: Vrednost") ili kao objekat.
+         * @param {Object} product - Objekat proizvoda.
+         * @returns {Object} Normalizovani objekat specifikacija.
+         */
+        function getNormalizedSpecifications(product) {
+            const normalizedSpecs = {};
+            if (product.specifications) {
+                if (Array.isArray(product.specifications)) {
+                    // Konvertuj niz stringova u objekat: ["Key: Value"] -> {"Key": "Value"}
+                    for (const specString of product.specifications) {
+                        // Ukloni potencijalni broj i ": " na početku stringa (npr. "0: Tip: Vrednost")
+                        const cleanedString = specString.replace(/^\d+:\s*/, '');
+                        const parts = cleanedString.split(': ', 2); // Razdvoji samo na prvoj ": "
+                        if (parts.length === 2) {
+                            normalizedSpecs[parts[0].trim()] = parts[1].trim();
+                        }
+                    }
+                } else if (typeof product.specifications === 'object') {
+                    // Već je objekat, samo kopiraj
+                    Object.assign(normalizedSpecs, product.specifications);
+                }
+            }
+            return normalizedSpecs;
+        }
+
+        /**
+         * Pomoćna funkcija za parsiranje opsega snage (npr. "50-300W" ili "100W").
+         * Vraća objekat {min: number, max: number} ili null.
+         */
+        function parsePowerRange(powerString) {
+            console.log("parsePowerRange input:", powerString); // Debug log
+            if (!powerString) return null;
+
+            // Try to match "X-Y W" or "X-Y Watt" (e.g., "20-80W", "50 - 300W", "20W-80W")
+            // This regex is more flexible, allowing optional 'W' before the dash and optional spaces
+            const matchRange = powerString.match(/(\d+)\s*W?\s*[–-]\s*(\d+)\s*W?/i);
+            if (matchRange) {
+                const min = parseInt(matchRange[1]);
+                const max = parseInt(matchRange[2]);
+                console.log("parsePowerRange matched range:", { min, max }); // Debug log
+                return { min, max };
+            }
+
+            // Try to match single "X W" or "X Watt" (e.g., "100W")
+            const matchSingle = powerString.match(/^(\d+)\s*W$/i); // Anchored to start and end
+            if (matchSingle) {
+                const power = parseInt(matchSingle[1]);
+                console.log("parsePowerRange matched single:", { min: power, max: power }); // Debug log
+                return { min: power, max: power };
+            }
+
+            console.log("parsePowerRange no match."); // Debug log
+            return null;
+        }
+
+        /**
+         * Pomoćna funkcija za parsiranje impedanse (npr. "6 Ohma" ili "4-8 Ohma" ili "8Ω (minimum 3.0Ω)").
+         * Vraća broj ili objekat {min: number, max: number} ili null.
+         */
+        function parseImpedance(impedanceString) {
+            if (!impedanceString) return null;
+
+            // Try to match "XΩ (minimum YΩ)" or "X Ohma (minimum Y Ohma)"
+            // Anchored to start and end of string
+            const matchMinMax = impedanceString.match(/^(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)(?:\s*\(minimum\s*(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)\))?$/i);
+            if (matchMinMax) {
+                const nominal = parseFloat(matchMinMax[1]);
+                const minimum = matchMinMax[2] ? parseFloat(matchMinMax[2]) : nominal; // If no minimum specified, use nominal
+                return { min: minimum, max: nominal };
+            }
+
+            // Try to match "X-YΩ" or "X-Y Ohma"
+            // Anchored to start and end of string
+            const matchRange = impedanceString.match(/^(\d+(?:\.\d+)?)-(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)$/i);
+            if (matchRange) {
+                return { min: parseFloat(matchRange[1]), max: parseFloat(matchRange[2]) };
+            }
+
+            // Try to match single "XΩ" or "X Ohma"
+            // Anchored to start and end of string
+            const matchSingle = impedanceString.match(/^(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)$/i);
+            if (matchSingle) {
+                const singleVal = parseFloat(matchSingle[1]);
+                return { min: singleVal, max: singleVal };
+            }
+            return null;
+        }
+
+        /**
+         * Dohvaća izlaznu snagu pojačala.
+         * Prioritetno traži snagu pri 8 Ohma, zatim 4 Ohma, pa generičku snagu.
+         * @param {Object} specs - Normalizovane specifikacije proizvoda.
+         * @returns {number | null} Izlazna snaga u vatima ili null.
+         */
+        function getAmplifierOutputPower(specs) {
+            // Proveri oba ključa za snagu
+            const powerStr = specs["Izlazna snaga"] || specs["Snaga"];
+            if (!powerStr) return null;
+
+            // Pokušaj pronaći snagu pri 8 Ohma
+            const match8Ohm = powerStr.match(/(\d+)\s*Watt\s*\(pri\s*8Ω\)/i) || powerStr.match(/(\d+)\s*Watt\s*\(pri\s*8\s*Ohma\)/i);
+            if (match8Ohm) {
+                return parseInt(match8Ohm[1]);
+            }
+
+            // Ako nije pronađeno pri 8 Ohma, pokušaj pronaći snagu pri 4 Ohma
+            const match4Ohm = powerStr.match(/(\d+)\s*Watt\s*\(pri\s*4Ω\)/i) || powerStr.match(/(\d+)\s*Watt\s*\(pri\s*4\s*Ohma\)/i);
+            if (match4Ohm) {
+                return parseInt(match4Ohm[1]);
+            }
+
+            // Fallback na prvu pronađenu snagu ako nije navedena impedansa
+            const singleMatch = powerStr.match(/(\d+)\s*Watt/);
+            if (singleMatch) {
+                return parseInt(singleMatch[1]);
+            }
+            return null;
+        }
+
+        /**
+         * Extracts impedance values from a power string (e.g., "150W na 8 Ohma, 250W na 4 Ohma").
+         * Returns an array of numbers or an empty array.
+         */
+        function extractImpedanceFromPowerString(powerString) {
+            if (!powerString) return [];
+            const impedances = [];
+            // Ažurirano: podržava "Ohma" i "Ω"
+            const matches = powerString.matchAll(/na (\d+)\s*(?:Ohma|Ω)/g); 
+            for (const match of matches) {
+                impedances.push(parseInt(match[1]));
+            }
+            return impedances;
+        }
+
+        /**
+         * Dohvaća podržani raspon impedanse zvučnika za pojačalo.
+         * Prvo provjerava "Impedansa zvučnika", zatim "Podržana impedansa zvučnika" ili "Impedansa".
+         * Ako nije pronađeno, pokušava izvući iz "Izlazna snaga".
+         * @param {Object} specs - Normalizovane specifikacije proizvoda.
+         * @returns {{min: number, max: number} | null} Raspon impedanse ili null.
+         */
+        function getAmplifierSupportedImpedanceRange(specs) {
+            let impedanceStr = specs["Impedansa zvučnika"] || specs["Podržana impedansa zvučnika"] || specs["Impedansa"];
+            let parsedImpedance = parseImpedance(impedanceStr);
+
+            if (parsedImpedance) {
+                return toImpedanceRange(parsedImpedance);
+            }
+
+            // Ako nije pronađeno u standardnim ključevima, pokušaj izvući iz "Izlazna snaga"
+            const powerOutputStr = specs["Izlazna snaga"] || specs["Snaga"]; // Proveri oba ključa
+            if (powerOutputStr) {
+                const extractedImpedances = extractImpedanceFromPowerString(powerOutputStr);
+                if (extractedImpedances.length > 0) {
+                    const minImpedance = Math.min(...extractedImpedances);
+                    const maxImpedance = Math.max(...extractedImpedances);
+                    return { min: minImpedance, max: maxImpedance };
+                }
+            }
+            return null;
+        }
+
+        /**
+         * Helper to convert single number impedance to a range object.
+         * @param {number|{min:number, max:number}|null} val - Impedance value.
+         * @returns {{min:number, max:number}|null} Impedance as a range object.
+         */
+        function toImpedanceRange(val) {
+            if (typeof val === 'number') {
+                return { min: val, max: val };
+            }
+            // If it's already an object {min, max} or null/undefined, return as is
+            return val;
+        }
+
+        /**
+         * Helper to check if two impedance ranges overlap.
+         * @param {{min:number, max:number}|null} range1 - First impedance range.
+         * @param {{min:number, max:number}|null} range2 - Second impedance range.
+         * @returns {boolean} True if ranges overlap, false otherwise.
+         */
+        function doImpedanceRangesOverlap(range1, range2) {
+            if (!range1 || !range2 || typeof range1.min === 'undefined' || typeof range1.max === 'undefined' || typeof range2.min === 'undefined' || typeof range2.max === 'undefined') {
+                return false; // Cannot determine overlap if ranges are invalid
+            }
+            return Math.max(range1.min, range2.min) <= Math.min(range1.max, range2.max);
+        }
+
+        /**
+         * Popunjava padajuće menije za kategorije, serije i brendove na osnovu dostupnih proizvoda.
+         * Takođe učitava sve podatke o proizvodima u `allProductsData`.
+         */
+        async function populateFilters() {
+            try {
+                const responses = await Promise.all(jsonUrls.map(url => 
+                    fetch(url).then(res => {
+                        if (!res.ok) throw new Error(`Neuspešno učitavanje: ${url}`);
+                        return res.json();
+                    })
+                ));
+                allProductsData = responses.flat();
+                // Provera podataka
+                allProductsData.forEach((product, index) => {
+                    if (!product.name || !product.brand || !product.category || !product.series || !product.price || !product.description || !product.imageUrl) {
+                        console.warn(`Proizvod na indeksu ${index} ima nedostajuće podatke:`, product);
+                    }
+                });
+                console.log("Učitano:", allProductsData.length);
+                // Pozovite indexProducts nakon učitavanja svih podataka
+                indexProducts();
+            } catch (error) {
+                console.error("Greška pri učitavanju:", error);
+                // Uklonjena dodela fallbackData. Aplikacija će sada zavisiti isključivo od JSON fajlova.
+                displayUIMessage("Došlo je do greške pri učitavanju proizvoda. Molimo pokušajte ponovo.", "error", "mainMessageArea"); // Ažurirana poruka
+                // Ako učitavanje JSON-a ne uspije, allProductsData ostaje prazan, što će rezultirati porukom "Nema dostupnih proizvoda"
+                indexProducts(); // I dalje pokušaj indeksirati (biće prazno ako nema podataka)
+            }
+
+            // Popuni kategorije
+            const categories = [...new Set(allProductsData.map(product => product.category))];
+            const categoryFilter = document.getElementById("categoryFilter");
+            categoryFilter.innerHTML = '<option value="">Sve kategorije</option>'; // Resetuj
+            categories.forEach(category => {
+                const option = document.createElement("option");
+                option.value = category;
+                option.textContent = category;
+                categoryFilter.appendChild(option);
+            });
+
+            // Popuni serije
+            const series = [...new Set(allProductsData.map(product => product.series))];
+            const seriesFilter = document.getElementById("seriesFilter");
+            seriesFilter.innerHTML = '<option value="">Sve serije</option>'; // Resetuj
+            series.forEach(s => {
+                const option = document.createElement("option");
+                option.value = s;
+                option.textContent = s;
+                seriesFilter.appendChild(option);
+            });
+
+            // Popuni brendove dinamički
+            const brands = [...new Set(allProductsData.map(product => product.brand))];
+            const brandFilter = document.getElementById("brandFilter");
+            brandFilter.innerHTML = '<option value="">Svi brendovi</option>'; // Resetuj
+            brands.sort().forEach(brand => { // Sortiraj brendove abecedno
+                const option = document.createElement("option");
+                option.value = brand;
+                option.textContent = brand;
+                brandFilter.appendChild(option);
+            });
+        }
+
+        /**
+         * Funkcija za indeksiranje proizvoda u Mapu radi bržeg pronalaženja.
+         */
+        function indexProducts() {
+            productIndex.clear(); // Očisti indeks pre ponovnog popunjavanja
+            allProductsData.forEach(product => {
+                const key = `${encodeURIComponent(product.brand)}-${encodeURIComponent(product.name)}`;
+                productIndex.set(key, product);
+            });
+            console.log("Proizvodi indeksirani:", productIndex.size);
+        }
+
+        /**
+         * Učitava, filtrira i prikazuje proizvode na osnovu trenutnih filtera i opcija sortiranja.
+         * Podaci se uzimaju iz `allProductsData`.
+         */
+        async function loadProducts() {
+            const productsDiv = document.getElementById("products");
+            const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+            const selectedCategory = document.getElementById("categoryFilter").value;
+            const selectedBrand = document.getElementById("brandFilter").value;
+            const selectedSeries = document.getElementById("seriesFilter").value;
+            const sortOption = document.getElementById("seriesSort").value;
+
+            // Ako allProductsData nije učitano (prvo pokretanje), učitaj ga
+            if (allProductsData.length === 0) {
+                await populateFilters(); // Ovo će popuniti allProductsData i indeksirati ih
+            }
+
+            let filteredProducts = allProductsData;
+
+            // Filtriranje po pretrazi (naziv proizvoda)
+            if (searchQuery) {
+                filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(searchQuery));
+            }
+            // Filtriranje po kategoriji
+            if (selectedCategory) {
+                filteredProducts = filteredProducts.filter(p => p.category === selectedCategory);
+            }
+            // Filtriranje po brendu
+            if (selectedBrand) {
+                filteredProducts = filteredProducts.filter(p => p.brand === selectedBrand);
+            }
+            // Filtriranje po seriji
+            if (selectedSeries) {
+                filteredProducts = filteredProducts.filter(p => p.series === selectedSeries);
+            }
+            // Filtriranje po specifikaciji (Tip ili Tip zvučnika, Tip drajvera, Pogon)
+            if (currentSelectedSpecFilter.key && currentSelectedSpecFilter.value) {
+                filteredProducts = filteredProducts.filter(p => {
+                    const specs = getNormalizedSpecifications(p);
+                    // Proverava da li vrednost specifikacije sadrži filtriranu vrednost (case-insensitive)
+                    // Ovo omogućava filtriranje "3-sistemski" iz "3-sistemski, samostojeći, ventilirani"
+                    return specs[currentSelectedSpecFilter.key] &&
+                           specs[currentSelectedSpecFilter.key].toLowerCase().includes(currentSelectedSpecFilter.value.toLowerCase());
+                });
+            }
+
+
+            // Sortiranje po seriji (uzlazno ili silazno)
+            if (sortOption === "asc") {
+                // Dodana provjera za 'series' da se izbjegne TypeError
+                filteredProducts.sort((a, b) => {
+                    const seriesA = a.series || ''; // Koristi prazan string ako je serija undefined/null
+                    const seriesB = b.series || ''; // Koristi prazan string ako je serija undefined/null
+                    return seriesA.localeCompare(seriesB);
+                });
+            } else if (sortOption === "desc") {
+                // Dodana provjera za 'series' da se izbjegne TypeError
+                filteredProducts.sort((a, b) => {
+                    const seriesA = a.series || ''; // Koristi prazan string ako je serija undefined/null
+                    const seriesB = b.series || ''; // Koristi prazan string ako je serija undefined/null
+                    return seriesB.localeCompare(seriesA);
+                });
+            }
+
+            displayProducts(filteredProducts);
+        }
+
+        // Helper funkcija za HTML eskejpovanje
+        function escapeHtml(unsafe) {
+            if (unsafe == null || typeof unsafe !== 'string') {
+                return ''; // Vraća prazan string ako je unsafe null ili undefined
+            }
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;")
+                .replace(/`/g, "&#96;")
+                .replace(/<\/script>/gi, "<\\/script>")
+                .replace(/\n/g, "&#10;") // Escape newline
+                .replace(/\r/g, "&#13;") // Escape carriage return
+                .replace(/\\/g, "&#92;"); // Escape backslash
+        }
+
+        // Nova pomoćna funkcija za eskejpovanje stringova za JavaScript template literale
+        function escapeForJsTemplateLiteral(str) {
+            if (!str) return ''; // Dodano: provera za null/undefined string
+            return str
+                .replace(/\\/g, '\\\\') // Escape backslashes first
+                .replace(/`/g, '\\`')   // Escape backticks
+                .replace(/\$/g, '\\$')  // Escape dollar signs to prevent template literal interpolation issues
+                .replace(/[\u0000-\u001F\u007F-\u009F]/g, ''); // Ukloni kontrolne karaktere (uključujući 0x00 do 0x1F i 0x7F do 0x9F)
+        }
+
+        /**
+         * Prikazuje listu proizvoda u HTML elementu sa ID-jem "products".
+         * Dodaje checkbox za usporedbu.
+         * @param {Array} products - Niz objekata proizvoda za prikaz.
+         */
+        function displayProducts(products) {
+            const productsDiv = document.getElementById("products");
+            productsDiv.innerHTML = ""; // Očisti prethodne proizvode
+
+            if (products.length > 0) {
+                // Iteriraj kroz svaki proizvod i kreiraj HTML za prikaz
+                products.forEach((product, index) => {
+                    // Postavi podrazumevane vrednosti za nedostajuće atribute
+                    const safeProduct = {
+                        name: product.name || 'Nepoznat naziv',
+                        brand: product.brand || 'Nepoznat brend',
+                        category: product.category || 'Nepoznata kategorija',
+                        series: product.series || 'Nepoznata serija',
+                        price: product.price || 'Nije dostupno',
+                        description: product.description || 'Nema opisa',
+                        longDescription: product.longDescription || 'Nema detaljnog opisa',
+                        imageUrl: product.imageUrl || 'https://placehold.co/150x150/cccccc/ffffff?text=Nema+slike',
+                        specifications: product.specifications || {}
+                    };
+
+                    // Generisanje jedinstvenog ID-a za proizvod za usporedbu
+                    // Koristi se kombinacija branda i imena proizvoda, URI-enkodovano za sigurnost u data atributima
+                    const productId = `${encodeURIComponent(safeProduct.brand)}-${encodeURIComponent(safeProduct.name)}`;
+                    const isChecked = productsToCompare.some(p => `${encodeURIComponent(p.brand)}-${encodeURIComponent(p.name)}` === productId);
+
+                    let specificationsHtml = '';
+                    const normalizedSpecs = getNormalizedSpecifications(safeProduct); // Koristi normalizovane specifikacije
+                    if (Object.keys(normalizedSpecs).length > 0) {
+                        for (const key in normalizedSpecs) {
+                            // Učini "Tip", "Tip zvučnika", "Tip drajvera", "Pogon", "Impedansa", "Preporučena snaga pojačala" klikabilnim
+                            if (["Tip", "Tip zvučnika", "Tip drajvera", "Pogon", "Impedansa", "Preporučena snaga pojačala", "Povezivanje", "Nominalna impedansa"].includes(key)) { // Dodana "Povezivanje" i "Nominalna impedansa"
+                                const fullValue = normalizedSpecs[key] || '';
+                                let clickableParts = [];
+
+                                // Prvo, podeli po zarezima da se obrade višestruke glavne vrednosti (npr. "3-sistemski, samostojeći")
+                                const commaSeparated = fullValue.split(',').map(part => part.trim());
+
+                                commaSeparated.forEach(part => {
+                                    const parenthesisMatch = part.match(/(.*?)\s*\((.*?)\)/);
+                                    if (parenthesisMatch) {
+                                        // Dodaj glavni deo (pre zagrade)
+                                        const mainPart = parenthesisMatch[1].trim();
+                                        if (mainPart) {
+                                            clickableParts.push(mainPart);
+                                        }
+                                        // Dodaj sadržaj unutar zagrade
+                                        const innerPart = parenthesisMatch[2].trim();
+                                        if (innerPart) {
+                                            clickableParts.push(innerPart);
+                                        }
+                                    } else {
+                                        // Nema zagrade, samo dodaj deo
+                                        if (part) {
+                                            clickableParts.push(part);
+                                        }
+                                    }
+                                });
+
+                                // Filtriraj sve prazne stringove koji mogu nastati trimovanjem ili deljenjem
+                                clickableParts = clickableParts.filter(p => p !== '');
+
+                                let clickablePartsHtml = clickableParts.map(part => {
+                                    // Kodiraj vrednost za data-atribut (URI-enkodovanje) i eskejpuj za tekstualni sadržaj
+                                    return `<span class="clickable filter-spec" data-spec-key="${escapeHtml(key)}" data-spec-value="${encodeURIComponent(part)}">${escapeHtml(part)}</span>`;
+                                }).join(', '); // Spoji zarezom i razmakom za prikaz
+                                // Ispravka: Uklonjen escapeHtml(key) ovde
+                                specificationsHtml += `<div class="spec-item"><strong>${key}:</strong> ${clickablePartsHtml}</div>`;
+                            } else {
+                                // Ispravka: Uklonjen escapeHtml(key) ovde
+                                specificationsHtml += `<div class="spec-item"><strong>${key}:</strong> ${escapeHtml(normalizedSpecs[key] || 'N/A')}</div>`;
+                            }
+                        }
+                    } else {
+                        specificationsHtml = '<p>Nema dostupnih specifikacija.</p>';
+                    }
+
+                    const productDiv = document.createElement("div");
+                    productDiv.className = "product";
+                    productDiv.innerHTML = `
+                        <input type="checkbox" class="compare-checkbox" data-product-id="${productId}" ${isChecked ? 'checked' : ''}>
+                        <img src="${escapeHtml(safeProduct.imageUrl)}" alt="${escapeHtml(safeProduct.name)}" onerror="this.src='https://placehold.co/150x150/cccccc/ffffff?text=Nema+slike';">
+                        <h3>${escapeHtml(safeProduct.name)}</h3>
+                        <p><strong>Brend:</strong> <span class="clickable filter-brand" data-brand="${escapeHtml(safeProduct.brand)}">${escapeHtml(safeProduct.brand)}</span></p>
+                        <p><strong>Kategorija:</strong> <span class="clickable filter-category" data-category="${escapeHtml(safeProduct.category)}">${escapeHtml(safeProduct.category)}</span></p>
+                        <p><strong>Serija:</strong> <span class="clickable filter-series" data-series="${escapeHtml(safeProduct.series)}">${escapeHtml(safeProduct.series)}</span></p>
+                        <p><strong>Cena:</strong> ${escapeHtml(safeProduct.price)}</p>
+                        <p><strong>Opis:</strong> ${escapeHtml(safeProduct.description)}</p>
+                        <button class="toggle-btn" data-index="${index}">Prikaži više</button>
+                        <button class="overview-product-btn" data-product-id="${productId}">AI Review proizvoda</button>
+                        <button class="recommend-product-btn" data-product-id="${productId}">Preporuči</button>
+                        <div id="long-desc-${index}" class="long-description">${escapeHtml(safeProduct.longDescription)}</div>
+                        <div>
+                            <strong>Specifikacije:</strong>
+                            ${specificationsHtml}
+                        </div>
+                    `;
+                    productsDiv.appendChild(productDiv);
+
+                    // Dodaj event listenere programski
+                    const checkbox = productDiv.querySelector(`.compare-checkbox[data-product-id="${productId}"]`);
+                    if (checkbox) {
+                        checkbox.addEventListener('change', (event) => toggleComparison(productId, event.target));
+                    }
+
+                    const toggleBtn = productDiv.querySelector(`.toggle-btn[data-index="${index}"]`);
+                    if (toggleBtn) {
+                        toggleBtn.addEventListener('click', () => toggleDescription(index));
+                    }
+
+                    const overviewBtn = productDiv.querySelector(`.overview-product-btn[data-product-id="${productId}"]`);
+                    if (overviewBtn) {
+                        console.log(`Dugme 'AI Review proizvoda' pronađeno za: ${safeProduct.name}`);
+                        overviewBtn.addEventListener('click', () => showProductOverviewModal(productId));
+                    } else {
+                        console.warn(`Dugme 'AI Review proizvoda' NIJE pronađeno za: ${safeProduct.name} nakon renderovanja.`);
+                    }
+
+                    const recommendBtn = productDiv.querySelector(`.recommend-product-btn[data-product-id="${productId}"]`);
+                    if (recommendBtn) {
+                        recommendBtn.addEventListener('click', () => showRecommendationModal(productId));
+                    }
+                });
+                displayUIMessage(`Prikazano ${products.length} proizvoda.`, "info", "mainMessageArea"); // Prikaz poruke
+            } else {
+                // Ako nema proizvoda, prikaži poruku
+                productsDiv.innerHTML = '<p class="no-products">Nema dostupnih proizvoda za izabrane kriterijume.</p>';
+                displayUIMessage("Nema dostupnih proizvoda za izabrane kriterijume.", "info", "mainMessageArea"); // Prikaz poruke
+            }
+        }
+
+        /**
+         * Dodaje ili uklanja proizvod iz liste za usporedbu.
+         * @param {string} productId - Jedinstveni ID proizvoda (brand-name).
+         * @param {HTMLInputElement} checkboxElement - Referenca na checkbox element.
+         */
+        function toggleComparison(productId, checkboxElement) {
+            // Pronađi proizvod koristeći indeks
+            const product = productIndex.get(productId);
+
+            if (!product) {
+                console.error("Proizvod nije pronađen:", productId);
+                displayUIMessage("Došlo je do greške: proizvod nije pronađen.", "error", "comparisonMessageArea");
+                return;
+            }
+
+            const existingIndex = productsToCompare.findIndex(p => `${encodeURIComponent(p.brand)}-${encodeURIComponent(p.name)}` === productId);
+
+            if (checkboxElement.checked) {
+                if (productsToCompare.length >= MAX_PRODUCTS_TO_COMPARE) {
+                    displayUIMessage(`Možete usporediti najviše ${MAX_PRODUCTS_TO_COMPARE} proizvoda.`, "error", "comparisonMessageArea");
+                    checkboxElement.checked = false; // Poništi čekiranje ako je dostignut limit
+                    return;
+                }
+                if (existingIndex === -1) { // Dodaj samo ako već ne postoji
+                    productsToCompare.push(product);
+                    console.log("Dodat proizvod za usporedbu:", product.name);
+                }
+            } else {
+                if (existingIndex !== -1) { // Ukloni ako postoji
+                    productsToCompare.splice(existingIndex, 1);
+                    console.log("Uklonjen proizvod iz usporedbe:", product.name);
+                }
+            }
+            updateComparisonButton();
+        }
+
+        /**
+         * Ažurira tekst i stanje dugmeta za usporedbu.
+         */
+        function updateComparisonButton() {
+            const compareButton = document.getElementById("compareButton");
+            const clearButton = document.getElementById("clearComparisonButton");
+            const analyzeButton = document.getElementById("analyzeComparisonButton");
+            
+            compareButton.textContent = `Usporedi (${productsToCompare.length})`;
+            compareButton.disabled = productsToCompare.length < 2; // Omogući ako ima bar 2 proizvoda
+            clearButton.disabled = productsToCompare.length === 0; // Omogući ako ima bar 1 proizvod
+            analyzeButton.disabled = productsToCompare.length < 2; // Omogući ako ima bar 2 proizvoda
+            
+            console.log("Broj proizvoda za usporedbu:", productsToCompare.length);
+        }
+
+        /**
+         * Prikazuje modal za usporedbu.
+         */
+        function showComparisonModal() {
+            console.log("Pokušavam prikazati usporedbu. Broj proizvoda:", productsToCompare.length);
+            if (productsToCompare.length < 2) {
+                displayUIMessage("Odaberite barem dva proizvoda za usporedbu.", "error", "comparisonMessageArea");
+                return;
+            }
+
+            const comparisonTableContainer = document.getElementById("comparisonTableContainer");
+            let tableHTML = '<table id="comparisonTable"><thead><tr><th>Karakteristika</th>';
+
+            // Zaglavlja kolona sa imenima proizvoda
+            const normalizedProductsToCompare = productsToCompare.map(p => ({
+                ...p,
+                normalizedSpecs: getNormalizedSpecifications(p) // Normalizuj specifikacije za usporedbu
+            }));
+
+            normalizedProductsToCompare.forEach(product => {
+                tableHTML += `<th>${escapeHtml(product.name)}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+
+            // Fiksne karakteristike
+            const fixedFeatures = [
+                { label: 'Brend', key: 'brand' },
+                { label: 'Kategorija', 'key': 'category' },
+                { label: 'Serija', key: 'series' },
+                { label: 'Cena', key: 'price' },
+                { label: 'Opis', key: 'description' },
+                { label: 'Slika', key: 'imageUrl', type: 'image' }
+            ];
+
+            fixedFeatures.forEach(feature => {
+                tableHTML += `<tr><td>${escapeHtml(feature.label)}</td>`;
+                normalizedProductsToCompare.forEach(product => {
+                    let value = product[feature.key];
+                    if (feature.type === 'image') {
+                        value = `<img src="${escapeHtml(value)}" alt="${escapeHtml(product.name)}" style="max-width: 100px; max-height: 100px; object-fit: contain;">`;
+                    } else if (!value) {
+                        value = 'N/A'; // Nije dostupno
+                    }
+                    tableHTML += `<td>${escapeHtml(value)}</td>`;
+                });
+                tableHTML += '</tr>';
+            });
+
+            // Dinamičke specifikacije
+            const allSpecKeys = new Set();
+            normalizedProductsToCompare.forEach(product => {
+                if (Object.keys(product.normalizedSpecs).length > 0) {
+                    for (const key in product.normalizedSpecs) {
+                        allSpecKeys.add(key);
+                    }
+                }
+            });
+
+            Array.from(allSpecKeys).sort().forEach(specKey => {
+                tableHTML += `<tr><td><strong>${escapeHtml(specKey)}:</strong></td>`;
+                normalizedProductsToCompare.forEach(product => {
+                    const specValue = product.normalizedSpecs[specKey] ? product.normalizedSpecs[specKey] : 'N/A';
+                    tableHTML += `<td>${escapeHtml(specValue)}</td>`;
+                });
+                tableHTML += '</tr>';
+            });
+
+
+            tableHTML += '</tbody></table>';
+            comparisonTableContainer.innerHTML = tableHTML;
+
+            // Resetuj i sakrij Gemini analizu pri otvaranju modala
+            document.getElementById("geminiAnalysisContainer").innerHTML = '';
+            document.getElementById("geminiAnalysisContainer").classList.remove('loading');
+            document.getElementById("analyzeComparisonButton").disabled = true;
+            
+            // Prikaži modal
+            document.getElementById("comparisonModal").style.display = "flex"; // Koristi flex za centriranje
+            displayUIMessage("Tabela za usporedbu je generisana.", "info", "comparisonMessageArea");
+        }
+
+        /**
+         * Zatvara modal za usporedbu.
+         */
+        function closeComparisonModal() {
+            document.getElementById("comparisonModal").style.display = "none";
+            // Očisti poruku kada se modal zatvori
+            document.getElementById("comparisonMessageArea").textContent = '';
+            document.getElementById("comparisonMessageArea").className = 'message-area';
+            // Očisti Gemini analizu
+            document.getElementById("geminiAnalysisContainer").innerHTML = '';
+            document.getElementById("geminiAnalysisContainer").classList.remove('loading');
+            document.getElementById("analyzeComparisonButton").disabled = true;
+        }
+
+        /**
+         * Čisti listu proizvoda za usporedbu i resetuje prikaz.
+         */
+        function clearComparison() {
+            productsToCompare = [];
+            document.getElementById("comparisonTableContainer").innerHTML = ""; // Očisti tabelu
+            updateComparisonButton();
+
+            // Poništi čekiranje svih checkboxova
+            document.querySelectorAll('.compare-checkbox').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            closeComparisonModal(); // Zatvori modal nakon čišćenja
+            displayUIMessage("Usporedba je očišćena.", "info", "comparisonMessageArea");
+        }
+
+        /**
+         * Postavlja filter brenda. Ako je kliknuti brend već aktivan, poništava filter.
+         * @param {string} brand - Brend po kojem se filtrira.
+         */
+        function filterByBrand(brand) {
+            const brandFilter = document.getElementById("brandFilter");
+            if (brandFilter.value === brand) {
+                brandFilter.value = ""; // Poništi filter
+            } else {
+                brandFilter.value = brand; // Postavi izabrani brend
+            }
+            // Resetuj filter za specifikaciju kada se promeni brend
+            currentSelectedSpecFilter = { key: null, value: null };
+            loadProducts(); // Ponovo učitaj proizvode sa novim filterom
+        }
+
+        /**
+         * Postavlja filter kategorije. Ako je kliknuta kategorija već aktivna, poništava filter.
+         * @param {string} category - Kategorija po kojoj se filtrira.
+         */
+        function filterByCategory(category) {
+            const categoryFilter = document.getElementById("categoryFilter");
+            if (categoryFilter.value === category) {
+                categoryFilter.value = ""; // Poništi filter
+            } else {
+                categoryFilter.value = category; // Postavi izabranu kategoriju
+            }
+            // Resetuj filter za specifikaciju kada se promeni kategorija
+            currentSelectedSpecFilter = { key: null, value: null };
+            loadProducts(); // Ponovo učitaj proizvode sa novim filterom
+        }
+
+        /**
+         * Postavlja filter serije. Ako je kliknuta serija već aktivna, poništava filter.
+         * @param {string} series - Serija po kojoj se filtrira.
+         */
+        function filterBySeries(series) {
+            const seriesFilter = document.getElementById("seriesFilter");
+            // Ako je kliknuta serija već izabrana, poništi filter
+            if (seriesFilter.value === series) {
+                seriesFilter.value = ""; // Postavi na prazno da poništi filter
+            } else {
+                seriesFilter.value = series; // Postavi izabranu seriju
+            }
+            // Resetuj filter za specifikaciju kada se promeni serija
+            currentSelectedSpecFilter = { key: null, value: null };
+            loadProducts(); // Ponovo učitaj proizvode sa novim filterom
+        }
+
+        /**
+         * Postavlja filter za određenu specifikaciju.
+         * @param {string} specKey - Ključ specifikacije (npr. "Tip", "Tip zvučnika", "Tip drajvera, "Pogon").
+         * @param {string} specValue - Vrednost specifikacije po kojoj se filtrira.
+         */
+        function filterBySpecification(specKey, specValue) {
+            // Dekodiraj vrijednost prije upotrebe
+            const decodedSpecValue = decodeURIComponent(specValue);
+
+            // Ako je isti filter ponovo kliknut, poništi ga
+            if (currentSelectedSpecFilter.key === specKey && currentSelectedSpecFilter.value === decodedSpecValue) {
+                currentSelectedSpecFilter = { key: null, value: null };
+            } else {
+                currentSelectedSpecFilter = { key: specKey, value: decodedSpecValue };
+            }
+
+            // Uklonjeno resetovanje ostalih filtera
+            // document.getElementById("categoryFilter").value = "";
+            // document.getElementById("brandFilter").value = "";
+            // document.getElementById("seriesFilter").value = "";
+            // document.getElementById("searchInput").value = "";
+            // document.getElementById("seriesSort").value = "";
+
+            loadProducts(); // Ponovo učitaj proizvode sa novim filterom
+        }
+
+        /**
+         * Prebacuje vidljivost dugog opisa proizvoda.
+         * @param {number} index - Indeks proizvoda čiji se opis prebacuje.
+         */
+        function toggleDescription(index) {
+            const descDiv = document.getElementById(`long-desc-${index}`);
+            // Dohvati dugme "Prikaži više" koristeći njegov jedinstveni ID
+            const btn = document.querySelector(`.toggle-btn[data-index="${index}"]`); 
+            if (descDiv.classList.contains("show")) {
+                descDiv.classList.remove("show");
+                btn.textContent = "Prikaži više";
+            } else {
+                descDiv.classList.add("show");
+                btn.textContent = "Sakrij";
+            }
+        }
+
+        /**
+         * Funkcija za pozivanje Gemini API-ja i analizu usporedbe proizvoda.
+         */
+        async function analyzeComparisonWithGemini() {
+            const analysisContainer = document.getElementById("geminiAnalysisContainer");
+
+            analysisContainer.innerHTML = 'Učitavanje analize...';
+            analysisContainer.classList.add('loading');
+            document.getElementById("analyzeComparisonButton").disabled = true;
+            
+            if (productsToCompare.length < 2) {
+                analysisContainer.innerHTML = 'Odaberite barem dva proizvoda za analizu.';
+                analysisContainer.classList.remove('loading');
+                document.getElementById("analyzeComparisonButton").disabled = false;
+                return;
+            }
+
+            // Dodana instrukcija za Gemini da ne koristi zvjezdice
+            let prompt = "Compare the following audio products. Focus on their key features, differences, and target audience. Provide a concise summary and highlight pros/cons if evident from the data. Do not use asterisks or any other decorative characters in your response. Respond in Croatian.\n\n";
+
+            productsToCompare.forEach((product, index) => {
+                prompt += `Product ${index + 1}:\n`;
+                // Primeni escapeForJsTemplateLiteral na sve vrednosti koje idu u prompt
+                prompt += `  Name: ${escapeForJsTemplateLiteral(product.name)}\n`;
+                prompt += `  Brand: ${escapeForJsTemplateLiteral(product.brand)}\n`;
+                prompt += `  Category: ${escapeForJsTemplateLiteral(product.category)}\n`;
+                prompt += `  Description: ${escapeForJsTemplateLiteral(product.description)}\n`;
+                prompt += `  Long Description: ${escapeForJsTemplateLiteral(product.longDescription)}\n`;
+                prompt += `  Price: ${escapeForJsTemplateLiteral(product.price)}\n`;
+                
+                const normalizedSpecs = getNormalizedSpecifications(product);
+                if (Object.keys(normalizedSpecs).length > 0) {
+                    prompt += `  Specifications:\n`;
+                    for (const key in normalizedSpecs) {
+                        prompt += `    - ${escapeForJsTemplateLiteral(key)}: ${escapeForJsTemplateLiteral(normalizedSpecs[key])}\n`;
+                    }
+                }
+                prompt += "\n";
+            });
+
+            console.log("Prompt za Gemini (usporedba):", prompt);
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Canvas će automatski osigurati API ključ
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                console.log("Gemini odgovor (usporedba):", result);
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    analysisContainer.innerHTML = text;
+                } else {
+                    analysisContainer.innerHTML = 'Nema rezultata analize od Geminija. Pokušajte ponovo.';
+                    console.error("Neočekivana struktura odgovora od Geminija (usporedba):", result);
+                }
+            } catch (error) {
+                console.error("Greška pri pozivanju Gemini API-ja (usporedba):", error);
+                analysisContainer.innerHTML = 'Došlo je do greške pri analizi. Molimo pokušajte ponovo.';
+            } finally {
+                analysisContainer.classList.remove('loading');
+                document.getElementById("analyzeComparisonButton").disabled = false;
+            }
+        }
+
+        /**
+         * Prikazuje modal za pregled pojedinačnog proizvoda i generira pregled.
+         * @param {string} productId - Jedinstveni ID proizvoda (brand-name).
+         */
+        async function showProductOverviewModal(productId) {
+            // Pronađi proizvod koristeći indeks
+            const product = productIndex.get(productId);
+            if (!product) {
+                displayUIMessage("Proizvod nije pronađen za review.", "error", "productOverviewMessageArea");
+                return;
+            }
+
+            const overviewTitle = document.getElementById("productOverviewTitle");
+            const overviewContainer = document.getElementById("productOverviewContainer");
+            const modal = document.getElementById("productOverviewModal");
+
+            overviewTitle.textContent = `AI Review proizvoda: ${escapeHtml(product.name)}`;
+            overviewContainer.innerHTML = 'Učitavanje review-a...';
+            overviewContainer.classList.add('loading');
+            modal.style.display = "flex";
+
+            // Generiraj pregled
+            await generateProductOverviewWithGemini(product);
+        }
+
+        /**
+         * Zatvara modal za pregled pojedinačnog proizvoda.
+         */
+        function closeProductOverviewModal() {
+            document.getElementById("productOverviewModal").style.display = "none";
+            document.getElementById("productOverviewContainer").innerHTML = '';
+            document.getElementById("productOverviewContainer").classList.remove('loading');
+            document.getElementById("productOverviewMessageArea").textContent = '';
+            document.getElementById("productOverviewMessageArea").className = 'message-area';
+        }
+
+        /**
+         * Generira pregled pojedinačnog proizvoda koristeći Gemini API.
+         * @param {Object} product - Objekt proizvoda za koji se generira pregled.
+         */
+        async function generateProductOverviewWithGemini(product) {
+            const overviewContainer = document.getElementById("productOverviewContainer");
+
+            // Dodana instrukcija za Gemini da ne koristi zvjezdice
+            let prompt = `Provide a detailed review of the following audio product, focusing on its strengths, weaknesses, and target audience. Include a summary of its key features and overall value proposition. Do not use asterisks or any other decorative characters in your response. Respond in Croatian.\n\n`;
+            prompt += `Product Details:\n`;
+            // Primeni escapeForJsTemplateLiteral na sve vrednosti koje idu u prompt
+            prompt += `  Name: ${escapeForJsTemplateLiteral(product.name)}\n`;
+            prompt += `  Brand: ${escapeForJsTemplateLiteral(product.brand)}\n`;
+            prompt += `  Category: ${escapeForJsTemplateLiteral(product.category)}\n`;
+            prompt += `  Description: ${escapeForJsTemplateLiteral(product.description)}\n`;
+            prompt += `  Long Description: ${escapeForJsTemplateLiteral(product.longDescription)}\n`;
+            prompt += `  Price: ${escapeForJsTemplateLiteral(product.price)}\n`;
+            
+            const normalizedSpecs = getNormalizedSpecifications(product);
+            if (Object.keys(normalizedSpecs).length > 0) {
+                prompt += `  Specifications:\n`;
+                for (const key in normalizedSpecs) {
+                    prompt += `    - ${escapeForJsTemplateLiteral(key)}: ${escapeForJsTemplateLiteral(normalizedSpecs[key])}\n`;
+                }
+            }
+            prompt += "\n";
+
+            console.log("Prompt za Gemini (review proizvoda):", prompt);
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Canvas će automatski osigurati API ključ
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                console.log("Gemini odgovor (review proizvoda):", result);
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    overviewContainer.innerHTML = text;
+                } else {
+                    overviewContainer.innerHTML = 'Nema rezultata review-a od Geminija. Pokušajte ponovo.';
+                    console.error("Neočekivana struktura odgovora od Geminija (review proizvoda):", result);
+                }
+            } catch (error) {
+                console.error("Greška pri pozivanju Gemini API-ja (review proizvoda):", error);
+                overviewContainer.innerHTML = 'Došlo je do greške pri generiranju review-a. Molimo pokušajte ponovo.';
+            } finally {
+                overviewContainer.classList.remove('loading');
+            }
+        }
+
+        /**
+         * Prikazuje modal za preporuke proizvoda.
+         * @param {string} productId - Jedinstveni ID proizvoda za koji se traže preporuke.
+         */
+        async function showRecommendationModal(productId) {
+            // Pronađi proizvod koristeći indeks
+            const selectedProduct = productIndex.get(productId);
+            if (!selectedProduct) {
+                displayUIMessage("Proizvod nije pronađen za preporuku.", "error", "recommendationMessageArea");
+                return;
+            }
+
+            const recommendationTitle = document.getElementById("recommendationTitle");
+            const recommendationContainer = document.getElementById("recommendationContainer");
+            const modal = document.getElementById("recommendationModal");
+
+            recommendationTitle.textContent = `Preporučeni proizvodi za: ${escapeHtml(selectedProduct.name)}`;
+            recommendationContainer.innerHTML = 'Učitavanje preporuka...';
+            recommendationContainer.classList.add('loading');
+            modal.style.display = "flex";
+
+            const recommendations = findRecommendations(selectedProduct);
+            displayRecommendations(recommendations);
+            recommendationContainer.classList.remove('loading');
+
+            if (recommendations.length > 0) {
+                displayUIMessage(`Pronađeno ${recommendations.length} preporuka.`, "info", "recommendationMessageArea");
+            } else {
+                displayUIMessage("Nema preporuka za ovaj proizvod.", "info", "recommendationMessageArea");
+            }
+        }
+
+        /**
+         * Zatvara modal za preporuke proizvoda.
+         */
+        function closeRecommendationModal() {
+            document.getElementById("recommendationModal").style.display = "none";
+            document.getElementById("recommendationContainer").innerHTML = '';
+            document.getElementById("recommendationContainer").classList.remove('loading');
+            document.getElementById("recommendationMessageArea").textContent = '';
+            document.getElementById("recommendationMessageArea").className = 'message-area';
+        }
+
+        /**
+         * Pronalazi preporučene proizvode na osnovu specifikacija odabranog proizvoda.
+         * @param {Object} selectedProduct - Proizvod za koji se traže preporuke.
+         * @returns {Array} Niz preporučenih proizvoda.
+         */
+        function findRecommendations(selectedProduct) {
+            const recommendations = [];
+            const selectedProductSpecs = getNormalizedSpecifications(selectedProduct);
+
+            console.log("--- Finding recommendations for:", selectedProduct.name, "Category:", selectedProduct.category, "---");
+            console.log("Selected Product Normalized Specs:", selectedProductSpecs);
+
+            const selectedProductCategoryLower = selectedProduct.category ? selectedProduct.category.toLowerCase() : '';
+            const selectedProductSubcategoryLower = selectedProduct.subcategory ? selectedProduct.subcategory.toLowerCase() : '';
+
+
+            // Logic for Speakers: Recommend Amplifiers
+            if (selectedProductCategoryLower.includes("zvučnici")) {
+                const speakerImpedance = parseImpedance(selectedProductSpecs["Nominalna impedansa"] || selectedProductSpecs["Impedansa"]);
+                const speakerPowerRange = parsePowerRange(selectedProductSpecs["Preporučena snaga pojačala"]);
+
+                console.log("Speaker Parsed Impedance:", speakerImpedance, "Speaker Parsed Power Range:", speakerPowerRange);
+
+                if (!speakerImpedance || !speakerPowerRange) {
+                    console.warn("Nedostaju ključne specifikacije zvučnika (Impedansa ili Preporučena snaga pojačala) za preporuku.", selectedProduct);
+                    return [];
+                }
+
+                const speakerImpedanceRangeObj = toImpedanceRange(speakerImpedance);
+
+                allProductsData.forEach(product => {
+                    // Preskoči samog sebe
+                    if (product === selectedProduct) return;
+
+                    const productCategoryLower = product.category ? product.category.toLowerCase() : '';
+                    if (productCategoryLower.includes("pojačala")) {
+                        const ampSpecs = getNormalizedSpecifications(product);
+                        const ampOutputPower = getAmplifierOutputPower(ampSpecs);
+                        const ampSupportedImpedanceRange = getAmplifierSupportedImpedanceRange(ampSpecs);
+                        const ampSupportedImpedanceRangeObj = toImpedanceRange(ampSupportedImpedanceRange);
+
+                        console.log(`  Checking amplifier: ${product.name}`);
+                        console.log(`    Amp Output Power: ${ampOutputPower}, Amp Supported Impedance:`, ampSupportedImpedanceRange);
+
+                        if (ampOutputPower && ampSupportedImpedanceRangeObj) {
+                            // Power compatibility: amplifier output power should be within +/- 20% of speaker's recommended range
+                            const isPowerCompatible = (ampOutputPower >= speakerPowerRange.min * 0.8) && (ampOutputPower <= speakerPowerRange.max * 1.2); 
+
+                            let isImpedanceCompatible = false;
+                            if (speakerImpedanceRangeObj && ampSupportedImpedanceRangeObj) {
+                                 isImpedanceCompatible = doImpedanceRangesOverlap(speakerImpedanceRangeObj, ampSupportedImpedanceRangeObj);
+                            }
+                            console.log(`    Power Compatible: ${isPowerCompatible}, Impedance Compatible: ${isImpedanceCompatible}`);
+
+                            if (isPowerCompatible && isImpedanceCompatible) {
+                                recommendations.push(product);
+                                console.log(`    RECOMMENDED: ${product.name} (Amplifier) for ${selectedProduct.name} (Speaker)`);
+                            } else {
+                                console.log(`    NOT RECOMMENDED: ${product.name} (Amplifier) for ${selectedProduct.name} (Amplifier) - Power Compatible: ${isPowerCompatible}, Impedance Compatible: ${isImpedanceCompatible}`);
+                            }
+                        } else {
+                            console.log(`    Skipping amplifier ${product.name} due to missing power or impedance data.`);
+                        }
+                    }
+                });
+            } 
+            // Logic for Amplifiers (Power/Integrated): Recommend Speakers
+            else if (selectedProductCategoryLower.includes("pojačala") && !selectedProductCategoryLower.includes("pretpojačala")) { // Exclude pre-amplifiers here
+                const ampOutputPower = getAmplifierOutputPower(selectedProductSpecs);
+                const ampSupportedImpedanceRange = getAmplifierSupportedImpedanceRange(selectedProductSpecs);
+
+                console.log("Amplifier Parsed Output Power:", ampOutputPower, "Amplifier Parsed Supported Impedance:", ampSupportedImpedanceRange ? JSON.stringify(ampSupportedImpedanceRange) : 'null');
+
+                if (!ampOutputPower || !ampSupportedImpedanceRange) {
+                    console.warn("Nedostaju ključne specifikacije pojačala (Izlazna snaga ili Podržana impedansa zvučnika) za preporuku.", selectedProduct);
+                    return [];
+                }
+
+                const ampSupportedImpedanceRangeObj = toImpedanceRange(ampSupportedImpedanceRange);
+
+                allProductsData.forEach(product => {
+                    // Preskoči samog sebe
+                    if (product === selectedProduct) return;
+
+                    const productCategoryLower = product.category ? product.category.toLowerCase() : '';
+                    if (productCategoryLower.includes("zvučnici")) {
+                        const speakerSpecs = getNormalizedSpecifications(product);
+                        const speakerImpedance = parseImpedance(speakerSpecs["Nominalna impedansa"] || speakerSpecs["Impedansa"]);
+                        const speakerPowerRange = parsePowerRange(speakerSpecs["Preporučena snaga pojačala"]);
+                        const speakerImpedanceRangeObj = toImpedanceRange(speakerImpedance);
+
+                        console.log(`  Checking speaker: ${product.name}`);
+                        console.log(`    Speaker Impedance: ${speakerImpedance ? JSON.stringify(speakerImpedance) : 'null'}, Speaker Power Range: ${speakerPowerRange ? JSON.stringify(speakerPowerRange) : 'null'}`);
+
+                        if (speakerImpedanceRangeObj && speakerPowerRange) {
+                            // Power compatibility: speaker's recommended power should be within +/- 20% of amplifier's output power
+                            const isPowerCompatible = (ampOutputPower >= speakerPowerRange.min * 0.8) && (ampOutputPower <= speakerPowerRange.max * 1.2);
+                            let isImpedanceCompatible = false;
+                            if (speakerImpedanceRangeObj && ampSupportedImpedanceRangeObj) {
+                                isImpedanceCompatible = doImpedanceRangesOverlap(speakerImpedanceRangeObj, ampSupportedImpedanceRangeObj);
+                            }
+                            console.log(`    Power Compatible: ${isPowerCompatible}, Impedance Compatible: ${isImpedanceCompatible}`);
+
+                            if (isPowerCompatible && isImpedanceCompatible) {
+                                recommendations.push(product);
+                                console.log(`    RECOMMENDED: ${product.name} (Speaker) for ${selectedProduct.name} (Amplifier)`);
+                            } else {
+                                console.log(`    NOT RECOMMENDED: ${product.name} (Speaker) for ${selectedProduct.name} (Amplifier) - Power Compatible: ${isPowerCompatible}, Impedance Compatible: ${isImpedanceCompatible}`);
+                            }
+                        } else {
+                            console.log(`    Skipping speaker ${product.name} due to missing impedance or power data.`);
+                        }
+                    }
+                });
+            }
+            // New Logic for Preamplifiers: Recommend Power Amplifiers
+            else if (selectedProductCategoryLower.includes("pretpojačala")) {
+                console.log("Selected product is a Preamplifier. Looking for compatible Power Amplifiers.");
+                allProductsData.forEach(product => {
+                    // Preskoči samog sebe
+                    if (product === selectedProduct) return;
+
+                    const productCategoryLower = product.category ? product.category.toLowerCase() : '';
+                    const productSubcategoryLower = product.subcategory ? product.subcategory.toLowerCase() : '';
+
+                    // Check if the product is a "Pojačalo" (Amplifier) AND specifically a "Snaga" (Power) or "Izlazna Pojačala" (Power Amplifier)
+                    if (productCategoryLower.includes("pojačala") && 
+                        (productSubcategoryLower.includes("snaga") || productSubcategoryLower.includes("izlazna pojačala") || product.name.toLowerCase().includes("power amplifier"))) {
+                        
+                        const preampSpecs = getNormalizedSpecifications(selectedProduct);
+                        const powerAmpSpecs = getNormalizedSpecifications(product);
+                        const preampOutputs = preampSpecs["Izlazi"] || '';
+                        const powerAmpInputs = powerAmpSpecs["Ulazi"] || '';
+                        
+                        // Provera kompatibilnosti konekcija (XLR ili RCA)
+                        if ((preampOutputs.includes("XLR") && powerAmpInputs.includes("XLR")) || 
+                            (preampOutputs.includes("RCA") && powerAmpInputs.includes("RCA"))) {
+                            recommendations.push(product);
+                            console.log(`    RECOMMENDED: ${product.name} (Power Amplifier) for ${selectedProduct.name} (Preamplifier)`);
+                        } else {
+                            console.log(`    NOT RECOMMENDED: ${product.name} (Power Amplifier) for ${selectedProduct.name} (Preamplifier) - Incompatible connections.`);
+                        }
+                    }
+                });
+            }
+            console.log("--- End recommendations for:", selectedProduct.name, "Found:", recommendations.length, "---");
+            return recommendations;
+        }
+
+        /**
+         * Prikazuje listu preporučenih proizvoda unutar modala.
+         * @param {Array} recommendations - Niz preporučenih proizvoda.
+         */
+        function displayRecommendations(recommendations) {
+            const recommendationContainer = document.getElementById("recommendationContainer");
+            recommendationContainer.innerHTML = ''; // Očisti prethodne preporuke
+
+            if (recommendations.length > 0) {
+                const gridDiv = document.createElement('div');
+                gridDiv.className = 'recommended-products-grid';
+
+                recommendations.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'recommended-product-card';
+                    // Dodaj onclick event za otvaranje kartice proizvoda
+                    productCard.addEventListener('click', () => openProductCard(`${encodeURIComponent(product.brand)}-${encodeURIComponent(product.name)}`));
+                    productCard.innerHTML = `
+                        <img src="${escapeHtml(product.imageUrl)}" alt="${escapeHtml(product.name)}" onerror="this.src='https://placehold.co/100x100/cccccc/ffffff?text=Nema+slike';">
+                        <h4>${escapeHtml(product.name)}</h4>
+                        <p>Brend: ${escapeHtml(product.brand)}</p>
+                        <p>Kategorija: ${escapeHtml(product.category)}</p>
+                        <p>Cena: ${escapeHtml(product.price)}</p>
+                        <p>${escapeHtml(product.description)}</p>
+                    `;
+                    gridDiv.appendChild(productCard);
+                });
+                recommendationContainer.appendChild(gridDiv);
+            } else {
+                recommendationContainer.innerHTML = '<p style="text-align: center;">Nema pronađenih preporuka na osnovu specifikacija.</p>';
+            }
+        }
+
+        /**
+         * Otvara karticu proizvoda na glavnoj stranici kada se klikne na preporučeni proizvod.
+         * @param {string} productId - Jedinstveni ID proizvoda (brand-name).
+         */
+        function openProductCard(productId) {
+            // Pronađi proizvod koristeći indeks
+            const product = productIndex.get(productId);
+            if (!product) {
+                displayUIMessage("Proizvod nije pronađen.", "error", "comparisonMessageArea");
+                return;
+            }
+
+            // Postavi polje za pretragu na naziv proizvoda
+            document.getElementById("searchInput").value = product.name;
+
+            // Resetuj sve ostale filtere
+            document.getElementById("categoryFilter").value = "";
+            document.getElementById("seriesFilter").value = "";
+            document.getElementById("brandFilter").value = "";
+            document.getElementById("seriesSort").value = "";
+            currentSelectedSpecFilter = { key: null, value: null };
+
+            // Učitaj proizvode da bi se prikazao samo odabrani
+            loadProducts();
+
+            // Zatvori modal za preporuke
+            closeRecommendationModal();
+        }
+
+        /**
+         * Prikazuje modal za AI Asistent za Postavku Sistema i popunjava padajući meni proizvoda.
+         */
+        function showSetupAssistantModal() {
+            const modal = document.getElementById("setupAssistantModal");
+            modal.style.display = "flex";
+            populateProductSelectionForSetup();
+            // Resetuj polja i poruke pri otvaranju
+            document.getElementById("roomLength").value = '';
+            document.getElementById("roomWidth").value = '';
+            document.getElementById("roomHeight").value = '';
+            document.getElementById("floorType").value = 'Hardwood';
+            document.getElementById("furnitureDensity").value = 'Minimal';
+            document.getElementById("listeningPreferences").value = '';
+            document.getElementById("setupAdviceContainer").innerHTML = '';
+            document.getElementById("setupAdviceContainer").classList.remove('loading');
+            document.getElementById("setupAssistantMessageArea").textContent = '';
+            document.getElementById("setupAssistantMessageArea").className = 'message-area';
+        }
+
+        /**
+         * Zatvara modal za AI Asistent za Postavku Sistema.
+         */
+        function closeSetupAssistantModal() {
+            document.getElementById("setupAssistantModal").style.display = "none";
+            document.getElementById("setupAdviceContainer").innerHTML = '';
+            document.getElementById("setupAdviceContainer").classList.remove('loading');
+            document.getElementById("setupAssistantMessageArea").textContent = '';
+            document.getElementById("setupAssistantMessageArea").className = 'message-area';
+        }
+
+        /**
+         * Popunjava padajući meni sa svim proizvodima za odabir u AI Asistentu.
+         */
+        function populateProductSelectionForSetup() {
+            const selectElement = document.getElementById("selectProductForSetup");
+            selectElement.innerHTML = '<option value="">Odaberite proizvod...</option>'; // Resetuj i dodaj podrazumevanu opciju
+
+            // Filtriraj samo relevantne kategorije za postavku (npr. zvučnici, pojačala)
+            const relevantProducts = allProductsData.filter(p => 
+                p.category && (
+                    p.category.toLowerCase().includes("zvučnici") || 
+                    p.category.toLowerCase().includes("pojačala")
+                )
+            );
+
+            relevantProducts.forEach(product => {
+                const option = document.createElement("option");
+                option.value = `${encodeURIComponent(product.brand)}-${encodeURIComponent(product.name)}`;
+                option.textContent = `${product.brand} - ${product.name} (${product.category})`;
+                selectElement.appendChild(option);
+            });
+        }
+
+        /**
+         * Generiše savet za postavku sistema koristeći Gemini AI.
+         */
+        async function generateSetupAdvice() {
+            const setupAssistantMessageArea = document.getElementById("setupAssistantMessageArea");
+            const setupAdviceContainer = document.getElementById("setupAdviceContainer");
+            const generateButton = document.getElementById("generateSetupAdviceButton");
+
+            const selectedProductId = document.getElementById("selectProductForSetup").value;
+            const roomLength = parseFloat(document.getElementById("roomLength").value);
+            const roomWidth = parseFloat(document.getElementById("roomWidth").value);
+            const roomHeight = parseFloat(document.getElementById("roomHeight").value);
+            const floorType = document.getElementById("floorType").value;
+            const furnitureDensity = document.getElementById("furnitureDensity").value;
+            const listeningPreferences = document.getElementById("listeningPreferences").value.trim();
+
+            if (!selectedProductId || isNaN(roomLength) || isNaN(roomWidth) || isNaN(roomHeight) || roomLength <= 0 || roomWidth <= 0 || roomHeight <= 0) {
+                displayUIMessage("Molimo popunite sva obavezna polja (proizvod i dimenzije sobe).", "error", "setupAssistantMessageArea");
+                return;
+            }
+
+            const selectedProduct = productIndex.get(selectedProductId);
+            if (!selectedProduct) {
+                displayUIMessage("Odabrani proizvod nije pronađen.", "error", "setupAssistantMessageArea");
+                return;
+            }
+
+            setupAdviceContainer.innerHTML = 'Generisanje saveta...';
+            setupAdviceContainer.classList.add('loading');
+            generateButton.disabled = true;
+            displayUIMessage("Generisanje saveta za postavku sistema...", "info", "setupAssistantMessageArea");
+
+            let prompt = `Kao AI asistent za audio postavke, pruži detaljan savet za optimalnu postavku sledećeg audio proizvoda u datoj prostoriji, uzimajući u obzir navedene preferencije. Fokusiraj se na pozicioniranje zvučnika (ako je relevantno), akustične savete za prostoriju i osnovne smernice za podešavanje ekvilajzera (ako je primenljivo). Odgovori na hrvatskom jeziku i nemoj koristiti zvjezdice ili druge ukrasne znakove u odgovoru.\n\n`;
+
+            prompt += `Detalji proizvoda:\n`;
+            prompt += `  Naziv: ${escapeForJsTemplateLiteral(selectedProduct.name)}\n`;
+            prompt += `  Brend: ${escapeForJsTemplateLiteral(selectedProduct.brand)}\n`;
+            prompt += `  Kategorija: ${escapeForJsTemplateLiteral(selectedProduct.category)}\n`;
+            prompt += `  Opis: ${escapeForJsTemplateLiteral(selectedProduct.description)}\n`;
+            const normalizedSpecs = getNormalizedSpecifications(selectedProduct);
+            if (Object.keys(normalizedSpecs).length > 0) {
+                prompt += `  Specifikacije:\n`;
+                for (const key in normalizedSpecs) {
+                    prompt += `    - ${escapeForJsTemplateLiteral(key)}: ${escapeForJsTemplateLiteral(normalizedSpecs[key])}\n`;
+                }
+            }
+            prompt += `\n`;
+
+            prompt += `Detalji prostorije:\n`;
+            prompt += `  Dužina: ${roomLength} metara\n`;
+            prompt += `  Širina: ${roomWidth} metara\n`;
+            prompt += `  Visina: ${roomHeight} metara\n`;
+            prompt += `  Tip poda: ${floorType}\n`;
+            prompt += `  Gustina nameštaja: ${furnitureDensity}\n`;
+            prompt += `\n`;
+
+            if (listeningPreferences) {
+                prompt += `Preferencije slušanja: ${escapeForJsTemplateLiteral(listeningPreferences)}\n\n`;
+            } else {
+                prompt += `Preferencije slušanja: Nema specifičnih preferencija.\n\n`;
+            }
+
+            console.log("Prompt za Gemini (asistent za postavku):", prompt);
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Canvas će automatski osigurati API ključ
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                console.log("Gemini odgovor (asistent za postavku):", result);
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    setupAdviceContainer.innerHTML = text;
+                    displayUIMessage("Savet za postavku je generisan.", "info", "setupAssistantMessageArea");
+                } else {
+                    setupAdviceContainer.innerHTML = 'Nema rezultata saveta od Geminija. Pokušajte ponovo.';
+                    displayUIMessage("Nema rezultata saveta od Geminija. Pokušajte ponovo.", "error", "setupAssistantMessageArea");
+                    console.error("Neočekivana struktura odgovora od Geminija (asistent za postavku):", result);
+                }
+            } catch (error) {
+                console.error("Greška pri pozivanju Gemini API-ja (asistent za postavku):", error);
+                setupAdviceContainer.innerHTML = 'Došlo je do greške pri generisanju saveta. Molimo pokušajte ponovo.';
+                displayUIMessage("Došlo je do greške pri generisanju saveta. Molimo pokušajte ponovo.", "error", "setupAssistantMessageArea");
+            } finally {
+                setupAdviceContainer.classList.remove('loading');
+                generateButton.disabled = false;
+            }
+        }
+
+
+        // --- Event Delegation Setup ---
+        // Čeka da se DOM učita pre nego što doda slušače događaja
+        document.addEventListener('DOMContentLoaded', () => {
+            const productsDiv = document.getElementById("products");
+
+            // Glavni slušač za klikove na proizvode za filtriranje
+            productsDiv.addEventListener('click', (event) => {
+                const target = event.target;
+
+                if (target.classList.contains('filter-brand')) {
+                    filterByBrand(target.dataset.brand);
+                } else if (target.classList.contains('filter-category')) {
+                    filterByCategory(target.dataset.category);
+                } else if (target.classList.contains('filter-series')) {
+                    filterBySeries(target.dataset.series);
+                } else if (target.classList.contains('filter-spec')) {
+                    filterBySpecification(target.dataset.specKey, target.dataset.specValue);
+                }
+            });
+
+            // Dohvati reference na filtere i polje za pretragu
+            const searchInput = document.getElementById("searchInput");
+            const categoryFilter = document.getElementById("categoryFilter");
+            const seriesFilter = document.getElementById("seriesFilter");
+            const brandFilter = document.getElementById("brandFilter");
+            const seriesSort = document.getElementById("seriesSort");
+
+            // Globalna varijabla za debounce timeout
+            let debounceTimeout;
+
+            // Dodaj event listenere
+            searchInput.addEventListener('input', () => {
+                clearTimeout(debounceTimeout);
+                debounceTimeout = setTimeout(loadProducts, 300); // Debounce od 300ms
+            });
+            categoryFilter.addEventListener('change', loadProducts);
+            seriesFilter.addEventListener('change', loadProducts);
+            brandFilter.addEventListener('change', loadProducts);
+            seriesSort.addEventListener('change', loadProducts);
+
+
+            // Inicijalno pokretanje: popuni filtere i učitaj proizvode
+            populateFilters().then(() => {
+                loadProducts();
+                updateComparisonButton(); // Inicijalno stanje dugmadi
+            }).catch(error => {
+                console.error("Greška pri inicijalnom učitavanju proizvoda:", error);
+                displayUIMessage("Došlo je do greške pri inicijalnom učitavanju proizvoda. Molimo pokušajte ponovo.", "error", "mainMessageArea");
+            });
+        });
+    </script>
+</body>
+</html>
