@@ -2,7 +2,8 @@
   {
     "name": "LCD-5",
     "brand": "Audeze",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear (Flagship)",
     "series": "A&ultima (LCD Series)",
     "description": "Najnoviji flagship planarni magnetni model, vrhunac Audeze tehnologije.",
     "longDescription": "Audeze LCD-5 predstavlja krunu inženjeringa i zvuka u svetu planarnih magnetnih slušalica. Dizajniran kao trenutni flagship model, nudi ekstremno detaljan, transparentan i precizan zvuk sa poboljšanom ergonomijom za udobnije duže sesije slušanja. Koristi najnovije inovacije u planarnoj magnetnoj tehnologiji, uključujući Ultra-Thin Uniforce™ dijafragme i redizajnirane magnete za superiorne performanse.",
@@ -20,7 +21,8 @@
   {
     "name": "LCD-4z",
     "brand": "Audeze",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear (Referentne)",
     "series": "A&ultima (LCD Series)",
     "description": "Prethodni flagship model, lakša verzija LCD-4, izuzetna rezolucija i prostranost.",
     "longDescription": "Audeze LCD-4z je lakša varijanta ranijeg flagship modela LCD-4, zadržavajući njegovu izvanrednu rezoluciju, prostranu zvučnu scenu i bogat, pun zvuk. Dizajniran je da ponudi istu audiofilsku izvedbu sa smanjenom težinom, čineći ga udobnijim za duže slušanje. Koristi patentirane Double Fluxor magnetne nizove i Ultra-Thin Uniforce™ dijafragme za neuporedivu dinamiku i detalje.",
@@ -38,7 +40,8 @@
   {
     "name": "LCD-X",
     "brand": "Audeze",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear (Profesionalne)",
     "series": "A&ultima (LCD Series)",
     "description": "Profesionalne referentne slušalice, neutralan tonski balans, popularne u studijima.",
     "longDescription": "Audeze LCD-X su izuzetno popularne planarno-magnetne slušalice među muzičkim producentima, mastering inženjerima i audiofilima. Poznate su po svom neutralnom tonskom balansu i izuzetnoj preciznosti, što ih čini idealnim za kritičko slušanje i miksanje. Otvoreni dizajn pruža prostranu zvučnu scenu, dok Audezeova tehnologija garantuje izvrstan tranzijentni odziv i nisko izobličenje.",
@@ -55,7 +58,8 @@
   {
     "name": "LCD-XC",
     "brand": "Audeze",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear (Zatvorene)",
     "series": "A&ultima (LCD Series)",
     "description": "Zatvorena verzija LCD-X, idealna za izolaciju buke u studijskim okruženjima.",
     "longDescription": "Audeze LCD-XC je zatvorena varijanta popularnog LCD-X modela, dizajnirana za situacije gde je potrebna maksimalna izolacija buke. Idealne su za studijska okruženja ili glasne prostore, gde je važno eliminisati spoljašnje smetnje. Iako zatvorene, zadržavaju impresivnu preciznost i detalje karakteristične za Audeze planarne magnetne drajvere.",
@@ -72,7 +76,8 @@
   {
     "name": "LCD-3",
     "brand": "Audeze",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear (Klasične)",
     "series": "A&ultima (LCD Series)",
     "description": "Klasičan audiofilski model, poznat po bogatom basu i prirodnim srednjim tonovima.",
     "longDescription": "Audeze LCD-3, predstavljen 2011. godine, bio je tehnička prekretnica za kompaniju, nudeći superiornu rezoluciju i ekspanzivno zvučno polje. Poznate su po svom muzikalnom i prostranom zvuku sa snažnim basom i prirodnim srednjim tonovima, što ih čini omiljenim izborom među audiofilima koji traže bogato i angažujuće iskustvo slušanja.",
@@ -89,7 +94,8 @@
   {
     "name": "LCD-2",
     "brand": "Audeze",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear (Klasične)",
     "series": "A&ultima (LCD Series)",
     "description": "Originalni i cenjeni planarni magnetni model, poznat po toplom i bogatom zvuku.",
     "longDescription": "Audeze LCD-2 je model koji je lansirao Astell&Kern na mapu audio industrije, postavivši standard za planarne magnetne slušalice. Cenjen je zbog svog toplog, bogatog i muzikalnog zvuka, sa impresivnim basom i glatkim srednjim i visokim tonovima. Dostupan je u različitim varijantama, uključujući 'Fazor' verziju koja poboljšava zvučnu scenu i rezoluciju, te 'Classic' verziju koja se vraća originalnom, omiljenom zvučnom potpisu.",
@@ -106,7 +112,8 @@
   {
     "name": "LCD-1",
     "brand": "Audeze",
-    "category": "Slušalice (On-Ear/Compact Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "On-Ear/Compact Over-Ear",
     "series": "A&ultima (LCD Series)",
     "description": "Najpovoljniji model u LCD seriji, kompaktan i prenosiv, sa prepoznatljivim Audeze zvukom.",
     "longDescription": "Audeze LCD-1 je najpristupačniji model u prestižnoj LCD seriji, dizajniran da pruži prepoznatljiv Audeze planarni magnetni zvuk u kompaktnijem i prenosivijem pakovanju. Idealan je za profesionalce u pokretu i audiofile sa ograničenim budžetom koji ne žele da prave kompromise po pitanju kvaliteta zvuka. Nudi neutralan tonski balans, visoku rezoluciju i udobnost.",
@@ -123,7 +130,8 @@
   {
     "name": "MM-500",
     "brand": "Audeze",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear (Profesionalne)",
     "series": "MM Series (Professional)",
     "description": "Profesionalne studijske slušalice, razvijene sa Manny Marroquinom, za miksanje i mastering.",
     "longDescription": "Audeze MM-500 su slušalice razvijene u saradnji sa poznatim grammy-jem nagrađivanim producentom Manny Marroquinom. Dizajnirane su specifično za profesionalnu upotrebu u studijima, nudeći izuzetnu neutralnost, preciznost i udobnost za duge sate rada na miksanju i masteringu. Cilj je bio da se postigne zvuk koji je referentni i dosledan, bez obzira na okruženje.",
@@ -140,7 +148,8 @@
   {
     "name": "MM-100",
     "brand": "Audeze",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear (Profesionalne)",
     "series": "MM Series (Professional)",
     "description": "Pristupačan model iz MM serije, pruža profesionalni studijski zvuk Audeze.",
     "longDescription": "Audeze MM-100 je pristupačniji model u MM seriji, dizajniran da pruži profesionalni studijski zvuk Audeze u prenosivijem i udobnijem pakovanju. Iako povoljnije, ove slušalice i dalje koriste planarne magnetne drajvere i nude impresivnu zvučnu preciznost, što ih čini odličnim izborom za studente, mlade producente ili audiofile koji traže studijski kvalitet po pristupačnijoj ceni.",
@@ -157,7 +166,8 @@
   {
     "name": "Maxwell (PlayStation)",
     "brand": "Audeze",
-    "category": "Bežične slušalice (Gaming)",
+    "category": "Bežične slušalice",
+    "subcategory": "Gaming",
     "series": "Gaming",
     "description": "Vrhunske bežične gejming slušalice sa planarnim magnetnim drajverima za PlayStation i PC.",
     "longDescription": "Audeze Maxwell su izuzetno popularne bežične gejming slušalice koje donose vrhunsku planarnu magnetnu tehnologiju u svet igara. Nude izvanredan kvalitet zvuka sa impresivnim detaljima i prostranom zvučnom scenom, što je ključno za uranjanje u igru i preciznu lokalizaciju zvuka. Verzija za PlayStation je optimizovana za PS konzole i PC, sa dugim trajanjem baterije (do 80 sati) i bežičnom vezom sa niskom latencijom (Ultra-Low Latency Wireless).",
@@ -175,7 +185,8 @@
   {
     "name": "Maxwell (Xbox)",
     "brand": "Audeze",
-    "category": "Bežične slušalice (Gaming)",
+    "category": "Bežične slušalice",
+    "subcategory": "Gaming",
     "series": "Gaming",
     "description": "Vrhunske bežične gejming slušalice sa planarnim magnetnim drajverima za Xbox i PC.",
     "longDescription": "Audeze Maxwell Xbox verzija je optimizovana za Xbox konzole i PC, nudeći sve prednosti planarne magnetne tehnologije u gejming okruženju. Pruža izuzetan kvalitet zvuka, superiornu jasnoću govora putem AI-poboljšanog mikrofona i izuzetno dugo trajanje baterije, što ih čini jednim od najboljih izbora za ozbiljne gejmere. Podržava Xbox Wireless protokol za besprekornu vezu sa konzolom.",
@@ -193,7 +204,8 @@
   {
     "name": "LCD-GX",
     "brand": "Audeze",
-    "category": "Slušalice (Gaming)",
+    "category": "Slušalice",
+    "subcategory": "Gaming (Otvorene)",
     "series": "Gaming",
     "description": "Otvorene audiofilske gejming slušalice sa mikrofonom, kombinuju Hi-Fi zvuk i gejming funkcionalnost.",
     "longDescription": "Audeze LCD-GX su jedinstvene gejming slušalice koje kombinuju vrhunski zvuk Audeze LCD serije sa karakteristikama prilagođenim gejmingu, uključujući visokokvalitetni odvojivi mikrofon. Kao otvoreni tip slušalica, pružaju izuzetno široku zvučnu scenu i preciznu lokalizaciju zvuka, što je ključno za takmičarske igre. Namenjene su gejmerima koji cene audiofilski kvalitet zvuka i udobnost tokom dugih gejming sesija.",
@@ -212,7 +224,8 @@
   {
     "name": "LCDi4",
     "brand": "Audeze",
-    "category": "Slušalice (In-Ear Monitor)",
+    "category": "Slušalice",
+    "subcategory": "In-Ear Monitor (Flagship)",
     "series": "In-Ear",
     "description": "Vrhunske in-ear monitor slušalice sa planarnom magnetnom tehnologijom.",
     "longDescription": "Audeze LCDi4 su flagship in-ear monitor (IEM) slušalice koje donose prepoznatljivu planarnu magnetnu tehnologiju Audeze u minijaturnom formatu. Pružaju neverovatno prostranu zvučnu scenu, izuzetnu rezoluciju i detalje, karakteristične za veće Audeze slušalice. Dizajnirane su za audiofile koji traže vrhunsko prenosivo iskustvo slušanja bez kompromisa.",
@@ -229,7 +242,8 @@
   {
     "name": "LCDi3",
     "brand": "Audeze",
-    "category": "Slušalice (In-Ear Monitor)",
+    "category": "Slušalice",
+    "subcategory": "In-Ear Monitor",
     "series": "In-Ear",
     "description": "In-ear monitor slušalice iz LCDi serije, nude visokokvalitetan zvuk u prenosivom pakovanju.",
     "longDescription": "Audeze LCDi3 su in-ear monitor (IEM) slušalice koje su naslednik popularnih iSine modela, donoseći poboljšanja u zvuku i izradi. Koriste planarne magnetne drajvere za jasan, detaljan i dinamičan zvuk. Dizajnirane su da pruže visokokvalitetno audio iskustvo u prenosivom formatu, idealne za slušanje u pokretu sa DAP-ovima ili mobilnim telefonima.",
@@ -245,7 +259,8 @@
   {
     "name": "Euclid",
     "brand": "Audeze",
-    "category": "Slušalice (In-Ear Monitor)",
+    "category": "Slušalice",
+    "subcategory": "In-Ear Monitor (Zatvorene)",
     "series": "In-Ear",
     "description": "Zatvorene planarne magnetne in-ear monitor slušalice, prve takve od Audeze-a.",
     "longDescription": "Audeze Euclid su prve zatvorene in-ear monitor (IEM) slušalice sa planarnom magnetnom tehnologijom od Audeze-a. Pružaju izuzetnu izolaciju buke uz zadržavanje prepoznatljive zvučne jasnoće i detalja Audeze drajvera. Kompaktan, ergonomičan dizajn čini ih udobnim za dugotrajno nošenje, dok snažni planarni magnetni drajveri osiguravaju pun, dinamičan zvuk.",
@@ -261,7 +276,8 @@
   {
     "name": "CRBN",
     "brand": "Audeze",
-    "category": "Slušalice (Over-Ear)",
+    "category": "Slušalice",
+    "subcategory": "Over-Ear (Elektrostatičke)",
     "series": "Electrostatic",
     "description": "Elektrostatičke slušalice sa karbonskim nanocijevima, za izuzetnu transparentnost zvuka.",
     "longDescription": "Audeze CRBN su elektrostatičke slušalice koje koriste novu, patentiranu elektrostatičku tehnologiju sa karbonskim nanocijevima. Dizajnirane su da prevaziđu uobičajene probleme tradicionalnih elektrostatičkih drajvera, nudeći izuzetno detaljan, proziran i brz zvuk sa poboljšanim bas odzivom. Pružaju referentni kvalitet zvuka za najzahtevnije audiofile i profesionalce.",
