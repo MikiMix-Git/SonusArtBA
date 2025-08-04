@@ -1,4 +1,3 @@
-<!-- Verzija 1.61 - AI Asistent za Postavku Sistema -->
 <!DOCTYPE html>
 <html lang="sr">
 <head>
@@ -386,6 +385,10 @@
             <select id="brandFilter">
                 <option value="">Svi brendovi</option>
                 <!-- Opcije za brendove će se sada dinamički popunjavati putem JavaScripta -->
+            </select>
+            <label for="subcategoryFilter">Podkategorija:</label> <!-- Dodan label za subcategoryFilter -->
+            <select id="subcategoryFilter"> <!-- Dodan select za subcategoryFilter -->
+                <option value="">Sve podkategorije</option>
             </select>
             <label for="seriesSort">Sortiraj po seriji:</label>
             <select id="seriesSort">
@@ -777,7 +780,7 @@
             }
 
             // Popuni kategorije
-            const categories = [...new Set(allProductsData.map(product => product.category))];
+            const categories = [...new Set(allProductsData.map(product => product.category))].sort(); // Sortiraj kategorije abecedno
             const categoryFilter = document.getElementById("categoryFilter");
             categoryFilter.innerHTML = '<option value="">Sve kategorije</option>'; // Resetuj
             categories.forEach(category => {
@@ -788,7 +791,7 @@
             });
 
             // Popuni serije
-            const series = [...new Set(allProductsData.map(product => product.series))];
+            const series = [...new Set(allProductsData.map(product => product.series))].sort(); // Sortiraj serije abecedno
             const seriesFilter = document.getElementById("seriesFilter");
             seriesFilter.innerHTML = '<option value="">Sve serije</option>'; // Resetuj
             series.forEach(s => {
@@ -807,6 +810,17 @@
                 option.value = brand;
                 option.textContent = brand;
                 brandFilter.appendChild(option);
+            });
+
+            // Popuni podkategorije
+            const subcategories = [...new Set(allProductsData.map(product => product.subcategory).filter(Boolean))].sort(); // Filtriraj null/undefined i sortiraj
+            const subcategoryFilter = document.getElementById("subcategoryFilter");
+            subcategoryFilter.innerHTML = '<option value="">Sve podkategorije</option>'; // Resetuj
+            subcategories.forEach(subcat => {
+                const option = document.createElement("option");
+                option.value = subcat;
+                option.textContent = subcat;
+                subcategoryFilter.appendChild(option);
             });
         }
 
@@ -832,6 +846,7 @@
             const selectedCategory = document.getElementById("categoryFilter").value;
             const selectedBrand = document.getElementById("brandFilter").value;
             const selectedSeries = document.getElementById("seriesFilter").value;
+            const selectedSubcategory = document.getElementById("subcategoryFilter").value; // Dohvati odabranu podkategoriju
             const sortOption = document.getElementById("seriesSort").value;
 
             // Ako allProductsData nije učitano (prvo pokretanje), učitaj ga
@@ -857,11 +872,15 @@
             if (selectedSeries) {
                 filteredProducts = filteredProducts.filter(p => p.series === selectedSeries);
             }
+            // Filtriranje po podkategoriji
+            if (selectedSubcategory) {
+                filteredProducts = filteredProducts.filter(p => p.subcategory === selectedSubcategory);
+            }
             // Filtriranje po specifikaciji (Tip ili Tip zvučnika, Tip drajvera, Pogon)
             if (currentSelectedSpecFilter.key && currentSelectedSpecFilter.value) {
                 filteredProducts = filteredProducts.filter(p => {
                     const specs = getNormalizedSpecifications(p);
-                    // Proverava da li vrednost specifikacije sadrži filtriranu vrednost (case-insensitive)
+                    // Provera da li vrednost specifikacije sadrži filtriranu vrednost (case-insensitive)
                     // Ovo omogućava filtriranje "3-sistemski" iz "3-sistemski, samostojeći, ventilirani"
                     return specs[currentSelectedSpecFilter.key] &&
                            specs[currentSelectedSpecFilter.key].toLowerCase().includes(currentSelectedSpecFilter.value.toLowerCase());
@@ -934,6 +953,7 @@
                         name: product.name || 'Nepoznat naziv',
                         brand: product.brand || 'Nepoznat brend',
                         category: product.category || 'Nepoznata kategorija',
+                        subcategory: product.subcategory || 'N/A', // Dodano za subcategory
                         series: product.series || 'Nepoznata serija',
                         price: product.price || 'Nije dostupno',
                         description: product.description || 'Nema opisa',
@@ -1007,6 +1027,7 @@
                         <p><strong>Brend:</strong> <span class="clickable filter-brand" data-brand="${escapeHtml(safeProduct.brand)}">${escapeHtml(safeProduct.brand)}</span></p>
                         <p><strong>Kategorija:</strong> <span class="clickable filter-category" data-category="${escapeHtml(safeProduct.category)}">${escapeHtml(safeProduct.category)}</span></p>
                         <p><strong>Serija:</strong> <span class="clickable filter-series" data-series="${escapeHtml(safeProduct.series)}">${escapeHtml(safeProduct.series)}</span></p>
+                        ${safeProduct.subcategory !== 'N/A' ? `<p><strong>Podkategorija:</strong> <span class="clickable filter-subcategory" data-subcategory="${escapeHtml(safeProduct.subcategory)}">${escapeHtml(safeProduct.subcategory)}</span></p>` : ''}
                         <p><strong>Cena:</strong> ${escapeHtml(safeProduct.price)}</p>
                         <p><strong>Opis:</strong> ${escapeHtml(safeProduct.description)}</p>
                         <button class="toggle-btn" data-index="${index}">Prikaži više</button>
@@ -1132,6 +1153,7 @@
             const fixedFeatures = [
                 { label: 'Brend', key: 'brand' },
                 { label: 'Kategorija', 'key': 'category' },
+                { label: 'Podkategorija', key: 'subcategory' }, // Dodano za podkategoriju u usporedbi
                 { label: 'Serija', key: 'series' },
                 { label: 'Cena', key: 'price' },
                 { label: 'Opis', key: 'description' },
@@ -1265,6 +1287,21 @@
         }
 
         /**
+         * Postavlja filter za podkategoriju.
+         * @param {string} subcategory - Podkategorija po kojoj se filtrira.
+         */
+        function filterBySubcategory(subcategory) {
+            const subcategoryFilter = document.getElementById("subcategoryFilter");
+            if (subcategoryFilter.value === subcategory) {
+                subcategoryFilter.value = ""; // Poništi filter
+            } else {
+                subcategoryFilter.value = subcategory; // Postavi izabranu podkategoriju
+            }
+            currentSelectedSpecFilter = { key: null, value: null };
+            loadProducts();
+        }
+
+        /**
          * Postavlja filter za određenu specifikaciju.
          * @param {string} specKey - Ključ specifikacije (npr. "Tip", "Tip zvučnika", "Tip drajvera, "Pogon").
          * @param {string} specValue - Vrednost specifikacije po kojoj se filtrira.
@@ -1333,6 +1370,7 @@
                 prompt += `  Name: ${escapeForJsTemplateLiteral(product.name)}\n`;
                 prompt += `  Brand: ${escapeForJsTemplateLiteral(product.brand)}\n`;
                 prompt += `  Category: ${escapeForJsTemplateLiteral(product.category)}\n`;
+                prompt += `  Subcategory: ${escapeForJsTemplateLiteral(product.subcategory || 'N/A')}\n`; // Dodano za podkategoriju u prompt
                 prompt += `  Description: ${escapeForJsTemplateLiteral(product.description)}\n`;
                 prompt += `  Long Description: ${escapeForJsTemplateLiteral(product.longDescription)}\n`;
                 prompt += `  Price: ${escapeForJsTemplateLiteral(product.price)}\n`;
@@ -1433,6 +1471,7 @@
             prompt += `  Name: ${escapeForJsTemplateLiteral(product.name)}\n`;
             prompt += `  Brand: ${escapeForJsTemplateLiteral(product.brand)}\n`;
             prompt += `  Category: ${escapeForJsTemplateLiteral(product.category)}\n`;
+            prompt += `  Subcategory: ${escapeForJsTemplateLiteral(product.subcategory || 'N/A')}\n`; // Dodano za podkategoriju u prompt
             prompt += `  Description: ${escapeForJsTemplateLiteral(product.description)}\n`;
             prompt += `  Long Description: ${escapeForJsTemplateLiteral(product.longDescription)}\n`;
             prompt += `  Price: ${escapeForJsTemplateLiteral(product.price)}\n`;
@@ -1725,6 +1764,7 @@
             document.getElementById("categoryFilter").value = "";
             document.getElementById("seriesFilter").value = "";
             document.getElementById("brandFilter").value = "";
+            document.getElementById("subcategoryFilter").value = ""; // Resetuj subcategory filter
             document.getElementById("seriesSort").value = "";
             currentSelectedSpecFilter = { key: null, value: null };
 
@@ -1827,6 +1867,7 @@
             prompt += `  Naziv: ${escapeForJsTemplateLiteral(selectedProduct.name)}\n`;
             prompt += `  Brend: ${escapeForJsTemplateLiteral(selectedProduct.brand)}\n`;
             prompt += `  Kategorija: ${escapeForJsTemplateLiteral(selectedProduct.category)}\n`;
+            prompt += `  Podkategorija: ${escapeForJsTemplateLiteral(selectedProduct.subcategory || 'N/A')}\n`; // Dodano za podkategoriju u prompt
             prompt += `  Opis: ${escapeForJsTemplateLiteral(selectedProduct.description)}\n`;
             const normalizedSpecs = getNormalizedSpecifications(selectedProduct);
             if (Object.keys(normalizedSpecs).length > 0) {
@@ -1906,6 +1947,8 @@
                     filterByCategory(target.dataset.category);
                 } else if (target.classList.contains('filter-series')) {
                     filterBySeries(target.dataset.series);
+                } else if (target.classList.contains('filter-subcategory')) { // Dodan event listener za subcategory
+                    filterBySubcategory(target.dataset.subcategory);
                 } else if (target.classList.contains('filter-spec')) {
                     filterBySpecification(target.dataset.specKey, target.dataset.specValue);
                 }
@@ -1916,6 +1959,7 @@
             const categoryFilter = document.getElementById("categoryFilter");
             const seriesFilter = document.getElementById("seriesFilter");
             const brandFilter = document.getElementById("brandFilter");
+            const subcategoryFilter = document.getElementById("subcategoryFilter"); // Dohvati referencu na subcategoryFilter
             const seriesSort = document.getElementById("seriesSort");
 
             // Globalna varijabla za debounce timeout
@@ -1929,6 +1973,7 @@
             categoryFilter.addEventListener('change', loadProducts);
             seriesFilter.addEventListener('change', loadProducts);
             brandFilter.addEventListener('change', loadProducts);
+            subcategoryFilter.addEventListener('change', loadProducts); // Dodaj event listener za subcategoryFilter
             seriesSort.addEventListener('change', loadProducts);
 
 
