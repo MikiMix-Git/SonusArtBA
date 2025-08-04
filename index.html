@@ -1270,7 +1270,7 @@
         }
 
         /**
-         * Postavlja filter serije. Ako je kliknuta serija već aktivna, poništava filter.
+         * Postavlja filter serije. Ako je kliknuta serija već aktivan, poništava filter.
          * @param {string} series - Serija po kojoj se filtrira.
          */
         function filterBySeries(series) {
@@ -1392,7 +1392,8 @@
                 chatHistory.push({ role: "user", parts: [{ text: prompt }] });
                 const payload = { contents: chatHistory };
                 const apiKey = ""; // Canvas će automatski osigurati API ključ
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                // Promenjen model za generisanje teksta
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
                 const response = await fetch(apiUrl, {
                     method: 'POST',
@@ -1492,7 +1493,8 @@
                 chatHistory.push({ role: "user", parts: [{ text: prompt }] });
                 const payload = { contents: chatHistory };
                 const apiKey = ""; // Canvas će automatski osigurati API ključ
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                // Promenjen model za generisanje teksta
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
                 const response = await fetch(apiUrl, {
                     method: 'POST',
@@ -1899,7 +1901,8 @@
                 chatHistory.push({ role: "user", parts: [{ text: prompt }] });
                 const payload = { contents: chatHistory };
                 const apiKey = ""; // Canvas će automatski osigurati API ključ
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                // Promenjen model za generisanje teksta
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
                 const response = await fetch(apiUrl, {
                     method: 'POST',
