@@ -15,7 +15,7 @@
               "intended_use": "Hi-Fi stereo, kućno kino",
               "price": "Approx. $900 /par (2025 estimate)",
               "finishes": ["Black", "White", "Walnut"],
-              "imageUrl": "https://www.argonaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
               "specifications": {
                 "type": "2.5-sistemski, bas-reflex",
                 "drivers": [
@@ -52,7 +52,7 @@
               "intended_use": "Hi-Fi stereo",
               "price": "Approx. $500 /par (2025 estimate)",
               "finishes": ["Black", "White", "Walnut"],
-              "imageUrl": "https://www.argonaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
               "specifications": {
                 "type": "2-sistemski, bas-reflex",
                 "drivers": [
