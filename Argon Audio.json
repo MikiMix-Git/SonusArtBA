@@ -1,351 +1,83 @@
-[
-  {
-    "name": "TT-4",
-    "brand": "Argon Audio",
-    "category": "Gramofoni",
-    "subcategory": "Premium",
-    "series": "TT",
-    "description": "Premium gramofon s ručkom od ugljičnih vlakana i ugrađenim MM RIAA pretpojačalom.",
-    "longDescription": "Argon Audio TT-4 je premium gramofon dizajniran za prvoklasno iskustvo slušanja vinila. Nadovezujući se na uspješni TT-3, TT-4 donosi deblje, čvršće postolje, teži tanjur i poboljšane noge za odvajanje, pružajući bolju osnovu za vaše ploče i manje izobličenja uzrokovanih vibracijama. Ručka od ugljičnih vlakana osigurava lakoću i krutost, a već je ugrađena Ortofon 2M Red zvučnica. Dolazi s ugrađenim visokokvalitetnim MM Phono pretpojačalom koje se može isključiti, omogućujući direktno spajanje na bilo koje pojačalo ili aktivne zvučnike. Uključuje poklopac i RCA kabel. Dostupan u više boja, uključujući prirodni furnir.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Brzine: 33/45 o/min (elektronski regulirano)",
-      "Zvučnica: Pokretni magnet (Ortofon 2M Red)",
-      "Tanjur: Aluminij, 1.4 kg",
-      "Postolje: Kruta MDF baza s plivajućom supšasijom",
-      "Ugrađeno RIAA pojačalo: Da (može se isključiti)",
-      "Ručka: 8.8″ od karbonskih vlakana/aluminija",
-      "Efektivna dužina ručke: 223.5 mm",
-      "Overhang: 18.6 mm",
-      "Efektivna masa ručke: 21.7 g",
-      "Odnos signal/šum: 67 dB (A-filter)",
-      "Izlaz: Phono ili Line Out",
-      "Dimenzije (ŠxVxD): 42.0 x 14.2 x 35.5 cm",
-      "Masa: 7.2 kg",
-      "Dodatne značajke: ATS tehnologija (Anizotropni stabilizator torzije)"
-    ]
-  },
-  {
-    "name": "TT-3",
-    "brand": "Argon Audio",
-    "category": "Gramofoni",
-    "subcategory": "Klasični",
-    "series": "TT",
-    "description": "Jednostavan i elegantan gramofon s Ortofon OM5e zvučnicom, idealan za početnike.",
-    "longDescription": "Argon Audio TT-3 je elegantan i jednostavan gramofon, idealan za one koji ulaze u svijet vinila. Dolazi s Ortofon OM5e zvučnicom i aluminijskim tanjurom. Postolje je izrađeno od MDF-a. S brzinama od 33/45 o/min, pruža pouzdanu reprodukciju. Iako nema ugrađeno RIAA pretpojačalo, što omogućava fleksibilnost u odabiru vanjskog pretpojačala, nudi solidne performanse za svoju cijenu. Uključuje napajanje i RCA kabel.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Brzine: 33/45 o/min",
-      "Zvučnica: Ortofon OM5e",
-      "Tanjur: Aluminij",
-      "Postolje: MDF",
-      "Ugrađeno RIAA pojačalo: Ne",
-      "Ručka: 8.6″ od aluminija",
-      "Efektivna masa ručke: 21.7 grama",
-      "Wow i Flutter: 0.2%",
-      "Dimenzije (ŠxVxD): 42.0 x 12.1 x 35.4 cm",
-      "Težina: 6.4 kg",
-      "Uključeno: Napajanje (1.5 m), RCA kabel (1.0 m)"
-    ]
-  },
-  {
-    "name": "SA1 MK2",
-    "brand": "Argon Audio",
-    "category": "Pojačala",
-    "subcategory": "Integrisana",
-    "series": "SA",
-    "description": "Kompaktno, ali moćno integrirano stereo pojačalo s Bluetooth i HDMI ARC povezivošću.",
-    "longDescription": "Argon Audio SA1 MK2 je snažno integrirano stereo pojačalo, koje, unatoč svojoj maloj veličini, donosi impresivnih 2 x 100 Watt snage (pri 4 Ohma) uz Class D tehnologiju. Opremljen je Bluetooth 5.0 (aptX HD i AAC) za bežičnu povezanost, te HDMI ARC, optičkim digitalnim (24-bit/192kHz) i analognim RCA ulazima, uključujući i MM gramofonski ulaz. Posjeduje 32-bitni ESS Sabre DAC u potpuno balansiranom režimu i odvojena napajanja za analogne i digitalne sklopove. Nudi automatsko uključivanje na svim ulazima (osim gramofonskog) i automatsko prebacivanje ulaza. Idealan je za moderni Hi-Fi sustav s fokusom na digitalne izvore i praktičnost.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Frekvencijski opseg: 3 Hz – 60.000 Hz",
-      "Snaga: 2 x 100 Watt (pri 4Ω), 2 x 50 Watt (pri 8Ω) - Class D",
-      "Distorzija (THD): <0.03% (20-20.000 Hz)",
-      "Bežična povezivost: Bluetooth 5.0 (aptX HD i AAC)",
-      "Ulazi: HDMI ARC, Optički digitalni (24-bit/192kHz), Stereo linijski ulaz (analogni RCA), Gramofonski ulaz (MM)",
-      "Izlazi: Pre-out (za subwoofer ili eksterno pojačanje)",
-      "DAC: 32-bitni ESS Sabre DAC (balansirani režim)",
-      "Napajanje: Odvojena napajanja za analogne i digitalne sklopove (ukupno 6)",
-      "Dodatne funkcije: Automatsko uključivanje/prebacivanje ulaza",
-      "Dimenzije (ŠxVxD): 22.0 x 6.3 x 25.2 cm",
-      "Masa: 2.2 kg"
-    ]
-  },
-  {
-    "name": "FENRIS A55",
-    "brand": "Argon Audio",
-    "category": "Aktivni Zvučnici",
-    "subcategory": "Podnostojeći",
-    "series": "FENRIS",
-    "description": "Podnostojeći aktivni zvučnici s integriranim pojačalom i višestrukim ulazima.",
-    "longDescription": "Argon Audio FENRIS A55 su podnostojeći aktivni zvučnici koji nude impresivan zvuk zahvaljujući integriranom pojačalu klase D (2x 50 W za woofer, 2x 25 W za visokotonac). Posjeduju dvostruke 5.25-inčne bas/srednjotonce i 0.75-inčni kupolasti visokotonac, pružajući frekvencijski raspon od 38-22.000 Hz. Opremljeni su raznim ulazima, uključujući TV ARC, optički digitalni (do 24-bit/48 kHz), stereo line-in (RCA), gramofonski (MM) i Bluetooth 5.0. Idealni su za dnevne boravke, nudeći moćan zvuk bez potrebe za vanjskim pojačalom.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Podnostojeći aktivni",
-      "Visokotonac: 0.75″ kupolasti",
-      "Bas/srednji tonovi: 2 x 5.25″",
-      "Frekvencijski raspon: 38-22.000 Hz",
-      "Pojačalo: Klasa D, 2 x 50 W (wooferi), 2 x 25 W (visokotonci)",
-      "Ulazi: TV ARC, Optički digitalni (do 24-bit/48 kHz), Stereo line-in (L/R RCA), Gramofon (MM), Bluetooth 5.0",
-      "Predizlaz: Da (za subwoofer)",
-      "Automatsko paljenje: Na svim ulazima osim Phono"
-    ]
-  },
-  {
-    "name": "FENRIS A4",
-    "brand": "Argon Audio",
-    "category": "Aktivni Zvučnici",
-    "subcategory": "Bookshelf",
-    "series": "FENRIS",
-    "description": "Kompaktni aktivni zvučnici s 4-inčnim wooferom, Bluetooth i HDMI ARC.",
-    "longDescription": "Argon Audio FENRIS A4 su kompaktni aktivni zvučnici idealni za stolne postavke, diskretan TV zvuk ili manje prostore. Integrirano Class D pojačalo (2x 50W) pokreće 4-inčni bas/srednjotonac i 0.75-inčni visokotonac, pružajući frekvencijski raspon od 52-22.000 Hz. Nude Bluetooth 5.0, HDMI ARC, optički digitalni i analogni RCA ulaze, kao i MM gramofonski ulaz. Kompaktni, ali moćni, pružaju jasan i detaljan zvuk.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Bookshelf aktivni",
-      "Visokotonac: 0.75″ kupolasti",
-      "Bas/srednji tonovi: 1 x 4″",
-      "Frekvencijski raspon: 52-22.000 Hz",
-      "Pojačalo: Klasa D, 2 x 50 Watt",
-      "Ulazi: TV ARC, Optički digitalni (do 24-bit/48 kHz), Stereo line-in (L/R RCA), Gramofon (MM), Bluetooth 5.0",
-      "Automatsko paljenje: Na svim ulazima osim Phono"
-    ]
-  },
-  {
-    "name": "FORTE A55 WiFi",
-    "brand": "Argon Audio",
-    "category": "Aktivni Zvučnici",
-    "subcategory": "Podnostojeći",
-    "series": "FORTE WiFi",
-    "description": "Podnostojeći WiFi aktivni zvučnici s punim rasponom bežične povezivosti.",
-    "longDescription": "Argon Audio FORTE A55 WiFi su podnostojeći aktivni zvučnici dizajnirani za vrhunski zvuk i nenadmašnu praktičnost. Posjeduju četiri-kanalno pojačanje s aktivnom skretnicom (4x 80 Watt Class D pojačanje) i podržavaju širok spektar bežične povezanosti: AirPlay 2, Spotify Connect, Chromecast, DTS Play-Fi i Bluetooth 4.2 (AAC). Ulazi uključuju HDMI ARC, optički digitalni (24-bit/96 kHz), stereo linijski (RCA) i MM gramofonski ulaz. Ovi zvučnici pružaju kristalno čist zvuk i savršeni su za veće prostore, omogućujući jednostavno streamanje glazbe s raznih izvora.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Podnostojeći aktivni",
-      "Visokotonac: 1” Softdome sa neodimijumskim magnetom",
-      "Bas/Srednjetonac: 2 x 5” prilagođeni dvoslojni konus",
-      "Frekvencijski opseg: 30-20.000 Hz ± 3 dB",
-      "Pojačalo: Klasa D, 4 x 80 Watt (četverokanalno s aktivnom skretnicom)",
-      "Bežična povezivost: AirPlay 2, Spotify Connect, Chromecast, DTS Play-Fi, Bluetooth 4.2 (AAC)",
-      "Ulazi: TV HDMI ARC, Optički digitalni (24-bit/96 kHz), Stereo linijski ulaz (analogni RCA), Gramofon (MM)",
-      "Izlazi: Izlaz za subwoofer",
-      "Dimenzije (ŠxVxD): 16.5 x 85 x 25 cm (s prednjom maskom i priključcima)",
-      "Masa: 26 kg (oba komada)"
-    ]
-  },
-  {
-    "name": "FORTE A4 WiFi",
-    "brand": "Argon Audio",
-    "category": "Aktivni Zvučnici",
-    "subcategory": "Bookshelf",
-    "series": "FORTE WiFi",
-    "description": "Kompaktni WiFi zvučnici s bogatim zvukom i AirPlay 2, Chromecast podrškom.",
-    "longDescription": "Argon Audio FORTE A4 WiFi su kompaktni aktivni zvučnici s ugrađenom WiFi povezivošću, idealni za one koji traže besprijekoran zvuk i jednostavno korištenje. Podržavaju AirPlay 2, Chromecast, Spotify Connect i Bluetooth, te imaju HDMI ARC ulaz za lako spajanje na TV. Opremljeni su 4-inčnim bas/srednjetoncem i 1-inčnim visokotoncem, pružajući jasan i moćan zvuk prikladan za većinu sobnih veličina. Čisti dizajn i solidan inženjering osiguravaju vrhunsku audio izvedbu.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Bookshelf aktivni",
-      "Bas/srednji tonovi: 4″ 2-slojni konus",
-      "Visokotonac: 1″ Softdome",
-      "Bežična povezivost: AirPlay 2, Chromecast, Spotify Connect, Bluetooth",
-      "Ulazi: HDMI ARC, Optički digitalni, Analogni RCA, Gramofon (MM)",
-      "Frekvencijski raspon: Nije specifično navedeno, ali očekuje se slično FORTE seriji"
-    ]
-  },
-  {
-    "name": "MALMÖ SUB 6",
-    "brand": "Argon Audio",
-    "category": "Subwooferi",
-    "subcategory": "Aktivni",
-    "series": "MALMÖ",
-    "description": "Kompaktni subwoofer s 6.5-inčnom bas jedinicom za dubok i kontroliran bas.",
-    "longDescription": "Argon Audio MALMÖ SUB 6 je kompaktni subwoofer dizajniran za dodavanje dubine i snage basu u vašem audio sustavu. Posjeduje 6.5-inčnu bas jedinicu dugog hoda smještenu u bass reflex kabinetu s donjim ispušnim portom. Integrirano pojačalo snage 65 W (RMS) / 130 W (PEAK) pruža frekvencijski raspon od 50Hz do 200Hz, s podesivom frekvencijom skretnice od 40Hz do 120Hz. Također uključuje funkciju automatskog uključivanja/isključivanja (auto ON/OFF), čineći ga praktičnim dodatkom za bilo koji sustav.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip: Aktivni subwoofer",
-      "Bas jedinica: 6.5″ dugog hoda",
-      "Kabinet: Bass reflex (donji ispušni port)",
-      "Snaga pojačala: 65 W (RMS) / 130 W (PEAK)",
-      "Frekvencijski raspon: 50Hz-200Hz",
-      "Frekvencija skretnice: 40Hz-120 Hz (podesiva)",
-      "Automatsko uključivanje/isključivanje: Da"
-    ]
-  },
-  {
-    "name": "SOLO",
-    "brand": "Argon Audio",
-    "category": "Mrežni Streameri",
-    "subcategory": "Audiofilski",
-    "series": "SOLO",
-    "description": "Mrežni streamer audiofilske kvalitete s AirPlay 2, Chromecast i Roon Ready podrškom.",
-    "longDescription": "Argon Audio SOLO je mrežni muzički streamer dizajniran za audiofile koji traže izvanrednu kvalitetu zvuka i sveobuhvatnu povezivost. Podržava Chromecast, AirPlay 2, Spotify Connect i Roon Ready, omogućujući streamanje glazbe s gotovo bilo kojeg izvora. Koristi ESS Sabre ES9018 DAC i Burr Brown operativne pojačivače, te ima 8 odvojenih napajanja interno za čistu isporuku signala. Podržava rezolucije do 24-bit/192 kHz. Nudi analogne (RCA), optičke i koaksijalne izlaze. Idealan je za nadogradnju postojećeg Hi-Fi sustava s modernim streaming mogućnostima.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Platforme za streaming: Chromecast, AirPlay 2, Spotify Connect, Roon Ready",
-      "DAC: ESS Sabre ES9018",
-      "Operativni pojačivači: Burr Brown",
-      "Napajanje: 8 odvojenih napajanja interno",
-      "Podržana rezolucija: Do 24-bit/192 kHz (ovisno o platformi)",
-      "Izlazi: Optički digitalni, Stereo linijski ulaz (analogni RCA), Koaksijalni",
-      "Procesor za streaming: Dual Core ARM Cortex A7 CPU",
-      "Audio procesor: ARM Cortex M33",
-      "Dodatne funkcije: Multiroom putem AirPlay 2 i Chromecasta",
-      "Dimenzije (ŠxVxD): 14.7 x 3.6 x 15.0 cm"
-    ]
-  },
-  {
-    "name": "STREAM 3 MK2",
-    "brand": "Argon Audio",
-    "category": "Mrežni Streameri / DAB Radio",
-    "subcategory": "Univerzalni",
-    "series": "STREAM",
-    "description": "Univerzalni streamer s DAB+, FM, Internet radiom i Bluetooth aptX povezivošću.",
-    "longDescription": "Argon Audio STREAM 3 MK2 je svestrani mrežni streamer i DAB radio koji omogućuje pristup širokom spektru muzičkih sadržaja. Podržava DAB+, FM radio, Internet radio i Spotify Connect. Opremljen je Bluetooth aptX povezivošću za bežično streamanje. Pruža solidnu kvalitetu zvuka i jednostavan je za korištenje, s analognim i optičkim digitalnim izlazima. Idealan je za one koji žele dodati moderne streaming mogućnosti i DAB/FM radio u svoj postojeći audio sustav.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip: Mrežni streamer / DAB Radio",
-      "Prijemnik: DAB+, FM, Internet radio",
-      "Povezivost: Spotify Connect, Bluetooth aptX",
-      "Izlazi: Analogni (RCA), Optički digitalni"
-    ]
-  },
-  {
-    "name": "STREAM 2 MK3",
-    "brand": "Argon Audio",
-    "category": "Mrežni Streameri",
-    "subcategory": "Kompaktni",
-    "series": "STREAM",
-    "description": "Kompaktan mrežni streamer s Spotify Connect i Internet radio podrškom.",
-    "longDescription": "Argon Audio STREAM 2 MK3 je kompaktan i jednostavan mrežni streamer koji omogućuje vašem sustavu nove mogućnosti povezivanja. Podržava Spotify Connect i Internet radio, s RCA i optičkim izlazima. Dolazi s daljinskim upravljačem za laku kontrolu. Idealno je rješenje za dodavanje osnovnih streaming funkcija u bilo koji audio sustav, pružajući pristup tisućama internetskih radio postaja i omiljenim glazbenim servisima.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip: Mrežni streamer",
-      "Povezivost: Spotify Connect, Internet radio",
-      "Izlazi: RCA, Optički",
-      "Kontrola: Daljinski upravljač"
-    ]
-  },
-  {
-    "name": "ALTO 5 Active",
-    "brand": "Argon Audio",
-    "category": "Aktivni Zvučnici",
-    "subcategory": "Bookshelf",
-    "series": "ALTO",
-    "description": "Aktivni bookshelf zvučnici s moćnim basom i detaljnim zvukom.",
-    "longDescription": "Argon Audio ALTO 5 Active su aktivni bookshelf zvučnici dizajnirani da pruže moćan bas i detaljan zvuk u kompaktnom formatu. Idealni su za manje do srednje prostore, nudeći impresivne audio performanse bez potrebe za dodatnim pojačalom. Lako se povezuju s različitim izvorima, uključujući Bluetooth.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Aktivni bookshelf",
-      "Bas: Moćan",
-      "Zvuk: Detaljan",
-      "Povezivost: Bluetooth (obično), Line In"
-    ]
-  },
-  {
-    "name": "ALTO 4 Active",
-    "brand": "Argon Audio",
-    "category": "Aktivni Zvučnici",
-    "subcategory": "Bookshelf",
-    "series": "ALTO",
-    "description": "Kompaktni aktivni zvučnici za stolna računala ili manje prostore.",
-    "longDescription": "Argon Audio ALTO 4 Active su još kompaktniji aktivni zvučnici iz ALTO serije, savršeni za stolna računala, spavaće sobe ili male dnevne boravke. Unatoč veličini, pružaju iznenađujuće pun i jasan zvuk s dovoljnom snagom za svoju namjenu. Lako se povezuju i nude sve osnovne značajke aktivnih zvučnika.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Aktivni bookshelf",
-      "Zvuk: Jasan i pun",
-      "Veličina: Kompaktan"
-    ]
-  },
-  {
-    "name": "FORUS 4 Wall",
-    "brand": "Argon Audio",
-    "category": "Zvučnici",
-    "subcategory": "Za zid",
-    "series": "FORUS Wall",
-    "description": "Tanki zvučnici za zid, idealni za diskretnu instalaciju.",
-    "longDescription": "Argon Audio FORUS 4 Wall su tanki zvučnici dizajnirani za montažu na zid, s debljinom od samo 10 cm. Posjeduju ugradbeni zidni nosač i dolaze s crnim i bijelim magnetskim mrežicama za estetsku prilagodbu. Unatoč tankom profilu, pružaju izuzetnu kvalitetu zvuka za cjenovni razred. Impedancija im je 4 ohma, a osjetljivost 84 dB, s frekvencijskim rasponom od 60-20.000 Hz ± 3dB. Idealni su za diskretne Hi-Fi instalacije ili kao dio kućnog kina.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Zvučnik za zid",
-      "Debljina: 10 cm",
-      "Ugradbeni zidni nosač: Da",
-      "Mrežice: Crne i bijele magnetske (uključene)",
-      "Impedancija: 4 ohma",
-      "Osjetljivost: 84 dB",
-      "Frekvencijski raspon: 60-20.000 Hz ± 3dB"
-    ]
-  },
-  {
-    "name": "FORUS 5",
-    "brand": "Argon Audio",
-    "category": "Pasivni Zvučnici",
-    "subcategory": "Bookshelf",
-    "series": "FORUS",
-    "description": "Pasivni bookshelf zvučnici s neutralnim i detaljnim zvukom.",
-    "longDescription": "Argon Audio FORUS 5 su pasivni bookshelf zvučnici dizajnirani za neutralan i detaljan zvuk. Savršen su izbor za one koji traže kvalitetne zvučnike koje će upariti s vlastitim pojačalom. Nude široku zvučnu sliku i preciznu reprodukciju instrumenata i vokala. Idealni su za srednje velike prostorije i pružaju izvrsnu vrijednost za uloženi novac.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Pasivni bookshelf",
-      "Zvuk: Neutralan i detaljan"
-    ]
-  },
-  {
-    "name": "FORUS 4",
-    "brand": "Argon Audio",
-    "category": "Pasivni Zvučnici",
-    "subcategory": "Bookshelf",
-    "series": "FORUS",
-    "description": "Kompaktni pasivni bookshelf zvučnici, idealni za manje prostore.",
-    "longDescription": "Argon Audio FORUS 4 su manji pasivni bookshelf zvučnici iz FORUS serije, dizajnirani za manje prostore ili kao dio sustava gdje je diskrecija bitna. Pružaju uravnotežen i jasan zvuk. Idealni su za uparivanje s manjim pojačalima i nude prepoznatljivu Argon Audio kvalitetu po pristupačnoj cijeni.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Pasivni bookshelf",
-      "Veličina: Kompaktan"
-    ]
-  },
-  {
-    "name": "FENRIS A5",
-    "brand": "Argon Audio",
-    "category": "Aktivni Zvučnici",
-    "subcategory": "Bookshelf",
-    "series": "FENRIS",
-    "description": "Aktivni bookshelf zvučnici sa 5-inčnim wooferom, Bluetooth i HDMI ARC.",
-    "longDescription": "Argon Audio FENRIS A5 su aktivni bookshelf zvučnici koji nude moćan zvuk u kompaktnom formatu. Opremljeni su 5-inčnim bas/srednjotoncem i 0.75-inčnim visokotoncem, te integriranim Class D pojačalom. Podržavaju Bluetooth 5.0, HDMI ARC, optički digitalni i analogni RCA ulaze, kao i MM gramofonski ulaz. Savršeni su za srednje prostore, pružajući jasan i dinamičan zvuk s dubokim basom.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Bookshelf aktivni",
-      "Visokotonac: 0.75″ kupolasti",
-      "Bas/srednji tonovi: 1 x 5″",
-      "Pojačalo: Klasa D",
-      "Ulazi: TV ARC, Optički digitalni, Stereo line-in (L/R RCA), Gramofon (MM), Bluetooth 5.0"
-    ]
-  },
-  {
-    "name": "FENRIS A2",
-    "brand": "Argon Audio",
-    "category": "Aktivni Zvučnici",
-    "subcategory": "Bookshelf",
-    "series": "FENRIS",
-    "description": "Kompaktni aktivni zvučnici s 3.5-inčnim wooferom, idealni za manje prostore ili stolne postavke.",
-    "longDescription": "Argon Audio FENRIS A2 su najmanji aktivni zvučnici u FENRIS seriji, idealni za male prostore, stolna računala ili kao diskretni audio sustav za spavaću sobu. Unatoč veličini, pružaju iznenađujuće dobar zvuk, jasan i uravnotežen. Lako se povezuju putem Bluetootha i drugih ulaza, nudeći jednostavnost i kvalitetu zvuka.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Bookshelf aktivni",
-      "Bas/srednji tonovi: 1 x 3.5″",
-      "Veličina: Vrlo kompaktan"
-    ]
-  },
-  {
-    "name": "FENRIS A22",
-    "brand": "Argon Audio",
-    "category": "Aktivni Zvučnici",
-    "subcategory": "Za zid",
-    "series": "FENRIS",
-    "description": "Tanji aktivni zvučnici za zid s dvostrukim 4-inčnim wooferima.",
-    "longDescription": "Argon Audio FENRIS A22 su tanji aktivni zvučnici, dizajnirani za zidnu montažu ili kao diskretni samostojeći zvučnici. Odlikuju se dvostrukim 4-inčnim wooferima koji pružaju solidan bas unatoč tankom profilu. Integrirano pojačalo i razni ulazi (uključujući Bluetooth i HDMI ARC) čine ih svestranim rješenjem za moderno uređenje doma.",
-    "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-    "specifications": [
-      "Tip zvučnika: Aktivni (za zid/tanki)",
-      "Bas/srednji tonovi: 2 x 4″",
-      "Veličina: Tanak profil"
-    ]
-  }
-]
+{
+  "categories": [
+    {
+      "name": "Zvučnici",
+      "subcategories": [
+        {
+          "name": "Samostojeći",
+          "models": [
+            {
+              "name": "Fenris A55",
+              "brand": "Argon Audio",
+              "series": "Fenris",
+              "description": "Pristupačni samostojeći zvučnik za Hi-Fi i kućno kino.",
+              "longDescription": "Argon Audio Fenris A55 je 2.5-sistemski bas-reflex zvučnik sa dome visokotoncem i dva bas/srednjetonca, idealan za budžetske Hi-Fi sisteme.",
+              "intended_use": "Hi-Fi stereo, kućno kino",
+              "price": "Approx. $900 /par (2025 estimate)",
+              "finishes": ["Black", "White", "Walnut"],
+              "imageUrl": "https://www.argonaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "2.5-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø25mm dome visokotonac",
+                  "2x Ø130mm bas/srednjetonci"
+                ],
+                "frequency_response": "40Hz - 25kHz (±3dB)",
+                "sensitivity": "89dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "4Ω",
+                "recommended_amplifier_power": "40W – 150W na 4Ω",
+                "dimensions": {
+                  "height": "875mm",
+                  "width": "170mm",
+                  "depth": "260mm"
+                },
+                "weight": "14.0kg",
+                "technologies": [
+                  "Dual mid/bass drivers",
+                  "Bass-reflex port"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Regalni/Stalni",
+          "models": [
+            {
+              "name": "Forte A5",
+              "brand": "Argon Audio",
+              "series": "Forte",
+              "description": "Kompaktni regalni zvučnik za manje prostore.",
+              "longDescription": "Argon Audio Forte A5 je 2-sistemski bas-reflex zvučnik sa dome visokotoncem i bas/srednjetoncem, idealan za manje Hi-Fi sisteme.",
+              "intended_use": "Hi-Fi stereo",
+              "price": "Approx. $500 /par (2025 estimate)",
+              "finishes": ["Black", "White", "Walnut"],
+              "imageUrl": "https://www.argonaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "2-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø25mm dome visokotonac",
+                  "1x Ø130mm bas/srednjetonac"
+                ],
+                "frequency_response": "50Hz - 25kHz (±3dB)",
+                "sensitivity": "86dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "4Ω",
+                "recommended_amplifier_power": "30W – 100W na 4Ω",
+                "dimensions": {
+                  "height": "310mm",
+                  "width": "170mm",
+                  "depth": "240mm",
+                  "note": "Samo kabinet, preporučuje se stalak"
+                },
+                "weight": "5.5kg",
+                "technologies": [
+                  "Bass-reflex port"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
