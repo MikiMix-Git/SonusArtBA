@@ -1,4 +1,4 @@
-<!-- Verzija 1.73 - AI Asistent za Postavku Sistema (Prilagođena JSON struktura za Marantz) -->
+<!-- Verzija 1.77 - AI Asistent za Postavku Sistema (Popravka parsiranja snage i impedanse pojačala) -->
 <!DOCTYPE html>
 <html lang="sr">
 <head>
@@ -518,7 +518,7 @@
     </div>
 
     <script>
-        // Verzija 1.73
+        // Verzija 1.77
         // URL-ovi JSON fajlova sa podacima o proizvodima
         const jsonUrls = [
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Argon%20Audio.json",
@@ -623,31 +623,43 @@
          * Vraća broj ili objekat {min: number, max: number} ili null.
          */
         function parseImpedance(impedanceString) {
-            if (!impedanceString) return null;
+            console.log("parseImpedance: Input string:", impedanceString);
+            if (!impedanceString) {
+                console.log("parseImpedance: Input is null or empty.");
+                return null;
+            }
 
+            // Make sure to escape parentheses and allow for more flexible whitespace.
             // Try to match "XΩ (minimum YΩ)" or "X Ohma (minimum Y Ohma)"
-            // Anchored to start and end of string
-            const matchMinMax = impedanceString.match(/^(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)(?:\s*\(minimum\s*(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)\))?$/i);
+            const matchMinMax = impedanceString.match(/^(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)(?:\s*\(\s*minimum\s*(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)\s*\))?$/i);
             if (matchMinMax) {
+                console.log("parseImpedance: Matched by matchMinMax regex. Match:", matchMinMax);
                 const nominal = parseFloat(matchMinMax[1]);
-                const minimum = matchMinMax[2] ? parseFloat(matchMinMax[2]) : nominal; // If no minimum specified, use nominal
+                const minimum = matchMinMax[2] ? parseFloat(matchMinMax[2]) : nominal;
                 return { min: minimum, max: nominal };
+            } else {
+                console.log("parseImpedance: Did NOT match matchMinMax regex.");
             }
 
             // Try to match "X-YΩ" or "X-Y Ohma"
-            // Anchored to start and end of string
-            const matchRange = impedanceString.match(/^(\d+(?:\.\d+)?)-(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)$/i);
+            const matchRange = impedanceString.match(/^(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)$/i);
             if (matchRange) {
+                console.log("parseImpedance: Matched by matchRange regex. Match:", matchRange);
                 return { min: parseFloat(matchRange[1]), max: parseFloat(matchRange[2]) };
+            } else {
+                console.log("parseImpedance: Did NOT match matchRange regex.");
             }
 
             // Try to match single "XΩ" or "X Ohma"
-            // Anchored to start and end of string
             const matchSingle = impedanceString.match(/^(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)$/i);
             if (matchSingle) {
+                console.log("parseImpedance: Matched by matchSingle regex. Match:", matchSingle);
                 const singleVal = parseFloat(matchSingle[1]);
                 return { min: singleVal, max: singleVal };
+            } else {
+                console.log("parseImpedance: Did NOT match matchSingle regex.");
             }
+            console.log("parseImpedance: No regex matched.");
             return null;
         }
 
@@ -658,27 +670,44 @@
          * @returns {number | null} Izlazna snaga u vatima ili null.
          */
         function getAmplifierOutputPower(specs) {
-            // Proveri oba ključa za snagu
-            const powerStr = specs["Izlazna snaga"] || specs["Snaga"];
-            if (!powerStr) return null;
+            // Proveri ključeve za snagu, dodajući 'amplifier_power'
+            const powerStr = specs["Izlazna snaga"] || specs["Snaga"] || specs["amplifier_power"] || specs["amplifier_power_watts"];
+            if (!powerStr) {
+                console.log("getAmplifierOutputPower: No power string found.");
+                return null;
+            }
+            console.log("getAmplifierOutputPower: Input power string:", powerStr);
 
-            // Pokušaj pronaći snagu pri 8 Ohma
-            const match8Ohm = powerStr.match(/(\d+)\s*Watt\s*\(pri\s*8Ω\)/i) || powerStr.match(/(\d+)\s*Watt\s*\(pri\s*8\s*Ohma\)/i);
-            if (match8Ohm) {
-                return parseInt(match8Ohm[1]);
+            // Ako je već broj (npr. iz 'amplifier_power_watts')
+            if (typeof powerStr === 'number') {
+                console.log("getAmplifierOutputPower: Input is a number. Power:", powerStr);
+                return powerStr;
             }
 
-            // Ako nije pronađeno pri 8 Ohma, pokušaj pronaći snagu pri 4 Ohma
-            const match4Ohm = powerStr.match(/(\d+)\s*Watt\s*\(pri\s*4Ω\)/i) || powerStr.match(/(\d+)\s*Watt\s*\(pri\s*4\s*Ohma\)/i);
-            if (match4Ohm) {
-                return parseInt(match4Ohm[1]);
+            let match;
+
+            // Try to match "XW po kanalu (8Ω)" or "XW po kanalu (8 Ohma)"
+            match = powerStr.match(/(\d+)W\s*po kanalu\s*\(8Ω\)/i) || powerStr.match(/(\d+)W\s*po kanalu\s*\(8\s*Ohma\)/i);
+            if (match) {
+                console.log("getAmplifierOutputPower: Matched 'XW po kanalu (8Ω)'. Power:", parseInt(match[1]));
+                return parseInt(match[1]);
             }
 
-            // Fallback na prvu pronađenu snagu ako nije navedena impedansa
-            const singleMatch = powerStr.match(/(\d+)\s*Watt/);
-            if (singleMatch) {
-                return parseInt(singleMatch[1]);
+            // Try to match "XW po kanalu (4Ω)" or "XW po kanalu (4 Ohma)"
+            match = powerStr.match(/(\d+)W\s*po kanalu\s*\(4Ω\)/i) || powerStr.match(/(\d+)W\s*po kanalu\s*\(4\s*Ohma\)/i);
+            if (match) {
+                console.log("getAmplifierOutputPower: Matched 'XW po kanalu (4Ω)'. Power:", parseInt(match[1]));
+                return parseInt(match[1]);
             }
+
+            // Fallback to general "XW" or "X Watt" or just "X" followed by W
+            match = powerStr.match(/(\d+)\s*W/i);
+            if (match) {
+                console.log("getAmplifierOutputPower: Matched general 'XW'. Power:", parseInt(match[1]));
+                return parseInt(match[1]);
+            }
+
+            console.log("getAmplifierOutputPower: No power match found.");
             return null;
         }
 
@@ -687,14 +716,39 @@
          * Returns an array of numbers or an empty array.
          */
         function extractImpedanceFromPowerString(powerString) {
+            console.log("extractImpedanceFromPowerString: Input string:", powerString);
             if (!powerString) return [];
             const impedances = [];
-            // Ažurirano: podržava "Ohma" i "Ω"
-            const matches = powerString.matchAll(/na (\d+)\s*(?:Ohma|Ω)/g); 
+
+            // 1. Match impedances explicitly stated with "na X Ohma" or "na XΩ"
+            let matches = powerString.matchAll(/na (\d+(?:\.\d+)?)\s*(?:Ohma|Ω)/gi);
             for (const match of matches) {
-                impedances.push(parseInt(match[1]));
+                impedances.push(parseFloat(match[1]));
             }
-            return impedances;
+
+            // 2. Match impedances within parentheses like "(8Ω)" or "(8 Ohma)"
+            matches = powerString.matchAll(/\((\d+(?:\.\d+)?)\s*(?:Ω|Ohma)\)/gi);
+            for (const match of matches) {
+                impedances.push(parseFloat(match[1]));
+            }
+
+            // 3. Match standalone impedances "XΩ" or "X Ohma" that are not part of a wattage value.
+            // This regex ensures "XW" is not matched as impedance.
+            // It looks for a number followed by Ω or Ohma, not preceded by 'W' (to avoid "100W" being parsed as 100 Ohm)
+            // and ensures it's a word boundary before the number to avoid partial matches.
+            matches = powerString.matchAll(/\b(\d+(?:\.\d+)?)\s*(?:Ω|Ohma)\b(?!W)/gi);
+            for (const match of matches) {
+                // Additional check to ensure it's not a power rating like "100W"
+                // This is a safety net, though the regex should handle most cases.
+                const preMatch = powerString.substring(0, match.index);
+                if (!preMatch.match(/\d+\s*W$/i)) { // If the text immediately before does NOT end with a number and 'W'
+                    impedances.push(parseFloat(match[1]));
+                }
+            }
+
+            const uniqueImpedances = [...new Set(impedances)].sort((a, b) => a - b);
+            console.log("extractImpedanceFromPowerString: Extracted impedances:", uniqueImpedances);
+            return uniqueImpedances;
         }
 
         /**
@@ -705,7 +759,8 @@
          * @returns {{min: number, max: number} | null} Raspon impedanse ili null.
          */
         function getAmplifierSupportedImpedanceRange(specs) {
-            let impedanceStr = specs["Impedansa zvučnika"] || specs["Podržana impedansa zvučnika"] || specs["Impedansa"];
+            // Dodani 'nominal_impedance' i 'impedance' za širu podršku
+            let impedanceStr = specs["Impedansa zvučnika"] || specs["Podržana impedansa zvučnika"] || specs["Impedansa"] || specs["nominal_impedance"] || specs["impedance"];
             let parsedImpedance = parseImpedance(impedanceStr);
 
             if (parsedImpedance) {
@@ -713,7 +768,7 @@
             }
 
             // Ako nije pronađeno u standardnim ključevima, pokušaj izvući iz "Izlazna snaga"
-            const powerOutputStr = specs["Izlazna snaga"] || specs["Snaga"]; // Proveri oba ključa
+            const powerOutputStr = specs["Izlazna snaga"] || specs["Snaga"] || specs["amplifier_power"]; // Proveri sva tri ključa
             if (powerOutputStr) {
                 const extractedImpedances = extractImpedanceFromPowerString(powerOutputStr);
                 if (extractedImpedances.length > 0) {
@@ -808,15 +863,15 @@
                                                 seriesSet.add(model.series);
                                             }
                                         });
-                                    } else {
+                                    } else { // Correctly nested else for subCategoryObj.models
                                         console.warn(`Potkategorija "${subCategoryObj.name}" u kategoriji "${categoryObj.name}" nema niz modela ili nije niz. Podaci:`, subCategoryObj);
                                     }
                                 });
-                            } else {
+                            } else { // Correctly nested else for categoryObj.subcategories
                                 console.warn(`Kategorija "${categoryObj.name}" nema niz potkategorija ili nije niz. Podaci:`, categoryObj);
                             }
                         });
-                    } 
+                    }
                     // Proveri da li je struktura sa "brand" i "products" (kao Marantz)
                     else if (data.brand && data.products && Array.isArray(data.products)) {
                         brandsSet.add(data.brand);
@@ -832,7 +887,7 @@
                             }
                         });
                     }
-                    else {
+                    else { // Correctly nested else for the main data structure check
                         console.warn(`JSON fajl sa URL-a ${url} ne prati očekivanu strukturu ('categories' ili 'brand'/'products') i biće preskočen:`, data);
                     }
                 });
@@ -873,7 +928,7 @@
 
             } catch (error) {
                 console.error("Opšta greška pri učitavanju ili parsiranju JSON fajlova:", error);
-                displayUIMessage("Došlo je do greške pri učitavanju proizvoda. Molimo pokušajte ponovo.", "error", "mainMessageArea");
+                displayUIMessage("Došlo je do greške pri inicijalnom učitavanju proizvoda. Molimo pokušajte ponovo.", "error", "mainMessageArea");
             }
         }
 
@@ -1039,7 +1094,7 @@
                                     specificationsHtml += `<li>${escapeHtml(dimKey)}: ${escapeHtml(value[dimKey])}</li>`;
                                 }
                                 specificationsHtml += `</ul></div>`;
-                            } else if (["Tip", "Tip zvučnika", "Tip drajvera", "Pogon", "Impedansa", "Preporučena snaga pojačala", "Povezivanje", "Nominalna impedansa", "inputs", "outputs", "technologies", "features"].includes(key)) { // Dodane "inputs", "outputs", "technologies", "features"
+                            } else if (["Tip", "Tip zvučnika", "Tip drajvera", "Pogon", "Impedansa", "Preporučena snaga pojačala", "Povezivanje", "Nominalna impedansa", "inputs", "outputs", "technologies", "features", "recommended_amplifier_power"].includes(key)) { // Dodane "inputs", "outputs", "technologies", "features", "recommended_amplifier_power"
                                 // Postojeća logika za klikabilne specifikacije
                                 const fullValue = typeof value === 'string' ? value : (Array.isArray(value) ? value.map(item => String(item)).join(', ') : String(value));
                                 let clickableParts = [];
@@ -1660,8 +1715,9 @@
 
             // Logika za zvučnike: Preporuči pojačala
             if (selectedProductCategoryLower.includes("zvučnici")) {
-                const speakerImpedance = parseImpedance(selectedProductSpecs["Nominalna impedansa"] || selectedProductSpecs["Impedansa"]);
-                const speakerPowerRange = parsePowerRange(selectedProductSpecs["Preporučena snaga pojačala"]);
+                // Ispravljen pristup ključu 'nominal_impedance'
+                const speakerImpedance = parseImpedance(selectedProductSpecs["nominal_impedance"] || selectedProductSpecs["Impedansa"]);
+                const speakerPowerRange = parsePowerRange(selectedProductSpecs["recommended_amplifier_power"] || selectedProductSpecs["Preporučena snaga pojačala"]);
 
                 console.log("Parsirana impedansa zvučnika:", speakerImpedance, "Parsiran opseg snage zvučnika:", speakerPowerRange);
 
@@ -1729,9 +1785,8 @@
                     const productCategoryLower = product.category ? product.category.toLowerCase() : '';
                     if (productCategoryLower.includes("zvučnici")) {
                         const speakerSpecs = getNormalizedSpecifications(product);
-                        const speakerImpedance = parseImpedance(speakerSpecs["Nominalna impedansa"] || speakerSpecs["Impedansa"]);
-                        const speakerPowerRange = parsePowerRange(speakerSpecs["Preporučena snaga pojačala"]);
-                        const speakerImpedanceRangeObj = toImpedanceRange(speakerImpedance);
+                        const speakerImpedance = parseImpedance(speakerSpecs["nominal_impedance"] || speakerSpecs["Impedansa"]); // Ispravljen pristup ključu
+                        const speakerPowerRange = parsePowerRange(speakerSpecs["recommended_amplifier_power"] || speakerSpecs["Preporučena snaga pojačala"]); // Koristi 'recommended_amplifier_power'
 
                         console.log(`  Proveravam zvučnik: ${product.name}`);
                         console.log(`    Impedansa zvučnika: ${speakerImpedance ? JSON.stringify(speakerImpedance) : 'null'}, Opseg snage zvučnika: ${speakerPowerRange ? JSON.stringify(speakerPowerRange) : 'null'}`);
