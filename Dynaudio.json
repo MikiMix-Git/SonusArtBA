@@ -15,7 +15,7 @@
               "intended_use": "Hi-Fi stereo, kućno kino",
               "price": "Approx. $5,000 /par (2025 estimate)",
               "finishes": ["Black High Gloss", "Walnut", "White High Gloss", "Blonde Wood"],
-              "imageUrl": "https://www.dynaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Dynaudio.png",
               "specifications": {
                 "type": "3-sistemski, bas-reflex",
                 "drivers": [
@@ -49,7 +49,7 @@
               "intended_use": "Hi-Fi stereo, kućno kino",
               "price": "Approx. $10,000 /par (2025 estimate)",
               "finishes": ["Black High Gloss", "Walnut", "Grey Oak"],
-              "imageUrl": "https://www.dynaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Dynaudio.png",
               "specifications": {
                 "type": "3-sistemski, bas-reflex",
                 "drivers": [
@@ -88,7 +88,7 @@
               "intended_use": "Hi-Fi stereo",
               "price": "Approx. $3,000 /par (2025 estimate)",
               "finishes": ["Black Vine", "Ebony Wave"],
-              "imageUrl": "https://www.dynaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Dynaudio.png",
               "specifications": {
                 "type": "2-sistemski, bas-reflex",
                 "drivers": [
@@ -122,7 +122,7 @@
               "intended_use": "Hi-Fi stereo",
               "price": "Approx. $1,000 /par (2025 estimate)",
               "finishes": ["Black", "White", "Walnut"],
-              "imageUrl": "https://www.dynaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Dynaudio.png",
               "specifications": {
                 "type": "2-sistemski, bas-reflex",
                 "drivers": [
