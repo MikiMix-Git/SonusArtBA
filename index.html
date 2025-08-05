@@ -1,4 +1,4 @@
-<!-- Verzija 1.66 - AI Asistent za Postavku Sistema (Dodati novi JSON fajlovi) -->
+<!-- Verzija 1.69 - AI Asistent za Postavku Sistema (Pokušaj popravke SyntaxError) -->
 <!DOCTYPE html>
 <html lang="sr">
 <head>
@@ -67,14 +67,19 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: relative; /* Za pozicioniranje checkboxa */
+            display: flex; /* Koristi flexbox za poravnanje sadržaja */
+            flex-direction: column; /* Sadržaj u koloni */
+            align-items: center; /* Centriraj sadržaj horizontalno */
+            text-align: center; /* Centriraj tekst */
         }
         .product h3 {
             margin: 0 0 10px;
             color: #333;
         }
         .product img {
-            max-width: 100%;
-            height: auto;
+            width: 150px; /* Fiksna širina */
+            height: 150px; /* Fiksna visina */
+            object-fit: contain; /* Sadrži sliku unutar dimenzija, bez sečenja */
             border-radius: 5px;
             margin-bottom: 10px;
         }
@@ -84,12 +89,16 @@
         .product .spec-item { /* Novi stil za pojedinačne specifikacije */
             margin-bottom: 5px;
             font-size: 14px;
+            text-align: left; /* Poravnaj specifikacije levo */
+            width: 100%; /* Zauzmi punu širinu unutar kartice */
         }
         .long-description {
             display: none;
             margin-top: 10px;
             font-size: 14px;
             color: #555;
+            text-align: left; /* Poravnaj dugačak opis levo */
+            width: 100%; /* Zauzmi punu širinu unutar kartice */
         }
         .long-description.show {
             display: block;
@@ -509,7 +518,7 @@
     </div>
 
     <script>
-        // Verzija 1.66
+        // Verzija 1.69
         // URL-ovi JSON fajlova sa podacima o proizvodima
         const jsonUrls = [
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/AVID%20HiFi.json",
@@ -521,8 +530,8 @@
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Bang%20%26%20Olufsen.json",
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Dynaudio.json",
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Polk%20Audio.json",
-            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Q-Acoustics.json"
-        ];
+            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Q-Acoustics.json",
+        ]; // Dodat zarez na kraju
 
         // Globalna varijabla za sve učitane proizvode
         let allProductsData = [];
@@ -1232,7 +1241,7 @@
             // Resetuj i sakrij Gemini analizu pri otvaranju modala
             document.getElementById("geminiAnalysisContainer").innerHTML = '';
             document.getElementById("geminiAnalysisContainer").classList.remove('loading');
-            document.getElementById("analyzeComparisonButton").disabled = true;
+            // Dugme "Analiziraj usporedbu" se sada kontroliše isključivo funkcijom updateComparisonButton()
             
             // Prikaži modal
             document.getElementById("comparisonModal").style.display = "flex"; // Koristi flex za centriranje
@@ -1250,7 +1259,7 @@
             // Očisti Gemini analizu
             document.getElementById("geminiAnalysisContainer").innerHTML = '';
             document.getElementById("geminiAnalysisContainer").classList.remove('loading');
-            document.getElementById("analyzeComparisonButton").disabled = true;
+            document.getElementById("analyzeComparisonButton").disabled = true; // Onemogući ponovo kada se modal zatvori
         }
 
         /**
