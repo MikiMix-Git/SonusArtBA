@@ -15,7 +15,7 @@
               "intended_use": "Hi-Fi stereo, kućno kino",
               "price": "Approx. $2,000 /par (2025 estimate)",
               "finishes": ["Black", "White", "Satin Oak", "Rosewood"],
-              "imageUrl": "https://www.qacoustics.co.uk/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Q-Acoustics.png",
               "specifications": {
                 "type": "2.5-sistemski, bas-reflex",
                 "drivers": [
@@ -53,7 +53,7 @@
               "intended_use": "Hi-Fi stereo",
               "price": "Approx. $800 /par (2025 estimate)",
               "finishes": ["Black", "White", "Satin Oak", "Rosewood"],
-              "imageUrl": "https://www.qacoustics.co.uk/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Q-Acoustics.png",
               "specifications": {
                 "type": "2-sistemski, bas-reflex",
                 "drivers": [
@@ -86,7 +86,7 @@
               "intended_use": "Hi-Fi stereo",
               "price": "Approx. $1,300 /par (2025 estimate)",
               "finishes": ["Black", "White", "Silver"],
-              "imageUrl": "https://www.qacoustics.co.uk/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Q-Acoustics.png",
               "specifications": {
                 "type": "2-sistemski, bas-reflex",
                 "drivers": [
@@ -124,7 +124,7 @@
               "intended_use": "Hi-Fi stereo, bežično strimovanje",
               "price": "Approx. $2,000 /par (2025 estimate)",
               "finishes": ["Black", "White"],
-              "imageUrl": "https://www.qacoustics.co.uk/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Q-Acoustics.png",
               "specifications": {
                 "type": "2-sistemski, aktivni, bas-reflex",
                 "drivers": [
