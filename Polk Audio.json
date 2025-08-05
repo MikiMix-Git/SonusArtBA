@@ -15,7 +15,7 @@
               "intended_use": "Hi-Fi stereo, kućno kino",
               "price": "Approx. $2,300 /par (2025 estimate)",
               "finishes": ["Black", "Walnut"],
-              "imageUrl": "https://www.polkaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Polk%20Audio.png",
               "specifications": {
                 "type": "3-sistemski, bas-reflex",
                 "drivers": [
@@ -49,7 +49,7 @@
               "intended_use": "Hi-Fi stereo, kućno kino",
               "price": "Approx. $4,000 /par (2025 estimate)",
               "finishes": ["Black Ash", "Walnut"],
-              "imageUrl": "https://www.polkaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Polk%20Audio.png",
               "specifications": {
                 "type": "3-sistemski, bas-reflex",
                 "drivers": [
@@ -88,7 +88,7 @@
               "intended_use": "Hi-Fi stereo, kućno kino",
               "price": "Approx. $700 /par (2025 estimate)",
               "finishes": ["Black", "Walnut"],
-              "imageUrl": "https://www.polkaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Polk%20Audio.png",
               "specifications": {
                 "type": "2-sistemski, bas-reflex",
                 "drivers": [
@@ -132,7 +132,7 @@
               "intended_use": "Kućno kino",
               "price": "Approx. $400 (2025 estimate)",
               "finishes": ["Black"],
-              "imageUrl": "https://www.polkaudio.com/images/logo.svg",
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Polk%20Audio.png",
               "specifications": {
                 "type": "Soundbar sa Dolby Atmos, bežični subwoofer",
                 "channels": "3.1.2",
