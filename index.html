@@ -1,4 +1,4 @@
-<!-- Verzija 1.69 - AI Asistent za Postavku Sistema (Pokušaj popravke SyntaxError) -->
+<!-- Verzija 1.73 - AI Asistent za Postavku Sistema (Prilagođena JSON struktura za Marantz) -->
 <!DOCTYPE html>
 <html lang="sr">
 <head>
@@ -518,20 +518,17 @@
     </div>
 
     <script>
-        // Verzija 1.69
+        // Verzija 1.73
         // URL-ovi JSON fajlova sa podacima o proizvodima
         const jsonUrls = [
-            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/AVID%20HiFi.json",
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Argon%20Audio.json",
-            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Astell%26Kern.json",
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Bowers%20%26%20Wilkins.json", // Novi format
-            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Audio-Technica.json",
-            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Audioquest.json",
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Bang%20%26%20Olufsen.json",
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Dynaudio.json",
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Polk%20Audio.json",
             "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Q-Acoustics.json",
-        ]; // Dodat zarez na kraju
+            "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/Marantz.json",
+        ]; 
 
         // Globalna varijabla za sve učitane proizvode
         let allProductsData = [];
@@ -762,50 +759,86 @@
             try {
                 const responses = await Promise.all(jsonUrls.map(url => 
                     fetch(url).then(res => {
-                        if (!res.ok) throw new Error(`Neuspešno učitavanje: ${url}`);
+                        if (!res.ok) {
+                            console.error(`Greška pri učitavanju JSON fajla: ${url}, Status: ${res.status}`);
+                            throw new Error(`Neuspešno učitavanje: ${url}`);
+                        }
                         return res.json();
+                    }).catch(error => {
+                        console.error(`Greška pri dohvaćanju ${url}:`, error);
+                        // Ne želimo da zaustavimo celo učitavanje ako jedan fajl ne uspe
+                        return null; 
                     })
                 ));
                 
                 // Resetuj allProductsData
                 allProductsData = [];
                 const categoriesSet = new Set();
-                const seriesSet = new Set(); // Ovo će biti subcategories
+                const seriesSet = new Set(); // Ovo će sada biti serije iz modela
                 const brandsSet = new Set();
 
-                responses.forEach(data => {
-                    // Pretpostavljamo da svi JSON fajlovi sada imaju novu strukturu (sa 'categories' ključem)
+                responses.forEach((data, index) => {
+                    const url = jsonUrls[index];
+                    if (data === null) { // Preskoči fajlove koji nisu uspeli da se učitaju
+                        console.warn(`Preskačem obradu podataka iz URL-a zbog greške pri učitavanju: ${url}`);
+                        return;
+                    }
+
+                    console.log(`Obrađujem podatke iz: ${url}`);
+                    if (url.includes("Marantz.json")) {
+                        console.log("Marantz JSON podaci pre obrade:", data);
+                    }
+
+                    // Proveri da li je struktura sa "categories" (kao Argon Audio)
                     if (data.categories && Array.isArray(data.categories)) {
                         data.categories.forEach(categoryObj => {
                             categoriesSet.add(categoryObj.name);
                             if (categoryObj.subcategories && Array.isArray(categoryObj.subcategories)) {
                                 categoryObj.subcategories.forEach(subCategoryObj => {
-                                    // Ako subcategory ima ime, dodaj ga kao seriju, inače preskoči (npr. "Nema")
-                                    if (subCategoryObj.name && subCategoryObj.name !== "Nema") {
-                                        seriesSet.add(subCategoryObj.name);
-                                    }
                                     if (subCategoryObj.models && Array.isArray(subCategoryObj.models)) {
                                         subCategoryObj.models.forEach(model => {
-                                            // Dodaj category i series (subcategory) atribute modelu
                                             allProductsData.push({
                                                 ...model,
                                                 category: categoryObj.name,
-                                                series: subCategoryObj.name // 'series' sada odgovara 'subcategory.name'
+                                                subcategory: subCategoryObj.name // Sačuvaj subcategory ime
                                             });
                                             brandsSet.add(model.brand);
+                                            console.log(`Dodan brend u set: ${model.brand}`);
+                                            if (model.series) {
+                                                seriesSet.add(model.series);
+                                            }
                                         });
+                                    } else {
+                                        console.warn(`Potkategorija "${subCategoryObj.name}" u kategoriji "${categoryObj.name}" nema niz modela ili nije niz. Podaci:`, subCategoryObj);
                                     }
                                 });
+                            } else {
+                                console.warn(`Kategorija "${categoryObj.name}" nema niz potkategorija ili nije niz. Podaci:`, categoryObj);
                             }
                         });
-                    } else {
-                        // Ako fajl ne prati očekivanu strukturu, prikaži upozorenje i preskoči ga
-                        console.warn("JSON fajl ne prati očekivanu 'categories' strukturu i biće preskočen:", data);
+                    } 
+                    // Proveri da li je struktura sa "brand" i "products" (kao Marantz)
+                    else if (data.brand && data.products && Array.isArray(data.products)) {
+                        brandsSet.add(data.brand);
+                        console.log(`Dodan brend u set: ${data.brand}`);
+                        data.products.forEach(product => {
+                            allProductsData.push({
+                                ...product,
+                                brand: data.brand // Osiguraj da je brend postavljen
+                            });
+                            categoriesSet.add(product.category);
+                            if (product.series) {
+                                seriesSet.add(product.series);
+                            }
+                        });
+                    }
+                    else {
+                        console.warn(`JSON fajl sa URL-a ${url} ne prati očekivanu strukturu ('categories' ili 'brand'/'products') i biće preskočen:`, data);
                     }
                 });
 
                 console.log("Učitano i obrađeno proizvoda:", allProductsData.length);
-                // Pozovite indexProducts nakon učitavanja svih podataka
+                console.log("Konačni brandsSet nakon obrade svih fajlova:", Array.from(brandsSet).sort()); // Loguj sortirane brendove radi lakše inspekcije
                 indexProducts();
 
                 // Popuni kategorije
@@ -818,7 +851,7 @@
                     categoryFilter.appendChild(option);
                 });
 
-                // Popuni serije (sada su to subcategories)
+                // Popuni serije (sada su to serije iz modela)
                 const seriesFilter = document.getElementById("seriesFilter");
                 seriesFilter.innerHTML = '<option value="">Sve serije</option>'; // Resetuj
                 Array.from(seriesSet).sort().forEach(s => {
@@ -839,7 +872,7 @@
                 });
 
             } catch (error) {
-                console.error("Greška pri učitavanju ili parsiranju JSON fajlova:", error);
+                console.error("Opšta greška pri učitavanju ili parsiranju JSON fajlova:", error);
                 displayUIMessage("Došlo je do greške pri učitavanju proizvoda. Molimo pokušajte ponovo.", "error", "mainMessageArea");
             }
         }
@@ -865,7 +898,7 @@
             const searchQuery = document.getElementById("searchInput").value.toLowerCase();
             const selectedCategory = document.getElementById("categoryFilter").value;
             const selectedBrand = document.getElementById("brandFilter").value;
-            const selectedSeries = document.getElementById("seriesFilter").value; // Ovo je sada subcategory
+            const selectedSeries = document.getElementById("seriesFilter").value; // Ovo je sada serija iz modela
             const sortOption = document.getElementById("seriesSort").value;
 
             // Ako allProductsData nije učitano (prvo pokretanje), učitaj ga
@@ -887,7 +920,7 @@
             if (selectedBrand) {
                 filteredProducts = filteredProducts.filter(p => p.brand === selectedBrand);
             }
-            // Filtriranje po seriji (sada subcategory)
+            // Filtriranje po seriji (sada serija iz modela)
             if (selectedSeries) {
                 filteredProducts = filteredProducts.filter(p => p.series === selectedSeries);
             }
@@ -971,7 +1004,8 @@
                         name: product.name || 'Nepoznat naziv',
                         brand: product.brand || 'Nepoznat brend',
                         category: product.category || 'Nepoznata kategorija',
-                        series: product.series || 'Nepoznata serija', // Sada odgovara subcategory
+                        series: product.series || 'Nepoznata serija', // Sada odgovara seriji iz modela
+                        subcategory: product.subcategory || 'Nema podkategorije', // Nova podkategorija
                         price: product.price || 'Nije dostupno',
                         description: product.description || 'Nema opisa',
                         longDescription: product.longDescription || 'Nema detaljnog opisa',
@@ -1054,8 +1088,8 @@
                         <p><strong>Brend:</strong> <span class="clickable filter-brand" data-brand="${escapeHtml(safeProduct.brand)}">${escapeHtml(safeProduct.brand)}</span></p>
                         <p><strong>Kategorija:</strong> <span class="clickable filter-category" data-category="${escapeHtml(safeProduct.category)}">${escapeHtml(safeProduct.category)}</span></p>
                         <p><strong>Serija:</strong> <span class="clickable filter-series" data-series="${escapeHtml(safeProduct.series)}">${escapeHtml(safeProduct.series)}</span></p>
-                        <p><strong>Cena:</strong> ${escapeHtml(safeProduct.price)}</p>
                         <p><strong>Opis:</strong> ${escapeHtml(safeProduct.description)}</p>
+                        <p><strong>Cena:</strong> ${escapeHtml(safeProduct.price)}</p>
                         <button class="toggle-btn" data-index="${index}">Prikaži više</button>
                         <button class="overview-product-btn" data-product-id="${productId}">AI Review proizvoda</button>
                         <button class="recommend-product-btn" data-product-id="${productId}">Preporuči</button>
@@ -1618,18 +1652,18 @@
             const recommendations = [];
             const selectedProductSpecs = getNormalizedSpecifications(selectedProduct);
 
-            console.log("--- Finding recommendations for:", selectedProduct.name, "Category:", selectedProduct.category, "---");
-            console.log("Selected Product Normalized Specs:", selectedProductSpecs);
+            console.log("--- Tražim preporuke za:", selectedProduct.name, "Kategorija:", selectedProduct.category, "---");
+            console.log("Normalizovane specifikacije odabranog proizvoda:", selectedProductSpecs);
 
             const selectedProductCategoryLower = selectedProduct.category ? selectedProduct.category.toLowerCase() : '';
             const selectedProductSeriesLower = selectedProduct.series ? selectedProduct.series.toLowerCase() : ''; // Sada koristimo 'series' kao subcategory
 
-            // Logic for Speakers: Recommend Amplifiers
+            // Logika za zvučnike: Preporuči pojačala
             if (selectedProductCategoryLower.includes("zvučnici")) {
                 const speakerImpedance = parseImpedance(selectedProductSpecs["Nominalna impedansa"] || selectedProductSpecs["Impedansa"]);
                 const speakerPowerRange = parsePowerRange(selectedProductSpecs["Preporučena snaga pojačala"]);
 
-                console.log("Speaker Parsed Impedance:", speakerImpedance, "Speaker Parsed Power Range:", speakerPowerRange);
+                console.log("Parsirana impedansa zvučnika:", speakerImpedance, "Parsiran opseg snage zvučnika:", speakerPowerRange);
 
                 if (!speakerImpedance || !speakerPowerRange) {
                     console.warn("Nedostaju ključne specifikacije zvučnika (Impedansa ili Preporučena snaga pojačala) za preporuku.", selectedProduct);
@@ -1649,37 +1683,37 @@
                         const ampSupportedImpedanceRange = getAmplifierSupportedImpedanceRange(ampSpecs);
                         const ampSupportedImpedanceRangeObj = toImpedanceRange(ampSupportedImpedanceRange);
 
-                        console.log(`  Checking amplifier: ${product.name}`);
-                        console.log(`    Amp Output Power: ${ampOutputPower}, Amp Supported Impedance:`, ampSupportedImpedanceRange);
+                        console.log(`  Proveravam pojačalo: ${product.name}`);
+                        console.log(`    Izlazna snaga pojačala: ${ampOutputPower}, Podržana impedansa pojačala:`, ampSupportedImpedanceRange);
 
                         if (ampOutputPower && ampSupportedImpedanceRangeObj) {
-                            // Power compatibility: amplifier output power should be within +/- 20% of speaker's recommended range
+                            // Kompatibilnost snage: izlazna snaga pojačala treba da bude unutar +/- 20% preporučenog opsega zvučnika
                             const isPowerCompatible = (ampOutputPower >= speakerPowerRange.min * 0.8) && (ampOutputPower <= speakerPowerRange.max * 1.2); 
 
                             let isImpedanceCompatible = false;
                             if (speakerImpedanceRangeObj && ampSupportedImpedanceRangeObj) {
                                  isImpedanceCompatible = doImpedanceRangesOverlap(speakerImpedanceRangeObj, ampSupportedImpedanceRangeObj);
                             }
-                            console.log(`    Power Compatible: ${isPowerCompatible}, Impedance Compatible: ${isImpedanceCompatible}`);
+                            console.log(`    Kompatibilnost snage: ${isPowerCompatible}, Kompatibilnost impedanse: ${isImpedanceCompatible}`);
 
                             if (isPowerCompatible && isImpedanceCompatible) {
                                 recommendations.push(product);
-                                console.log(`    RECOMMENDED: ${product.name} (Amplifier) for ${selectedProduct.name} (Speaker)`);
+                                console.log(`    PREPORUČENO: ${product.name} (Pojačalo) za ${selectedProduct.name} (Zvučnik)`);
                             } else {
-                                console.log(`    NOT RECOMMENDED: ${product.name} (Amplifier) for ${selectedProduct.name} (Amplifier) - Power Compatible: ${isPowerCompatible}, Impedance Compatible: ${isImpedanceCompatible}`);
+                                console.log(`    NIJE PREPORUČENO: ${product.name} (Pojačalo) za ${selectedProduct.name} (Pojačalo) - Kompatibilnost snage: ${isPowerCompatible}, Kompatibilnost impedanse: ${isImpedanceCompatible}`);
                             }
                         } else {
-                            console.log(`    Skipping amplifier ${product.name} due to missing power or impedance data.`);
+                            console.log(`    Preskačem pojačalo ${product.name} zbog nedostatka podataka o snazi ili impedansi.`);
                         }
                     }
                 });
             } 
-            // Logic for Amplifiers (Power/Integrated): Recommend Speakers
-            else if (selectedProductCategoryLower.includes("pojačala") && !selectedProductCategoryLower.includes("pretpojačala")) { // Exclude pre-amplifiers here
+            // Logika za pojačala (snaga/integrisana): Preporuči zvučnike
+            else if (selectedProductCategoryLower.includes("pojačala") && !selectedProductCategoryLower.includes("pretpojačala")) { // Isključi pretpojačala ovde
                 const ampOutputPower = getAmplifierOutputPower(selectedProductSpecs);
                 const ampSupportedImpedanceRange = getAmplifierSupportedImpedanceRange(selectedProductSpecs);
 
-                console.log("Amplifier Parsed Output Power:", ampOutputPower, "Amplifier Parsed Supported Impedance:", ampSupportedImpedanceRange ? JSON.stringify(ampSupportedImpedanceRange) : 'null');
+                console.log("Parsirana izlazna snaga pojačala:", ampOutputPower, "Parsirana podržana impedansa pojačala:", ampSupportedImpedanceRange ? JSON.stringify(ampSupportedImpedanceRange) : 'null');
 
                 if (!ampOutputPower || !ampSupportedImpedanceRange) {
                     console.warn("Nedostaju ključne specifikacije pojačala (Izlazna snaga ili Podržana impedansa zvučnika) za preporuku.", selectedProduct);
@@ -1699,33 +1733,33 @@
                         const speakerPowerRange = parsePowerRange(speakerSpecs["Preporučena snaga pojačala"]);
                         const speakerImpedanceRangeObj = toImpedanceRange(speakerImpedance);
 
-                        console.log(`  Checking speaker: ${product.name}`);
-                        console.log(`    Speaker Impedance: ${speakerImpedance ? JSON.stringify(speakerImpedance) : 'null'}, Speaker Power Range: ${speakerPowerRange ? JSON.stringify(speakerPowerRange) : 'null'}`);
+                        console.log(`  Proveravam zvučnik: ${product.name}`);
+                        console.log(`    Impedansa zvučnika: ${speakerImpedance ? JSON.stringify(speakerImpedance) : 'null'}, Opseg snage zvučnika: ${speakerPowerRange ? JSON.stringify(speakerPowerRange) : 'null'}`);
 
                         if (speakerImpedanceRangeObj && speakerPowerRange) {
-                            // Power compatibility: speaker's recommended power should be within +/- 20% of amplifier's output power
+                            // Kompatibilnost snage: preporučena snaga zvučnika treba da bude unutar +/- 20% izlazne snage pojačala
                             const isPowerCompatible = (ampOutputPower >= speakerPowerRange.min * 0.8) && (ampOutputPower <= speakerPowerRange.max * 1.2);
                             let isImpedanceCompatible = false;
                             if (speakerImpedanceRangeObj && ampSupportedImpedanceRangeObj) {
                                 isImpedanceCompatible = doImpedanceRangesOverlap(speakerImpedanceRangeObj, ampSupportedImpedanceRangeObj);
                             }
-                            console.log(`    Power Compatible: ${isPowerCompatible}, Impedance Compatible: ${isImpedanceCompatible}`);
+                            console.log(`    Kompatibilnost snage: ${isPowerCompatible}, Kompatibilnost impedanse: ${isImpedanceCompatible}`);
 
                             if (isPowerCompatible && isImpedanceCompatible) {
                                 recommendations.push(product);
-                                console.log(`    RECOMMENDED: ${product.name} (Speaker) for ${selectedProduct.name} (Amplifier)`);
+                                console.log(`    PREPORUČENO: ${product.name} (Zvučnik) za ${selectedProduct.name} (Pojačalo)`);
                             } else {
-                                console.log(`    NOT RECOMMENDED: ${product.name} (Speaker) for ${selectedProduct.name} (Amplifier) - Power Compatible: ${isPowerCompatible}, Impedance Compatible: ${isImpedanceCompatible}`);
+                                console.log(`    NIJE PREPORUČENO: ${product.name} (Zvučnik) za ${selectedProduct.name} (Pojačalo) - Kompatibilnost snage: ${isPowerCompatible}, Kompatibilnost impedanse: ${isImpedanceCompatible}`);
                             }
                         } else {
-                            console.log(`    Skipping speaker ${product.name} due to missing impedance or power data.`);
+                            console.log(`    Preskačem zvučnik ${product.name} zbog nedostatka podataka o impedansi ili snazi.`);
                         }
                     }
                 });
             }
-            // New Logic for Preamplifiers: Recommend Power Amplifiers
+            // Nova logika za pretpojačala: Preporuči pojačala snage
             else if (selectedProductCategoryLower.includes("pretpojačala")) {
-                console.log("Selected product is a Preamplifier. Looking for compatible Power Amplifiers.");
+                console.log("Odabrani proizvod je pretpojačalo. Tražim kompatibilna pojačala snage.");
                 allProductsData.forEach(product => {
                     // Preskoči samog sebe
                     if (product === selectedProduct) return;
@@ -1733,7 +1767,7 @@
                     const productCategoryLower = product.category ? product.category.toLowerCase() : '';
                     const productSeriesLower = product.series ? product.series.toLowerCase() : ''; // Koristimo 'series' kao subcategory
 
-                    // Check if the product is a "Pojačalo" (Amplifier) AND specifically a "Snaga" (Power) or "Izlazna Pojačala" (Power Amplifier)
+                    // Proveri da li je proizvod "Pojačalo" (Amplifier) I specifično "Snaga" (Power) ili "Izlazna Pojačala" (Power Amplifier)
                     if (productCategoryLower.includes("pojačala") && 
                         (productSeriesLower.includes("snaga") || productSeriesLower.includes("izlazna pojačala") || product.name.toLowerCase().includes("power amplifier"))) {
                         
@@ -1746,14 +1780,14 @@
                         if ((preampOutputs.includes("XLR") && powerAmpInputs.includes("XLR")) || 
                             (preampOutputs.includes("RCA") && powerAmpInputs.includes("RCA"))) {
                             recommendations.push(product);
-                            console.log(`    RECOMMENDED: ${product.name} (Power Amplifier) for ${selectedProduct.name} (Preamplifier)`);
+                            console.log(`    PREPORUČENO: ${product.name} (Pojačalo snage) za ${selectedProduct.name} (Pretpojačalo)`);
                         } else {
-                            console.log(`    NOT RECOMMENDED: ${product.name} (Power Amplifier) for ${selectedProduct.name} (Preamplifier) - Incompatible connections.`);
+                            console.log(`    NIJE PREPORUČENO: ${product.name} (Pojačalo snage) za ${selectedProduct.name} (Pretpojačalo) - Nekompatibilne veze.`);
                         }
                     }
                 });
             }
-            console.log("--- End recommendations for:", selectedProduct.name, "Found:", recommendations.length, "---");
+            console.log("--- Kraj preporuka za:", selectedProduct.name, "Pronađeno:", recommendations.length, "---");
             return recommendations;
         }
 
