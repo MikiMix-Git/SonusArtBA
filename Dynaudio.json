@@ -1,0 +1,154 @@
+{
+  "categories": [
+    {
+      "name": "Zvučnici",
+      "subcategories": [
+        {
+          "name": "Samostojeći",
+          "models": [
+            {
+              "name": "Evoke 50",
+              "brand": "Dynaudio",
+              "series": "Evoke",
+              "description": "Snažan samostojeći zvučnik za Hi-Fi i kućno kino.",
+              "longDescription": "Dynaudio Evoke 50 je 3-sistemski bas-reflex zvučnik sa Esotar Forty visokotoncem i MSP drajverima, dizajniran za velike prostore.",
+              "intended_use": "Hi-Fi stereo, kućno kino",
+              "price": "Approx. $5,000 /par (2025 estimate)",
+              "finishes": ["Black High Gloss", "Walnut", "White High Gloss", "Blonde Wood"],
+              "imageUrl": "https://www.dynaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "3-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø28mm Esotar Forty visokotonac",
+                  "1x Ø150mm MSP srednjetonac",
+                  "2x Ø180mm MSP bas drajveri"
+                ],
+                "frequency_response": "35Hz - 23kHz (±3dB)",
+                "sensitivity": "87dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "4Ω (minimum 3.0Ω)",
+                "recommended_amplifier_power": "50W – 250W na 4Ω",
+                "dimensions": {
+                  "height": "1140mm",
+                  "width": "215mm",
+                  "depth": "307mm"
+                },
+                "weight": "26.9kg",
+                "technologies": [
+                  "Esotar Forty tweeter",
+                  "MSP cone",
+                  "Jupiter-tuned drivers"
+                ]
+              }
+            },
+            {
+              "name": "Contour 60i",
+              "brand": "Dynaudio",
+              "series": "Contour",
+              "description": "High-end samostojeći zvučnik za audiofile.",
+              "longDescription": "Dynaudio Contour 60i je 3-sistemski bas-reflex zvučnik sa Esotar2i visokotoncem i MSP drajverima, idealan za vrhunski Hi-Fi.",
+              "intended_use": "Hi-Fi stereo, kućno kino",
+              "price": "Approx. $10,000 /par (2025 estimate)",
+              "finishes": ["Black High Gloss", "Walnut", "Grey Oak"],
+              "imageUrl": "https://www.dynaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "3-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø28mm Esotar2i visokotonac",
+                  "2x Ø150mm MSP srednjetonci",
+                  "2x Ø230mm MSP bas drajveri"
+                ],
+                "frequency_response": "28Hz - 23kHz (±3dB)",
+                "sensitivity": "88dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "4Ω (minimum 3.0Ω)",
+                "recommended_amplifier_power": "50W – 300W na 4Ω",
+                "dimensions": {
+                  "height": "1339mm",
+                  "width": "283mm",
+                  "depth": "420mm"
+                },
+                "weight": "54.3kg",
+                "technologies": [
+                  "Esotar2i tweeter",
+                  "MSP cone",
+                  "Hexis dome"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Regalni/Stalni",
+          "models": [
+            {
+              "name": "Special Forty",
+              "brand": "Dynaudio",
+              "series": "Nema",
+              "description": "Kompaktni regalni zvučnik za manje prostore.",
+              "longDescription": "Dynaudio Special Forty je 2-sistemski bas-reflex zvučnik sa Esotar Forty visokotoncem i MSP bas/srednjetoncem, dizajniran za audiofile u manjim prostorima.",
+              "intended_use": "Hi-Fi stereo",
+              "price": "Approx. $3,000 /par (2025 estimate)",
+              "finishes": ["Black Vine", "Ebony Wave"],
+              "imageUrl": "https://www.dynaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "2-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø28mm Esotar Forty visokotonac",
+                  "1x Ø170mm MSP bas/srednjetonac"
+                ],
+                "frequency_response": "41Hz - 23kHz (±3dB)",
+                "sensitivity": "86dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "6Ω (minimum 4.0Ω)",
+                "recommended_amplifier_power": "50W – 200W na 6Ω",
+                "dimensions": {
+                  "height": "360mm",
+                  "width": "198mm",
+                  "depth": "307mm",
+                  "note": "Samo kabinet, preporučuje se stalak"
+                },
+                "weight": "8.1kg",
+                "technologies": [
+                  "Esotar Forty tweeter",
+                  "MSP cone",
+                  "Jupiter-tuned drivers"
+                ]
+              }
+            },
+            {
+              "name": "Emit 20",
+              "brand": "Dynaudio",
+              "series": "Emit",
+              "description": "Pristupačni regalni zvučnik za Hi-Fi početnike.",
+              "longDescription": "Dynaudio Emit 20 je 2-sistemski bas-reflex zvučnik sa Cerotar visokotoncem i MSP bas/srednjetoncem, idealan za manje prostore.",
+              "intended_use": "Hi-Fi stereo",
+              "price": "Approx. $1,000 /par (2025 estimate)",
+              "finishes": ["Black", "White", "Walnut"],
+              "imageUrl": "https://www.dynaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "2-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø28mm Cerotar visokotonac",
+                  "1x Ø180mm MSP bas/srednjetonac"
+                ],
+                "frequency_response": "53Hz - 25kHz (±3dB)",
+                "sensitivity": "86dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "6Ω (minimum 4.0Ω)",
+                "recommended_amplifier_power": "25W – 160W na 6Ω",
+                "dimensions": {
+                  "height": "370mm",
+                  "width": "205mm",
+                  "depth": "312mm",
+                  "note": "Samo kabinet, preporučuje se stalak"
+                },
+                "weight": "7.2kg",
+                "technologies": [
+                  "Cerotar tweeter",
+                  "MSP cone"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

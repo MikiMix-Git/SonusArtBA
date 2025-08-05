@@ -1,0 +1,160 @@
+{
+  "categories": [
+    {
+      "name": "Zvučnici",
+      "subcategories": [
+        {
+          "name": "Samostojeći",
+          "models": [
+            {
+              "name": "5050",
+              "brand": "Q Acoustics",
+              "series": "5000 Series",
+              "description": "Snažan samostojeći zvučnik za veće prostorije.",
+              "longDescription": "Q Acoustics 5050 je 2.5-sistemski bas-reflex zvučnik sa C3 Continuous Curved Cone drajverima, idealan za Hi-Fi i kućno kino.",
+              "intended_use": "Hi-Fi stereo, kućno kino",
+              "price": "Approx. $2,000 /par (2025 estimate)",
+              "finishes": ["Black", "White", "Satin Oak", "Rosewood"],
+              "imageUrl": "https://www.qacoustics.co.uk/images/logo.svg",
+              "specifications": {
+                "type": "2.5-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø25mm dome visokotonac",
+                  "2x Ø150mm C3 Continuous Curved Cone bas/srednjetonci"
+                ],
+                "frequency_response": "38Hz - 30kHz (±3dB)",
+                "sensitivity": "91.8dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "6Ω (minimum 3.2Ω)",
+                "recommended_amplifier_power": "25W – 200W na 6Ω",
+                "dimensions": {
+                  "height": "1019mm",
+                  "width": "374mm",
+                  "depth": "336mm"
+                },
+                "weight": "21.6kg",
+                "technologies": [
+                  "C3 Continuous Curved Cone",
+                  "Point-to-Point bracing",
+                  "Helmholtz Pressure Equalizer"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Regalni/Stalni",
+          "models": [
+            {
+              "name": "5020",
+              "brand": "Q Acoustics",
+              "series": "5000 Series",
+              "description": "Kompaktni regalni zvučnik za manje prostore.",
+              "longDescription": "Q Acoustics 5020 je 2-sistemski bas-reflex zvučnik sa C3 Continuous Curved Cone drajverom, idealan za Hi-Fi u manjim prostorima.",
+              "intended_use": "Hi-Fi stereo",
+              "price": "Approx. $800 /par (2025 estimate)",
+              "finishes": ["Black", "White", "Satin Oak", "Rosewood"],
+              "imageUrl": "https://www.qacoustics.co.uk/images/logo.svg",
+              "specifications": {
+                "type": "2-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø25mm dome visokotonac",
+                  "1x Ø125mm C3 Continuous Curved Cone bas/srednjetonac"
+                ],
+                "frequency_response": "53Hz - 30kHz (±3dB)",
+                "sensitivity": "87.9dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "6Ω (minimum 3.6Ω)",
+                "recommended_amplifier_power": "25W – 100W na 6Ω",
+                "dimensions": {
+                  "height": "284mm",
+                  "width": "180mm",
+                  "depth": "293mm",
+                  "note": "Samo kabinet, preporučuje se stalak"
+                },
+                "weight": "7.0kg",
+                "technologies": [
+                  "C3 Continuous Curved Cone",
+                  "Point-to-Point bracing"
+                ]
+              }
+            },
+            {
+              "name": "Concept 30",
+              "brand": "Q Acoustics",
+              "series": "Concept",
+              "description": "Premium regalni zvučnik za audiofile.",
+              "longDescription": "Q Acoustics Concept 30 je 2-sistemski bas-reflex zvučnik sa naprednim drajverima i Gelcore™ konstrukcijom za smanjenje vibracija.",
+              "intended_use": "Hi-Fi stereo",
+              "price": "Approx. $1,300 /par (2025 estimate)",
+              "finishes": ["Black", "White", "Silver"],
+              "imageUrl": "https://www.qacoustics.co.uk/images/logo.svg",
+              "specifications": {
+                "type": "2-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø25mm dome visokotonac",
+                  "1x Ø125mm bas/srednjetonac"
+                ],
+                "frequency_response": "54Hz - 30kHz (±3dB)",
+                "sensitivity": "87dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "6Ω (minimum 4.0Ω)",
+                "recommended_amplifier_power": "25W – 100W na 6Ω",
+                "dimensions": {
+                  "height": "284mm",
+                  "width": "180mm",
+                  "depth": "319mm",
+                  "note": "Samo kabinet, preporučuje se stalak"
+                },
+                "weight": "7.9kg",
+                "technologies": [
+                  "Gelcore™ cabinet",
+                  "Point-to-Point bracing"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Aktivni",
+          "models": [
+            {
+              "name": "Q Active 400",
+              "brand": "Q Acoustics",
+              "series": "Q Active",
+              "description": "Aktivni bežični zvučnik sa integrisanim pojačalom.",
+              "longDescription": "Q Acoustics Q Active 400 je aktivni bežični zvučnik sa integrisanim pojačalom i podrškom za streaming.",
+              "intended_use": "Hi-Fi stereo, bežično strimovanje",
+              "price": "Approx. $2,000 /par (2025 estimate)",
+              "finishes": ["Black", "White"],
+              "imageUrl": "https://www.qacoustics.co.uk/images/logo.svg",
+              "specifications": {
+                "type": "2-sistemski, aktivni, bas-reflex",
+                "drivers": [
+                  "2x Ø25mm dome visokotonci",
+                  "2x Ø114mm BMR drajveri"
+                ],
+                "amplifier_power": "140W (Class D)",
+                "frequency_response": "35Hz - 20kHz (±3dB)",
+                "connectivity": [
+                  "Wi-Fi",
+                  "Bluetooth 4.1",
+                  "AirPlay 2",
+                  "Spotify Connect"
+                ],
+                "dimensions": {
+                  "height": "300mm",
+                  "width": "320mm",
+                  "depth": "290mm"
+                },
+                "weight": "8.5kg",
+                "technologies": [
+                  "Balanced Mode Radiator (BMR)",
+                  "Point-to-Point bracing",
+                  "Active amplification"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

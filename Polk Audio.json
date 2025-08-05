@@ -1,0 +1,174 @@
+{
+  "categories": [
+    {
+      "name": "Zvučnici",
+      "subcategories": [
+        {
+          "name": "Samostojeći",
+          "models": [
+            {
+              "name": "Reserve R700",
+              "brand": "Polk Audio",
+              "series": "Reserve",
+              "description": "Snažan samostojeći zvučnik za Hi-Fi i kućno kino.",
+              "longDescription": "Polk Audio Reserve R700 je 3-sistemski bas-reflex zvučnik sa Pinnacle Ring Radiator visokotoncem i Turbine Cone drajverima.",
+              "intended_use": "Hi-Fi stereo, kućno kino",
+              "price": "Approx. $2,300 /par (2025 estimate)",
+              "finishes": ["Black", "Walnut"],
+              "imageUrl": "https://www.polkaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "3-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø25mm Pinnacle Ring Radiator visokotonac",
+                  "1x Ø165mm Turbine Cone srednjetonac",
+                  "2x Ø200mm Turbine Cone bas drajveri"
+                ],
+                "frequency_response": "38Hz - 38kHz (±3dB)",
+                "sensitivity": "88dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "8Ω (minimum 3.6Ω)",
+                "recommended_amplifier_power": "50W – 300W na 8Ω",
+                "dimensions": {
+                  "height": "1143mm",
+                  "width": "320mm",
+                  "depth": "429mm"
+                },
+                "weight": "35.9kg",
+                "technologies": [
+                  "Pinnacle Ring Radiator tweeter",
+                  "Turbine Cone",
+                  "X-Port eigentone filter"
+                ]
+              }
+            },
+            {
+              "name": "Legend L600",
+              "brand": "Polk Audio",
+              "series": "Legend",
+              "description": "Premium samostojeći zvučnik za audiofile.",
+              "longDescription": "Polk Audio Legend L600 je 3-sistemski bas-reflex zvučnik sa Pinnacle Ring Radiator visokotoncem i naprednim Turbine Cone drajverima.",
+              "intended_use": "Hi-Fi stereo, kućno kino",
+              "price": "Approx. $4,000 /par (2025 estimate)",
+              "finishes": ["Black Ash", "Walnut"],
+              "imageUrl": "https://www.polkaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "3-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø25mm Pinnacle Ring Radiator visokotonac",
+                  "1x Ø165mm Turbine Cone srednjetonac",
+                  "2x Ø200mm Turbine Cone bas drajveri"
+                ],
+                "frequency_response": "34Hz - 38kHz (±3dB)",
+                "sensitivity": "87dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "8Ω (minimum 3.5Ω)",
+                "recommended_amplifier_power": "50W – 300W na 8Ω",
+                "dimensions": {
+                  "height": "1186mm",
+                  "width": "324mm",
+                  "depth": "403mm"
+                },
+                "weight": "35.5kg",
+                "technologies": [
+                  "Pinnacle Ring Radiator tweeter",
+                  "Turbine Cone",
+                  "Enhanced Power Port"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Regalni/Stalni",
+          "models": [
+            {
+              "name": "Reserve R200",
+              "brand": "Polk Audio",
+              "series": "Reserve",
+              "description": "Kompaktni regalni zvučnik za Hi-Fi i kućno kino.",
+              "longDescription": "Polk Audio Reserve R200 je 2-sistemski bas-reflex zvučnik sa Pinnacle Ring Radiator visokotoncem i Turbine Cone bas/srednjetoncem.",
+              "intended_use": "Hi-Fi stereo, kućno kino",
+              "price": "Approx. $700 /par (2025 estimate)",
+              "finishes": ["Black", "Walnut"],
+              "imageUrl": "https://www.polkaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "2-sistemski, bas-reflex",
+                "drivers": [
+                  "1x Ø25mm Pinnacle Ring Radiator visokotonac",
+                  "1x Ø165mm Turbine Cone bas/srednjetonac"
+                ],
+                "frequency_response": "51Hz - 38kHz (±3dB)",
+                "sensitivity": "86dB (2.83Vrms @ 1m)",
+                "nominal_impedance": "8Ω (minimum 3.8Ω)",
+                "recommended_amplifier_power": "30W – 200W na 8Ω",
+                "dimensions": {
+                  "height": "359mm",
+                  "width": "190mm",
+                  "depth": "353mm",
+                  "note": "Samo kabinet, preporučuje se stalak"
+                },
+                "weight": "8.8kg",
+                "technologies": [
+                  "Pinnacle Ring Radiator tweeter",
+                  "Turbine Cone",
+                  "X-Port eigentone filter"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Soundbarovi",
+      "subcategories": [
+        {
+          "name": "Nema",
+          "models": [
+            {
+              "name": "Signa S4",
+              "brand": "Polk Audio",
+              "series": "Nema",
+              "description": "Dolby Atmos soundbar sa bežičnim subwooferom.",
+              "longDescription": "Polk Audio Signa S4 je Dolby Atmos soundbar sa 3.1.2 konfiguracijom i bežičnim subwooferom, idealan za kućno kino.",
+              "intended_use": "Kućno kino",
+              "price": "Approx. $400 (2025 estimate)",
+              "finishes": ["Black"],
+              "imageUrl": "https://www.polkaudio.com/images/logo.svg",
+              "specifications": {
+                "type": "Soundbar sa Dolby Atmos, bežični subwoofer",
+                "channels": "3.1.2",
+                "drivers": [
+                  "2x Ø25mm visokotonci",
+                  "4x Ø66mm srednjetonci",
+                  "1x Ø178mm subwoofer (bežični)"
+                ],
+                "amplifier_power": "100W (procena)",
+                "frequency_response": "45Hz - 20kHz (±3dB)",
+                "inputs": [
+                  "HDMI eARC",
+                  "Optički",
+                  "AUX"
+                ],
+                "connectivity": [
+                  "Bluetooth",
+                  "Wi-Fi (Chromecast, Spotify Connect)"
+                ],
+                "dimensions": {
+                  "height": "60mm",
+                  "width": "1046mm",
+                  "depth": "95mm",
+                  "subwoofer": "171x328x280mm"
+                },
+                "weight": "3.9kg (soundbar), 5.9kg (subwoofer, procena)",
+                "technologies": [
+                  "Dolby Atmos",
+                  "VoiceAdjust",
+                  "Wireless subwoofer"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
