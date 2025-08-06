@@ -1,1 +1,134 @@
-{  "brand": "Polk Audio",  "products": [    {      "name": "Reserve R200",      "series": "Reserve",      "category": "Zvučnici",      "subcategory": "Bookshelf zvučnici",      "description": "Bookshelf zvučnici za proračunske Hi-Fi sustave.",      "longDescription": "Polk Audio Reserve R200 su bookshelf zvučnici s Pinnacle visokotoncem i Turbine koncem, pružajući snažan zvuk za Hi-Fi sustave po pristupačnoj cijeni.",      "intended_use": ["Hi-Fi stereo", "Kućno kino"],      "price_usd": 699,      "finishes": ["Crna", "Bijela", "Orah"],      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/PolkAudio.png",      "warranty_duration": 3,      "release_year": 2023,      "comparison_score": 78,      "specifications": {        "type": "Bookshelf zvučnik",        "min_frequency": 51,        "max_frequency": 40000,        "sensitivity": "86dB",        "nominal_impedance": "8Ω",        "inputs": [],        "outputs": [],        "connectivity": [],        "dimensions": {          "height_mm": 343,          "width_mm": 190,          "depth_mm": 353        },        "weight_kg": 8.8,        "technologies": ["Pinnacle visokotonac", "Turbine konus", "X-Port tehnologija"]      }    },    {      "name": "Signature Elite ES60",      "series": "Signature Elite",      "category": "Zvučnici",      "subcategory": "Samostojeći zvučnici",      "description": "Samostojeći zvučnici za snažan zvuk.",      "longDescription": "Polk Audio Signature Elite ES60 su samostojeći zvučnici s Pinnacle visokotoncem i Turbine koncem, idealni za kućno kino i Hi-Fi sustave u većim prostorima.",      "intended_use": ["Hi-Fi stereo", "Kućno kino"],      "price_usd": 999,      "finishes": ["Crna", "Bijela"],      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/PolkAudio.png",      "warranty_duration": 3,      "release_year": 2023,      "comparison_score": 79,      "specifications": {        "type": "Samostojeći zvučnik",        "min_frequency": 36,        "max_frequency": 40000,        "sensitivity": "90dB",        "nominal_impedance": "8Ω",        "inputs": [],        "outputs": [],        "connectivity": [],        "dimensions": {          "height_mm": 1130,          "width_mm": 295,          "depth_mm": 399        },        "weight_kg": 23.6,        "technologies": ["Pinnacle visokotonac", "Turbine konus", "Power Port tehnologija"]      }    },    {      "name": "TSW-10",      "series": "Nema",      "category": "Subwooferi",      "subcategory": "Nema",      "description": "Kompaktni subwoofer za dubok bas.",      "longDescription": "Polk Audio TSW-10 je aktivni subwoofer s 100W pojačalom, idealan za proširenje basa u kućnim kinima i Hi-Fi sustavima.",      "intended_use": ["Hi-Fi stereo", "Kućno kino"],      "price_usd": 399,      "finishes": ["Crna"],      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/PolkAudio.png",      "warranty_duration": 3,      "release_year": 2023,      "comparison_score": 75,      "specifications": {        "type": "Aktivni subwoofer",        "amplifier_power": "100W (Class D)",        "amplifier_power_watts": 100,        "min_frequency": 30,        "max_frequency": 200,        "inputs": ["RCA", "LFE"],        "outputs": [],        "connectivity": [],        "dimensions": {          "height_mm": 355,          "width_mm": 340,          "depth_mm": 340        },        "weight_kg": 11.8,        "technologies": ["Class D amplification", "Dynamic Balance drajver"]      }    },    {      "name": "Atrium 6",      "series": "Atrium",      "category": "Zvučnici",      "subcategory": "Vanjski zvučnici",      "description": "Vanjski zvučnici otporni na vremenske uvjete.",      "longDescription": "Polk Audio Atrium 6 su vanjski zvučnici otporni na vremenske uvjete, s Dynamic Balance drajverima, idealni za terase i vrtove.",      "intended_use": ["Vanjsko audio", "Hi-Fi stereo"],      "price_usd": 499,      "finishes": ["Crna", "Bijela"],      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/PolkAudio.png",      "warranty_duration": 3,      "release_year": 2023,      "comparison_score": 76,      "specifications": {        "type": "Vanjski zvučnik",        "min_frequency": 50,        "max_frequency": 27000,        "sensitivity": "90dB",        "nominal_impedance": "8Ω",        "inputs": [],        "outputs": [],        "connectivity": [],        "dimensions": {          "height_mm": 297,          "width_mm": 195,          "depth_mm": 229        },        "weight_kg": 5.2,        "technologies": ["Dynamic Balance drajver", "Vremenska otpornost"]      }    }  ]}
+
+{
+  "brand": "Polk Audio",
+  "products": [
+    {
+      "name": "Reserve R200",
+      "series": "Reserve",
+      "category": "Zvučnici",
+      "subcategory": "Bookshelf zvučnici",
+      "description": "Bookshelf zvučnici za proračunske Hi-Fi sustave.",
+      "longDescription": "Polk Audio Reserve R200 su bookshelf zvučnici s Pinnacle visokotoncem i Turbine koncem, pružajući snažan zvuk za Hi-Fi sustave po pristupačnoj cijeni.",
+      "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+      "price_usd": 699,
+      "finishes": ["Crna", "Bijela", "Orah"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/PolkAudio.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 78,
+      "specifications": {
+        "type": "Bookshelf zvučnik",
+        "min_frequency": 51,
+        "max_frequency": 40000,
+        "sensitivity": "86dB",
+        "nominal_impedance": "8Ω",
+        "inputs": [],
+        "outputs": [],
+        "connectivity": [],
+        "dimensions": {
+          "height_mm": 343,
+          "width_mm": 190,
+          "depth_mm": 353
+        },
+        "weight_kg": 8.8,
+        "technologies": ["Pinnacle visokotonac", "Turbine konus", "X-Port tehnologija"]
+      }
+    },
+    {
+      "name": "Signature Elite ES60",
+      "series": "Signature Elite",
+      "category": "Zvučnici",
+      "subcategory": "Samostojeći zvučnici",
+      "description": "Samostojeći zvučnici za snažan zvuk.",
+      "longDescription": "Polk Audio Signature Elite ES60 su samostojeći zvučnici s Pinnacle visokotoncem i Turbine koncem, idealni za kućno kino i Hi-Fi sustave u većim prostorima.",
+      "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+      "price_usd": 999,
+      "finishes": ["Crna", "Bijela"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/PolkAudio.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 79,
+      "specifications": {
+        "type": "Samostojeći zvučnik",
+        "min_frequency": 36,
+        "max_frequency": 40000,
+        "sensitivity": "90dB",
+        "nominal_impedance": "8Ω",
+        "inputs": [],
+        "outputs": [],
+        "connectivity": [],
+        "dimensions": {
+          "height_mm": 1130,
+          "width_mm": 295,
+          "depth_mm": 399
+        },
+        "weight_kg": 23.6,
+        "technologies": ["Pinnacle visokotonac", "Turbine konus", "Power Port tehnologija"]
+      }
+    },
+    {
+      "name": "TSW-10",
+      "series": "Nema",
+      "category": "Subwooferi",
+      "subcategory": "Nema",
+      "description": "Kompaktni subwoofer za dubok bas.",
+      "longDescription": "Polk Audio TSW-10 je aktivni subwoofer s 100W pojačalom, idealan za proširenje basa u kućnim kinima i Hi-Fi sustavima.",
+      "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+      "price_usd": 399,
+      "finishes": ["Crna"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/PolkAudio.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 75,
+      "specifications": {
+        "type": "Aktivni subwoofer",
+        "amplifier_power": "100W (Class D)",
+        "amplifier_power_watts": 100,
+        "min_frequency": 30,
+        "max_frequency": 200,
+        "inputs": ["RCA", "LFE"],
+        "outputs": [],
+        "connectivity": [],
+        "dimensions": {
+          "height_mm": 355,
+          "width_mm": 340,
+          "depth_mm": 340
+        },
+        "weight_kg": 11.8,
+        "technologies": ["Class D amplification", "Dynamic Balance drajver"]
+      }
+    },
+    {
+      "name": "Atrium 6",
+      "series": "Atrium",
+      "category": "Zvučnici",
+      "subcategory": "Vanjski zvučnici",
+      "description": "Vanjski zvučnici otporni na vremenske uvjete.",
+      "longDescription": "Polk Audio Atrium 6 su vanjski zvučnici otporni na vremenske uvjete, s Dynamic Balance drajverima, idealni za terase i vrtove.",
+      "intended_use": ["Vanjsko audio", "Hi-Fi stereo"],
+      "price_usd": 499,
+      "finishes": ["Crna", "Bijela"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/PolkAudio.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 76,
+      "specifications": {
+        "type": "Vanjski zvučnik",
+        "min_frequency": 50,
+        "max_frequency": 27000,
+        "sensitivity": "90dB",
+        "nominal_impedance": "8Ω",
+        "inputs": [],
+        "outputs": [],
+        "connectivity": [],
+        "dimensions": {
+          "height_mm": 297,
+          "width_mm": 195,
+          "depth_mm": 229
+        },
+        "weight_kg": 5.2,
+        "technologies": ["Dynamic Balance drajver", "Vremenska otpornost"]
+      }
+    }
+  ]
+}
