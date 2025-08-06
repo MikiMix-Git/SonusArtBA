@@ -1,720 +1,134 @@
+
 {
-  "categories": [
+  "brand": "Bowers & Wilkins",
+  "products": [
     {
-      "name": "Zvučnici",
-      "subcategories": [
-        {
-          "name": "Samostojeći",
-          "models": [
-            {
-              "name": "801 D4",
-              "brand": "Bowers & Wilkins",
-              "series": "800 Series Diamond",
-              "description": "Referentni model zvučnika koji postavlja standard za high-end audio performanse.",
-              "longDescription": "Bowers & Wilkins 801 D4 je perjanica 800 Series Diamond linije, 3-sistemski bas-reflex sistem koji nudi vrhunske performanse. Opremljen je Diamond dome visokotoncem, Continuum™ cone FST™ srednjetoncem i dvostrukim Aerofoil™ cone bas jedinicama.",
-              "intended_use": "Hi-Fi stereo, kućno kino",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Gloss Black", "Satin Walnut", "White", "Rosenut"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "3-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm (1in) Diamond dome visokotonac",
-                  "1x Ø150mm (6in) Continuum™ cone FST™ srednjetonac",
-                  "2x Ø250mm (10in) Aerofoil™ cone bas jedinice"
-                ],
-                "frequency_response": "15Hz - 28kHz (±3dB)",
-                "sensitivity": "90dB (2.83Vrms @ 1m)",
-                "harmonic_distortion": "<1% 30Hz – 20kHz, <0.3% 100Hz – 20kHz (90dB, 1m)",
-                "nominal_impedance": "8Ω (minimum 3.0Ω)",
-                "recommended_amplifier_power": "50W – 1000W na 8Ω",
-                "dimensions": {
-                  "height": "1221mm",
-                  "width": "451mm",
-                  "depth": "600mm",
-                  "note": "Uključuje kabinet i postolje"
-                },
-                "weight": "100.60kg",
-                "technologies": [
-                  "Diamond tweeter",
-                  "Solid body Tweeter-on-Top",
-                  "Continuum™ cone FST",
-                  "Matrix™",
-                  "Aerofoil™ cone bass units",
-                  "Flowport"
-                ]
-              }
-            },
-            {
-              "name": "802 D4",
-              "brand": "Bowers & Wilkins",
-              "series": "800 Series Diamond",
-              "description": "Premium samostojeći zvučnik za vrhunski Hi-Fi i kućno kino.",
-              "longDescription": "Bowers & Wilkins 802 D4 je 3-sistemski bas-reflex zvučnik sa Diamond dome visokotoncem, Continuum™ cone FST™ srednjetoncem i Aerofoil™ cone bas jedinicama. Dizajniran za velike prostore.",
-              "intended_use": "Hi-Fi stereo, kućno kino",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Gloss Black", "Satin Walnut", "White", "Rosenut"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "3-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm (1in) Diamond dome visokotonac",
-                  "1x Ø150mm (6in) Continuum™ cone FST™ srednjetonac",
-                  "2x Ø200mm (8in) Aerofoil™ cone bas jedinice"
-                ],
-                "frequency_response": "17Hz - 28kHz (±3dB)",
-                "sensitivity": "90dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 3.0Ω)",
-                "recommended_amplifier_power": "50W – 500W na 8Ω",
-                "dimensions": {
-                  "height": "1218mm",
-                  "width": "413mm",
-                  "depth": "602mm",
-                  "note": "Uključuje kabinet i postolje"
-                },
-                "weight": "88.10kg",
-                "technologies": [
-                  "Diamond tweeter",
-                  "Solid body Tweeter-on-Top",
-                  "Continuum™ cone FST",
-                  "Matrix™",
-                  "Aerofoil™ cone bass units",
-                  "Flowport"
-                ]
-              }
-            },
-            {
-              "name": "603 S3",
-              "brand": "Bowers & Wilkins",
-              "series": "600 Series",
-              "description": "Snažan samostojeći zvučnik za veće prostorije.",
-              "longDescription": "Bowers & Wilkins 603 S3 je 3-sistemski bas-reflex zvučnik iz 600 Series, dizajniran za veće prostorije. Sa Titanium Dome visokotoncem i Continuum™ cone FST™ srednjetoncem.",
-              "intended_use": "Hi-Fi stereo, kućno kino",
-              "price": "4.600,00 KM /par",
-              "finishes": ["Black", "White", "Oak"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "3-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm (1in) Titanium Dome visokotonac",
-                  "1x Ø150mm (6in) Continuum™ cone FST™ srednjetonac",
-                  "2x Ø165mm (6.5in) papirni bas drajveri"
-                ],
-                "frequency_response": "48Hz - 28kHz (±3dB)",
-                "sensitivity": "90dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 3.0Ω)",
-                "recommended_amplifier_power": "30W – 200W na 8Ω",
-                "dimensions": {
-                  "height": "985mm",
-                  "width": "190mm",
-                  "depth": "340mm",
-                  "note": "Uključuje kabinet i postolje"
-                },
-                "weight": "27.5kg",
-                "technologies": [
-                  "Titanium Dome tweeter",
-                  "Continuum™ cone FST",
-                  "Paper bass cones",
-                  "Flowport"
-                ]
-              }
-            }
-          ]
+      "name": "606 S3",
+      "series": "600 Series",
+      "category": "Zvučnici",
+      "subcategory": "Bookshelf zvučnici",
+      "description": "Kompaktni bookshelf zvučnici za vrhunski Hi-Fi zvuk.",
+      "longDescription": "Bowers & Wilkins 606 S3 su bookshelf zvučnici s titanijskim visokotoncem i Continuum koncem, idealni za Hi-Fi sustave u manjim prostorima, pružajući bogat i precizan zvuk.",
+      "intended_use": ["Hi-Fi stereo"],
+      "price_usd": 1100,
+      "finishes": ["Crna", "Bijela", "Hrast"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/BowersWilkins.png",
+      "warranty_duration": 2,
+      "release_year": 2023,
+      "comparison_score": 88,
+      "specifications": {
+        "type": "Bookshelf zvučnik",
+        "min_frequency": 52,
+        "max_frequency": 28000,
+        "sensitivity": "88dB",
+        "nominal_impedance": "8Ω",
+        "inputs": [],
+        "outputs": [],
+        "connectivity": [],
+        "dimensions": {
+          "height_mm": 344,
+          "width_mm": 189,
+          "depth_mm": 328
         },
-        {
-          "name": "Regalni/Stalni",
-          "models": [
-            {
-              "name": "805 D4",
-              "brand": "Bowers & Wilkins",
-              "series": "800 Series Diamond",
-              "description": "Najkompaktniji model u 800 Series Diamond seriji.",
-              "longDescription": "Bowers & Wilkins 805 D4 je 2-sistemski bas-reflex zvučnik idealan za manje prostore, sa Diamond dome visokotoncem i Continuum™ cone bas/srednjetoncem.",
-              "intended_use": "Hi-Fi stereo, manji prostori",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Gloss Black", "Satin Walnut", "White", "Rosenut"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "2-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm (1in) Diamond dome visokotonac",
-                  "1x Ø165mm (6.5in) Continuum™ cone bas/srednjetonac"
-                ],
-                "frequency_response": "42Hz - 28kHz (±3dB)",
-                "sensitivity": "88dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 4.6Ω)",
-                "recommended_amplifier_power": "50W – 120W na 8Ω",
-                "dimensions": {
-                  "height": "440mm",
-                  "width": "240mm",
-                  "depth": "373mm",
-                  "note": "Samo kabinet, preporučuje se FS-805 D4 stalak"
-                },
-                "weight": "15.55kg",
-                "technologies": [
-                  "Diamond tweeter",
-                  "Solid body Tweeter-on-Top",
-                  "Continuum™ cone bass/mid",
-                  "Matrix™",
-                  "Flowport"
-                ]
-              }
-            },
-            {
-              "name": "606 S3",
-              "brand": "Bowers & Wilkins",
-              "series": "600 Series",
-              "description": "Svestrani regalni zvučnik za stereo ili kućno kino.",
-              "longDescription": "Bowers & Wilkins 606 S3 je kompaktni 2-sistemski bas-reflex zvučnik iz 600 Series, idealan za manje i srednje prostore.",
-              "intended_use": "Hi-Fi stereo, kućno kino",
-              "price": "2.300,00 KM /par",
-              "finishes": ["Black", "White", "Oak"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "2-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm (1in) Titanium Dome visokotonac",
-                  "1x Ø165mm (6.5in) Continuum™ cone bas/srednjetonac"
-                ],
-                "frequency_response": "52Hz - 28kHz (±3dB)",
-                "sensitivity": "88dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 3.7Ω)",
-                "recommended_amplifier_power": "30W – 120W na 8Ω",
-                "dimensions": {
-                  "height": "344mm",
-                  "width": "190mm",
-                  "depth": "327mm",
-                  "note": "Samo kabinet, preporučuje se FS-600 S3 stalak"
-                },
-                "weight": "7.05kg",
-                "technologies": [
-                  "Titanium Dome tweeter",
-                  "Continuum™ cone bass/mid",
-                  "Flowport"
-                ]
-              }
-            },
-            {
-              "name": "607 S3",
-              "brand": "Bowers & Wilkins",
-              "series": "600 Series",
-              "description": "Kompaktni regalni zvučnik za manje prostore.",
-              "longDescription": "Bowers & Wilkins 607 S3 je najmanji zvučnik u 600 Series, 2-sistemski bas-reflex model sa Titanium Dome visokotoncem.",
-              "intended_use": "Hi-Fi stereo, surround zvuk",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Black", "White", "Oak"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "2-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm (1in) Titanium Dome visokotonac",
-                  "1x Ø130mm (5in) Continuum™ cone bas/srednjetonac"
-                ],
-                "frequency_response": "52Hz - 28kHz (±3dB)",
-                "sensitivity": "84dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 3.0Ω)",
-                "recommended_amplifier_power": "30W – 100W na 8Ω",
-                "dimensions": {
-                  "height": "300mm",
-                  "width": "165mm",
-                  "depth": "235mm",
-                  "note": "Samo kabinet, preporučuje se FS-600 S3 stalak"
-                },
-                "weight": "4.65kg",
-                "technologies": [
-                  "Titanium Dome tweeter",
-                  "Continuum™ cone bass/mid",
-                  "Flowport"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Centralni",
-          "models": [
-            {
-              "name": "HTM81 D4",
-              "brand": "Bowers & Wilkins",
-              "series": "800 Series Diamond",
-              "description": "Centralni zvučnik za vrhunsko kućno kino.",
-              "longDescription": "Bowers & Wilkins HTM81 D4 je 3-sistemski centralni zvučnik dizajniran za kućno kino, sa Diamond dome visokotoncem.",
-              "intended_use": "Kućno kino",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Gloss Black", "Satin Walnut", "White", "Rosenut"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "3-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm (1in) Diamond dome visokotonac",
-                  "1x Ø150mm (6in) Continuum™ cone FST™ srednjetonac",
-                  "2x Ø200mm (8in) Aerofoil™ cone bas jedinice"
-                ],
-                "frequency_response": "28Hz - 28kHz (±3dB)",
-                "sensitivity": "90dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 3.0Ω)",
-                "recommended_amplifier_power": "50W – 500W na 8Ω",
-                "dimensions": {
-                  "height": "334mm",
-                  "width": "847mm",
-                  "depth": "371mm",
-                  "note": "Samo kabinet"
-                },
-                "weight": "32.20kg",
-                "technologies": [
-                  "Diamond tweeter",
-                  "Continuum™ cone FST",
-                  "Aerofoil™ cone bass units",
-                  "Matrix™",
-                  "Flowport"
-                ]
-              }
-            },
-            {
-              "name": "HTM82 D4",
-              "brand": "Bowers & Wilkins",
-              "series": "800 Series Diamond",
-              "description": "Kompaktniji centralni zvučnik za kućno kino.",
-              "longDescription": "Bowers & Wilkins HTM82 D4 je 3-sistemski centralni zvučnik sa Diamond dome visokotoncem, idealan za manje kućne kino sisteme.",
-              "intended_use": "Kućno kino",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Gloss Black", "Satin Walnut", "White", "Rosenut"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "3-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm (1in) Diamond dome visokotonac",
-                  "1x Ø130mm (5in) Continuum™ cone FST™ srednjetonac",
-                  "2x Ø165mm (6.5in) Aerofoil™ cone bas jedinice"
-                ],
-                "frequency_response": "33Hz - 28kHz (±3dB)",
-                "sensitivity": "89dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 3.0Ω)",
-                "recommended_amplifier_power": "50W – 200W na 8Ω",
-                "dimensions": {
-                  "height": "289mm",
-                  "width": "715mm",
-                  "depth": "369mm",
-                  "note": "Samo kabinet"
-                },
-                "weight": "25.15kg",
-                "technologies": [
-                  "Diamond tweeter",
-                  "Continuum™ cone FST",
-                  "Aerofoil™ cone bass units",
-                  "Matrix™",
-                  "Flowport"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Ugradbeni",
-          "models": [
-            {
-              "name": "CCM632",
-              "brand": "Bowers & Wilkins",
-              "series": "600 Series",
-              "description": "Kompaktni ugradbeni zvučnik za diskretnu instalaciju.",
-              "longDescription": "Bowers & Wilkins CCM632 je kompaktni in-ceiling zvučnik sa 3in punim opsegom drajvera, idealan za pozadinski zvuk u malim prostorima.",
-              "intended_use": "Pozadinski zvuk, multi-room audio",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["White"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "1-sistemski, ugradbeni",
-                "drivers": [
-                  "1x Ø75mm (3in) puni opseg drajver"
-                ],
-                "frequency_response": "100Hz - 17kHz (±3dB)",
-                "sensitivity": "84dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 5.0Ω)",
-                "recommended_amplifier_power": "10W – 100W na 8Ω",
-                "dimensions": {
-                  "diameter": "147mm",
-                  "depth": "90mm",
-                  "cut-out_diameter": "120mm"
-                },
-                "weight": "0.8kg (procena)",
-                "technologies": [
-                  "Full-range driver",
-                  "QuickDogs™ instalacija"
-                ]
-              }
-            },
-            {
-              "name": "CCM664",
-              "brand": "Bowers & Wilkins",
-              "series": "600 Series",
-              "description": "Ugradbeni zvučnik sa podesivim visokotoncem.",
-              "longDescription": "Bowers & Wilkins CCM664 je 2-sistemski in-ceiling zvučnik sa podesivim mekim dom visokotoncem i Kevlar® bas/srednjetoncem.",
-              "intended_use": "Pozadinski zvuk, surround zvuk",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["White"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "2-sistemski, ugradbeni",
-                "drivers": [
-                  "1x Ø25mm (1in) meki dom visokotonac",
-                  "1x Ø150mm (6in) Kevlar® bas/srednjetonac"
-                ],
-                "frequency_response": "45Hz - 20kHz (±3dB)",
-                "sensitivity": "87dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 4.5Ω)",
-                "recommended_amplifier_power": "25W – 130W na 8Ω",
-                "dimensions": {
-                  "diameter": "240mm",
-                  "depth": "133mm",
-                  "cut-out_diameter": "202mm"
-                },
-                "weight": "2.0kg (procena)",
-                "technologies": [
-                  "Kevlar® cone",
-                  "Adjustable tweeter",
-                  "QuickDogs™ instalacija"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Vanjski",
-          "models": [
-            {
-              "name": "Marine 6",
-              "brand": "Bowers & Wilkins",
-              "series": "Marine Series",
-              "description": "Vodootporni ugradbeni zvučnik za vanjsku upotrebu.",
-              "longDescription": "Bowers & Wilkins Marine 6 je robustan ugradbeni zvučnik sa IP66 sertifikatom, dizajniran za vanjsku upotrebu u teškim uslovima.",
-              "intended_use": "Vanjska upotreba, morska okruženja",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["White"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "2-sistemski, ugradbeni",
-                "drivers": [
-                  "1x Ø25mm (1in) meki dom visokotonac",
-                  "1x Ø150mm (6in) polipropilenski bas/srednjetonac"
-                ],
-                "frequency_response": "55Hz - 22kHz (±3dB)",
-                "sensitivity": "88dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 4.0Ω)",
-                "recommended_amplifier_power": "20W – 80W na 8Ω",
-                "water_resistance": "IP66",
-                "dimensions": {
-                  "diameter": "243mm",
-                  "depth": "88mm",
-                  "cut-out_diameter": "202mm"
-                },
-                "weight": "1.5kg (procena)",
-                "technologies": [
-                  "IP66-rated",
-                  "Polypropylene cone"
-                ]
-              }
-            },
-            {
-              "name": "Marine 8",
-              "brand": "Bowers & Wilkins",
-              "series": "Marine Series",
-              "description": "Veći vodootporni ugradbeni zvučnik za vanjsku upotrebu.",
-              "longDescription": "Bowers & Wilkins Marine 8 je veći ugradbeni zvučnik sa IP66 sertifikatom, dizajniran za veće prostore i morska okruženja.",
-              "intended_use": "Vanjska upotreba, morska okruženja",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["White"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "2-sistemski, ugradbeni",
-                "drivers": [
-                  "1x Ø25mm (1in) meki dom visokotonac",
-                  "1x Ø200mm (8in) polipropilenski bas/srednjetonac"
-                ],
-                "frequency_response": "39Hz - 22kHz (±3dB)",
-                "sensitivity": "88dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "8Ω (minimum 4.0Ω)",
-                "recommended_amplifier_power": "20W – 100W na 8Ω",
-                "water_resistance": "IP66",
-                "dimensions": {
-                  "diameter": "292mm",
-                  "depth": "93mm",
-                  "cut-out_diameter": "251mm"
-                },
-                "weight": "2.0kg (procena)",
-                "technologies": [
-                  "IP66-rated",
-                  "Polypropylene cone"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Subwooferi",
-          "models": [
-            {
-              "name": "ISW-3",
-              "brand": "Bowers & Wilkins",
-              "series": "Nema",
-              "description": "Ugradbeni subwoofer za snažan bas u zidovima.",
-              "longDescription": "Bowers & Wilkins ISW-3 je ugradbeni subwoofer sa dva 6.5in bas drajvera, dizajniran za diskretnu instalaciju u zidovima.",
-              "intended_use": "Kućno kino, pozadinski bas",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["White"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "Ugradbeni subwoofer",
-                "drivers": [
-                  "2x Ø165mm (6.5in) papirni/Aramid bas drajveri"
-                ],
-                "frequency_response": "25Hz - 120Hz (±3dB)",
-                "recommended_amplifier_power": "SA-250 (250W)",
-                "dimensions": {
-                  "height": "1450mm",
-                  "width": "300mm",
-                  "depth": "92mm",
-                  "cut-out_dimensions": "1402x252mm"
-                },
-                "weight": "14.5kg (procena)",
-                "technologies": [
-                  "Dual-driver design",
-                  "Balanced configuration"
-                ]
-              }
-            },
-            {
-              "name": "ISW-4",
-              "brand": "Bowers & Wilkins",
-              "series": "Nema",
-              "description": "Veći ugradbeni subwoofer za snažan bas.",
-              "longDescription": "Bowers & Wilkins ISW-4 je ugradbeni subwoofer sa dva 8in bas drajvera, dizajniran za snažan bas u većim prostorijama.",
-              "intended_use": "Kućno kino, pozadinski bas",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["White"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "Ugradbeni subwoofer",
-                "drivers": [
-                  "2x Ø200mm (8in) papirni/Aramid bas drajveri"
-                ],
-                "frequency_response": "20Hz - 120Hz (±3dB)",
-                "recommended_amplifier_power": "SA-250 (250W)",
-                "dimensions": {
-                  "height": "1550mm",
-                  "width": "350mm",
-                  "depth": "92mm",
-                  "cut-out_dimensions": "1502x302mm"
-                },
-                "weight": "18.0kg (procena)",
-                "technologies": [
-                  "Dual-driver design",
-                  "Balanced configuration"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+        "weight_kg": 7.0,
+        "technologies": ["Titanijski visokotonac", "Continuum konus", "Decoupled Double Dome"]
+      }
     },
     {
-      "name": "Slušalice",
-      "subcategories": [
-        {
-          "name": "Over-Ear",
-          "models": [
-            {
-              "name": "Px7 S2",
-              "brand": "Bowers & Wilkins",
-              "series": "Nema",
-              "description": "Premium bežične over-ear slušalice sa ANC-om.",
-              "longDescription": "Bowers & Wilkins Px7 S2 su premium bežične over-ear slušalice sa 40mm dinamičkim drajverima i naprednim ANC-om.",
-              "intended_use": "Mobilno slušanje, Hi-Fi audio",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Black", "Blue", "Grey"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "Over-Ear, True Wireless, ANC",
-                "drivers": ["2x 40mm dinamički drajver"],
-                "microphones": ["6 mikrofona (ANC i pozivi)"],
-                "battery_life": "Do 30 sati (slušalice), 7 sati sa 15-minutnim punjenjem",
-                "connectivity": "Bluetooth 5.0 (aptX Adaptive, aptX HD, AAC, SBC)",
-                "water_resistance": "IP54 (slušalice)",
-                "dimensions": {
-                  "height": "200mm",
-                  "width": "180mm",
-                  "depth": "70mm",
-                  "note": "Približne dimenzije presavijenih slušalica"
-                },
-                "weight": "0.307kg",
-                "technologies": [
-                  "Active Noise Cancellation (ANC)",
-                  "aptX Adaptive",
-                  "Custom-tuned 40mm drivers"
-                ]
-              }
-            }
-          ]
+      "name": "703 S3",
+      "series": "700 Series",
+      "category": "Zvučnici",
+      "subcategory": "Samostojeći zvučnici",
+      "description": "Samostojeći zvučnici za vrhunski zvuk u većim prostorima.",
+      "longDescription": "Bowers & Wilkins 703 S3 su samostojeći zvučnici s naprednim titanijskim visokotoncem i Continuum koncem, idealni za velike prostorije i Hi-Fi sustave visoke klase.",
+      "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+      "price_usd": 3400,
+      "finishes": ["Crna sjajna", "Bijela satenska", "Mocha"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/BowersWilkins.png",
+      "warranty_duration": 2,
+      "release_year": 2023,
+      "comparison_score": 94,
+      "specifications": {
+        "type": "Samostojeći zvučnik",
+        "min_frequency": 46,
+        "max_frequency": 28000,
+        "sensitivity": "90dB",
+        "nominal_impedance": "8Ω",
+        "inputs": [],
+        "outputs": [],
+        "connectivity": [],
+        "dimensions": {
+          "height_mm": 1010,
+          "width_mm": 290,
+          "depth_mm": 372
         },
-        {
-          "name": "In-Ear",
-          "models": [
-            {
-              "name": "Pi5 S2",
-              "brand": "Bowers & Wilkins",
-              "series": "Nema",
-              "description": "True Wireless in-ear slušalice sa visokokvalitetnim zvukom.",
-              "longDescription": "Bowers & Wilkins Pi5 S2 su True Wireless in-ear slušalice sa 9.2mm dinamičkim drajverima i naprednim ANC-om.",
-              "intended_use": "Mobilno slušanje",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Cloud Grey", "Storm Grey", "Spring Lilac"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "In-Ear, True Wireless, ANC",
-                "drivers": ["2x 9.2mm dinamički drajver"],
-                "microphones": ["4 mikrofona (ANC i pozivi)"],
-                "battery_life": "Do 5 sati (slušalice), 20 sati (kutija za punjenje)",
-                "connectivity": "Bluetooth 5.0 (aptX Adaptive, AAC, SBC)",
-                "water_resistance": "IP54 (slušalice)",
-                "dimensions": {
-                  "height": "26mm",
-                  "width": "24mm",
-                  "depth": "28mm",
-                  "note": "Dimenzije kutije za punjenje: 60x56x28mm"
-                },
-                "weight": "0.006kg (po slušalici), 0.061kg (sa kutijom)",
-                "technologies": [
-                  "Active Noise Cancellation (ANC)",
-                  "aptX Adaptive",
-                  "True Wireless Stereo"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+        "weight_kg": 25.0,
+        "technologies": ["Titanijski visokotonac", "Continuum konus", "Aerofoil bas profil"]
+      }
     },
     {
-      "name": "Soundbarovi",
-      "subcategories": [
-        {
-          "name": "Nema",
-          "models": [
-            {
-              "name": "Panorama 3",
-              "brand": "Bowers & Wilkins",
-              "series": "Nema",
-              "description": "Dolby Atmos soundbar sa ugrađenim subwooferom.",
-              "longDescription": "Bowers & Wilkins Panorama 3 je Dolby Atmos soundbar sa 3.1.2 konfiguracijom, uključujući integrisani subwoofer.",
-              "intended_use": "Kućno kino",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Black"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "type": "Soundbar sa Dolby Atmos, integrisani subwoofer",
-                "channels": "3.1.2",
-                "drivers": [
-                  "3x 19mm (0.75in) Titanium Dome visokotonci",
-                  "4x 50mm (2in) FST™ srednjetonci",
-                  "2x 50mm (2in) Atmos drajveri (upwards-firing)",
-                  "2x 100mm (4in) bas jedinice"
-                ],
-                "amplifier_power": "400W (Class D)",
-                "frequency_response": "43Hz - 48kHz (±3dB)",
-                "inputs": [
-                  "1x HDMI eARC",
-                  "1x Digitalni audio ulaz (Toslink)",
-                  "1x RJ45 Ethernet",
-                  "1x USB-C (servis)"
-                ],
-                "connectivity": [
-                  "Wi-Fi (802.11a/b/g/n/ac)",
-                  "Bluetooth 5.0 (aptX Adaptive, AAC, SBC)",
-                  "Apple AirPlay 2",
-                  "Spotify Connect",
-                  "Roon Ready"
-                ],
-                "voice_control": "Alexa Built-in",
-                "dimensions": {
-                  "height": "65mm",
-                  "width": "1210mm",
-                  "depth": "140mm"
-                },
-                "weight": "6.5kg",
-                "technologies": [
-                  "Dolby Atmos",
-                  "Titanium Dome tweeter",
-                  "FST™ midrange",
-                  "Integrated subwoofer"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+      "name": "Px7 S3",
+      "series": "Nema",
+      "category": "Slušalice",
+      "subcategory": "Over-ear",
+      "description": "Bežične slušalice s aktivnim poništavanjem buke.",
+      "longDescription": "Bowers & Wilkins Px7 S3 su vrhunske bežične over-ear slušalice s aktivnim poništavanjem buke, pružajući izuzetan zvuk i udobnost za Hi-Fi slušanje u pokretu.",
+      "intended_use": ["Hi-Fi audio"],
+      "price_usd": 649,
+      "finishes": ["Crna", "Siva", "Plava"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/BowersWilkins.png",
+      "warranty_duration": 2,
+      "release_year": 2025,
+      "comparison_score": 86,
+      "specifications": {
+        "type": "Over-ear slušalice",
+        "min_frequency": 20,
+        "max_frequency": 20000,
+        "sensitivity": "98dB",
+        "nominal_impedance": "32Ω",
+        "inputs": ["3.5mm audio", "USB-C"],
+        "outputs": [],
+        "connectivity": ["Bluetooth 5.2", "aptX Adaptive"],
+        "dimensions": {
+          "height_mm": 190,
+          "width_mm": 160,
+          "depth_mm": 80
+        },
+        "weight_kg": 0.31,
+        "technologies": ["Aktivno poništavanje buke", "aptX Adaptive", "High-resolution audio"]
+      }
     },
     {
-      "name": "Pribor",
-      "subcategories": [
-        {
-          "name": "Stalci",
-          "models": [
-            {
-              "name": "FS-805 D4",
-              "brand": "Bowers & Wilkins",
-              "series": "800 Series Diamond",
-              "description": "Premium stalak dizajniran za 805 D4 zvučnik.",
-              "longDescription": "FS-805 D4 je premium stalak za Bowers & Wilkins 805 D4 zvučnik, izrađen od metala i aluminija.",
-              "intended_use": "Podrška za 805 D4 zvučnik",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Silver", "Black"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "compatibility": ["Bowers & Wilkins 805 D4"],
-                "material": "Metal/Aluminij",
-                "dimensions": {
-                  "height": "600mm",
-                  "width": "240mm",
-                  "depth": "373mm",
-                  "note": "Procenjene dimenzije, optimizovane za visinu slušanja"
-                },
-                "weight": "15.0kg (po stalku, procena)",
-                "features": [
-                  "Smanjenje vibracija",
-                  "Integrisano vođenje kablova",
-                  "Stabilna baza"
-                ]
-              }
-            },
-            {
-              "name": "FS-HTM D4",
-              "brand": "Bowers & Wilkins",
-              "series": "800 Series Diamond",
-              "description": "Stalak za centralne zvučnike HTM81 D4 i HTM82 D4.",
-              "longDescription": "FS-HTM D4 je stalak dizajniran za Bowers & Wilkins HTM81 D4 i HTM82 D4 centralne zvučnike.",
-              "intended_use": "Podrška za HTM81 D4 i HTM82 D4 zvučnike",
-              "price": "Kontaktirajte prodavca za cenu",
-              "finishes": ["Silver", "Black"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Bower%20%26%20Wilkins.svg",
-              "specifications": {
-                "compatibility": ["Bowers & Wilkins HTM81 D4", "Bowers & Wilkins HTM82 D4"],
-                "material": "Metal/Aluminij",
-                "dimensions": {
-                  "height": "290mm",
-                  "width": "715mm",
-                  "depth": "369mm",
-                  "note": "Procenjene dimenzije, prilagođene za centralne zvučnike"
-                },
-                "weight": "12.0kg (procena)",
-                "features": [
-                  "Smanjenje vibracija",
-                  "Integrisano vođenje kablova",
-                  "Stabilna baza"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+      "name": "Zeppelin",
+      "series": "Nema",
+      "category": "Zvučnici",
+      "subcategory": "Bežični zvučnici",
+      "description": "Bežični zvučnik s vrhunskim dizajnom i zvukom.",
+      "longDescription": "Bowers & Wilkins Zeppelin je bežični zvučnik s podrškom za AirPlay 2, Spotify Connect i Bluetooth aptX Adaptive, pružajući vrhunski zvuk u elegantnom dizajnu.",
+      "intended_use": ["Hi-Fi audio", "Streaming"],
+      "price_usd": 799,
+      "finishes": ["Ponoćno siva", "Biserno siva"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/BowersWilkins.png",
+      "warranty_duration": 2,
+      "release_year": 2024,
+      "comparison_score": 87,
+      "specifications": {
+        "type": "Bežični zvučnik",
+        "min_frequency": 35,
+        "max_frequency": 20000,
+        "amplifier_power": "240W (Class D)",
+        "amplifier_power_watts": 240,
+        "inputs": [],
+        "outputs": [],
+        "connectivity": ["Wi-Fi", "Bluetooth 5.0", "AirPlay 2", "Spotify Connect"],
+        "dimensions": {
+          "height_mm": 210,
+          "width_mm": 650,
+          "depth_mm": 194
+        },
+        "weight_kg": 6.5,
+        "technologies": ["Class D amplification", "High-resolution audio", "Multi-room streaming"]
+      }
     }
   ]
 }
