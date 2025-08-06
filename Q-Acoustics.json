@@ -1,160 +1,138 @@
+
 {
-  "categories": [
+  "brand": "Q Acoustics",
+  "products": [
     {
-      "name": "Zvučnici",
-      "subcategories": [
-        {
-          "name": "Samostojeći",
-          "models": [
-            {
-              "name": "5050",
-              "brand": "Q Acoustics",
-              "series": "5000 Series",
-              "description": "Snažan samostojeći zvučnik za veće prostorije.",
-              "longDescription": "Q Acoustics 5050 je 2.5-sistemski bas-reflex zvučnik sa C3 Continuous Curved Cone drajverima, idealan za Hi-Fi i kućno kino.",
-              "intended_use": "Hi-Fi stereo, kućno kino",
-              "price": "Approx. $2,000 /par (2025 estimate)",
-              "finishes": ["Black", "White", "Satin Oak", "Rosewood"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Q-Acoustics.png",
-              "specifications": {
-                "type": "2.5-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm dome visokotonac",
-                  "2x Ø150mm C3 Continuous Curved Cone bas/srednjetonci"
-                ],
-                "frequency_response": "38Hz - 30kHz (±3dB)",
-                "sensitivity": "91.8dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "6Ω (minimum 3.2Ω)",
-                "recommended_amplifier_power": "25W – 200W na 6Ω",
-                "dimensions": {
-                  "height": "1019mm",
-                  "width": "374mm",
-                  "depth": "336mm"
-                },
-                "weight": "21.6kg",
-                "technologies": [
-                  "C3 Continuous Curved Cone",
-                  "Point-to-Point bracing",
-                  "Helmholtz Pressure Equalizer"
-                ]
-              }
-            }
-          ]
+      "name": "3030i",
+      "series": "3000i",
+      "category": "Zvučnici",
+      "subcategory": "Bookshelf zvučnici",
+      "description": "Proračunski bookshelf zvučnici za Hi-Fi sustave.",
+      "longDescription": "Q Acoustics 3030i su kompaktni bookshelf zvučnici s P2P tehnologijom i poboljšanim bas drajverima, idealni za proračunske Hi-Fi sustave s izvrsnim zvukom.",
+      "intended_use": ["Hi-Fi stereo"],
+      "price_usd": 499,
+      "finishes": ["Crna", "Bijela", "Orah", "Siva"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/QAcoustics.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 77,
+      "specifications": {
+        "type": "Bookshelf zvučnik",
+        "min_frequency": 46,
+        "max_frequency": 30000,
+        "sensitivity": "88dB",
+        "nominal_impedance": "6Ω",
+        "inputs": [],
+        "outputs": [],
+        "connectivity": [],
+        "dimensions": {
+          "height_mm": 325,
+          "width_mm": 200,
+          "depth_mm": 329
         },
-        {
-          "name": "Regalni/Stalni",
-          "models": [
-            {
-              "name": "5020",
-              "brand": "Q Acoustics",
-              "series": "5000 Series",
-              "description": "Kompaktni regalni zvučnik za manje prostore.",
-              "longDescription": "Q Acoustics 5020 je 2-sistemski bas-reflex zvučnik sa C3 Continuous Curved Cone drajverom, idealan za Hi-Fi u manjim prostorima.",
-              "intended_use": "Hi-Fi stereo",
-              "price": "Approx. $800 /par (2025 estimate)",
-              "finishes": ["Black", "White", "Satin Oak", "Rosewood"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Q-Acoustics.png",
-              "specifications": {
-                "type": "2-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm dome visokotonac",
-                  "1x Ø125mm C3 Continuous Curved Cone bas/srednjetonac"
-                ],
-                "frequency_response": "53Hz - 30kHz (±3dB)",
-                "sensitivity": "87.9dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "6Ω (minimum 3.6Ω)",
-                "recommended_amplifier_power": "25W – 100W na 6Ω",
-                "dimensions": {
-                  "height": "284mm",
-                  "width": "180mm",
-                  "depth": "293mm",
-                  "note": "Samo kabinet, preporučuje se stalak"
-                },
-                "weight": "7.0kg",
-                "technologies": [
-                  "C3 Continuous Curved Cone",
-                  "Point-to-Point bracing"
-                ]
-              }
-            },
-            {
-              "name": "Concept 30",
-              "brand": "Q Acoustics",
-              "series": "Concept",
-              "description": "Premium regalni zvučnik za audiofile.",
-              "longDescription": "Q Acoustics Concept 30 je 2-sistemski bas-reflex zvučnik sa naprednim drajverima i Gelcore™ konstrukcijom za smanjenje vibracija.",
-              "intended_use": "Hi-Fi stereo",
-              "price": "Approx. $1,300 /par (2025 estimate)",
-              "finishes": ["Black", "White", "Silver"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Q-Acoustics.png",
-              "specifications": {
-                "type": "2-sistemski, bas-reflex",
-                "drivers": [
-                  "1x Ø25mm dome visokotonac",
-                  "1x Ø125mm bas/srednjetonac"
-                ],
-                "frequency_response": "54Hz - 30kHz (±3dB)",
-                "sensitivity": "87dB (2.83Vrms @ 1m)",
-                "nominal_impedance": "6Ω (minimum 4.0Ω)",
-                "recommended_amplifier_power": "25W – 100W na 6Ω",
-                "dimensions": {
-                  "height": "284mm",
-                  "width": "180mm",
-                  "depth": "319mm",
-                  "note": "Samo kabinet, preporučuje se stalak"
-                },
-                "weight": "7.9kg",
-                "technologies": [
-                  "Gelcore™ cabinet",
-                  "Point-to-Point bracing"
-                ]
-              }
-            }
-          ]
+        "weight_kg": 6.4,
+        "technologies": ["P2P tehnologija", "HPE bas optimizacija"]
+      }
+    },
+    {
+      "name": "5050",
+      "series": "5000",
+      "category": "Zvučnici",
+      "subcategory": "Samostojeći zvučnici",
+      "description": "Samostojeći zvučnici za veće prostore.",
+      "longDescription": "Q Acoustics 5050 su samostojeći zvučnici s C3 Continuum koncem i P2P tehnologijom, pružajući snažan zvuk za veće prostorije i Hi-Fi sustave.",
+      "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+      "price_usd": 1499,
+      "finishes": ["Crna", "Bijela", "Orah", "Santos palisander"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/QAcoustics.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 80,
+      "specifications": {
+        "type": "Samostojeći zvučnik",
+        "min_frequency": 37,
+        "max_frequency": 30000,
+        "sensitivity": "91dB",
+        "nominal_impedance": "6Ω",
+        "inputs": [],
+        "outputs": [],
+        "connectivity": [],
+        "dimensions": {
+          "height_mm": 1017,
+          "width_mm": 366,
+          "depth_mm": 336
         },
-        {
-          "name": "Aktivni",
-          "models": [
-            {
-              "name": "Q Active 400",
-              "brand": "Q Acoustics",
-              "series": "Q Active",
-              "description": "Aktivni bežični zvučnik sa integrisanim pojačalom.",
-              "longDescription": "Q Acoustics Q Active 400 je aktivni bežični zvučnik sa integrisanim pojačalom i podrškom za streaming.",
-              "intended_use": "Hi-Fi stereo, bežično strimovanje",
-              "price": "Approx. $2,000 /par (2025 estimate)",
-              "finishes": ["Black", "White"],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Q-Acoustics.png",
-              "specifications": {
-                "type": "2-sistemski, aktivni, bas-reflex",
-                "drivers": [
-                  "2x Ø25mm dome visokotonci",
-                  "2x Ø114mm BMR drajveri"
-                ],
-                "amplifier_power": "140W (Class D)",
-                "frequency_response": "35Hz - 20kHz (±3dB)",
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth 4.1",
-                  "AirPlay 2",
-                  "Spotify Connect"
-                ],
-                "dimensions": {
-                  "height": "300mm",
-                  "width": "320mm",
-                  "depth": "290mm"
-                },
-                "weight": "8.5kg",
-                "technologies": [
-                  "Balanced Mode Radiator (BMR)",
-                  "Point-to-Point bracing",
-                  "Active amplification"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+        "weight_kg": 20.0,
+        "technologies": ["C3 Continuum konus", "P2P tehnologija", "HPE bas optimizacija"]
+      }
+    },
+    {
+      "name": "M20 HD",
+      "series": "Nema",
+      "category": "Zvučnici",
+      "subcategory": "Aktivni bookshelf zvučnici",
+      "description": "Aktivni bookshelf zvučnici s Bluetoothom.",
+      "longDescription": "Q Acoustics M20 HD su aktivni bookshelf zvučnici s 65W pojačalom i Bluetooth aptX HD, idealni za streaming i kompaktne Hi-Fi sustave.",
+      "intended_use": ["Hi-Fi stereo", "Streaming"],
+      "price_usd": 599,
+      "finishes": ["Crna", "Bijela", "Orah"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/QAcoustics.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 78,
+      "specifications": {
+        "type": "Aktivni bookshelf zvučnik",
+        "min_frequency": 55,
+        "max_frequency": 22000,
+        "amplifier_power": "2x 65W (Class D)",
+        "amplifier_power_watts": 65,
+        "sensitivity": "87dB",
+        "nominal_impedance": "6Ω",
+        "inputs": ["RCA", "Optical", "3.5mm AUX", "USB"],
+        "outputs": ["Subwoofer out"],
+        "connectivity": ["Bluetooth aptX HD"],
+        "dimensions": {
+          "height_mm": 296,
+          "width_mm": 170,
+          "depth_mm": 296
+        },
+        "weight_kg": 5.5,
+        "technologies": ["Class D amplification", "P2P tehnologija"]
+      }
+    },
+    {
+      "name": "Q Active 200",
+      "series": "Q Active",
+      "category": "Zvučnici",
+      "subcategory": "Aktivni bookshelf zvučnici",
+      "description": "Bežični aktivni zvučnici s multi-room streamingom.",
+      "longDescription": "Q Acoustics Q Active 200 su aktivni bookshelf zvučnici s 100W pojačalom, Wi-Fi streamingom i multi-room podrškom, idealni za moderne Hi-Fi sustave.",
+      "intended_use": ["Hi-Fi stereo", "Streaming"],
+      "price_usd": 1999,
+      "finishes": ["Crna", "Bijela"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/QAcoustics.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 82,
+      "specifications": {
+        "type": "Aktivni bookshelf zvučnik",
+        "min_frequency": 46,
+        "max_frequency": 20000,
+        "amplifier_power": "2x 100W (Class D)",
+        "amplifier_power_watts": 100,
+        "sensitivity": "88dB",
+        "nominal_impedance": "6Ω",
+        "inputs": ["HDMI ARC", "RCA", "Optical"],
+        "outputs": ["Subwoofer out"],
+        "connectivity": ["Wi-Fi", "Bluetooth 4.1", "AirPlay 2", "Spotify Connect"],
+        "dimensions": {
+          "height_mm": 286,
+          "width_mm": 170,
+          "depth_mm": 296
+        },
+        "weight_kg": 7.5,
+        "technologies": ["Class D amplification", "Multi-room streaming", "P2P tehnologija"]
+      }
     }
   ]
 }
