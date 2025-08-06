@@ -1,837 +1,132 @@
 {
-  "categories": [
+  "brand": "Marantz",
+  "products": [
     {
-      "name": "AV Risiveri",
-      "subcategories": [
-        {
-          "name": "Cinema Serija",
-          "models": [
-            {
-              "name": "Cinema 30",
-              "brand": "Marantz",
-              "series": "Cinema",
-              "description": "Referentni AV risiver sa 11.4 kanalnim pojačanjem i 8K podrškom.",
-              "longDescription": "Marantz Cinema 30 je vrhunski 11.4 kanalni AV risiver sa 140W po kanalu, podrškom za Dolby Atmos, DTS:X, Auro 3D i 8K Ultra HD, uz HEOS streaming.",
-              "intended_use": [
-                "Kućno kino",
-                "Multi-room audio"
-              ],
-              "price": "Approx. $4500",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "11.4 kanalni AV risiver",
-                "channels": "11.4",
-                "amplifier_power": "140W po kanalu (8Ω)",
-                "recommended_amplifier_power": "140W",
-                "surround_technologies": [
-                  "Dolby Atmos",
-                  "DTS:X",
-                  "Auro 3D",
-                  "IMAX Enhanced"
-                ],
-                "inputs": [
-                  "7x HDMI (8K)",
-                  "3x HDMI izlaz",
-                  "2x kompozitni video",
-                  "2x komponentni video",
-                  "4x analogni audio",
-                  "1x optički",
-                  "1x koaksijalni",
-                  "1x USB"
-                ],
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth",
-                  "HEOS Built-in",
-                  "Apple AirPlay 2",
-                  "Spotify Connect",
-                  "Qobuz Connect"
-                ],
-                "frequency_response": "20Hz - 20kHz",
-                "dimensions": {
-                  "height_mm": "177mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "403mm"
-                },
-                "weight": "19.0kg",
-                "technologies": [
-                  "HDAM SA-2",
-                  "Dolby Atmos Height Virtualization",
-                  "HEOS multi-room",
-                  "8K Ultra HD"
-                ]
-              }
-            },
-            {
-              "name": "Cinema 40",
-              "brand": "Marantz",
-              "series": "Cinema",
-              "description": "Premium 9.4 kanalni AV risiver sa 8K i HEOS podrškom.",
-              "longDescription": "Marantz Cinema 40 je 9.4 kanalni AV risiver sa 125W po kanalu, Dolby Atmos, DTS:X, Auro 3D i 8K Ultra HD, uz HEOS streaming i naprednu optimizaciju prostorije.",
-              "intended_use": [
-                "Kućno kino",
-                "Multi-room audio"
-              ],
-              "price": "Approx. $3500",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "9.4 kanalni AV risiver",
-                "channels": "9.4",
-                "amplifier_power": "125W po kanalu (8Ω)",
-                "recommended_amplifier_power": "125W",
-                "surround_technologies": [
-                  "Dolby Atmos",
-                  "DTS:X",
-                  "Auro 3D",
-                  "IMAX Enhanced"
-                ],
-                "inputs": [
-                  "7x HDMI (8K)",
-                  "2x HDMI izlaz",
-                  "2x kompozitni video",
-                  "2x komponentni video",
-                  "4x analogni audio",
-                  "1x optički",
-                  "1x koaksijalni"
-                ],
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth",
-                  "HEOS Built-in",
-                  "Apple AirPlay 2",
-                  "Spotify Connect"
-                ],
-                "frequency_response": "20Hz - 20kHz",
-                "dimensions": {
-                  "height_mm": "171mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "384mm"
-                },
-                "weight": "15.2kg",
-                "technologies": [
-                  "HDAM SA-2",
-                  "Dolby Atmos Height Virtualization",
-                  "HEOS multi-room",
-                  "8K Ultra HD"
-                ]
-              }
-            },
-            {
-              "name": "Cinema 50",
-              "brand": "Marantz",
-              "series": "Cinema",
-              "description": "Snažan 9.4 kanalni AV risiver za vrhunske kućne bioskope.",
-              "longDescription": "Marantz Cinema 50 je 9.4 kanalni AV risiver sa 110W po kanalu, podrškom za Dolby Atmos, DTS:X, IMAX Enhanced i 8K Ultra HD, uz HEOS streaming.",
-              "intended_use": [
-                "Kućno kino",
-                "Multi-room audio"
-              ],
-              "price": "Approx. $2500",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "9.4 kanalni AV risiver",
-                "channels": "9.4",
-                "amplifier_power": "110W po kanalu (8Ω)",
-                "recommended_amplifier_power": "110W",
-                "surround_technologies": [
-                  "Dolby Atmos",
-                  "DTS:X",
-                  "IMAX Enhanced",
-                  "Auro 3D"
-                ],
-                "inputs": [
-                  "6x HDMI (8K)",
-                  "2x HDMI izlaz",
-                  "2x kompozitni video",
-                  "2x komponentni video",
-                  "4x analogni audio",
-                  "1x optički",
-                  "1x koaksijalni"
-                ],
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth",
-                  "HEOS Built-in",
-                  "Apple AirPlay 2",
-                  "Spotify Connect"
-                ],
-                "frequency_response": "20Hz - 20kHz",
-                "dimensions": {
-                  "height_mm": "165mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "384mm"
-                },
-                "weight": "13.5kg",
-                "technologies": [
-                  "HDAM SA-2",
-                  "Dolby Atmos Height Virtualization",
-                  "HEOS multi-room",
-                  "8K Ultra HD"
-                ]
-              }
-            },
-            {
-              "name": "Cinema 60",
-              "brand": "Marantz",
-              "series": "Cinema",
-              "description": "Kompaktni 7.2 kanalni AV risiver sa 8K i HEOS podrškom.",
-              "longDescription": "Marantz Cinema 60 je 7.2 kanalni AV risiver sa 100W po kanalu, Dolby Atmos, DTS:X i 8K Ultra HD, idealan za manje kućne bioskope.",
-              "intended_use": [
-                "Kućno kino",
-                "Multi-room audio"
-              ],
-              "price": "Approx. $1700",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "7.2 kanalni AV risiver",
-                "channels": "7.2",
-                "amplifier_power": "100W po kanalu (8Ω)",
-                "recommended_amplifier_power": "100W",
-                "surround_technologies": [
-                  "Dolby Atmos",
-                  "DTS:X"
-                ],
-                "inputs": [
-                  "6x HDMI (8K)",
-                  "2x HDMI izlaz",
-                  "2x kompozitni video",
-                  "2x analogni audio",
-                  "1x optički",
-                  "1x koaksijalni"
-                ],
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth",
-                  "HEOS Built-in",
-                  "Apple AirPlay 2",
-                  "Spotify Connect"
-                ],
-                "frequency_response": "20Hz - 20kHz",
-                "dimensions": {
-                  "height_mm": "160mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "368mm"
-                },
-                "weight": "10.9kg",
-                "technologies": [
-                  "HDAM SA-2",
-                  "Dolby Atmos Height Virtualization",
-                  "HEOS multi-room",
-                  "8K Ultra HD"
-                ]
-              }
-            },
-            {
-              "name": "Cinema 70s",
-              "brand": "Marantz",
-              "series": "Cinema",
-              "description": "Slim 7.2 kanalni AV risiver za manje prostore.",
-              "longDescription": "Marantz Cinema 70s je tanak 7.2 kanalni AV risiver sa 50W po kanalu, Dolby Atmos, DTS:X i 8K podrškom, dizajniran za kompaktne sisteme.",
-              "intended_use": [
-                "Kućno kino",
-                "Multi-room audio"
-              ],
-              "price": "Approx. $1200",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "7.2 kanalni AV risiver",
-                "channels": "7.2",
-                "amplifier_power": "50W po kanalu (8Ω)",
-                "recommended_amplifier_power": "50W",
-                "surround_technologies": [
-                  "Dolby Atmos",
-                  "DTS:X"
-                ],
-                "inputs": [
-                  "6x HDMI (8K)",
-                  "1x HDMI izlaz",
-                  "2x analogni audio",
-                  "1x optički",
-                  "1x koaksijalni"
-                ],
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth",
-                  "HEOS Built-in",
-                  "Apple AirPlay 2",
-                  "Spotify Connect"
-                ],
-                "frequency_response": "20Hz - 20kHz",
-                "dimensions": {
-                  "height_mm": "109mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "364mm"
-                },
-                "weight": "8.6kg",
-                "technologies": [
-                  "HDAM SA-2",
-                  "Dolby Atmos Height Virtualization",
-                  "HEOS multi-room",
-                  "8K Ultra HD"
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Pojačala",
-      "subcategories": [
-        {
-          "name": "Integrisana Pojačala",
-          "models": [
-            {
-              "name": "Model 30",
-              "brand": "Marantz",
-              "series": "Reference",
-              "description": "Premium integrisano pojačalo za Hi-Fi audiofile.",
-              "longDescription": "Marantz Model 30 je integrisano pojačalo sa Hypex NCore Class D modulima, prilagođenim HDAM-SA3 krugovima i toplim, muzikalnim zvukom.",
-              "intended_use": [
-                "Hi-Fi stereo"
-              ],
-              "price": "Approx. $3000",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "Integrisano pojačalo",
-                "amplifier_power": "100W po kanalu (8Ω), 200W po kanalu (4Ω)",
-                "recommended_amplifier_power": "100W",
-                "inputs": [
-                  "5x analogni audio",
-                  "1x MM/MC phono",
-                  "1x Power Amp Direct"
-                ],
-                "outputs": [
-                  "1x stereo izlaz",
-                  "1x slušalice"
-                ],
-                "frequency_response": "5Hz - 50kHz",
-                "sensitivity": "200mV (Line), 2.5mV (MM), 250µV (MC)",
-                "dimensions": {
-                  "height_mm": "130mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "432mm"
-                },
-                "weight": "14.8kg",
-                "technologies": [
-                  "HDAM-SA3",
-                  "Hypex NCore Class D",
-                  "Phono EQ"
-                ]
-              }
-            },
-            {
-              "name": "PM8006",
-              "brand": "Marantz",
-              "series": "Nema",
-              "description": "Snažno integrisano pojačalo za Hi-Fi sisteme.",
-              "longDescription": "Marantz PM8006 je integrisano pojačalo sa HDAM-SA3 krugovima i visokokvalitetnim phono ulazom, idealno za Hi-Fi slušanje.",
-              "intended_use": [
-                "Hi-Fi stereo"
-              ],
-              "price": "Approx. $1500",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "Integrisano pojačalo",
-                "amplifier_power": "70W po kanalu (8Ω), 100W po kanalu (4Ω)",
-                "recommended_amplifier_power": "70W",
-                "inputs": [
-                  "6x analogni audio",
-                  "1x MM phono"
-                ],
-                "outputs": [
-                  "1x stereo izlaz",
-                  "1x slušalice"
-                ],
-                "frequency_response": "10Hz - 100kHz",
-                "sensitivity": "200mV (Line), 2.7mV (MM)",
-                "dimensions": {
-                  "height_mm": "128mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "379mm"
-                },
-                "weight": "12.0kg",
-                "technologies": [
-                  "HDAM-SA3",
-                  "Current Feedback",
-                  "Phono EQ"
-                ]
-              }
-            }
-          ]
+      "name": "PM8006",
+      "series": "Nema",
+      "category": "Pojačala",
+      "subcategory": "Integrirana pojačala",
+      "description": "Integrirano pojačalo visoke klase za audiofile.",
+      "longDescription": "Marantz PM8006 je integrirano pojačalo s 70W po kanalu, MM phono ulazom i HDAM-SA3 tehnologijom, idealno za vrhunski Hi-Fi zvuk u kućnim uvjetima.",
+      "intended_use": ["Hi-Fi stereo"],
+      "price_usd": 1499,
+      "finishes": ["Crna", "Srebrno-zlatna"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Marantz.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 81,
+      "specifications": {
+        "type": "Integrirano pojačalo",
+        "amplifier_power": "2x 70W (8Ω)",
+        "amplifier_power_watts": 70,
+        "inputs": ["RCA", "MM Phono", "Optical", "Coaxial"],
+        "outputs": ["RCA", "Slušalice"],
+        "connectivity": [],
+        "min_frequency": 20,
+        "max_frequency": 20000,
+        "dimensions": {
+          "height_mm": 128,
+          "width_mm": 440,
+          "depth_mm": 379
         },
-        {
-          "name": "Snaga Pojačala",
-          "models": [
-            {
-              "name": "AMP 10",
-              "brand": "Marantz",
-              "series": "Reference",
-              "description": "Referentno 16-kanalno pojačalo snage za kućno kino.",
-              "longDescription": "Marantz AMP 10 je 16-kanalno pojačalo snage sa 200W po kanalu, Class D tehnologijom i HDAM-SA2 krugovima, idealno za vrhunske kućne bioskope.",
-              "intended_use": [
-                "Kućno kino"
-              ],
-              "price": "Approx. $7000",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "16-kanalno pojačalo snage",
-                "amplifier_power": "200W po kanalu (8Ω), 400W po kanalu (4Ω)",
-                "recommended_amplifier_power": "200W",
-                "inputs": [
-                  "16x balansirani XLR",
-                  "16x RCA"
-                ],
-                "outputs": [
-                  "16x zvučnički izlaz"
-                ],
-                "frequency_response": "5Hz - 70kHz",
-                "sensitivity": "1.2V (RCA), 2.4V (XLR)",
-                "dimensions": {
-                  "height_mm": "190mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "453mm"
-                },
-                "weight": "23.8kg",
-                "technologies": [
-                  "HDAM-SA2",
-                  "Class D",
-                  "High-power output"
-                ]
-              }
-            },
-            {
-              "name": "AMP 20",
-              "brand": "Marantz",
-              "series": "Reference",
-              "description": "Moćno 12-kanalno pojačalo snage za referentne sisteme.",
-              "longDescription": "Marantz AMP 20 je 12-kanalno pojačalo snage sa 200W po kanalu, Class D tehnologijom i HDAM-SA2 krugovima, dizajnirano za elite kućne bioskope.",
-              "intended_use": [
-                "Kućno kino"
-              ],
-              "price": "Approx. $5500",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "12-kanalno pojačalo snage",
-                "amplifier_power": "200W po kanalu (8Ω), 400W po kanalu (4Ω)",
-                "recommended_amplifier_power": "200W",
-                "inputs": [
-                  "12x balansirani XLR",
-                  "12x RCA"
-                ],
-                "outputs": [
-                  "12x zvučnički izlaz"
-                ],
-                "frequency_response": "5Hz - 70kHz",
-                "sensitivity": "1.2V (RCA), 2.4V (XLR)",
-                "dimensions": {
-                  "height_mm": "190mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "453mm"
-                },
-                "weight": "22.0kg",
-                "technologies": [
-                  "HDAM-SA2",
-                  "Class D",
-                  "High-power output"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+        "weight_kg": 12.0,
+        "technologies": ["HDAM-SA3", "Current Feedback", "Phono stage"]
+      }
     },
     {
-      "name": "AV Procesori",
-      "subcategories": [
-        {
-          "name": "AV Procesori",
-          "models": [
-            {
-              "name": "AV 10",
-              "brand": "Marantz",
-              "series": "Reference",
-              "description": "Referentni 15.4 kanalni AV procesor za kućno kino.",
-              "longDescription": "Marantz AV 10 je 15.4 kanalni AV procesor sa podrškom za Dolby Atmos, DTS:X Pro, Auro 3D i 8K Ultra HD, idealan za vrhunske kućne bioskope.",
-              "intended_use": [
-                "Kućno kino"
-              ],
-              "price": "Approx. $7000",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "15.4 kanalni AV procesor",
-                "channels": "15.4",
-                "surround_technologies": [
-                  "Dolby Atmos",
-                  "DTS:X Pro",
-                  "Auro 3D",
-                  "IMAX Enhanced"
-                ],
-                "inputs": [
-                  "7x HDMI (8K)",
-                  "3x HDMI izlaz",
-                  "3x komponentni video",
-                  "4x kompozitni video",
-                  "6x analogni audio",
-                  "2x optički",
-                  "2x koaksijalni",
-                  "1x USB"
-                ],
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth",
-                  "HEOS Built-in",
-                  "Apple AirPlay 2",
-                  "Spotify Connect",
-                  "Qobuz Connect"
-                ],
-                "frequency_response": "20Hz - 20kHz",
-                "dimensions": {
-                  "height_mm": "190mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "450mm"
-                },
-                "weight": "17.0kg",
-                "technologies": [
-                  "HDAM-SA2",
-                  "Dolby Atmos Height Virtualization",
-                  "HEOS multi-room",
-                  "8K Ultra HD"
-                ]
-              }
-            },
-            {
-              "name": "AV8805A",
-              "brand": "Marantz",
-              "series": "Nema",
-              "description": "13.2 kanalni AV procesor za vrhunske kućne bioskope.",
-              "longDescription": "Marantz AV8805A je 13.2 kanalni AV procesor sa podrškom za Dolby Atmos, DTS:X, Auro 3D i 8K Ultra HD, dizajniran za napredne kućne bioskope.",
-              "intended_use": [
-                "Kućno kino"
-              ],
-              "price": "Approx. $4500",
-              "finishes": [
-                "Black"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "13.2 kanalni AV procesor",
-                "channels": "13.2",
-                "surround_technologies": [
-                  "Dolby Atmos",
-                  "DTS:X",
-                  "Auro 3D",
-                  "IMAX Enhanced"
-                ],
-                "inputs": [
-                  "7x HDMI (8K)",
-                  "3x HDMI izlaz",
-                  "3x komponentni video",
-                  "4x kompozitni video",
-                  "7x analogni audio",
-                  "2x optički",
-                  "2x koaksijalni"
-                ],
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth",
-                  "HEOS Built-in",
-                  "Apple AirPlay 2",
-                  "Spotify Connect"
-                ],
-                "frequency_response": "20Hz - 20kHz",
-                "dimensions": {
-                  "height_mm": "185mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "410mm"
-                },
-                "weight": "13.7kg",
-                "technologies": [
-                  "HDAM-SA2",
-                  "Dolby Atmos Height Virtualization",
-                  "HEOS multi-room",
-                  "8K Ultra HD"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+      "name": "MODEL 30",
+      "series": "Nema",
+      "category": "Pojačala",
+      "subcategory": "Integrirana pojačala",
+      "description": "Premium integrirano pojačalo s vintage dizajnom.",
+      "longDescription": "Marantz MODEL 30 je premium integrirano pojačalo s 100W po kanalu, HDAM-SA3 i diskretnim dizajnom, idealno za audiofile koji traže topli zvuk i estetiku.",
+      "intended_use": ["Hi-Fi stereo"],
+      "price_usd": 2999,
+      "finishes": ["Crna", "Srebrno-zlatna"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Marantz.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 85,
+      "specifications": {
+        "type": "Integrirano pojačalo",
+        "amplifier_power": "2x 100W (8Ω)",
+        "amplifier_power_watts": 100,
+        "inputs": ["RCA", "MM/MC Phono", "Balanced XLR"],
+        "outputs": ["RCA", "Slušalice"],
+        "connectivity": [],
+        "min_frequency": 20,
+        "max_frequency": 20000,
+        "dimensions": {
+          "height_mm": 130,
+          "width_mm": 443,
+          "depth_mm": 432
+        },
+        "weight_kg": 14.8,
+        "technologies": ["HDAM-SA3", "Switching Mode Power Supply", "Phono stage"]
+      }
     },
     {
-      "name": "CD/SACD Plejeri",
-      "subcategories": [
-        {
-          "name": "CD/SACD Plejeri",
-          "models": [
-            {
-              "name": "SACD 30n",
-              "brand": "Marantz",
-              "series": "Reference",
-              "description": "Hi-Fi CD/SACD plejer sa mrežnim streamingom.",
-              "longDescription": "Marantz SACD 30n je CD/SACD plejer sa HEOS mrežnim streamingom, podrškom za visokokvalitetne formate i HDAM-SA3 krugovima.",
-              "intended_use": [
-                "Hi-Fi audio",
-                "Streaming"
-              ],
-              "price": "Approx. $3000",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "CD/SACD plejer sa mrežnim streamingom",
-                "supported_formats": [
-                  "CD",
-                  "SACD",
-                  "MP3",
-                  "WMA",
-                  "AAC",
-                  "FLAC",
-                  "ALAC",
-                  "WAV",
-                  "DSD"
-                ],
-                "frequency_response": "2Hz - 50kHz",
-                "signal_to_noise_ratio": "104dB (SACD), 98dB (CD)",
-                "inputs": [
-                  "1x USB",
-                  "1x optički",
-                  "1x koaksijalni"
-                ],
-                "outputs": [
-                  "1x analogni stereo",
-                  "1x optički",
-                  "1x koaksijalni",
-                  "1x slušalice"
-                ],
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth",
-                  "HEOS Built-in",
-                  "Apple AirPlay 2",
-                  "Spotify Connect"
-                ],
-                "dimensions": {
-                  "height_mm": "130mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "424mm"
-                },
-                "weight": "13.5kg",
-                "technologies": [
-                  "HDAM-SA3",
-                  "HEOS Built-in",
-                  "Marantz Musical Mastering"
-                ]
-              }
-            },
-            {
-              "name": "CD6007",
-              "brand": "Marantz",
-              "series": "Nema",
-              "description": "Pristupačni CD plejer sa visokokvalitetnim zvukom.",
-              "longDescription": "Marantz CD6007 je CD plejer sa HDAM-SA2 krugovima i visokokvalitetnim DAC-om, idealan za Hi-Fi početnike.",
-              "intended_use": [
-                "Hi-Fi audio"
-              ],
-              "price": "Approx. $600",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "CD plejer",
-                "supported_formats": [
-                  "CD",
-                  "CD-R",
-                  "CD-RW",
-                  "MP3",
-                  "WMA"
-                ],
-                "frequency_response": "2Hz - 20kHz",
-                "signal_to_noise_ratio": "110dB",
-                "inputs": [],
-                "outputs": [
-                  "1x analogni stereo",
-                  "1x optički",
-                  "1x koaksijalni",
-                  "1x slušalice"
-                ],
-                "connectivity": [],
-                "dimensions": {
-                  "height_mm": "105mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "340mm"
-                },
-                "weight": "6.5kg",
-                "technologies": [
-                  "HDAM-SA2",
-                  "High-quality DAC"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+      "name": "CD 60",
+      "series": "Nema",
+      "category": "CD playeri",
+      "subcategory": "Nema",
+      "description": "Visokokvalitetni CD player za audiofile.",
+      "longDescription": "Marantz CD 60 je CD player s HDAM-SA2 tehnologijom i USB ulazom za reprodukciju visokokvalitetnog zvuka, idealan za ljubitelje CD-ova i digitalnog zvuka.",
+      "intended_use": ["Hi-Fi audio"],
+      "price_usd": 999,
+      "finishes": ["Crna", "Srebrno-zlatna"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Marantz.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 78,
+      "specifications": {
+        "type": "CD player",
+        "supported_formats": ["CD", "CD-R", "MP3", "WMA", "FLAC", "WAV"],
+        "min_frequency": 20,
+        "max_frequency": 20000,
+        "inputs": ["USB"],
+        "outputs": ["RCA", "Optical", "Coaxial"],
+        "connectivity": [],
+        "dimensions": {
+          "height_mm": 129,
+          "width_mm": 442,
+          "depth_mm": 396
+        },
+        "weight_kg": 7.5,
+        "technologies": ["HDAM-SA2", "High-resolution DAC"]
+      }
     },
     {
-      "name": "Mrežni Audio Plejeri",
-      "subcategories": [
-        {
-          "name": "Mrežni Audio Plejeri",
-          "models": [
-            {
-              "name": "NA6006",
-              "brand": "Marantz",
-              "series": "Nema",
-              "description": "Mrežni audio plejer za striming visokog kvaliteta.",
-              "longDescription": "Marantz NA6006 je mrežni audio plejer sa HEOS podrškom, visokokvalitetnim DAC-om i podrškom za FLAC, ALAC i DSD fajlove.",
-              "intended_use": [
-                "Hi-Fi audio",
-                "Streaming"
-              ],
-              "price": "Approx. $700",
-              "finishes": [
-                "Black",
-                "Silver"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "Mrežni audio plejer",
-                "supported_formats": [
-                  "MP3",
-                  "WMA",
-                  "AAC",
-                  "FLAC",
-                  "ALAC",
-                  "WAV",
-                  "DSD"
-                ],
-                "frequency_response": "2Hz - 50kHz",
-                "signal_to_noise_ratio": "110dB",
-                "inputs": [
-                  "1x USB",
-                  "1x optički",
-                  "1x koaksijalni"
-                ],
-                "outputs": [
-                  "1x analogni stereo",
-                  "1x optički",
-                  "1x koaksijalni"
-                ],
-                "connectivity": [
-                  "Wi-Fi",
-                  "Bluetooth",
-                  "HEOS Built-in",
-                  "Apple AirPlay 2",
-                  "Spotify Connect"
-                ],
-                "dimensions": {
-                  "height_mm": "105mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "371mm"
-                },
-                "weight": "6.6kg",
-                "technologies": [
-                  "HDAM-SA2",
-                  "HEOS Built-in",
-                  "High-resolution audio"
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Gramofoni",
-      "subcategories": [
-        {
-          "name": "Gramofoni",
-          "models": [
-            {
-              "name": "TT-15S1",
-              "brand": "Marantz",
-              "series": "Reference",
-              "description": "Premium gramofon za audiofile.",
-              "longDescription": "Marantz TT-15S1 je visokokvalitetni gramofon sa akrilnim šasijama, remenskim pogonom i Clearaudio Virtuoso zvučnicom.",
-              "intended_use": [
-                "Hi-Fi audio"
-              ],
-              "price": "Approx. $1500",
-              "finishes": [
-                "White",
-                "Black"
-              ],
-              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/logos/Marantz.png",
-              "specifications": {
-                "type": "Gramofon",
-                "drive_system": "Remenski pogon",
-                "cartridge": "Clearaudio Virtuoso MM",
-                "speeds": [
-                  "33⅓ RPM",
-                  "45 RPM"
-                ],
-                "frequency_response": "20Hz - 20kHz",
-                "signal_to_noise_ratio": "80dB",
-                "dimensions": {
-                  "height_mm": "125mm",
-                  "width_mm": "440mm",
-                  "depth_mm": "350mm"
-                },
-                "weight": "8.9kg",
-                "technologies": [
-                  "Acrylic chassis",
-                  "Low-vibration motor",
-                  "High-precision tonearm"
-                ]
-              }
-            }
-          ]
-        }
-      ]
+      "name": "NR1200",
+      "series": "Nema",
+      "category": "Prijemnici",
+      "subcategory": "Nema",
+      "description": "Kompaktni stereo prijemnik s mrežnim mogućnostima.",
+      "longDescription": "Marantz NR1200 je stereo prijemnik s 75W po kanalu, HEOS streamingom, Bluetoothom i Wi-Fi-jem, idealan za moderne Hi-Fi sustave i kućno kino.",
+      "intended_use": ["Hi-Fi stereo", "Kućno kino", "Streaming"],
+      "price_usd": 799,
+      "finishes": ["Crna", "Srebrno-zlatna"],
+      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Marantz.png",
+      "warranty_duration": 3,
+      "release_year": 2023,
+      "comparison_score": 76,
+      "specifications": {
+        "type": "Stereo prijemnik",
+        "amplifier_power": "2x 75W (8Ω)",
+        "amplifier_power_watts": 75,
+        "inputs": ["HDMI ARC", "RCA", "Optical", "Coaxial", "USB"],
+        "outputs": ["Subwoofer out", "Slušalice"],
+        "connectivity": ["Wi-Fi", "Bluetooth", "HEOS", "AirPlay 2", "Spotify Connect"],
+        "min_frequency": 20,
+        "max_frequency": 20000,
+        "dimensions": {
+          "height_mm": 104,
+          "width_mm": 440,
+          "depth_mm": 378
+        },
+        "weight_kg": 7.9,
+        "technologies": ["HEOS", "Class D amplification", "High-resolution audio"]
+      }
     }
   ]
 }
