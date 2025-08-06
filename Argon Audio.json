@@ -1,592 +1,1267 @@
 {
   "brand": "Argon Audio",
-  "products": [
+  "categories": [
     {
-      "name": "Forte A4 WiFi",
-      "series": "Forte",
       "category": "Zvučnici",
-      "subcategory": "Aktivni Bookshelf",
-      "description": "Kompaktni Wi-Fi aktivni zvučnici za audiofile.",
-      "longDescription": "Argon Audio Forte A4 WiFi su kompaktni aktivni bookshelf zvučnici sa ugrađenim pojačalom, Wi-Fi streamingom i podrškom za Bluetooth aptX HD, idealni za manje prostore.",
-      "intended_use": ["Hi-Fi stereo", "Streaming", "TV audio"],
-      "price_usd": 550,
-      "finishes": ["Black Matte", "White Matte", "Blue Matte", "Walnut Veneer"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 75,
-      "specifications": {
-        "type": "Aktivni bookshelf zvučnik",
-        "min_frequency": 50,
-        "max_frequency": 20000,
-        "amplifier_power": "2x 50W (Class D)",
-        "amplifier_power_watts": 50,
-        "sensitivity": "85dB",
-        "nominal_impedance": "4Ω",
-        "inputs": ["HDMI ARC", "Optical", "RCA", "3.5mm AUX", "USB"],
-        "outputs": ["Subwoofer out"],
-        "connectivity": ["Wi-Fi", "Bluetooth aptX HD", "AirPlay 2", "Spotify Connect"],
-        "dimensions": {
-          "height_mm": 280,
-          "width_mm": 170,
-          "depth_mm": 240
+      "subcategories": [
+        {
+          "subcategory": "Aktivni zvučnici",
+          "products": [
+            {
+              "name": "Forte A4 MK2",
+              "series": "Forte",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Kompaktni aktivni zvučnici za Hi-Fi i TV audio.",
+              "longDescription": "Argon Audio Forte A4 MK2 su kompaktni aktivni zvučnici s potpuno digitalnim Class D pojačalom snage 4x80W, prilagođenim drajverima i HDMI ARC ulazom, idealni za Hi-Fi stereo i TV audio u manjim prostorima.",
+              "intended_use": ["Hi-Fi stereo", "TV audio", "Streaming"],
+              "price_usd": 660,
+              "finishes": ["Crna", "Bijela", "Orah", "Plava"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.34,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 50,
+                "max_frequency": 20000,
+                "amplifier_power": "4x80W (Class D)",
+                "amplifier_power_watts": 320,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Phono MM", "Optički Toslink"],
+                "outputs": ["Subwoofer izlaz"],
+                "connectivity": ["Bluetooth 5.0 (aptX HD, AAC)"],
+                "dimensions": {
+                  "height_mm": 250,
+                  "width_mm": 140,
+                  "depth_mm": 220
+                },
+                "weight_kg": 5.5,
+                "technologies": ["Class D pojačalo", "Aktivni crossover", "DSP"]
+              }
+            },
+            {
+              "name": "Forte A4 WiFi",
+              "series": "Forte",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Kompaktni Wi-Fi zvučnici za streaming i Hi-Fi.",
+              "longDescription": "Argon Audio Forte A4 WiFi su aktivni zvučnici s Wi-Fi streamingom (AirPlay 2, Chromecast, DTS Play-Fi), Class D pojačalom snage 4x80W i HDMI ARC ulazom, idealni za Hi-Fi i multiroom audio.",
+              "intended_use": ["Hi-Fi stereo", "Streaming", "TV audio"],
+              "price_usd": 770,
+              "finishes": ["Crna", "Bijela", "Orah", "Plava"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2023,
+              "comparison_score": 83.23,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 50,
+                "max_frequency": 20000,
+                "amplifier_power": "4x80W (Class D)",
+                "amplifier_power_watts": 320,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Phono MM", "Optički Toslink"],
+                "outputs": ["Subwoofer izlaz"],
+                "connectivity": ["Wi-Fi (AirPlay 2, Chromecast, DTS Play-Fi)", "Bluetooth 5.0 (aptX HD, AAC)"],
+                "dimensions": {
+                  "height_mm": 250,
+                  "width_mm": 140,
+                  "depth_mm": 220
+                },
+                "weight_kg": 5.5,
+                "technologies": ["Class D pojačalo", "Aktivni crossover", "DSP", "Multiroom"]
+              }
+            },
+            {
+              "name": "Forte A5 MK2",
+              "series": "Forte",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Aktivni zvučnici za snažan Hi-Fi zvuk.",
+              "longDescription": "Argon Audio Forte A5 MK2 su aktivni zvučnici s Class D pojačalom snage 4x80W, prilagođenim drajverima i HDMI ARC ulazom, idealni za veće prostore i TV audio.",
+              "intended_use": ["Hi-Fi stereo", "TV audio", "Streaming"],
+              "price_usd": 880,
+              "finishes": ["Crna", "Bijela", "Orah", "Plava"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.12,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 45,
+                "max_frequency": 20000,
+                "amplifier_power": "4x80W (Class D)",
+                "amplifier_power_watts": 320,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Phono MM", "Optički Toslink"],
+                "outputs": ["Subwoofer izlaz"],
+                "connectivity": ["Bluetooth 5.0 (aptX HD, AAC)"],
+                "dimensions": {
+                  "height_mm": 280,
+                  "width_mm": 170,
+                  "depth_mm": 240
+                },
+                "weight_kg": 7.0,
+                "technologies": ["Class D pojačalo", "Aktivni crossover", "DSP"]
+              }
+            },
+            {
+              "name": "Forte A5 WiFi",
+              "series": "Forte",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Wi-Fi zvučnici za Hi-Fi i streaming.",
+              "longDescription": "Argon Audio Forte A5 WiFi su aktivni zvučnici s Wi-Fi streamingom (AirPlay 2, Chromecast, DTS Play-Fi), Class D pojačalom snage 4x80W i HDMI ARC ulazom, idealni za Hi-Fi i multiroom audio.",
+              "intended_use": ["Hi-Fi stereo", "Streaming", "TV audio"],
+              "price_usd": 990,
+              "finishes": ["Crna", "Bijela", "Orah", "Plava"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2023,
+              "comparison_score": 83.01,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 45,
+                "max_frequency": 20000,
+                "amplifier_power": "4x80W (Class D)",
+                "amplifier_power_watts": 320,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Phono MM", "Optički Toslink"],
+                "outputs": ["Subwoofer izlaz"],
+                "connectivity": ["Wi-Fi (AirPlay 2, Chromecast, DTS Play-Fi)", "Bluetooth 5.0 (aptX HD, AAC)"],
+                "dimensions": {
+                  "height_mm": 280,
+                  "width_mm": 170,
+                  "depth_mm": 240
+                },
+                "weight_kg": 7.0,
+                "technologies": ["Class D pojačalo", "Aktivni crossover", "DSP", "Multiroom"]
+              }
+            },
+            {
+              "name": "Forte A55 MK2",
+              "series": "Forte",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Podni aktivni zvučnici za snažan zvuk.",
+              "longDescription": "Argon Audio Forte A55 MK2 su podni aktivni zvučnici s Class D pojačalom snage 4x80W, prilagođenim drajverima i HDMI ARC ulazom, idealni za veće prostore i kućno kino.",
+              "intended_use": ["Hi-Fi stereo", "Kućno kino", "Streaming"],
+              "price_usd": 1100,
+              "finishes": ["Crna", "Bijela", "Orah"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 82.9,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 35,
+                "max_frequency": 20000,
+                "amplifier_power": "4x80W (Class D)",
+                "amplifier_power_watts": 320,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Phono MM", "Optički Toslink"],
+                "outputs": ["Subwoofer izlaz"],
+                "connectivity": ["Bluetooth 5.0 (aptX HD, AAC)"],
+                "dimensions": {
+                  "height_mm": 850,
+                  "width_mm": 200,
+                  "depth_mm": 300
+                },
+                "weight_kg": 15.0,
+                "technologies": ["Class D pojačalo", "Aktivni crossover", "DSP"]
+              }
+            },
+            {
+              "name": "Forte A55 WiFi",
+              "series": "Forte",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Podni Wi-Fi zvučnici za Hi-Fi i streaming.",
+              "longDescription": "Argon Audio Forte A55 WiFi su podni aktivni zvučnici s Wi-Fi streamingom (AirPlay 2, Chromecast, DTS Play-Fi), Class D pojačalom snage 4x80W i HDMI ARC ulazom, idealni za kućno kino i multiroom audio.",
+              "intended_use": ["Hi-Fi stereo", "Kućno kino", "Streaming"],
+              "price_usd": 1320,
+              "finishes": ["Crna", "Bijela", "Orah"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2023,
+              "comparison_score": 82.68,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 35,
+                "max_frequency": 20000,
+                "amplifier_power": "4x80W (Class D)",
+                "amplifier_power_watts": 320,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Phono MM", "Optički Toslink"],
+                "outputs": ["Subwoofer izlaz"],
+                "connectivity": ["Wi-Fi (AirPlay 2, Chromecast, DTS Play-Fi)", "Bluetooth 5.0 (aptX HD, AAC)"],
+                "dimensions": {
+                  "height_mm": 850,
+                  "width_mm": 200,
+                  "depth_mm": 300
+                },
+                "weight_kg": 15.0,
+                "technologies": ["Class D pojačalo", "Aktivni crossover", "DSP", "Multiroom"]
+              }
+            },
+            {
+              "name": "Fenris A4",
+              "series": "Fenris",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Kompaktni aktivni zvučnici za TV i streaming.",
+              "longDescription": "Argon Audio Fenris A4 su kompaktni aktivni zvučnici s Class D pojačalom snage 2x50W, Bluetooth 5.0 i HDMI ARC ulazom, idealni za TV audio i manje prostore.",
+              "intended_use": ["TV audio", "Hi-Fi stereo", "Streaming"],
+              "price_usd": 440,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.56,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 50,
+                "max_frequency": 20000,
+                "amplifier_power": "2x50W (Class D)",
+                "amplifier_power_watts": 100,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Optički Toslink"],
+                "outputs": [],
+                "connectivity": ["Bluetooth 5.0 (aptX, AAC)"],
+                "dimensions": {
+                  "height_mm": 230,
+                  "width_mm": 135,
+                  "depth_mm": 200
+                },
+                "weight_kg": 4.5,
+                "technologies": ["Class D pojačalo", "DSP"]
+              }
+            },
+            {
+              "name": "Fenris A5",
+              "series": "Fenris",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Aktivni zvučnici za snažan zvuk u većim prostorima.",
+              "longDescription": "Argon Audio Fenris A5 su aktivni zvučnici s Class D pojačalom snage 2x50W, Bluetooth 5.0 i HDMI ARC ulazom, idealni za TV audio i veće prostore.",
+              "intended_use": ["Hi-Fi stereo", "TV audio", "Streaming"],
+              "price_usd": 550,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.45,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 45,
+                "max_frequency": 20000,
+                "amplifier_power": "2x50W (Class D)",
+                "amplifier_power_watts": 100,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Optički Toslink"],
+                "outputs": [],
+                "connectivity": ["Bluetooth 5.0 (aptX, AAC)"],
+                "dimensions": {
+                  "height_mm": 260,
+                  "width_mm": 160,
+                  "depth_mm": 220
+                },
+                "weight_kg": 6.0,
+                "technologies": ["Class D pojačalo", "DSP"]
+              }
+            },
+            {
+              "name": "Fenris A55",
+              "series": "Fenris",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Podni aktivni zvučnici za kućno kino.",
+              "longDescription": "Argon Audio Fenris A55 su podni aktivni zvučnici s Class D pojačalom snage 2x50W, Bluetooth 5.0 i HDMI ARC ulazom, idealni za kućno kino i veće prostore.",
+              "intended_use": ["Hi-Fi stereo", "Kućno kino", "Streaming"],
+              "price_usd": 770,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.23,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 40,
+                "max_frequency": 20000,
+                "amplifier_power": "2x50W (Class D)",
+                "amplifier_power_watts": 100,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Optički Toslink"],
+                "outputs": [],
+                "connectivity": ["Bluetooth 5.0 (aptX, AAC)"],
+                "dimensions": {
+                  "height_mm": 800,
+                  "width_mm": 190,
+                  "depth_mm": 280
+                },
+                "weight_kg": 12.0,
+                "technologies": ["Class D pojačalo", "DSP"]
+              }
+            },
+            {
+              "name": "Studie 3",
+              "series": "Studie",
+              "category": "Zvučnici",
+              "subcategory": "Aktivni zvučnici",
+              "description": "Kompaktni desktop zvučnici za Hi-Fi zvuk.",
+              "longDescription": "Argon Audio Studie 3 su super kompaktni aktivni zvučnici s Class D pojačalom snage 2x25W, Bluetooth i daljinskim upravljačem, idealni za desktop i manje prostore.",
+              "intended_use": ["Hi-Fi stereo", "Desktop audio", "TV audio"],
+              "price_usd": 330,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2023,
+              "comparison_score": 83.67,
+              "specifications": {
+                "type": "Aktivni zvučnik",
+                "min_frequency": 60,
+                "max_frequency": 20000,
+                "amplifier_power": "2x25W (Class D)",
+                "amplifier_power_watts": 50,
+                "inputs": ["Analogni linijski", "Optički Toslink"],
+                "outputs": ["Subwoofer izlaz"],
+                "connectivity": ["Bluetooth 5.0"],
+                "dimensions": {
+                  "height_mm": 200,
+                  "width_mm": 120,
+                  "depth_mm": 180
+                },
+                "weight_kg": 3.5,
+                "technologies": ["Class D pojačalo", "DSP"]
+              }
+            }
+          ]
         },
-        "weight_kg": 5.5,
-        "technologies": ["Class D amplification", "Wi-Fi streaming", "DSP processing"]
-      }
+        {
+          "subcategory": "Pasivni zvučnici",
+          "products": [
+            {
+              "name": "Forus 5",
+              "series": "Forus",
+              "category": "Zvučnici",
+              "subcategory": "Pasivni zvučnici",
+              "description": "Pasivni zvučnici za veće prostore.",
+              "longDescription": "Argon Audio Forus 5 su pasivni zvučnici s 5-inčnim wooferom i 1-inčnim tweeterom, idealni za Hi-Fi sustave u većim prostorima.",
+              "intended_use": ["Hi-Fi stereo"],
+              "price_usd": 440,
+              "finishes": ["Crna", "Bijela", "Orah"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.56,
+              "specifications": {
+                "type": "Pasivni zvučnik",
+                "min_frequency": 45,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema (pasivni)",
+                "amplifier_power_watts": 0,
+                "inputs": ["Banana utičnice"],
+                "outputs": [],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 300,
+                  "width_mm": 180,
+                  "depth_mm": 260
+                },
+                "weight_kg": 6.0,
+                "technologies": []
+              }
+            },
+            {
+              "name": "Forus 55",
+              "series": "Forus",
+              "category": "Zvučnici",
+              "subcategory": "Pasivni zvučnici",
+              "description": "Podni pasivni zvučnici za kućno kino.",
+              "longDescription": "Argon Audio Forus 55 su podni pasivni zvučnici s 6.5-inčnim wooferom i 1-inčnim tweeterom, idealni za Hi-Fi i kućno kino u većim prostorima.",
+              "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+              "price_usd": 660,
+              "finishes": ["Crna", "Bijela", "Orah"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.34,
+              "specifications": {
+                "type": "Pasivni zvučnik",
+                "min_frequency": 40,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema (pasivni)",
+                "amplifier_power_watts": 0,
+                "inputs": ["Banana utičnice"],
+                "outputs": [],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 850,
+                  "width_mm": 200,
+                  "depth_mm": 300
+                },
+                "weight_kg": 12.0,
+                "technologies": []
+              }
+            }
+          ]
+        },
+        {
+          "subcategory": "Zidni zvučnici",
+          "products": [
+            {
+              "name": "Forus 4 Wall",
+              "series": "Forus",
+              "category": "Zvučnici",
+              "subcategory": "Zidni zvučnici",
+              "description": "Kompaktni zidni zvučnici za surround zvuk.",
+              "longDescription": "Argon Audio Forus 4 Wall su kompaktni zidni pasivni zvučnici s 4-inčnim wooferom, idealni za surround sustave ili diskretno postavljanje uz TV.",
+              "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+              "price_usd": 220,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.78,
+              "specifications": {
+                "type": "Pasivni zvučnik",
+                "min_frequency": 60,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema (pasivni)",
+                "amplifier_power_watts": 0,
+                "inputs": ["Banana utičnice"],
+                "outputs": [],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 240,
+                  "width_mm": 150,
+                  "depth_mm": 100
+                },
+                "weight_kg": 3.0,
+                "technologies": []
+              }
+            },
+            {
+              "name": "Forus 5 Wall",
+              "series": "Forus",
+              "category": "Zvučnici",
+              "subcategory": "Zidni zvučnici",
+              "description": "Zidni zvučnici za snažan surround zvuk.",
+              "longDescription": "Argon Audio Forus 5 Wall su zidni pasivni zvučnici s 5-inčnim wooferom, idealni za surround sustave i veće prostore s bogatim basom.",
+              "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+              "price_usd": 330,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.67,
+              "specifications": {
+                "type": "Pasivni zvučnik",
+                "min_frequency": 50,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema (pasivni)",
+                "amplifier_power_watts": 0,
+                "inputs": ["Banana utičnice"],
+                "outputs": [],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 260,
+                  "width_mm": 170,
+                  "depth_mm": 130
+                },
+                "weight_kg": 4.0,
+                "technologies": []
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Forte A5 WiFi",
-      "series": "Forte",
-      "category": "Zvučnici",
-      "subcategory": "Aktivni Bookshelf",
-      "description": "Snažni Wi-Fi aktivni zvučnici za veće prostore.",
-      "longDescription": "Argon Audio Forte A5 WiFi su moćni aktivni bookshelf zvučnici sa 80W po kanalu, Wi-Fi streamingom i Bluetooth aptX HD, idealni za veće prostorije.",
-      "intended_use": ["Hi-Fi stereo", "Streaming", "TV audio"],
-      "price_usd": 770,
-      "finishes": ["Black Matte", "White Matte", "Blue Matte", "Walnut Veneer"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 78,
-      "specifications": {
-        "type": "Aktivni bookshelf zvučnik",
-        "min_frequency": 45,
-        "max_frequency": 20000,
-        "amplifier_power": "2x 80W (Class D)",
-        "amplifier_power_watts": 80,
-        "sensitivity": "86dB",
-        "nominal_impedance": "4Ω",
-        "inputs": ["HDMI ARC", "Optical", "RCA", "3.5mm AUX", "USB"],
-        "outputs": ["Subwoofer out"],
-        "connectivity": ["Wi-Fi", "Bluetooth aptX HD", "AirPlay 2", "Spotify Connect"],
-        "dimensions": {
-          "height_mm": 310,
-          "width_mm": 190,
-          "depth_mm": 270
-        },
-        "weight_kg": 7.0,
-        "technologies": ["Class D amplification", "Wi-Fi streaming", "DSP processing"]
-      }
+      "category": "Subwooferi",
+      "subcategories": [
+        {
+          "subcategory": "Aktivni subwooferi",
+          "products": [
+            {
+              "name": "Malmö SUB 8",
+              "series": "Malmö",
+              "category": "Subwooferi",
+              "subcategory": "Aktivni subwooferi",
+              "description": "Kompaktni subwoofer za snažan bas.",
+              "longDescription": "Argon Audio Malmö SUB 8 je kompaktni aktivni subwoofer s 8-inčnim drajverom i Class D pojačalom snage 100W, idealan za Hi-Fi i kućno kino.",
+              "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+              "price_usd": 330,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.67,
+              "specifications": {
+                "type": "Aktivni subwoofer",
+                "min_frequency": 30,
+                "max_frequency": 200,
+                "amplifier_power": "100W (Class D)",
+                "amplifier_power_watts": 100,
+                "inputs": ["Analogni linijski"],
+                "outputs": [],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 300,
+                  "width_mm": 280,
+                  "depth_mm": 300
+                },
+                "weight_kg": 8.0,
+                "technologies": ["Class D pojačalo"]
+              }
+            },
+            {
+              "name": "SUB85",
+              "series": "Nema",
+              "category": "Subwooferi",
+              "subcategory": "Aktivni subwooferi",
+              "description": "Snažan subwoofer za dubok bas.",
+              "longDescription": "Argon Audio SUB85 je aktivni subwoofer s 8-inčnim drajverom i Class D pojačalom snage 150W, idealan za kućno kino i veće prostore.",
+              "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+              "price_usd": 550,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.45,
+              "specifications": {
+                "type": "Aktivni subwoofer",
+                "min_frequency": 25,
+                "max_frequency": 200,
+                "amplifier_power": "150W (Class D)",
+                "amplifier_power_watts": 150,
+                "inputs": ["Analogni linijski"],
+                "outputs": [],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 340,
+                  "width_mm": 320,
+                  "depth_mm": 340
+                },
+                "weight_kg": 10.0,
+                "technologies": ["Class D pojačalo"]
+              }
+            },
+            {
+              "name": "Malmö SUB 6",
+              "series": "Malmö",
+              "category": "Subwooferi",
+              "subcategory": "Aktivni subwooferi",
+              "description": "Kompaktni subwoofer za diskretan bas.",
+              "longDescription": "Argon Audio Malmö SUB 6 je kompaktni aktivni subwoofer s 6.5-inčnim drajverom i Class D pojačalom snage 60W, idealan za manje prostore i Fenris zvučnike.",
+              "intended_use": ["Hi-Fi stereo", "Kućno kino"],
+              "price_usd": 275,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2023,
+              "comparison_score": 83.73,
+              "specifications": {
+                "type": "Aktivni subwoofer",
+                "min_frequency": 35,
+                "max_frequency": 200,
+                "amplifier_power": "60W (Class D)",
+                "amplifier_power_watts": 60,
+                "inputs": ["Analogni linijski"],
+                "outputs": [],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 260,
+                  "width_mm": 240,
+                  "depth_mm": 260
+                },
+                "weight_kg": 6.0,
+                "technologies": ["Class D pojačalo"]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Forte A4 MK2",
-      "series": "Forte",
-      "category": "Zvučnici",
-      "subcategory": "Aktivni Bookshelf",
-      "description": "Unapređeni kompaktni Wi-Fi zvučnici za audiofile.",
-      "longDescription": "Argon Audio Forte A4 MK2 su unapređeni aktivni bookshelf zvučnici sa poboljšanim drajverima, Wi-Fi streamingom i Bluetooth aptX HD, idealni za manje prostore sa vrhunskim zvukom.",
-      "intended_use": ["Hi-Fi stereo", "Streaming", "TV audio"],
-      "price_usd": 600,
-      "finishes": ["Black Matte", "White Matte", "Blue Matte", "Walnut Veneer"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2024,
-      "comparison_score": 77,
-      "specifications": {
-        "type": "Aktivni bookshelf zvučnik",
-        "min_frequency": 48,
-        "max_frequency": 20000,
-        "amplifier_power": "2x 50W (Class D)",
-        "amplifier_power_watts": 50,
-        "sensitivity": "86dB",
-        "nominal_impedance": "4Ω",
-        "inputs": ["HDMI ARC", "Optical", "RCA", "3.5mm AUX", "USB"],
-        "outputs": ["Subwoofer out"],
-        "connectivity": ["Wi-Fi", "Bluetooth aptX HD", "AirPlay 2", "Spotify Connect"],
-        "dimensions": {
-          "height_mm": 280,
-          "width_mm": 170,
-          "depth_mm": 240
-        },
-        "weight_kg": 5.7,
-        "technologies": ["Class D amplification", "Wi-Fi streaming", "DSP processing", "Enhanced drivers"]
-      }
-    },
-    {
-      "name": "Forte A5 MK2",
-      "series": "Forte",
-      "category": "Zvučnici",
-      "subcategory": "Aktivni Bookshelf",
-      "description": "Unapređeni Wi-Fi zvučnici za veće prostore.",
-      "longDescription": "Argon Audio Forte A5 MK2 su unapređeni aktivni bookshelf zvučnici sa 80W po kanalu, poboljšanim drajverima, Wi-Fi streamingom i Bluetooth aptX HD, idealni za veće prostorije.",
-      "intended_use": ["Hi-Fi stereo", "Streaming", "TV audio"],
-      "price_usd": 825,
-      "finishes": ["Black Matte", "White Matte", "Blue Matte", "Walnut Veneer"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2024,
-      "comparison_score": 80,
-      "specifications": {
-        "type": "Aktivni bookshelf zvučnik",
-        "min_frequency": 43,
-        "max_frequency": 20000,
-        "amplifier_power": "2x 80W (Class D)",
-        "amplifier_power_watts": 80,
-        "sensitivity": "87dB",
-        "nominal_impedance": "4Ω",
-        "inputs": ["HDMI ARC", "Optical", "RCA", "3.5mm AUX", "USB"],
-        "outputs": ["Subwoofer out"],
-        "connectivity": ["Wi-Fi", "Bluetooth aptX HD", "AirPlay 2", "Spotify Connect"],
-        "dimensions": {
-          "height_mm": 310,
-          "width_mm": 190,
-          "depth_mm": 270
-        },
-        "weight_kg": 7.2,
-        "technologies": ["Class D amplification", "Wi-Fi streaming", "DSP processing", "Enhanced drivers"]
-      }
-    },
-    {
-      "name": "Fenris A4",
-      "series": "Fenris",
-      "category": "Zvučnici",
-      "subcategory": "Aktivni Bookshelf",
-      "description": "Kompaktni aktivni zvučnici za manje prostore.",
-      "longDescription": "Argon Audio Fenris A4 su kompaktni aktivni bookshelf zvučnici sa 50W po kanalu, idealni za manje prostore i TV audio, sa Bluetooth i više ulaza.",
-      "intended_use": ["Hi-Fi stereo", "TV audio"],
-      "price_usd": 440,
-      "finishes": ["Black", "White", "Oak", "Walnut"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 72,
-      "specifications": {
-        "type": "Aktivni bookshelf zvučnik",
-        "min_frequency": 52,
-        "max_frequency": 20000,
-        "amplifier_power": "2x 50W (Class D)",
-        "amplifier_power_watts": 50,
-        "sensitivity": "85dB",
-        "nominal_impedance": "4Ω",
-        "inputs": ["HDMI ARC", "Optical", "RCA", "3.5mm AUX"],
-        "outputs": ["Subwoofer out"],
-        "connectivity": ["Bluetooth 5.0"],
-        "dimensions": {
-          "height_mm": 280,
-          "width_mm": 170,
-          "depth_mm": 240
-        },
-        "weight_kg": 5.2,
-        "technologies": ["Class D amplification", "DSP processing"]
-      }
-    },
-    {
-      "name": "Fenris A5",
-      "series": "Fenris",
-      "category": "Zvučnici",
-      "subcategory": "Aktivni Bookshelf",
-      "description": "Aktivni zvučnici za bogat zvuk u većim prostorijama.",
-      "longDescription": "Argon Audio Fenris A5 su aktivni bookshelf zvučnici sa 80W po kanalu, pružajući snažan zvuk za veće prostorije, sa Bluetooth i više ulaza.",
-      "intended_use": ["Hi-Fi stereo", "TV audio"],
-      "price_usd": 550,
-      "finishes": ["Black", "White", "Oak", "Walnut"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 75,
-      "specifications": {
-        "type": "Aktivni bookshelf zvučnik",
-        "min_frequency": 47,
-        "max_frequency": 20000,
-        "amplifier_power": "2x 80W (Class D)",
-        "amplifier_power_watts": 80,
-        "sensitivity": "86dB",
-        "nominal_impedance": "4Ω",
-        "inputs": ["HDMI ARC", "Optical", "RCA", "3.5mm AUX"],
-        "outputs": ["Subwoofer out"],
-        "connectivity": ["Bluetooth 5.0"],
-        "dimensions": {
-          "height_mm": 310,
-          "width_mm": 190,
-          "depth_mm": 270
-        },
-        "weight_kg": 6.8,
-        "technologies": ["Class D amplification", "DSP processing"]
-      }
-    },
-    {
-      "name": "Fenris A55",
-      "series": "Fenris",
-      "category": "Zvučnici",
-      "subcategory": "Aktivni Samostojeći",
-      "description": "Moćni aktivni samostojeći zvučnici za audiofile.",
-      "longDescription": "Argon Audio Fenris A55 su aktivni samostojeći zvučnici sa 100W po kanalu, idealni za velike prostorije i vrhunski Hi-Fi zvuk.",
-      "intended_use": ["Hi-Fi stereo", "TV audio"],
-      "price_usd": 1100,
-      "finishes": ["Black", "White", "Oak"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 80,
-      "specifications": {
-        "type": "Aktivni samostojeći zvučnik",
-        "min_frequency": 35,
-        "max_frequency": 20000,
-        "amplifier_power": "2x 100W (Class D)",
-        "amplifier_power_watts": 100,
-        "sensitivity": "88dB",
-        "nominal_impedance": "4Ω",
-        "inputs": ["HDMI ARC", "Optical", "RCA", "3.5mm AUX"],
-        "outputs": ["Subwoofer out"],
-        "connectivity": ["Bluetooth 5.0"],
-        "dimensions": {
-          "height_mm": 850,
-          "width_mm": 200,
-          "depth_mm": 300
-        },
-        "weight_kg": 15.0,
-        "technologies": ["Class D amplification", "DSP processing"]
-      }
-    },
-    {
-      "name": "Studie 3",
-      "series": "Nema",
-      "category": "Zvučnici",
-      "subcategory": "Aktivni Desktop",
-      "description": "Kompaktni desktop zvučnici za manje prostore.",
-      "longDescription": "Argon Audio Studie 3 su kompaktni aktivni desktop zvučnici sa 30W po kanalu, idealni za računare, TV audio ili male prostorije, sa Bluetooth i daljinskim upravljačem.",
-      "intended_use": ["Hi-Fi stereo", "TV audio", "Desktop audio"],
-      "price_usd": 300,
-      "finishes": ["Black", "White"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2024,
-      "comparison_score": 68,
-      "specifications": {
-        "type": "Aktivni desktop zvučnik",
-        "min_frequency": 60,
-        "max_frequency": 20000,
-        "amplifier_power": "2x 30W (Class D)",
-        "amplifier_power_watts": 30,
-        "sensitivity": "84dB",
-        "nominal_impedance": "4Ω",
-        "inputs": ["RCA", "3.5mm AUX", "Optical"],
-        "outputs": ["Subwoofer out"],
-        "connectivity": ["Bluetooth 5.0"],
-        "dimensions": {
-          "height_mm": 200,
-          "width_mm": 140,
-          "depth_mm": 180
-        },
-        "weight_kg": 3.0,
-        "technologies": ["Class D amplification", "DSP processing", "Remote control"]
-      }
-    },
-    {
-      "name": "SA1",
-      "series": "Nema",
       "category": "Pojačala",
-      "subcategory": "Integrisana Pojačala",
-      "description": "Kompaktno integrisano pojačalo za Hi-Fi sisteme.",
-      "longDescription": "Argon Audio SA1 je kompaktno integrisano pojačalo sa 40W po kanalu, Bluetooth aptX HD i phono ulazom, idealno za manje Hi-Fi sisteme.",
-      "intended_use": ["Hi-Fi stereo"],
-      "price_usd": 330,
-      "finishes": ["Black", "White"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2022,
-      "comparison_score": 70,
-      "specifications": {
-        "type": "Integrisano pojačalo",
-        "amplifier_power": "2x 40W (4Ω)",
-        "amplifier_power_watts": 40,
-        "inputs": ["RCA", "MM Phono", "Optical", "3.5mm AUX"],
-        "outputs": ["Subwoofer out", "Headphone out"],
-        "connectivity": ["Bluetooth aptX HD"],
-        "min_frequency": 20,
-        "max_frequency": 20000,
-        "dimensions": {
-          "height_mm": 70,
-          "width_mm": 220,
-          "depth_mm": 260
-        },
-        "weight_kg": 3.5,
-        "technologies": ["Class D amplification", "Phono stage"]
-      }
+      "subcategories": [
+        {
+          "subcategory": "Integrirana pojačala",
+          "products": [
+            {
+              "name": "SA1",
+              "series": "Nema",
+              "category": "Pojačala",
+              "subcategory": "Integrirana pojačala",
+              "description": "Kompaktno pojačalo za Hi-Fi sustave.",
+              "longDescription": "Argon Audio SA1 je kompaktno integrirano pojačalo s Class D pojačalom snage 2x40W, Bluetooth aptX HD i HDMI ARC ulazom, idealno za pasivne zvučnike.",
+              "intended_use": ["Hi-Fi stereo", "TV audio", "Streaming"],
+              "price_usd": 440,
+              "finishes": ["Crna"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.56,
+              "specifications": {
+                "type": "Integrirano pojačalo",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "2x40W (Class D)",
+                "amplifier_power_watts": 80,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Phono MM", "Optički Toslink"],
+                "outputs": ["Zvučnički izlazi"],
+                "connectivity": ["Bluetooth 5.0 (aptX HD)"],
+                "dimensions": {
+                  "height_mm": 60,
+                  "width_mm": 220,
+                  "depth_mm": 240
+                },
+                "weight_kg": 3.0,
+                "technologies": ["Class D pojačalo", "DSP"]
+              }
+            },
+            {
+              "name": "SA1 MK2",
+              "series": "Nema",
+              "category": "Pojačala",
+              "subcategory": "Integrirana pojačala",
+              "description": "Unaprijeđeno pojačalo za Hi-Fi sustave.",
+              "longDescription": "Argon Audio SA1 MK2 je unaprijeđeno integrirano pojačalo s Class D pojačalom snage 2x50W, Bluetooth aptX HD i HDMI ARC ulazom, idealno za pasivne zvučnike.",
+              "intended_use": ["Hi-Fi stereo", "TV audio", "Streaming"],
+              "price_usd": 550,
+              "finishes": ["Crna"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2023,
+              "comparison_score": 83.45,
+              "specifications": {
+                "type": "Integrirano pojačalo",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "2x50W (Class D)",
+                "amplifier_power_watts": 100,
+                "inputs": ["HDMI ARC", "Analogni linijski", "Phono MM", "Optički Toslink"],
+                "outputs": ["Zvučnički izlazi"],
+                "connectivity": ["Bluetooth 5.0 (aptX HD)"],
+                "dimensions": {
+                  "height_mm": 60,
+                  "width_mm": 220,
+                  "depth_mm": 240
+                },
+                "weight_kg": 3.2,
+                "technologies": ["Class D pojačalo", "DSP"]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Solo",
-      "series": "Nema",
-      "category": "Mrežni Audio Plejeri",
-      "subcategory": "Nema",
-      "description": "Kompaktni mrežni audio plejer za streaming.",
-      "longDescription": "Argon Audio Solo je mrežni audio plejer sa podrškom za AirPlay 2, Spotify Connect i Bluetooth, idealan za streaming visokokvalitetnog zvuka.",
-      "intended_use": ["Hi-Fi audio", "Streaming"],
-      "price_usd": 275,
-      "finishes": ["Black", "White"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2022,
-      "comparison_score": 68,
-      "specifications": {
-        "type": "Mrežni audio plejer",
-        "supported_formats": ["MP3", "AAC", "FLAC", "WAV"],
-        "min_frequency": 20,
-        "max_frequency": 20000,
-        "inputs": ["Ethernet", "USB"],
-        "outputs": ["RCA", "Optical", "Coaxial"],
-        "connectivity": ["Wi-Fi", "Bluetooth 5.0", "AirPlay 2", "Spotify Connect"],
-        "dimensions": {
-          "height_mm": 50,
-          "width_mm": 180,
-          "depth_mm": 150
+      "category": "Radiji",
+      "subcategories": [
+        {
+          "subcategory": "DAB+/FM radiji",
+          "products": [
+            {
+              "name": "Radio 1",
+              "series": "Radio",
+              "category": "Radiji",
+              "subcategory": "DAB+/FM radiji",
+              "description": "Kompaktni DAB+/FM radio za svakodnevnu upotrebu.",
+              "longDescription": "Argon Audio Radio 1 je kompaktni DAB+/FM radio s 14W pojačalom, OLED ekranom i funkcijom alarma, idealan za kuhinju ili spavaću sobu.",
+              "intended_use": ["Radio", "Kućni audio"],
+              "price_usd": 165,
+              "finishes": ["Crna", "Bijela", "Orah"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.84,
+              "specifications": {
+                "type": "DAB+/FM radio",
+                "min_frequency": 80,
+                "max_frequency": 16000,
+                "amplifier_power": "14W",
+                "amplifier_power_watts": 14,
+                "inputs": ["Analogni linijski"],
+                "outputs": [],
+                "connectivity": ["DAB+/FM"],
+                "dimensions": {
+                  "height_mm": 120,
+                  "width_mm": 200,
+                  "depth_mm": 140
+                },
+                "weight_kg": 1.5,
+                "technologies": ["OLED ekran", "Alarm"]
+              }
+            },
+            {
+              "name": "Radio 2",
+              "series": "Radio",
+              "category": "Radiji",
+              "subcategory": "DAB+/FM radiji",
+              "description": "DAB+/FM radio s Bluetooth povezivanjem.",
+              "longDescription": "Argon Audio Radio 2 je DAB+/FM radio s Bluetooth povezivanjem, 14W pojačalom i funkcijom alarma, idealan za kuhinju ili spavaću sobu.",
+              "intended_use": ["Radio", "Streaming", "Kućni audio"],
+              "price_usd": 220,
+              "finishes": ["Crna", "Bijela", "Orah"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.78,
+              "specifications": {
+                "type": "DAB+/FM radio",
+                "min_frequency": 80,
+                "max_frequency": 16000,
+                "amplifier_power": "14W",
+                "amplifier_power_watts": 14,
+                "inputs": ["Analogni linijski"],
+                "outputs": [],
+                "connectivity": ["DAB+/FM", "Bluetooth 5.0"],
+                "dimensions": {
+                  "height_mm": 120,
+                  "width_mm": 200,
+                  "depth_mm": 140
+                },
+                "weight_kg": 1.7,
+                "technologies": ["OLED ekran", "Alarm", "Bluetooth"]
+              }
+            },
+            {
+              "name": "Radio 3",
+              "series": "Radio",
+              "category": "Radiji",
+              "subcategory": "DAB+/FM radiji",
+              "description": "Stereo DAB+/FM radio s Bluetoothom.",
+              "longDescription": "Argon Audio Radio 3 je stereo DAB+/FM radio s Bluetooth povezivanjem, 2x7W pojačalom i funkcijom alarma, idealan za veće prostore.",
+              "intended_use": ["Radio", "Streaming", "Kućni audio"],
+              "price_usd": 275,
+              "finishes": ["Crna", "Bijela", "Orah"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.73,
+              "specifications": {
+                "type": "DAB+/FM radio",
+                "min_frequency": 80,
+                "max_frequency": 16000,
+                "amplifier_power": "2x7W",
+                "amplifier_power_watts": 14,
+                "inputs": ["Analogni linijski"],
+                "outputs": [],
+                "connectivity": ["DAB+/FM", "Bluetooth 5.0"],
+                "dimensions": {
+                  "height_mm": 140,
+                  "width_mm": 300,
+                  "depth_mm": 140
+                },
+                "weight_kg": 2.5,
+                "technologies": ["OLED ekran", "Alarm", "Bluetooth"]
+              }
+            }
+          ]
         },
-        "weight_kg": 1.5,
-        "technologies": ["High-resolution audio", "Multi-room streaming"]
-      }
+        {
+          "subcategory": "Internetski radiji",
+          "products": [
+            {
+              "name": "Radio 2i MK2",
+              "series": "Radio",
+              "category": "Radiji",
+              "subcategory": "Internetski radiji",
+              "description": "Internetski radio s Wi-Fi i Bluetoothom.",
+              "longDescription": "Argon Audio Radio 2i MK2 je internetski radio s Wi-Fi (Spotify Connect, AirPlay 2), Bluetoothom i DAB+/FM, idealan za streaming i kućni audio.",
+              "intended_use": ["Radio", "Streaming", "Kućni audio"],
+              "price_usd": 330,
+              "finishes": ["Crna", "Bijela", "Orah"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.67,
+              "specifications": {
+                "type": "Internetski radio",
+                "min_frequency": 80,
+                "max_frequency": 16000,
+                "amplifier_power": "14W",
+                "amplifier_power_watts": 14,
+                "inputs": ["Analogni linijski"],
+                "outputs": [],
+                "connectivity": ["Wi-Fi (Spotify Connect, AirPlay 2)", "DAB+/FM", "Bluetooth 5.0"],
+                "dimensions": {
+                  "height_mm": 120,
+                  "width_mm": 200,
+                  "depth_mm": 140
+                },
+                "weight_kg": 1.7,
+                "technologies": ["OLED ekran", "Alarm", "Multiroom"]
+              }
+            },
+            {
+              "name": "Radio 3i MK2",
+              "series": "Radio",
+              "category": "Radiji",
+              "subcategory": "Internetski radiji",
+              "description": "Stereo internetski radio s Wi-Fi i Bluetoothom.",
+              "longDescription": "Argon Audio Radio 3i MK2 je stereo internetski radio s Wi-Fi (Spotify Connect, AirPlay 2), Bluetoothom i DAB+/FM, idealan za streaming i veće prostore.",
+              "intended_use": ["Radio", "Streaming", "Kućni audio"],
+              "price_usd": 440,
+              "finishes": ["Crna", "Bijela", "Orah"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.56,
+              "specifications": {
+                "type": "Internetski radio",
+                "min_frequency": 80,
+                "max_frequency": 16000,
+                "amplifier_power": "2x7W",
+                "amplifier_power_watts": 14,
+                "inputs": ["Analogni linijski"],
+                "outputs": [],
+                "connectivity": ["Wi-Fi (Spotify Connect, AirPlay 2)", "DAB+/FM", "Bluetooth 5.0"],
+                "dimensions": {
+                  "height_mm": 140,
+                  "width_mm": 300,
+                  "depth_mm": 140
+                },
+                "weight_kg": 2.5,
+                "technologies": ["OLED ekran", "Alarm", "Multiroom"]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "TT-4",
-      "series": "Nema",
-      "category": "Gramofoni",
-      "subcategory": "Nema",
-      "description": "Hi-Fi gramofon sa Ortofon 2M Blue zvučnicom.",
-      "longDescription": "Argon Audio TT-4 je EISA nagrađivani gramofon sa remenskim pogonom, Ortofon 2M Blue zvučnicom i visokokvalitetnim zvukom za audiofile.",
-      "intended_use": ["Hi-Fi audio"],
-      "price_usd": 660,
-      "finishes": ["Black Matte", "Blue Matte", "White Matte", "Walnut Veneer"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2022,
-      "comparison_score": 76,
-      "specifications": {
-        "type": "Gramofon",
-        "drive_system": "Remenski pogon",
-        "cartridge": "Ortofon 2M Blue",
-        "speeds": ["33⅓ RPM", "45 RPM"],
-        "min_frequency": 20,
-        "max_frequency": 20000,
-        "signal_to_noise_ratio": "67dB",
-        "dimensions": {
-          "height_mm": 140,
-          "width_mm": 420,
-          "depth_mm": 360
-        },
-        "weight_kg": 6.2,
-        "technologies": ["Ortofon 2M Blue", "Low-vibration motor"]
-      }
-    },
-    {
-      "name": "TT Signature",
-      "series": "Nema",
-      "category": "Gramofoni",
-      "subcategory": "Nema",
-      "description": "Vrhunski gramofon sa Ortofon 2M Black zvučnicom.",
-      "longDescription": "Argon Audio TT Signature je vrhunski gramofon sa remenskim pogonom, ATS tehnologijom, karbonskom ručkom i Ortofon 2M Black zvučnicom, dizajniran za audiofile.",
-      "intended_use": ["Hi-Fi audio"],
-      "price_usd": 1859,
-      "finishes": ["Walnut Veneer", "Dark Cherry Veneer"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2025,
-      "comparison_score": 85,
-      "specifications": {
-        "type": "Gramofon",
-        "drive_system": "Remenski pogon",
-        "cartridge": "Ortofon 2M Black",
-        "speeds": ["33⅓ RPM", "45 RPM"],
-        "min_frequency": 20,
-        "max_frequency": 22000,
-        "signal_to_noise_ratio": "70dB",
-        "dimensions": {
-          "height_mm": 150,
-          "width_mm": 430,
-          "depth_mm": 370
-        },
-        "weight_kg": 8.0,
-        "technologies": ["Ortofon 2M Black", "ATS technology", "Carbon fiber tonearm", "Floating chassis"]
-      }
-    },
-    {
-      "name": "Bass 8",
-      "series": "Nema",
-      "category": "Subwooferi",
-      "subcategory": "Nema",
-      "description": "Kompaktni subwoofer za dubok bas.",
-      "longDescription": "Argon Audio Bass 8 je kompaktni subwoofer sa 100W pojačalom, idealan za proširenje basa u Hi-Fi i kućnim bioskopima.",
-      "intended_use": ["Hi-Fi stereo", "Kućno kino"],
-      "price_usd": 330,
-      "finishes": ["Black", "White"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2022,
-      "comparison_score": 70,
-      "specifications": {
-        "type": "Aktivni subwoofer",
-        "amplifier_power": "100W (Class D)",
-        "amplifier_power_watts": 100,
-        "min_frequency": 30,
-        "max_frequency": 200,
-        "inputs": ["RCA", "LFE"],
-        "outputs": [],
-        "connectivity": [],
-        "dimensions": {
-          "height_mm": 300,
-          "width_mm": 280,
-          "depth_mm": 300
-        },
-        "weight_kg": 8.0,
-        "technologies": ["Class D amplification", "Adjustable crossover"]
-      }
-    },
-    {
-      "name": "Malmö 8",
-      "series": "Nema",
-      "category": "Subwooferi",
-      "subcategory": "Nema",
-      "description": "Kompaktni subwoofer sa 8-inčnim drajverom.",
-      "longDescription": "Argon Audio Malmö 8 je kompaktni subwoofer sa 8-inčnim drajverom i 100W pojačalom, idealan za Hi-Fi i kućne bioskope sa snažnim basom.",
-      "intended_use": ["Hi-Fi stereo", "Kućno kino"],
-      "price_usd": 350,
-      "finishes": ["Black", "White"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 71,
-      "specifications": {
-        "type": "Aktivni subwoofer",
-        "amplifier_power": "100W (Class D)",
-        "amplifier_power_watts": 100,
-        "min_frequency": 32,
-        "max_frequency": 200,
-        "inputs": ["RCA", "LFE"],
-        "outputs": [],
-        "connectivity": [],
-        "dimensions": {
-          "height_mm": 310,
-          "width_mm": 290,
-          "depth_mm": 310
-        },
-        "weight_kg": 8.5,
-        "technologies": ["Class D amplification", "Adjustable crossover"]
-      }
-    },
-    {
-      "name": "Malmö 10",
-      "series": "Nema",
-      "category": "Subwooferi",
-      "subcategory": "Nema",
-      "description": "Snažni subwoofer sa 10-inčnim drajverom.",
-      "longDescription": "Argon Audio Malmö 10 je subwoofer sa 10-inčnim drajverom i 150W pojačalom, dizajniran za dubok bas u većim prostorijama i kućnim bioskopima.",
-      "intended_use": ["Hi-Fi stereo", "Kućno kino"],
-      "price_usd": 440,
-      "finishes": ["Black", "White"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 74,
-      "specifications": {
-        "type": "Aktivni subwoofer",
-        "amplifier_power": "150W (Class D)",
-        "amplifier_power_watts": 150,
-        "min_frequency": 28,
-        "max_frequency": 200,
-        "inputs": ["RCA", "LFE"],
-        "outputs": [],
-        "connectivity": [],
-        "dimensions": {
-          "height_mm": 350,
-          "width_mm": 330,
-          "depth_mm": 350
-        },
-        "weight_kg": 10.5,
-        "technologies": ["Class D amplification", "Adjustable crossover"]
-      }
-    },
-    {
-      "name": "BT735 Quiet Storm",
-      "series": "Nema",
       "category": "Slušalice",
-      "subcategory": "Over-ear",
-      "description": "Bežične over-ear slušalice sa ANC-om.",
-      "longDescription": "Argon Audio BT735 Quiet Storm su bežične over-ear slušalice sa aktivnim poništavanjem buke, idealne za Hi-Fi slušanje u pokretu.",
-      "intended_use": ["Hi-Fi audio"],
-      "price_usd": 165,
-      "finishes": ["Black"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 65,
-      "specifications": {
-        "type": "Over-ear slušalice",
-        "min_frequency": 20,
-        "max_frequency": 20000,
-        "sensitivity": "100dB",
-        "nominal_impedance": "32Ω",
-        "inputs": ["3.5mm audio"],
-        "outputs": [],
-        "connectivity": ["Bluetooth 5.0"],
-        "dimensions": {
-          "height_mm": 180,
-          "width_mm": 160,
-          "depth_mm": 80
-        },
-        "weight_kg": 0.3,
-        "technologies": ["Active Noise Cancellation", "Bluetooth aptX"]
-      }
+      "subcategories": [
+        {
+          "subcategory": "Bežične slušalice",
+          "products": [
+            {
+              "name": "Forus 50",
+              "series": "Forus",
+              "category": "Slušalice",
+              "subcategory": "Bežične slušalice",
+              "description": "Bežične slušalice za Hi-Fi zvuk.",
+              "longDescription": "Argon Audio Forus 50 su bežične slušalice s Bluetooth 5.0 i aptX HD, optimizirane za visokokvalitetni zvuk i udobnost.",
+              "intended_use": ["Hi-Fi stereo", "Streaming"],
+              "price_usd": 110,
+              "finishes": ["Crna"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.89,
+              "specifications": {
+                "type": "Bežične slušalice",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": [],
+                "connectivity": ["Bluetooth 5.0 (aptX HD)"],
+                "dimensions": {
+                  "height_mm": 180,
+                  "width_mm": 160,
+                  "depth_mm": 80
+                },
+                "weight_kg": 0.3,
+                "technologies": ["Bluetooth 5.0", "aptX HD"]
+              }
+            },
+            {
+              "name": "Forus 55",
+              "series": "Forus",
+              "category": "Slušalice",
+              "subcategory": "Bežične slušalice",
+              "description": "Napredne bežične slušalice za audiophile.",
+              "longDescription": "Argon Audio Forus 55 su napredne bežične slušalice s Bluetooth 5.0, aptX HD i aktivnim poništavanjem buke, optimizirane za Hi-Fi zvuk.",
+              "intended_use": ["Hi-Fi stereo", "Streaming"],
+              "price_usd": 165,
+              "finishes": ["Crna"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.84,
+              "specifications": {
+                "type": "Bežične slušalice",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": [],
+                "connectivity": ["Bluetooth 5.0 (aptX HD)"],
+                "dimensions": {
+                  "height_mm": 180,
+                  "width_mm": 160,
+                  "depth_mm": 80
+                },
+                "weight_kg": 0.3,
+                "technologies": ["Bluetooth 5.0", "aptX HD", "ANC"]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Stream 3 MK2",
-      "series": "Nema",
-      "category": "Mrežni Audio Plejeri",
-      "subcategory": "Nema",
-      "description": "Svestrani mrežni plejer sa DAB/FM radiom.",
-      "longDescription": "Argon Audio Stream 3 MK2 je mrežni plejer sa podrškom za Internet radio, DAB, FM, i podcastove, sa Bluetooth i AirPlay 2.",
-      "intended_use": ["Hi-Fi audio", "Streaming"],
-      "price_usd": 220,
-      "finishes": ["Black", "White"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 67,
-      "specifications": {
-        "type": "Mrežni audio plejer",
-        "supported_formats": ["MP3", "AAC", "FLAC", "WAV"],
-        "min_frequency": 20,
-        "max_frequency": 20000,
-        "inputs": ["Ethernet", "USB"],
-        "outputs": ["RCA", "Optical", "Coaxial"],
-        "connectivity": ["Wi-Fi", "Bluetooth 5.0", "AirPlay 2", "Spotify Connect"],
-        "dimensions": {
-          "height_mm": 50,
-          "width_mm": 180,
-          "depth_mm": 150
-        },
-        "weight_kg": 1.5,
-        "technologies": ["DAB/FM radio", "Internet radio", "Multi-room streaming"]
-      }
+      "category": "Gramofoni",
+      "subcategories": [
+        {
+          "subcategory": "Analogni gramofoni",
+          "products": [
+            {
+              "name": "TT",
+              "series": "Nema",
+              "category": "Gramofoni",
+              "subcategory": "Analogni gramofoni",
+              "description": "Osnovni gramofon za vinil entuzijaste.",
+              "longDescription": "Argon Audio TT je osnovni analogni gramofon s Ortofon OM5e kertridžom i integriranim pretpojačalom, idealan za početnike.",
+              "intended_use": ["Hi-Fi stereo", "Vinil"],
+              "price_usd": 220,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.78,
+              "specifications": {
+                "type": "Analogni gramofon",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": ["Analogni linijski", "Phono"],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 120,
+                  "width_mm": 420,
+                  "depth_mm": 360
+                },
+                "weight_kg": 4.5,
+                "technologies": ["Ortofon OM5e", "Pretpojačalo"]
+              }
+            },
+            {
+              "name": "TT-3",
+              "series": "Nema",
+              "category": "Gramofoni",
+              "subcategory": "Analogni gramofoni",
+              "description": "Gramofon za vinil entuzijaste.",
+              "longDescription": "Argon Audio TT-3 je analogni gramofon s Ortofon OM5e kertridžom, MDF tanjirom i integriranim pretpojačalom, idealan za visokokvalitetni vinilni zvuk.",
+              "intended_use": ["Hi-Fi stereo", "Vinil"],
+              "price_usd": 330,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.67,
+              "specifications": {
+                "type": "Analogni gramofon",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": ["Analogni linijski", "Phono"],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 130,
+                  "width_mm": 430,
+                  "depth_mm": 370
+                },
+                "weight_kg": 5.5,
+                "technologies": ["Ortofon OM5e", "Pretpojačalo", "MDF tanjir"]
+              }
+            },
+            {
+              "name": "TT-4",
+              "series": "Nema",
+              "category": "Gramofoni",
+              "subcategory": "Analogni gramofoni",
+              "description": "Napredni gramofon za audiophile.",
+              "longDescription": "Argon Audio TT-4 je napredni analogni gramofon s Ortofon 2M Blue kertridžom, ATS tehnologijom i integriranim pretpojačalom, idealan za audiophile.",
+              "intended_use": ["Hi-Fi stereo", "Vinil"],
+              "price_usd": 550,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2022,
+              "comparison_score": 83.45,
+              "specifications": {
+                "type": "Analogni gramofon",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": ["Analogni linijski", "Phono"],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 140,
+                  "width_mm": 440,
+                  "depth_mm": 380
+                },
+                "weight_kg": 6.5,
+                "technologies": ["Ortofon 2M Blue", "ATS tehnologija", "Pretpojačalo"]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Radio2i MK2",
-      "series": "Nema",
-      "category": "Mrežni Audio Plejeri",
-      "subcategory": "Nema",
-      "description": "Internet radio sa DAB/FM i Bluetooth-om.",
-      "longDescription": "Argon Audio Radio2i MK2 nudi Internet radio, DAB, FM i Bluetooth streaming, idealan za jednostavno slušanje muzike i podcastova.",
-      "intended_use": ["Hi-Fi audio", "Streaming"],
-      "price_usd": 165,
-      "finishes": ["Black", "White"],
-      "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
-      "warranty_duration": 3,
-      "release_year": 2023,
-      "comparison_score": 65,
-      "specifications": {
-        "type": "Internet radio",
-        "supported_formats": ["MP3", "AAC"],
-        "min_frequency": 20,
-        "max_frequency": 20000,
-        "inputs": ["3.5mm AUX"],
-        "outputs": ["Headphone out"],
-        "connectivity": ["Wi-Fi", "Bluetooth 5.0"],
-        "dimensions": {
-          "height_mm": 90,
-          "width_mm": 200,
-          "depth_mm": 140
+      "category": "Mrežni plejeri i streameri",
+      "subcategories": [
+        {
+          "subcategory": "Mrežni streameri",
+          "products": [
+            {
+              "name": "Solo",
+              "series": "Nema",
+              "category": "Mrežni plejeri i streameri",
+              "subcategory": "Mrežni streameri",
+              "description": "Mrežni streamer za bežično strujanje.",
+              "longDescription": "Argon Audio Solo je mrežni streamer s AirPlay 2, Chromecast, Spotify Connect, Bluetooth i Roon Ready podrškom, idealan za nadogradnju Hi-Fi sustava.",
+              "intended_use": ["Streaming", "Hi-Fi stereo"],
+              "price_usd": 275,
+              "finishes": ["Crna"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.73,
+              "specifications": {
+                "type": "Mrežni streamer",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": ["Analogni linijski", "Optički", "Koaksijalni"],
+                "connectivity": ["Wi-Fi (AirPlay 2, Chromecast, Spotify Connect, Roon)", "Bluetooth 5.0"],
+                "dimensions": {
+                  "height_mm": 50,
+                  "width_mm": 150,
+                  "depth_mm": 150
+                },
+                "weight_kg": 1.0,
+                "technologies": ["AirPlay 2", "Chromecast", "Roon Ready", "Spotify Connect"]
+              }
+            },
+            {
+              "name": "Stream 2 MK3",
+              "series": "Nema",
+              "category": "Mrežni plejeri i streameri",
+              "subcategory": "Mrežni streameri",
+              "description": "Napredni mrežni streamer za Hi-Fi.",
+              "longDescription": "Argon Audio Stream 2 MK3 je napredni mrežni streamer s AirPlay 2, Chromecast, Spotify Connect, Bluetooth i Roon Ready podrškom, idealan za Hi-Fi sustave.",
+              "intended_use": ["Streaming", "Hi-Fi stereo"],
+              "price_usd": 330,
+              "finishes": ["Crna"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2023,
+              "comparison_score": 83.67,
+              "specifications": {
+                "type": "Mrežni streamer",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": ["Analogni linijski", "Optički", "Koaksijalni"],
+                "connectivity": ["Wi-Fi (AirPlay 2, Chromecast, Spotify Connect, Roon)", "Bluetooth 5.0"],
+                "dimensions": {
+                  "height_mm": 50,
+                  "width_mm": 150,
+                  "depth_mm": 150
+                },
+                "weight_kg": 1.0,
+                "technologies": ["AirPlay 2", "Chromecast", "Roon Ready", "Spotify Connect"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Hi-Fi dodaci i pribor",
+      "subcategories": [
+        {
+          "subcategory": "Bežični adapteri",
+          "products": [
+            {
+              "name": "WRT",
+              "series": "Nema",
+              "category": "Hi-Fi dodaci i pribor",
+              "subcategory": "Bežični adapteri",
+              "description": "Bežični adapter za streaming.",
+              "longDescription": "Argon Audio WRT je bežični primopredajnik za streaming zvuka, kompatibilan s Fenris i Forte zvučnicima, podržava Wi-Fi i Bluetooth.",
+              "intended_use": ["Streaming"],
+              "price_usd": 110,
+              "finishes": ["Crna"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2023,
+              "comparison_score": 83.89,
+              "specifications": {
+                "type": "Bežični adapter",
+                "min_frequency": 20,
+                "max_frequency": 20000,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": [],
+                "connectivity": ["Wi-Fi (DTS Play-Fi)", "Bluetooth 5.0"],
+                "dimensions": {
+                  "height_mm": 30,
+                  "width_mm": 100,
+                  "depth_mm": 100
+                },
+                "weight_kg": 0.2,
+                "technologies": ["Wi-Fi", "Bluetooth"]
+              }
+            }
+          ]
         },
-        "weight_kg": 1.2,
-        "technologies": ["DAB/FM radio", "Internet radio"]
-      }
+        {
+          "subcategory": "Pribor za gramofone",
+          "products": [
+            {
+              "name": "Record Clean 1",
+              "series": "Nema",
+              "category": "Hi-Fi dodaci i pribor",
+              "subcategory": "Pribor za gramofone",
+              "description": "Sredstvo za čišćenje vinila.",
+              "longDescription": "Argon Audio Record Clean 1 je tekućina za čišćenje vinila s krpicom, za uklanjanje prašine i otisaka prstiju s ploča.",
+              "intended_use": ["Vinil"],
+              "price_usd": 22,
+              "finishes": ["Nema"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.98,
+              "specifications": {
+                "type": "Pribor za gramofone",
+                "min_frequency": 0,
+                "max_frequency": 0,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": [],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 100,
+                  "width_mm": 50,
+                  "depth_mm": 50
+                },
+                "weight_kg": 0.1,
+                "technologies": []
+              }
+            }
+          ]
+        },
+        {
+          "subcategory": "Stalak za zvučnike",
+          "products": [
+            {
+              "name": "Stativ 62",
+              "series": "Nema",
+              "category": "Hi-Fi dodaci i pribor",
+              "subcategory": "Stalak za zvučnike",
+              "description": "Stalak za zvučnike Forte i Fenris.",
+              "longDescription": "Argon Audio Stativ 62 je stalak za zvučnike kompatibilan s Forte A4, A5, Fenris A4, A5 i Alto 5 MK2, optimiziran za stabilnost i akustiku.",
+              "intended_use": ["Hi-Fi stereo"],
+              "price_usd": 165,
+              "finishes": ["Crna", "Bijela"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.84,
+              "specifications": {
+                "type": "Stalak za zvučnike",
+                "min_frequency": 0,
+                "max_frequency": 0,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": [],
+                "outputs": [],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 620,
+                  "width_mm": 250,
+                  "depth_mm": 300
+                },
+                "weight_kg": 5.0,
+                "technologies": []
+              }
+            }
+          ]
+        },
+        {
+          "subcategory": "Kablovi",
+          "products": [
+            {
+              "name": "Classic Optical",
+              "series": "Classic",
+              "category": "Hi-Fi dodaci i pribor",
+              "subcategory": "Kablovi",
+              "description": "Optički kabel za audio prijenos.",
+              "longDescription": "Argon Audio Classic Optical je visokokvalitetni optički kabel za prijenos digitalnog zvuka, idealan za povezivanje CD playera ili streamera s pojačalom.",
+              "intended_use": ["Hi-Fi stereo", "Streaming"],
+              "price_usd": 22,
+              "finishes": ["Crna"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.98,
+              "specifications": {
+                "type": "Optički kabel",
+                "min_frequency": 0,
+                "max_frequency": 0,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": ["Optički"],
+                "outputs": ["Optički"],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 0,
+                  "width_mm": 0,
+                  "depth_mm": 2000
+                },
+                "weight_kg": 0.1,
+                "technologies": []
+              }
+            },
+            {
+              "name": "Classic RCA",
+              "series": "Classic",
+              "category": "Hi-Fi dodaci i pribor",
+              "subcategory": "Kablovi",
+              "description": "RCA kabel za audio prijenos.",
+              "longDescription": "Argon Audio Classic RCA je visokokvalitetni analogni kabel za povezivanje Hi-Fi komponenti, idealan za pojačala i zvučnike.",
+              "intended_use": ["Hi-Fi stereo"],
+              "price_usd": 22,
+              "finishes": ["Crna"],
+              "imageUrl": "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/logos/Argon%20Audio.png",
+              "warranty_duration": 3,
+              "release_year": 2021,
+              "comparison_score": 83.98,
+              "specifications": {
+                "type": "RCA kabel",
+                "min_frequency": 0,
+                "max_frequency": 0,
+                "amplifier_power": "Nema",
+                "amplifier_power_watts": 0,
+                "inputs": ["RCA"],
+                "outputs": ["RCA"],
+                "connectivity": [],
+                "dimensions": {
+                  "height_mm": 0,
+                  "width_mm": 0,
+                  "depth_mm": 2000
+                },
+                "weight_kg": 0.1,
+                "technologies": []
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
