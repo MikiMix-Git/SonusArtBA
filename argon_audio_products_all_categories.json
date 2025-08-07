@@ -1,0 +1,2385 @@
+{
+    "Speakers": [
+        {
+            "naziv": "FENRIS A4",
+            "cijena": "Sale price369 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFENRISA4ASH_O_1_ab3050fb-09ed-4f27-a7e2-dc5d62c90aaf.jpg?v=1744803457&width=1500",
+            "opis": "Compact yet powerful speakers. Ideal for computer setups, discreet TV audio, or cozy smaller spaces.",
+            "link": "https://argonaudio.com/products/fenris-a4",
+            "badge-ovi": [
+                "4” paper cone",
+                "Bluetooth",
+                "HDMI ARC",
+                "4.8"
+            ],
+            "boje": [
+                "Ash",
+                "Black",
+                "White",
+                "Walnut"
+            ],
+            "specifikacije": {
+                "Power": "4 x 75 W",
+                "Amplifier technology": "Class D",
+                "Tweeter size": "0.75\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "4\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "52-22.000 Hz ± 6 dB",
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Max. resolution": "24-bit/48kHz",
+                "Audio formats": "SBC",
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Pre-out (RCA)",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Auto power up on all inputs except phono",
+                    "Auto switch inputs",
+                    "Dimmable LED"
+                ],
+                "Included in the box": "support.nordichifi.com/fenris"
+            }
+        },
+        {
+            "naziv": "FENRIS A5",
+            "cijena": "Sale price429 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGFENRISA5BK_O_1.jpg?v=1692775229&width=1500",
+            "opis": "Delivers punchy bass and a big, full-bodied sound that can fill most spaces with rich acoustics.",
+            "link": "https://argonaudio.com/products/fenris-a5",
+            "badge-ovi": [
+                "5” paper cone",
+                "Bluetooth",
+                "HDMI ARC",
+                "4.7"
+            ],
+            "boje": [
+                "Black",
+                "White",
+                "Ash",
+                "Walnut"
+            ],
+            "specifikacije": {
+                "Power": "4 x 75 W",
+                "Amplifier technology": "Class D",
+                "Tweeter size": "0.75\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "5.25\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "47-22.000 Hz ± 6 dB",
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Max. resolution": "24-bit/48kHz",
+                "Audio formats": "SBC",
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Pre-out (RCA)",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Auto power up on all inputs except Phono",
+                    "Auto switch inputs",
+                    "Dimmable LED"
+                ],
+                "Included in the box": "support.nordichifi.com/fenris"
+            }
+        },
+        {
+            "naziv": "FORTE A5 MK2",
+            "cijena": "Sale price649 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGFORTEA5MK2WH_O_1.jpg?v=1692777245&width=1500",
+            "opis": "Experience crisp and powerful sound tailored for audiophiles. Rich sound suitable for most room sizes.",
+            "link": "https://argonaudio.com/products/forte-a5-mk2",
+            "badge-ovi": [
+                "5\" 2-layer cone",
+                "Bluetooth aptX HD/AAC",
+                "HDMI ARC",
+                "4.7"
+            ],
+            "boje": [
+                "White",
+                "Black"
+            ],
+            "specifikacije": {
+                "Power": "4 x 80 W",
+                "Amplifier technology": "Class D with Fully Digital Signal Path",
+                "Tweeter size": "1\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "5\"",
+                "Woofer type": "Custom 2-layer Cone",
+                "Frequency range": "40-20.000 Hz ± 3 dB",
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Max. resolution": "24-bit/96 kHz",
+                "Audio formats": [
+                    "aptX",
+                    "aptX HD",
+                    "AAC",
+                    "SBC"
+                ],
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Sub-out",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Auto power up on all inputs except Phono",
+                    "Auto switch inputs",
+                    "Dimmable LED"
+                ],
+                "Included in the box": "support.nordichifi.com/fortemk2"
+            }
+        },
+        {
+            "naziv": "FORTE A4 MK2",
+            "cijena": "Sale price549 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGFORTEA4MK2BK_O_1.jpg?v=1694178932&width=1500",
+            "opis": "Experience rich, detailed sound in a compact design, ideal for audiophiles seeking quality in smaller spaces.",
+            "link": "https://argonaudio.com/products/forte-a4-mk2",
+            "badge-ovi": [
+                "4\" 2-layer cone",
+                "Bluetooth aptX HD/AAC",
+                "HDMI ARC",
+                "4.7"
+            ],
+            "boje": [
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Power": "4 x 80 W",
+                "Amplifier technology": "Class D with Fully Digital Signal Path",
+                "Tweeter size": "1\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "4\"",
+                "Woofer type": "Custom 2-layer Cone",
+                "Frequency range": "50-20.000 Hz ± 3 dB",
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Max. resolution": "24-bit/96 kHz",
+                "Audio formats": [
+                    "aptX",
+                    "aptX HD",
+                    "AAC",
+                    "SBC"
+                ],
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Sub-out",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Auto power up on all inputs except Phono",
+                    "Auto switch inputs",
+                    "Dimmable LED"
+                ],
+                "Included in the box": "support.nordichifi.com/fortemk2"
+            }
+        },
+        {
+            "naziv": "FORUS 4",
+            "cijena": "Sale price198 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORUS4BK_O_01.jpg?v=1744802625&width=1500",
+            "opis": "Minimalist speakers that seamlessly integrates into tighter spaces, while still delivering an extravagant sound.",
+            "link": "https://argonaudio.com/products/forus-4",
+            "badge-ovi": [
+                "4” paper cone",
+                "4.8"
+            ],
+            "boje": [
+                "Black",
+                "Walnut",
+                "White"
+            ],
+            "specifikacije": {
+                "Tweeter size": "0.75\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "4\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "60-20.000 Hz ± 3dB",
+                "Impedance (ohm)": "4",
+                "Sensitivity": "85",
+                "Crossover frequency (hz)": "2900",
+                "Speaker connection": "Single wire",
+                "Terminals": "Gold-plated",
+                "Integrated wall bracket": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": "Integrated Wall Mount",
+                "Included in the box": [
+                    "Front Covers (Magnetic)",
+                    "Rubber Feet"
+                ],
+                "Color": [
+                    "Black (PVC)",
+                    "Walnut (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "23.9 x 14.8 x 18.9 cm",
+                "Dimensions incl. packaging (H x W x L)": "37 x 31,5 x 15 cm",
+                "Net weight": "2.5kg",
+                "Gross weight": "2.9g",
+                "Manual": "support.nordichifi.com/forus"
+            }
+        },
+        {
+            "naziv": "FENRIS A55",
+            "cijena": "Sale price799 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGFENRISA55WH_O_1.jpg?v=1692775396&width=1500",
+            "opis": "Take your audio experience to the next level with the most powerful and dynamic speakers in the FENRIS series.",
+            "link": "https://argonaudio.com/products/fenris-a55",
+            "badge-ovi": [
+                "2x5” paper cone",
+                "Bluetooth",
+                "HDMI ARC",
+                "4.8"
+            ],
+            "boje": [
+                "White",
+                "Ash",
+                "Black",
+                "Walnut"
+            ],
+            "specifikacije": {
+                "Power": "4 x 75 W",
+                "Amplifier technology": "Class D",
+                "Tweeter size": "0.75\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "2x5.25\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "38-22.000 Hz ± 6 dB",
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Max. resolution": "24-bit/48kHz",
+                "Audio formats": "SBC",
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Pre-out (RCA)",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Auto power up on all inputs except Phono",
+                    "Auto switch inputs",
+                    "Dimmable LED"
+                ],
+                "Included in the box": "support.nordichifi.com/fenris"
+            }
+        },
+        {
+            "naziv": "FORUS 5",
+            "cijena": "Sale price258 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORUS5BK_O_01.jpg?v=1700059291&width=1500",
+            "opis": "These 5\" speakers elevate every tune to give a full, clear, and dynamic sound at an unmatched price.",
+            "link": "https://argonaudio.com/products/forus-5",
+            "badge-ovi": [
+                "5” paper cone",
+                "4.8"
+            ],
+            "boje": [
+                "Black",
+                "Walnut",
+                "White"
+            ],
+            "specifikacije": {
+                "Tweeter size": "1\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "5.25\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "55-20.000 Hz ± 3dB",
+                "Impedance (ohm)": "4",
+                "Sensitivity": "86",
+                "Crossover frequency (hz)": "2700",
+                "Speaker connection": "Single wire",
+                "Terminals": "Gold-plated",
+                "Integrated wall bracket": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": "Integrated Wall Mount",
+                "Included in the box": [
+                    "Front Covers (Magnetic)",
+                    "Rubber Feet"
+                ],
+                "Color": [
+                    "Black (PVC)",
+                    "Walnut (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "27,2 x 16,8 x 21,1 cm",
+                "Dimensions incl. packaging (H x W x L)": "35 x 22 x 29 cm",
+                "Net weight": "3.6kg",
+                "Gross weight": "3.2kg",
+                "Manual": "support.nordichifi.com/forus"
+            }
+        },
+        {
+            "naziv": "MALMÖ SUB 6",
+            "cijena": "Sale price269 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB6WH_O_1_37ea8404-b1c6-4e2a-81f4-6cba02fb1bed.jpg?v=1713862600&width=1500",
+            "opis": "Small, but powerful subwoofer that adds a bassy punch without being too intrusive. Ideal for a compact setup.",
+            "link": "https://argonaudio.com/products/malmo-sub-6",
+            "badge-ovi": [
+                "6\"",
+                "65 Watts (RMS)",
+                "4.6"
+            ],
+            "boje": [
+                "White",
+                "Walnut",
+                "Black"
+            ],
+            "specifikacije": {
+                "Amplifier power": "65 W (RMS) / 130 W (PEAK)",
+                "Woofer size": "6\"",
+                "Woofer type": "Long-stroke",
+                "Frequency range": "50-200 Hz",
+                "Crossover frequency (hz)": "40-120",
+                "Inputs audio": "Analogue RCA",
+                "Phase regulation": "Yes",
+                "Terminals": "Gold-plated",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Volume control",
+                    "Cable not included"
+                ],
+                "Included in the box": "Power supply",
+                "Color": [
+                    "White (PVC)",
+                    "Walnut (PVC)",
+                    "Black (PVC)"
+                ],
+                "Dimensions (H x W x L)": "25 x 23 x 25 cm",
+                "Dimensions incl. packaging (H x W x L)": "33 x 30 x 33 cm",
+                "Net weight": "6kg",
+                "Gross weight": "6.7kg",
+                "Standby power consumption": "<0.5 W",
+                "Manual": "support.nordichifi.com/malmo"
+            }
+        },
+        {
+            "naziv": "FORTE A55 MK2",
+            "cijena": "Sale price1.099 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGFORTEA55MK2WA_O_1.jpg?v=1694178921&width=1500",
+            "opis": "The flagship of the FORTE family. Designed for audiophiles who seek the best and most powerful audio experience.",
+            "link": "https://argonaudio.com/products/forte-a55-mk2",
+            "badge-ovi": [
+                "2x5\" 2-layer cone",
+                "Bluetooth aptX HD/AAC",
+                "HDMI ARC",
+                "4.8"
+            ],
+            "boje": [
+                "Walnut",
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Power": "4 x 80 W",
+                "Amplifier technology": "Class D with Fully Digital Signal Path",
+                "Tweeter size": "1\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "2x5\"",
+                "Woofer type": "Custom 2-layer Cone",
+                "Frequency range": "35-20.000 Hz ± 3 dB",
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Max. resolution": "24-bit/96 kHz",
+                "Audio formats": [
+                    "aptX",
+                    "aptX HD",
+                    "AAC",
+                    "SBC"
+                ],
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Sub-out",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Auto power up on all inputs except Phono",
+                    "Auto switch inputs",
+                    "Dimmable LED"
+                ],
+                "Included in the box": "support.nordichifi.com/fortemk2"
+            }
+        },
+        {
+            "naziv": "MALMÖ SUB 10",
+            "cijena": "Sale price469 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB10BK_O_01.jpg?v=1700059056&width=1500",
+            "opis": "This bigger and more powerful subwoofer will raise your TV, gaming, or audio setup to the next level.",
+            "link": "https://argonaudio.com/products/malmo-sub-10",
+            "badge-ovi": [
+                "10\"",
+                "100 Watts (RMS)",
+                "4.8"
+            ],
+            "boje": [
+                "Black",
+                "Walnut",
+                "White"
+            ],
+            "specifikacije": {
+                "Amplifier power": "100 W (RMS) / 200 W (PEAK)",
+                "Woofer size": "10\"",
+                "Woofer type": "Long-stroke",
+                "Frequency range": "37-180 Hz",
+                "Crossover frequency (hz)": "35-120",
+                "Inputs audio": "Analogue RCA",
+                "Phase regulation": "Yes",
+                "Terminals": "Gold-plated",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Volume control",
+                    "Cable not included"
+                ],
+                "Included in the box": "Power supply",
+                "Color": [
+                    "Black (PVC)",
+                    "Walnut (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "32.9 x 32 x 35 cm",
+                "Dimensions incl. packaging (H x W x L)": "45 x 40 x 44 cm",
+                "Net weight": "12.4kg",
+                "Gross weight": "13.5kg",
+                "Standby power consumption": "<0.5 W",
+                "Manual": "support.nordichifi.com/malmo"
+            }
+        },
+        {
+            "naziv": "MALMÖ SUB 8",
+            "cijena": "Sale price399 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB8WA_O_01.jpg?v=1700059149&width=1500",
+            "opis": "Compact subwoofer with a strong and precise bass experience that integrates smoothly into any audio system.",
+            "link": "https://argonaudio.com/products/malmo-sub-8",
+            "badge-ovi": [
+                "100 Watts (RMS)",
+                "8\"",
+                "4.8"
+            ],
+            "boje": [
+                "Walnut",
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Amplifier power": "100 W (RMS) / 200 W (PEAK)",
+                "Woofer size": "8\"",
+                "Woofer type": "Long-stroke",
+                "Frequency range": "42-180 Hz",
+                "Crossover frequency (hz)": "40-120",
+                "Inputs audio": "Analogue RCA",
+                "Phase regulation": "Yes",
+                "Terminals": "Gold-plated",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Volume control",
+                    "Cable not included"
+                ],
+                "Included in the box": "Power supply",
+                "Color": [
+                    "Walnut (PVC)",
+                    "Black (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "28.5 x 27 x 30 cm",
+                "Dimensions incl. packaging (H x W x L)": "39 x 33 x 39 cm",
+                "Net weight": "9kg",
+                "Gross weight": "10.3kg",
+                "Standby power consumption": "<0.5 W",
+                "Manual": "support.nordichifi.com/malmo"
+            }
+        },
+        {
+            "naziv": "FORUS CENTER",
+            "cijena": "Sale price159 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORUSCBK_O_01.jpg?v=1700061303&width=1500",
+            "opis": "This center speaker delivers crisp, clear dialogue and serves as the beating heart of your home theater.",
+            "link": "https://argonaudio.com/products/forus-c",
+            "badge-ovi": [
+                "2x4” paper cone",
+                "4.7"
+            ],
+            "boje": [
+                "Black",
+                "Walnut",
+                "White"
+            ],
+            "specifikacije": {
+                "Tweeter size": "0.75\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "2x4\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "70-20.000 Hz",
+                "Impedance (ohm)": "4",
+                "Sensitivity": "86",
+                "Crossover frequency (hz)": "3000",
+                "Speaker connection": "Single wire",
+                "Terminals": "Gold-plated",
+                "Integrated wall bracket": "Yes",
+                "Cabinet construction": "MDF",
+                "Included in the box": [
+                    "Front Covers (Magnetic)",
+                    "Rubber Feet"
+                ],
+                "Color": [
+                    "Black (PVC)",
+                    "Walnut (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "13.9 x 43 x 16.1 cm",
+                "Dimensions incl. packaging (H x W x L)": "21 x 23 x 50 cm",
+                "Net weight": "4.3g",
+                "Gross weight": "3.2kg",
+                "Manual": "support.nordichifi.com/forus"
+            }
+        },
+        {
+            "naziv": "FORTE A5 WIFI",
+            "cijena": "Sale price799 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORTEA5WIFIWA_O_1.jpg?v=1743602723&width=1500",
+            "opis": "Powerful and convenient Wi-Fi speakers, that will light up most room sizes with rich, superior sound.",
+            "link": "https://argonaudio.com/products/forte-a5-wifi",
+            "badge-ovi": [
+                "5\" 2-layer cone",
+                "AirPlay 2",
+                "Chromecast",
+                "HDMI ARC",
+                "Spotify Connect",
+                "4.7"
+            ],
+            "boje": [
+                "Walnut",
+                "Black",
+                "White",
+                "Blue"
+            ],
+            "specifikacije": {
+                "Power": "4 x 80 W",
+                "Amplifier technology": "Class D with Fully Digital Signal Path",
+                "Tweeter size": "1\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "5\"",
+                "Woofer type": "Custom 2-layer Cone",
+                "Frequency range": "40-20.000 Hz ± 3 dB",
+                "WiFi": "Yes",
+                "Wireless connectivity": [
+                    "Bluetooth",
+                    "Apple Airplay 2",
+                    "Google Cast",
+                    "Spotify Connect",
+                    "DTS Play-Fi"
+                ],
+                "Bluetooth version": "Bluetooth 4.2",
+                "Max. resolution": "24-bit/96 kHz",
+                "Audio formats": [
+                    "AAC",
+                    "SBC"
+                ],
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Sub-out",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": "support.nordichifi.com/fortewifi"
+            }
+        },
+        {
+            "naziv": "FORUS 55",
+            "cijena": "Sale price598 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORUS55BK_O_01.jpg?v=1700059850&width=1500",
+            "opis": "The apex of the FORUS series, these beautiful speakers fill any space with large, full-bodied sound.",
+            "link": "https://argonaudio.com/products/forus-55",
+            "badge-ovi": [
+                "2x5” paper cone",
+                "4.7"
+            ],
+            "boje": [
+                "Black",
+                "Walnut",
+                "White"
+            ],
+            "specifikacije": {
+                "Tweeter size": "1\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "2x5.25\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "45-20.000 Hz ± 3dB",
+                "Impedance (ohm)": "4",
+                "Sensitivity": "88",
+                "Crossover frequency (hz)": "1500 / 3000",
+                "Speaker connection": "Single wire",
+                "Terminals": "Gold-plated",
+                "Integrated wall bracket": "Yes",
+                "Cabinet construction": "MDF",
+                "Included in the box": [
+                    "Front Covers (Magnetic)",
+                    "Rubber Feet"
+                ],
+                "Color": [
+                    "Black (PVC)",
+                    "Walnut (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "86 x 17 x 26.6 cm",
+                "Dimensions incl. packaging (H x W x L)": "95 x 25 x 34 cm",
+                "Net weight": "12.2kg",
+                "Gross weight": "13.1kg",
+                "Manual": "support.nordichifi.com/forus"
+            }
+        },
+        {
+            "naziv": "FORTE A4 WIFI",
+            "cijena": "Sale price699 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORTEA4BLWIFI_O_01_b5c9fdea-0d1a-4832-b08b-dbe19f8145ae.jpg?v=1743602858&width=1500",
+            "opis": "Compact Wi-Fi speakers built to deliver pristine, audiophile sound and unrivaled ease of use.",
+            "link": "https://argonaudio.com/products/forte-a4-wifi",
+            "badge-ovi": [
+                "4\" 2-layer Cone\"",
+                "AirPlay 2",
+                "Chromecast",
+                "HDMI ARC",
+                "Spotify Connect",
+                "4.7"
+            ],
+            "boje": [
+                "Blue",
+                "Black",
+                "Walnut",
+                "White"
+            ],
+            "specifikacije": {
+                "Power": "4 x 80 W",
+                "Amplifier technology": "Class D with Fully Digital Signal Path",
+                "Tweeter size": "1\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "4\"",
+                "Woofer type": "Custom 2-layer Cone",
+                "Frequency range": "50-20.000 Hz ± 3 dB",
+                "WiFi": "Yes",
+                "Wireless connectivity": [
+                    "Bluetooth",
+                    "Apple Airplay 2",
+                    "Google Cast",
+                    "Spotify Connect",
+                    "DTS Play-Fi"
+                ],
+                "Bluetooth version": "Bluetooth 4.2",
+                "Max. resolution": "24-bit/96 kHz",
+                "Audio formats": [
+                    "AAC",
+                    "SBC"
+                ],
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Sub-out",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": "support.nordichifi.com/fortewifi"
+            }
+        },
+        {
+            "naziv": "FORTE A55 WIFI",
+            "cijena": "Sale priceFrom 1.299 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORTEA55WIFIWA_O_1.jpg?v=1743619706&width=1500",
+            "opis": "Our biggest and most powerful Wi-Fi speaker will fill any room with an unparalleled audiophile sound.",
+            "link": "https://argonaudio.com/products/forte-a55-wifi",
+            "badge-ovi": [
+                "2 x 5\" 2-layer Cone",
+                "AirPlay 2",
+                "Chromecast",
+                "HDMI ARC",
+                "Spotify Connect",
+                "4.8"
+            ],
+            "boje": [
+                "Walnut",
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Power": "4 x 80 W",
+                "Amplifier technology": "Class D with Fully Digital Signal Path",
+                "Tweeter size": "1\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "2x5\"",
+                "Woofer type": "Custom 2-layer Cone",
+                "Frequency range": "35-20.000 Hz ± 3 dB",
+                "WiFi": "Yes",
+                "Wireless connectivity": [
+                    "Bluetooth",
+                    "Apple Airplay 2",
+                    "Google Cast",
+                    "Spotify Connect",
+                    "DTS Play-Fi"
+                ],
+                "Bluetooth version": "Bluetooth 4.2",
+                "Max. resolution": "24-bit/96 kHz",
+                "Audio formats": [
+                    "AAC",
+                    "SBC"
+                ],
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Sub-out",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": "support.nordichifi.com/fortewifi"
+            }
+        },
+        {
+            "naziv": "FORUS 4 WALL",
+            "cijena": "Sale price298 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORUS4WBK_O_01.jpg?v=1700059427&width=1500",
+            "opis": "Wall-mounted speakers that blend seamlessly into your living room. Ideal for discreet placement and pairing with a subwoofer.",
+            "link": "https://argonaudio.com/products/forus-4-wall",
+            "badge-ovi": [
+                "4” paper cone",
+                "5.0"
+            ],
+            "boje": [
+                "Black",
+                "Walnut",
+                "White"
+            ],
+            "specifikacije": {
+                "Tweeter size": "0.75\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "4\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "60-20.000 Hz ± 3dB",
+                "Impedance (ohm)": "4",
+                "Sensitivity": "84",
+                "Crossover frequency (hz)": "3000",
+                "Speaker connection": "Single wire",
+                "Terminals": "Gold-plated",
+                "Integrated wall bracket": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": "Integrated Wall Mount (can be mounted both horizontally and vertically)",
+                "Included in the box": "Front Covers (Magnetic)",
+                "Color": [
+                    "Black (PVC)",
+                    "Walnut (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "29 x 21 x 10.3 cm",
+                "Dimensions incl. packaging (H x W x L)": "37 x 31.5 x 15 cm",
+                "Net weight": "3kg",
+                "Gross weight": "3.4kg",
+                "Manual": "support.nordichifi.com/forus"
+            }
+        },
+        {
+            "naziv": "STUDIE 3",
+            "cijena": "Sale price429 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGSTUDIE3BK_O_1.jpg?v=1730970141&width=1500",
+            "opis": "Super compact and convenient desktop speakers with immersive hi-fi sound and a minimalist design.",
+            "link": "https://argonaudio.com/products/studie-3",
+            "badge-ovi": [
+                "3.5” paper cone",
+                "Bluetooth aptX HD/AAC/LL",
+                "USB-C",
+                "4.5"
+            ],
+            "boje": [
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Power": "4 x 40 W",
+                "Amplifier technology": "Class D",
+                "Tweeter size": "0.75\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "3.5\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "56-24,000 Hz ± 6 dB",
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.1",
+                "Max. resolution": "24-bit/192kHz",
+                "Audio formats": [
+                    "AAC",
+                    "aptX HD"
+                ],
+                "Inputs audio": [
+                    "USB-C",
+                    "Optical Digital",
+                    "Analogue RCA"
+                ],
+                "Outputs": "Sub-out",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Tone control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Auto power up on all inputs and auto switch inputs",
+                    "Noise-free design (S/N 105 dB)",
+                    "Right/left setup and bass/treble fine-tuning via rear buttons",
+                    "Three predefined sound profiles (music, film, neutral)"
+                ],
+                "Included in the box": "support.nordichifi.com/studie3"
+            }
+        },
+        {
+            "naziv": "FORUS 5 WALL",
+            "cijena": "Sale price398 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORUS5WBK_O_01.jpg?v=1700059486&width=1500",
+            "opis": "Elegant wall-mounted speakers that offer full-bodied sound and sleek design, seamlessly blending into your living room.",
+            "link": "https://argonaudio.com/products/forus-5-wall",
+            "badge-ovi": [
+                "5” paper cone",
+                "5.0"
+            ],
+            "boje": [
+                "Black",
+                "Walnut",
+                "White"
+            ],
+            "specifikacije": {
+                "Tweeter size": "0.75\"",
+                "Tweeter type": "Soft dome (Neodymium magnet)",
+                "Woofer size": "5\"",
+                "Woofer type": "Paper Cone",
+                "Frequency range": "50-20.000 Hz ± 3dB",
+                "Impedance (ohm)": "4",
+                "Sensitivity": "85",
+                "Crossover frequency (hz)": "2700",
+                "Speaker connection": "Single wire",
+                "Terminals": "Gold-plated",
+                "Integrated wall bracket": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": "Integrated Wall Mount (can be mounted both horizontally and vertically)",
+                "Included in the box": "Front Covers (Magnetic)",
+                "Color": [
+                    "Black (PVC)",
+                    "Walnut (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "42 x 29.7 x 13 cm",
+                "Dimensions incl. packaging (H x W x L)": "52 x 39.5 x 20 cm",
+                "Net weight": "5.7kg",
+                "Gross weight": "7.2kg",
+                "Manual": "support.nordichifi.com/forus"
+            }
+        },
+        {
+            "naziv": "SA1 MK2 + FORUS 4",
+            "cijena": "Sale price502 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGSA1BK_ARGFORUS4BK.jpg?v=1734525228&width=1500",
+            "opis": "With this dynamic duo, you'll experience top-notch audio quality and smart wireless tech.",
+            "link": "https://argonaudio.com/products/sa1-forus4",
+            "badge-ovi": [
+                "2 x 100W",
+                "Bluetooth aptX HD/AAC",
+                "Bundle",
+                "HDMI ARC"
+            ],
+            "boje": [],
+            "specifikacije": {}
+        }
+    ],
+    "Amplifiers & Streaming": [
+        {
+            "naziv": "SA1 MK2",
+            "cijena": "Sale price369 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGSA1MK2BK_O_1.jpg?v=1714717385&width=1500",
+            "opis": "Stylish and powerful amplifier equipped with high-end Bluetooth aptX HD and HDMI ARC, offering a seamless and superior listening experience.",
+            "link": "https://argonaudio.com/products/sa1-mk2",
+            "badge-ovi": [
+                "2 x 100 W",
+                "Bluetooth aptX HD/AAC",
+                "HDMI ARC",
+                "4.7"
+            ],
+            "boje": [
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Power": "2 x 100 W (4 Ohm)",
+                "Amplifier technology": "Class D",
+                "Power (RMS)": [
+                    "2 x 100 W (4 Ohm)",
+                    "2 x 50 W (8 Ohm)"
+                ],
+                "Distortion": "0.0045% (THD+N)",
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Max. resolution": "24-bit/192kHz",
+                "DAC": "32-bit ESS Sabre",
+                "Audio formats": [
+                    "aptX",
+                    "aptX HD",
+                    "AAC"
+                ],
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Pre-out (RCA)",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Additional Features": [
+                    "Auto power up on all inputs except phono",
+                    "Auto switch inputs"
+                ],
+                "Included in the box": [
+                    "Remote Control (incl. Batteries)",
+                    "Power Cable"
+                ],
+                "Color": [
+                    "Black",
+                    "White"
+                ],
+                "Dimensions (H x W x L)": "6.3 x 25.2 x 22.0 cm",
+                "Dimensions incl. packaging (H x W x L)": "support.nordichifi.com/sa1"
+            }
+        },
+        {
+            "naziv": "SA2",
+            "cijena": "Sale price499 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGSA2BK_O_1.jpg?v=1716285216&width=1500",
+            "opis": "Punchy amplifier with Wi-Fi streaming for high-quality audio and greater convenience, evolved from the highly praised SA1.",
+            "link": "https://argonaudio.com/products/sa2",
+            "badge-ovi": [
+                "2 x 100 W",
+                "AirPlay 2",
+                "Chromecast",
+                "DTS Play-Fi",
+                "HDMI ARC",
+                "Spotify Connect",
+                "Wi-Fi",
+                "4.5"
+            ],
+            "boje": [
+                "Black",
+                "White",
+                "Blue"
+            ],
+            "specifikacije": {
+                "Power": "2 x 100 W (4 Ohm)",
+                "Amplifier technology": "Class D",
+                "Power (RMS)": [
+                    "2 x 100 W (4 Ohm)",
+                    "2 x 50 W (8 Ohm)"
+                ],
+                "Distortion": "0.0045% (THD+N)",
+                "WiFi": "Yes",
+                "Wireless connectivity": [
+                    "Bluetooth",
+                    "Apple Airplay 2",
+                    "Google Cast",
+                    "Spotify Connect",
+                    "DTS Play-Fi"
+                ],
+                "Bluetooth version": "Bluetooth 4.2",
+                "Max. resolution": "24-bit/192kHz",
+                "DAC": "32-bit ESS Sabre",
+                "Audio formats": [
+                    "SBC",
+                    "AAC"
+                ],
+                "Inputs audio": [
+                    "HDMI/ARC",
+                    "Optical Digital",
+                    "Analogue RCA",
+                    "Turntable (MM)"
+                ],
+                "Inputs other": "USB (Firmware)",
+                "Outputs": "Pre-out (RCA)",
+                "Terminals": "Gold-plated",
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Additional Features": [
+                    "Auto power up on all inputs except phono",
+                    "Auto switch inputs"
+                ],
+                "Included in the box": [
+                    "Remote Control (incl. Batteries)",
+                    "Power Cable"
+                ],
+                "Color": [
+                    "Black",
+                    "White",
+                    "Blue"
+                ],
+                "Dimensions (H x W x L)": "support.nordichifi.com/sa2"
+            }
+        },
+        {
+            "naziv": "SOLO",
+            "cijena": "Sale price199 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGSOLOBK_O_1.jpg?v=1639663752&width=1500",
+            "opis": "Engineered to make every detail in your music shine with premium components and all the features you'll ever need.",
+            "link": "https://argonaudio.com/products/solo",
+            "badge-ovi": [
+                "AirPlay2",
+                "Chromecast",
+                "Roon Ready",
+                "Spotify Connect",
+                "4.6"
+            ],
+            "boje": [
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "WiFi": "Yes",
+                "Wireless connectivity": [
+                    "Apple Airplay 2",
+                    "Bluetooth",
+                    "Google Cast",
+                    "Spotify Connect",
+                    "Roon Ready"
+                ],
+                "Bluetooth version": "Bluetooth 5.0",
+                "Audio processor": "ARM Cortex M33",
+                "Streaming processor": "Dual Core ARM Cortex A7 CPU",
+                "Max. resolution": "24-bit/96 kHz",
+                "DAC": "32-bit ESS Sabre",
+                "Audio formats": "AAC",
+                "Outputs": [
+                    "Stereo line-out (analog RCA)",
+                    "Optical digital",
+                    "Coaxial"
+                ],
+                "Auto On / Standby": "Yes",
+                "Signal-to-Noise (db)": "120",
+                "Additional Features": "Multiroom: AirPlay 2 & Chromecast",
+                "Included in the box": [
+                    "Power supply (USB 5V/1A)",
+                    "Power cable (USB)"
+                ],
+                "Color": [
+                    "Black",
+                    "White"
+                ],
+                "Dimensions (H x W x L)": "3.6 x 14.7 x 15.0 cm",
+                "Dimensions incl. packaging (H x W x L)": "7,7 x 19,5 x 22,2 cm",
+                "Net weight": "0.6kg",
+                "Gross weight": "0.76kg",
+                "Power consumption (w)": "2.1",
+                "Standby power consumption": "support.nordichifi.com/solo"
+            }
+        },
+        {
+            "naziv": "STREAM 2 MK3",
+            "cijena": "Sale price229 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGSTREAM2MMK2BK_A_1.jpg?v=1624266412&width=1280",
+            "opis": "Stream your music with ease. The Argon Audio STREAM 2 MK3 delivers Spoti...",
+            "link": "https://argonaudio.com/products/stream-2-mk3",
+            "badge-ovi": [
+                "Internet Radio",
+                "Spotify Connect",
+                "4.4"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "WiFi": "Yes",
+                "Wireless connectivity": "Spotify Connect",
+                "Bluetooth version": "Bluetooth 4.2",
+                "Max. resolution": "16-bit/44.1 kHz",
+                "Audio formats": [
+                    "AAC",
+                    "MP3",
+                    "M4A",
+                    "PCM"
+                ],
+                "Outputs": [
+                    "Analogue RCA",
+                    "Optical digital"
+                ],
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Additional Features": "2.4\" TFT colour screen",
+                "Included in the box": [
+                    "Power supply",
+                    "Remote control",
+                    "Batteries",
+                    "RCA-Cable"
+                ],
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions (H x W x L)": "5.5 x 12.9 x 8 cm",
+                "Dimensions incl. packaging (H x W x L)": "9.2 x 20.5 x 16 cm",
+                "Net weight": "0.33kg",
+                "Gross weight": "0.63kg",
+                "Power consumption (w)": "1.12",
+                "Standby power consumption": "<0.5 W",
+                "Manual": "support.nordichifi.com/stream2mk3"
+            }
+        },
+        {
+            "naziv": "STREAM 3 MK2",
+            "cijena": "Sale price269 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGSTREAM3M_1.jpg?v=1623675540&width=1227",
+            "opis": "Unleash the full potential of your music system with the Argon Audio STR...",
+            "link": "https://argonaudio.com/products/stream-3-mk2",
+            "badge-ovi": [
+                "Bluetooth aptX",
+                "DAB+",
+                "FM",
+                "Internet Radio",
+                "Spotify Connect",
+                "4.5"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "WiFi": "Yes",
+                "Wireless connectivity": [
+                    "Bluetooth",
+                    "Spotify Connect"
+                ],
+                "Bluetooth version": "Bluetooth 5.1",
+                "Max. resolution": "16-bit/44.1 kHz",
+                "Audio formats": [
+                    "FLAC",
+                    "AAC",
+                    "MP3",
+                    "M4A",
+                    "PCM",
+                    "WAV",
+                    "AIFF",
+                    "AU",
+                    "WMA"
+                ],
+                "Outputs": [
+                    "Analogue RCA",
+                    "Optical digital"
+                ],
+                "Remote control": "Yes",
+                "Auto On / Standby": "Yes",
+                "Additional Features": "2.4\" TFT colour screen",
+                "Included in the box": [
+                    "Remote Control",
+                    "Batteries",
+                    "Power Supply",
+                    "RCA-Cable",
+                    "Antenna Cable"
+                ],
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions (H x W x L)": "5.5 x 12.9 x 8 cm",
+                "Dimensions incl. packaging (H x W x L)": "9 x 20.5 x 15.5 cm",
+                "Net weight": "0.7kg",
+                "Gross weight": "0.75kg",
+                "Power consumption (w)": "1.12",
+                "Standby power consumption": "<0.5 W",
+                "Manual": "support.nordichifi.com/stream3mk2"
+            }
+        },
+        {
+            "naziv": "SA1 MK2 + FORUS 4",
+            "cijena": "Sale price502 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGSA1BK_ARGFORUS4BK.jpg?v=1734525228&width=1500",
+            "opis": "With this dynamic duo, you'll experience top-notch audio quality and smart wireless tech.",
+            "link": "https://argonaudio.com/products/sa1-forus4",
+            "badge-ovi": [
+                "2 x 100W",
+                "Bluetooth aptX HD/AAC",
+                "Bundle",
+                "HDMI ARC"
+            ],
+            "boje": [],
+            "specifikacije": {}
+        }
+    ],
+    "Turntables": [
+        {
+            "naziv": "TT MK2",
+            "cijena": "Sale price269 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGTTMK2EAGR_O_04.jpg?v=1725522314&width=1500",
+            "opis": "The ultimate value-for-money turntable. Combines user-friendliness with true hi-fi sound at an unprecedented price.",
+            "link": "https://argonaudio.com/products/tt-mk2",
+            "badge-ovi": [
+                "Audio-Technica AT3600L",
+                "Built-in Preamp (RIAA)",
+                "4.7"
+            ],
+            "boje": [
+                "Earth Grey",
+                "Atlantic Blue",
+                "Pine Green",
+                "Black"
+            ],
+            "specifikacije": {
+                "Pickup": "Audio-Technica AT3600L (MM)",
+                "Speeds (rpm)": "33/45",
+                "Plate": "Iron",
+                "Drive": "Belt",
+                "Plinth": "MDF",
+                "Platter weight": "1800g",
+                "Platter bearing": "Ball",
+                "Tone arm": "Aluminium",
+                "Effective tonearm length": "8.6\"",
+                "Effective arm mass": "8g",
+                "Built-in RIAA": "Yes",
+                "Rotation Speed Variation": "±1.5%",
+                "Signal-to-Noise (db)": "55",
+                "Wow and flutter": "≤ 0.15%",
+                "Automatic": "False",
+                "Acceptable cartridge weight (incl. headshell)": "5.5–6.0 g",
+                "Recommended tracking force": "3.5g",
+                "Additional Features": "Easy speed adjustment through the bottom",
+                "Included in the box": [
+                    "Power Supply (1.8 m)",
+                    "RCA Cable (1.5 m)",
+                    "Dust cover"
+                ],
+                "Color": "support.nordichifi.com/ttmk2"
+            }
+        },
+        {
+            "naziv": "TT-3",
+            "cijena": "Sale price399 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGTT3ASH_1.jpg?v=1707728921&width=2048",
+            "opis": "Well-built turntable focusing solely on superior sound. With premium parts and sleek design, it's a true standout.",
+            "link": "https://argonaudio.com/products/tt-3",
+            "badge-ovi": [
+                "Ortofon OM 5E",
+                "4.8"
+            ],
+            "boje": [
+                "Ash",
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Pickup": "Ortofon OM5e (MM)",
+                "Speeds (rpm)": "33/45",
+                "Plate": "Aluminium",
+                "Drive": "Belt",
+                "Plinth": "MDF",
+                "Platter weight": "560g",
+                "Platter bearing": "Ball",
+                "Tone arm": "Aluminium",
+                "Effective tonearm length": "8.8\"",
+                "Effective arm mass": "21.7g",
+                "Rotation Speed Variation": "±2%",
+                "Signal-to-Noise (db)": "67",
+                "Wow and flutter": "≤ 0.20%",
+                "Automatic": "False",
+                "Acceptable cartridge weight (incl. headshell)": "15.5-19 g",
+                "Recommended tracking force": "1.75g",
+                "Included in the box": [
+                    "Power Supply (1.5 m)",
+                    "RCA Cable (1.0 m)",
+                    "Dust cover"
+                ],
+                "Color": [
+                    "Ash (PVC)",
+                    "Black (Matte Lacquer)",
+                    "White (Matte Lacquer)"
+                ],
+                "Dimensions (H x W x L)": "12.1 x 42.0 x 35.5 cm",
+                "Dimensions incl. packaging (H x W x L)": "support.nordichifi.com/tt-3"
+            }
+        },
+        {
+            "naziv": "TT-3 PLUS",
+            "cijena": "Sale price529 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGTT3PLUSWA_O_01.jpg?v=1727357705&width=1500",
+            "opis": "Well-built turntable with superior sound right out of the box. Featuring premium parts and a standout design.",
+            "link": "https://argonaudio.com/products/tt-3-plus",
+            "badge-ovi": [
+                "ATS technology",
+                "Built-in Preamp (RIAA)",
+                "Ortofon 2M Red",
+                "4.8"
+            ],
+            "boje": [
+                "Walnut",
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Pickup": "Ortofon 2M Red (MM)",
+                "Speeds (rpm)": "33/45",
+                "Plate": "Aluminium",
+                "Drive": "Belt",
+                "Plinth": "MDF",
+                "Platter weight": "700g",
+                "Platter bearing": "Ball",
+                "Tone arm": "Carbon Fibre / Aluminium",
+                "Effective tonearm length": "8.8\"",
+                "Effective arm mass": "21.3g",
+                "Built-in RIAA": "Yes",
+                "Rotation Speed Variation": "±2%",
+                "Signal-to-Noise (db)": "67",
+                "Wow and flutter": "≤ 0.20%",
+                "Automatic": "False",
+                "Acceptable cartridge weight (incl. headshell)": "15.5-19 g",
+                "Recommended tracking force": "1.8g",
+                "Additional Features": "ATS (Anisotropic Torsion Stabilizer)",
+                "Included in the box": [
+                    "Power Supply (1.5 m)",
+                    "RCA Cable (1.0 m)",
+                    "Dust cover"
+                ],
+                "Color": "support.nordichifi.com/tt3plus"
+            }
+        },
+        {
+            "naziv": "TT-4 MK2",
+            "cijena": "Sale price799 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGTT4MK2WA_O_01_47080579-21ee-4dfb-bec4-6253632221f7.jpg?v=1751880363&width=1500",
+            "opis": "Refining the EISA award-winning TT-4. This is a true hi-fi turntable that provides an exceptional sound experience.",
+            "link": "https://argonaudio.com/products/tt-4-mk2",
+            "badge-ovi": [
+                "ATS technology",
+                "Built-in Preamp (RIAA)",
+                "Ortofon 2M Blue",
+                "4.9"
+            ],
+            "boje": [
+                "Walnut",
+                "Black",
+                "Mahogany",
+                "White"
+            ],
+            "specifikacije": {
+                "Pickup": "Ortofon 2M Blue (MM)",
+                "Speeds (rpm)": "33/45",
+                "Plate": "Aluminium",
+                "Drive": "Belt",
+                "Plinth": "MDF",
+                "Platter weight": "1730g",
+                "Platter bearing": "Ball",
+                "Tone arm": "Carbon Fibre / Aluminium",
+                "Effective tonearm length": "8.8\"",
+                "Effective arm mass": "16.2g",
+                "Built-in RIAA": "Yes",
+                "Rotation Speed Variation": "±2%",
+                "Signal-to-Noise (db)": "67",
+                "Wow and flutter": "≤ 0.20%",
+                "Automatic": "False",
+                "Acceptable cartridge weight (incl. headshell)": "15.5-21.5 g",
+                "Recommended tracking force": "1.8g",
+                "Additional Features": [
+                    "ATS (Anisotropic Torsion Stabilizer)",
+                    "Dampened platter"
+                ],
+                "Included in the box": [
+                    "Power supply (1.5M)",
+                    "RCA cable (1.0M)",
+                    "Dust cover"
+                ],
+                "Color": "support.nordichifi.com/tt4mk2"
+            }
+        },
+        {
+            "naziv": "TT-4 SPECIAL EDITION",
+            "cijena": "Sale price999 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGTT4SEHGBK_O_01.jpg?v=1743661523&width=1500",
+            "opis": "Celebratory special edition that will make all your audiophile friends jealous with its exceptional new features.",
+            "link": "https://argonaudio.com/products/tt-4-special-edition",
+            "badge-ovi": [
+                "Built-in Preamp (RIAA)",
+                "Ortofon 2M Bronze",
+                "Special Edition",
+                "4.9"
+            ],
+            "boje": [
+                "Black"
+            ],
+            "specifikacije": {
+                "Pickup": "Ortofon 2M Bronze (MM)",
+                "Speeds (rpm)": "33/45",
+                "Plate": "Aluminium",
+                "Drive": "Belt",
+                "Plinth": "MDF",
+                "Platter weight": "1730g",
+                "Platter bearing": "Ball",
+                "Tone arm": "Carbon Fibre / Aluminium",
+                "Effective tonearm length": "8.8\"",
+                "Effective arm mass": "16.2g",
+                "Built-in RIAA": "Yes",
+                "Rotation Speed Variation": "±2%",
+                "Signal-to-Noise (db)": "67",
+                "Wow and flutter": "≤ 0.20%",
+                "Automatic": "False",
+                "Acceptable cartridge weight (incl. headshell)": "15.5-21.5 g",
+                "Recommended tracking force": "1.5g",
+                "Additional Features": [
+                    "ATS (Anisotropic Torsion Stabilizer)",
+                    "Dampened platter"
+                ],
+                "Included in the box": [
+                    "Power Supply (1.5 m)",
+                    "RCA Cable (1.0 m)",
+                    "Dust cover"
+                ],
+                "Color": "support.nordichifi.com/tt4se"
+            }
+        },
+        {
+            "naziv": "TT SIGNATURE",
+            "cijena": "Sale price1.699 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGTTSDACH_O_01.jpg?v=1746434103&width=1500",
+            "opis": "The perfect blend of classic design and modern innovation for an exceptional, high-end vinyl experience.",
+            "link": "https://argonaudio.com/products/tt-signature",
+            "badge-ovi": [
+                "ATS technology",
+                "Ortofon 2M Black"
+            ],
+            "boje": [
+                "Dark Cherry",
+                "Walnut"
+            ],
+            "specifikacije": {
+                "Pickup": "Ortofon 2M Black (MM)",
+                "Speeds (rpm)": "33/45",
+                "Plate": "Aluminium (die-cast)",
+                "Drive": "Belt",
+                "Plinth": "MDF with aluminium layer",
+                "Platter weight": "1600g",
+                "Platter bearing": "Ball",
+                "Tone arm": "Carbon Fibre",
+                "Effective tonearm length": "8.8\"",
+                "Effective arm mass": "15.4g",
+                "Rotation Speed Variation": "±0.33%",
+                "Wow and flutter": "≤ 0.15%",
+                "Automatic": "False",
+                "Acceptable cartridge weight (incl. headshell)": "6-12 g",
+                "Recommended tracking force": "1.5g",
+                "Additional Features": [
+                    "Floating suspension",
+                    "Motor with photo sensor",
+                    "Rubber damping",
+                    "ATS (Anisotropic Torsion Stabilizer)"
+                ],
+                "Included in the box": [
+                    "Dust cover",
+                    "RCA cable (1.0M)",
+                    "Power supply (1.5M)"
+                ],
+                "Color": [
+                    "Dark Cherry (Veneer)",
+                    "Walnut (Veneer)"
+                ],
+                "Dimensions (H x W x L)": "45 x 15.4 x 36.8",
+                "Dimensions incl. packaging (H x W x L)": "support.nordichifi.com/signature"
+            }
+        }
+    ],
+    "Subwoofers": [
+        {
+            "naziv": "MALMÖ SUB 6",
+            "cijena": "Sale price269 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB6WH_O_1_37ea8404-b1c6-4e2a-81f4-6cba02fb1bed.jpg?v=1713862600&width=1500",
+            "opis": "Small, but powerful subwoofer that adds a bassy punch without being too intrusive. Ideal for a compact setup.",
+            "link": "https://argonaudio.com/products/malmo-sub-6",
+            "badge-ovi": [
+                "6\"",
+                "65 Watts (RMS)",
+                "4.6"
+            ],
+            "boje": [
+                "White",
+                "Walnut",
+                "Black"
+            ],
+            "specifikacije": {
+                "Amplifier power": "65 W (RMS) / 130 W (PEAK)",
+                "Woofer size": "6\"",
+                "Woofer type": "Long-stroke",
+                "Frequency range": "50-200 Hz",
+                "Crossover frequency (hz)": "40-120",
+                "Inputs audio": "Analogue RCA",
+                "Phase regulation": "Yes",
+                "Terminals": "Gold-plated",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Volume control",
+                    "Cable not included"
+                ],
+                "Included in the box": "Power supply",
+                "Color": [
+                    "White (PVC)",
+                    "Walnut (PVC)",
+                    "Black (PVC)"
+                ],
+                "Dimensions (H x W x L)": "25 x 23 x 25 cm",
+                "Dimensions incl. packaging (H x W x L)": "33 x 30 x 33 cm",
+                "Net weight": "6kg",
+                "Gross weight": "6.7kg",
+                "Standby power consumption": "<0.5 W",
+                "Manual": "support.nordichifi.com/malmo"
+            }
+        },
+        {
+            "naziv": "MALMÖ SUB 10",
+            "cijena": "Sale price469 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB10BK_O_01.jpg?v=1700059056&width=1500",
+            "opis": "This bigger and more powerful subwoofer will raise your TV, gaming, or audio setup to the next level.",
+            "link": "https://argonaudio.com/products/malmo-sub-10",
+            "badge-ovi": [
+                "10\"",
+                "100 Watts (RMS)",
+                "4.8"
+            ],
+            "boje": [
+                "Black",
+                "Walnut",
+                "White"
+            ],
+            "specifikacije": {
+                "Amplifier power": "100 W (RMS) / 200 W (PEAK)",
+                "Woofer size": "10\"",
+                "Woofer type": "Long-stroke",
+                "Frequency range": "37-180 Hz",
+                "Crossover frequency (hz)": "35-120",
+                "Inputs audio": "Analogue RCA",
+                "Phase regulation": "Yes",
+                "Terminals": "Gold-plated",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Volume control",
+                    "Cable not included"
+                ],
+                "Included in the box": "Power supply",
+                "Color": [
+                    "Black (PVC)",
+                    "Walnut (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "32.9 x 32 x 35 cm",
+                "Dimensions incl. packaging (H x W x L)": "45 x 40 x 44 cm",
+                "Net weight": "12.4kg",
+                "Gross weight": "13.5kg",
+                "Standby power consumption": "<0.5 W",
+                "Manual": "support.nordichifi.com/malmo"
+            }
+        },
+        {
+            "naziv": "MALMÖ SUB 8",
+            "cijena": "Sale price399 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB8WA_O_01.jpg?v=1700059149&width=1500",
+            "opis": "Compact subwoofer with a strong and precise bass experience that integrates smoothly into any audio system.",
+            "link": "https://argonaudio.com/products/malmo-sub-8",
+            "badge-ovi": [
+                "100 Watts (RMS)",
+                "8\"",
+                "4.8"
+            ],
+            "boje": [
+                "Walnut",
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Amplifier power": "100 W (RMS) / 200 W (PEAK)",
+                "Woofer size": "8\"",
+                "Woofer type": "Long-stroke",
+                "Frequency range": "42-180 Hz",
+                "Crossover frequency (hz)": "40-120",
+                "Inputs audio": "Analogue RCA",
+                "Phase regulation": "Yes",
+                "Terminals": "Gold-plated",
+                "Auto On / Standby": "Yes",
+                "Cabinet construction": "MDF",
+                "Additional Features": [
+                    "Volume control",
+                    "Cable not included"
+                ],
+                "Included in the box": "Power supply",
+                "Color": [
+                    "Walnut (PVC)",
+                    "Black (PVC)",
+                    "White (PVC)"
+                ],
+                "Dimensions (H x W x L)": "28.5 x 27 x 30 cm",
+                "Dimensions incl. packaging (H x W x L)": "39 x 33 x 39 cm",
+                "Net weight": "9kg",
+                "Gross weight": "10.3kg",
+                "Standby power consumption": "<0.5 W",
+                "Manual": "support.nordichifi.com/malmo"
+            }
+        }
+    ],
+    "Headphones": [
+        {
+            "naziv": "QUIET STORM",
+            "cijena": "Sale price169 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGHPQUIETSTORMBK_O_1.jpg?v=1673259617&width=1500",
+            "opis": "These luxurious and outstanding headphones will provide an unmatched audio experience in any environment.",
+            "link": "https://argonaudio.com/products/quiet-storm",
+            "badge-ovi": [
+                "Noise Cancellation (ANC)",
+                "Over-Ear",
+                "4.7"
+            ],
+            "boje": [
+                "Black",
+                "Blue"
+            ],
+            "specifikacije": {
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Audio formats": "AAC",
+                "Volume control": "Yes",
+                "Headphone type": "Over-Ear",
+                "Headphone connection": "Wireless",
+                "Driver": "40mm",
+                "Battery life (h)": "30",
+                "Active noise cancelling": "Yes",
+                "ANC type": "Hybrid",
+                "Transparency mode": "Yes",
+                "Charge time (h)": "2",
+                "Quick charge": "5 min quick charges gives 2 hours",
+                "Microphone": "Yes",
+                "Acoustic construction": "Closed",
+                "Foldable": "Yes",
+                "Playback without battery": "Yes",
+                "Playback via USB": "Yes",
+                "Additional Features": "Standby-Time up to 300 hours",
+                "Included in the box": "support.nordichifi.com/quietstorm"
+            }
+        },
+        {
+            "naziv": "SOUL3",
+            "cijena": "Sale price119 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGHPSOUL3BK_O_1.jpg?v=1689846890&width=1500",
+            "opis": "Experience pure, superior sound with these comfortable headphones, which also function as a chic accessory.",
+            "link": "https://argonaudio.com/products/soul3",
+            "badge-ovi": [
+                "Over-Ear",
+                "4.8"
+            ],
+            "boje": [
+                "Black",
+                "Bronze Black"
+            ],
+            "specifikacije": {
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Audio formats": [
+                    "AAC",
+                    "aptX"
+                ],
+                "Volume control": "Yes",
+                "Headphone type": "Over-Ear",
+                "Headphone connection": "Wireless",
+                "Driver": "50mm",
+                "Battery life (h)": "25",
+                "Charge time (h)": "2",
+                "Microphone": "Yes",
+                "Acoustic construction": "Closed",
+                "Touch": "Yes",
+                "Foldable": "Yes",
+                "Playback without battery": "Yes",
+                "Additional Features": "Soft Protein Leather Ear Pads",
+                "Included in the box": [
+                    "Carrying Hardcase",
+                    "USB-C Cable (30 cm)",
+                    "Audio Cable (1 meter / 3.5 mm minijack)"
+                ],
+                "Color": [
+                    "Black",
+                    "Bronze Black"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "20 x 9 x 6 cm",
+                "Net weight": "0.29kg",
+                "Gross weight": "support.nordichifi.com/soul3"
+            }
+        },
+        {
+            "naziv": "IE20",
+            "cijena": "Sale price89 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGHPIE20_O_5_NEW.jpg?v=1704272020&width=1500",
+            "opis": "Earphones with exquisite sound and top-notch features, at a surprisingly affordable price – ideal for any activity.",
+            "link": "https://argonaudio.com/products/ie20",
+            "badge-ovi": [
+                "In-ear",
+                "Noise Cancellation (ANC)",
+                "4.8"
+            ],
+            "boje": [
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Wireless connectivity": "Bluetooth",
+                "Bluetooth version": "Bluetooth 5.0",
+                "Audio formats": "AAC",
+                "Volume control": "Yes",
+                "Headphone type": "In-Ear",
+                "Headphone connection": "True Wireless",
+                "Driver": "10mm",
+                "Battery life (h)": "5",
+                "IPX waterproof rating": "IPX-4",
+                "Active noise cancelling": "Yes",
+                "ANC type": "Hybrid",
+                "Transparency mode": "Yes",
+                "Charge time (h)": "1.5",
+                "Microphone": "Yes",
+                "Microphone technology": "Six built-in microphones (three in each earpiece) with Bone Sensor technology",
+                "Acoustic construction": "Closed",
+                "Touch": "Yes",
+                "Additional Features": [
+                    "6 built-in microphones (3 in each earpiece)",
+                    "Easy voice control activation (Siri and Google Assistant)",
+                    "Mono mode for single earbud use (e.g. for calls)"
+                ],
+                "Included in the box": [
+                    "Charging case",
+                    "20 cm USB-C charging cable",
+                    "Silicone tips in three different sizes"
+                ],
+                "Color": "support.nordichifi.com/ie20"
+            }
+        }
+    ],
+    "Accessories": [
+        {
+            "naziv": "PHONO1",
+            "cijena": "Sale price99 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGPHONO1BK_A_1.jpg?v=1623678272&width=1500",
+            "opis": "Phono1 is a high-quality phono (MM) pre-amp to put between your turntabl...",
+            "link": "https://argonaudio.com/products/phono1-riaa-pre-amp",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Inputs audio": "Analogue RCA",
+                "Outputs": "Stereo line-out (analog RCA)",
+                "Terminals": "Gold-plated",
+                "Gain": "40db/1kHz",
+                "Type (Pick-up)": "MM",
+                "Additional Features": "Metal Chassis",
+                "Included in the box": "Power supply",
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions (H x W x L)": "10 x 3 x 6 cm",
+                "Dimensions incl. packaging (H x W x L)": "15.5 x 8.5 x 12.5 cm",
+                "Net weight": "291g",
+                "Gross weight": "500g",
+                "Power consumption (w)": "0.4",
+                "Manual": "support.nordichifi.com/articles/196-manual-argon-audio-phono1"
+            }
+        },
+        {
+            "naziv": "STATIV 62",
+            "cijena": "Sale price220 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGSTATIVS62BK_O_1_d6164f04-107a-4863-a171-4c891f6c4736.jpg?v=1643209926&width=1500",
+            "opis": "These represent our newest stab at designing the perfect speaker stands....",
+            "link": "https://argonaudio.com/products/stativ-62",
+            "badge-ovi": [
+                "4.6"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "Type": "Stand",
+                "Weight capacity": "10kg",
+                "Top Plate (W x D)": "14.9 x 20.9 cm",
+                "Cable management": "Yes",
+                "Additional Features": "The included adhesive pads have a very high and long-lasting adhesive power to secure your speakers as good as possible. Therefore, be extra careful if the speaker has to be removed from the bracket again, as it may affect the surface.",
+                "Included in the box": "Adhesive Pads",
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions (H x W x L)": "62.4 x 22 x 30 cm",
+                "Dimensions incl. packaging (H x W x L)": "63 x 24 x 30 cm",
+                "Net weight": "8.8kg",
+                "Gross weight": "9.8kg"
+            }
+        },
+        {
+            "naziv": "STEL 57",
+            "cijena": "Sale price169 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGSTELS57BK_O_1_d21d0b72-cd0b-4636-9535-8e1ab8809f25.jpg?v=1643209900&width=1500",
+            "opis": "With a minimalistic and truly unique design, these speaker stands make a...",
+            "link": "https://argonaudio.com/products/stel-57",
+            "badge-ovi": [
+                "4.7"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "Type": "Stand",
+                "Weight capacity": "10kg",
+                "Top Plate (W x D)": "14.9 x 20.9 cm",
+                "Cable management": "Yes",
+                "Included in the box": [
+                    "Adhesive Pads",
+                    "Velcro Strips to hide cables"
+                ],
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions (H x W x L)": "57.6 x 23.8 x 32.0 cm",
+                "Dimensions incl. packaging (H x W x L)": "68.0 x 26.5 x 34.0 cm",
+                "Net weight": "3kg",
+                "Gross weight": "4kg"
+            }
+        },
+        {
+            "naziv": "DESKTOP STANDS",
+            "cijena": "Sale price69 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSTABLESTAND1BK_O_1.jpg?v=1704723883&width=1500",
+            "opis": "Discover the perfect blend of form and function with our sleek desktop s...",
+            "link": "https://argonaudio.com/products/table-stand",
+            "badge-ovi": [
+                "4.9"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "Type": "Stand",
+                "Top Plate (W x D)": "12.2 x 18.0 cm",
+                "Additional Features": [
+                    "Powder coated steel",
+                    "Ability to hide cables in the main column"
+                ],
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions (H x W x L)": "9.5 x 15.5 x 21.0 cm",
+                "Dimensions incl. packaging (H x W x L)": "23 x 22 x 17.5 cm",
+                "Net weight": "2kg",
+                "Gross weight": "3.2kg"
+            }
+        },
+        {
+            "naziv": "USB - ETHERNET",
+            "cijena": "Sale price25 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGUEADAPTERWH_O_1.jpg?v=1732278038&width=1500",
+            "opis": "Do you need a wired internet connection for your FORTE WIFI or SA2? Use ...",
+            "link": "https://argonaudio.com/products/usb-ethernet-adapter",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Color": [
+                    "White"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "2 x 10 x 16 cm",
+                "Net weight": "0.22kg",
+                "Gross weight": "0.22kg"
+            }
+        },
+        {
+            "naziv": "CLASSIC Y-SPLIT",
+            "cijena": "Sale price19 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSCL1YSPLIT2F1M_O_1.jpg?v=1728628651&width=1500",
+            "opis": "Divide or combine any line signal with this high-quality Classic Y-SPLIT...",
+            "link": "https://argonaudio.com/products/classic-y-split",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Length (m)": "0.15",
+                "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
+                "Conductors construction": "Multicore",
+                "Shielding": "Double shielding",
+                "Plugs": "Gold-plated",
+                "Additional Features": "2M/1F or 2F/1M",
+                "Color": [
+                    "White"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "7 x 15 x 2 cm"
+            }
+        },
+        {
+            "naziv": "FENRIS / SA SUBWOOFER CONNECT KIT",
+            "cijena": "Sale priceFrom 28 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSCL1IN_O_1.jpg?v=1698400709&width=1500",
+            "opis": "Everything you need to connect your MALMÖ SUB to FENRIS active speakers ...",
+            "link": "https://argonaudio.com/products/fenris-subwoofer-connect-kit",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {}
+        },
+        {
+            "naziv": "FORTE SUBWOOFER CONNECT KIT",
+            "cijena": "Sale priceFrom 52 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSCL1SUB_ESSCLYSPLIT.jpg?v=1732285198&width=1500",
+            "opis": "This kit provides everything you need to connect your MALMÖ SUB to your ...",
+            "link": "https://argonaudio.com/products/forte-subwoofer-connect-kit",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {}
+        },
+        {
+            "naziv": "CLASSIC RCA",
+            "cijena": "Sale priceFrom 35 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSCL1IN_O_1.jpg?v=1698400709&width=1500",
+            "opis": "The Classic RCA cable is highly flexible, easy to use, and features gold...",
+            "link": "https://argonaudio.com/products/rca-rca",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
+                "Conductors construction": "Multicore",
+                "Shielding": "Double shielding",
+                "Plugs": "Gold-plated",
+                "Color": [
+                    "White"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "12 x 20.5 x 3 cm",
+                "Net weight": "0.14kg",
+                "Gross weight": "0.14kg"
+            }
+        },
+        {
+            "naziv": "CLASSIC OPTICAL",
+            "cijena": "Sale priceFrom 25 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSCL1OPT_O_1_804b1fce-bbcb-4f5d-93ec-23d7d4976db2.jpg?v=1734428397&width=1500",
+            "opis": "The Classic Optical cable offers excellent build quality for noise-free ...",
+            "link": "https://argonaudio.com/products/optical-cable",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Color": [
+                    "White"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "12 x 20.5 x 3 cm",
+                "Net weight": "0.1kg",
+                "Gross weight": "0.1kg"
+            }
+        },
+        {
+            "naziv": "CLASSIC MINIJACK - RCA",
+            "cijena": "Sale priceFrom 25 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSCL1MJIN_O_1.jpg?v=1698403857&width=1500",
+            "opis": "Classic MJIN is a durable, high-quality cable with extra-short, gold-pla...",
+            "link": "https://argonaudio.com/products/minijack-rca",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
+                "Conductors construction": "Multicore",
+                "Shielding": "Double shielding",
+                "Plugs": "Gold-plated",
+                "Color": [
+                    "White"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "3 x 12 x 24 cm",
+                "Net weight": "0.1kg",
+                "Gross weight": "0.1kg"
+            }
+        },
+        {
+            "naziv": "CLASSIC SUB",
+            "cijena": "Sale priceFrom 39 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSCL1SUB_O_1_0f6127ed-2a0e-4321-9760-879d2d4bd674.jpg?v=1734428412&width=1500",
+            "opis": "The Classic SUB is an ultra-compact subwoofer cable, just 2.6 mm thick. ...",
+            "link": "https://argonaudio.com/products/subwoofer-cable",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Length (m)": "3",
+                "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
+                "Conductors construction": "Multicore",
+                "Shielding": "Double shielding",
+                "Plugs": "Gold-plated",
+                "Color": [
+                    "White"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "3 x 20.5 x 10 cm"
+            }
+        },
+        {
+            "naziv": "BASIC HDMI",
+            "cijena": "Sale priceFrom 17 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSBA1HDMIBK_O_1_656f187f-7e2f-45ae-b579-8aa55e88a6cf.jpg?v=1734428137&width=1500",
+            "opis": "Basic HDMI is an affordable high-speed HDMI cable that supports a wide r...",
+            "link": "https://argonaudio.com/products/hdmi-copy",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Length (m)": [
+                    "1",
+                    "2",
+                    "3",
+                    "5",
+                    "10"
+                ],
+                "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
+                "Shielding": "Triple shielding",
+                "Plugs": "Gold-plated",
+                "Cable features": "4K@60Hz",
+                "Connections": "HDMI",
+                "HDMI / USB speed": "High speed",
+                "HDMI / USB standard": "2.0",
+                "Supports functions": [
+                    "Ethernet",
+                    "ARC",
+                    "eARC",
+                    "4K UHD"
+                ],
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "12 x 20.5 x 3 cm",
+                "Net weight": "0.14kg",
+                "Gross weight": "0.14kg"
+            }
+        },
+        {
+            "naziv": "TT VINYL KIT 10",
+            "cijena": "Sale price39 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT10_O_2.jpg?v=1732196007&width=1500",
+            "opis": "Provides all the tools you need to care for your records and ensure premium sound quality.",
+            "link": "https://argonaudio.com/products/vinyl-kit-1",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Additional Features": "Stylus Cleaner ingredients: Water 90.1%, Isopropanol 9.7%, DMDMH 0.2%",
+                "Included in the box": [
+                    "Brush 1",
+                    "Brush Stylus 1",
+                    "Record Clean",
+                    "Stylus Clean"
+                ],
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "17.2 x 17 x 6.3 cm",
+                "Net weight": "0.3kg",
+                "Gross weight": "0.52kg"
+            }
+        },
+        {
+            "naziv": "TT VINYL KIT 20",
+            "cijena": "Sale price69 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT20_O_1.jpg?v=1732196158&width=1500",
+            "opis": "The ultimate solution for keeping your records pristine and your sound crystal-clear.",
+            "link": "https://argonaudio.com/products/vinyl-kit-2",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Included in the box": [
+                    "Brush 2",
+                    "Brush Stylus 1",
+                    "Leather Mat"
+                ],
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "35 x 12.4 x 6.8 cm",
+                "Net weight": "0.4g",
+                "Gross weight": "0.41g"
+            }
+        },
+        {
+            "naziv": "STATIV WALL",
+            "cijena": "Sale price80 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGSTATIVWBK_O_1_92499dfc-ad92-43d4-88bc-8f15e157fa87.jpg?v=1643209936&width=1500",
+            "opis": "Elegant wall bracket for compact speakers. With this wall bracket, you c...",
+            "link": "https://argonaudio.com/products/stativ-wall-bracket",
+            "badge-ovi": [
+                "4.7"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "Type": "Shelf",
+                "Weight capacity": "10kg",
+                "Mounting": "Yes",
+                "Top Plate (W x D)": "14.9 x 20.9 cm",
+                "Additional Features": "Powder Coated Steel",
+                "Included in the box": "Adhesive Pads",
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions (H x W x L)": "13.3 x 14.9 x 24.9 cm",
+                "Dimensions incl. packaging (H x W x L)": "14.5 x 22.5 x 27 cm",
+                "Net weight": "1.3kg",
+                "Gross weight": "2.3kg"
+            }
+        },
+        {
+            "naziv": "STEL WALL",
+            "cijena": "Sale price40 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/products/ARGSTELWBK_O_1_92b141e4-8567-40d3-a747-0813a9c82827.jpg?v=1643209917&width=1500",
+            "opis": "Minimalistic and elegant wall bracket for compact speakers. With this wa...",
+            "link": "https://argonaudio.com/products/stel-wall-bracket",
+            "badge-ovi": [
+                "4.5"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "Type": "Shelf",
+                "Weight capacity": "10kg",
+                "Mounting": "Yes",
+                "Top Plate (W x D)": "15.4 x 20.3 cm",
+                "Additional Features": [
+                    "Powder Coated Steel",
+                    "The included adhesive pads have a very high and long-lasting adhesive power to secure your speakers as good as possible. Therefore, be extra careful if the speaker has to be removed from the bracket again, as it may affect the surface."
+                ],
+                "Included in the box": "Adhesive Pads",
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions (H x W x L)": "13.7 x 15.4 x 24.7 cm",
+                "Dimensions incl. packaging (H x W x L)": "18 x 17,5 x 28 cm",
+                "Net weight": "1.1kg",
+                "Gross weight": "1.18kg"
+            }
+        },
+        {
+            "naziv": "WIRELESS CONNECT",
+            "cijena": "Sale price129 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/Wireless-Connect.jpg?v=1739788246&width=970",
+            "opis": "Add the convenience of wireless connectivity to your hi-fi system. WIREL...",
+            "link": "https://argonaudio.com/products/wireless-connect",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "WiFi": "Yes",
+                "Max. resolution": "16-bit/48kHz",
+                "Inputs audio": "3.5 mm Stereo Mini-jack",
+                "Additional Features": [
+                    "Wireless Range 15 meters",
+                    "Wi-Fi 2.4 GHz",
+                    "Latency 25.5 ms",
+                    "Frequency Range 5-24.000 Hz (±1.5 dB)"
+                ],
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions (H x W x L)": "5.5 x 12.9 x 8.0 cm each",
+                "Dimensions incl. packaging (H x W x L)": "5.5 x 24 x 11 cm",
+                "Net weight": "0.35kg",
+                "Power consumption (w)": "0.45",
+                "Manual": "support.nordichifi.com/articles/226-manual-essentials-wireless-connect"
+            }
+        },
+        {
+            "naziv": "TT VINYL KIT 30",
+            "cijena": "Sale price99 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSTVINYLKIT30_O_1.jpg?v=1732196276&width=1500",
+            "opis": "Combines advanced tools to ensure your records stay flawless, your turntable performs at its peak, and your sound quality is unmatched.",
+            "link": "https://argonaudio.com/products/vinyl-kit-3",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Included in the box": [
+                    "Stabilizer 330",
+                    "Brush 3",
+                    "Brush Stylus 3",
+                    "Stylus Gauge",
+                    "Protractor"
+                ],
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "22 x 25.5 x 6 cm",
+                "Net weight": "432g",
+                "Gross weight": "735g"
+            }
+        },
+        {
+            "naziv": "BASIC 1 SC",
+            "cijena": "Sale price5 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSBA1SC_O_1_380effca-2b4e-416b-bd32-20850da2e13c.jpg?v=1743670892&width=1500",
+            "opis": "A discreet and highly functional speaker cable, its flat and compact des...",
+            "link": "https://argonaudio.com/products/basic-1",
+            "badge-ovi": [
+                "5.0"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "Length (m)": "1",
+                "AWG": "17",
+                "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
+                "Conductors construction": "Multicore",
+                "Spools": "200m",
+                "Color": [
+                    "White"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "0.7 x 10 x 10 cm",
+                "Gross weight": "3g"
+            }
+        },
+        {
+            "naziv": "CLASSIC 1 SC",
+            "cijena": "Sale price7 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSCL1SC_O_1.jpg?v=1698408149&width=1500",
+            "opis": "With solid construction and powerful conductors, this cable preserves th...",
+            "link": "https://argonaudio.com/products/classic-1",
+            "badge-ovi": [
+                "5.0"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "AWG": "13",
+                "Conductors construction": "Multicore",
+                "Insulation": "Polyethylene (PE)",
+                "Spools": "100m",
+                "Color": [
+                    "White"
+                ],
+                "Dimensions (H x W x L)": "0.7 x 10 x 10 cm",
+                "Gross weight": "7g"
+            }
+        },
+        {
+            "naziv": "PRIME 1 SC",
+            "cijena": "Sale price15 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ESSPR1SC_O_1.jpg?v=1698408147&width=1500",
+            "opis": "Elegant and flexible, this cable features single conductors that are sil...",
+            "link": "https://argonaudio.com/products/prime-1",
+            "badge-ovi": [
+                "5.0"
+            ],
+            "boje": [],
+            "specifikacije": {
+                "AWG": "15",
+                "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
+                "Conductors construction": "Multicore",
+                "Conductor surface area": "1.571 mm2",
+                "Insulation": "Polyvinyl Chloride (PVC)",
+                "Spools": "120m",
+                "Color": [
+                    "Black"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "0.7 x 10 x 10 cm",
+                "Gross weight": "6g"
+            }
+        },
+        {
+            "naziv": "CLASSIC USB-C",
+            "cijena": "Sale priceFrom 20 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/USBCL1USBCC_O_1.jpg?v=1734428432&width=1500",
+            "opis": "A versatile USB-C to USB-C cable that supports fast charging, high-speed...",
+            "link": "https://argonaudio.com/products/classic-usb-c",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Length (m)": [
+                    "1",
+                    "2"
+                ],
+                "Cable features": [
+                    "4K@30Hz",
+                    "10Gbps"
+                ],
+                "Connections": "USB-C",
+                "HDMI / USB speed": "Super speed",
+                "HDMI / USB standard": "3.2",
+                "Additional Features": "Supports video up to 4K/30Hz",
+                "Color": [
+                    "White"
+                ],
+                "Dimensions incl. packaging (H x W x L)": "12 x 20.5 x 3 cm",
+                "Net weight": "0.14g",
+                "Gross weight": "0.15kg"
+            }
+        },
+        {
+            "naziv": "FORTE CONNECT",
+            "cijena": "Sale priceFrom 25 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFORTEACABLE_56756847-b97b-4f8b-aa44-01833cd2cd02.jpg?v=1751605230&width=2000",
+            "opis": "Longer speaker cables for the FORTE-series of speakers.Designed for use ...",
+            "link": "https://argonaudio.com/products/forte-speaker-cable",
+            "badge-ovi": [],
+            "boje": [
+                "Black",
+                "White"
+            ],
+            "specifikacije": {
+                "Length (m)": [
+                    "6",
+                    "10"
+                ],
+                "Shielding": "Double shielding",
+                "Additional Features": "Cable Gland (Screw)",
+                "Color": [
+                    "Black",
+                    "White"
+                ]
+            }
+        },
+        {
+            "naziv": "FENRIS CONNECT",
+            "cijena": "Sale priceFrom 19 €",
+            "slika_url": "https://argonaudio.com/cdn/shop/files/ARGFENRISCBLAN6MBK_O_1.jpg?v=1707981072&width=1500",
+            "opis": "Longer speaker cables for the FENRIS-series of speakers.Designed for use...",
+            "link": "https://argonaudio.com/products/fenris-angled-speaker-cable",
+            "badge-ovi": [],
+            "boje": [],
+            "specifikacije": {
+                "Length (m)": [
+                    "3",
+                    "6",
+                    "10"
+                ],
+                "Additional Features": "Angled",
+                "Color": [
+                    "Black"
+                ]
+            }
+        }
+    ]
+}
