@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<!--
+CHANGELOG
+v0.11.0 (2025-08-12)
+- Dodan brojač rezultata iznad kataloga
+- Dugme “Uporedi” fiksirano na dno kartice (flex + margin-top:auto)
+- “Svi proizvodi” agregat sa dedupom i sort/filter podrškom
+
+v0.10.0
+- Uveden prikaz svih proizvoda iz svih kategorija + poređenje sa best/worst označavanjem
+
+v0.9.0
+- Inicijalna verzija kataloga (kategorije, značke/ocjene, cijene)
+-->
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
@@ -54,7 +67,9 @@ th { background: var(--soft); }
 <body>
 
 <header>
-  <h1>Argon Audio – Katalog proizvoda</h1>
+  <h1>Argon Audio – Katalog proizvoda 
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.11.0</span>
+  </h1>
 </header>
 
 <div class="sticky-bar">
@@ -94,7 +109,13 @@ th { background: var(--soft); }
 </section>
 
 <script>
-const JSON_URL = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
+const APP_VERSION = "0.11.0";
+const BUILD_DATE = "2025-08-12";
+const BUILD_NOTE = "Brojač rezultata + Uporedi na dnu";
+
+const RAW_JSON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
+const JSON_URL = `${RAW_JSON}?v=${APP_VERSION}`;
+
 let allProducts = {}, allItemsFlat = [], currentCategory = "ALL", selectedForCompare = [];
 
 function normalizePrice(val) {
@@ -135,16 +156,22 @@ function dedupProducts(items) {
   return Array.from(map.values());
 }
 
+// Inicijalno učitavanje
 fetch(JSON_URL)
   .then(res => res.json())
   .then(data => {
     allProducts = data || {};
     const categories = Object.keys(allProducts);
     allItemsFlat = dedupProducts(Object.values(allProducts).flat());
+
     renderCategories(["ALL", ...categories]);
     currentCategory = "ALL";
     highlightActiveCategory();
     renderList(applySort(allItemsFlat));
+
+    // verzija u badgeu i naslovu
+    document.getElementById("version-badge").textContent = `v${APP_VERSION}`;
+    document.title = `Argon Katalog v${APP_VERSION}`;
   });
 
 function renderCategories(cats) {
@@ -159,19 +186,16 @@ function renderCategories(cats) {
       highlightActiveCategory();
       applyFilters();
     };
-        nav.appendChild(btn);
+    nav.appendChild(btn);
   });
 }
-
 function highlightActiveCategory() {
   document.querySelectorAll("#category-nav button")
     .forEach(b => b.classList.toggle("active", b.dataset.cat === currentCategory));
 }
-
 function sourceItems() {
   return currentCategory === "ALL" ? allItemsFlat : (allProducts[currentCategory] || []);
 }
-
 function applySort(items) {
   switch (document.getElementById("sort-select").value) {
     case "price-asc":  return items.slice().sort((a,b)=> normalizePrice(a.cijena) - normalizePrice(b.cijena));
@@ -181,7 +205,6 @@ function applySort(items) {
     default: return items;
   }
 }
-
 function renderList(items) {
   const list = document.getElementById("product-list");
   list.innerHTML = "";
@@ -228,7 +251,6 @@ function renderList(items) {
     list.appendChild(card);
   });
 }
-
 function applyFilters() {
   const searchVal = document.getElementById("search").value.toLowerCase();
   const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
@@ -250,7 +272,6 @@ function applyFilters() {
   items = applySort(items);
   renderList(items);
 }
-
 document.getElementById("apply-btn").addEventListener("click", applyFilters);
 document.getElementById("sort-select").addEventListener("change", applyFilters);
 ["search", "min-price", "max-price"].forEach(id => {
@@ -262,7 +283,6 @@ function resetCompare() {
   selectedForCompare = [];
   renderCompareTable();
 }
-
 function renderCompareTable() {
   const tableHead = document.querySelector("#compare-table thead");
   const tableBody = document.querySelector("#compare-table tbody");
@@ -307,9 +327,10 @@ function renderCompareTable() {
         else if (isWorst) row += `<td class="worst">${cellValue}</td>`;
         else row += `<td>${cellValue}</td>`;
       } else {
-        row += `<td>${cellValue}</td>`;
+                row += `<td>${cellValue}</td>`;
       }
     });
+
     row += `</tr>`;
     return row;
   }).join("");
