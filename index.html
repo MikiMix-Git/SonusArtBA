@@ -4,208 +4,315 @@
 <meta charset="UTF-8">
 <title>Argon Audio Katalog</title>
 <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; }
-    header { background: #222; color: #fff; padding: 1rem; text-align: center; }
-    nav, .filters { background: #444; padding: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    nav button, .filters input, .filters select, .filters button { padding: 0.5rem; border-radius: 4px; border: none; }
-    nav button { background: #666; color: white; cursor: pointer; }
-    nav button:hover { background: #999; }
-    .filters input[type="number"] { width: 80px; }
-    .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1rem; padding: 1rem; }
-    .product-card { background: white; border-radius: 6px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
-    .product-card img { max-width: 100%; height: auto; border-radius: 4px; }
-    .specs { font-size: 0.9em; margin-top: 0.5rem; }
-    .specs li { margin-left: 1.2rem; }
-    .compare-btn { margin-top: auto; padding: 0.5rem; background: #007acc; color: white; border: none; cursor: pointer; border-radius: 4px; }
-    .compare-btn:hover { background: #005c99; }
-    #compare-section { background: white; padding: 1rem; margin: 1rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow-x: auto; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: center; }
-    th { background: #eee; }
-    @media (max-width: 600px) {
-        .filters { flex-direction: column; }
-        nav { flex-direction: column; }
-    }
+:root {
+  --bg:#f4f4f4; --ink:#222; --ink-soft:#444; --ink-muted:#666; --card:#fff;
+  --accent:#007acc; --accent-hover:#005c99; --ok:#155724; --ok-bg:#d4edda;
+  --bad:#721c24; --bad-bg:#f8d7da; --line:#ccc; --soft:#eee;
+}
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: var(--bg); margin: 0; color: var(--ink); }
+header { background: var(--ink); color: #fff; padding: 1rem; text-align: center; }
+.sticky-bar { position: sticky; top: 0; z-index: 10; }
+nav, .filters { background: var(--ink-soft); padding: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+nav button, .filters input, .filters select, .filters button { padding: 0.5rem; border-radius: 4px; border: none; }
+nav button { background: var(--ink-muted); color: white; cursor: pointer; }
+nav button.active { background: var(--accent); }
+nav button:hover { background: #999; }
+.filters input[type="number"] { width: 90px; }
+.filters button { background: var(--accent); color: #fff; cursor: pointer; }
+.filters button:hover { background: var(--accent-hover); }
+.catalog-header { padding: 0.5rem 1rem; font-weight: bold; background: var(--soft); }
+.catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1rem; padding: 1rem; }
+.product-card { 
+  background: var(--card); border-radius: 6px; padding: 1rem; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  display: flex; flex-direction: column;
+}
+.product-card img { max-width: 100%; height: auto; border-radius: 4px; background: #fafafa; object-fit: cover; }
+.product-card h3 { margin: 0.6rem 0 0.2rem; font-size: 1.05rem; }
+.product-card p { margin: 0.2rem 0; }
+.badges, .specs { font-size: 0.92em; margin-top: 0.5rem; padding-left: 1.1rem; }
+.badges li, .specs li { margin: 0.15rem 0; }
+.compare-btn, .reset-btn { padding: 0.5rem; background: var(--accent); color: white; border: none; cursor: pointer; border-radius: 4px; }
+.compare-btn:hover, .reset-btn:hover { background: var(--accent-hover); }
+.compare-btn.added { background: orange; }
+.product-card .compare-btn { margin-top: auto; }
+#compare-section { background: var(--card); padding: 1rem; margin: 1rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid var(--line); padding: 0.5rem; text-align: center; white-space: nowrap; }
+th { background: var(--soft); }
+.best { background-color: var(--ok-bg); color: var(--ok); font-weight: bold; }
+.worst { background-color: var(--bad-bg); color: var(--bad); font-weight: bold; }
+.yes { color: green; font-weight: bold; }
+.no { color: red; font-weight: bold; }
+@media (max-width: 600px) {
+  .filters { flex-direction: column; }
+  nav { flex-direction: column; }
+}
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Argon Audio – Katalog proizvoda</h1>
+  <h1>Argon Audio – Katalog proizvoda</h1>
 </header>
 
-<nav id="category-nav"></nav>
-
-<div class="filters">
+<div class="sticky-bar">
+  <nav id="category-nav"></nav>
+  <div class="filters">
     <input type="text" id="search" placeholder="Pretraga po nazivu...">
     <input type="number" id="min-price" placeholder="Min €">
     <input type="number" id="max-price" placeholder="Max €">
     <select id="feature-filter">
-        <option value="">Sve karakteristike</option>
-        <option value="Bluetooth">Bluetooth</option>
-        <option value="Wi-Fi">Wi‑Fi</option>
-        <option value="HDMI ARC">HDMI ARC</option>
-        <option value="ANC">ANC</option>
+      <option value="">Sve karakteristike</option>
+      <option value="Bluetooth">Bluetooth</option>
+      <option value="Wi-Fi">Wi‑Fi</option>
+      <option value="HDMI ARC">HDMI ARC</option>
+      <option value="ANC">ANC</option>
     </select>
-    <button onclick="applyFilters()">Primijeni filtere</button>
+    <select id="sort-select">
+      <option value="">Bez sortiranja</option>
+      <option value="price-asc">Cijena ↑</option>
+      <option value="price-desc">Cijena ↓</option>
+      <option value="rating-desc">Ocjena ↓</option>
+      <option value="rating-asc">Ocjena ↑</option>
+    </select>
+    <button id="apply-btn">Primijeni filtere</button>
+  </div>
 </div>
 
+<div class="catalog-header" id="catalog-count"></div>
 <section class="catalog" id="product-list"></section>
 
 <section id="compare-section">
-    <h2>Upoređivanje proizvoda</h2>
-    <table id="compare-table">
-        <thead></thead>
-        <tbody></tbody>
-    </table>
+  <h2>Upoređivanje proizvoda</h2>
+  <button class="reset-btn" onclick="resetCompare()">Resetuj poređenje</button>
+  <table id="compare-table">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
 </section>
 
 <script>
-const JSON_URL = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json";
+const JSON_URL = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
+let allProducts = {}, allItemsFlat = [], currentCategory = "ALL", selectedForCompare = [];
 
-let allProducts = {};
-let currentCategory = "";
-let selectedForCompare = [];
+function normalizePrice(val) {
+  if (typeof val !== "string") return Number(val) || 0;
+  const compact = val.replace(/\s/g, "");
+  const match = compact.match(/(\d+[.,]?\d*)/g);
+  if (!match) return 0;
+  let s = match[match.length - 1];
+  if (s.includes(".") && s.includes(",")) s = s.replace(/\./g, "").replace(",", ".");
+  else if (s.includes(",")) s = s.replace(",", ".");
+  return parseFloat(s) || 0;
+}
+function parseNumeric(val) {
+  if (val == null) return null;
+  const m = String(val).replace(",", ".").match(/-?\d+(\.\d+)?/);
+  return m ? parseFloat(m[0]) : null;
+}
+function renderBadges(badges = []) {
+  return badges.map(b => {
+    const t = String(b).trim();
+    if (/^\d+(\.\d+)?$/.test(t) && parseFloat(t) <= 5) {
+      const rating = parseFloat(t), full = Math.floor(rating), half = (rating % 1) >= 0.5 ? 1 : 0, empty = 5 - full - half;
+      return `<li title="Ocjena ${rating}">${"★".repeat(full) + (half ? "☆" : "") + "☆".repeat(empty)} (${rating})</li>`;
+    }
+    return `<li>${b}</li>`;
+  }).join("");
+}
+function getRatingFromBadges(prod) {
+  const b = (prod["badge-ovi"] || []).find(x => /^\d+(\.\d+)?$/.test(String(x).trim()));
+  return b ? parseFloat(b) : 0;
+}
+function dedupProducts(items) {
+  const map = new Map();
+  items.forEach(p => {
+    const key = `${p.naziv || ""}|${p.link || ""}`;
+    if (!map.has(key)) map.set(key, p);
+  });
+  return Array.from(map.values());
+}
 
 fetch(JSON_URL)
   .then(res => res.json())
   .then(data => {
-    allProducts = data;
-    renderCategories(Object.keys(data));
-    currentCategory = Object.keys(data)[0];
-    renderProducts(currentCategory);
+    allProducts = data || {};
+    const categories = Object.keys(allProducts);
+    allItemsFlat = dedupProducts(Object.values(allProducts).flat());
+    renderCategories(["ALL", ...categories]);
+    currentCategory = "ALL";
+    highlightActiveCategory();
+    renderList(applySort(allItemsFlat));
   });
 
-function renderCategories(categories) {
-    const nav = document.getElementById("category-nav");
-    nav.innerHTML = "";
-    categories.forEach(cat => {
-        const btn = document.createElement("button");
-        btn.textContent = cat;
-        btn.onclick = () => { currentCategory = cat; renderProducts(cat); };
+function renderCategories(cats) {
+  const nav = document.getElementById("category-nav");
+  nav.innerHTML = "";
+  cats.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.textContent = cat === "ALL" ? `Svi proizvodi (${allItemsFlat.length})` : cat;
+    btn.dataset.cat = cat;
+    btn.onclick = () => {
+      currentCategory = cat;
+      highlightActiveCategory();
+      applyFilters();
+    };
         nav.appendChild(btn);
-    });
+  });
 }
 
-function renderProducts(category) {
-    const list = document.getElementById("product-list");
-    list.innerHTML = "";
-    allProducts[category].forEach(prod => {
-        const card = document.createElement("div");
-        card.className = "product-card";
-        
-        let specsHTML = "";
-        if (prod.specifikacije) {
-            specsHTML = `<ul class="specs">` + 
-                        Object.entries(prod.specifikacije).map(([key, val]) => `<li><strong>${key}:</strong> ${val}</li>`).join('') 
-                        + `</ul>`;
-        }
-
-        card.innerHTML = `
-            <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
-            <h3>${prod.naziv}</h3>
-            <p>${prod.opis || ''}</p>
-            <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
-            <ul>${prod["badge-ovi"] ? prod["badge-ovi"].map(f => `<li>${f}</li>`).join('') : ''}</ul>
-            ${specsHTML}
-            <a href="${prod.link || '#'}" target="_blank">Detaljnije</a>
-            <button class="compare-btn">Uporedi</button>
-        `;
-        card.querySelector(".compare-btn").onclick = () => addToCompare(prod);
-        list.appendChild(card);
-    });
+function highlightActiveCategory() {
+  document.querySelectorAll("#category-nav button")
+    .forEach(b => b.classList.toggle("active", b.dataset.cat === currentCategory));
 }
 
-function addToCompare(product) {
-    if (selectedForCompare.find(p => p.naziv === product.naziv)) return;
-    selectedForCompare.push(product);
-    renderCompareTable();
+function sourceItems() {
+  return currentCategory === "ALL" ? allItemsFlat : (allProducts[currentCategory] || []);
 }
 
-function renderCompareTable() {
-    const tableHead = document.querySelector("#compare-table thead");
-    const tableBody = document.querySelector("#compare-table tbody");
+function applySort(items) {
+  switch (document.getElementById("sort-select").value) {
+    case "price-asc":  return items.slice().sort((a,b)=> normalizePrice(a.cijena) - normalizePrice(b.cijena));
+    case "price-desc": return items.slice().sort((a,b)=> normalizePrice(b.cijena) - normalizePrice(a.cijena));
+    case "rating-desc":return items.slice().sort((a,b)=> getRatingFromBadges(b) - getRatingFromBadges(a));
+    case "rating-asc": return items.slice().sort((a,b)=> getRatingFromBadges(a) - getRatingFromBadges(b));
+    default: return items;
+  }
+}
 
-    if (selectedForCompare.length === 0) {
-        tableHead.innerHTML = "";
-        tableBody.innerHTML = "";
-        return;
-    }
+function renderList(items) {
+  const list = document.getElementById("product-list");
+  list.innerHTML = "";
+  document.getElementById("catalog-count").textContent = 
+    `${currentCategory === "ALL" ? "Svi proizvodi" : currentCategory} – ${items.length} artikala`;
 
-    let headRow = "<tr><th>Specifikacija</th>";
-    selectedForCompare.forEach(p => headRow += `<th>${p.naziv}</th>`);
-    headRow += "</tr>";
-    tableHead.innerHTML = headRow;
+  items.forEach(prod => {
+    const card = document.createElement("div");
+    card.className = "product-card";
 
-    const allSpecs = new Set(["Cijena"]);
-    selectedForCompare.forEach(p => {
-        (p["badge-ovi"] || []).forEach(f => allSpecs.add(f));
-        if (p.specifikacije) {
-            Object.keys(p.specifikacije).forEach(k => allSpecs.add(k));
-        }
-    });
+    const specsHTML = prod.specifikacije
+      ? `<ul class="specs">${Object.entries(prod.specifikacije)
+          .map(([k,v])=>`<li><strong>${k}:</strong> ${v}</li>`).join("")}</ul>`
+      : "";
 
-    tableBody.innerHTML = Array.from(allSpecs).map(spec => {
-        let row = `<tr><td>${spec}</td>`;
-        selectedForCompare.forEach(p => {
-            if (spec === "Cijena") {
-                row += `<td>${p.cijena || '-'}</td>`;
-            } 
-            else if (p["badge-ovi"] && p["badge-ovi"].includes(spec)) {
-                row += `<td>✔️</td>`;
-            }
-            else if (p.specifikacije && p.specifikacije[spec] !== undefined) {
-                row += `<td>${p.specifikacije[spec]}</td>`;
-            }
-            else {
-                row += `<td>❌</td>`;
-            }
-        });
-        row += "</tr>";
-        return row;
-    }).join('');
+    const badgesHTML = (prod["badge-ovi"] && prod["badge-ovi"].length)
+      ? `<ul class="badges">${renderBadges(prod["badge-ovi"])}</ul>`
+      : "";
+
+    const isAdded = selectedForCompare.some(p => p.naziv === prod.naziv);
+
+    card.innerHTML = `
+      <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
+      <h3>${prod.naziv}</h3>
+      <p>${prod.opis || ''}</p>
+      <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
+      ${badgesHTML}
+      ${specsHTML}
+      <a href="${prod.link || '#'}" target="_blank" rel="noopener">Detaljnije</a>
+      <button class="compare-btn ${isAdded ? 'added' : ''}">
+        ${isAdded ? 'Ukloni iz poređenja' : 'Uporedi'}
+      </button>
+    `;
+    card.querySelector(".compare-btn").onclick = () => {
+      if (isAdded) {
+        selectedForCompare = selectedForCompare.filter(p => p.naziv !== prod.naziv);
+      } else {
+        selectedForCompare.push(prod);
+      }
+      applyFilters();
+      renderCompareTable();
+    };
+
+    list.appendChild(card);
+  });
 }
 
 function applyFilters() {
-    const searchVal = document.getElementById("search").value.toLowerCase();
-    const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
-    const maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
-    const feature = document.getElementById("feature-filter").value;
+  const searchVal = document.getElementById("search").value.toLowerCase();
+  const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
+  const maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
+  const feature = document.getElementById("feature-filter").value.trim().toLowerCase();
 
-    const list = document.getElementById("product-list");
-    list.innerHTML = "";
-    allProducts[currentCategory]
-        .filter(prod => 
-            prod.naziv.toLowerCase().includes(searchVal) &&
-            parseFloat(prod.cijena) >= minPrice &&
-            parseFloat(prod.cijena) <= maxPrice &&
-            (feature === "" || (prod["badge-ovi"] && prod["badge-ovi"].includes(feature)))
-        )
-        .forEach(prod => {
-            const card = document.createElement("div");
-            card.className = "product-card";
+  let items = sourceItems().filter(p => {
+    const nameMatch = (p.naziv || "").toLowerCase().includes(searchVal);
+    const priceVal = normalizePrice(p.cijena);
+    const priceMatch = priceVal >= minPrice && priceVal <= maxPrice;
 
-            let specsHTML = "";
-            if (prod.specifikacije) {
-                specsHTML = `<ul class="specs">` + 
-                            Object.entries(prod.specifikacije).map(([key, val]) => `<li><strong>${key}:</strong> ${val}</li>`).join('') 
-                            + `</ul>`;
-            }
+    const badges = (p["badge-ovi"] || []).map(b => String(b).toLowerCase());
+    const specsVals = p.specifikacije ? Object.values(p.specifikacije).map(v => String(v).toLowerCase()) : [];
 
-            card.innerHTML = `
-                <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
-                <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
-                <h3>${prod.naziv}</h3>
-                <p>${prod.opis || ''}</p>
-                <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
-                <ul>${prod["badge-ovi"] ? prod["badge-ovi"].map(f => `<li>${f}</li>`).join('') : ''}</ul>
-                ${specsHTML}
-                <a href="${prod.link || '#'}" target="_blank">Detaljnije</a>
-                <button class="compare-btn">Uporedi</button>
-            `;
-            card.querySelector(".compare-btn").onclick = () => addToCompare(prod);
-            list.appendChild(card);
-        });
+    const featureMatch = !feature || badges.some(b => b.includes(feature)) || specsVals.some(v => v.includes(feature));
+    return nameMatch && priceMatch && featureMatch;
+  });
+
+  items = applySort(items);
+  renderList(items);
+}
+
+document.getElementById("apply-btn").addEventListener("click", applyFilters);
+document.getElementById("sort-select").addEventListener("change", applyFilters);
+["search", "min-price", "max-price"].forEach(id => {
+  document.getElementById(id).addEventListener("keydown", e => { if (e.key === "Enter") applyFilters(); });
+});
+document.getElementById("feature-filter").addEventListener("change", applyFilters);
+
+function resetCompare() {
+  selectedForCompare = [];
+  renderCompareTable();
+}
+
+function renderCompareTable() {
+  const tableHead = document.querySelector("#compare-table thead");
+  const tableBody = document.querySelector("#compare-table tbody");
+  tableHead.innerHTML = "";
+  tableBody.innerHTML = "";
+  if (selectedForCompare.length === 0) return;
+
+  let headRow = "<tr><th>Specifikacija</th>";
+  selectedForCompare.forEach(p => headRow += `<th>${p.naziv}</th>`);
+  headRow += "</tr>";
+  tableHead.innerHTML = headRow;
+
+  const allSpecs = new Set(["Cijena"]);
+  selectedForCompare.forEach(p => {
+    (p["badge-ovi"] || []).forEach(f => { if (!/^\d+(\.\d+)?$/.test(String(f).trim())) allSpecs.add(f); });
+    if (p.specifikacije) Object.keys(p.specifikacije).forEach(k => allSpecs.add(k));
+  });
+
+  tableBody.innerHTML = Array.from(allSpecs).map(spec => {
+    let row = `<tr><td>${spec}</td>`;
+    const values = selectedForCompare.map(p => {
+      if (spec === "Cijena") return normalizePrice(p.cijena);
+      if (p.specifikacije && p.specifikacije[spec] !== undefined) return parseNumeric(p.specifikacije[spec]);
+      return null;
+    });
+    const numeric = values.filter(v => v !== null && !isNaN(v));
+    const hasNumeric = numeric.length > 0;
+    const maxVal = hasNumeric ? Math.max(...numeric) : null;
+    const minVal = hasNumeric ? Math.min(...numeric) : null;
+
+    selectedForCompare.forEach((p, idx) => {
+      let cellValue = "";
+      if (spec === "Cijena") cellValue = p.cijena || "-";
+      else if ((p["badge-ovi"] || []).some(b => String(b).toLowerCase() === String(spec).toLowerCase())) cellValue = `<span class="yes">✔</span>`;
+      else if (p.specifikacije && p.specifikacije[spec] !== undefined) cellValue = p.specifikacije[spec];
+      else cellValue = `<span class="no">✘</span>`;
+
+      if (hasNumeric && values[idx] !== null && !isNaN(values[idx]) && maxVal !== minVal) {
+        const isBest = spec === "Cijena" ? (values[idx] === minVal) : (values[idx] === maxVal);
+        const isWorst = spec === "Cijena" ? (values[idx] === maxVal) : (values[idx] === minVal);
+        if (isBest) row += `<td class="best">${cellValue}</td>`;
+        else if (isWorst) row += `<td class="worst">${cellValue}</td>`;
+        else row += `<td>${cellValue}</td>`;
+      } else {
+        row += `<td>${cellValue}</td>`;
+      }
+    });
+    row += `</tr>`;
+    return row;
+  }).join("");
 }
 </script>
 
