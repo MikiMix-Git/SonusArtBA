@@ -7,19 +7,25 @@
     body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; }
     header { background: #222; color: #fff; padding: 1rem; text-align: center; }
     nav, .filters { background: #444; padding: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    nav button, .filters input, .filters select { padding: 0.5rem; border-radius: 4px; border: none; }
+    nav button, .filters input, .filters select, .filters button { padding: 0.5rem; border-radius: 4px; border: none; }
     nav button { background: #666; color: white; cursor: pointer; }
     nav button:hover { background: #999; }
     .filters input[type="number"] { width: 80px; }
-    .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; padding: 1rem; }
+    .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1rem; padding: 1rem; }
     .product-card { background: white; border-radius: 6px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
     .product-card img { max-width: 100%; height: auto; border-radius: 4px; }
+    .specs { font-size: 0.9em; margin-top: 0.5rem; }
+    .specs li { margin-left: 1.2rem; }
     .compare-btn { margin-top: auto; padding: 0.5rem; background: #007acc; color: white; border: none; cursor: pointer; border-radius: 4px; }
     .compare-btn:hover { background: #005c99; }
     #compare-section { background: white; padding: 1rem; margin: 1rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow-x: auto; }
     table { border-collapse: collapse; width: 100%; }
     th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: center; }
     th { background: #eee; }
+    @media (max-width: 600px) {
+        .filters { flex-direction: column; }
+        nav { flex-direction: column; }
+    }
 </style>
 </head>
 <body>
@@ -87,14 +93,21 @@ function renderProducts(category) {
     allProducts[category].forEach(prod => {
         const card = document.createElement("div");
         card.className = "product-card";
+        
+        let specsHTML = "";
+        if (prod.specifikacije) {
+            specsHTML = `<ul class="specs">` + 
+                        Object.entries(prod.specifikacije).map(([key, val]) => `<li><strong>${key}:</strong> ${val}</li>`).join('') 
+                        + `</ul>`;
+        }
+
         card.innerHTML = `
             <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
             <h3>${prod.naziv}</h3>
             <p>${prod.opis || ''}</p>
             <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
-            <ul>
-                ${prod["badge-ovi"] ? prod["badge-ovi"].map(f => `<li>${f}</li>`).join('') : ''}
-            </ul>
+            <ul>${prod["badge-ovi"] ? prod["badge-ovi"].map(f => `<li>${f}</li>`).join('') : ''}</ul>
+            ${specsHTML}
             <a href="${prod.link || '#'}" target="_blank">Detaljnije</a>
             <button class="compare-btn">Uporedi</button>
         `;
@@ -124,12 +137,29 @@ function renderCompareTable() {
     headRow += "</tr>";
     tableHead.innerHTML = headRow;
 
-    const specs = ["Cijena", ...(new Set(selectedForCompare.flatMap(p => p["badge-ovi"] || [])))];
-    tableBody.innerHTML = specs.map(spec => {
+    const allSpecs = new Set(["Cijena"]);
+    selectedForCompare.forEach(p => {
+        (p["badge-ovi"] || []).forEach(f => allSpecs.add(f));
+        if (p.specifikacije) {
+            Object.keys(p.specifikacije).forEach(k => allSpecs.add(k));
+        }
+    });
+
+    tableBody.innerHTML = Array.from(allSpecs).map(spec => {
         let row = `<tr><td>${spec}</td>`;
         selectedForCompare.forEach(p => {
-            if (spec === "Cijena") row += `<td>${p.cijena || '-'}</td>`;
-            else row += `<td>${p["badge-ovi"] && p["badge-ovi"].includes(spec) ? "✔️" : "❌"}</td>`;
+            if (spec === "Cijena") {
+                row += `<td>${p.cijena || '-'}</td>`;
+            } 
+            else if (p["badge-ovi"] && p["badge-ovi"].includes(spec)) {
+                row += `<td>✔️</td>`;
+            }
+            else if (p.specifikacije && p.specifikacije[spec] !== undefined) {
+                row += `<td>${p.specifikacije[spec]}</td>`;
+            }
+            else {
+                row += `<td>❌</td>`;
+            }
         });
         row += "</tr>";
         return row;
@@ -154,12 +184,22 @@ function applyFilters() {
         .forEach(prod => {
             const card = document.createElement("div");
             card.className = "product-card";
+
+            let specsHTML = "";
+            if (prod.specifikacije) {
+                specsHTML = `<ul class="specs">` + 
+                            Object.entries(prod.specifikacije).map(([key, val]) => `<li><strong>${key}:</strong> ${val}</li>`).join('') 
+                            + `</ul>`;
+            }
+
             card.innerHTML = `
+                <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
                 <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
                 <h3>${prod.naziv}</h3>
                 <p>${prod.opis || ''}</p>
                 <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
                 <ul>${prod["badge-ovi"] ? prod["badge-ovi"].map(f => `<li>${f}</li>`).join('') : ''}</ul>
+                ${specsHTML}
                 <a href="${prod.link || '#'}" target="_blank">Detaljnije</a>
                 <button class="compare-btn">Uporedi</button>
             `;
