@@ -2,59 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import time
-import os
-from googletrans import Translator
-import re
-import asyncio
-
-async def async_translate(text, dest_lang):
-    """Asinhrona funkcija za prevođenje teksta."""
-    translator = Translator()
-    try:
-        translated_text = await translator.translate(text, dest=dest_lang)
-        return translated_text.text
-    except Exception as e:
-        print(f"Greška pri asinhronom prevođenju teksta '{text}': {e}")
-        return text
-
-def translate_data(data, dest_lang='hr'):
-    """
-    Rekurzivno prevodi tekstualne vrijednosti u rječniku ili listi.
-    """
-    if isinstance(data, dict):
-        new_data = {}
-        for key, value in data.items():
-            if isinstance(key, str):
-                try:
-                    if key == "specifikacije":
-                        translated_key = key
-                    else:
-                        translated_key = asyncio.run(async_translate(key, dest_lang))
-                except Exception as e:
-                    translated_key = key
-                    print(f"Greška pri prevođenju ključa '{key}': {e}")
-            else:
-                translated_key = key
-            new_data[translated_key] = translate_data(value, dest_lang)
-        return new_data
-    
-    elif isinstance(data, list):
-        return [translate_data(item, dest_lang) for item in data]
-    
-    elif isinstance(data, str):
-        technical_terms = ['aptX', 'Wi-Fi', 'DTS Play-Fi']
-        if re.search(r'\d', data) or any(s in data for s in ['€', '€', 'W', 'kg', 'Hz', '"', "'"]) or any(term in data for term in technical_terms):
-            return data
-            
-        try:
-            translated_text = asyncio.run(async_translate(data, dest_lang))
-            return translated_text
-        except Exception as e:
-            print(f"Greška pri prevođenju teksta '{data}': {e}")
-            return data
-    
-    else:
-        return data
 
 def get_product_details(product_url):
     """
@@ -71,9 +18,10 @@ def get_product_details(product_url):
     except requests.exceptions.RequestException as e:
         print(f"Greška pri preuzimanju detalja sa stranice {product_url}: {e}")
         return details
- 
+
     soup = BeautifulSoup(response.content, 'html.parser')
- 
+
+    # Pronalazi tabelu s karakteristikama
     feature_table = soup.find('div', class_='feature-chart__table')
     if feature_table:
         specs_dict = {}
@@ -99,7 +47,7 @@ def get_product_details(product_url):
                     specs_dict[heading] = value_text
         
         details['specifikacije'] = specs_dict
- 
+
     return details
 
 def get_all_product_data(base_url):
@@ -122,7 +70,7 @@ def get_all_product_data(base_url):
         except requests.exceptions.RequestException as e:
             print(f"Greška pri preuzimanju stranice {url}: {e}")
             break
- 
+
         soup = BeautifulSoup(response.content, 'html.parser')
         product_items = soup.find_all('product-card')
         
@@ -147,10 +95,10 @@ def get_all_product_data(base_url):
             product_link = 'https://argonaudio.com' + product_link_element['href'] if product_link_element and 'href' in product_link_element.attrs else 'N/A'
             
             badges = [badge.get_text(strip=True) for badge in item.find_all('span', class_='badge--primary')]
- 
+
             color_swatches = item.find_all('label', class_='color-swatch')
             colors = [swatch.find('span', class_='sr-only').get_text(strip=True).split(' (')[0].strip() for swatch in color_swatches if swatch.find('span')]
- 
+
             if product_link != 'N/A':
                 print(f"  > Preuzimanje detalja za: {title}")
                 details = get_product_details(product_link)
@@ -176,58 +124,46 @@ def get_all_product_data(base_url):
                 }
             
             all_products.append(product_info)
-            time.sleep(1)
+            time.sleep(1) # Pauza od 1 sekunde da se izbjegne blokada
         
         page_number += 1
     
     return all_products
- 
-def save_to_json(data, filename):
+
+def save_to_json(data, filename='argon_audio_products_all_categories.json'):
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
- 
-def load_from_json(filename):
-    with open(filename, 'r', encoding='utf-8') as f:
-        return json.load(f)
- 
+
 if __name__ == '__main__':
+    # Ažurirani rječnik s kategorijama.
     categories = {
-        "Speakers": 'https://argonaudio.com/collections/speakers',
-        "Amplifiers & Streaming": 'https://argonaudio.com/collections/amplifiers-streaming',
+        "Active Speakers": 'https://argonaudio.com/collections/active-speakers',
+        "Passive Speakers": 'https://argonaudio.com/collections/passive-speakers',
+        "Amplifiers": 'https://argonaudio.com/collections/amplifiers',
+        "Music Streamers": 'https://argonaudio.com/collections/music-streamers',
         "Turntables": 'https://argonaudio.com/collections/turntables',
         "Subwoofers": 'https://argonaudio.com/collections/subwoofers',
         "Headphones": 'https://argonaudio.com/collections/headphones',
-        "Accessories": 'https://argonaudio.com/collections/accessories'
+        "Cables": 'https://argonaudio.com/collections/cables',
+        "Speaker accessories": 'https://argonaudio.com/collections/speaker-accessories',
+        "Turntable Accessories": 'https://argonaudio.com/collections/turntable-accessories'
     }
- 
-    scraped_file = 'argon_audio_products_all_categories.json'
-    translated_file = 'argon_audio_products_all_categories_hr.json'
- 
-    if os.path.exists(scraped_file):
-        print(f"Datoteka '{scraped_file}' već postoji. Preuzimanje podataka se preskače.")
-        all_scraped_data = load_from_json(scraped_file)
-    else:
-        all_scraped_data = {}
-        for category_name, url in categories.items():
-            print(f"=====================================================")
-            print(f"Preuzimanje podataka za kategoriju: {category_name}")
-            print(f"=====================================================")
-            product_list = get_all_product_data(url)
-            if product_list:
-                all_scraped_data[category_name] = product_list
-            else:
-                print(f"Nijedan proizvod nije pronađen u kategoriji {category_name}. Preskakanje.")
-            time.sleep(5)
-        
-        if all_scraped_data:
-            save_to_json(all_scraped_data, scraped_file)
-            print(f'\nPodaci sačuvani u datoteci {scraped_file}')
+
+    all_scraped_data = {}
+
+    for category_name, url in categories.items():
+        print(f"=====================================================")
+        print(f"Preuzimanje podataka za kategoriju: {category_name}")
+        print(f"=====================================================")
+        product_list = get_all_product_data(url)
+        if product_list:
+            all_scraped_data[category_name] = product_list
         else:
-            print("Nijedan proizvod nije pronađen. Prekinut proces.")
- 
-    print("Skripta je uspješno učitala podatke i spremna je za prevođenje.")
+            print(f"Nijedan proizvod nije pronađen u kategoriji {category_name}. Preskakanje.")
+        time.sleep(5) # Veća pauza između kategorija
+
     if all_scraped_data:
-        print("\nPrevođenje podataka na hrvatski jezik...")
-        translated_data = translate_data(all_scraped_data)
-        save_to_json(translated_data, translated_file)
-        print(f'\nPrevedeni podaci sačuvani su u datoteci {translated_file}')
+        save_to_json(all_scraped_data)
+        print(f'\nPodaci o svim proizvodima sačuvani su u datoteci argon_audio_products_all_categories.json')
+    else:
+        print("Nijedan proizvod nije pronađen. Prekinut proces.")
