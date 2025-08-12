@@ -88,13 +88,14 @@ function renderProducts(category) {
         const card = document.createElement("div");
         card.className = "product-card";
         card.innerHTML = `
-            <img src="${prod.image || ''}" alt="${prod.name}">
-            <h3>${prod.name}</h3>
-            <p>${prod.shortDescription || ''}</p>
-            <p><strong>Cijena:</strong> ${prod.price || '-'}</p>
+            <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
+            <h3>${prod.naziv}</h3>
+            <p>${prod.opis || ''}</p>
+            <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
             <ul>
-                ${prod.features ? prod.features.map(f => `<li>${f}</li>`).join('') : ''}
+                ${prod["badge-ovi"] ? prod["badge-ovi"].map(f => `<li>${f}</li>`).join('') : ''}
             </ul>
+            <a href="${prod.link || '#'}" target="_blank">Detaljnije</a>
             <button class="compare-btn">Uporedi</button>
         `;
         card.querySelector(".compare-btn").onclick = () => addToCompare(prod);
@@ -103,7 +104,7 @@ function renderProducts(category) {
 }
 
 function addToCompare(product) {
-    if (selectedForCompare.find(p => p.name === product.name)) return;
+    if (selectedForCompare.find(p => p.naziv === product.naziv)) return;
     selectedForCompare.push(product);
     renderCompareTable();
 }
@@ -119,16 +120,16 @@ function renderCompareTable() {
     }
 
     let headRow = "<tr><th>Specifikacija</th>";
-    selectedForCompare.forEach(p => headRow += `<th>${p.name}</th>`);
+    selectedForCompare.forEach(p => headRow += `<th>${p.naziv}</th>`);
     headRow += "</tr>";
     tableHead.innerHTML = headRow;
 
-    const specs = ["Cijena", ...(new Set(selectedForCompare.flatMap(p => p.features || [])))];
+    const specs = ["Cijena", ...(new Set(selectedForCompare.flatMap(p => p["badge-ovi"] || [])))];
     tableBody.innerHTML = specs.map(spec => {
         let row = `<tr><td>${spec}</td>`;
         selectedForCompare.forEach(p => {
-            if (spec === "Cijena") row += `<td>${p.price || '-'}</td>`;
-            else row += `<td>${p.features && p.features.includes(spec) ? "✔️" : "❌"}</td>`;
+            if (spec === "Cijena") row += `<td>${p.cijena || '-'}</td>`;
+            else row += `<td>${p["badge-ovi"] && p["badge-ovi"].includes(spec) ? "✔️" : "❌"}</td>`;
         });
         row += "</tr>";
         return row;
@@ -145,20 +146,21 @@ function applyFilters() {
     list.innerHTML = "";
     allProducts[currentCategory]
         .filter(prod => 
-            prod.name.toLowerCase().includes(searchVal) &&
-            parseFloat(prod.price) >= minPrice &&
-            parseFloat(prod.price) <= maxPrice &&
-            (feature === "" || (prod.features && prod.features.includes(feature)))
+            prod.naziv.toLowerCase().includes(searchVal) &&
+            parseFloat(prod.cijena) >= minPrice &&
+            parseFloat(prod.cijena) <= maxPrice &&
+            (feature === "" || (prod["badge-ovi"] && prod["badge-ovi"].includes(feature)))
         )
         .forEach(prod => {
             const card = document.createElement("div");
             card.className = "product-card";
             card.innerHTML = `
-                <img src="${prod.image || ''}" alt="${prod.name}">
-                <h3>${prod.name}</h3>
-                <p>${prod.shortDescription || ''}</p>
-                <p><strong>Cijena:</strong> ${prod.price || '-'}</p>
-                <ul>${prod.features ? prod.features.map(f => `<li>${f}</li>`).join('') : ''}</ul>
+                <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
+                <h3>${prod.naziv}</h3>
+                <p>${prod.opis || ''}</p>
+                <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
+                <ul>${prod["badge-ovi"] ? prod["badge-ovi"].map(f => `<li>${f}</li>`).join('') : ''}</ul>
+                <a href="${prod.link || '#'}" target="_blank">Detaljnije</a>
                 <button class="compare-btn">Uporedi</button>
             `;
             card.querySelector(".compare-btn").onclick = () => addToCompare(prod);
