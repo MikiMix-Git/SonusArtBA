@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.12.4 (2025-08-13)
-- Popravljen problem gdje podaci za Marantz proizvode nisu bili prikazani zbog neusklađenih ključeva.
-- Ažurirana logika za mapiranje Marantz JSON podataka (`name`, `price`, `image`) na ključeve aplikacije (`naziv`, `cijena`, `slika_url`).
+v0.12.6 (2025-08-13)
+- Riješen problem s neispravnim URL-ovima slika za Marantz proizvode. Duplirani dio domene je uklonjen iz URL-a.
 -->
 <html lang="hr">
 <head>
@@ -13,7 +12,7 @@ v0.12.4 (2025-08-13)
 :root {
   --bg:#f4f4f4; --ink:#222; --ink-soft:#444; --ink-muted:#666; --card:#fff;
   --accent:#007acc; --accent-hover:#005c99; --ok:#155724; --ok-bg:#d4edda;
-  --bad:#721c24; --bad-bg:#f8d7da; --linea:#ccc; --soft:#eee;
+  --bad:#721c24; --bad-bg:#f8d7da; --line:#ccc; --soft:#eee;
 }
 * { box-sizing: border-box; }
 body { font-family: Arial, sans-serif; background: var(--bg); margin: 0; color: var(--ink); }
@@ -57,7 +56,7 @@ th { background: var(--soft); }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.12.4</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.12.6</span>
   </h1>
 </header>
 
@@ -104,7 +103,7 @@ th { background: var(--soft); }
 </section>
 
 <script>
-const APP_VERSION = "0.12.4";
+const APP_VERSION = "0.12.6";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 let allProducts = {};
@@ -159,17 +158,27 @@ Promise.all([
     Argon: argonData,
     Marantz: marantzData
   };
-  allItemsFlat = dedupProducts([
-    ...Object.values(argonData).flat().map(p => ({ ...p, brend: "Argon" })),
-    ...marantzData.map(p => ({
+
+  const processedMarantz = marantzData.map(p => {
+    let imageUrl = p.image;
+    // Provjera i ispravljanje dupliranog domena u URL-u slike
+    if (imageUrl && imageUrl.startsWith('https://www.marantz.comhttps://www.marantz.com')) {
+        imageUrl = imageUrl.replace('https://www.marantz.comhttps://www.marantz.com', 'https://www.marantz.com');
+    }
+    return {
       ...p,
       brend: "Marantz",
       naziv: p.name,
       cijena: p.price,
       opis: p.tagline,
-      slika_url: p.image,
+      slika_url: (imageUrl && imageUrl.trim() !== '') ? imageUrl : null,
       "badge-ovi": (p.features || []).map(f => f.title)
-    }))
+    };
+  });
+  
+  allItemsFlat = dedupProducts([
+    ...Object.values(argonData).flat().map(p => ({ ...p, brend: "Argon" })),
+    ...processedMarantz
   ]);
 
   renderCategoriesForBrand("ALL");
@@ -217,15 +226,21 @@ function sourceItems() {
     return (allProducts.Argon?.[cat] || []).map(p => ({ ...p, brend: "Argon" }));
   }
   if (brand === "Marantz") {
-    return allProducts.Marantz.map(p => ({
-      ...p,
-      brend: "Marantz",
-      naziv: p.name,
-      cijena: p.price,
-      opis: p.tagline,
-      slika_url: p.image,
-      "badge-ovi": (p.features || []).map(f => f.title)
-    }));
+    return allProducts.Marantz.map(p => {
+      let imageUrl = p.image;
+      if (imageUrl && imageUrl.startsWith('https://www.marantz.comhttps://www.marantz.com')) {
+          imageUrl = imageUrl.replace('https://www.marantz.comhttps://www.marantz.com', 'https://www.marantz.com');
+      }
+      return {
+        ...p,
+        brend: "Marantz",
+        naziv: p.name,
+        cijena: p.price,
+        opis: p.tagline,
+        slika_url: (imageUrl && imageUrl.trim() !== '') ? imageUrl : null,
+        "badge-ovi": (p.features || []).map(f => f.title)
+      };
+    });
   }
   return [];
 }
