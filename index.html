@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.11.0 (2025-08-12)
-- Dodan brojač rezultata iznad kataloga
-- Dugme “Uporedi” fiksirano na dno kartice (flex + margin-top:auto)
-- “Svi proizvodi” agregat sa dedupom i sort/filter podrškom
-
-v0.10.0
-- Uveden prikaz svih proizvoda iz svih kategorija + poređenje sa best/worst označavanjem
-
-v0.9.0
-- Inicijalna verzija kataloga (kategorije, značke/ocjene, cijene)
+v0.12.4 (2025-08-13)
+- Popravljen problem gdje podaci za Marantz proizvode nisu bili prikazani zbog neusklađenih ključeva.
+- Ažurirana logika za mapiranje Marantz JSON podataka (`name`, `price`, `image`) na ključeve aplikacije (`naziv`, `cijena`, `slika_url`).
 -->
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
-<title>Argon Audio Katalog</title>
+<title>Argon & Marantz Katalog</title>
 <style>
 :root {
   --bg:#f4f4f4; --ink:#222; --ink-soft:#444; --ink-muted:#666; --card:#fff;
   --accent:#007acc; --accent-hover:#005c99; --ok:#155724; --ok-bg:#d4edda;
-  --bad:#721c24; --bad-bg:#f8d7da; --line:#ccc; --soft:#eee;
+  --bad:#721c24; --bad-bg:#f8d7da; --linea:#ccc; --soft:#eee;
 }
 * { box-sizing: border-box; }
 body { font-family: Arial, sans-serif; background: var(--bg); margin: 0; color: var(--ink); }
@@ -36,11 +29,7 @@ nav button:hover { background: #999; }
 .filters button:hover { background: var(--accent-hover); }
 .catalog-header { padding: 0.5rem 1rem; font-weight: bold; background: var(--soft); }
 .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1rem; padding: 1rem; }
-.product-card { 
-  background: var(--card); border-radius: 6px; padding: 1rem; 
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-  display: flex; flex-direction: column;
-}
+.product-card { background: var(--card); border-radius: 6px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
 .product-card img { max-width: 100%; height: auto; border-radius: 4px; background: #fafafa; object-fit: cover; }
 .product-card h3 { margin: 0.6rem 0 0.2rem; font-size: 1.05rem; }
 .product-card p { margin: 0.2rem 0; }
@@ -67,14 +56,19 @@ th { background: var(--soft); }
 <body>
 
 <header>
-  <h1>Argon Audio – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.11.0</span>
+  <h1>Argon & Marantz – Katalog proizvoda 
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.12.4</span>
   </h1>
 </header>
 
 <div class="sticky-bar">
   <nav id="category-nav"></nav>
   <div class="filters">
+    <select id="brand-filter">
+      <option value="ALL">Svi brendovi</option>
+      <option value="Argon">Argon</option>
+      <option value="Marantz">Marantz</option>
+    </select>
     <input type="text" id="search" placeholder="Pretraga po nazivu...">
     <input type="number" id="min-price" placeholder="Min €">
     <input type="number" id="max-price" placeholder="Max €">
@@ -92,6 +86,7 @@ th { background: var(--soft); }
       <option value="rating-desc">Ocjena ↓</option>
       <option value="rating-asc">Ocjena ↑</option>
     </select>
+    <label><input type="checkbox" id="only-priced"> Samo sa cijenom</label>
     <button id="apply-btn">Primijeni filtere</button>
   </div>
 </div>
@@ -109,14 +104,14 @@ th { background: var(--soft); }
 </section>
 
 <script>
-const APP_VERSION = "0.11.0";
-const BUILD_DATE = "2025-08-12";
-const BUILD_NOTE = "Brojač rezultata + Uporedi na dnu";
-
-const RAW_JSON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
-const JSON_URL = `${RAW_JSON}?v=${APP_VERSION}`;
-
-let allProducts = {}, allItemsFlat = [], currentCategory = "ALL", selectedForCompare = [];
+const APP_VERSION = "0.12.4";
+const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
+const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
+let allProducts = {};
+let allItemsFlat = [];
+let currentBrand = "ALL";
+let currentCategory = "ALL";
+let selectedForCompare = [];
 
 function normalizePrice(val) {
   if (typeof val !== "string") return Number(val) || 0;
@@ -144,7 +139,7 @@ function renderBadges(badges = []) {
   }).join("");
 }
 function getRatingFromBadges(prod) {
-  const b = (prod["badge-ovi"] || []).find(x => /^\d+(\.\d+)?$/.test(String(x).trim()));
+  const b = (prod["badge-ovi"] || prod["bedz"] || []).find(x => /^\d+(\.\d+)?$/.test(String(x).trim()));
   return b ? parseFloat(b) : 0;
 }
 function dedupProducts(items) {
@@ -156,45 +151,83 @@ function dedupProducts(items) {
   return Array.from(map.values());
 }
 
-// Inicijalno učitavanje
-fetch(JSON_URL)
-  .then(res => res.json())
-  .then(data => {
-    allProducts = data || {};
-    const categories = Object.keys(allProducts);
-    allItemsFlat = dedupProducts(Object.values(allProducts).flat());
+Promise.all([
+  fetch(RAW_ARGON).then(r => r.json()),
+  fetch(RAW_MARANTZ).then(r => r.json())
+]).then(([argonData, marantzData]) => {
+  allProducts = {
+    Argon: argonData,
+    Marantz: marantzData
+  };
+  allItemsFlat = dedupProducts([
+    ...Object.values(argonData).flat().map(p => ({ ...p, brend: "Argon" })),
+    ...marantzData.map(p => ({
+      ...p,
+      brend: "Marantz",
+      naziv: p.name,
+      cijena: p.price,
+      opis: p.tagline,
+      slika_url: p.image,
+      "badge-ovi": (p.features || []).map(f => f.title)
+    }))
+  ]);
 
-    renderCategories(["ALL", ...categories]);
-    currentCategory = "ALL";
-    highlightActiveCategory();
-    renderList(applySort(allItemsFlat));
+  renderCategoriesForBrand("ALL");
+  highlightActiveCategory();
+  applyFilters();
+  document.getElementById("version-badge").textContent = `v${APP_VERSION}`;
+  document.title = `Katalog v${APP_VERSION}`;
+});
 
-    // verzija u badgeu i naslovu
-    document.getElementById("version-badge").textContent = `v${APP_VERSION}`;
-    document.title = `Argon Katalog v${APP_VERSION}`;
-  });
-
-function renderCategories(cats) {
-  const nav = document.getElementById("category-nav");
-  nav.innerHTML = "";
-  cats.forEach(cat => {
-    const btn = document.createElement("button");
-    btn.textContent = cat === "ALL" ? `Svi proizvodi (${allItemsFlat.length})` : cat;
-    btn.dataset.cat = cat;
-    btn.onclick = () => {
-      currentCategory = cat;
-      highlightActiveCategory();
-      applyFilters();
-    };
-    nav.appendChild(btn);
-  });
+function renderCategoriesForBrand(brand) {
+    const nav = document.getElementById("category-nav");
+    nav.innerHTML = "";
+    let categories = ["ALL"];
+    if (brand === "Argon") {
+        categories = ["ALL", ...Object.keys(allProducts.Argon)];
+    }
+    categories.forEach(cat => {
+        const btn = document.createElement("button");
+        btn.textContent = cat === "ALL" ? `Sve kategorije` : cat;
+        btn.dataset.cat = cat;
+        btn.onclick = () => {
+            currentCategory = cat;
+            highlightActiveCategory();
+            applyFilters();
+        };
+        nav.appendChild(btn);
+    });
 }
+
 function highlightActiveCategory() {
   document.querySelectorAll("#category-nav button")
     .forEach(b => b.classList.toggle("active", b.dataset.cat === currentCategory));
 }
+
 function sourceItems() {
-  return currentCategory === "ALL" ? allItemsFlat : (allProducts[currentCategory] || []);
+  const brand = currentBrand;
+  const cat = currentCategory;
+  if (brand === "ALL") {
+    return allItemsFlat;
+  }
+  if (brand === "Argon") {
+    if (cat === "ALL") {
+      return Object.values(allProducts.Argon).flat().map(p => ({ ...p, brend: "Argon" }));
+    }
+    return (allProducts.Argon?.[cat] || []).map(p => ({ ...p, brend: "Argon" }));
+  }
+  if (brand === "Marantz") {
+    return allProducts.Marantz.map(p => ({
+      ...p,
+      brend: "Marantz",
+      naziv: p.name,
+      cijena: p.price,
+      opis: p.tagline,
+      slika_url: p.image,
+      "badge-ovi": (p.features || []).map(f => f.title)
+    }));
+  }
+  return [];
 }
 function applySort(items) {
   switch (document.getElementById("sort-select").value) {
@@ -209,28 +242,30 @@ function renderList(items) {
   const list = document.getElementById("product-list");
   list.innerHTML = "";
   document.getElementById("catalog-count").textContent = 
-    `${currentCategory === "ALL" ? "Svi proizvodi" : currentCategory} – ${items.length} artikala`;
+    `${currentBrand === "ALL" ? "Svi brendovi" : currentBrand} – ${currentCategory === "ALL" ? "sve kategorije" : currentCategory} – ${items.length} artikala`;
 
   items.forEach(prod => {
     const card = document.createElement("div");
     card.className = "product-card";
 
+    const cijena = (prod.cijena && prod.cijena !== "N/A") ? prod.cijena : "-";
+    const opis = prod.opis || "";
+    const slika = prod.slika_url || "https://via.placeholder.com/300x200?text=Bez+slike";
+    const badgeList = prod["badge-ovi"] || prod["bedz"] || [];
     const specsHTML = prod.specifikacije
       ? `<ul class="specs">${Object.entries(prod.specifikacije)
           .map(([k,v])=>`<li><strong>${k}:</strong> ${v}</li>`).join("")}</ul>`
       : "";
-
-    const badgesHTML = (prod["badge-ovi"] && prod["badge-ovi"].length)
-      ? `<ul class="badges">${renderBadges(prod["badge-ovi"])}</ul>`
+    const badgesHTML = badgeList.length
+      ? `<ul class="badges">${renderBadges(badgeList)}</ul>`
       : "";
-
     const isAdded = selectedForCompare.some(p => p.naziv === prod.naziv);
 
     card.innerHTML = `
-      <img src="${prod.slika_url || ''}" alt="${prod.naziv}">
+      <img src="${slika}" alt="${prod.naziv}">
       <h3>${prod.naziv}</h3>
-      <p>${prod.opis || ''}</p>
-      <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
+      <p>${opis}</p>
+      <p><strong>Cijena:</strong> ${cijena}</p>
       ${badgesHTML}
       ${specsHTML}
       <a href="${prod.link || '#'}" target="_blank" rel="noopener">Detaljnije</a>
@@ -251,38 +286,54 @@ function renderList(items) {
     list.appendChild(card);
   });
 }
+
 function applyFilters() {
+  currentBrand = document.getElementById("brand-filter").value;
   const searchVal = document.getElementById("search").value.toLowerCase();
   const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
   const maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
   const feature = document.getElementById("feature-filter").value.trim().toLowerCase();
+  const onlyPriced = document.getElementById("only-priced").checked;
 
   let items = sourceItems().filter(p => {
     const nameMatch = (p.naziv || "").toLowerCase().includes(searchVal);
     const priceVal = normalizePrice(p.cijena);
     const priceMatch = priceVal >= minPrice && priceVal <= maxPrice;
+    const hasPrice = p.cijena && p.cijena !== "N/A";
 
-    const badges = (p["badge-ovi"] || []).map(b => String(b).toLowerCase());
+    const badges = (p["badge-ovi"] || p["bedz"] || []).map(b => String(b).toLowerCase());
     const specsVals = p.specifikacije ? Object.values(p.specifikacije).map(v => String(v).toLowerCase()) : [];
 
     const featureMatch = !feature || badges.some(b => b.includes(feature)) || specsVals.some(v => v.includes(feature));
-    return nameMatch && priceMatch && featureMatch;
+    return nameMatch && priceMatch && featureMatch && (!onlyPriced || hasPrice);
   });
 
   items = applySort(items);
   renderList(items);
 }
+
 document.getElementById("apply-btn").addEventListener("click", applyFilters);
 document.getElementById("sort-select").addEventListener("change", applyFilters);
+document.getElementById("feature-filter").addEventListener("change", applyFilters);
+document.getElementById("only-priced").addEventListener("change", applyFilters);
+
+document.getElementById("brand-filter").addEventListener("change", (e) => {
+    currentBrand = e.target.value;
+    currentCategory = "ALL";
+    renderCategoriesForBrand(currentBrand);
+    highlightActiveCategory();
+    applyFilters();
+});
+
 ["search", "min-price", "max-price"].forEach(id => {
   document.getElementById(id).addEventListener("keydown", e => { if (e.key === "Enter") applyFilters(); });
 });
-document.getElementById("feature-filter").addEventListener("change", applyFilters);
 
 function resetCompare() {
   selectedForCompare = [];
   renderCompareTable();
 }
+
 function renderCompareTable() {
   const tableHead = document.querySelector("#compare-table thead");
   const tableBody = document.querySelector("#compare-table tbody");
@@ -297,7 +348,8 @@ function renderCompareTable() {
 
   const allSpecs = new Set(["Cijena"]);
   selectedForCompare.forEach(p => {
-    (p["badge-ovi"] || []).forEach(f => { if (!/^\d+(\.\d+)?$/.test(String(f).trim())) allSpecs.add(f); });
+    const badges = p["badge-ovi"] || p["bedz"] || [];
+    badges.forEach(f => { if (!/^\d+(\.\d+)?$/.test(String(f).trim())) allSpecs.add(f); });
     if (p.specifikacije) Object.keys(p.specifikacije).forEach(k => allSpecs.add(k));
   });
 
@@ -316,9 +368,13 @@ function renderCompareTable() {
     selectedForCompare.forEach((p, idx) => {
       let cellValue = "";
       if (spec === "Cijena") cellValue = p.cijena || "-";
-      else if ((p["badge-ovi"] || []).some(b => String(b).toLowerCase() === String(spec).toLowerCase())) cellValue = `<span class="yes">✔</span>`;
-      else if (p.specifikacije && p.specifikacije[spec] !== undefined) cellValue = p.specifikacije[spec];
-      else cellValue = `<span class="no">✘</span>`;
+      else if ((p["badge-ovi"] || p["bedz"] || []).some(b => String(b).toLowerCase() === String(spec).toLowerCase())) {
+        cellValue = `<span class="yes">✔</span>`;
+      } else if (p.specifikacije && p.specifikacije[spec] !== undefined) {
+        cellValue = p.specifikacije[spec];
+      } else {
+        cellValue = `<span class="no">✘</span>`;
+      }
 
       if (hasNumeric && values[idx] !== null && !isNaN(values[idx]) && maxVal !== minVal) {
         const isBest = spec === "Cijena" ? (values[idx] === minVal) : (values[idx] === maxVal);
@@ -327,7 +383,7 @@ function renderCompareTable() {
         else if (isWorst) row += `<td class="worst">${cellValue}</td>`;
         else row += `<td>${cellValue}</td>`;
       } else {
-                row += `<td>${cellValue}</td>`;
+        row += `<td>${cellValue}</td>`;
       }
     });
 
