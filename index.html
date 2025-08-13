@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.12.6 (2025-08-13)
-- Riješen problem s neispravnim URL-ovima slika za Marantz proizvode. Duplirani dio domene je uklonjen iz URL-a.
+v0.13.7 (2025-08-13)
+- Ispravljeno: Svojstvo 'link' se više ne prikazuje kao "Id:" na kartici proizvoda.
+- Dodano svojstvo 'link' na listu ključeva koji se ignoriraju tokom renderiranja.
 -->
 <html lang="hr">
 <head>
@@ -32,20 +33,11 @@ nav button:hover { background: #999; }
 .product-card img { max-width: 100%; height: auto; border-radius: 4px; background: #fafafa; object-fit: cover; }
 .product-card h3 { margin: 0.6rem 0 0.2rem; font-size: 1.05rem; }
 .product-card p { margin: 0.2rem 0; }
-.badges, .specs { font-size: 0.92em; margin-top: 0.5rem; padding-left: 1.1rem; }
-.badges li, .specs li { margin: 0.15rem 0; }
-.compare-btn, .reset-btn { padding: 0.5rem; background: var(--accent); color: white; border: none; cursor: pointer; border-radius: 4px; }
-.compare-btn:hover, .reset-btn:hover { background: var(--accent-hover); }
-.compare-btn.added { background: orange; }
-.product-card .compare-btn { margin-top: auto; }
-#compare-section { background: var(--card); padding: 1rem; margin: 1rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow-x: auto; }
-table { border-collapse: collapse; width: 100%; }
-th, td { border: 1px solid var(--line); padding: 0.5rem; text-align: center; white-space: nowrap; }
-th { background: var(--soft); }
-.best { background-color: var(--ok-bg); color: var(--ok); font-weight: bold; }
-.worst { background-color: var(--bad-bg); color: var(--bad); font-weight: bold; }
-.yes { color: green; font-weight: bold; }
-.no { color: red; font-weight: bold; }
+.badges { font-size: 0.92em; margin-top: 0.5rem; padding-left: 1.1rem; }
+.badges li { margin: 0.15rem 0; }
+.specs dl { margin: 0; padding: 0; }
+.specs dt { font-weight: bold; margin-top: 0.5rem; }
+.specs dd { margin-left: 1em; }
 @media (max-width: 600px) {
   .filters { flex-direction: column; }
   nav { flex-direction: column; }
@@ -56,7 +48,7 @@ th { background: var(--soft); }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.12.6</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.13.7</span>
   </h1>
 </header>
 
@@ -93,24 +85,14 @@ th { background: var(--soft); }
 <div class="catalog-header" id="catalog-count"></div>
 <section class="catalog" id="product-list"></section>
 
-<section id="compare-section">
-  <h2>Upoređivanje proizvoda</h2>
-  <button class="reset-btn" onclick="resetCompare()">Resetuj poređenje</button>
-  <table id="compare-table">
-    <thead></thead>
-    <tbody></tbody>
-  </table>
-</section>
-
 <script>
-const APP_VERSION = "0.12.6";
+const APP_VERSION = "0.13.7";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 let allProducts = {};
 let allItemsFlat = [];
 let currentBrand = "ALL";
 let currentCategory = "ALL";
-let selectedForCompare = [];
 
 function normalizePrice(val) {
   if (typeof val !== "string") return Number(val) || 0;
@@ -121,11 +103,6 @@ function normalizePrice(val) {
   if (s.includes(".") && s.includes(",")) s = s.replace(/\./g, "").replace(",", ".");
   else if (s.includes(",")) s = s.replace(",", ".");
   return parseFloat(s) || 0;
-}
-function parseNumeric(val) {
-  if (val == null) return null;
-  const m = String(val).replace(",", ".").match(/-?\d+(\.\d+)?/);
-  return m ? parseFloat(m[0]) : null;
 }
 function renderBadges(badges = []) {
   return badges.map(b => {
@@ -263,41 +240,43 @@ function renderList(items) {
     const card = document.createElement("div");
     card.className = "product-card";
 
-    const cijena = (prod.cijena && prod.cijena !== "N/A") ? prod.cijena : "-";
-    const opis = prod.opis || "";
-    const slika = prod.slika_url || "https://via.placeholder.com/300x200?text=Bez+slike";
-    const badgeList = prod["badge-ovi"] || prod["bedz"] || [];
-    const specsHTML = prod.specifikacije
-      ? `<ul class="specs">${Object.entries(prod.specifikacije)
-          .map(([k,v])=>`<li><strong>${k}:</strong> ${v}</li>`).join("")}</ul>`
-      : "";
-    const badgesHTML = badgeList.length
-      ? `<ul class="badges">${renderBadges(badgeList)}</ul>`
-      : "";
-    const isAdded = selectedForCompare.some(p => p.naziv === prod.naziv);
-
-    card.innerHTML = `
-      <img src="${slika}" alt="${prod.naziv}">
-      <h3>${prod.naziv}</h3>
-      <p>${opis}</p>
-      <p><strong>Cijena:</strong> ${cijena}</p>
-      ${badgesHTML}
-      ${specsHTML}
-      <a href="${prod.link || '#'}" target="_blank" rel="noopener">Detaljnije</a>
-      <button class="compare-btn ${isAdded ? 'added' : ''}">
-        ${isAdded ? 'Ukloni iz poređenja' : 'Uporedi'}
-      </button>
+    let cardContent = `
+      <img src="${prod.slika_url || "https://via.placeholder.com/300x200?text=Bez+slike"}" alt="${prod.naziv}">
+      <h3>${prod.naziv || 'Nepoznat naziv'}</h3>
+      <p>${prod.opis || prod.tagline || ''}</p>
+      <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
+      <div class="specs">
     `;
-    card.querySelector(".compare-btn").onclick = () => {
-      if (isAdded) {
-        selectedForCompare = selectedForCompare.filter(p => p.naziv !== prod.naziv);
-      } else {
-        selectedForCompare.push(prod);
-      }
-      applyFilters();
-      renderCompareTable();
-    };
 
+    for (const key in prod) {
+      if (prod.hasOwnProperty(key)) {
+        if (key === "slika_url" || key === "naziv" || key === "opis" || key === "tagline" || key === "cijena" || key === "bedz" || key === "badge-ovi" || key === "link" || key === "image" || key === "name" || key === "price" || key === "features" || key === "brend" || key === "id") {
+          // Ovi ključevi su već obrađeni ili se ne prikazuju.
+          continue;
+        }
+
+        const value = prod[key];
+        if (typeof value === 'object' && value !== null) {
+          if (key === "specifikacije") {
+            cardContent += `<h4>Specifikacije</h4><dl>`;
+            for (const specKey in value) {
+              cardContent += `<dt>${specKey}</dt><dd>${value[specKey]}</dd>`;
+            }
+            cardContent += `</dl>`;
+          }
+        } else {
+          cardContent += `<h4>${key.charAt(0).toUpperCase() + key.slice(1)}:</h4><p>${value}</p>`;
+        }
+      }
+    }
+    
+    const badgeList = prod["badge-ovi"] || prod["bedz"] || [];
+    if (badgeList.length) {
+      cardContent += `<h4>Karakteristike</h4><ul class="badges">${renderBadges(badgeList)}</ul>`;
+    }
+
+    cardContent += `</div>`;
+    card.innerHTML = cardContent;
     list.appendChild(card);
   });
 }
@@ -343,69 +322,6 @@ document.getElementById("brand-filter").addEventListener("change", (e) => {
 ["search", "min-price", "max-price"].forEach(id => {
   document.getElementById(id).addEventListener("keydown", e => { if (e.key === "Enter") applyFilters(); });
 });
-
-function resetCompare() {
-  selectedForCompare = [];
-  renderCompareTable();
-}
-
-function renderCompareTable() {
-  const tableHead = document.querySelector("#compare-table thead");
-  const tableBody = document.querySelector("#compare-table tbody");
-  tableHead.innerHTML = "";
-  tableBody.innerHTML = "";
-  if (selectedForCompare.length === 0) return;
-
-  let headRow = "<tr><th>Specifikacija</th>";
-  selectedForCompare.forEach(p => headRow += `<th>${p.naziv}</th>`);
-  headRow += "</tr>";
-  tableHead.innerHTML = headRow;
-
-  const allSpecs = new Set(["Cijena"]);
-  selectedForCompare.forEach(p => {
-    const badges = p["badge-ovi"] || p["bedz"] || [];
-    badges.forEach(f => { if (!/^\d+(\.\d+)?$/.test(String(f).trim())) allSpecs.add(f); });
-    if (p.specifikacije) Object.keys(p.specifikacije).forEach(k => allSpecs.add(k));
-  });
-
-  tableBody.innerHTML = Array.from(allSpecs).map(spec => {
-    let row = `<tr><td>${spec}</td>`;
-    const values = selectedForCompare.map(p => {
-      if (spec === "Cijena") return normalizePrice(p.cijena);
-      if (p.specifikacije && p.specifikacije[spec] !== undefined) return parseNumeric(p.specifikacije[spec]);
-      return null;
-    });
-    const numeric = values.filter(v => v !== null && !isNaN(v));
-    const hasNumeric = numeric.length > 0;
-    const maxVal = hasNumeric ? Math.max(...numeric) : null;
-    const minVal = hasNumeric ? Math.min(...numeric) : null;
-
-    selectedForCompare.forEach((p, idx) => {
-      let cellValue = "";
-      if (spec === "Cijena") cellValue = p.cijena || "-";
-      else if ((p["badge-ovi"] || p["bedz"] || []).some(b => String(b).toLowerCase() === String(spec).toLowerCase())) {
-        cellValue = `<span class="yes">✔</span>`;
-      } else if (p.specifikacije && p.specifikacije[spec] !== undefined) {
-        cellValue = p.specifikacije[spec];
-      } else {
-        cellValue = `<span class="no">✘</span>`;
-      }
-
-      if (hasNumeric && values[idx] !== null && !isNaN(values[idx]) && maxVal !== minVal) {
-        const isBest = spec === "Cijena" ? (values[idx] === minVal) : (values[idx] === maxVal);
-        const isWorst = spec === "Cijena" ? (values[idx] === maxVal) : (values[idx] === minVal);
-        if (isBest) row += `<td class="best">${cellValue}</td>`;
-        else if (isWorst) row += `<td class="worst">${cellValue}</td>`;
-        else row += `<td>${cellValue}</td>`;
-      } else {
-        row += `<td>${cellValue}</td>`;
-      }
-    });
-
-    row += `</tr>`;
-    return row;
-  }).join("");
-}
 </script>
 
 </body>
