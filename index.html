@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.13.7 (2025-08-13)
-- Ispravljeno: Svojstvo 'link' se više ne prikazuje kao "Id:" na kartici proizvoda.
-- Dodano svojstvo 'link' na listu ključeva koji se ignoriraju tokom renderiranja.
+v0.15.1 (2025-08-13)
+- Ispravljeno: Ključevi 'id' i 'categories' se više ne prikazuju u sekciji "Ostali podaci".
 -->
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
-<title>Argon & Marantz Katalog</title>
+<title>Argon & Marantz Katalog - Svi podaci</title>
 <style>
 :root {
   --bg:#f4f4f4; --ink:#222; --ink-soft:#444; --ink-muted:#666; --card:#fff;
@@ -28,16 +27,38 @@ nav button:hover { background: #999; }
 .filters button { background: var(--accent); color: #fff; cursor: pointer; }
 .filters button:hover { background: var(--accent-hover); }
 .catalog-header { padding: 0.5rem 1rem; font-weight: bold; background: var(--soft); }
-.catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1rem; padding: 1rem; }
+.catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; padding: 1rem; }
 .product-card { background: var(--card); border-radius: 6px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
-.product-card img { max-width: 100%; height: auto; border-radius: 4px; background: #fafafa; object-fit: cover; }
-.product-card h3 { margin: 0.6rem 0 0.2rem; font-size: 1.05rem; }
+.product-card img { max-width: 100%; height: auto; border-radius: 4px; background: #fafafa; object-fit: cover; margin-bottom: 1rem; }
+.product-card h3 { margin: 0.6rem 0 0.2rem; font-size: 1.1rem; }
 .product-card p { margin: 0.2rem 0; }
-.badges { font-size: 0.92em; margin-top: 0.5rem; padding-left: 1.1rem; }
-.badges li { margin: 0.15rem 0; }
-.specs dl { margin: 0; padding: 0; }
-.specs dt { font-weight: bold; margin-top: 0.5rem; }
-.specs dd { margin-left: 1em; }
+.product-card h4 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.3rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+.link-button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 0.8rem;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+.link-button:hover { background: var(--accent-hover); }
+.features-list, .specs-list { padding-left: 0; list-style: none; }
+.features-list li { margin-bottom: 0.5rem; }
+.specs-list dt { font-weight: bold; color: var(--ink-muted); margin-top: 0.6rem; }
+.specs-list dd { margin-left: 1em; margin-bottom: 0.2rem; word-wrap: break-word; }
+.specs pre { white-space: pre-wrap; word-break: break-all; background: #f0f0f0; padding: 5px; border-radius: 3px; font-size: 0.9em; }
 @media (max-width: 600px) {
   .filters { flex-direction: column; }
   nav { flex-direction: column; }
@@ -48,7 +69,7 @@ nav button:hover { background: #999; }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.13.7</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.15.1</span>
   </h1>
 </header>
 
@@ -86,7 +107,7 @@ nav button:hover { background: #999; }
 <section class="catalog" id="product-list"></section>
 
 <script>
-const APP_VERSION = "0.13.7";
+const APP_VERSION = "0.15.1";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 let allProducts = {};
@@ -104,24 +125,22 @@ function normalizePrice(val) {
   else if (s.includes(",")) s = s.replace(",", ".");
   return parseFloat(s) || 0;
 }
-function renderBadges(badges = []) {
-  return badges.map(b => {
-    const t = String(b).trim();
-    if (/^\d+(\.\d+)?$/.test(t) && parseFloat(t) <= 5) {
-      const rating = parseFloat(t), full = Math.floor(rating), half = (rating % 1) >= 0.5 ? 1 : 0, empty = 5 - full - half;
-      return `<li title="Ocjena ${rating}">${"★".repeat(full) + (half ? "☆" : "") + "☆".repeat(empty)} (${rating})</li>`;
-    }
-    return `<li>${b}</li>`;
-  }).join("");
-}
 function getRatingFromBadges(prod) {
-  const b = (prod["badge-ovi"] || prod["bedz"] || []).find(x => /^\d+(\.\d+)?$/.test(String(x).trim()));
-  return b ? parseFloat(b) : 0;
+  const badges = prod["badge-ovi"] || prod["bedz"] || prod["features"] || [];
+  const ratingBadge = badges.find(b => {
+      const val = typeof b === 'object' ? b.title : b;
+      return /^\d+(\.\d+)?$/.test(String(val).trim());
+  });
+  if (ratingBadge) {
+      const val = typeof ratingBadge === 'object' ? ratingBadge.title : ratingBadge;
+      return parseFloat(val);
+  }
+  return 0;
 }
 function dedupProducts(items) {
   const map = new Map();
   items.forEach(p => {
-    const key = `${p.naziv || ""}|${p.link || ""}`;
+    const key = `${p.naziv || p.name || ""}|${p.link || ""}`;
     if (!map.has(key)) map.set(key, p);
   });
   return Array.from(map.values());
@@ -138,7 +157,6 @@ Promise.all([
 
   const processedMarantz = marantzData.map(p => {
     let imageUrl = p.image;
-    // Provjera i ispravljanje dupliranog domena u URL-u slike
     if (imageUrl && imageUrl.startsWith('https://www.marantz.comhttps://www.marantz.com')) {
         imageUrl = imageUrl.replace('https://www.marantz.comhttps://www.marantz.com', 'https://www.marantz.com');
     }
@@ -149,7 +167,6 @@ Promise.all([
       cijena: p.price,
       opis: p.tagline,
       slika_url: (imageUrl && imageUrl.trim() !== '') ? imageUrl : null,
-      "badge-ovi": (p.features || []).map(f => f.title)
     };
   });
   
@@ -215,7 +232,6 @@ function sourceItems() {
         cijena: p.price,
         opis: p.tagline,
         slika_url: (imageUrl && imageUrl.trim() !== '') ? imageUrl : null,
-        "badge-ovi": (p.features || []).map(f => f.title)
       };
     });
   }
@@ -223,13 +239,14 @@ function sourceItems() {
 }
 function applySort(items) {
   switch (document.getElementById("sort-select").value) {
-    case "price-asc":  return items.slice().sort((a,b)=> normalizePrice(a.cijena) - normalizePrice(b.cijena));
-    case "price-desc": return items.slice().sort((a,b)=> normalizePrice(b.cijena) - normalizePrice(a.cijena));
+    case "price-asc":  return items.slice().sort((a,b)=> normalizePrice(a.cijena || a.price) - normalizePrice(b.cijena || b.price));
+    case "price-desc": return items.slice().sort((a,b)=> normalizePrice(b.cijena || b.price) - normalizePrice(a.cijena || a.price));
     case "rating-desc":return items.slice().sort((a,b)=> getRatingFromBadges(b) - getRatingFromBadges(a));
     case "rating-asc": return items.slice().sort((a,b)=> getRatingFromBadges(a) - getRatingFromBadges(b));
     default: return items;
   }
 }
+
 function renderList(items) {
   const list = document.getElementById("product-list");
   list.innerHTML = "";
@@ -240,42 +257,66 @@ function renderList(items) {
     const card = document.createElement("div");
     card.className = "product-card";
 
-    let cardContent = `
-      <img src="${prod.slika_url || "https://via.placeholder.com/300x200?text=Bez+slike"}" alt="${prod.naziv}">
-      <h3>${prod.naziv || 'Nepoznat naziv'}</h3>
-      <p>${prod.opis || prod.tagline || ''}</p>
-      <p><strong>Cijena:</strong> ${prod.cijena || '-'}</p>
-      <div class="specs">
-    `;
+    const processedKeys = new Set(['slika_url', 'image', 'naziv', 'name', 'opis', 'tagline', 'description', 'cijena', 'price', 'link', 'specifications', 'features', 'badge-ovi', 'bedz', 'brend', 'id', 'categories']);
+    let cardContent = '';
 
-    for (const key in prod) {
-      if (prod.hasOwnProperty(key)) {
-        if (key === "slika_url" || key === "naziv" || key === "opis" || key === "tagline" || key === "cijena" || key === "bedz" || key === "badge-ovi" || key === "link" || key === "image" || key === "name" || key === "price" || key === "features" || key === "brend" || key === "id") {
-          // Ovi ključevi su već obrađeni ili se ne prikazuju.
-          continue;
-        }
-
-        const value = prod[key];
-        if (typeof value === 'object' && value !== null) {
-          if (key === "specifikacije") {
-            cardContent += `<h4>Specifikacije</h4><dl>`;
-            for (const specKey in value) {
-              cardContent += `<dt>${specKey}</dt><dd>${value[specKey]}</dd>`;
-            }
-            cardContent += `</dl>`;
-          }
-        } else {
-          cardContent += `<h4>${key.charAt(0).toUpperCase() + key.slice(1)}:</h4><p>${value}</p>`;
-        }
-      }
-    }
+    const imageUrl = prod.slika_url || prod.image;
+    cardContent += `<img src="${imageUrl || 'https://via.placeholder.com/300x200?text=Bez+slike'}" alt="Slika za ${prod.naziv || prod.name}">`;
+    cardContent += `<h3>${prod.naziv || prod.name || 'Nepoznat naziv'}</h3>`;
+    cardContent += `<p>${prod.opis || prod.tagline || prod.description || ''}</p>`;
     
-    const badgeList = prod["badge-ovi"] || prod["bedz"] || [];
-    if (badgeList.length) {
-      cardContent += `<h4>Karakteristike</h4><ul class="badges">${renderBadges(badgeList)}</ul>`;
+    const price = prod.cijena || prod.price;
+    const normalizedPrice = normalizePrice(price);
+    cardContent += `<p><strong>Cijena:</strong> ${price ? (normalizedPrice > 0 ? normalizedPrice.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }) : price) : '-'}</p>`;
+
+    if (prod.link) {
+        const baseUrl = prod.link.startsWith('/') ? 'https://sonusart.ba' : '';
+        cardContent += `<a href="${baseUrl}${prod.link}" target="_blank" rel="noopener noreferrer" class="link-button">Pogledaj proizvod</a>`;
     }
 
-    cardContent += `</div>`;
+    const features = prod.features || prod['badge-ovi'] || prod['bedz'];
+    if (features && features.length > 0) {
+        cardContent += `<h4>Karakteristike</h4><ul class="features-list">`;
+        features.forEach(feature => {
+            if (typeof feature === 'object' && feature.title) {
+                cardContent += `<li><strong>${feature.title}:</strong> ${feature.description}</li>`;
+            } else {
+                cardContent += `<li>${feature}</li>`;
+            }
+        });
+        cardContent += `</ul>`;
+    }
+
+    if (prod.specifications && typeof prod.specifications === 'object') {
+        cardContent += `<h4>Specifikacije</h4><dl class="specs-list">`;
+        for (const specKey in prod.specifications) {
+            cardContent += `<dt>${specKey}</dt><dd>${prod.specifications[specKey]}</dd>`;
+        }
+        cardContent += `</dl>`;
+    }
+
+    const otherDataContainer = document.createElement('div');
+    let hasOtherData = false;
+    let otherDataContent = '<dl class="specs-list">';
+    for (const key in prod) {
+        if (!processedKeys.has(key) && Object.hasOwnProperty.call(prod, key)) {
+            hasOtherData = true;
+            otherDataContent += `<dt>${key}</dt><dd>`;
+            const value = prod[key];
+            if (typeof value === 'object' && value !== null) {
+                otherDataContent += `<pre>${JSON.stringify(value, null, 2)}</pre>`;
+            } else {
+                otherDataContent += `${value === null || value === undefined ? 'N/A' : value}`;
+            }
+            otherDataContent += `</dd>`;
+        }
+    }
+    otherDataContent += '</dl>';
+
+    if (hasOtherData) {
+        cardContent += `<h4>Ostali podaci</h4>` + otherDataContent;
+    }
+
     card.innerHTML = cardContent;
     list.appendChild(card);
   });
@@ -290,15 +331,14 @@ function applyFilters() {
   const onlyPriced = document.getElementById("only-priced").checked;
 
   let items = sourceItems().filter(p => {
-    const nameMatch = (p.naziv || "").toLowerCase().includes(searchVal);
-    const priceVal = normalizePrice(p.cijena);
+    const nameMatch = (p.naziv || p.name || "").toLowerCase().includes(searchVal);
+    const priceVal = normalizePrice(p.cijena || p.price);
     const priceMatch = priceVal >= minPrice && priceVal <= maxPrice;
-    const hasPrice = p.cijena && p.cijena !== "N/A";
+    const hasPrice = (p.cijena || p.price) && (p.cijena || p.price) !== "N/A";
 
-    const badges = (p["badge-ovi"] || p["bedz"] || []).map(b => String(b).toLowerCase());
-    const specsVals = p.specifikacije ? Object.values(p.specifikacije).map(v => String(v).toLowerCase()) : [];
+    const allText = JSON.stringify(p).toLowerCase();
+    const featureMatch = !feature || allText.includes(feature);
 
-    const featureMatch = !feature || badges.some(b => b.includes(feature)) || specsVals.some(v => v.includes(feature));
     return nameMatch && priceMatch && featureMatch && (!onlyPriced || hasPrice);
   });
 
