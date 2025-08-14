@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE ahtml>
 <!--
 CHANGELOG
-v0.15.1 (2025-08-13)
-- Ispravljeno: Ključevi 'id' i 'categories' se više ne prikazuju u sekciji "Ostali podaci".
+v0.39.0 (2025-08-14)
+- Ispravljeno: `eur_price` se više ne prikazuje u odjeljku "Ostali podaci" na kartici proizvoda. Ova interna varijabla je sada ispravno dodana u listu obrađenih ključeva.
+- Ostale funkcionalnosti (konverzija valuta, filteri, sortiranje, galerija slika) su zadržane.
 -->
 <html lang="hr">
 <head>
@@ -26,10 +27,50 @@ nav button:hover { background: #999; }
 .filters input[type="number"] { width: 90px; }
 .filters button { background: var(--accent); color: #fff; cursor: pointer; }
 .filters button:hover { background: var(--accent-hover); }
+.currency-toggle {
+    display: flex;
+    gap: 0.2rem;
+}
+.currency-button {
+    padding: 0.5rem 0.7rem;
+    background: var(--ink-muted);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.currency-button.active {
+    background: var(--accent);
+}
+.currency-button:hover:not(.active) {
+    background: #999;
+}
 .catalog-header { padding: 0.5rem 1rem; font-weight: bold; background: var(--soft); }
 .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; padding: 1rem; }
 .product-card { background: var(--card); border-radius: 6px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
-.product-card img { max-width: 100%; height: auto; border-radius: 4px; background: #fafafa; object-fit: cover; margin-bottom: 1rem; }
+/* Image Gallery Styles */
+.image-gallery { position: relative; width: 100%; margin-bottom: 1rem; }
+.main-image-container { position: relative; width: 100%; padding-top: 66.66%; /* 3:2 Aspect Ratio */ background: #fafafa; border-radius: 4px; overflow: hidden; cursor: pointer; }
+.main-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.3s ease; }
+.gallery-nav-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.5); color: white; border: none;
+  font-size: 1.5rem; padding: 0.5rem; cursor: pointer; z-index: 5;
+  border-radius: 50%; transition: background-color 0.2s;
+}
+.gallery-nav-btn:hover { background: rgba(0,0,0,0.8); }
+.gallery-nav-btn.prev { left: 0.5rem; }
+.gallery-nav-btn.next { right: 0.5rem; }
+.thumbnails {
+  display: flex; gap: 0.5rem; overflow-x: auto; padding-top: 0.5rem;
+  white-space: nowrap;
+}
+.thumbnail {
+  width: 60px; height: 60px; object-fit: cover; cursor: pointer;
+  border: 2px solid transparent; border-radius: 4px; transition: border-color 0.2s;
+}
+.thumbnail.active { border-color: var(--accent); }
+
 .product-card h3 { margin: 0.6rem 0 0.2rem; font-size: 1.1rem; }
 .product-card p { margin: 0.2rem 0; }
 .product-card h4 {
@@ -40,6 +81,31 @@ nav button:hover { background: #999; }
     font-size: 0.9rem;
     text-transform: uppercase;
     color: var(--ink-soft);
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 20px;
+}
+.product-card h4::after {
+    content: '▼';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease;
+}
+.product-card h4.expanded::after {
+    transform: rotate(0deg);
+}
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.collapsible-content.expanded {
+    max-height: 1000px; /* Dovoljno velika vrijednost */
 }
 .link-button {
   display: inline-block;
@@ -49,7 +115,7 @@ nav button:hover { background: #999; }
   text-decoration: none;
   border-radius: 4px;
   text-align: center;
-  margin-top: 0.8rem;
+  margin-top: auto; /* Premješta dugme na dno kartice */
   transition: background-color 0.2s;
   width: 100%;
 }
@@ -59,17 +125,69 @@ nav button:hover { background: #999; }
 .specs-list dt { font-weight: bold; color: var(--ink-muted); margin-top: 0.6rem; }
 .specs-list dd { margin-left: 1em; margin-bottom: 0.2rem; word-wrap: break-word; }
 .specs pre { white-space: pre-wrap; word-break: break-all; background: #f0f0f0; padding: 5px; border-radius: 3px; font-size: 0.9em; }
+.rating-stars { color: gold; font-size: 1.1em; margin-left: 0.5em; }
 @media (max-width: 600px) {
   .filters { flex-direction: column; }
   nav { flex-direction: column; }
 }
+
+/* Stilovi za prikaz preko cijelog ekrana */
+#fullscreen-modal {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+#modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#modal-close-btn:hover,
+#modal-close-btn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+#modal-prev-btn, #modal-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 101;
+  user-select: none;
+}
+#modal-prev-btn { left: 15px; }
+#modal-next-btn { right: 15px; }
+#modal-prev-btn:hover, #modal-next-btn:hover { background: rgba(0,0,0,0.8); }
 </style>
 </head>
 <body>
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.15.1</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.39.0</span>
   </h1>
 </header>
 
@@ -100,30 +218,68 @@ nav button:hover { background: #999; }
     </select>
     <label><input type="checkbox" id="only-priced"> Samo sa cijenom</label>
     <button id="apply-btn">Primijeni filtere</button>
+    <div class="currency-toggle">
+        <button id="currency-eur" class="currency-button active">€</button>
+        <button id="currency-km" class="currency-button">KM</button>
+    </div>
   </div>
 </div>
 
 <div class="catalog-header" id="catalog-count"></div>
 <section class="catalog" id="product-list"></section>
 
+<!-- Fullscreen Image Modal -->
+<div id="fullscreen-modal" style="display: none;">
+  <span id="modal-close-btn">&times;</span>
+  <img id="modal-image" src="" alt="Slika proizvoda u punoj veličini">
+  <button id="modal-prev-btn" style="display: none;">‹</button>
+  <button id="modal-next-btn" style="display: none;">›</button>
+</div>
+
 <script>
-const APP_VERSION = "0.15.1";
+const APP_VERSION = "0.39.0";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
+const KM_CONVERSION_RATE = 1.95583;
+const USD_TO_EUR_RATE = 0.93; // Fiksni kurs za konverziju iz USD u EUR
+
 let allProducts = {};
 let allItemsFlat = [];
 let currentBrand = "ALL";
 let currentCategory = "ALL";
+let currentCurrency = 'EUR';
 
+// Globalne varijable za modal sliku
+let modalImageUrls = [];
+let modalImageIndex = 0;
+
+/**
+ * Normalizuje string cijene u broj.
+ * Specijalno obrađuje američki i evropski format cijena.
+ * @param {string | number} val Cijena za normalizaciju.
+ * @returns {number} Normalizovana cijena kao broj.
+ */
 function normalizePrice(val) {
   if (typeof val !== "string") return Number(val) || 0;
-  const compact = val.replace(/\s/g, "");
-  const match = compact.match(/(\d+[.,]?\d*)/g);
-  if (!match) return 0;
-  let s = match[match.length - 1];
-  if (s.includes(".") && s.includes(",")) s = s.replace(/\./g, "").replace(",", ".");
-  else if (s.includes(",")) s = s.replace(",", ".");
-  return parseFloat(s) || 0;
+  
+  // Ukloni sve što nije broj, zarez, ili tačka, uključujući znakove valuta
+  let cleanedVal = val.replace(/[^\d.,]/g, '').trim();
+
+  // Pronađi zadnji zarez i tačku
+  const lastCommaIndex = cleanedVal.lastIndexOf(',');
+  const lastDotIndex = cleanedVal.lastIndexOf('.');
+
+  // Ako je zadnji separator tačka (američki format npr. 1,999.00)
+  if (lastDotIndex > lastCommaIndex) {
+      cleanedVal = cleanedVal.replace(/,/g, ''); // Ukloni sve zareze
+  }
+  // Ako je zadnji separator zarez (evropski format npr. 1.999,00)
+  else if (lastCommaIndex > lastDotIndex) {
+      cleanedVal = cleanedVal.replace(/\./g, ''); // Ukloni sve tačke
+      cleanedVal = cleanedVal.replace(',', '.'); // Zamijeni zarez sa tačkom
+  }
+  
+  return parseFloat(cleanedVal) || 0;
 }
 function getRatingFromBadges(prod) {
   const badges = prod["badge-ovi"] || prod["bedz"] || prod["features"] || [];
@@ -145,43 +301,6 @@ function dedupProducts(items) {
   });
   return Array.from(map.values());
 }
-
-Promise.all([
-  fetch(RAW_ARGON).then(r => r.json()),
-  fetch(RAW_MARANTZ).then(r => r.json())
-]).then(([argonData, marantzData]) => {
-  allProducts = {
-    Argon: argonData,
-    Marantz: marantzData
-  };
-
-  const processedMarantz = marantzData.map(p => {
-    let imageUrl = p.image;
-    if (imageUrl && imageUrl.startsWith('https://www.marantz.comhttps://www.marantz.com')) {
-        imageUrl = imageUrl.replace('https://www.marantz.comhttps://www.marantz.com', 'https://www.marantz.com');
-    }
-    return {
-      ...p,
-      brend: "Marantz",
-      naziv: p.name,
-      cijena: p.price,
-      opis: p.tagline,
-      slika_url: (imageUrl && imageUrl.trim() !== '') ? imageUrl : null,
-    };
-  });
-  
-  allItemsFlat = dedupProducts([
-    ...Object.values(argonData).flat().map(p => ({ ...p, brend: "Argon" })),
-    ...processedMarantz
-  ]);
-
-  renderCategoriesForBrand("ALL");
-  highlightActiveCategory();
-  applyFilters();
-  document.getElementById("version-badge").textContent = `v${APP_VERSION}`;
-  document.title = `Katalog v${APP_VERSION}`;
-});
-
 function renderCategoriesForBrand(brand) {
     const nav = document.getElementById("category-nav");
     nav.innerHTML = "";
@@ -201,12 +320,10 @@ function renderCategoriesForBrand(brand) {
         nav.appendChild(btn);
     });
 }
-
 function highlightActiveCategory() {
   document.querySelectorAll("#category-nav button")
     .forEach(b => b.classList.toggle("active", b.dataset.cat === currentCategory));
 }
-
 function sourceItems() {
   const brand = currentBrand;
   const cat = currentCategory;
@@ -215,27 +332,47 @@ function sourceItems() {
   }
   if (brand === "Argon") {
     if (cat === "ALL") {
-      return Object.values(allProducts.Argon).flat().map(p => ({ ...p, brend: "Argon" }));
+      const items = Object.values(allProducts.Argon).flat();
+      return items.map(p => ({
+        ...p,
+        brend: "Argon",
+        images_urls: (p.slika_url && p.slika_url.trim() !== '') ? [p.slika_url] : []
+      }));
     }
-    return (allProducts.Argon?.[cat] || []).map(p => ({ ...p, brend: "Argon" }));
+    return (allProducts.Argon?.[cat] || []).map(p => ({
+      ...p,
+      brend: "Argon",
+      images_urls: (p.slika_url && p.slika_url.trim() !== '') ? [p.slika_url] : []
+    }));
   }
   if (brand === "Marantz") {
-    return allProducts.Marantz.map(p => {
-      let imageUrl = p.image;
-      if (imageUrl && imageUrl.startsWith('https://www.marantz.comhttps://www.marantz.com')) {
-          imageUrl = imageUrl.replace('https://www.marantz.comhttps://www.marantz.com', 'https://www.marantz.com');
-      }
-      return {
-        ...p,
-        brend: "Marantz",
-        naziv: p.name,
-        cijena: p.price,
-        opis: p.tagline,
-        slika_url: (imageUrl && imageUrl.trim() !== '') ? imageUrl : null,
-      };
-    });
+    return allItemsFlat.filter(p => p.brend === "Marantz" && (cat === "ALL" || p.categories.includes(cat)));
   }
   return [];
+}
+function applyFilters() {
+  let items = sourceItems();
+  const searchInput = document.getElementById("search").value.toLowerCase();
+  const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
+  const maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
+  const featureFilter = document.getElementById("feature-filter").value.toLowerCase();
+  const onlyPriced = document.getElementById("only-priced").checked;
+
+  items = items.filter(p => {
+    const name = (p.naziv || p.name || '').toLowerCase();
+    const normalizedPrice = normalizePrice(p.cijena || p.price);
+    const badges = (p["badge-ovi"] || p["bedz"] || p.features || []).map(b => (typeof b === 'object' ? b.title : b).toLowerCase());
+    const hasPrice = normalizedPrice > 0;
+    
+    return (!searchInput || name.includes(searchInput)) &&
+           (normalizedPrice >= minPrice && normalizedPrice <= maxPrice) &&
+           (!featureFilter || badges.includes(featureFilter)) &&
+           (!onlyPriced || hasPrice);
+  });
+  
+  items = applySort(items);
+  renderList(items);
+  updatePrices();
 }
 function applySort(items) {
   switch (document.getElementById("sort-select").value) {
@@ -246,56 +383,108 @@ function applySort(items) {
     default: return items;
   }
 }
-
+function renderStars(rating) {
+  if (!rating) return '';
+  const full = Math.floor(rating);
+  const half = (rating % 1) >= 0.5 ? 1 : 0;
+  const empty = 5 - full - half;
+  const stars = '★'.repeat(full) + (half ? '☆' : '') + '☆'.repeat(empty);
+  return `<span class="rating-stars" title="Ocjena ${rating}">${stars} (${rating})</span>`;
+}
 function renderList(items) {
   const list = document.getElementById("product-list");
   list.innerHTML = "";
   document.getElementById("catalog-count").textContent = 
     `${currentBrand === "ALL" ? "Svi brendovi" : currentBrand} – ${currentCategory === "ALL" ? "sve kategorije" : currentCategory} – ${items.length} artikala`;
 
-  items.forEach(prod => {
+  items.forEach((prod, index) => {
     const card = document.createElement("div");
     card.className = "product-card";
+    const cardId = `card-${index}`;
 
-    const processedKeys = new Set(['slika_url', 'image', 'naziv', 'name', 'opis', 'tagline', 'description', 'cijena', 'price', 'link', 'specifications', 'features', 'badge-ovi', 'bedz', 'brend', 'id', 'categories']);
+    // Ažurirana lista ključeva koji se ne prikazuju kao 'ostali podaci'
+    const processedKeys = new Set(['slika_url', 'image', 'images', 'naziv', 'name', 'opis', 'tagline', 'description', 'cijena', 'price', 'eur_price', 'link', 'specifications', 'features', 'badge-ovi', 'bedz', 'brend', 'id', 'categories', 'specifikacije', 'boje', 'images_urls']);
     let cardContent = '';
 
-    const imageUrl = prod.slika_url || prod.image;
-    cardContent += `<img src="${imageUrl || 'https://via.placeholder.com/300x200?text=Bez+slike'}" alt="Slika za ${prod.naziv || prod.name}">`;
-    cardContent += `<h3>${prod.naziv || prod.name || 'Nepoznat naziv'}</h3>`;
+    const imageUrls = prod.images_urls.filter(Boolean);
+    const mainImageUrl = imageUrls[0] || 'https://placehold.co/300x200/cccccc/000000?text=Bez+slike';
+    
+    console.log(`Proizvod: ${prod.naziv || prod.name} | URL-ovi slika:`, imageUrls);
+
+    cardContent += `<div class="image-gallery" id="gallery-${cardId}">`;
+    cardContent += `<div class="main-image-container">`;
+    cardContent += `<img src="${mainImageUrl}" alt="Slika za ${prod.naziv || prod.name}" class="main-image" onerror="console.error('Slika se nije uspjela učitati:', this.src)">`;
+    
+    // Prikaz galerije samo ako ima više od jedne slike
+    if (imageUrls.length > 1) {
+      cardContent += `<button class="gallery-nav-btn prev">‹</button>`;
+      cardContent += `<button class="gallery-nav-btn next">›</button>`;
+      cardContent += `</div>`; // zatvara main-image-container
+      cardContent += `<div class="thumbnails">`;
+      imageUrls.forEach((url, i) => {
+        cardContent += `<img src="${url}" alt="Sličica ${i+1}" class="thumbnail ${i === 0 ? 'active' : ''}" data-index="${i}" onerror="console.error('Sličica se nije uspjela učitati:', this.src)">`;
+      });
+      cardContent += `</div>`;
+    } else {
+        cardContent += `</div>`; // zatvara main-image-container
+    }
+    cardContent += `</div>`;
+    
+    const rating = getRatingFromBadges(prod);
+    const ratingHtml = renderStars(rating);
+    cardContent += `<h3>${prod.naziv || prod.name || 'Nepoznat naziv'}${ratingHtml}</h3>`;
+    
     cardContent += `<p>${prod.opis || prod.tagline || prod.description || ''}</p>`;
     
-    const price = prod.cijena || prod.price;
-    const normalizedPrice = normalizePrice(price);
-    cardContent += `<p><strong>Cijena:</strong> ${price ? (normalizedPrice > 0 ? normalizedPrice.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }) : price) : '-'}</p>`;
-
-    if (prod.link) {
-        const baseUrl = prod.link.startsWith('/') ? 'https://sonusart.ba' : '';
-        cardContent += `<a href="${baseUrl}${prod.link}" target="_blank" rel="noopener noreferrer" class="link-button">Pogledaj proizvod</a>`;
+    const normalizedPrice = prod.eur_price; // Koristi već konvertovanu cijenu
+    if (normalizedPrice > 0) {
+        cardContent += `<p><strong>Cijena:</strong> <span class="product-price" data-eur-price="${normalizedPrice}"></span></p>`;
+    } else {
+        cardContent += `<p><strong>Cijena:</strong> -</p>`;
     }
 
     const features = prod.features || prod['badge-ovi'] || prod['bedz'];
     if (features && features.length > 0) {
-        cardContent += `<h4>Karakteristike</h4><ul class="features-list">`;
-        features.forEach(feature => {
-            if (typeof feature === 'object' && feature.title) {
-                cardContent += `<li><strong>${feature.title}:</strong> ${feature.description}</li>`;
-            } else {
-                cardContent += `<li>${feature}</li>`;
-            }
+        const filteredFeatures = features.filter(f => {
+            const val = typeof f === 'object' ? f.title : f;
+            return !/^\d+(\.\d+)?$/.test(String(val).trim());
         });
-        cardContent += `</ul>`;
-    }
-
-    if (prod.specifications && typeof prod.specifications === 'object') {
-        cardContent += `<h4>Specifikacije</h4><dl class="specs-list">`;
-        for (const specKey in prod.specifications) {
-            cardContent += `<dt>${specKey}</dt><dd>${prod.specifications[specKey]}</dd>`;
+        if (filteredFeatures.length > 0) {
+            const featuresId = `features-${cardId}`;
+            cardContent += `<h4 onclick="document.getElementById('${featuresId}').classList.toggle('expanded'); this.classList.toggle('expanded');">Karakteristike</h4>
+                            <div id="${featuresId}" class="collapsible-content">
+                                <ul class="features-list">`;
+            filteredFeatures.forEach(feature => {
+                if (typeof feature === 'object' && feature.title) {
+                    cardContent += `<li><strong>${feature.title}:</strong> ${feature.description}</li>`;
+                } else {
+                    cardContent += `<li>${feature}</li>`;
+                }
+            });
+            cardContent += `</ul></div>`;
         }
-        cardContent += `</dl>`;
     }
 
-    const otherDataContainer = document.createElement('div');
+    const specifications = prod.specifications || prod.specifikacije;
+    if (specifications && typeof specifications === 'object') {
+        const specId = `specs-${cardId}`;
+        cardContent += `<h4 onclick="document.getElementById('${specId}').classList.toggle('expanded'); this.classList.toggle('expanded');">Specifikacije</h4>
+                        <div id="${specId}" class="collapsible-content">
+                            <dl class="specs-list">`;
+        for (const specKey in specifications) {
+            cardContent += `<dt>${specKey}</dt><dd>${specifications[specKey]}</dd>`;
+        }
+        cardContent += `</dl></div>`;
+    }
+    
+    if (prod.boje && prod.boje.length > 0) {
+        const colorsId = `boje-${cardId}`;
+        cardContent += `<h4 onclick="document.getElementById('${colorsId}').classList.toggle('expanded'); this.classList.toggle('expanded');">Boje</h4>
+                        <div id="${colorsId}" class="collapsible-content">
+                            <p>${prod.boje.join(', ')}</p>
+                        </div>`;
+    }
+
     let hasOtherData = false;
     let otherDataContent = '<dl class="specs-list">';
     for (const key in prod) {
@@ -317,34 +506,172 @@ function renderList(items) {
         cardContent += `<h4>Ostali podaci</h4>` + otherDataContent;
     }
 
+    // Premještanje linka na dno kartice
+    if (prod.link) {
+        const baseUrl = prod.link.startsWith('/') ? 'https://sonusart.ba' : '';
+        cardContent += `<a href="${baseUrl}${prod.link}" target="_blank" rel="noopener noreferrer" class="link-button">Pogledaj ${prod.brend}</a>`;
+    }
+
     card.innerHTML = cardContent;
     list.appendChild(card);
+    
+    // Add gallery listeners
+    const gallery = card.querySelector(`#gallery-${cardId}`);
+    if (gallery) {
+      const mainImage = gallery.querySelector('.main-image');
+      const thumbnails = gallery.querySelectorAll('.thumbnail');
+      const prevBtn = gallery.querySelector('.prev');
+      const nextBtn = gallery.querySelector('.next');
+      let currentIndex = 0;
+
+      function updateGallery(newIndex) {
+        mainImage.src = imageUrls[newIndex];
+        thumbnails.forEach((thumb, i) => {
+          thumb.classList.toggle('active', i === newIndex);
+        });
+        currentIndex = newIndex;
+      }
+      
+      if (imageUrls.length > 1) {
+          prevBtn.addEventListener('click', () => {
+              const newIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
+              updateGallery(newIndex);
+          });
+          
+          nextBtn.addEventListener('click', () => {
+              const newIndex = (currentIndex + 1) % imageUrls.length;
+              updateGallery(newIndex);
+          });
+          
+          thumbnails.forEach(thumb => {
+              thumb.addEventListener('click', (e) => {
+                  const index = parseInt(e.target.dataset.index, 10);
+                  updateGallery(index);
+              });
+          });
+      }
+      
+      // Dodavanje slušatelja događaja za prikaz preko cijelog ekrana
+      mainImage.addEventListener('click', () => {
+          openFullscreenImage(imageUrls, 0);
+      });
+    }
   });
 }
-
-function applyFilters() {
-  currentBrand = document.getElementById("brand-filter").value;
-  const searchVal = document.getElementById("search").value.toLowerCase();
-  const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
-  const maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
-  const feature = document.getElementById("feature-filter").value.trim().toLowerCase();
-  const onlyPriced = document.getElementById("only-priced").checked;
-
-  let items = sourceItems().filter(p => {
-    const nameMatch = (p.naziv || p.name || "").toLowerCase().includes(searchVal);
-    const priceVal = normalizePrice(p.cijena || p.price);
-    const priceMatch = priceVal >= minPrice && priceVal <= maxPrice;
-    const hasPrice = (p.cijena || p.price) && (p.cijena || p.price) !== "N/A";
-
-    const allText = JSON.stringify(p).toLowerCase();
-    const featureMatch = !feature || allText.includes(feature);
-
-    return nameMatch && priceMatch && featureMatch && (!onlyPriced || hasPrice);
-  });
-
-  items = applySort(items);
-  renderList(items);
+function updatePrices() {
+    const priceElements = document.querySelectorAll('.product-price');
+    priceElements.forEach(span => {
+        const eurPrice = parseFloat(span.dataset.eurPrice);
+        if (!isNaN(eurPrice)) {
+            if (currentCurrency === 'EUR') {
+                span.textContent = eurPrice.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
+            } else { // KM
+                const kmPrice = eurPrice * KM_CONVERSION_RATE;
+                span.textContent = kmPrice.toLocaleString('de-DE', { style: 'currency', currency: 'BAM' });
+            }
+        }
+    });
 }
+function openFullscreenImage(imageUrls, initialIndex) {
+    const modal = document.getElementById('fullscreen-modal');
+    const modalImage = document.getElementById('modal-image');
+    const prevBtn = document.getElementById('modal-prev-btn');
+    const nextBtn = document.getElementById('modal-next-btn');
+    
+    modalImageUrls = imageUrls;
+    modalImageIndex = initialIndex;
+
+    modalImage.src = modalImageUrls[modalImageIndex];
+    modal.style.display = 'flex';
+    
+    if (modalImageUrls.length > 1) {
+      prevBtn.style.display = 'block';
+      nextBtn.style.display = 'block';
+    } else {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+    }
+}
+function showPrevImage() {
+    modalImageIndex = (modalImageIndex - 1 + modalImageUrls.length) % modalImageUrls.length;
+    document.getElementById('modal-image').src = modalImageUrls[modalImageIndex];
+}
+function showNextImage() {
+    modalImageIndex = (modalImageIndex + 1) % modalImageUrls.length;
+    document.getElementById('modal-image').src = modalImageUrls[modalImageIndex];
+}
+function closeFullscreenImage() {
+    const modal = document.getElementById('fullscreen-modal');
+    modal.style.display = 'none';
+    const modalImage = document.getElementById('modal-image');
+    modalImage.src = '';
+    modalImageUrls = [];
+    modalImageIndex = 0;
+}
+
+Promise.all([
+  fetch(RAW_ARGON).then(r => r.json()),
+  fetch(RAW_MARANTZ).then(r => r.json())
+]).then(([argonData, marantzData]) => {
+  console.log("Učitani Argon podaci:", argonData);
+  console.log("Učitani Marantz podaci:", marantzData);
+
+  allProducts = {
+    Argon: argonData,
+    Marantz: marantzData
+  };
+
+  const processedMarantz = marantzData.map(p => {
+    const images = (p.images && Array.isArray(p.images)) ? p.images : [];
+    if (images.length === 0 && p.image && p.image.trim() !== '') {
+        images.push(p.image);
+    }
+    const processedImages = images.map(url => {
+        if (url && url.startsWith('https://www.marantz.comhttps://www.marantz.com')) {
+            return url.replace('https://www.marantz.comhttps://www.marantz.com', 'https://www.marantz.com');
+        }
+        return url;
+    }).filter(Boolean);
+
+    // Konverzija cijene iz USD u EUR
+    const priceInUSD = normalizePrice(p.price);
+    const priceInEUR = priceInUSD > 0 ? priceInUSD * USD_TO_EUR_RATE : 0;
+
+    return {
+      ...p,
+      brend: "Marantz",
+      naziv: p.name,
+      eur_price: priceInEUR, // Dodaje novu property za EUR cijenu
+      cijena: p.price, // Zadržava originalnu USD cijenu
+      opis: p.tagline,
+      slika_url: processedImages.length > 0 ? processedImages[0] : null,
+      images_urls: processedImages
+    };
+  });
+  
+  const processedArgon = Object.values(argonData).flat().map(p => {
+    const images = [];
+    if (p.slika_url && p.slika_url.trim() !== '') {
+        images.push(p.slika_url);
+    }
+    const priceInEUR = normalizePrice(p.cijena || p.price);
+
+    return {
+      ...p,
+      brend: "Argon",
+      eur_price: priceInEUR,
+      images_urls: images
+    };
+  });
+  
+  allItemsFlat = dedupProducts([...processedArgon, ...processedMarantz]);
+
+  renderCategoriesForBrand("ALL");
+  highlightActiveCategory();
+  applyFilters();
+  document.getElementById("version-badge").textContent = `v${APP_VERSION}`;
+  document.title = `Katalog v${APP_VERSION}`;
+});
 
 document.getElementById("apply-btn").addEventListener("click", applyFilters);
 document.getElementById("sort-select").addEventListener("change", applyFilters);
@@ -362,8 +689,43 @@ document.getElementById("brand-filter").addEventListener("change", (e) => {
 ["search", "min-price", "max-price"].forEach(id => {
   document.getElementById(id).addEventListener("keydown", e => { if (e.key === "Enter") applyFilters(); });
 });
+
+document.getElementById('currency-eur').addEventListener('click', () => {
+    currentCurrency = 'EUR';
+    document.getElementById('currency-eur').classList.add('active');
+    document.getElementById('currency-km').classList.remove('active');
+    updatePrices();
+});
+
+document.getElementById('currency-km').addEventListener('click', () => {
+    currentCurrency = 'KM';
+    document.getElementById('currency-km').classList.add('active');
+    document.getElementById('currency-eur').classList.remove('active');
+    updatePrices();
+});
+
+// Slušatelji događaja za modal preko cijelog ekrana
+document.getElementById('modal-close-btn').addEventListener('click', closeFullscreenImage);
+document.getElementById('fullscreen-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'fullscreen-modal') {
+        closeFullscreenImage();
+    }
+});
+document.getElementById('modal-prev-btn').addEventListener('click', showPrevImage);
+document.getElementById('modal-next-btn').addEventListener('click', showNextImage);
+
+window.addEventListener('keydown', (e) => {
+    if (document.getElementById('fullscreen-modal').style.display === 'flex') {
+        if (e.key === 'ArrowLeft') {
+            showPrevImage();
+        } else if (e.key === 'ArrowRight') {
+            showNextImage();
+        } else if (e.key === 'Escape') {
+            closeFullscreenImage();
+        }
+    }
+});
 </script>
 
 </body>
 </html>
-
