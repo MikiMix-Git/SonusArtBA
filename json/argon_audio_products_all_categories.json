@@ -35,12 +35,6 @@
                 "HDMI ARC",
                 "4.8"
             ],
-            "boje": [
-                "Ash",
-                "Black",
-                "White",
-                "Walnut"
-            ],
             "specifikacije": {
                 "Power": "4 x 75 W",
                 "Amplifier technology": "Class D",
@@ -71,7 +65,25 @@
                     "Dimmable LED"
                 ],
                 "Included in the box": "support.nordichifi.com/fenris"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Ash (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_ash.jpg?v=1744794735&width=72"
+                },
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                }
+            ]
         },
         {
             "naziv": "FENRIS A5",
@@ -113,12 +125,6 @@
                 "HDMI ARC",
                 "4.7"
             ],
-            "boje": [
-                "Black",
-                "White",
-                "Ash",
-                "Walnut"
-            ],
             "specifikacije": {
                 "Power": "4 x 75 W",
                 "Amplifier technology": "Class D",
@@ -149,7 +155,25 @@
                     "Dimmable LED"
                 ],
                 "Included in the box": "support.nordichifi.com/fenris"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                },
+                {
+                    "name": "Ash (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_ash.jpg?v=1744794735&width=72"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                }
+            ]
         },
         {
             "naziv": "FORTE A5 MK2",
@@ -184,10 +208,6 @@
                 "Bluetooth aptX HD/AAC",
                 "HDMI ARC",
                 "4.7"
-            ],
-            "boje": [
-                "White",
-                "Black"
             ],
             "specifikacije": {
                 "Power": "4 x 80 W",
@@ -224,7 +244,17 @@
                     "Dimmable LED"
                 ],
                 "Included in the box": "support.nordichifi.com/fortemk2"
-            }
+            },
+            "variants": [
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                },
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                }
+            ]
         },
         {
             "naziv": "FORTE A4 MK2",
@@ -259,10 +289,6 @@
                 "Bluetooth aptX HD/AAC",
                 "HDMI ARC",
                 "4.7"
-            ],
-            "boje": [
-                "Black",
-                "White"
             ],
             "specifikacije": {
                 "Power": "4 x 80 W",
@@ -299,7 +325,17 @@
                     "Dimmable LED"
                 ],
                 "Included in the box": "support.nordichifi.com/fortemk2"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "FENRIS A55",
@@ -332,12 +368,6 @@
                 "HDMI ARC",
                 "4.8"
             ],
-            "boje": [
-                "White",
-                "Ash",
-                "Black",
-                "Walnut"
-            ],
             "specifikacije": {
                 "Power": "4 x 75 W",
                 "Amplifier technology": "Class D",
@@ -368,7 +398,25 @@
                     "Dimmable LED"
                 ],
                 "Included in the box": "support.nordichifi.com/fenris"
-            }
+            },
+            "variants": [
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                },
+                {
+                    "name": "Ash (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_ash.jpg?v=1744794735&width=72"
+                },
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                }
+            ]
         },
         {
             "naziv": "FORTE A55 MK2",
@@ -410,11 +458,6 @@
                 "HDMI ARC",
                 "4.8"
             ],
-            "boje": [
-                "Walnut",
-                "Black",
-                "White"
-            ],
             "specifikacije": {
                 "Power": "4 x 80 W",
                 "Amplifier technology": "Class D with Fully Digital Signal Path",
@@ -450,7 +493,21 @@
                     "Dimmable LED"
                 ],
                 "Included in the box": "support.nordichifi.com/fortemk2"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "FORTE A5 WIFI",
@@ -491,12 +548,6 @@
                 "Spotify Connect",
                 "4.7"
             ],
-            "boje": [
-                "Walnut",
-                "Black",
-                "White",
-                "Blue"
-            ],
             "specifikacije": {
                 "Power": "4 x 80 W",
                 "Amplifier technology": "Class D with Fully Digital Signal Path",
@@ -532,7 +583,25 @@
                 "Auto On / Standby": "Yes",
                 "Cabinet construction": "MDF",
                 "Additional Features": "support.nordichifi.com/fortewifi"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Walnut (Veneer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                },
+                {
+                    "name": "Blue (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #2D4F76, #2D4F76)"
+                }
+            ]
         },
         {
             "naziv": "FORTE A4 WIFI",
@@ -577,12 +646,6 @@
                 "Spotify Connect",
                 "4.7"
             ],
-            "boje": [
-                "Blue",
-                "Black",
-                "Walnut",
-                "White"
-            ],
             "specifikacije": {
                 "Power": "4 x 80 W",
                 "Amplifier technology": "Class D with Fully Digital Signal Path",
@@ -618,7 +681,25 @@
                 "Auto On / Standby": "Yes",
                 "Cabinet construction": "MDF",
                 "Additional Features": "support.nordichifi.com/fortewifi"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Blue (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #2D4F76, #2D4F76)"
+                },
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Walnut (Veneer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "FORTE A55 WIFI",
@@ -661,11 +742,6 @@
                 "Spotify Connect",
                 "4.8"
             ],
-            "boje": [
-                "Walnut",
-                "Black",
-                "White"
-            ],
             "specifikacije": {
                 "Power": "4 x 80 W",
                 "Amplifier technology": "Class D with Fully Digital Signal Path",
@@ -701,7 +777,21 @@
                 "Auto On / Standby": "Yes",
                 "Cabinet construction": "MDF",
                 "Additional Features": "support.nordichifi.com/fortewifi"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Walnut (Veneer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "STUDIE 3",
@@ -737,10 +827,6 @@
                 "USB-C",
                 "4.5"
             ],
-            "boje": [
-                "Black",
-                "White"
-            ],
             "specifikacije": {
                 "Power": "4 x 40 W",
                 "Amplifier technology": "Class D",
@@ -774,7 +860,17 @@
                     "Three predefined sound profiles (music, film, neutral)"
                 ],
                 "Included in the box": "support.nordichifi.com/studie3"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         }
     ],
     "Passive Speakers": [
@@ -806,11 +902,6 @@
                 "4” paper cone",
                 "4.8"
             ],
-            "boje": [
-                "Black",
-                "Walnut",
-                "White"
-            ],
             "specifikacije": {
                 "Tweeter size": "0.75\"",
                 "Tweeter type": "Soft dome (Neodymium magnet)",
@@ -839,7 +930,21 @@
                 "Net weight": "2.5kg",
                 "Gross weight": "2.9g",
                 "Manual": "support.nordichifi.com/forus"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "FORUS 5",
@@ -872,11 +977,6 @@
                 "5” paper cone",
                 "4.8"
             ],
-            "boje": [
-                "Black",
-                "Walnut",
-                "White"
-            ],
             "specifikacije": {
                 "Tweeter size": "1\"",
                 "Tweeter type": "Soft dome (Neodymium magnet)",
@@ -905,7 +1005,21 @@
                 "Net weight": "3.6kg",
                 "Gross weight": "3.2kg",
                 "Manual": "support.nordichifi.com/forus"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "FORUS CENTER",
@@ -934,11 +1048,6 @@
                 "2x4” paper cone",
                 "4.7"
             ],
-            "boje": [
-                "Black",
-                "Walnut",
-                "White"
-            ],
             "specifikacije": {
                 "Tweeter size": "0.75\"",
                 "Tweeter type": "Soft dome (Neodymium magnet)",
@@ -966,7 +1075,21 @@
                 "Net weight": "4.3g",
                 "Gross weight": "3.2kg",
                 "Manual": "support.nordichifi.com/forus"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "FORUS 55",
@@ -995,11 +1118,6 @@
                 "2x5” paper cone",
                 "4.7"
             ],
-            "boje": [
-                "Black",
-                "Walnut",
-                "White"
-            ],
             "specifikacije": {
                 "Tweeter size": "1\"",
                 "Tweeter type": "Soft dome (Neodymium magnet)",
@@ -1027,7 +1145,21 @@
                 "Net weight": "12.2kg",
                 "Gross weight": "13.1kg",
                 "Manual": "support.nordichifi.com/forus"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "FORUS 4 WALL",
@@ -1064,11 +1196,6 @@
                 "4” paper cone",
                 "5.0"
             ],
-            "boje": [
-                "Black",
-                "Walnut",
-                "White"
-            ],
             "specifikacije": {
                 "Tweeter size": "0.75\"",
                 "Tweeter type": "Soft dome (Neodymium magnet)",
@@ -1094,7 +1221,21 @@
                 "Net weight": "3kg",
                 "Gross weight": "3.4kg",
                 "Manual": "support.nordichifi.com/forus"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "FORUS 5 WALL",
@@ -1116,11 +1257,6 @@
             "badge-ovi": [
                 "5” paper cone",
                 "5.0"
-            ],
-            "boje": [
-                "Black",
-                "Walnut",
-                "White"
             ],
             "specifikacije": {
                 "Tweeter size": "0.75\"",
@@ -1147,7 +1283,21 @@
                 "Net weight": "5.7kg",
                 "Gross weight": "7.2kg",
                 "Manual": "support.nordichifi.com/forus"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         }
     ],
     "Amplifiers": [
@@ -1180,10 +1330,6 @@
                 "Bluetooth aptX HD/AAC",
                 "HDMI ARC",
                 "4.7"
-            ],
-            "boje": [
-                "Black",
-                "White"
             ],
             "specifikacije": {
                 "Power": "2 x 100 W (4 Ohm)",
@@ -1227,7 +1373,17 @@
                 ],
                 "Dimensions (H x W x L)": "6.3 x 25.2 x 22.0 cm",
                 "Dimensions incl. packaging (H x W x L)": "support.nordichifi.com/sa1"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White",
+                    "swatch_url": "linear-gradient(to right, #FFFFFF, #FFFFFF)"
+                }
+            ]
         },
         {
             "naziv": "SA2",
@@ -1266,11 +1422,6 @@
                 "Spotify Connect",
                 "Wi-Fi",
                 "4.5"
-            ],
-            "boje": [
-                "Black",
-                "White",
-                "Blue"
             ],
             "specifikacije": {
                 "Power": "2 x 100 W (4 Ohm)",
@@ -1320,7 +1471,21 @@
                     "Blue"
                 ],
                 "Dimensions (H x W x L)": "support.nordichifi.com/sa2"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White",
+                    "swatch_url": "linear-gradient(to right, #FFFFFF, #FFFFFF)"
+                },
+                {
+                    "name": "Blue",
+                    "swatch_url": "linear-gradient(to right, #2D4F76, #2D4F76)"
+                }
+            ]
         },
         {
             "naziv": "SA1 MK2 + FORUS 4",
@@ -1356,8 +1521,8 @@
                 "Bundle",
                 "HDMI ARC"
             ],
-            "boje": [],
-            "specifikacije": {}
+            "specifikacije": {},
+            "variants": []
         }
     ],
     "Music Streamers": [
@@ -1391,10 +1556,6 @@
                 "Roon Ready",
                 "Spotify Connect",
                 "4.6"
-            ],
-            "boje": [
-                "Black",
-                "White"
             ],
             "specifikacije": {
                 "WiFi": "Yes",
@@ -1433,7 +1594,17 @@
                 "Gross weight": "0.76kg",
                 "Power consumption (w)": "2.1",
                 "Standby power consumption": "support.nordichifi.com/solo"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White",
+                    "swatch_url": "linear-gradient(to right, #FFFFFF, #FFFFFF)"
+                }
+            ]
         },
         {
             "naziv": "STREAM 2 MK3",
@@ -1451,7 +1622,6 @@
                 "Spotify Connect",
                 "4.4"
             ],
-            "boje": [],
             "specifikacije": {
                 "WiFi": "Yes",
                 "Wireless connectivity": "Spotify Connect",
@@ -1486,7 +1656,8 @@
                 "Power consumption (w)": "1.12",
                 "Standby power consumption": "<0.5 W",
                 "Manual": "support.nordichifi.com/stream2mk3"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "STREAM 3 MK2",
@@ -1506,7 +1677,6 @@
                 "Spotify Connect",
                 "4.5"
             ],
-            "boje": [],
             "specifikacije": {
                 "WiFi": "Yes",
                 "Wireless connectivity": [
@@ -1550,7 +1720,8 @@
                 "Power consumption (w)": "1.12",
                 "Standby power consumption": "<0.5 W",
                 "Manual": "support.nordichifi.com/stream3mk2"
-            }
+            },
+            "variants": []
         }
     ],
     "Turntables": [
@@ -1642,12 +1813,6 @@
                 "Built-in Preamp (RIAA)",
                 "4.7"
             ],
-            "boje": [
-                "Earth Grey",
-                "Atlantic Blue",
-                "Pine Green",
-                "Black"
-            ],
             "specifikacije": {
                 "Pickup": "Audio-Technica AT3600L (MM)",
                 "Speeds (rpm)": "33/45",
@@ -1673,7 +1838,37 @@
                     "Dust cover"
                 ],
                 "Color": "support.nordichifi.com/ttmk2"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Earth Grey (Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #60594E, #60594E)"
+                },
+                {
+                    "name": "Atlantic Blue (Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #2F5F78, #2F5F78)"
+                },
+                {
+                    "name": "Pine Green (Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #3F6153, #3F6153)"
+                },
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Satin Mahogany (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_satin-mahogany.jpg?v=1744794874&width=72"
+                },
+                {
+                    "name": "Walnut (Veneer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "Electric Amber (Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #FFCC57, #FFCC57)"
+                }
+            ]
         },
         {
             "naziv": "TT-3",
@@ -1711,11 +1906,6 @@
                 "Ortofon OM 5E",
                 "4.8"
             ],
-            "boje": [
-                "Ash",
-                "Black",
-                "White"
-            ],
             "specifikacije": {
                 "Pickup": "Ortofon OM5e (MM)",
                 "Speeds (rpm)": "33/45",
@@ -1745,7 +1935,21 @@
                 ],
                 "Dimensions (H x W x L)": "12.1 x 42.0 x 35.5 cm",
                 "Dimensions incl. packaging (H x W x L)": "support.nordichifi.com/tt-3"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Ash (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_ash.jpg?v=1744794735&width=72"
+                },
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "TT-3 PLUS",
@@ -1796,11 +2000,6 @@
                 "Ortofon 2M Red",
                 "4.8"
             ],
-            "boje": [
-                "Walnut",
-                "Black",
-                "White"
-            ],
             "specifikacije": {
                 "Pickup": "Ortofon 2M Red (MM)",
                 "Speeds (rpm)": "33/45",
@@ -1826,7 +2025,21 @@
                     "Dust cover"
                 ],
                 "Color": "support.nordichifi.com/tt3plus"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Walnut (Veneer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "TT-4 MK2",
@@ -1878,12 +2091,6 @@
                 "Ortofon 2M Blue",
                 "4.9"
             ],
-            "boje": [
-                "Walnut",
-                "Black",
-                "Mahogany",
-                "White"
-            ],
             "specifikacije": {
                 "Pickup": "Ortofon 2M Blue (MM)",
                 "Speeds (rpm)": "33/45",
@@ -1912,7 +2119,25 @@
                     "Dust cover"
                 ],
                 "Color": "support.nordichifi.com/tt4mk2"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Walnut (Veneer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "Black (Matte Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Mahogany (Veneer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_mahogany.jpg?v=1744796226&width=72"
+                },
+                {
+                    "name": "White (Matte Lacquer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "TT-4 SPECIAL EDITION",
@@ -1949,9 +2174,6 @@
                 "Special Edition",
                 "4.9"
             ],
-            "boje": [
-                "Black"
-            ],
             "specifikacije": {
                 "Pickup": "Ortofon 2M Bronze (MM)",
                 "Speeds (rpm)": "33/45",
@@ -1980,7 +2202,13 @@
                     "Dust cover"
                 ],
                 "Color": "support.nordichifi.com/tt4se"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (High-Gloss Lacquer)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                }
+            ]
         },
         {
             "naziv": "TT SIGNATURE",
@@ -2020,10 +2248,6 @@
                 "ATS technology",
                 "Ortofon 2M Black"
             ],
-            "boje": [
-                "Dark Cherry",
-                "Walnut"
-            ],
             "specifikacije": {
                 "Pickup": "Ortofon 2M Black (MM)",
                 "Speeds (rpm)": "33/45",
@@ -2057,7 +2281,17 @@
                 ],
                 "Dimensions (H x W x L)": "45 x 15.4 x 36.8",
                 "Dimensions incl. packaging (H x W x L)": "support.nordichifi.com/signature"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Dark Cherry (Veneer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_dark-cherry.jpg?v=1745879522&width=72"
+                },
+                {
+                    "name": "Walnut (Veneer)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                }
+            ]
         }
     ],
     "Subwoofers": [
@@ -2081,11 +2315,6 @@
                 "6\"",
                 "65 Watts (RMS)",
                 "4.6"
-            ],
-            "boje": [
-                "White",
-                "Walnut",
-                "Black"
             ],
             "specifikacije": {
                 "Amplifier power": "65 W (RMS) / 130 W (PEAK)",
@@ -2114,7 +2343,21 @@
                 "Gross weight": "6.7kg",
                 "Standby power consumption": "<0.5 W",
                 "Manual": "support.nordichifi.com/malmo"
-            }
+            },
+            "variants": [
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                }
+            ]
         },
         {
             "naziv": "MALMÖ SUB 10",
@@ -2139,11 +2382,6 @@
                 "10\"",
                 "100 Watts (RMS)",
                 "4.8"
-            ],
-            "boje": [
-                "Black",
-                "Walnut",
-                "White"
             ],
             "specifikacije": {
                 "Amplifier power": "100 W (RMS) / 200 W (PEAK)",
@@ -2172,7 +2410,21 @@
                 "Gross weight": "13.5kg",
                 "Standby power consumption": "<0.5 W",
                 "Manual": "support.nordichifi.com/malmo"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         },
         {
             "naziv": "MALMÖ SUB 8",
@@ -2201,11 +2453,6 @@
                 "8\"",
                 "4.8"
             ],
-            "boje": [
-                "Walnut",
-                "Black",
-                "White"
-            ],
             "specifikacije": {
                 "Amplifier power": "100 W (RMS) / 200 W (PEAK)",
                 "Woofer size": "8\"",
@@ -2233,7 +2480,21 @@
                 "Gross weight": "10.3kg",
                 "Standby power consumption": "<0.5 W",
                 "Manual": "support.nordichifi.com/malmo"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Walnut (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_walnut.jpg?v=1744796038&width=72"
+                },
+                {
+                    "name": "Black (PVC)",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White (PVC)",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_white.jpg?v=1745307205&width=72"
+                }
+            ]
         }
     ],
     "Headphones": [
@@ -2283,10 +2544,6 @@
                 "Over-Ear",
                 "4.7"
             ],
-            "boje": [
-                "Black",
-                "Blue"
-            ],
             "specifikacije": {
                 "Wireless connectivity": "Bluetooth",
                 "Bluetooth version": "Bluetooth 5.0",
@@ -2308,7 +2565,17 @@
                 "Playback via USB": "Yes",
                 "Additional Features": "Standby-Time up to 300 hours",
                 "Included in the box": "support.nordichifi.com/quietstorm"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Blue",
+                    "swatch_url": "linear-gradient(to right, #2D4F76, #2D4F76)"
+                }
+            ]
         },
         {
             "naziv": "SOUL3",
@@ -2342,10 +2609,6 @@
                 "Over-Ear",
                 "4.8"
             ],
-            "boje": [
-                "Black",
-                "Bronze Black"
-            ],
             "specifikacije": {
                 "Wireless connectivity": "Bluetooth",
                 "Bluetooth version": "Bluetooth 5.0",
@@ -2377,7 +2640,17 @@
                 "Dimensions incl. packaging (H x W x L)": "20 x 9 x 6 cm",
                 "Net weight": "0.29kg",
                 "Gross weight": "support.nordichifi.com/soul3"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "Bronze Black",
+                    "swatch_url": "https://argonaudio.com/cdn/shop/files/color_bronze-black.jpg?v=1744795026&width=72"
+                }
+            ]
         },
         {
             "naziv": "IE20",
@@ -2414,10 +2687,6 @@
                 "Noise Cancellation (ANC)",
                 "4.8"
             ],
-            "boje": [
-                "Black",
-                "White"
-            ],
             "specifikacije": {
                 "Wireless connectivity": "Bluetooth",
                 "Bluetooth version": "Bluetooth 5.0",
@@ -2447,7 +2716,17 @@
                     "Silicone tips in three different sizes"
                 ],
                 "Color": "support.nordichifi.com/ie20"
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White",
+                    "swatch_url": "linear-gradient(to right, #FFFFFF, #FFFFFF)"
+                }
+            ]
         }
     ],
     "Cables": [
@@ -2460,7 +2739,6 @@
             "opis": "The Classic SUB is an ultra-compact subwoofer cable, just 2.6 mm thick. ...",
             "link": "https://argonaudio.com/products/subwoofer-cable",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Length (m)": "3",
                 "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
@@ -2471,7 +2749,8 @@
                     "White"
                 ],
                 "Dimensions incl. packaging (H x W x L)": "3 x 20.5 x 10 cm"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "CLASSIC RCA",
@@ -2482,7 +2761,6 @@
             "opis": "The Classic RCA cable is highly flexible, easy to use, and features gold...",
             "link": "https://argonaudio.com/products/rca-rca",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
                 "Conductors construction": "Multicore",
@@ -2494,7 +2772,8 @@
                 "Dimensions incl. packaging (H x W x L)": "12 x 20.5 x 3 cm",
                 "Net weight": "0.14kg",
                 "Gross weight": "0.14kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "FORTE CONNECT",
@@ -2506,10 +2785,6 @@
             "opis": "Longer speaker cables for the FORTE-series of speakers.Designed for use ...",
             "link": "https://argonaudio.com/products/forte-speaker-cable",
             "badge-ovi": [],
-            "boje": [
-                "Black",
-                "White"
-            ],
             "specifikacije": {
                 "Length (m)": [
                     "6",
@@ -2521,7 +2796,17 @@
                     "Black",
                     "White"
                 ]
-            }
+            },
+            "variants": [
+                {
+                    "name": "Black",
+                    "swatch_url": "linear-gradient(to right, #000000, #000000)"
+                },
+                {
+                    "name": "White",
+                    "swatch_url": "linear-gradient(to right, #FFFFFF, #FFFFFF)"
+                }
+            ]
         },
         {
             "naziv": "CLASSIC OPTICAL",
@@ -2532,7 +2817,6 @@
             "opis": "The Classic Optical cable offers excellent build quality for noise-free ...",
             "link": "https://argonaudio.com/products/optical-cable",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Color": [
                     "White"
@@ -2540,7 +2824,8 @@
                 "Dimensions incl. packaging (H x W x L)": "12 x 20.5 x 3 cm",
                 "Net weight": "0.1kg",
                 "Gross weight": "0.1kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "CLASSIC MINIJACK - RCA",
@@ -2551,7 +2836,6 @@
             "opis": "Classic MJIN is a durable, high-quality cable with extra-short, gold-pla...",
             "link": "https://argonaudio.com/products/minijack-rca",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
                 "Conductors construction": "Multicore",
@@ -2563,7 +2847,8 @@
                 "Dimensions incl. packaging (H x W x L)": "3 x 12 x 24 cm",
                 "Net weight": "0.1kg",
                 "Gross weight": "0.1kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "FENRIS CONNECT",
@@ -2574,7 +2859,6 @@
             "opis": "Longer speaker cables for the FENRIS-series of speakers.Designed for use...",
             "link": "https://argonaudio.com/products/fenris-angled-speaker-cable",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Length (m)": [
                     "3",
@@ -2585,7 +2869,8 @@
                 "Color": [
                     "Black"
                 ]
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "BASIC HDMI",
@@ -2596,7 +2881,6 @@
             "opis": "Basic HDMI is an affordable high-speed HDMI cable that supports a wide r...",
             "link": "https://argonaudio.com/products/hdmi-copy",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Length (m)": [
                     "1",
@@ -2624,7 +2908,8 @@
                 "Dimensions incl. packaging (H x W x L)": "12 x 20.5 x 3 cm",
                 "Net weight": "0.14kg",
                 "Gross weight": "0.14kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "CLASSIC Y-SPLIT",
@@ -2636,7 +2921,6 @@
             "opis": "Divide or combine any line signal with this high-quality Classic Y-SPLIT...",
             "link": "https://argonaudio.com/products/classic-y-split",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Length (m)": "0.15",
                 "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
@@ -2648,7 +2932,8 @@
                     "White"
                 ],
                 "Dimensions incl. packaging (H x W x L)": "7 x 15 x 2 cm"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "BASIC 1 SC",
@@ -2661,7 +2946,6 @@
             "badge-ovi": [
                 "5.0"
             ],
-            "boje": [],
             "specifikacije": {
                 "Length (m)": "1",
                 "AWG": "17",
@@ -2673,7 +2957,8 @@
                 ],
                 "Dimensions incl. packaging (H x W x L)": "0.7 x 10 x 10 cm",
                 "Gross weight": "3g"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "CLASSIC 1 SC",
@@ -2686,7 +2971,6 @@
             "badge-ovi": [
                 "5.0"
             ],
-            "boje": [],
             "specifikacije": {
                 "AWG": "13",
                 "Conductors construction": "Multicore",
@@ -2697,7 +2981,8 @@
                 ],
                 "Dimensions (H x W x L)": "0.7 x 10 x 10 cm",
                 "Gross weight": "7g"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "PRIME 1 SC",
@@ -2710,7 +2995,6 @@
             "badge-ovi": [
                 "5.0"
             ],
-            "boje": [],
             "specifikacije": {
                 "AWG": "15",
                 "Conductors material": "99.9% Oxygen-Free Copper (OFC)",
@@ -2723,7 +3007,8 @@
                 ],
                 "Dimensions incl. packaging (H x W x L)": "0.7 x 10 x 10 cm",
                 "Gross weight": "6g"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "USB - ETHERNET",
@@ -2735,7 +3020,6 @@
             "opis": "Do you need a wired internet connection for your FORTE WIFI or SA2? Use ...",
             "link": "https://argonaudio.com/products/usb-ethernet-adapter",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Color": [
                     "White"
@@ -2743,7 +3027,8 @@
                 "Dimensions incl. packaging (H x W x L)": "2 x 10 x 16 cm",
                 "Net weight": "0.22kg",
                 "Gross weight": "0.22kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "CLASSIC USB-C",
@@ -2754,7 +3039,6 @@
             "opis": "A versatile USB-C to USB-C cable that supports fast charging, high-speed...",
             "link": "https://argonaudio.com/products/classic-usb-c",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Length (m)": [
                     "1",
@@ -2774,7 +3058,8 @@
                 "Dimensions incl. packaging (H x W x L)": "12 x 20.5 x 3 cm",
                 "Net weight": "0.14g",
                 "Gross weight": "0.15kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "FORTE SUBWOOFER CONNECT KIT",
@@ -2785,8 +3070,8 @@
             "opis": "This kit provides everything you need to connect your MALMÖ SUB to your ...",
             "link": "https://argonaudio.com/products/forte-subwoofer-connect-kit",
             "badge-ovi": [],
-            "boje": [],
-            "specifikacije": {}
+            "specifikacije": {},
+            "variants": []
         },
         {
             "naziv": "FENRIS / SA SUBWOOFER CONNECT KIT",
@@ -2797,8 +3082,8 @@
             "opis": "Everything you need to connect your MALMÖ SUB to FENRIS active speakers ...",
             "link": "https://argonaudio.com/products/fenris-subwoofer-connect-kit",
             "badge-ovi": [],
-            "boje": [],
-            "specifikacije": {}
+            "specifikacije": {},
+            "variants": []
         }
     ],
     "Speaker accessories": [
@@ -2820,7 +3105,6 @@
             "badge-ovi": [
                 "4.7"
             ],
-            "boje": [],
             "specifikacije": {
                 "Type": "Stand",
                 "Weight capacity": "10kg",
@@ -2837,7 +3121,8 @@
                 "Dimensions incl. packaging (H x W x L)": "68.0 x 26.5 x 34.0 cm",
                 "Net weight": "3kg",
                 "Gross weight": "4kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "DESKTOP STANDS",
@@ -2857,7 +3142,6 @@
             "badge-ovi": [
                 "4.9"
             ],
-            "boje": [],
             "specifikacije": {
                 "Type": "Stand",
                 "Top Plate (W x D)": "12.2 x 18.0 cm",
@@ -2872,7 +3156,8 @@
                 "Dimensions incl. packaging (H x W x L)": "23 x 22 x 17.5 cm",
                 "Net weight": "2kg",
                 "Gross weight": "3.2kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "STEL WALL",
@@ -2891,7 +3176,6 @@
             "badge-ovi": [
                 "4.5"
             ],
-            "boje": [],
             "specifikacije": {
                 "Type": "Shelf",
                 "Weight capacity": "10kg",
@@ -2909,7 +3193,8 @@
                 "Dimensions incl. packaging (H x W x L)": "18 x 17,5 x 28 cm",
                 "Net weight": "1.1kg",
                 "Gross weight": "1.18kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "STATIV WALL",
@@ -2929,7 +3214,6 @@
             "badge-ovi": [
                 "4.7"
             ],
-            "boje": [],
             "specifikacije": {
                 "Type": "Shelf",
                 "Weight capacity": "10kg",
@@ -2944,7 +3228,8 @@
                 "Dimensions incl. packaging (H x W x L)": "14.5 x 22.5 x 27 cm",
                 "Net weight": "1.3kg",
                 "Gross weight": "2.3kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "STATIV 62",
@@ -2964,7 +3249,6 @@
             "badge-ovi": [
                 "4.6"
             ],
-            "boje": [],
             "specifikacije": {
                 "Type": "Stand",
                 "Weight capacity": "10kg",
@@ -2979,7 +3263,8 @@
                 "Dimensions incl. packaging (H x W x L)": "63 x 24 x 30 cm",
                 "Net weight": "8.8kg",
                 "Gross weight": "9.8kg"
-            }
+            },
+            "variants": []
         }
     ],
     "Turntable Accessories": [
@@ -2996,7 +3281,6 @@
             "opis": "Phono1 is a high-quality phono (MM) pre-amp to put between your turntabl...",
             "link": "https://argonaudio.com/products/phono1-riaa-pre-amp",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Inputs audio": "Analogue RCA",
                 "Outputs": "Stereo line-out (analog RCA)",
@@ -3014,7 +3298,8 @@
                 "Gross weight": "500g",
                 "Power consumption (w)": "0.4",
                 "Manual": "support.nordichifi.com/articles/196-manual-argon-audio-phono1"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "TT VINYL KIT 10",
@@ -3028,7 +3313,6 @@
             "opis": "Provides all the tools you need to care for your records and ensure premium sound quality.",
             "link": "https://argonaudio.com/products/vinyl-kit-1",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Additional Features": "Stylus Cleaner ingredients: Water 90.1%, Isopropanol 9.7%, DMDMH 0.2%",
                 "Included in the box": [
@@ -3043,7 +3327,8 @@
                 "Dimensions incl. packaging (H x W x L)": "17.2 x 17 x 6.3 cm",
                 "Net weight": "0.3kg",
                 "Gross weight": "0.52kg"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "TT VINYL KIT 20",
@@ -3057,7 +3342,6 @@
             "opis": "The ultimate solution for keeping your records pristine and your sound crystal-clear.",
             "link": "https://argonaudio.com/products/vinyl-kit-2",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Included in the box": [
                     "Brush 2",
@@ -3070,7 +3354,8 @@
                 "Dimensions incl. packaging (H x W x L)": "35 x 12.4 x 6.8 cm",
                 "Net weight": "0.4g",
                 "Gross weight": "0.41g"
-            }
+            },
+            "variants": []
         },
         {
             "naziv": "TT VINYL KIT 30",
@@ -3083,7 +3368,6 @@
             "opis": "Combines advanced tools to ensure your records stay flawless, your turntable performs at its peak, and your sound quality is unmatched.",
             "link": "https://argonaudio.com/products/vinyl-kit-3",
             "badge-ovi": [],
-            "boje": [],
             "specifikacije": {
                 "Included in the box": [
                     "Stabilizer 330",
@@ -3098,7 +3382,8 @@
                 "Dimensions incl. packaging (H x W x L)": "22 x 25.5 x 6 cm",
                 "Net weight": "432g",
                 "Gross weight": "735g"
-            }
+            },
+            "variants": []
         }
     ]
 }
