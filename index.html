@@ -1,9 +1,10 @@
 <!DOCTYPE ahtml>
 <!--
 CHANGELOG
-v0.40.0 (2025-08-14)
-- Ispravljeno: Preuzimanje slika za Argon proizvode sada ispravno čita listu slika iz polja 'images', umjesto samo iz 'slika_url'. Kôd sada podržava obje strukture.
-- Ostale funkcionalnosti (konverzija valuta, filteri, sortiranje, galerija slika) su zadržane.
+v0.44.0 (2025-08-14)
+- Ažurirano: Stil dugmeta 'Pogledaj [brend]' je promijenjen u dugme s crnim okvirom i crnim tekstom.
+- Ažurirano: Efekat prelaska mišem (hover) na dugmetu 'Pogledaj [brend]' je također ažuriran.
+- Ostale funkcionalnosti (konverzija valuta, filteri, sortiranje, galerija slika, modal za boje) su zadržane.
 -->
 <html lang="hr">
 <head>
@@ -107,25 +108,53 @@ nav button:hover { background: #999; }
 .collapsible-content.expanded {
     max-height: 1000px; /* Dovoljno velika vrijednost */
 }
+/* Ažurirani stilovi za dugme 'link-button' */
 .link-button {
   display: inline-block;
-  background: var(--accent);
-  color: #fff;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
   padding: 0.6rem 1rem;
   text-decoration: none;
   border-radius: 4px;
   text-align: center;
   margin-top: auto; /* Premješta dugme na dno kartice */
-  transition: background-color 0.2s;
+  transition: all 0.2s ease-in-out;
   width: 100%;
 }
-.link-button:hover { background: var(--accent-hover); }
+.link-button:hover {
+  background: var(--ink);
+  color: #fff;
+}
 .features-list, .specs-list { padding-left: 0; list-style: none; }
 .features-list li { margin-bottom: 0.5rem; }
 .specs-list dt { font-weight: bold; color: var(--ink-muted); margin-top: 0.6rem; }
 .specs-list dd { margin-left: 1em; margin-bottom: 0.2rem; word-wrap: break-word; }
 .specs pre { white-space: pre-wrap; word-break: break-all; background: #f0f0f0; padding: 5px; border-radius: 3px; font-size: 0.9em; }
 .rating-stars { color: gold; font-size: 1.1em; margin-left: 0.5em; }
+.color-swatch-list {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+.color-swatch-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.color-swatch {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer; /* Dodajte kursor za klik */
+}
 @media (max-width: 600px) {
   .filters { flex-direction: column; }
   nav { flex-direction: column; }
@@ -187,7 +216,7 @@ nav button:hover { background: #999; }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.40.0</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.44.0</span>
   </h1>
 </header>
 
@@ -237,7 +266,7 @@ nav button:hover { background: #999; }
 </div>
 
 <script>
-const APP_VERSION = "0.40.0";
+const APP_VERSION = "0.44.0";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 const KM_CONVERSION_RATE = 1.95583;
@@ -408,7 +437,7 @@ function renderList(items) {
     const cardId = `card-${index}`;
 
     // Ažurirana lista ključeva koji se ne prikazuju kao 'ostali podaci'
-    const processedKeys = new Set(['slika_url', 'image', 'images', 'naziv', 'name', 'opis', 'tagline', 'description', 'cijena', 'price', 'eur_price', 'link', 'specifications', 'features', 'badge-ovi', 'bedz', 'brend', 'id', 'categories', 'specifikacije', 'boje', 'images_urls']);
+    const processedKeys = new Set(['slika_url', 'image', 'images', 'naziv', 'name', 'opis', 'tagline', 'description', 'cijena', 'price', 'eur_price', 'link', 'specifications', 'features', 'badge-ovi', 'bedz', 'brend', 'id', 'categories', 'specifikacije', 'boje', 'images_urls', 'variants']);
     let cardContent = '';
 
     const imageUrls = prod.images_urls.filter(Boolean);
@@ -482,12 +511,43 @@ function renderList(items) {
         cardContent += `</dl></div>`;
     }
     
-    if (prod.boje && prod.boje.length > 0) {
+    // NOVI I POBOLJŠANI KOD za prikaz varijacija boja
+    const variants = prod.variants;
+    const boje = prod.boje;
+
+    if (variants && Array.isArray(variants) && variants.length > 0) {
         const colorsId = `boje-${cardId}`;
         cardContent += `<h4 onclick="document.getElementById('${colorsId}').classList.toggle('expanded'); this.classList.toggle('expanded');">Boje</h4>
                         <div id="${colorsId}" class="collapsible-content">
-                            <p>${prod.boje.join(', ')}</p>
-                        </div>`;
+                            <ul class="color-swatch-list">`;
+        variants.forEach(variant => {
+            cardContent += `<li>`;
+            if (variant.swatch_url) {
+                const isImageUrl = variant.swatch_url.startsWith('http');
+                const backgroundStyle = isImageUrl
+                    ? `background-image: url('${variant.swatch_url}');`
+                    : `background: ${variant.swatch_url};`;
+                
+                // Dodavanje onclick eventa za otvaranje slike u modalu
+                const clickHandler = isImageUrl
+                    ? `onclick="openFullscreenImage(['${variant.swatch_url}'], 0)"`
+                    : '';
+                
+                cardContent += `<div class="color-swatch" style="${backgroundStyle}" title="${variant.name}" ${clickHandler}></div>`;
+            }
+            cardContent += `<span>${variant.name}</span></li>`;
+        });
+        cardContent += `</ul></div>`;
+    } else if (boje && Array.isArray(boje) && boje.length > 0) {
+        // Fallback na stari format
+        const colorsId = `boje-${cardId}`;
+        cardContent += `<h4 onclick="document.getElementById('${colorsId}').classList.toggle('expanded'); this.classList.toggle('expanded');">Boje</h4>
+                        <div id="${colorsId}" class="collapsible-content">
+                            <ul class="color-swatch-list">`;
+        boje.forEach(colorName => {
+            cardContent += `<li><span>${colorName}</span></li>`;
+        });
+        cardContent += `</ul></div>`;
     }
 
     let hasOtherData = false;
@@ -508,7 +568,8 @@ function renderList(items) {
     otherDataContent += '</dl>';
 
     if (hasOtherData) {
-        cardContent += `<h4>Ostali podaci</h4>` + otherDataContent;
+        cardContent += `<h4 onclick="this.nextElementSibling.classList.toggle('expanded'); this.classList.toggle('expanded');">Ostali podaci</h4>
+                        <div class="collapsible-content">` + otherDataContent + `</div>`;
     }
 
     // Premještanje linka na dno kartice
