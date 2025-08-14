@@ -3,8 +3,7 @@
         {
             "naziv": "FENRIS A4",
             "cijena": "Sale price369 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFENRISA4ASH_O_1_ab3050fb-09ed-4f27-a7e2-dc5d62c90aaf.jpg?v=1744803457&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFENRISA4ASH_O_1_ab3050fb-09ed-4f27-a7e2-dc5d62c90aaf.jpg?v=1744803457&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFENRISA4ASH_O_2.jpg?v=1744803457&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFENRISA4BK_O_1_702a3e7b-b1af-4fbc-b25a-5d909b23c124.jpg?v=1744803457&width=1400",
@@ -77,8 +76,7 @@
         {
             "naziv": "FENRIS A5",
             "cijena": "Sale price429 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGFENRISA5BK_O_1.jpg?v=1692775229&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGFENRISA5WH_O_1.jpg?v=1639663295&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFENRISA5WH_O_2.jpg?v=1639663295&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFENRISA5BK_O_1.jpg?v=1692775229&width=1400",
@@ -156,8 +154,7 @@
         {
             "naziv": "FORTE A5 MK2",
             "cijena": "Sale price649 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGFORTEA5MK2WH_O_1.jpg?v=1692777245&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGFORTEA5MK2BK_O_1.jpg?v=1666790080&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFORTEA5MK2BK_O_2.jpg?v=1666790080&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFORTEA5MK2BK_O_3.jpg?v=1666790080&width=1400",
@@ -232,8 +229,7 @@
         {
             "naziv": "FORTE A4 MK2",
             "cijena": "Sale price549 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGFORTEA4MK2BK_O_1.jpg?v=1694178932&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGFORTEA4MK2WH_O_1.jpg?v=1694178932&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFORTEA4MK2WH_O_2.jpg?v=1694178932&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFORTEA4MK2WH_O_3.jpg?v=1694178932&width=1400",
@@ -308,8 +304,7 @@
         {
             "naziv": "FENRIS A55",
             "cijena": "Sale price799 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGFENRISA55WH_O_1.jpg?v=1692775396&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGFENRISA55BK_O_1.jpg?v=1640099848&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFENRISA55BK_O_2.jpg?v=1640099848&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFENRISA55WH_O_1.jpg?v=1692775396&width=1400",
@@ -378,8 +373,7 @@
         {
             "naziv": "FORTE A55 MK2",
             "cijena": "Sale price1.099 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGFORTEA55MK2WA_O_1.jpg?v=1694178921&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGFORTEA55MK2WA_O_1.jpg?v=1694178921&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFORTEA55MK2WA_O_2.jpg?v=1694178921&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGFORTEA55MK2WA_O_3.jpg?v=1717411038&width=1400",
@@ -461,8 +455,7 @@
         {
             "naziv": "FORTE A5 WIFI",
             "cijena": "Sale price799 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORTEA5XXBK_O_1.jpg?v=1743602722&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEA5BLWIFI_O_01.jpg?v=1743602723&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEA5BLWIFI_O_02.jpg?v=1743602722&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEA5BLWIFI_O_03.jpg?v=1743602722&width=1400",
@@ -544,8 +537,7 @@
         {
             "naziv": "FORTE A4 WIFI",
             "cijena": "Sale price699 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORTEA4BLWIFI_O_01_b5c9fdea-0d1a-4832-b08b-dbe19f8145ae.jpg?v=1743602858&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEA4XXBK_O_1.jpg?v=1743602858&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEA4XXBK_O_2.jpg?v=1743602859&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEA4XXWH_O_1.jpg?v=1743602858&width=1400",
@@ -631,8 +623,7 @@
         {
             "naziv": "FORTE A55 WIFI",
             "cijena": "Sale priceFrom 1.299 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORTEA55WIFIWA_O_1.jpg?v=1743619706&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEA55XXBK_O_1.jpg?v=1743619706&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEA55XXBK_O_2.jpg?v=1743619706&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEA55XXWH_O_1.jpg?v=1743619706&width=1400",
@@ -715,8 +706,7 @@
         {
             "naziv": "STUDIE 3",
             "cijena": "Sale price429 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGSTUDIE3BK_O_1.jpg?v=1730970141&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGSTUDIE3BK_O_1.jpg?v=1730970141&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGSTUDIE3BK_O_2.jpg?v=1730970140&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGSTUDIE3BK_O_3.jpg?v=1730970141&width=1400",
@@ -791,8 +781,7 @@
         {
             "naziv": "FORUS 4",
             "cijena": "Sale price198 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORUS4BK_O_01.jpg?v=1744802625&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS4WH_O_01.jpg?v=1744802624&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS4WH_O_02.jpg?v=1744802625&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS4WH_O_03.jpg?v=1744802625&width=1400",
@@ -855,8 +844,7 @@
         {
             "naziv": "FORUS 5",
             "cijena": "Sale price258 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORUS5BK_O_01.jpg?v=1700059291&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS5WA_O_01.jpg?v=1700059291&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS5WA_O_02.jpg?v=1700059291&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS5WA_O_03.jpg?v=1700059291&width=1400",
@@ -922,8 +910,7 @@
         {
             "naziv": "FORUS CENTER",
             "cijena": "Sale price159 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORUSCBK_O_01.jpg?v=1700061303&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORUSCWA_O_01.jpg?v=1700061303&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUSCWA_O_02.jpg?v=1700061303&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUSCWA_O_03.jpg?v=1700061303&width=1400",
@@ -984,8 +971,7 @@
         {
             "naziv": "FORUS 55",
             "cijena": "Sale price598 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORUS55BK_O_01.jpg?v=1700059850&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS55BK_O_01.jpg?v=1700059850&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS55BK_O_02.jpg?v=1700059850&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS55BK_O_03.jpg?v=1700216912&width=1400",
@@ -1046,8 +1032,7 @@
         {
             "naziv": "FORUS 4 WALL",
             "cijena": "Sale price298 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORUS4WBK_O_01.jpg?v=1700059427&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS4WBK_O_01.jpg?v=1700059427&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS4WBK_O_02.jpg?v=1700059427&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS4WWA_O_01.jpg?v=1700059427&width=1400",
@@ -1114,8 +1099,7 @@
         {
             "naziv": "FORUS 5 WALL",
             "cijena": "Sale price398 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORUS5WBK_O_01.jpg?v=1700059486&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS5WWH_O_01.jpg?v=1700059486&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS5WWH_O_02.jpg?v=1700059486&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGFORUS5WBK_O_01.jpg?v=1700059486&width=1400",
@@ -1170,8 +1154,7 @@
         {
             "naziv": "SA1 MK2",
             "cijena": "Sale price369 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGSA1MK2BK_O_1.jpg?v=1714717385&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGSA1MK2BK_O_1.jpg?v=1714717385&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGSA1MK2BK_O_2.jpg?v=1714717385&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGSA1MK2BK_O_3.jpg?v=1714717385&width=1400",
@@ -1249,8 +1232,7 @@
         {
             "naziv": "SA2",
             "cijena": "Sale price499 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGSA2BK_O_1.jpg?v=1716285216&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGSA2BK_O_1.jpg?v=1716285216&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGSA2BK_O_2.jpg?v=1716285215&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGSA2BK_O_3.jpg?v=1716285215&width=1400",
@@ -1343,8 +1325,7 @@
         {
             "naziv": "SA1 MK2 + FORUS 4",
             "cijena": "Sale price502 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGSA1BK_ARGFORUS4BK.jpg?v=1734525228&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGSA1MK2WH_ARGFORUS4WH_O_2.jpg?v=1751960849&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGSA1MK2WH_ARGFORUS4WH_O_1.jpg?v=1751960849&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGSA1WH_ARGFORUS4WH.jpg?v=1734525228&width=1400",
@@ -1383,8 +1364,7 @@
         {
             "naziv": "SOLO",
             "cijena": "Sale price199 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGSOLOBK_O_1.jpg?v=1639663752&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGSOLOBK_O_1.jpg?v=1639663752&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGSOLOBK_O_2.jpg?v=1639663752&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGSOLOBK_O_3.jpg?v=1639663752&width=1400",
@@ -1458,8 +1438,7 @@
         {
             "naziv": "STREAM 2 MK3",
             "cijena": "Sale price229 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGSTREAM2MMK2BK_A_1.jpg?v=1624266412&width=1280",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGSTREAM2MMK2BK_A_1.jpg?v=1624266412&width=1200",
                 "https://argonaudio.com/cdn/shop/products/ARGSTREAM2MMK2BK_A_2.jpg?v=1624266412&width=1200",
                 "https://argonaudio.com/cdn/shop/products/ARGSTREAM2MMK2BK_A_3.jpg?v=1624266412&width=1200",
@@ -1512,8 +1491,7 @@
         {
             "naziv": "STREAM 3 MK2",
             "cijena": "Sale price269 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGSTREAM3M_1.jpg?v=1623675540&width=1227",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGSTREAM3M_1.jpg?v=1623675540&width=1200",
                 "https://argonaudio.com/cdn/shop/products/ARGSTREAM3M_3.jpg?v=1623675540&width=1200",
                 "https://argonaudio.com/cdn/shop/products/ARGSTREAM3M_4.jpg?v=1623675540&width=1000"
@@ -1579,8 +1557,7 @@
         {
             "naziv": "TT MK2",
             "cijena": "Sale price269 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGTTMK2EAGR_O_04.jpg?v=1725522314&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGTTMK2BK_O_04.jpg?v=1725522313&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTTMK2BK_O_03.jpg?v=1725522313&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTTMK2BK_O_02.jpg?v=1725522314&width=1400",
@@ -1701,8 +1678,7 @@
         {
             "naziv": "TT-3",
             "cijena": "Sale price399 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGTT3ASH_1.jpg?v=1707728921&width=2048",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGTT3ASH_1.jpg?v=1707728921&width=2000",
                 "https://argonaudio.com/cdn/shop/products/ARGTT3ASH_2_1.jpg?v=1707728921&width=2000",
                 "https://argonaudio.com/cdn/shop/products/ARGTT3ASH_6.jpg?v=1707728921&width=2000",
@@ -1774,8 +1750,7 @@
         {
             "naziv": "TT-3 PLUS",
             "cijena": "Sale price529 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGTT3PLUSWA_O_01.jpg?v=1727357705&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGTT3PLUSBK_O_01.jpg?v=1727357705&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTT3PLUSBK_O_02.jpg?v=1727357705&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTT3PLUSBK_O_03.jpg?v=1727357706&width=1400",
@@ -1856,8 +1831,7 @@
         {
             "naziv": "TT-4 MK2",
             "cijena": "Sale price799 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGTT4MK2WA_O_01_47080579-21ee-4dfb-bec4-6253632221f7.jpg?v=1751880363&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGTT4MK2WA_O_01_47080579-21ee-4dfb-bec4-6253632221f7.jpg?v=1751880363&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTT4MK2WA_O_02_ede9b79e-e595-4d98-95bb-2786fe720144.jpg?v=1751880363&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTT4MK2WA_O_03_2dd76de2-3cfb-4901-8129-c7e3b4aeabae.jpg?v=1751880363&width=1400",
@@ -1943,8 +1917,7 @@
         {
             "naziv": "TT-4 SPECIAL EDITION",
             "cijena": "Sale price999 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGTT4SEHGBK_O_01.jpg?v=1743661523&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGTT4SEHGBK_O_01.jpg?v=1743661523&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTT4SEHGBK_O_02.jpg?v=1743661523&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTT4SEHGBK_O_03.jpg?v=1743661523&width=1400",
@@ -2012,8 +1985,7 @@
         {
             "naziv": "TT SIGNATURE",
             "cijena": "Sale price1.699 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGTTSDACH_O_01.jpg?v=1746434103&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGTTSDACH_O_01.jpg?v=1746434103&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTTSDACH_O_02.jpg?v=1746434104&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGTTSDACH_O_03.jpg?v=1746434104&width=1400",
@@ -2092,8 +2064,7 @@
         {
             "naziv": "MALMÖ SUB 6",
             "cijena": "Sale price269 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB6WH_O_1_37ea8404-b1c6-4e2a-81f4-6cba02fb1bed.jpg?v=1713862600&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB6BK_O_1_6d050b60-841e-4dc7-8e1a-489af1e55372.jpg?v=1713862601&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB6BK_O_2_ed3e395b-2268-457e-bdf0-603397d3db17.jpg?v=1713862601&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB6BK_O_3_52bc80e7-7d02-4398-8b17-de7de2b4bc2b.jpg?v=1713862601&width=1400",
@@ -2148,8 +2119,7 @@
         {
             "naziv": "MALMÖ SUB 10",
             "cijena": "Sale price469 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB10BK_O_01.jpg?v=1700059056&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB10WA_O_01.jpg?v=1700058632&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB10WA_O_02.jpg?v=1700059056&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB10WA_O_03.jpg?v=1700059056&width=1400",
@@ -2207,8 +2177,7 @@
         {
             "naziv": "MALMÖ SUB 8",
             "cijena": "Sale price399 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB8WA_O_01.jpg?v=1700059149&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB8WH_O_01.jpg?v=1700059149&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB8WH_O_02.jpg?v=1700059149&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGMALMOSUB8WH_O_03.jpg?v=1700059149&width=1400",
@@ -2271,8 +2240,7 @@
         {
             "naziv": "QUIET STORM",
             "cijena": "Sale price169 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGHPQUIETSTORMBK_O_1.jpg?v=1673259617&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGHPQUIETSTORMBK_O_1.jpg?v=1673259617&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGHPQUIETSTORMBK_O_2.jpg?v=1673259617&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGHPQUIETSTORMBK_O_3.jpg?v=1673259618&width=1400",
@@ -2345,8 +2313,7 @@
         {
             "naziv": "SOUL3",
             "cijena": "Sale price119 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGHPSOUL3BK_O_1.jpg?v=1689846890&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGHPSOUL3BK_O_1.jpg?v=1689846890&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGHPSOUL3BK_O_3.jpg?v=1689846890&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGHPSOUL3BK_O_2.jpg?v=1689846890&width=1400",
@@ -2415,8 +2382,7 @@
         {
             "naziv": "IE20",
             "cijena": "Sale price89 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGHPIE20_O_5_NEW.jpg?v=1704272020&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGHPIE20_O_5_NEW.jpg?v=1704272020&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGHPIE20_O_2_NEW.jpg?v=1704272020&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGHPIE20_O_4_NEW.jpg?v=1704272020&width=1400",
@@ -2488,8 +2454,7 @@
         {
             "naziv": "CLASSIC SUB",
             "cijena": "Sale priceFrom 39 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSCL1SUB_O_1_0f6127ed-2a0e-4321-9760-879d2d4bd674.jpg?v=1734428412&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSCL1SUB_O_1_0f6127ed-2a0e-4321-9760-879d2d4bd674.jpg?v=1734428412&width=1400"
             ],
             "opis": "The Classic SUB is an ultra-compact subwoofer cable, just 2.6 mm thick. ...",
@@ -2511,8 +2476,7 @@
         {
             "naziv": "CLASSIC RCA",
             "cijena": "Sale priceFrom 35 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSCL1IN_O_1.jpg?v=1698400709&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSCL1IN_O_1.jpg?v=1698400709&width=1400"
             ],
             "opis": "The Classic RCA cable is highly flexible, easy to use, and features gold...",
@@ -2535,8 +2499,7 @@
         {
             "naziv": "FORTE CONNECT",
             "cijena": "Sale priceFrom 25 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFORTEACABLE_56756847-b97b-4f8b-aa44-01833cd2cd02.jpg?v=1751605230&width=2000",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFORTEACABLE_56756847-b97b-4f8b-aa44-01833cd2cd02.jpg?v=1751605230&width=2000",
                 "https://argonaudio.com/cdn/shop/files/ARGFORTECBL6MWH_O_1_e6b3fb3b-a4dd-4c4f-be97-5f5e97b62234.jpg?v=1751605229&width=1400"
             ],
@@ -2563,8 +2526,7 @@
         {
             "naziv": "CLASSIC OPTICAL",
             "cijena": "Sale priceFrom 25 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSCL1OPT_O_1_804b1fce-bbcb-4f5d-93ec-23d7d4976db2.jpg?v=1734428397&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSCL1OPT_O_1_804b1fce-bbcb-4f5d-93ec-23d7d4976db2.jpg?v=1734428397&width=1400"
             ],
             "opis": "The Classic Optical cable offers excellent build quality for noise-free ...",
@@ -2583,8 +2545,7 @@
         {
             "naziv": "CLASSIC MINIJACK - RCA",
             "cijena": "Sale priceFrom 25 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSCL1MJIN_O_1.jpg?v=1698403857&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSCL1MJIN_O_1.jpg?v=1698403857&width=1400"
             ],
             "opis": "Classic MJIN is a durable, high-quality cable with extra-short, gold-pla...",
@@ -2607,8 +2568,7 @@
         {
             "naziv": "FENRIS CONNECT",
             "cijena": "Sale priceFrom 19 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGFENRISCBLAN6MBK_O_1.jpg?v=1707981072&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGFENRISCBLAN6MBK_O_1.jpg?v=1707981072&width=1400"
             ],
             "opis": "Longer speaker cables for the FENRIS-series of speakers.Designed for use...",
@@ -2630,8 +2590,7 @@
         {
             "naziv": "BASIC HDMI",
             "cijena": "Sale priceFrom 17 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSBA1HDMIBK_O_1_656f187f-7e2f-45ae-b579-8aa55e88a6cf.jpg?v=1734428137&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSBA1HDMIBK_O_1_656f187f-7e2f-45ae-b579-8aa55e88a6cf.jpg?v=1734428137&width=1400"
             ],
             "opis": "Basic HDMI is an affordable high-speed HDMI cable that supports a wide r...",
@@ -2670,8 +2629,7 @@
         {
             "naziv": "CLASSIC Y-SPLIT",
             "cijena": "Sale price19 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSCL1YSPLIT2F1M_O_1.jpg?v=1728628651&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSCL1YSPLIT2F1M_O_1.jpg?v=1728628651&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSCL1YSPLIT2M1F_O_1.jpg?v=1728628650&width=1400"
             ],
@@ -2695,8 +2653,7 @@
         {
             "naziv": "BASIC 1 SC",
             "cijena": "Sale price5 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSBA1SC_O_1_380effca-2b4e-416b-bd32-20850da2e13c.jpg?v=1743670892&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSBA1SC_O_1_380effca-2b4e-416b-bd32-20850da2e13c.jpg?v=1743670892&width=1400"
             ],
             "opis": "A discreet and highly functional speaker cable, its flat and compact des...",
@@ -2721,8 +2678,7 @@
         {
             "naziv": "CLASSIC 1 SC",
             "cijena": "Sale price7 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSCL1SC_O_1.jpg?v=1698408149&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSCL1SC_O_1.jpg?v=1698408149&width=1400"
             ],
             "opis": "With solid construction and powerful conductors, this cable preserves th...",
@@ -2746,8 +2702,7 @@
         {
             "naziv": "PRIME 1 SC",
             "cijena": "Sale price15 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSPR1SC_O_1.jpg?v=1698408147&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSPR1SC_O_1.jpg?v=1698408147&width=1400"
             ],
             "opis": "Elegant and flexible, this cable features single conductors that are sil...",
@@ -2773,8 +2728,7 @@
         {
             "naziv": "USB - ETHERNET",
             "cijena": "Sale price25 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ARGUEADAPTERWH_O_1.jpg?v=1732278038&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ARGUEADAPTERWH_O_1.jpg?v=1732278038&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ARGUEADAPTERWH_O_2.jpg?v=1732278038&width=1400"
             ],
@@ -2794,8 +2748,7 @@
         {
             "naziv": "CLASSIC USB-C",
             "cijena": "Sale priceFrom 20 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/USBCL1USBCC_O_1.jpg?v=1734428432&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/USBCL1USBCC_O_1.jpg?v=1734428432&width=1400"
             ],
             "opis": "A versatile USB-C to USB-C cable that supports fast charging, high-speed...",
@@ -2826,8 +2779,7 @@
         {
             "naziv": "FORTE SUBWOOFER CONNECT KIT",
             "cijena": "Sale priceFrom 52 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSCL1SUB_ESSCLYSPLIT.jpg?v=1732285198&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSCL1SUB_ESSCLYSPLIT.jpg?v=1732285198&width=1400"
             ],
             "opis": "This kit provides everything you need to connect your MALMÖ SUB to your ...",
@@ -2839,8 +2791,7 @@
         {
             "naziv": "FENRIS / SA SUBWOOFER CONNECT KIT",
             "cijena": "Sale priceFrom 28 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSCL1IN_O_1.jpg?v=1698400709&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSCL1IN_O_1.jpg?v=1698400709&width=1400"
             ],
             "opis": "Everything you need to connect your MALMÖ SUB to FENRIS active speakers ...",
@@ -2854,8 +2805,7 @@
         {
             "naziv": "STEL 57",
             "cijena": "Sale price169 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGSTELS57BK_O_1_d21d0b72-cd0b-4636-9535-8e1ab8809f25.jpg?v=1643209900&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGSTELS57BK_O_1_d21d0b72-cd0b-4636-9535-8e1ab8809f25.jpg?v=1643209900&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGSTELS57BK_O_2.jpg?v=1643209900&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGSTELS57BK_O_1.jpg?v=1643209900&width=1400",
@@ -2892,8 +2842,7 @@
         {
             "naziv": "DESKTOP STANDS",
             "cijena": "Sale price69 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSTABLESTAND1BK_O_1.jpg?v=1704723883&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSTABLESTAND1BK_O_1.jpg?v=1704723883&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSTABLESTAND1BK_O_2.jpg?v=1704723883&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSTABLESTAND1BK_O_4.jpg?v=1704723883&width=1400",
@@ -2928,8 +2877,7 @@
         {
             "naziv": "STEL WALL",
             "cijena": "Sale price40 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGSTELWBK_O_1_92b141e4-8567-40d3-a747-0813a9c82827.jpg?v=1643209917&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGSTELWBK_O_1_92b141e4-8567-40d3-a747-0813a9c82827.jpg?v=1643209917&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGSTELWBK_O_2.jpg?v=1643209917&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGSTELWBK_O_1.jpg?v=1643209917&width=1400",
@@ -2966,8 +2914,7 @@
         {
             "naziv": "STATIV WALL",
             "cijena": "Sale price80 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGSTATIVWBK_O_1_92499dfc-ad92-43d4-88bc-8f15e157fa87.jpg?v=1643209936&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGSTATIVWBK_O_1_92499dfc-ad92-43d4-88bc-8f15e157fa87.jpg?v=1643209936&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSSTATIVWBK_O_1.jpg?v=1698406947&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSSTATIVWBK_O_2.jpg?v=1698406947&width=1400",
@@ -3002,8 +2949,7 @@
         {
             "naziv": "STATIV 62",
             "cijena": "Sale price220 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGSTATIVS62BK_O_1_d6164f04-107a-4863-a171-4c891f6c4736.jpg?v=1643209926&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGSTATIVS62BK_O_1_d6164f04-107a-4863-a171-4c891f6c4736.jpg?v=1643209926&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSSTATIVS62BK_O_1.jpg?v=1698407094&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSSTATIVS62BK_O_2.jpg?v=1698407094&width=1400",
@@ -3040,8 +2986,7 @@
         {
             "naziv": "PHONO1",
             "cijena": "Sale price99 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/products/ARGPHONO1BK_A_1.jpg?v=1623678272&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/products/ARGPHONO1BK_A_1.jpg?v=1623678272&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGPHONO1BK_A_2.jpg?v=1623678272&width=1400",
                 "https://argonaudio.com/cdn/shop/products/ARGPHONO1BK_A_3.jpg?v=1623678272&width=1400",
@@ -3074,8 +3019,7 @@
         {
             "naziv": "TT VINYL KIT 10",
             "cijena": "Sale price39 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT10_O_2.jpg?v=1732196007&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT10_O_2.jpg?v=1732196007&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT10_O_1.jpg?v=1732196007&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT10_O_4.jpg?v=1732196007&width=1400",
@@ -3104,8 +3048,7 @@
         {
             "naziv": "TT VINYL KIT 20",
             "cijena": "Sale price69 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT20_O_1.jpg?v=1732196158&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT20_O_1.jpg?v=1732196158&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT20_O_2.jpg?v=1732196157&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSTTVINYLKIT20_O_4.jpg?v=1732196158&width=1400",
@@ -3132,8 +3075,7 @@
         {
             "naziv": "TT VINYL KIT 30",
             "cijena": "Sale price99 €",
-            "glavna_slika": "https://argonaudio.com/cdn/shop/files/ESSTVINYLKIT30_O_1.jpg?v=1732196276&width=1500",
-            "galerija_slika": [
+            "images": [
                 "https://argonaudio.com/cdn/shop/files/ESSTVINYLKIT30_O_1.jpg?v=1732196276&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSTVINYLKIT30_O_2.jpg?v=1732196275&width=1400",
                 "https://argonaudio.com/cdn/shop/files/ESSTVINYLKIT30_O_3.jpg?v=1732196275&width=1400"
