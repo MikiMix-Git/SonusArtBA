@@ -126,7 +126,7 @@ def scrape_marantz_to_json():
 
 def scrape_product_details(product_url, category_name):
     """
-    Dohvata specifikacije, opis, i sada sve slike sa stranice pojedinog proizvoda,
+    Dohvata specifikacije, opis i sve slike sa stranice pojedinog proizvoda,
     formatirajući ih u detaljan rečnik.
     """
     try:
@@ -162,19 +162,14 @@ def scrape_product_details(product_url, category_name):
         
         product_price_selector = 'div.price .value'
         price_element = soup.select_one(product_price_selector)
-        price = "Cena nije definisana"
-        if price_element:
-            price_text = price_element.get_text(strip=True)
-            # Ukloni simbol valute i sve nakon decimalne tačke
-            if '.' in price_text:
-                price_text = price_text.split('.')[0]
-            # Ukloni simbol valute i razmake
-            price_text = price_text.replace('$', '').strip()
-            # Zameni zarez za hiljade sa tačkom
-            price = price_text.replace(',', '.')
         
         # **AŽURIRANO**
-        # Revidovani selektori za pronalaženje svih slika na stranici.
+        # Čuvamo originalni string cene sa sajta.
+        price = "Cena nije definisana"
+        if price_element:
+            price = price_element.get_text(strip=True)
+        
+        # Revidirani selektori za pronalaženje svih slika na stranici.
         image_urls = []
         
         # Prvo pokušaj da pronađeš glavnu sliku preko og:image meta taga (najpouzdanije)
@@ -230,7 +225,7 @@ def scrape_product_details(product_url, category_name):
             "name": name,
             "tagline": tagline,
             "price": price,
-            "images": image_urls, # Vraća listu URL-ova slika
+            "images": image_urls,
             "description": description,
             "specifications": specifications,
             "features": features,
