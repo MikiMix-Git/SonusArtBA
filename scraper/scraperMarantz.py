@@ -6,13 +6,13 @@ import os
 
 def get_categories(main_url):
     """
-    Pronalazi i vraća rječnik URL-ova svih glavnih kategorija proizvoda na Marantz stranici.
+    Pronalazi i vraća rečnik URL-ova svih glavnih kategorija proizvoda na Marantz stranici.
     
     Args:
         main_url (str): Glavni URL Marantz web stranice (npr. 'https://www.marantz.com/en-us').
         
     Returns:
-        dict: Rječnik s imenima kategorija kao ključevima i njihovim URL-ovima kao vrijednostima.
+        dict: Rečnik s imenima kategorija kao ključevima i njihovim URL-ovima kao vrednostima.
     """
     categories = {}
     print(f"Traženje kategorija na glavnoj stranici: {main_url}")
@@ -22,30 +22,30 @@ def get_categories(main_url):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Ažurirani selektor koji je općenitiji i pouzdaniji.
-        # Traži sve linkove unutar 'header' taga koji sadrže '/category/' u svom href atributu.
         category_item_selector = 'header a[href*="/category/"]'
         
         category_items = soup.select(category_item_selector)
         
         if not category_items:
-            print("Nema pronađenih kategorija. Provjerite selektore.")
+            print("Nema pronađenih kategorija. Proverite selektore.")
             return categories
 
         for item in category_items:
             category_name = item.get_text(strip=True)
             link_url = item['href']
             
-            # Provjera da li link vodi na stranicu s kategorijom proizvoda i sprečavanje duplikata.
             if '/category/' in link_url and category_name not in categories:
-                full_link = "https://www.marantz.com" + link_url
+                if not link_url.startswith('http'):
+                    full_link = "https://www.marantz.com" + link_url
+                else:
+                    full_link = link_url
                 categories[category_name] = full_link
         
         print(f"Pronađene kategorije: {', '.join(categories.keys())}")
         return categories
     
     except RequestException as e:
-        print(f"Greška tijekom pristupa web resursu: {e}")
+        print(f"Greška tokom pristupa web resursu: {e}")
         return categories
     except Exception as e:
         print(f"Došlo je do nepredviđene greške: {e}")
@@ -54,8 +54,8 @@ def get_categories(main_url):
 
 def scrape_marantz_to_json():
     """
-    Prikuplja podatke iz više Marantz kategorija sa službene web stranice,
-    obrađuje ih i organizira u JSON strukturu, oponašajući format Argon Audio.
+    Prikuplja podatke iz više Marantz kategorija sa zvanične web stranice,
+    obrađuje ih i organizuje u JSON strukturu.
     """
     main_page_url = "https://www.marantz.com/en-us"
     categories = get_categories(main_page_url)
@@ -67,60 +67,67 @@ def scrape_marantz_to_json():
     all_products_data = []
 
     for category_name, list_url in categories.items():
-        print(f"\nIniciranje procesa ekstrakcije podataka za kategoriju: {category_name} sa domene: {list_url}")
+        print(f"\nIniciranje procesa ekstrakcije podataka za kategoriju: {category_name} sa domena: {list_url}")
         
-        # Selektori za listu proizvoda na stranici kategorije
-        product_tile_selector = 'div.product-tile-wrapper.plp-tile-wrapper'
-        product_link_selector = 'a.product-tile-link'
+        product_tile_selectors = [
+            'div.product-tile-wrapper.plp-tile-wrapper',
+            'div.product-list__item',
+            'div.product-tile',
+            'a.product-tile-wrapper'
+        ]
 
         try:
             response = requests.get(list_url)
             response.raise_for_status()
             
             soup = BeautifulSoup(response.text, 'html.parser')
-            product_tiles = soup.select(product_tile_selector)
+            
+            product_tiles = []
+            for selector in product_tile_selectors:
+                product_tiles.extend(soup.select(selector))
+                if product_tiles:
+                    break
             
             if not product_tiles:
-                print(f"Nema pronađenih kataloških artikala u kategoriji '{category_name}'. Provjerite selektore radi neusklađenosti.")
+                print(f"Nema pronađenih kataloških artikala u kategoriji '{category_name}'. Proverite selektore radi neusklađenosti.")
                 continue
 
-            print(f"Identificirano je {len(product_tiles)} proizvoda. Nastavlja se s detaljnom ekstrakcijom...")
+            print(f"Identifikovano je {len(product_tiles)} proizvoda. Nastavlja se s detaljnom ekstrakcijom...")
 
             for tile in product_tiles:
-                link_element = tile.select_one(product_link_selector)
+                link_element = tile.select_one('a.product-tile-link, a')
+                
                 if not link_element or 'href' not in link_element.attrs:
                     print(f"Upozorenje: Link proizvoda nije pronađen unutar pločice u kategoriji '{category_name}'. Preskačem.")
                     continue
 
                 product_link = "https://www.marantz.com" + link_element['href']
                 
-                # Prikupljanje sveobuhvatnih detalja sa stranice svakog proizvoda
                 product_data = scrape_product_details(product_link, category_name)
                 if product_data:
                     all_products_data.append(product_data)
         
         except RequestException as e:
-            print(f"Kritična greška tijekom pristupa web resursu: {e}")
+            print(f"Kritična greška tokom pristupa web resursu: {e}")
         except Exception as e:
             print(f"Došlo je do nepredviđene greške: {e}")
     
-    # Perzistentno pohranjivanje podataka u JSON format
     output_filename = "marantz_all_products.json"
     if all_products_data:
         with open(output_filename, "w", encoding="utf-8") as f:
             json.dump(all_products_data, f, indent=4, ensure_ascii=False)
             
-        print(f"\nOperacija uspješno završena. {len(all_products_data)} artikala je zabilježeno u datoteci: {output_filename}.")
+        print(f"\nOperacija uspešno završena. {len(all_products_data)} artikala je zabeleženo u datoteci: {output_filename}.")
     else:
         print("\nNijedan proizvod nije pronađen. Kreiranje datoteke je preskočeno.")
     
-    print("Proces preuzimanja podataka je finaliziran.")
+    print("Proces preuzimanja podataka je finalizovan.")
 
 
 def scrape_product_details(product_url, category_name):
     """
-    Dohvaća specifikacije i opis sa stranice pojedinog proizvoda,
-    formatirajući ih u detaljan rječnik koji odgovara Argon Audio stilu.
+    Dohvata specifikacije, opis, i sada sve slike sa stranice pojedinog proizvoda,
+    formatirajući ih u detaljan rečnik.
     """
     try:
         print(f"Pristupanje stranici: {product_url}")
@@ -129,7 +136,6 @@ def scrape_product_details(product_url, category_name):
         
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # Pokušava pronaći naziv proizvoda koristeći više selektora radi pouzdanosti.
         name = "Naziv nedostupan"
         name_selectors = ['h1.product-hero__product-name', 'h1.product-name', 'h1.product-hero__title', 'div.product-hero__header h1']
         for selector in name_selectors:
@@ -138,7 +144,6 @@ def scrape_product_details(product_url, category_name):
                 name = name_element.get_text(strip=True)
                 break
         
-        # Ažurirani selektori za opis proizvoda
         description = "Opis nije dostupan"
         description_selectors = ['p.short-description', 'div.product-hero__product-description p']
         for selector in description_selectors:
@@ -147,7 +152,6 @@ def scrape_product_details(product_url, category_name):
                 description = description_element.get_text(strip=True)
                 break
         
-        # Ažurirani selektori za tagline proizvoda
         tagline = "Tagline nedostupan"
         tagline_selectors = ['p.product-tagline', 'div.product-tagline']
         for selector in tagline_selectors:
@@ -157,25 +161,45 @@ def scrape_product_details(product_url, category_name):
                 break
         
         product_price_selector = 'div.price .value'
+        price_element = soup.select_one(product_price_selector)
+        price = "Cena nije definisana"
+        if price_element:
+            price_text = price_element.get_text(strip=True)
+            # Ukloni simbol valute i sve nakon decimalne tačke
+            if '.' in price_text:
+                price_text = price_text.split('.')[0]
+            # Ukloni simbol valute i razmake
+            price_text = price_text.replace('$', '').strip()
+            # Zameni zarez za hiljade sa tačkom
+            price = price_text.replace(',', '.')
         
-        # Ažurirani selektori za sliku
-        image_url = "URL slike nedostupan"
-        image_selectors = ['div.product-hero__image-wrapper img', 'picture img.img-fluid']
-        for selector in image_selectors:
-            image_element = soup.select_one(selector)
-            if image_element and 'src' in image_element.attrs:
-                image_url = "https://www.marantz.com" + image_element['src']
-                break
+        # **AŽURIRANO**
+        # Revidovani selektori za pronalaženje svih slika na stranici.
+        image_urls = []
         
-        # Ažurirani selektori za specifikacije
+        # Prvo pokušaj da pronađeš glavnu sliku preko og:image meta taga (najpouzdanije)
+        meta_image = soup.select_one('meta[property="og:image"]')
+        if meta_image and meta_image.get('content'):
+            image_urls.append(meta_image.get('content'))
+
+        # Zatim pokušaj da pronađeš slike iz galerije ili glavnog bloka slika
+        image_elements = soup.select('div.product-hero__image-wrapper img, picture img.img-fluid, .product-gallery-item img, div.product-image-container img')
+        for img_element in image_elements:
+            image_src = img_element.get('src')
+            if image_src and image_src not in image_urls:
+                if not image_src.startswith('http'):
+                    full_url = "https://www.marantz.com" + image_src
+                else:
+                    full_url = image_src
+                image_urls.append(full_url)
+        
+        if not image_urls:
+            image_urls.append("URL slike nedostupan")
+
         specs_item_selector = 'ul.specifications-list li'
         spec_name_selector = 'span.name'
         spec_value_selector = 'span.value'
         
-        price_element = soup.select_one(product_price_selector)
-        price = price_element.get_text(strip=True) if price_element else "Cijena nije definirana"
-        
-        # Prikupljanje specifikacija s ažuriranim selektorima
         specifications = {}
         spec_items = soup.select(specs_item_selector)
         for item in spec_items:
@@ -186,24 +210,36 @@ def scrape_product_details(product_url, category_name):
                 spec_value = value_element.get_text(strip=True)
                 specifications[spec_name] = spec_value
         
-        # Generisanje jedinstvenog ID-a (može biti i naprednije)
-        product_id = product_url.split('/')[-1].replace('.html', '')
+        features = []
+        feature_blocks = soup.select('div.pdp-animated-feature')
+        for block in feature_blocks:
+            feature_title_element = block.select_one('a.btn-link')
+            feature_desc_element = block.select_one('p.p-regular')
+            if feature_title_element and feature_desc_element:
+                feature_title = feature_title_element.get_text(strip=True)
+                feature_desc = feature_desc_element.get_text(strip=True)
+                features.append({
+                    "title": feature_title,
+                    "description": feature_desc
+                })
 
-        # Strukturiranje izlaznih podataka za usklađenost s Argon Audio stilom
+        product_id = product_url.split('/')[-1].replace('.html', '').replace('?dwvar_', '')
+
         return {
             "id": product_id,
             "name": name,
             "tagline": tagline,
             "price": price,
-            "image": image_url,
+            "images": image_urls, # Vraća listu URL-ova slika
             "description": description,
             "specifications": specifications,
+            "features": features,
             "link": product_url,
             "categories": [category_name]
         }
 
     except RequestException as e:
-        print(f"Greška tijekom pristupa detaljima za {product_url}: {e}")
+        print(f"Greška tokom pristupa detaljima za {product_url}: {e}")
         return None
     except Exception as e:
         print(f"Došlo je do greške prilikom obrade detalja za {product_url}: {e}")
