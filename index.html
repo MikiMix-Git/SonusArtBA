@@ -1,8 +1,8 @@
 <!DOCTYPE ahtml>
 <!--
 CHANGELOG
-v0.39.0 (2025-08-14)
-- Ispravljeno: `eur_price` se više ne prikazuje u odjeljku "Ostali podaci" na kartici proizvoda. Ova interna varijabla je sada ispravno dodana u listu obrađenih ključeva.
+v0.40.0 (2025-08-14)
+- Ispravljeno: Preuzimanje slika za Argon proizvode sada ispravno čita listu slika iz polja 'images', umjesto samo iz 'slika_url'. Kôd sada podržava obje strukture.
 - Ostale funkcionalnosti (konverzija valuta, filteri, sortiranje, galerija slika) su zadržane.
 -->
 <html lang="hr">
@@ -187,7 +187,7 @@ nav button:hover { background: #999; }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.39.0</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.40.0</span>
   </h1>
 </header>
 
@@ -237,7 +237,7 @@ nav button:hover { background: #999; }
 </div>
 
 <script>
-const APP_VERSION = "0.39.0";
+const APP_VERSION = "0.40.0";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 const KM_CONVERSION_RATE = 1.95583;
@@ -336,13 +336,18 @@ function sourceItems() {
       return items.map(p => ({
         ...p,
         brend: "Argon",
-        images_urls: (p.slika_url && p.slika_url.trim() !== '') ? [p.slika_url] : []
+        // Ažurirana logika za preuzimanje slika
+        images_urls: (p.images && Array.isArray(p.images) && p.images.length > 0) 
+            ? p.images 
+            : ((p.slika_url && p.slika_url.trim() !== '') ? [p.slika_url] : [])
       }));
     }
     return (allProducts.Argon?.[cat] || []).map(p => ({
       ...p,
       brend: "Argon",
-      images_urls: (p.slika_url && p.slika_url.trim() !== '') ? [p.slika_url] : []
+      images_urls: (p.images && Array.isArray(p.images) && p.images.length > 0) 
+            ? p.images 
+            : ((p.slika_url && p.slika_url.trim() !== '') ? [p.slika_url] : [])
     }));
   }
   if (brand === "Marantz") {
@@ -650,9 +655,13 @@ Promise.all([
   });
   
   const processedArgon = Object.values(argonData).flat().map(p => {
-    const images = [];
-    if (p.slika_url && p.slika_url.trim() !== '') {
-        images.push(p.slika_url);
+    let images = [];
+    // Provjerava prvo novu 'images' listu
+    if (p.images && Array.isArray(p.images) && p.images.length > 0) {
+        images = p.images;
+    } else if (p.slika_url && p.slika_url.trim() !== '') {
+        // Ako nema liste, vraća se na staro 'slika_url' polje
+        images = [p.slika_url];
     }
     const priceInEUR = normalizePrice(p.cijena || p.price);
 
