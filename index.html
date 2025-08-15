@@ -1,12 +1,13 @@
 <!DOCTYPE ahtml>
 <!--
 CHANGELOG
-v0.44.6 (2025-08-15)
+v0.44.7 (2025-08-15)
 - Dodano: Podrška za novi format podataka za Argon proizvode.
 - Dodano: Obrada `images` liste za dinamične galerije.
 - Dodano: Prikaz `variants` liste sa uzorcima boja (slike ili CSS gradijenti).
 - Dodano: Korištenje `brand_logo` polja za prikaz logotipa brenda Argon.
 - Ažurirano: Logika za obradu cijena radi boljeg parsiranja novih formata (npr. "Sale price369 €").
+- Ažurirano: Pozadina je sada bijela i Argon logotip je ispravno invertovan za prikaz na njoj.
 -->
 <html lang="hr">
 <head>
@@ -14,7 +15,8 @@ v0.44.6 (2025-08-15)
 <title>Argon & Marantz Katalog - Svi podaci</title>
 <style>
 :root {
-  --bg:#f4f4f4; --ink:#222; --ink-soft:#444; --ink-muted:#666; --card:#fff;
+  --bg: #fff; /* Postavlja bijelu pozadinu */
+  --ink:#222; --ink-soft:#444; --ink-muted:#666; --card:#fff;
   --accent:#007acc; --accent-hover:#005c99; --ok:#155724; --ok-bg:#d4edda;
   --bad:#721c24; --bad-bg:#f8d7da; --line:#ccc; --soft:#eee;
 }
@@ -157,10 +159,14 @@ nav button:hover { background: #999; }
     background-repeat: no-repeat;
     cursor: pointer; /* Add pointer cursor for clicking */
 }
+/* Updated styles for brand logo */
 .brand-logo {
     display: block;
     max-height: 25px; /* Smaller height for logos */
-    margin-bottom: 0.5rem; /* Space between logo and title */
+    margin-bottom: 0.5rem;
+}
+.invert-logo {
+    filter: invert(1);
 }
 @media (max-width: 600px) {
   .filters { flex-direction: column; }
@@ -223,7 +229,7 @@ nav button:hover { background: #999; }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.44.6</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.44.7</span>
   </h1>
 </header>
 
@@ -272,7 +278,7 @@ nav button:hover { background: #999; }
 </div>
 
 <script>
-const APP_VERSION = "0.44.6";
+const APP_VERSION = "0.44.7";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 const KM_CONVERSION_RATE = 1.95583;
@@ -509,10 +515,10 @@ function renderList(items) {
     }
     cardContent += `</div>`;
 
-    // Updated: Display brand logo using `brand_logo`
     let brandLogoHtml = '';
     if (prod.brand_logo) {
-        brandLogoHtml = `<img src="${prod.brand_logo}" alt="${prod.brend || 'Brand'} Logo" class="brand-logo">`;
+        const invertClass = (prod.brend === 'Argon') ? 'invert-logo' : '';
+        brandLogoHtml = `<img src="${prod.brand_logo}" alt="${prod.brend || 'Brand'} Logo" class="brand-logo ${invertClass}">`;
     }
     cardContent += brandLogoHtml;
     
