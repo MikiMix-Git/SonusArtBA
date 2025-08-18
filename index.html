@@ -1,18 +1,15 @@
-<!DOCTYPE ahtml>
+<!DOCTYPE html>
 <!--
 CHANGELOG
-v0.44.7 (2025-08-15)
-- Dodano: Podrška za novi format podataka za Argon proizvode.
-- Dodano: Obrada `images` liste za dinamične galerije.
-- Dodano: Prikaz `variants` liste sa uzorcima boja (slike ili CSS gradijenti).
-- Dodano: Korištenje `brand_logo` polja za prikaz logotipa brenda Argon.
-- Ažurirano: Logika za obradu cijena radi boljeg parsiranja novih formata (npr. "Sale price369 €").
-- Ažurirano: Pozadina je sada bijela i Argon logotip je ispravno invertovan za prikaz na njoj.
+v0.44.9 (2025-08-18)
+- Ispravljeno: Greška TypeError: Cannot read properties of undefined (reading '0')
+- Dodano: Provjera za 'categories' polje prije pristupa, te dodjeljivanje 'Nekategorisano' ako ne postoji.
 -->
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
-<title>Argon & Marantz Katalog - Svi podaci</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Argon & Marantz Katalog - Firestore</title>
 <style>
 :root {
   --bg: #fff; /* Postavlja bijelu pozadinu */
@@ -223,13 +220,38 @@ nav button:hover { background: #999; }
 #modal-prev-btn { left: 15px; }
 #modal-next-btn { right: 15px; }
 #modal-prev-btn:hover, #modal-next-btn:hover { background: rgba(0,0,0,0.8); }
+
+/* Message box styles */
+.message-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid var(--line);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  text-align: center;
+  display: none;
+}
+.message-box button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.44.7</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.44.9</span>
   </h1>
 </header>
 
@@ -266,6 +288,11 @@ nav button:hover { background: #999; }
   </div>
 </div>
 
+<!-- Add a button to load data -->
+<div style="padding: 1rem; text-align: center;">
+  <button id="load-data-btn" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Učitaj podatke u Firestore</button>
+</div>
+
 <div class="catalog-header" id="catalog-count"></div>
 <section class="catalog" id="product-list"></section>
 
@@ -277,13 +304,22 @@ nav button:hover { background: #999; }
   <button id="modal-next-btn" style="display: none;">›</button>
 </div>
 
-<script>
-const APP_VERSION = "0.44.7";
+<!-- Message Box -->
+<div id="message-box" class="message-box">
+  <p id="message-text"></p>
+  <button onclick="document.getElementById('message-box').style.display='none';">OK</button>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+import { getFirestore, doc, setDoc, onSnapshot, collection, query, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+const APP_VERSION = "0.44.9";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 const KM_CONVERSION_RATE = 1.95583;
-const USD_TO_EUR_RATE = 0.93; // Fixed exchange rate for USD to EUR conversion
-
+const USD_TO_EUR_RATE = 0.93;
 
 let allProducts = {};
 let allItemsFlat = [];
@@ -294,6 +330,17 @@ let currentCurrency = 'EUR';
 // Global variables for modal image
 let modalImageUrls = [];
 let modalImageIndex = 0;
+
+// Firebase variables
+let db, auth, userId;
+const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+
+// Show message box
+function showMessage(text) {
+    document.getElementById('message-text').textContent = text;
+    document.getElementById('message-box').style.display = 'block';
+}
 
 /**
  * Normalizes a price string to a number.
@@ -341,19 +388,6 @@ function getRatingFromBadges(prod) {
   return 0;
 }
 /**
- * Removes duplicate products from a list.
- * @param {Array<object>} items The list of products.
- * @returns {Array<object>} A new list with unique products.
- */
-function dedupProducts(items) {
-  const map = new Map();
-  items.forEach(p => {
-    const key = `${p.naziv || p.name || ""}|${p.link || ""}`;
-    if (!map.has(key)) map.set(key, p);
-  });
-  return Array.from(map.values());
-}
-/**
  * Renders category buttons for a specific brand.
  * @param {string} brand The brand name.
  */
@@ -361,8 +395,12 @@ function renderCategoriesForBrand(brand) {
     const nav = document.getElementById("category-nav");
     nav.innerHTML = "";
     let categories = ["ALL"];
-    if (brand === "Argon") {
+    if (brand === "Argon" && allProducts.Argon) {
         categories = ["ALL", ...Object.keys(allProducts.Argon.categories)];
+    } else if (brand === "Marantz" && allProducts.Marantz) {
+        // Collect all categories for Marantz
+        const marantzCategories = new Set(allItemsFlat.filter(p => p.brend === "Marantz" && p.categories).flatMap(p => p.categories));
+        categories = ["ALL", ...Array.from(marantzCategories)];
     }
     categories.forEach(cat => {
         const btn = document.createElement("button");
@@ -395,26 +433,19 @@ function sourceItems() {
   }
   if (brand === "Argon") {
     if (cat === "ALL") {
-      const items = Object.values(allProducts.Argon.categories).flat();
+      const items = Object.values(allProducts.Argon?.categories || {}).flat();
       return items.map(p => ({
         ...p,
         brend: "Argon",
-        // Updated logic for fetching images
-        images_urls: (p.images && Array.isArray(p.images) && p.images.length > 0) 
-            ? p.images 
-            : ((p.slika_url && p.slika_url.trim() !== '') ? [p.slika_url] : [])
       }));
     }
-    return (allProducts.Argon.categories?.[cat] || []).map(p => ({
+    return (allProducts.Argon?.categories?.[cat] || []).map(p => ({
       ...p,
       brend: "Argon",
-      images_urls: (p.images && Array.isArray(p.images) && p.images.length > 0) 
-            ? p.images 
-            : ((p.slika_url && p.slika_url.trim() !== '') ? [p.slika_url] : [])
     }));
   }
   if (brand === "Marantz") {
-    return allItemsFlat.filter(p => p.brend === "Marantz" && (cat === "ALL" || p.categories.includes(cat)));
+    return allItemsFlat.filter(p => p.brend === "Marantz" && (cat === "ALL" || (p.categories && p.categories.includes(cat))));
   }
   return [];
 }
@@ -491,11 +522,9 @@ function renderList(items) {
     const processedKeys = new Set(['slika_url', 'image', 'images', 'naziv', 'name', 'opis', 'tagline', 'description', 'cijena', 'price', 'eur_price', 'link', 'specifications', 'features', 'badge-ovi', 'bedz', 'brend', 'id', 'categories', 'specifikacije', 'boje', 'images_urls', 'variants', 'brand_logo']);
     let cardContent = '';
 
-    const imageUrls = prod.images_urls.filter(Boolean);
+    const imageUrls = prod.images_urls ? prod.images_urls.filter(Boolean) : [];
     const mainImageUrl = imageUrls[0] || 'https://placehold.co/300x200/cccccc/000000?text=Bez+slike';
     
-    console.log(`Product: ${prod.naziv || prod.name} | Image URLs:`, imageUrls);
-
     cardContent += `<div class="image-gallery" id="gallery-${cardId}">`;
     cardContent += `<div class="main-image-container">`;
     cardContent += `<img src="${mainImageUrl}" alt="Slika za ${prod.naziv || prod.name}" class="main-image" onerror="console.error('Slika se nije uspjela učitati:', this.src)">`;
@@ -569,7 +598,6 @@ function renderList(items) {
         cardContent += `</dl></div>`;
     }
     
-    // NEW AND IMPROVED CODE for displaying color variants
     const variants = prod.variants;
     const boje = prod.boje;
 
@@ -586,7 +614,6 @@ function renderList(items) {
                     ? `background-image: url('${variant.swatch_url}');`
                     : `background: ${variant.swatch_url};`;
                 
-                // Add onclick event for opening the image in the modal
                 const clickHandler = isImageUrl
                     ? `onclick="openFullscreenImage(['${variant.swatch_url}'], 0)"`
                     : '';
@@ -750,88 +777,149 @@ function closeFullscreenImage() {
     modalImageIndex = 0;
 }
 
-Promise.all([
-  fetch(RAW_ARGON)
-    .then(r => r.json())
-    .catch(e => {
-        console.error("Error loading Argon data:", e);
-        return { categories: {} }; // Return an empty categories object on error
-    }),
-  fetch(RAW_MARANTZ)
-    .then(r => r.json())
-    .catch(e => {
-        console.error("Error loading Marantz data:", e);
-        return []; // Return an empty array on error
-    })
-]).then(([argonData, marantzData]) => {
-  console.log("Loaded Argon data:", argonData);
-  console.log("Loaded Marantz data:", marantzData);
+/**
+ * Učitava podatke s interneta i sprema ih u Firestore.
+ */
+async function loadDataIntoFirestore() {
+    showMessage("Učitavanje podataka u Firestore. Molimo pričekajte...");
 
-  allProducts = {
-    Argon: argonData,
-    Marantz: marantzData
-  };
+    try {
+        const [argonResponse, marantzResponse] = await Promise.all([
+            fetch(RAW_ARGON),
+            fetch(RAW_MARANTZ)
+        ]);
 
-  const processedMarantz = marantzData.map(p => {
-    const images = (p.images && Array.isArray(p.images)) ? p.images : [];
-    if (images.length === 0 && p.image && p.image.trim() !== '') {
-        images.push(p.image);
-    }
-    const processedImages = images.map(url => {
-        if (url && url.startsWith('https://www.marantz.comhttps://www.marantz.com')) {
-            return url.replace('https://www.marantz.comhttps://www.marantz.com', 'https://www.marantz.com');
+        const argonData = await argonResponse.json();
+        const marantzData = await marantzResponse.json();
+
+        // Očistiti postojeću kolekciju prije dodavanja novih podataka
+        const existingDocs = await getDocs(collection(db, `artifacts/${appId}/users/${userId}/products`));
+        existingDocs.forEach(async d => await deleteDoc(d.ref));
+
+        const processedMarantz = marantzData.map(p => {
+            const images = (p.images && Array.isArray(p.images)) ? p.images : [];
+            if (images.length === 0 && p.image && p.image.trim() !== '') {
+                images.push(p.image);
+            }
+            const processedImages = images.map(url => {
+                if (url && url.startsWith('https://www.marantz.comhttps://www.marantz.com')) {
+                    return url.replace('https://www.marantz.comhttps://www.marantz.com', 'https://www.marantz.com');
+                }
+                return url;
+            }).filter(Boolean);
+
+            const priceInUSD = normalizePrice(p.price);
+            const priceInEUR = priceInUSD > 0 ? priceInUSD * USD_TO_EUR_RATE : 0;
+            return {
+                ...p,
+                brend: "Marantz",
+                naziv: p.name,
+                eur_price: priceInEUR,
+                cijena: p.price,
+                opis: p.tagline,
+                slika_url: processedImages.length > 0 ? processedImages[0] : null,
+                images_urls: processedImages
+            };
+        });
+
+        const processedArgon = Object.values(argonData.categories).flat().map(p => {
+            let images = [];
+            if (p.images && Array.isArray(p.images) && p.images.length > 0) {
+                images = p.images;
+            } else if (p.slika_url && p.slika_url.trim() !== '') {
+                images = [p.slika_url];
+            }
+            const priceInEUR = normalizePrice(p.cijena || p.price);
+            return {
+                ...p,
+                brend: "Argon",
+                eur_price: priceInEUR,
+                images_urls: images
+            };
+        });
+
+        const allItems = [...processedArgon, ...processedMarantz];
+        const productsCollectionRef = collection(db, `artifacts/${appId}/users/${userId}/products`);
+
+        for (const item of allItems) {
+            await setDoc(doc(productsCollectionRef, item.id || crypto.randomUUID()), item);
         }
-        return url;
-    }).filter(Boolean);
 
-    // Convert price from USD to EUR
-    const priceInUSD = normalizePrice(p.price);
-    const priceInEUR = priceInUSD > 0 ? priceInUSD * USD_TO_EUR_RATE : 0;
-
-    return {
-      ...p,
-      brend: "Marantz",
-      naziv: p.name,
-      eur_price: priceInEUR, // Add a new property for the EUR price
-      cijena: p.price, // Keep the original USD price
-      opis: p.tagline,
-      slika_url: processedImages.length > 0 ? processedImages[0] : null,
-      images_urls: processedImages
-    };
-  });
-  
-  const processedArgon = Object.values(argonData.categories).flat().map(p => {
-    let images = [];
-    // Provjerava prvo novu 'images' listu
-    if (p.images && Array.isArray(p.images) && p.images.length > 0) {
-        images = p.images;
-    } else if (p.slika_url && p.slika_url.trim() !== '') {
-        // Ako nema liste, vraća se na staro 'slika_url' polje
-        images = [p.slika_url];
+        showMessage("Podaci su uspješno učitani u Firestore!");
+    } catch (e) {
+        console.error("Greška pri učitavanju podataka u Firestore: ", e);
+        showMessage("Greška: Nije moguće učitati podatke u Firestore. Provjerite konzolu za detalje.");
     }
-    const priceInEUR = normalizePrice(p.cijena || p.price);
+}
 
-    return {
-      ...p,
-      brend: "Argon",
-      eur_price: priceInEUR,
-      images_urls: images
-    };
-  });
-  
-  allItemsFlat = dedupProducts([...processedArgon, ...processedMarantz]);
+// Inicijalizacija Firebase-a i slušanje promjena
+async function initializeFirebase() {
+    try {
+        const app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+        auth = getAuth(app);
 
-  renderCategoriesForBrand("ALL");
-  highlightActiveCategory();
-  applyFilters();
-  document.getElementById("version-badge").textContent = `v${APP_VERSION}`;
-  document.title = `Katalog v${APP_VERSION}`;
-});
+        // Sign in anonymously if no user token is provided
+        if (typeof __initial_auth_token !== 'undefined') {
+            await signInWithCustomToken(auth, __initial_auth_token);
+        } else {
+            await signInAnonymously(auth);
+        }
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                userId = user.uid;
+                console.log("Korisnik prijavljen s ID-om:", userId);
+                startDataListener();
+            } else {
+                console.log("Korisnik nije prijavljen.");
+                allItemsFlat = [];
+                renderList([]);
+            }
+        });
+    } catch (e) {
+        console.error("Greška pri inicijalizaciji Firebase-a:", e);
+        showMessage("Greška: Nije moguće inicijalizirati Firebase. Provjerite konzolu za detalje.");
+    }
+}
+
+function startDataListener() {
+    const productsCollectionRef = collection(db, `artifacts/${appId}/users/${userId}/products`);
+    onSnapshot(productsCollectionRef, (querySnapshot) => {
+        const products = [];
+        querySnapshot.forEach((doc) => {
+            products.push(doc.data());
+        });
+        
+        allProducts = {};
+        products.forEach(p => {
+            const brand = p.brend;
+            // Provjera da li `categories` postoji i da li je niz
+            const category = (p.categories && Array.isArray(p.categories) && p.categories.length > 0) ? p.categories[0] : 'Nekategorisano';
+
+            if (!allProducts[brand]) {
+                allProducts[brand] = { categories: {} };
+            }
+            if (!allProducts[brand].categories[category]) {
+                allProducts[brand].categories[category] = [];
+            }
+            allProducts[brand].categories[category].push(p);
+        });
+        
+        allItemsFlat = products;
+        
+        renderCategoriesForBrand(currentBrand);
+        highlightActiveCategory();
+        applyFilters();
+    });
+}
+
 
 document.getElementById("apply-btn").addEventListener("click", applyFilters);
 document.getElementById("sort-select").addEventListener("change", applyFilters);
 document.getElementById("feature-filter").addEventListener("change", applyFilters);
 document.getElementById("only-priced").addEventListener("change", applyFilters);
+document.getElementById("load-data-btn").addEventListener("click", loadDataIntoFirestore);
 
 document.getElementById("brand-filter").addEventListener("change", (e) => {
     currentBrand = e.target.value;
@@ -880,6 +968,12 @@ window.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// Run initialization
+document.getElementById("version-badge").textContent = `v${APP_VERSION}`;
+document.title = `Katalog v${APP_VERSION}`;
+initializeFirebase();
+
 </script>
 
 </body>
