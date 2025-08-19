@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.48.6 (2025-08-19)
-- Ispravljeno: Greška u prikazu cijene na kartici proizvoda nakon klika na dugme 'Poređenje'. Cijena se sada ispravno ažurira.
+v0.48.5 (2025-08-19)
+- Ispravljeno: Greška u logici prikaza cijene u tabeli za poređenje. Ažurirana je funkcija `generateCompareTableHTML` kako bi pouzdano obrađivala i prikazivala cijene.
 -->
 <html lang="hr">
 <head>
@@ -12,7 +12,7 @@ v0.48.6 (2025-08-19)
 :root {
   --bg: #fff; /* Postavlja bijelu pozadinu */
   --ink:#222; --ink-soft:#444; --ink-muted:#666; --card:#fff;
-  --accent:#007acc; --accent-hover:#005c99; --ok:#155724; --ok-bg:#d4edda;
+  --accent:#007acc; --accent-hover:#005c99; --ok:#155724; --ok-bg:#d4eadda;
   --bad:#721c24; --bad-bg:#f8d7da; --line:#ccc; --soft:#eee;
   --warning: #ffc107;
 }
@@ -488,7 +488,7 @@ nav button:hover { background: #999; }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.48.6</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.48.5</span>
   </h1>
 </header>
 
@@ -580,7 +580,7 @@ nav button:hover { background: #999; }
 </div>
 
 <script>
-const APP_VERSION = "0.48.6";
+const APP_VERSION = "0.48.5";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 const KM_CONVERSION_RATE = 1.95583;
@@ -805,7 +805,6 @@ function toggleCompareProduct(product) {
     }
     updateCompareBar();
     renderList(sourceItems()); // Ponovno renderovanje kako bi se ažurirala dugmad
-    updatePrices(); // OBAVEZNO: Dodati ovo da se cijena ponovo prikaže
 }
 /**
  * Uklanja proizvod iz trake za poređenje.
@@ -817,7 +816,6 @@ function removeProductFromCompare(productName) {
         productsToCompare.splice(index, 1);
         updateCompareBar();
         renderList(sourceItems());
-        updatePrices(); // OBAVEZNO: Dodati ovo da se cijena ponovo prikaže
     }
 }
 /**
