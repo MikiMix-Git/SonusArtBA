@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.44.7 (2025-08-15)
-- Dodano: Podrška za novi format podataka za Argon proizvode.
-- Dodano: Obrada `images` liste za dinamične galerije.
-- Dodano: Prikaz `variants` liste sa uzorcima boja (slike ili CSS gradijenti).
-- Dodano: Korištenje `brand_logo` polja za prikaz logotipa brenda Argon.
-- Ažurirano: Logika za obradu cijena radi boljeg parsiranja novih formata (npr. "Sale price369 €").
-- Ažurirano: Pozadina je sada bijela i Argon logotip je ispravno invertovan za prikaz na njoj.
+v0.44.8 (2025-08-18)
+- Ispravljeno: Greška `TypeError: Cannot read properties of null` uklanjanjem JavaScript koda koji se odnosi na nepostojeće HTML elemente.
+- Usklađeno: ID-jevi i listeneri u JavaScriptu sada odgovaraju priloženoj HTML strukturi.
+- Uklonjeno: Funkcionalnost poređenja proizvoda i povezani JavaScript kod.
 -->
 <html lang="hr">
 <head>
@@ -278,7 +275,7 @@ nav button:hover { background: #999; }
 </div>
 
 <script>
-const APP_VERSION = "0.44.7";
+const APP_VERSION = "0.44.8";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 const KM_CONVERSION_RATE = 1.95583;
@@ -431,7 +428,8 @@ function applyFilters() {
 
   items = items.filter(p => {
     const name = (p.naziv || p.name || '').toLowerCase();
-    const normalizedPrice = normalizePrice(p.cijena || p.price);
+    // Koristimo eur_price za filtriranje
+    const normalizedPrice = p.eur_price; 
     const badges = (p["badge-ovi"] || p["bedz"] || p.features || []).map(b => (typeof b === 'object' ? b.title : b).toLowerCase());
     const hasPrice = normalizedPrice > 0;
     
@@ -452,8 +450,8 @@ function applyFilters() {
  */
 function applySort(items) {
   switch (document.getElementById("sort-select").value) {
-    case "price-asc":  return items.slice().sort((a,b)=> normalizePrice(a.cijena || a.price) - normalizePrice(b.cijena || b.price));
-    case "price-desc": return items.slice().sort((a,b)=> normalizePrice(b.cijena || b.price) - normalizePrice(a.cijena || a.price));
+    case "price-asc":  return items.slice().sort((a,b)=> (a.eur_price || 0) - (b.eur_price || 0));
+    case "price-desc": return items.slice().sort((a,b)=> (b.eur_price || 0) - (a.eur_price || 0));
     case "rating-desc":return items.slice().sort((a,b)=> getRatingFromBadges(b) - getRatingFromBadges(a));
     case "rating-asc": return items.slice().sort((a,b)=> getRatingFromBadges(a) - getRatingFromBadges(b));
     default: return items;
