@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.44.8 (2025-08-18)
-- Ispravljeno: Greška `TypeError: Cannot read properties of null` uklanjanjem JavaScript koda koji se odnosi na nepostojeće HTML elemente.
-- Usklađeno: ID-jevi i listeneri u JavaScriptu sada odgovaraju priloženoj HTML strukturi.
-- Uklonjeno: Funkcionalnost poređenja proizvoda i povezani JavaScript kod.
+v0.48.6 (2025-08-19)
+- Ispravljeno: Greška u prikazu cijene na kartici proizvoda nakon klika na dugme 'Poređenje'. Cijena se sada ispravno ažurira.
 -->
 <html lang="hr">
 <head>
@@ -16,6 +14,7 @@ v0.44.8 (2025-08-18)
   --ink:#222; --ink-soft:#444; --ink-muted:#666; --card:#fff;
   --accent:#007acc; --accent-hover:#005c99; --ok:#155724; --ok-bg:#d4edda;
   --bad:#721c24; --bad-bg:#f8d7da; --line:#ccc; --soft:#eee;
+  --warning: #ffc107;
 }
 * { box-sizing: border-box; }
 body { font-family: Arial, sans-serif; background: var(--bg); margin: 0; color: var(--ink); }
@@ -52,7 +51,7 @@ nav button:hover { background: #999; }
 .product-card { background: var(--card); border-radius: 6px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
 /* Image Gallery Styles */
 .image-gallery { position: relative; width: 100%; margin-bottom: 1rem; }
-.main-image-container { position: relative; width: 100%; padding-top: 66.66%; /* 3:2 Aspect Ratio */ background: #fafafa; border-radius: 4px; overflow: hidden; cursor: pointer; }
+.main-image-container { position: relative; width: 100%; padding-top: 66.66%; /* 3:2 Aspect Ratio */ background: #fafafa; border-radius: 4_px; overflow: hidden; cursor: pointer; }
 .main-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.3s ease; }
 .gallery-nav-btn {
   position: absolute; top: 50%; transform: translateY(-50%);
@@ -165,9 +164,152 @@ nav button:hover { background: #999; }
 .invert-logo {
     filter: invert(1);
 }
+/* New compare styles */
+.compare-btn {
+    background: #008CBA;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+.compare-btn:hover {
+    background: #0076a3;
+}
+.compare-btn.added {
+    background: var(--ok);
+}
+.compare-btn.added:hover {
+    background: var(--ok);
+}
+.compare-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(34, 34, 34, 0.95);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 20;
+}
+.compare-bar.visible {
+    transform: translateY(0);
+}
+.compare-products-list {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+.compare-product-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--ink-soft);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+.compare-product-item img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+.compare-product-item span {
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+.compare-product-item .remove-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+}
+#compare-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+.compare-modal-content {
+    background-color: var(--bg);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-height: 95vh;
+    overflow-y: auto;
+}
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.compare-table th, .compare-table td {
+    padding: 1rem;
+    border: 1px solid var(--line);
+    vertical-align: top;
+    text-align: left;
+}
+.compare-table th {
+    background-color: var(--soft);
+    font-weight: bold;
+    min-width: 150px;
+}
+.compare-table td {
+    word-break: break-word;
+}
+.compare-table img {
+    max-width: 150px;
+    height: auto;
+}
+.compare-table .product-name {
+    font-weight: bold;
+}
 @media (max-width: 600px) {
   .filters { flex-direction: column; }
   nav { flex-direction: column; }
+  .compare-modal-content {
+    padding: 1rem;
+  }
+  .compare-table, .compare-table thead, .compare-table tbody, .compare-table th, .compare-table td, .compare-table tr {
+    display: block;
+  }
+  .compare-table th {
+    text-align: right;
+    width: 100%;
+  }
+  .compare-table td {
+    text-align: left;
+    border-top: none;
+  }
 }
 
 /* Styles for fullscreen view */
@@ -220,18 +362,140 @@ nav button:hover { background: #999; }
 #modal-prev-btn { left: 15px; }
 #modal-next-btn { right: 15px; }
 #modal-prev-btn:hover, #modal-next-btn:hover { background: rgba(0,0,0,0.8); }
+
+/* Styles for AI Assistant Modal */
+#ai-assistant-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.modal-header h2 {
+  margin: 0;
+}
+.modal-close-btn {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+.modal-close-btn:hover {
+  color: var(--ink);
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#ai-input {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  resize: vertical;
+}
+.ai-response {
+  background-color: var(--soft);
+  padding: 1rem;
+  border-radius: 4px;
+  min-height: 100px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9em;
+  position: relative;
+}
+.ai-response h4, .ai-response p {
+    margin-top: 0;
+}
+.ai-response ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.ai-response ul li {
+    margin-bottom: 0.5rem;
+}
+.loading-spinner {
+  display: none;
+  border: 4px solid var(--soft);
+  border-top: 4px solid var(--accent);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  align-self: center;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#tts-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+#tts-btn:disabled {
+    background-color: var(--ink-muted);
+    cursor: not-allowed;
+}
+#tts-btn.playing::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: spin 1s linear infinite;
+}
 </style>
 </head>
 <body>
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.44.7</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.48.6</span>
   </h1>
 </header>
 
 <div class="sticky-bar">
-  <nav id="category-nav"></nav>
+  <nav id="category-nav">
+      <button id="ai-assistant-btn">AI Pomoćnik</button>
+  </nav>
   <div class="filters">
     <select id="brand-filter">
       <option value="ALL">Svi brendovi</option>
@@ -255,7 +519,6 @@ nav button:hover { background: #999; }
       <option value="rating-asc">Ocjena ↑</option>
     </select>
     <label><input type="checkbox" id="only-priced"> Samo sa cijenom</label>
-    <button id="apply-btn">Primijeni filtere</button>
     <div class="currency-toggle">
         <button id="currency-eur" class="currency-button active">€</button>
         <button id="currency-km" class="currency-button">KM</button>
@@ -274,12 +537,59 @@ nav button:hover { background: #999; }
   <button id="modal-next-btn" style="display: none;">›</button>
 </div>
 
+<!-- AI Assistant Modal -->
+<div id="ai-assistant-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>AI Pomoćnik za proizvode</h2>
+            <span class="modal-close-btn" onclick="closeAIAssistantModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <textarea id="ai-input" placeholder="Opišite što tražite, npr. 'Preporučite mi bežični zvučnik za dnevnu sobu do 500€.'"></textarea>
+            <button id="ai-submit-btn">Pošalji</button>
+            <div id="ai-response-container" class="ai-response">
+                <div class="loading-spinner"></div>
+                <div id="ai-response-text"></div>
+            </div>
+            <button id="tts-btn" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.9 5.8a.5.5 0 0 0-.8-.186l-2.768 1.488A.5.5 0 0 0 9 7.5v-.5a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5H8a.5.5 0 0 0 .5-.5v-.5a.5.5 0 0 0 .232-.186l2.768 1.488a.5.5 0 0 0 .8-.186v-5z"/>
+                    <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v13A1.5 1.5 0 0 0 1.5 16h13a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 14.5 0zM1 1.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                Pročitaj
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Comparison Modal -->
+<div id="compare-modal" style="display: none;">
+    <div class="compare-modal-content">
+        <div class="modal-header">
+            <h2>Poređenje proizvoda</h2>
+            <span class="modal-close-btn" onclick="closeCompareModal()">&times;</span>
+        </div>
+        <div id="compare-table-container"></div>
+    </div>
+</div>
+
+<!-- Floating Comparison Bar -->
+<div id="compare-bar" class="compare-bar">
+    <div id="compare-products-list" class="compare-products-list"></div>
+    <button id="open-compare-modal-btn" class="compare-btn">Poredi proizvode (<span id="compare-count">0</span>)</button>
+</div>
+
 <script>
-const APP_VERSION = "0.44.8";
+const APP_VERSION = "0.48.6";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 const KM_CONVERSION_RATE = 1.95583;
-const USD_TO_EUR_RATE = 0.93; // Fixed exchange rate for USD to EUR conversion
+const USD_TO_EUR_RATE = 0.93; // Fiksni tečaj za konverziju USD u EUR
+const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=";
+const TTS_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=";
+const apiKey = ""; // API ključ će biti automatski dostavljen
+const AUDIO_MIMETYPE = "audio/L16;rate=24000";
+const PLACEHOLDER_IMAGE = "https://placehold.co/300x200/cccccc/000000?text=Bez+slike";
 
 
 let allProducts = {};
@@ -287,43 +597,48 @@ let allItemsFlat = [];
 let currentBrand = "ALL";
 let currentCategory = "ALL";
 let currentCurrency = 'EUR';
+let isAILoading = false;
+let audioPlayer = new Audio();
+let productsToCompare = [];
 
-// Global variables for modal image
+/**
+ * Globalne varijable za modal slike.
+ */
 let modalImageUrls = [];
 let modalImageIndex = 0;
 
 /**
- * Normalizes a price string to a number.
- * Specifically handles American and European price formats.
- * @param {string | number} val The price to normalize.
- * @returns {number} The normalized price as a number.
+ * Normalizuje string cijene u broj.
+ * Posebno rukuje američkim i evropskim formatima cijena.
+ * @param {string | number} val Cijena za normalizaciju.
+ * @returns {number} Normalizovana cijena kao broj.
  */
 function normalizePrice(val) {
   if (typeof val !== "string") return Number(val) || 0;
   
-  // Remove all non-numeric characters, commas, or periods, including currency symbols
+  // Uklanja sve ne-numeričke znakove, zareze ili tačke, uključujući simbole valuta
   let cleanedVal = val.replace(/[^\d.,]/g, '').trim();
 
-  // Find the last comma and period
+  // Pronađi posljednji zarez i tačku
   const lastCommaIndex = cleanedVal.lastIndexOf(',');
   const lastDotIndex = cleanedVal.lastIndexOf('.');
 
-  // If the last separator is a period (American format, e.g., 1,999.00)
+  // Ako je posljednji separator tačka (američki format, npr. 1,999.00)
   if (lastDotIndex > lastCommaIndex) {
-      cleanedVal = cleanedVal.replace(/,/g, ''); // Remove all commas
+      cleanedVal = cleanedVal.replace(/,/g, ''); // Ukloni sve zareze
   }
-  // If the last separator is a comma (European format, e.g., 1.999,00)
+  // Ako je posljednji separator zarez (evropski format, npr. 1.999,00)
   else if (lastCommaIndex > lastDotIndex) {
-      cleanedVal = cleanedVal.replace(/\./g, ''); // Remove all periods
-      cleanedVal = cleanedVal.replace(',', '.'); // Replace the comma with a period
+      cleanedVal = cleanedVal.replace(/\./g, ''); // Ukloni sve tačke
+      cleanedVal = cleanedVal.replace(',', '.'); // Zamijeni zarez sa tačkom
   }
   
   return parseFloat(cleanedVal) || 0;
 }
 /**
- * Gets the rating from the product's badges.
- * @param {object} prod The product object.
- * @returns {number} The rating.
+ * Dohvata ocjenu iz bedževa proizvoda.
+ * @param {object} prod Objekat proizvoda.
+ * @returns {number} Ocjena.
  */
 function getRatingFromBadges(prod) {
   const badges = prod["badge-ovi"] || prod["bedz"] || prod["features"] || [];
@@ -338,9 +653,9 @@ function getRatingFromBadges(prod) {
   return 0;
 }
 /**
- * Removes duplicate products from a list.
- * @param {Array<object>} items The list of products.
- * @returns {Array<object>} A new list with unique products.
+ * Uklanja duple proizvode iz liste.
+ * @param {Array<object>} items Lista proizvoda.
+ * @returns {Array<object>} Nova lista sa jedinstvenim proizvodima.
  */
 function dedupProducts(items) {
   const map = new Map();
@@ -351,12 +666,15 @@ function dedupProducts(items) {
   return Array.from(map.values());
 }
 /**
- * Renders category buttons for a specific brand.
- * @param {string} brand The brand name.
+ * Renderuje dugmad kategorija za određeni brend.
+ * @param {string} brand Naziv brenda.
  */
 function renderCategoriesForBrand(brand) {
     const nav = document.getElementById("category-nav");
+    const aiBtn = document.getElementById("ai-assistant-btn");
     nav.innerHTML = "";
+    nav.appendChild(aiBtn); // Dodaj AI dugme nazad na početak
+    
     let categories = ["ALL"];
     if (brand === "Argon") {
         categories = ["ALL", ...Object.keys(allProducts.Argon.categories)];
@@ -374,15 +692,15 @@ function renderCategoriesForBrand(brand) {
     });
 }
 /**
- * Highlights the active category button.
+ * Označava aktivno dugme kategorije.
  */
 function highlightActiveCategory() {
   document.querySelectorAll("#category-nav button")
     .forEach(b => b.classList.toggle("active", b.dataset.cat === currentCategory));
 }
 /**
- * Gets the list of items based on the current brand and category.
- * @returns {Array<object>} The filtered list of items.
+ * Dohvata listu stavki na osnovu trenutnog brenda i kategorije.
+ * @returns {Array<object>} Filtrirana lista stavki.
  */
 function sourceItems() {
   const brand = currentBrand;
@@ -396,7 +714,7 @@ function sourceItems() {
       return items.map(p => ({
         ...p,
         brend: "Argon",
-        // Updated logic for fetching images
+        // Ažurirana logika za dohvaćanje slika
         images_urls: (p.images && Array.isArray(p.images) && p.images.length > 0) 
             ? p.images 
             : ((p.slika_url && p.slika_url.trim() !== '') ? [p.slika_url] : [])
@@ -416,7 +734,7 @@ function sourceItems() {
   return [];
 }
 /**
- * Applies all filters and updates the product list.
+ * Primjenjuje sve filtere i ažurira listu proizvoda.
  */
 function applyFilters() {
   let items = sourceItems();
@@ -444,9 +762,9 @@ function applyFilters() {
   updatePrices();
 }
 /**
- * Applies sorting to the list of items.
- * @param {Array<object>} items The list of items to sort.
- * @returns {Array<object>} The sorted list.
+ * Primjenjuje sortiranje na listu stavki.
+ * @param {Array<object>} items Lista stavki za sortiranje.
+ * @returns {Array<object>} Sortirana lista.
  */
 function applySort(items) {
   switch (document.getElementById("sort-select").value) {
@@ -458,9 +776,9 @@ function applySort(items) {
   }
 }
 /**
- * Renders star ratings based on a rating value.
- * @param {number} rating The rating value.
- * @returns {string} HTML string for the stars.
+ * Renderuje zvjezdice ocjena na osnovu vrijednosti ocjene.
+ * @param {number} rating Vrijednost ocjene.
+ * @returns {string} HTML string za zvjezdice.
  */
 function renderStars(rating) {
   if (!rating) return '';
@@ -471,8 +789,185 @@ function renderStars(rating) {
   return `<span class="rating-stars" title="Ocjena ${rating}">${stars} (${rating})</span>`;
 }
 /**
- * Renders the list of products.
- * @param {Array<object>} items The list of products to render.
+ * Dodaje ili uklanja proizvod za poređenje i ažurira UI.
+ * @param {object} product Proizvod za dodavanje/uklanjanje.
+ */
+function toggleCompareProduct(product) {
+    const index = productsToCompare.findIndex(p => (p.naziv || p.name) === (product.naziv || product.name));
+    if (index === -1) {
+        if (productsToCompare.length >= 4) {
+            alert("Možete porediti do 4 proizvoda istovremeno.");
+            return;
+        }
+        productsToCompare.push(product);
+    } else {
+        productsToCompare.splice(index, 1);
+    }
+    updateCompareBar();
+    renderList(sourceItems()); // Ponovno renderovanje kako bi se ažurirala dugmad
+    updatePrices(); // OBAVEZNO: Dodati ovo da se cijena ponovo prikaže
+}
+/**
+ * Uklanja proizvod iz trake za poređenje.
+ * @param {string} productName Naziv proizvoda za uklanjanje.
+ */
+function removeProductFromCompare(productName) {
+    const index = productsToCompare.findIndex(p => (p.naziv || p.name) === productName);
+    if (index > -1) {
+        productsToCompare.splice(index, 1);
+        updateCompareBar();
+        renderList(sourceItems());
+        updatePrices(); // OBAVEZNO: Dodati ovo da se cijena ponovo prikaže
+    }
+}
+/**
+ * Ažurira izgled trake za poređenje.
+ */
+function updateCompareBar() {
+    const compareBar = document.getElementById('compare-bar');
+    const compareList = document.getElementById('compare-products-list');
+    const compareCount = document.getElementById('compare-count');
+    
+    compareList.innerHTML = '';
+    productsToCompare.forEach(product => {
+        const item = document.createElement('div');
+        item.className = 'compare-product-item';
+        item.innerHTML = `
+            <img src="${product.images_urls[0] || 'https://placehold.co/30x30/cccccc/000000?text=x'}" alt="${product.naziv || product.name}" onerror="this.onerror=null;this.src='https://placehold.co/30x30/cccccc/000000?text=x';">
+            <span>${product.naziv || product.name}</span>
+            <button class="remove-btn" onclick="removeProductFromCompare('${product.naziv || product.name}')">&times;</button>
+        `;
+        compareList.appendChild(item);
+    });
+    
+    compareCount.textContent = productsToCompare.length;
+    if (productsToCompare.length > 0) {
+        compareBar.classList.add('visible');
+    } else {
+        compareBar.classList.remove('visible');
+    }
+}
+/**
+ * Otvara modalni prozor za poređenje i renderuje tabelu.
+ */
+function openCompareModal() {
+    if (productsToCompare.length < 2) {
+        alert("Odaberite najmanje dva proizvoda za poređenje.");
+        return;
+    }
+    const modal = document.getElementById('compare-modal');
+    const container = document.getElementById('compare-table-container');
+    container.innerHTML = generateCompareTableHTML(productsToCompare);
+    modal.style.display = 'flex';
+}
+/**
+ * Zatvara modalni prozor za poređenje.
+ */
+function closeCompareModal() {
+    document.getElementById('compare-modal').style.display = 'none';
+}
+/**
+ * Generiše HTML tabelu za poređenje proizvoda.
+ * Tabela uključuje uobičajena polja i sve jedinstvene specifikacije i karakteristike.
+ * @param {Array<object>} products Lista proizvoda za poređenje.
+ * @returns {string} HTML string za tabelu za poređenje.
+ */
+function generateCompareTableHTML(products) {
+    if (products.length === 0) return '';
+
+    // Sakupi sve jedinstvene ključeve iz specifikacija
+    const allSpecKeys = new Set();
+    products.forEach(p => {
+        const specs = p.specifications || p.specifikacije || {};
+        Object.keys(specs).forEach(key => allSpecKeys.add(key));
+    });
+
+    // Definirajte redoslijed prioritetnih ključeva
+    const processedKeys = ['Slika', 'Naziv', 'Cijena (€)', 'Opis'];
+    // Filtrirajte i sortirajte ostale ključeve specifikacija
+    const otherKeys = Array.from(allSpecKeys).filter(key => !processedKeys.includes(key)).sort();
+    const sortedKeys = [...processedKeys, ...otherKeys];
+
+    let tableHtml = `<table class="compare-table"><thead><tr><th>Stavka</th>`;
+    products.forEach(p => {
+        tableHtml += `<th>${p.naziv || p.name}</th>`;
+    });
+    tableHtml += `</tr></thead><tbody>`;
+
+    sortedKeys.forEach(key => {
+        tableHtml += `<tr><td>${key}</td>`;
+        products.forEach(p => {
+            let value = '—';
+            // Popunite vrijednosti za prioritetne ključeve
+            if (key === 'Slika') {
+                value = `<img src="${p.images_urls[0] || 'https://placehold.co/150x100?text=No+Image'}" alt="${p.naziv || p.name}" onerror="this.onerror=null;this.src='https://placehold.co/150x100?text=No+Image';">`;
+            } else if (key === 'Naziv') {
+                value = p.naziv || p.name;
+            } else if (key === 'Cijena (€)') {
+                // Nova, poboljšana logika za dohvaćanje cijene
+                const eurPrice = p.eur_price; 
+                if (eurPrice !== undefined && eurPrice !== null && eurPrice > 0) {
+                    value = eurPrice.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
+                } else {
+                    value = '—';
+                }
+            } else if (key === 'Opis') {
+                value = p.opis || p.tagline || p.description || '—';
+            } else {
+                // Provjerite specifikacije za ključ
+                const specs = p.specifications || p.specifikacije || {};
+                if (specs[key]) {
+                    const specValue = specs[key];
+                    // Provjera za "Additional Features" i slične ključeve s nizom
+                    if (
+                        (key === "Additional Features" || key === "Audio formats" || key === "Inputs audio") &&
+                        Array.isArray(specValue)
+                    ) {
+                        value = `<ul>${specValue.map(item => `<li>${item}</li>`).join('')}</ul>`;
+                    } else if (typeof specValue === 'object' && specValue !== null) {
+                         value = `<pre>${JSON.stringify(specValue, null, 2)}</pre>`;
+                    } else {
+                        value = specValue;
+                    }
+                }
+            }
+            tableHtml += `<td>${value}</td>`;
+        });
+        tableHtml += `</tr>`;
+    });
+    
+    // Novi red za grupisanje svih "badge-ova"
+    tableHtml += `<tr><td>Karakteristike</td>`;
+    products.forEach(p => {
+        let featuresHtml = '—';
+        const features = p.features || p['badge-ovi'] || p['bedz'] || [];
+        const filteredFeatures = features.filter(f => {
+            const val = typeof f === 'object' ? f.title : f;
+            return !/^\d+(\.\d+)?$/.test(String(val).trim());
+        });
+        
+        if (filteredFeatures.length > 0) {
+            featuresHtml = `<ul>`;
+            filteredFeatures.forEach(feature => {
+                if (typeof feature === 'object' && feature.title) {
+                    featuresHtml += `<li><strong>${feature.title}:</strong> ${feature.description}</li>`;
+                } else {
+                    featuresHtml += `<li>${feature}</li>`;
+                }
+            });
+            featuresHtml += `</ul>`;
+        }
+        tableHtml += `<td>${featuresHtml}</td>`;
+    });
+    tableHtml += `</tr>`;
+
+    tableHtml += `</tbody></table>`;
+    return tableHtml;
+}
+
+/**
+ * Renderuje listu proizvoda.
+ * @param {Array<object>} items Lista proizvoda za renderovanje.
  */
 function renderList(items) {
   const list = document.getElementById("product-list");
@@ -485,38 +980,36 @@ function renderList(items) {
     card.className = "product-card";
     const cardId = `card-${index}`;
 
-    // Updated list of keys not to be displayed as 'other data'
+    // Ažurirana lista ključeva koji se ne prikazuju kao 'ostali podaci'
     const processedKeys = new Set(['slika_url', 'image', 'images', 'naziv', 'name', 'opis', 'tagline', 'description', 'cijena', 'price', 'eur_price', 'link', 'specifications', 'features', 'badge-ovi', 'bedz', 'brend', 'id', 'categories', 'specifikacije', 'boje', 'images_urls', 'variants', 'brand_logo']);
     let cardContent = '';
 
     const imageUrls = prod.images_urls.filter(Boolean);
-    const mainImageUrl = imageUrls[0] || 'https://placehold.co/300x200/cccccc/000000?text=Bez+slike';
+    const mainImageUrl = imageUrls[0] || PLACEHOLDER_IMAGE;
     
-    console.log(`Product: ${prod.naziv || prod.name} | Image URLs:`, imageUrls);
-
     cardContent += `<div class="image-gallery" id="gallery-${cardId}">`;
     cardContent += `<div class="main-image-container">`;
-    cardContent += `<img src="${mainImageUrl}" alt="Slika za ${prod.naziv || prod.name}" class="main-image" onerror="console.error('Slika se nije uspjela učitati:', this.src)">`;
+    cardContent += `<img src="${mainImageUrl}" alt="Slika za ${prod.naziv || prod.name}" class="main-image" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMAGE}';">`;
     
-    // Display gallery only if there is more than one image
+    // Prikaži galeriju samo ako ima više od jedne slike
     if (imageUrls.length > 1) {
       cardContent += `<button class="gallery-nav-btn prev">‹</button>`;
       cardContent += `<button class="gallery-nav-btn next">›</button>`;
-      cardContent += `</div>`; // closes main-image-container
+      cardContent += `</div>`; // zatvara main-image-container
       cardContent += `<div class="thumbnails">`;
       imageUrls.forEach((url, i) => {
-        cardContent += `<img src="${url}" alt="Sličica ${i+1}" class="thumbnail ${i === 0 ? 'active' : ''}" data-index="${i}" onerror="console.error('Sličica se nije uspjela učitati:', this.src)">`;
+        cardContent += `<img src="${url}" alt="Sličica ${i+1}" class="thumbnail ${i === 0 ? 'active' : ''}" data-index="${i}" onerror="this.onerror=null;this.src='https://placehold.co/60x60/cccccc/000000?text=x';">`;
       });
       cardContent += `</div>`;
     } else {
-        cardContent += `</div>`; // closes main-image-container
+        cardContent += `</div>`; // zatvara main-image-container
     }
     cardContent += `</div>`;
 
     let brandLogoHtml = '';
     if (prod.brand_logo) {
         const invertClass = (prod.brend === 'Argon') ? 'invert-logo' : '';
-        brandLogoHtml = `<img src="${prod.brand_logo}" alt="${prod.brend || 'Brand'} Logo" class="brand-logo ${invertClass}">`;
+        brandLogoHtml = `<img src="${prod.brand_logo}" alt="${prod.brend || 'Brand'} Logo" class="brand-logo ${invertClass}" onerror="this.style.display='none';">`;
     }
     cardContent += brandLogoHtml;
     
@@ -526,7 +1019,7 @@ function renderList(items) {
     
     cardContent += `<p>${prod.opis || prod.tagline || prod.description || ''}</p>`;
     
-    const normalizedPrice = prod.eur_price; // Use the already converted price
+    const normalizedPrice = prod.eur_price; // Koristi već konvertovanu cijenu
     if (normalizedPrice > 0) {
         cardContent += `<p><strong>Cijena:</strong> <span class="product-price" data-eur-price="${normalizedPrice}"></span></p>`;
     } else {
@@ -567,7 +1060,7 @@ function renderList(items) {
         cardContent += `</dl></div>`;
     }
     
-    // NEW AND IMPROVED CODE for displaying color variants
+    // NOVI I POBOLJŠANI KOD za prikaz varijanti boja
     const variants = prod.variants;
     const boje = prod.boje;
 
@@ -584,7 +1077,7 @@ function renderList(items) {
                     ? `background-image: url('${variant.swatch_url}');`
                     : `background: ${variant.swatch_url};`;
                 
-                // Add onclick event for opening the image in the modal
+                // Dodaje onclick događaj za otvaranje slike u modalnom prozoru
                 const clickHandler = isImageUrl
                     ? `onclick="openFullscreenImage(['${variant.swatch_url}'], 0)"`
                     : '';
@@ -595,7 +1088,7 @@ function renderList(items) {
         });
         cardContent += `</ul></div>`;
     } else if (boje && Array.isArray(boje) && boje.length > 0) {
-        // Fallback to old format
+        // Fallback na stari format
         const colorsId = `boje-${cardId}`;
         cardContent += `<h4 onclick="document.getElementById('${colorsId}').classList.toggle('expanded'); this.classList.toggle('expanded');">Boje</h4>
                         <div id="${colorsId}" class="collapsible-content">
@@ -614,7 +1107,19 @@ function renderList(items) {
             otherDataContent += `<dt>${key}</dt><dd>`;
             const value = prod[key];
             if (typeof value === 'object' && value !== null) {
-                otherDataContent += `<pre>${JSON.stringify(value, null, 2)}</pre>`;
+                if (Array.isArray(value)) {
+                    otherDataContent += `<ul>`;
+                    value.forEach(item => {
+                        if (typeof item === 'object' && item !== null) {
+                            otherDataContent += `<li><pre>${JSON.stringify(item, null, 2)}</pre></li>`;
+                        } else {
+                            otherDataContent += `<li>${item}</li>`;
+                        }
+                    });
+                    otherDataContent += `</ul>`;
+                } else {
+                    otherDataContent += `<pre>${JSON.stringify(value, null, 2)}</pre>`;
+                }
             } else {
                 otherDataContent += `${value === null || value === undefined ? 'N/A' : value}`;
             }
@@ -627,8 +1132,13 @@ function renderList(items) {
         cardContent += `<h4 onclick="this.nextElementSibling.classList.toggle('expanded'); this.classList.toggle('expanded');">Ostali podaci</h4>
                         <div class="collapsible-content">` + otherDataContent + `</div>`;
     }
+    
+    const isAddedToCompare = productsToCompare.some(p => (p.naziv || p.name) === (prod.naziv || prod.name));
+    const compareBtnClass = isAddedToCompare ? 'added' : '';
+    const compareBtnText = isAddedToCompare ? 'Dodato za poređenje' : 'Dodaj za poređenje';
+    cardContent += `<button class="compare-btn ${compareBtnClass}" data-product-name="${prod.naziv || prod.name}">${compareBtnText}</button>`;
 
-    // Move link to the bottom of the card
+    // Premjesti link na dno kartice
     if (prod.link) {
         const baseUrl = prod.link.startsWith('/') ? 'https://sonusart.ba' : '';
         cardContent += `<a href="${baseUrl}${prod.link}" target="_blank" rel="noopener noreferrer" class="link-button">Pogledaj ${prod.brend}</a>`;
@@ -637,7 +1147,7 @@ function renderList(items) {
     card.innerHTML = cardContent;
     list.appendChild(card);
     
-    // Add gallery listeners
+    // Dodaj slušače za galeriju
     const gallery = card.querySelector(`#gallery-${cardId}`);
     if (gallery) {
       const mainImage = gallery.querySelector('.main-image');
@@ -673,15 +1183,20 @@ function renderList(items) {
           });
       }
       
-      // Add a listener for fullscreen view
+      // Dodaj slušač za prikaz na cijelom ekranu
       mainImage.addEventListener('click', () => {
           openFullscreenImage(imageUrls, currentIndex);
       });
     }
+
+    // Dodaj slušač za poređenje
+    card.querySelector('.compare-btn').addEventListener('click', () => {
+        toggleCompareProduct(prod);
+    });
   });
 }
 /**
- * Updates all displayed prices based on the selected currency.
+ * Ažurira sve prikazane cijene na osnovu odabrane valute.
  */
 function updatePrices() {
     const priceElements = document.querySelectorAll('.product-price');
@@ -698,9 +1213,9 @@ function updatePrices() {
     });
 }
 /**
- * Opens a fullscreen image modal.
- * @param {Array<string>} imageUrls List of image URLs.
- * @param {number} initialIndex Index of the image to display first.
+ * Otvara modalni prozor za sliku preko cijelog ekrana.
+ * @param {Array<string>} imageUrls Lista URL-ova slika.
+ * @param {number} initialIndex Indeks slike za početni prikaz.
  */
 function openFullscreenImage(imageUrls, initialIndex) {
     const modal = document.getElementById('fullscreen-modal');
@@ -723,21 +1238,21 @@ function openFullscreenImage(imageUrls, initialIndex) {
     }
 }
 /**
- * Displays the previous image in the fullscreen modal.
+ * Prikazuje prethodnu sliku u modalnom prozoru.
  */
 function showPrevImage() {
     modalImageIndex = (modalImageIndex - 1 + modalImageUrls.length) % modalImageUrls.length;
     document.getElementById('modal-image').src = modalImageUrls[modalImageIndex];
 }
 /**
- * Displays the next image in the fullscreen modal.
+ * Prikazuje sljedeću sliku u modalnom prozoru.
  */
 function showNextImage() {
     modalImageIndex = (modalImageIndex + 1) % modalImageUrls.length;
     document.getElementById('modal-image').src = modalImageUrls[modalImageIndex];
 }
 /**
- * Closes the fullscreen image modal.
+ * Zatvara modalni prozor za sliku preko cijelog ekrana.
  */
 function closeFullscreenImage() {
     const modal = document.getElementById('fullscreen-modal');
@@ -746,6 +1261,298 @@ function closeFullscreenImage() {
     modalImage.src = '';
     modalImageUrls = [];
     modalImageIndex = 0;
+}
+/**
+ * Otvara modalni prozor AI pomoćnika.
+ */
+function openAIAssistantModal() {
+    const modal = document.getElementById('ai-assistant-modal');
+    modal.style.display = 'flex';
+    document.getElementById('ai-response-text').innerHTML = "";
+    document.getElementById('ai-input').value = "";
+    document.getElementById('tts-btn').style.display = 'none';
+}
+/**
+ * Zatvara modalni prozor AI pomoćnika.
+ */
+function closeAIAssistantModal() {
+    const modal = document.getElementById('ai-assistant-modal');
+    modal.style.display = 'none';
+}
+/**
+ * Prikazuje spinner za učitavanje.
+ */
+function showLoadingSpinner() {
+    const spinner = document.querySelector('.loading-spinner');
+    spinner.style.display = 'block';
+    document.getElementById('ai-submit-btn').disabled = true;
+    isAILoading = true;
+}
+/**
+ * Skriva spinner za učitavanje.
+ */
+function hideLoadingSpinner() {
+    const spinner = document.querySelector('.loading-spinner');
+    spinner.style.display = 'none';
+    document.getElementById('ai-submit-btn').disabled = false;
+    isAILoading = false;
+}
+/**
+ * Poziva Gemini API za generisanje preporuka proizvoda.
+ * @param {string} userQuery Upit korisnika.
+ */
+async function callGeminiAPIForRecommendations(userQuery) {
+    showLoadingSpinner();
+    document.getElementById('ai-response-text').innerHTML = "";
+    document.getElementById('tts-btn').style.display = 'none';
+    
+    // Kreira JSON string svih proizvoda
+    const productData = JSON.stringify(allItemsFlat.map(p => ({
+        id: p.id,
+        naziv: p.naziv,
+        opis: p.opis,
+        brend: p.brend,
+        cijena: p.eur_price,
+        link: p.link,
+        kategorije: p.categories,
+        karakteristike: p.features || p["badge-ovi"] || p["bedz"]
+    })), null, 2);
+
+    const prompt = `Koristeći sljedeće podatke o proizvodima, preporučite proizvode na osnovu korisnikovog upita.
+Ako ne možete pronaći odgovarajuće proizvode, navedite to.
+Svi odgovori moraju biti na bosanskom/hrvatskom/srpskom jeziku.
+Ne izmišljajte podatke. Uvijek koristite podatke iz priloženog kataloga.
+Pružite do 5 preporuka.
+
+Katalog proizvoda:
+${productData}
+
+Korisnikov upit: "${userQuery}"
+
+Formatirajte odgovor kao JSON objekt s ključem "preporuke". Svaka preporuka u nizu mora imati ključeve "nazivProizvoda", "razlogPreporuke" i "link".
+Uvijek navedite razlog zašto je taj proizvod odabran.
+`;
+
+    const payload = {
+        contents: [{
+            parts: [{ text: prompt }]
+        }],
+        generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema: {
+                type: "OBJECT",
+                properties: {
+                    preporuke: {
+                        type: "ARRAY",
+                        items: {
+                            type: "OBJECT",
+                            properties: {
+                                nazivProizvoda: { type: "STRING" },
+                                razlogPreporuke: { type: "STRING" },
+                                link: { type: "STRING" }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    let response;
+    try {
+        response = await fetch(GEMINI_API_URL + apiKey, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        if (result.candidates && result.candidates.length > 0 &&
+            result.candidates[0].content && result.candidates[0].content.parts &&
+            result.candidates[0].content.parts.length > 0) {
+            
+            const jsonString = result.candidates[0].content.parts[0].text;
+            const parsedJson = JSON.parse(jsonString);
+            displayAIResponse(parsedJson);
+
+        } else {
+            document.getElementById('ai-response-text').innerHTML = `
+                <p style="color:var(--bad);">Greška: Odgovor od API-ja nije u očekivanom formatu.</p>
+            `;
+        }
+    } catch (e) {
+        console.error("Greška pri pozivu Gemini API-ja:", e);
+        document.getElementById('ai-response-text').innerHTML = `
+            <p style="color:var(--bad);">Došlo je do greške. Pokušajte ponovo. Ako se greška ponovi, provjerite konzolu za detalje.</p>
+        `;
+    } finally {
+        hideLoadingSpinner();
+    }
+}
+/**
+ * Prikazuje odgovor od AI pomoćnika.
+ * @param {object} data JSON objekat s preporukama.
+ */
+function displayAIResponse(data) {
+    const container = document.getElementById('ai-response-text');
+    let content = "";
+    if (data.preporuke && data.preporuke.length > 0) {
+        content += "<h4>Preporučeni proizvodi:</h4><ul>";
+        data.preporuke.forEach(rec => {
+            const product = allItemsFlat.find(p => p.naziv === rec.nazivProizvoda || p.name === rec.nazivProizvoda);
+            let link = rec.link;
+            if (product && product.link) {
+                 link = product.link.startsWith('/') ? `https://sonusart.ba${product.link}` : product.link;
+            }
+            content += `<li><strong>${rec.nazivProizvoda}</strong>: ${rec.razlogPreporuke}`;
+            if (link) {
+                content += ` <a href="${link}" target="_blank" rel="noopener noreferrer">(Pogledaj proizvod)</a>`;
+            }
+            content += `</li>`;
+        });
+        content += "</ul>";
+    } else {
+        content = "<p>Nažalost, nisam pronašao proizvode koji odgovaraju vašem upitu. Molimo vas, pokušajte s drugačijim opisom.</p>";
+    }
+    container.innerHTML = content;
+    document.getElementById('tts-btn').style.display = 'block';
+}
+/**
+ * Pretvara Base64 string u ArrayBuffer.
+ * @param {string} base64 Base64 string.
+ * @returns {ArrayBuffer} Dekodirani ArrayBuffer.
+ */
+function base64ToArrayBuffer(base64) {
+    const binaryString = atob(base64);
+    const len = binaryString.length;
+    const bytes = new Uint8Array(len);
+    for (let i = 0; i < len; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+    }
+    return bytes.buffer;
+}
+/**
+ * Konvertuje PCM podatke u WAV Blob.
+ * @param {Int16Array} pcm16 Podaci u PCM formatu.
+ * @param {number} sampleRate Brzina uzorkovanja.
+ * @returns {Blob} WAV format.
+ */
+function pcmToWav(pcm16, sampleRate) {
+    const buffer = new ArrayBuffer(44 + pcm16.length * 2);
+    const view = new DataView(buffer);
+    
+    // RIFF zaglavlje
+    writeString(view, 0, 'RIFF');
+    view.setUint32(4, 36 + pcm16.length * 2, true);
+    writeString(view, 8, 'WAVE');
+    
+    // FMT podzaglavlje
+    writeString(view, 12, 'fmt ');
+    view.setUint32(16, 16, true);
+    view.setUint16(20, 1, true); // Audio format: 1 za PCM
+    view.setUint16(22, 1, true); // Broj kanala
+    view.setUint32(24, sampleRate, true); // Brzina uzorkovanja
+    view.setUint32(28, sampleRate * 2, true); // Brzina bajtova
+    view.setUint16(32, 2, true); // Poravnanje bloka
+    view.setUint16(34, 16, true); // Bitovi po uzorku
+    
+    // DATA podzaglavlje
+    writeString(view, 36, 'data');
+    view.setUint32(40, pcm16.length * 2, true);
+    
+    // PCM podaci
+    let offset = 44;
+    for (let i = 0; i < pcm16.length; i++, offset += 2) {
+        view.setInt16(offset, pcm16[i], true);
+    }
+    
+    return new Blob([view], { type: 'audio/wav' });
+
+    function writeString(view, offset, string) {
+        for (let i = 0; i < string.length; i++) {
+            view.setUint8(offset + i, string.charCodeAt(i));
+        }
+    }
+}
+/**
+ * Pokreće reprodukciju teksta koristeći TTS API.
+ */
+async function handleAITTS() {
+    const textToSpeak = document.getElementById('ai-response-text').innerText;
+    const ttsBtn = document.getElementById('tts-btn');
+    
+    if (audioPlayer.paused) {
+        ttsBtn.disabled = true;
+        ttsBtn.classList.add('playing');
+        
+        try {
+            const payload = {
+                contents: [{
+                    parts: [{ text: textToSpeak }]
+                }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: {
+                        voiceConfig: { prebuiltVoiceConfig: { voiceName: "Puck" } }
+                    }
+                },
+                model: "gemini-2.5-flash-preview-tts"
+            };
+            
+            const response = await fetch(TTS_API_URL + apiKey, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP greška! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            const part = result?.candidates?.[0]?.content?.parts?.[0];
+            const audioData = part?.inlineData?.data;
+            const mimeType = part?.inlineData?.mimeType;
+
+            if (audioData && mimeType && mimeType.startsWith("audio/L16")) {
+                const pcmData = base64ToArrayBuffer(audioData);
+                const pcm16 = new Int16Array(pcmData);
+                const wavBlob = pcmToWav(pcm16, 24000); // 24000 Hz sample rate
+                const audioUrl = URL.createObjectURL(wavBlob);
+                
+                audioPlayer.src = audioUrl;
+                audioPlayer.play();
+                
+                audioPlayer.onended = () => {
+                    ttsBtn.classList.remove('playing');
+                    ttsBtn.disabled = false;
+                    URL.revokeObjectURL(audioUrl); // Oslobodi memoriju
+                };
+
+                audioPlayer.onerror = (e) => {
+                    console.error('Greška pri reprodukciji zvuka:', e);
+                    ttsBtn.classList.remove('playing');
+                    ttsBtn.disabled = false;
+                };
+            } else {
+                throw new Error("Neuspješan odgovor od TTS API-ja");
+            }
+
+        } catch (error) {
+            console.error("Greška pri pozivu TTS API-ja:", error);
+            ttsBtn.classList.remove('playing');
+            ttsBtn.disabled = false;
+        }
+    } else {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+        ttsBtn.classList.remove('playing');
+        ttsBtn.disabled = false;
+    }
 }
 
 Promise.all([
@@ -776,13 +1583,14 @@ Promise.all([
         images.push(p.image);
     }
     const processedImages = images.map(url => {
+        // Provjeri i popravi ponovljene putanje u URL-u
         if (url && url.startsWith('https://www.marantz.comhttps://www.marantz.com')) {
             return url.replace('https://www.marantz.comhttps://www.marantz.com', 'https://www.marantz.com');
         }
         return url;
     }).filter(Boolean);
 
-    // Convert price from USD to EUR
+    // Konvertuj cijenu iz USD u EUR
     const priceInUSD = normalizePrice(p.price);
     const priceInEUR = priceInUSD > 0 ? priceInUSD * USD_TO_EUR_RATE : 0;
 
@@ -790,8 +1598,8 @@ Promise.all([
       ...p,
       brend: "Marantz",
       naziv: p.name,
-      eur_price: priceInEUR, // Add a new property for the EUR price
-      cijena: p.price, // Keep the original USD price
+      eur_price: priceInEUR, // Dodaj novo svojstvo za EUR cijenu
+      cijena: p.price, // Zadrži originalnu USD cijenu
       opis: p.tagline,
       slika_url: processedImages.length > 0 ? processedImages[0] : null,
       images_urls: processedImages
@@ -826,11 +1634,6 @@ Promise.all([
   document.title = `Katalog v${APP_VERSION}`;
 });
 
-document.getElementById("apply-btn").addEventListener("click", applyFilters);
-document.getElementById("sort-select").addEventListener("change", applyFilters);
-document.getElementById("feature-filter").addEventListener("change", applyFilters);
-document.getElementById("only-priced").addEventListener("change", applyFilters);
-
 document.getElementById("brand-filter").addEventListener("change", (e) => {
     currentBrand = e.target.value;
     currentCategory = "ALL";
@@ -838,6 +1641,9 @@ document.getElementById("brand-filter").addEventListener("change", (e) => {
     highlightActiveCategory();
     applyFilters();
 });
+document.getElementById("sort-select").addEventListener("change", applyFilters);
+document.getElementById("feature-filter").addEventListener("change", applyFilters);
+document.getElementById("only-priced").addEventListener("change", applyFilters);
 
 ["search", "min-price", "max-price"].forEach(id => {
   document.getElementById(id).addEventListener("keydown", e => { if (e.key === "Enter") applyFilters(); });
@@ -857,7 +1663,7 @@ document.getElementById('currency-km').addEventListener('click', () => {
     updatePrices();
 });
 
-// Listeners for the fullscreen modal
+// Slušači za modal slike
 document.getElementById('modal-close-btn').addEventListener('click', closeFullscreenImage);
 document.getElementById('fullscreen-modal').addEventListener('click', (e) => {
     if (e.target.id === 'fullscreen-modal') {
@@ -878,6 +1684,26 @@ window.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// Slušači za AI pomoćnika
+document.getElementById('ai-assistant-btn').addEventListener('click', openAIAssistantModal);
+document.getElementById('ai-submit-btn').addEventListener('click', () => {
+    const userQuery = document.getElementById('ai-input').value;
+    if (userQuery.trim()) {
+        callGeminiAPIForRecommendations(userQuery);
+    }
+});
+document.getElementById('ai-input').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey && !isAILoading) {
+        e.preventDefault();
+        const userQuery = e.target.value;
+        if (userQuery.trim()) {
+            callGeminiAPIForRecommendations(userQuery);
+        }
+    }
+});
+document.getElementById('tts-btn').addEventListener('click', handleAITTS);
+document.getElementById('open-compare-modal-btn').addEventListener('click', openCompareModal);
 </script>
 
 </body>
