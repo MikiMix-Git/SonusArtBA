@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.44.8 (2025-08-18)
-- Optimizacija: Primijenjeno keširanje, delegiranje događaja i pretprocesiranje podataka radi poboljšanja performansi.
-- Dodano: Pokazatelj učitavanja za bolje korisničko iskustvo.
-- Ispravljeno: Greška `TypeError: Cannot read properties of null` uklanjanjem JavaScript koda koji se odnosi na nepostojeće HTML elemente.
-- Usklađeno: ID-jevi i listeneri u JavaScriptu sada odgovaraju priloženoj HTML strukturi.
-- Uklonjeno: Funkcionalnost poređenja proizvoda i povezani JavaScript kod.
-- Ispravljeno: `TypeError: Cannot read properties of undefined (reading 'addEventListener')` u `applyFilters()` i `renderCategoriesForBrand()` uklanjanjem listenera koji se odnose na nepostojeće elemente i provjerom postojanja elemenata prije dodavanja listenera.
+v0.45.4 (2025-08-20)
+- Ispravljeno: "Prednosti & Nedostaci" sada se prikazuju u popup prozoru (modalu).
+- Ažurirano: Prikaz "Prednosti & Nedostaci" koristi isti format modala kao i fullscreen pregled slika za bolju konzistentnost korisničkog iskustva.
+- Uklonjeno: Uklonjen inline div za prikaz LLM analize iz kartica proizvoda.
 -->
 <html lang="hr">
 <head>
@@ -52,7 +49,7 @@ nav button:hover { background: #999; }
 .product-card { background: var(--card); border-radius: 6px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
 /* Image Gallery Styles */
 .image-gallery { position: relative; width: 100%; margin-bottom: 1rem; }
-.main-image-container { position: relative; width: 100%; padding-top: 66.66%; /* 3:2 Aspect Ratio */ background: #fafafa; border-radius: 4px; overflow: hidden; cursor: pointer; }
+.main-image-container { position: relative; width: 100%; padding-top: 66.66%; /* 3:2 Aspect Ratio */ background: #fafafa; border-radius: 4-x; overflow: hidden; cursor: pointer; }
 .main-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.3s ease; }
 .gallery-nav-btn {
   position: absolute; top: 50%; transform: translateY(-50%);
@@ -127,6 +124,61 @@ nav button:hover { background: #999; }
   background: var(--ink);
   color: #fff;
 }
+
+/* Gemini API related styles */
+.gemini-feature-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.gemini-feature-buttons button {
+  flex-grow: 1;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-weight: bold;
+}
+.gemini-feature-buttons button:hover {
+  background-color: var(--accent-hover);
+}
+.gemini-feature-buttons button:disabled {
+  background-color: var(--ink-muted);
+  cursor: not-allowed;
+}
+.llm-output-area {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--soft);
+  border-radius: 4px;
+}
+.llm-output-area h5 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--ink-soft);
+}
+.llm-output-area ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.llm-output-area li {
+  margin-bottom: 0.25rem;
+}
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  color: var(--ink-muted);
+  gap: 0.5rem;
+}
+
+
 .features-list, .specs-list { padding-left: 0; list-style: none; }
 .features-list li { margin-bottom: 0.5rem; }
 .specs-list dt { font-weight: bold; color: var(--ink-muted); margin-top: 0.6rem; }
@@ -171,7 +223,7 @@ nav button:hover { background: #999; }
 }
 
 /* Styles for fullscreen view */
-#fullscreen-modal {
+#fullscreen-modal, #pros-cons-modal {
   position: fixed;
   z-index: 100;
   left: 0;
@@ -188,7 +240,40 @@ nav button:hover { background: #999; }
   max-height: 90%;
   object-fit: contain;
 }
-#modal-close-btn {
+#pros-cons-content {
+  background-color: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+#pros-cons-content h2 {
+    margin-top: 0;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+#pros-cons-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+#pros-cons-content ul li {
+    margin-bottom: 0.5rem;
+}
+#pros-cons-content h5 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+#modal-close-btn, #pros-cons-close-btn {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -198,8 +283,13 @@ nav button:hover { background: #999; }
   transition: 0.3s;
   cursor: pointer;
 }
-#modal-close-btn:hover,
-#modal-close-btn:focus {
+#pros-cons-close-btn {
+    top: 10px;
+    right: 20px;
+    color: var(--ink-soft);
+}
+#modal-close-btn:hover, #pros-cons-close-btn:hover,
+#modal-close-btn:focus, #pros-cons-close-btn:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -241,7 +331,7 @@ nav button:hover { background: #999; }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.44.8</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.45.4</span>
   </h1>
 </header>
 
@@ -270,7 +360,6 @@ nav button:hover { background: #999; }
       <option value="rating-asc">Ocjena ↑</option>
     </select>
     <label><input type="checkbox" id="only-priced"> Samo sa cijenom</label>
-    <button id="apply-btn">Primijeni filtere</button>
     <div class="currency-toggle">
         <button id="currency-eur" class="currency-button active">€</button>
         <button id="currency-km" class="currency-button">KM</button>
@@ -289,11 +378,19 @@ nav button:hover { background: #999; }
   <button id="modal-next-btn" style="display: none;">›</button>
 </div>
 
+<!-- Pros & Cons Modal -->
+<div id="pros-cons-modal" style="display: none;">
+    <div id="pros-cons-content">
+        <span id="pros-cons-close-btn">&times;</span>
+        <div id="pros-cons-inner-content"></div>
+    </div>
+</div>
+
 <!-- Loading spinner -->
 <div id="loading" class="loader" style="display:none;"></div>
 
 <script>
-const APP_VERSION = "0.44.8";
+const APP_VERSION = "0.45.4";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 const USD_TO_EUR_RATE = 0.93;
@@ -307,6 +404,11 @@ let currentCurrency = 'EUR';
 let modalImageUrls = [];
 let modalImageIndex = 0;
 let isUpdating = false;
+
+// Exponential backoff for API calls
+let requestAttempts = {};
+const MAX_RETRIES = 5;
+const INITIAL_BACKOFF_DELAY = 1000;
 
 const dom = {
     categoryNav: document.getElementById("category-nav"),
@@ -327,6 +429,9 @@ const dom = {
     modalImage: document.getElementById("modal-image"),
     modalPrevBtn: document.getElementById("modal-prev-btn"),
     modalNextBtn: document.getElementById("modal-next-btn"),
+    prosConsModal: document.getElementById("pros-cons-modal"),
+    prosConsCloseBtn: document.getElementById("pros-cons-close-btn"),
+    prosConsInnerContent: document.getElementById("pros-cons-inner-content"),
     versionBadge: document.getElementById("version-badge"),
     loadingSpinner: document.getElementById("loading")
 };
@@ -455,21 +560,32 @@ async function fetchData() {
 /**
  * Renders the category buttons for the selected brand.
  * @param {string} brand The brand name.
- * @param {object} allProducts All product data.
- * @param {Function} setCategory A function to set the current category.
  */
-function renderCategoriesForBrand(brand, allProducts, setCategory) {
+function renderCategoriesForBrand(brand) {
     if (!dom.categoryNav) return;
     dom.categoryNav.innerHTML = "";
+    
     let categories = ["ALL"];
-    if (brand === "Argon" && allProducts.Argon.categories) {
+    if (brand === "Argon" && allProducts.Argon && allProducts.Argon.categories) {
         categories = ["ALL", ...Object.keys(allProducts.Argon.categories)];
     }
+    
+    if (brand === "Marantz") {
+      const marantzCategories = [...new Set(allItemsFlat
+        .filter(p => p.brend === 'Marantz' && p.categories)
+        .flatMap(p => p.categories))];
+      categories = [...categories, ...marantzCategories];
+    }
+
     categories.forEach(cat => {
         const btn = document.createElement("button");
         btn.textContent = cat === "ALL" ? `Sve kategorije` : cat;
         btn.dataset.cat = cat;
-        btn.onclick = () => setCategory(cat);
+        btn.addEventListener('click', () => {
+          currentCategory = cat;
+          highlightActiveCategory(currentCategory);
+          applyFilters();
+        });
         dom.categoryNav.appendChild(btn);
     });
 }
@@ -646,10 +762,17 @@ function renderList(items, currentBrand, currentCategory) {
                 cardContent += `<h4 class="collapsible-header" data-target="other-data-${cardId}">Ostali podaci</h4>
                                 <div id="other-data-${cardId}" class="collapsible-content">` + otherDataContent + `</div>`;
             }
+            
+            // New Gemini-powered buttons
+            cardContent += `
+              <div class="gemini-feature-buttons">
+                <button class="generate-pros-cons-btn" data-card-id="${cardId}">✨ Prednosti & Nedostaci</button>
+              </div>
+            `;
+
 
             if (prod.link) {
-                const baseUrl = prod.link.startsWith('/') ? 'https://sonusart.ba' : '';
-                cardContent += `<a href="${baseUrl}${prod.link}" target="_blank" rel="noopener noreferrer" class="link-button">Pogledaj ${prod.brend}</a>`;
+                cardContent += `<a href="${prod.link}" target="_blank" rel="noopener noreferrer" class="link-button">Pogledaj ${prod.brend}</a>`;
             }
 
             card.innerHTML = cardContent;
@@ -728,6 +851,41 @@ function closeFullscreenImage() {
 }
 
 /**
+ * Opens the pros and cons modal.
+ * @param {string} productName The name of the product.
+ * @param {object} data The object containing 'pros' and 'cons' arrays.
+ */
+function openProsConsModal(productName, data) {
+    dom.prosConsInnerContent.innerHTML = `<h2>Prednosti i nedostaci: ${productName}</h2>`;
+    const pros = data.pros || [];
+    const cons = data.cons || [];
+    let html = '';
+    
+    if (pros.length > 0) {
+        html += `<h5>Prednosti</h5><ul>`;
+        pros.forEach(item => html += `<li>${item}</li>`);
+        html += `</ul>`;
+    }
+    
+    if (cons.length > 0) {
+        html += `<h5>Nedostaci</h5><ul>`;
+        cons.forEach(item => html += `<li>${item}</li>`);
+        html += `</ul>`;
+    }
+
+    dom.prosConsInnerContent.innerHTML += html || `<p>Nije pronađena analiza za ovaj proizvod.</p>`;
+    dom.prosConsModal.style.display = 'flex';
+}
+
+/**
+ * Closes the pros and cons modal.
+ */
+function closeProsConsModal() {
+    dom.prosConsModal.style.display = 'none';
+    dom.prosConsInnerContent.innerHTML = '';
+}
+
+/**
  * Applies all filters and sorting to the list.
  */
 function applyFilters() {
@@ -774,6 +932,103 @@ function applySort(items, sortKey) {
 }
 
 /**
+ * Gets the list of items based on the current brand and category.
+ * @returns {Array<object>} The filtered list of items.
+ */
+function sourceItems() {
+    let items = allItemsFlat;
+    
+    // Filter by brand
+    if (currentBrand !== "ALL") {
+        items = items.filter(p => p.brend === currentBrand);
+    }
+    
+    // Filter by category
+    if (currentCategory !== "ALL") {
+      items = items.filter(p => p.kategorija === currentCategory || (Array.isArray(p.categories) && p.categories.includes(currentCategory)));
+    }
+
+    return items;
+}
+
+/**
+ * Generates a JSON list of pros and cons for a product using the Gemini API.
+ * @param {object} product The product object.
+ * @param {string} cardId The ID of the product card.
+ */
+async function generateProsAndCons(product, cardId) {
+  const button = document.querySelector(`[data-card-id="${cardId}"].generate-pros-cons-btn`);
+  
+  // Disable button and show loading state
+  button.disabled = true;
+  dom.prosConsInnerContent.innerHTML = `<div class="loading-indicator">Učitavanje prednosti i nedostataka... <div class="loader" style="width:15px;height:15px;border-width:2px;"></div></div>`;
+  dom.prosConsModal.style.display = 'flex';
+
+  const productName = product.naziv || product.name;
+  const productDescription = product.opis || product.tagline || product.description;
+  const productFeatures = (product.features || product['badge-ovi'] || product['bedz'] || []).join(', ');
+  const productSpecs = JSON.stringify(product.specifications || product.specifikacije || {});
+
+  const prompt = `Analiziraj sljedeći proizvod i navedi 3-5 prednosti (Pros) i 3-5 nedostataka (Cons) u obliku JSON liste. Fokusiraj se na tehničke karakteristike i korisničko iskustvo. Koristi isključivo bosanski jezik.
+Proizvod: ${productName}
+Opis: ${productDescription}
+Karakteristike: ${productFeatures}
+Specifikacije: ${productSpecs}`;
+
+  const requestKey = `pros-cons-${cardId}`;
+  requestAttempts[requestKey] = (requestAttempts[requestKey] || 0) + 1;
+  const currentAttempt = requestAttempts[requestKey];
+  const delay = INITIAL_BACKOFF_DELAY * Math.pow(2, currentAttempt - 1);
+
+  try {
+    const payload = {
+      contents: [{ role: "user", parts: [{ text: prompt }] }],
+      generationConfig: {
+        responseMimeType: "application/json",
+        responseSchema: {
+          type: "OBJECT",
+          properties: {
+            "pros": {
+              "type": "ARRAY",
+              "items": { "type": "STRING" }
+            },
+            "cons": {
+              "type": "ARRAY",
+              "items": { "type": "STRING" }
+            }
+          }
+        }
+      }
+    };
+    const apiKey = "";
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+    
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const result = await response.json();
+    const jsonText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+    const parsedJson = JSON.parse(jsonText);
+    
+    openProsConsModal(productName, parsedJson);
+  } catch (e) {
+    console.error(`Greška pri generisanju prednosti/nedostataka za ${productName}:`, e);
+    dom.prosConsInnerContent.innerHTML = `<p style="color:var(--bad);">Greška: Nije moguće dobiti prednosti i nedostatke. Molimo pokušajte ponovo.</p>`;
+  } finally {
+    // Re-enable button after request is finished
+    button.disabled = false;
+    delete requestAttempts[requestKey];
+  }
+}
+
+/**
  * Initializes the application.
  */
 async function initialize() {
@@ -785,11 +1040,7 @@ async function initialize() {
 
     if (dom.loadingSpinner) dom.loadingSpinner.style.display = 'none';
     
-    renderCategoriesForBrand(currentBrand, allProducts, (cat) => {
-        currentCategory = cat;
-        highlightActiveCategory(currentCategory);
-        applyFilters();
-    });
+    renderCategoriesForBrand(currentBrand);
     highlightActiveCategory(currentCategory);
     applyFilters();
     
@@ -799,47 +1050,18 @@ async function initialize() {
     document.title = `Katalog v${APP_VERSION}`;
 }
 
-/**
- * Gets the list of items based on the current brand and category.
- * @returns {Array<object>} The filtered list of items.
- */
-function sourceItems() {
-    const brand = currentBrand;
-    const cat = currentCategory;
-    if (brand === "ALL") {
-        return allItemsFlat;
-    }
-    if (brand === "Argon") {
-        if (cat === "ALL") {
-            const items = Object.values(allProducts.Argon.categories).flat();
-            // Attach brand and pre-processed data to Argon products
-            return items.map(p => {
-                const preprocessed = allItemsFlat.find(item => (item.naziv || item.name) === (p.naziv || p.name));
-                return { ...p, brend: "Argon", ...preprocessed };
-            });
-        }
-        const items = (allProducts.Argon.categories?.[cat] || []);
-        return items.map(p => {
-            const preprocessed = allItemsFlat.find(item => (item.naziv || item.name) === (p.naziv || p.name));
-            return { ...p, brend: "Argon", ...preprocessed };
-        });
-    }
-    if (brand === "Marantz") {
-        const marantzItems = allItemsFlat.filter(p => p.brend === "Marantz");
-        return cat === "ALL" ? marantzItems : marantzItems.filter(p => p.categories.includes(cat));
-    }
-    return [];
-}
-
 // Event delegation for the product list to handle all clicks
 dom.productList.addEventListener('click', (e) => {
     const target = e.target;
-    const cardId = target.closest('.product-card')?.dataset.cardId;
-    if (!cardId) return;
-
-    const items = sourceItems();
-    const prod = items[parseInt(cardId.split('-')[1])];
-
+    const cardElement = target.closest('.product-card');
+    if (!cardElement) return;
+    const cardId = cardElement.dataset.cardId;
+    
+    // Dohvati proizvod iz trenutno filtrirane liste
+    const productIndex = parseInt(cardId.split('-')[1], 10);
+    const product = sourceItems()[productIndex];
+    if (!product) return;
+    
     // Collapsible sections
     if (target.classList.contains('collapsible-header')) {
         const targetElement = document.getElementById(target.dataset.target);
@@ -850,12 +1072,17 @@ dom.productList.addEventListener('click', (e) => {
         return;
     }
 
+    // Gemini API features
+    if (target.classList.contains('generate-pros-cons-btn')) {
+        generateProsAndCons(product, cardId);
+        return;
+    }
+
     // Gallery navigation
     if (target.classList.contains('gallery-nav-btn')) {
-        const gallery = document.getElementById(`gallery-${cardId}`);
-        const mainImage = gallery.querySelector('.main-image');
-        const thumbnails = gallery.querySelectorAll('.thumbnail');
-        const imageUrls = prod.images_urls || [];
+        const mainImage = cardElement.querySelector('.main-image');
+        const thumbnails = cardElement.querySelectorAll('.thumbnail');
+        const imageUrls = product.images_urls || [];
         
         let currentIndex = parseInt(mainImage.dataset.imgIndex, 10);
         
@@ -875,10 +1102,9 @@ dom.productList.addEventListener('click', (e) => {
 
     // Thumbnail click
     if (target.classList.contains('thumbnail')) {
-        const gallery = document.getElementById(`gallery-${cardId}`);
-        const mainImage = gallery.querySelector('.main-image');
-        const thumbnails = gallery.querySelectorAll('.thumbnail');
-        const imageUrls = prod.images_urls || [];
+        const mainImage = cardElement.querySelector('.main-image');
+        const thumbnails = cardElement.querySelectorAll('.thumbnail');
+        const imageUrls = product.images_urls || [];
         const index = parseInt(target.dataset.imgIndex, 10);
         
         mainImage.src = imageUrls[index];
@@ -890,7 +1116,7 @@ dom.productList.addEventListener('click', (e) => {
 
     // Main image click to open modal
     if (target.classList.contains('main-image')) {
-        const imageUrls = prod.images_urls || [];
+        const imageUrls = product.images_urls || [];
         const currentIndex = parseInt(target.dataset.imgIndex, 10);
         openFullscreenImage(imageUrls, currentIndex);
         return;
@@ -907,11 +1133,7 @@ if (dom.brandFilter) {
   dom.brandFilter.addEventListener("change", (e) => {
       currentBrand = e.target.value;
       currentCategory = "ALL";
-      renderCategoriesForBrand(currentBrand, allProducts, (cat) => {
-          currentCategory = cat;
-          highlightActiveCategory(currentCategory);
-          applyFilters();
-      });
+      renderCategoriesForBrand(currentBrand);
       highlightActiveCategory(currentCategory);
       applyFilters();
   });
@@ -952,6 +1174,16 @@ if (dom.fullscreenModal) {
 if (dom.modalPrevBtn) dom.modalPrevBtn.addEventListener('click', showPrevImage);
 if (dom.modalNextBtn) dom.modalNextBtn.addEventListener('click', showNextImage);
 
+// Event listeners for the new pros and cons modal
+if (dom.prosConsCloseBtn) dom.prosConsCloseBtn.addEventListener('click', closeProsConsModal);
+if (dom.prosConsModal) {
+  dom.prosConsModal.addEventListener('click', (e) => {
+    if (e.target.id === 'pros-cons-modal') {
+      closeProsConsModal();
+    }
+  });
+}
+
 window.addEventListener('keydown', (e) => {
     if (dom.fullscreenModal && dom.fullscreenModal.style.display === 'flex') {
         if (e.key === 'ArrowLeft') {
@@ -960,6 +1192,10 @@ window.addEventListener('keydown', (e) => {
             showNextImage();
         } else if (e.key === 'Escape') {
             closeFullscreenImage();
+        }
+    } else if (dom.prosConsModal && dom.prosConsModal.style.display === 'flex') {
+        if (e.key === 'Escape') {
+            closeProsConsModal();
         }
     }
 });
