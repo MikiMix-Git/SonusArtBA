@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.45.4 (2025-08-20)
-- Ispravljeno: "Prednosti & Nedostaci" sada se prikazuju u popup prozoru (modalu).
-- Ažurirano: Prikaz "Prednosti & Nedostaci" koristi isti format modala kao i fullscreen pregled slika za bolju konzistentnost korisničkog iskustva.
-- Uklonjeno: Uklonjen inline div za prikaz LLM analize iz kartica proizvoda.
+v0.45.5 (2025-08-20)
+- Dodano: API ključ za Gemini API, omogućavajući funkcionalnost "Prednosti & Nedostaci".
 -->
 <html lang="hr">
 <head>
@@ -331,7 +329,7 @@ nav button:hover { background: #999; }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.45.4</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.45.5</span>
   </h1>
 </header>
 
@@ -390,7 +388,7 @@ nav button:hover { background: #999; }
 <div id="loading" class="loader" style="display:none;"></div>
 
 <script>
-const APP_VERSION = "0.45.4";
+const APP_VERSION = "0.45.5";
 const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json";
 const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
 const USD_TO_EUR_RATE = 0.93;
@@ -1000,7 +998,7 @@ Specifikacije: ${productSpecs}`;
         }
       }
     };
-    const apiKey = "";
+    const apiKey = "AIzaSyACd0WXWQKwaLb0Kq6AV85rv4cnTf5wL0k";
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
     
     const response = await fetch(apiUrl, {
