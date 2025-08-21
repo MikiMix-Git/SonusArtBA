@@ -31,9 +31,10 @@ def get_product_gallery_images(content):
     """
     Preuzima sve URL-ove slika iz galerije proizvoda iz HTML sadržaja.
     """
-    image_urls = set()
+    image_urls = [] # Promijenjeno sa seta na listu kako bi se sačuvao redoslijed
+    seen_urls = set()
     if not content:
-        return list(image_urls)
+        return image_urls
 
     soup = BeautifulSoup(content, 'html.parser')
     image_elements = soup.select('div.product-gallery__media img, div.video-media img')
@@ -52,9 +53,11 @@ def get_product_gallery_images(content):
         if url_to_add:
             if url_to_add.startswith('//'):
                 url_to_add = 'https:' + url_to_add
-            image_urls.add(url_to_add)
+            if url_to_add not in seen_urls: # Provjerava duplikate prije dodavanja
+                image_urls.append(url_to_add) # Dodavanje u listu
+                seen_urls.add(url_to_add) # Dodavanje u set za praćenje
                 
-    return list(image_urls)
+    return image_urls
 
 def get_product_details_from_content(content):
     """
@@ -139,10 +142,10 @@ async def async_get_product_data(session, product_link, brand_logo_url):
     title_element = soup.find('h1', class_='product-info__title')
     title = title_element.get_text(strip=True) if title_element else 'N/A'
     
-    price_element = soup.find('span', class_='product-info__price')
+    price_element = soup.find('div', class_='product-info__price') # Ispravljen selektor
     price = price_element.get_text(strip=True) if price_element else 'N/A'
     
-    description_element = soup.find('p', class_='product-info__description')
+    description_element = soup.find('div', class_='product-info__description') # Ispravljen selektor
     description = description_element.get_text(strip=True) if description_element else 'N/A'
     
     details = get_product_details_from_content(content)
