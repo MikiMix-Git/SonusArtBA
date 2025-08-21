@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
-v0.45.5 (2025-08-20)
-- Dodano: API ključ za Gemini API, omogućavajući funkcionalnost "Prednosti & Nedostaci".
+v0.45.8 (2025-08-21)
+- Dodana 'debounce' funkcija za optimizaciju pretraživanja.
 -->
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Argon & Marantz Katalog - Svi podaci</title>
 <style>
 :root {
@@ -329,7 +330,7 @@ nav button:hover { background: #999; }
 
 <header>
   <h1>Argon & Marantz – Katalog proizvoda 
-    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.45.5</span>
+    <span id="version-badge" style="font-size:.75em; background:#222; color:#fff; padding:.2em .5em; border-radius:4px;">v0.45.8</span>
   </h1>
 </header>
 
@@ -388,11 +389,20 @@ nav button:hover { background: #999; }
 <div id="loading" class="loader" style="display:none;"></div>
 
 <script>
-const APP_VERSION = "0.45.5";
-const RAW_ARGON = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json";
-const RAW_MARANTZ = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json";
-const USD_TO_EUR_RATE = 0.93;
-const KM_CONVERSION_RATE = 1.95583;
+const APP_VERSION = "0.45.8";
+
+// Centralizovana konfiguracija
+const CONFIG = {
+    apiUrls: {
+        argon: "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/argon_audio_products_all_categories.json",
+        marantz: "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/marantz_all_products.json"
+    },
+    rates: {
+        usdToEur: 0.93,
+        kmConversion: 1.95583
+    },
+    geminiApiKey: "AIzaSyACd0WXWQKwaLb0Kq6AV85rv4cnTf5wL0k"
+};
 
 let allProducts = {};
 let allItemsFlat = [];
@@ -493,8 +503,8 @@ function dedupProducts(items) {
 async function fetchData() {
   try {
     const [argonResponse, marantzResponse] = await Promise.all([
-      fetch(RAW_ARGON).then(r => r.json()),
-      fetch(RAW_MARANTZ).then(r => r.json())
+      fetch(CONFIG.apiUrls.argon).then(r => r.json()),
+      fetch(CONFIG.apiUrls.marantz).then(r => r.json())
     ]);
 
     const processedMarantz = marantzResponse.map(p => {
@@ -510,7 +520,7 @@ async function fetchData() {
         }).filter(Boolean);
 
         const priceInUSD = normalizePrice(p.price);
-        const priceInEUR = priceInUSD > 0 ? priceInUSD * USD_TO_EUR_RATE : 0;
+        const priceInEUR = priceInUSD > 0 ? priceInUSD * CONFIG.rates.usdToEur : 0;
 
         return {
             ...p,
@@ -795,7 +805,7 @@ function updatePrices(currentCurrency) {
             if (currentCurrency === 'EUR') {
                 span.textContent = eurPrice.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
             } else { // KM
-                const kmPrice = eurPrice * KM_CONVERSION_RATE;
+                const kmPrice = eurPrice * CONFIG.rates.kmConversion;
                 span.textContent = kmPrice.toLocaleString('de-DE', { style: 'currency', currency: 'BAM' });
             }
         }
@@ -998,7 +1008,7 @@ Specifikacije: ${productSpecs}`;
         }
       }
     };
-    const apiKey = "AIzaSyACd0WXWQKwaLb0Kq6AV85rv4cnTf5wL0k";
+    const apiKey = CONFIG.geminiApiKey;
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
     
     const response = await fetch(apiUrl, {
@@ -1047,6 +1057,21 @@ async function initialize() {
     }
     document.title = `Katalog v${APP_VERSION}`;
 }
+
+/**
+ * NEW: Debounce function to limit how often a function is called.
+ * @param {function} func The function to debounce.
+ * @param {number} delay The debounce delay in milliseconds.
+ * @returns {function} The debounced function.
+ */
+function debounce(func, delay) {
+    let timeoutId;
+    return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+
 
 // Event delegation for the product list to handle all clicks
 dom.productList.addEventListener('click', (e) => {
@@ -1122,7 +1147,17 @@ dom.productList.addEventListener('click', (e) => {
 });
 
 // Event listeners for filters and currency
-if (dom.applyBtn) dom.applyBtn.addEventListener("click", applyFilters);
+// OLD: ["search", "minPrice", "maxPrice"].forEach(id => {
+// OLD:  if (dom[id]) dom[id].addEventListener("keydown", e => { if (e.key === "Enter") applyFilters(); });
+// OLD: });
+
+// NEW: Debounced search
+if (dom.search) {
+    const debouncedApplyFilters = debounce(applyFilters, 300); // 300ms delay
+    dom.search.addEventListener("input", debouncedApplyFilters);
+    dom.search.addEventListener("keydown", e => { if (e.key === "Enter") applyFilters(); });
+}
+
 if (dom.sortSelect) dom.sortSelect.addEventListener("change", applyFilters);
 if (dom.featureFilter) dom.featureFilter.addEventListener("change", applyFilters);
 if (dom.onlyPriced) dom.onlyPriced.addEventListener("change", applyFilters);
@@ -1136,10 +1171,6 @@ if (dom.brandFilter) {
       applyFilters();
   });
 }
-
-["search", "minPrice", "maxPrice"].forEach(id => {
-  if (dom[id]) dom[id].addEventListener("keydown", e => { if (e.key === "Enter") applyFilters(); });
-});
 
 if (dom.currencyEur) {
   dom.currencyEur.addEventListener('click', () => {
