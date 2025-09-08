@@ -112,10 +112,13 @@ async def async_scrape_product_details(session, product_url, category_name, bran
             html = await response.text()
             soup = BeautifulSoup(html, 'html.parser')
             
-            name = "Naziv nedostupan"
+            # --- DODAN RANI IZLAZAK AKO STRANICA NIJE PROIZVODNA STRANICA ---
             name_element = soup.select_one('h1.product-title')
-            if name_element:
-                name = name_element.get_text(strip=True)
+            if not name_element:
+                print(f"Preskakanje URL-a: {product_url} jer se ne čini kao stranica proizvoda.")
+                return None
+            
+            name = name_element.get_text(strip=True)
             
             # --- Ažurirana logika za preuzimanje opisa ---
             description = "Opis nije dostupan"
@@ -137,28 +140,57 @@ async def async_scrape_product_details(session, product_url, category_name, bran
             if price_element:
                 price = price_element.get_text(strip=True)
             
-            # --- Izmenjen deo za slike: koristi se lista i proverava se duplikat pre dodavanja ---
-            image_urls = []
-            image_elements = soup.select('div.product-image-container img, .product-hero-image img, .product-bycategory img, .images-box img')
-            for img_element in image_elements:
-                image_src = None
-                # Prvo proveravamo data-srcset atribut
-                if 'data-srcset' in img_element.attrs:
-                    # Iz atributa uzimamo prvi URL (najčešće je najviša rezolucija)
-                    srcset_list = img_element['data-srcset'].split(',')
-                    if srcset_list:
-                        image_src = srcset_list[0].strip().split(' ')[0]
-                # Ako data-srcset ne postoji ili je prazan, proveravamo src atribut
-                if not image_src and 'src' in img_element.attrs:
-                    image_src = img_element['src']
-                
-                if image_src:
-                    full_url = urljoin("https://dynaudio.com", image_src)
-                    if full_url not in image_urls:
-                        image_urls.append(full_url)
+            # --- Nova, poboljšana logika za slike iz galerije ---
+            image_urls = set()
+            
+            gallery_items = soup.select('li[itemprop="associatedMedia"]')
+            
+            if gallery_items:
+                for item in gallery_items:
+                    link_element = item.find('a')
+                    image_url = None
+                    
+                    if link_element:
+                        image_url = urljoin("https://dynaudio.com", link_element.get('href'))
+                        
+                    if image_url:
+                        image_urls.add(image_url)
             
             if not image_urls:
-                image_urls.append("URL slike nedostupan")
+                image_urls.add("URL slike nedostupan")
+                
+            # --- DODAN NOVI BLOK KODA ZA DOHVAT DOSTUPNIH BOJA ---
+            available_colors = []
+            color_picker_links = soup.select('div.color-pickers a.color-selected')
+            if color_picker_links:
+                for link in color_picker_links:
+                    color_name = link.get('title')
+                    # Izdvajanje URL-a iz 'style' atributa
+                    style_str = link.select_one('div.colorpicker')['style']
+                    match = re.search(r'url\((.*?)\)', style_str)
+                    color_image_url = match.group(1) if match else None
+                    
+                    if color_name and color_image_url:
+                        available_colors.append({
+                            "ime_boje": color_name,
+                            "url_slike": urljoin("https://dynaudio.com", color_image_url)
+                        })
+            else:
+                # Ako nema birača boja, pokušaj dohvaćanje iz galerije (stara metoda)
+                gallery_items = soup.select('li[itemprop="associatedMedia"]')
+                if gallery_items:
+                    for item in gallery_items:
+                        color_name = item.get('data-name')
+                        if color_name:
+                            color_exists = any(d['ime_boje'] == color_name for d in available_colors)
+                            if not color_exists:
+                                # Uzimamo prvu sliku za tu boju
+                                link_element = item.find('a')
+                                image_url = urljoin("https://dynaudio.com", link_element.get('href')) if link_element else None
+                                available_colors.append({
+                                    "ime_boje": color_name,
+                                    "url_slike": image_url
+                                })
 
             # --- Ažurirana logika za specifikacije ---
             specifications = {}
@@ -196,24 +228,6 @@ async def async_scrape_product_details(session, product_url, category_name, bran
                             if spec_name and spec_value:
                                 specifications[spec_name] = spec_value
 
-            # --- Nova logika za prikupljanje dostupnih boja ---
-            available_colors = []
-            color_pickers = soup.select('div.color-pickers a')
-            for picker in color_pickers:
-                color_name = picker.get('title')
-                color_image_url = None
-                style_attr = picker.select_one('.colorpicker')['style']
-                # Izdvajanje URL-a iz atributa stila
-                match = re.search(r"url\(['\"]?(.*?)['\"]?\)", style_attr)
-                if match:
-                    color_image_url = urljoin("https://dynaudio.com", match.group(1))
-
-                if color_name and color_image_url:
-                    available_colors.append({
-                        "ime_boje": color_name,
-                        "url_slike": color_image_url
-                    })
-
             # --- Nova logika za preuzimanje linkova ---
             download_links = []
             link_elements = soup.select('div.content-links ul li a')
@@ -227,9 +241,6 @@ async def async_scrape_product_details(session, product_url, category_name, bran
                         "url": full_link_url
                     })
 
-            product_id_match = re.search(r'\/([a-zA-Z0-9_-]+)(?:\?|$)', product_url)
-            product_id = product_id_match.group(1) if product_id_match else "ID nedostupan"
-
             return {
                 "ime_proizvoda": name,
                 "brend_logo_url": brand_logo_url,
@@ -240,10 +251,7 @@ async def async_scrape_product_details(session, product_url, category_name, bran
                 "dostupne_boje": available_colors,
                 "linkovi_i_preuzimanja": download_links,
                 "specifikacije": specifications,
-                "kategorije": [category_name],
-                "dodatne_informacije": {
-                    "id": product_id,
-                }
+                "kategorije": [category_name]
             }
 
     except aiohttp.ClientError as e:
