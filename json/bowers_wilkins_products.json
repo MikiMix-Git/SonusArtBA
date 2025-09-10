@@ -3,7 +3,7 @@
         "ime_proizvoda": "Nautilus",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$110,000",
-        "opis": null,
+        "opis": "Nothing looks, or sounds, quite like Nautilus™. A revolution when it first launched 30 years ago and still an icon today, its ethos informs everything we do. Nautilus comes in three standard colors: Midnight Blue, Black, and Silver. We also offer a special service that can match any color from a sample or color reference.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/loudspeakers/nautilus-series/nautilus/150016.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw82da0202/bowers/PDP/Nautilus/Nautilus-Blue/Nautilus-Blue_Image_1.png?sw=2160",
@@ -36,7 +36,7 @@
         "ime_proizvoda": "801 Abbey Road Limited Edition",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$70,000",
-        "opis": null,
+        "opis": "Celebrating the unique 45-year relationship between Bowers & Wilkins and Abbey Road, the 801 Abbey Road Limited Edition takes the 801 D4 Signature and reframes it in homage to the home of music making.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/loudspeakers/801-abbey-road/300678AR.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6e4ef3eb/bowers/PDP/801-abbey-road/BuyStack-1-min.png?sw=2160",
@@ -67,7 +67,7 @@
         "ime_proizvoda": "Zeppelin Pro Edition",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$899",
-        "opis": null,
+        "opis": "The new Zeppelin Pro Edition is smarter, more flexible, and sounds better than ever. You no longer have to choose between advanced features, aesthetic beauty and room-filling sound. Now, you can have it all.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/wireless-speakers/zeppelin-pro/301026.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw0bd4ddd8/bowers/PDP/Zeppelin-Pro/Buy-Stack_01-min.png?sw=2160",
@@ -100,7 +100,7 @@
         "ime_proizvoda": "Zeppelin",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$559",
-        "opis": null,
+        "opis": "Zeppelin is a wireless smart speaker reimagined for the streaming age. Its elegant form combines high-resolution stereo sound with a comprehensive range of smart, connected features and services.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/wireless-speakers/zeppelin/150242.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw2d37dfd9/bowers/PDP/Zeppelin-Wireless/Zeppelin-Wireless-Midnight-Grey/Zeppelin-Wireless-Midnight-Grey_Image_1.png?sw=2160",
@@ -134,7 +134,7 @@
         "ime_proizvoda": "Panorama 3",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$999",
-        "opis": null,
+        "opis": "Panorama 3 is a Dolby Atmos-enabled, Amazon Alexa-compatible, home theater powerhouse in a single, elegant component. Bowers & Wilkins draws on its decades of collaboration with the world's most famous recording studios to deliver stunning sound.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/sound-bars/panorama-3/150243.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb13c986f/bowers/PDP/Panorama/Panorama_Black/Panorama-Black_Image_1.png?sw=2160",
@@ -166,7 +166,7 @@
         "ime_proizvoda": "Px8 McLaren Edition",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$849",
-        "opis": null,
+        "opis": "Celebrating the long-standing, award-winning partnership between Bowers & Wilkins and McLaren Automotive and the McLaren supercars and hypercars in which Bowers & Wilkins has been integrated, the Px8 McLaren Edition headphones fuse McLaren-inspired styling with high-performance wireless sound synonymous with Bowers & Wilkins’ flagship headphones.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px8-mclaren/300494ML.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw17b021de/bowers/PDP/PX8-McLaren-Edition/PX8-McLaren-Edition-Grey/PX8-McLaren-Edition-Grey_Image_1.png?sw=2160",
@@ -198,7 +198,7 @@
         "ime_proizvoda": "Px8",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$749",
-        "opis": null,
+        "opis": "Px8 is our flagship wireless headphone. It's the ultimate combination of exceptional performance, premium materials, intelligent technology, and smart features. Available in a range of elegant finishes, including our classic Tan and Black models, as well as the striking Royal Burgundy and all-new Dark Forest, Px8 offers luxury that complements exquisite sound quality.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px8/300494.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe8b6d0c5/bowers/PDP/PX8/PX8-Black/PX8-Black_Image_1.png?sw=2160",
@@ -233,7 +233,7 @@
         "ime_proizvoda": "Px7 S3",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$479",
-        "opis": null,
+        "opis": "Elevated design. Innovative features. Incredible sound. Px7 S3 takes everything you love about Bowers & Wilkins’ award-winning over-ear headphones and refines it to a new standard of excellence and elegance.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px7-s3/301020.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3176dd6d/bowers/PDP/px7-s3/BW_Px7S3PDP_[BuyStack11]_967450-min.png?sw=2160",
@@ -267,7 +267,7 @@
         "ime_proizvoda": "Px7 S2e",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$399",
-        "opis": null,
+        "opis": "Px7 S2e is a significantly improved version of our highly successful entry-level Px7 S2 wireless headphones. The ‘e’ stands for ‘evolved’, as the Px7 S2e draws inspiration and insights from our high-end Px8 wireless headphones, alongside a re-tuned acoustic performance, to deliver exceptional sound in its class.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px7-s2e/300866.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd14e85aa/bowers/PDP/PX7-S2e/PX7-S2e-Black/PX7-S2e-Black_Image_1.png?sw=2160",
@@ -302,7 +302,7 @@
         "ime_proizvoda": "Px7 S2",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$399",
-        "opis": null,
+        "opis": "Px7 S2's custom-designed 40mm drive units and 24-bit-capable wireless platform combine for a truly immersive listening experience that allows you to hear more of what the artist wants you to hear.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px7-s2/300493.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw07cd3bb3/bowers/PDP/PX7-S2/PX7-S2-Black/PX7-S2-Black_Image_1.png?sw=2160",
@@ -335,7 +335,7 @@
         "ime_proizvoda": "Pi8 McLaren Edition",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$599",
-        "opis": null,
+        "opis": "The Pi8 McLaren Edition earbuds evolve the relationship between Bowers & Wilkins, McLaren Automotive and the McLaren Formula 1 Team. They fuse the high-performance wireless sound synonymous with Bowers & Wilkins’ flagship in-ear headphones with McLaren-inspired design.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi8-mclaren/301045.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8c40fea7/bowers/PDP/pi8-mclaren/pi8-mclaren_buy-stack_2-min.png?sw=2160",
@@ -368,7 +368,7 @@
         "ime_proizvoda": "Pi8",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$499",
-        "opis": null,
+        "opis": "Pi8. The new reference in earbuds. Class-leading audio performance, bespoke ANC and crystal-clear call quality with the comfort and elegance of a highly considered earbud design.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi8/300965.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwddc34984/bowers/PDP/Pi8/BW_Buy-Stack_Pi8_795104-4-min.png?sw=2160",
@@ -402,7 +402,7 @@
         "ime_proizvoda": "Pi6",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$249",
-        "opis": null,
+        "opis": "Pi6. An earbud that defines excellence in its True Wireless category. Class-leading audio performance, bespoke ANC and crystal-clear call quality with the comfort and elegance of a highly considered earbud design.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi6/300966.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw87fa6bc2/bowers/PDP/Pi6/BW_Pi8PDP_Buy-Stack_795104-5-min.png?sw=2160",
@@ -436,7 +436,7 @@
         "ime_proizvoda": "Pi7 S2",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$259",
-        "opis": null,
+        "opis": "What does it take to create category-defining True Wireless earbuds? High-resolution sound and crystal-clear voice calls, an industry-first wireless audio retransmission case, plus a choice of three elegant colors.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi7-s2/300650.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw083ed412/bowers/PDP/PI7-S2/PI7-S2-Black/PI7-S2-Black_Image_1.png?sw=2160",
@@ -471,7 +471,7 @@
         "ime_proizvoda": "Pi7 S2",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$259",
-        "opis": null,
+        "opis": "What does it take to create category-defining True Wireless earbuds? High-resolution sound and crystal-clear voice calls, an industry-first wireless audio retransmission case, plus a choice of three elegant colors.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi7-s2/300650.html?dwvar_300650_color=MidBlue",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6b125aad/bowers/PDP/PI7-S2/PI7-S2-Blue/PI7-S2-Blue_Image_1.png?sw=2160",
@@ -506,7 +506,7 @@
         "ime_proizvoda": "AM-1",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$800",
-        "opis": null,
+        "opis": "Position vertically or horizontally thanks to the elegant aluminum wall-bracket. Resistant to dust, moisture, and UV, the AM-1 is far tougher than it looks.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/outdoor-speakers/am-1/150135.html?dwvar_150135_color=Black",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw13888d3c/bowers/PDP/AM-1/AM-1-Black/AM-1-Black_Image_1.png?sw=2160",
@@ -538,7 +538,7 @@
         "ime_proizvoda": "M-1",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$275",
-        "opis": null,
+        "opis": "Where versatility and discretion are concerned, M-1 has them in abundance. It’s equally suited to multi-channel or stereo sound, is an outstanding listen with or without a subwoofer, and comes complete with wall-bracket and table stand.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/home-theatre/m-1/150121.html?dwvar_150121_color=Black",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd611029d/bowers/PDP/M-1/M-1-Black/M-1-Black_Image_1.png?sw=2160"
@@ -568,7 +568,7 @@
         "ime_proizvoda": "PX7 S2e Recertified",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$229",
-        "opis": null,
+        "opis": "Px7 S2e is the latest iteration of our highly successful entry-level wireless headphones. The ‘e’ stands for ‘evolved’, as the Px7 S2e takes inspiration and learnings from our flagship Px8 wireless headphones, together with a re-tuned acoustic performance, to deliver the very best sound in its class.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/recertified/301019-refurbished.html?dwvar_301019-refurbished_color=AnthraciteBlk",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd14e85aa/bowers/PDP/PX7-S2e/PX7-S2e-Black/PX7-S2e-Black_Image_1.png?sw=2160",
@@ -602,7 +602,7 @@
         "ime_proizvoda": "PX7 S2e Recertified",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$229",
-        "opis": null,
+        "opis": "Px7 S2e is the latest iteration of our highly successful entry-level wireless headphones. The ‘e’ stands for ‘evolved’, as the Px7 S2e takes inspiration and learnings from our flagship Px8 wireless headphones, together with a re-tuned acoustic performance, to deliver the very best sound in its class.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/recertified/301019-refurbished.html",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd5400c76/bowers/PDP/PX7-S2e/PX7-S2e-Forest-Green/PX7-S2e-Forest-Green_Image_1.png?sw=2160",
@@ -636,7 +636,7 @@
         "ime_proizvoda": "Px7 S2 Recertified",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$149",
-        "opis": null,
+        "opis": "Px7 S2's custom-designed 40mm drive units and 24-bit-capable wireless platform combine for a truly immersive listening experience that allows you to hear more of what the artist wants you to hear.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px7-s2/301001-refurbished.html?dwvar_301001-refurbished_color=Black",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw07cd3bb3/bowers/PDP/PX7-S2/PX7-S2-Black/PX7-S2-Black_Image_1.png?sw=2160",
@@ -670,7 +670,7 @@
         "ime_proizvoda": "Px8 Recertified",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$399",
-        "opis": null,
+        "opis": "Px8 is our flagship wireless headphone. It’s the ultimate combination of exceptional performance, premium materials, intelligent technology, and smart features. Available in a range of elegant finishes, including our classic Tan and Black models, as well as the all-new striking Royal Burgundy, Px8 offers luxury that complements exquisite sound quality.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px8/301000-refurbished.html?dwvar_301000-refurbished_color=Black",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe8b6d0c5/bowers/PDP/PX8/PX8-Black/PX8-Black_Image_1.png?sw=2160",
@@ -704,7 +704,7 @@
         "ime_proizvoda": "Px8",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$749",
-        "opis": null,
+        "opis": "Px8 is our flagship wireless headphone. It's the ultimate combination of exceptional performance, premium materials, intelligent technology, and smart features. Available in a range of elegant finishes, including our classic Tan and Black models, as well as the striking Royal Burgundy and all-new Dark Forest, Px8 offers luxury that complements exquisite sound quality.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px8/300494.html?dwvar_300494_color=Black",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe8b6d0c5/bowers/PDP/PX8/PX8-Black/PX8-Black_Image_1.png?sw=2160",
@@ -739,7 +739,7 @@
         "ime_proizvoda": "Px7 S2e",
         "brend_logo_url": "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/default/dw5b7e6caf/images/logo.svg",
         "cena": "$399",
-        "opis": null,
+        "opis": "Px7 S2e is a significantly improved version of our highly successful entry-level Px7 S2 wireless headphones. The ‘e’ stands for ‘evolved’, as the Px7 S2e draws inspiration and insights from our high-end Px8 wireless headphones, alongside a re-tuned acoustic performance, to deliver exceptional sound in its class.",
         "url_proizvoda": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px7-s2e/300866.html?dwvar_300866_color=AnthraciteBlk",
         "url_slika": [
             "https://www.bowerswilkins.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd14e85aa/bowers/PDP/PX7-S2e/PX7-S2e-Black/PX7-S2e-Black_Image_1.png?sw=2160",
