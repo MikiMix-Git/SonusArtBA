@@ -97,6 +97,23 @@ def get_product_links_from_category(category_url):
         
     return product_links
 
+def clean_price(price_string):
+    """
+    Čisti string cene i konvertuje ga u float, uklanjajući $ i ,.
+    """
+    if price_string:
+        # Uklonite sve što nije cifra, tačka ili znak za par/komad
+        cleaned_price = re.sub(r'[^\d.,/]+', '', price_string)
+        # Zamena zareza tačkom za decimale
+        cleaned_price = cleaned_price.replace(',', '')
+        # Izolujte cenu pre znaka /
+        if '/' in cleaned_price:
+            cleaned_price = cleaned_price.split('/')[0].strip()
+        # Proverite da li je string prazan nakon čišćenja
+        if cleaned_price.strip():
+            return float(cleaned_price)
+    return None
+
 def scrape_product_details(scraper, product_url, brand_logo_url):
     """
     Prikuplja detaljne informacije o proizvodu.
@@ -108,12 +125,29 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
 
         # Izdvajanje podataka
         product_title_tag = soup.find('h1', class_='product-name')
-        product_title = product_title_tag.text.strip() if product_title_tag else 'N/A'
+        product_title = product_title_tag.text.strip() if product_title_tag else None
 
-        description_tag = soup.find('div', class_='product-short-description')
-        description = description_tag.text.strip() if description_tag else 'N/A'
+        tagline_tag = soup.find('p', class_='product-tagline')
+        tagline = tagline_tag.text.strip() if tagline_tag else None
 
-        price = 'N/A'
+        # --- AŽURIRANO: Prikupljanje opisa pomoću više selektora ---
+        description = None
+        description_selectors = [
+            'div.product-short-description',
+            'div.short-description p', # Novi selektor dodan
+            'div.product-description-container p',
+            'div.product-details-intro__description p',
+            'div.product-details__summary p'
+        ]
+        
+        for selector in description_selectors:
+            description_tag = soup.select_one(selector)
+            if description_tag:
+                description = description_tag.text.strip()
+                break
+        # --- KRAJ AŽURIRANJA ---
+
+        price = None
         price_tag = soup.find('div', class_='price')
         if price_tag:
             price_text = price_tag.text
@@ -137,6 +171,34 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
                     value = value_tag.text.strip()
                     specifications[key] = value
 
+        # Izdvajanje dostupnih boja
+        available_colors = []
+        color_swatches = soup.select('div.color-swatches-holder .swatch-value')
+        for swatch in color_swatches:
+            color = swatch.text.strip()
+            if color:
+                available_colors.append(color)
+
+        # Izdvajanje dostupnih kvaliteta
+        available_qualities = []
+        quality_options = soup.select('div[data-attr="quality"] select option')
+        for option in quality_options:
+            quality = option.text.strip()
+            if quality and quality != 'Select Quality':
+                available_qualities.append(quality)
+        
+        # Izdvajanje pogodnosti
+        benefits = {}
+        benefit_items = soup.select('ul.pdp-breadcrumb-features li')
+        for item in benefit_items:
+            title_tag = item.find('span', class_='pdp-breadcrumb-features--title')
+            link_tag = item.find('a')
+            if title_tag and link_tag:
+                title = title_tag.text.strip()
+                link = link_tag.get('href')
+                if title and link:
+                    benefits[title] = urljoin(product_url, link)
+
         # Izdvajanje kategorije iz URL-a proizvoda
         parsed_url = urlparse(product_url)
         path_segments = parsed_url.path.split('/')
@@ -147,15 +209,21 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
             category_slug = 'N/A'
 
         return {
-            "Brend": "Bowers & Wilkins",
-            "Brend Logo URL": brand_logo_url,
-            "Naziv proizvoda": product_title,
-            "Kategorija": category_slug,
-            "Cena": price,
-            "Opis": description,
-            "Slike": image_urls,
-            "Specifikacije": specifications,
-            "URL proizvoda": product_url
+            "ime_proizvoda": product_title,
+            "brend_logo_url": brand_logo_url,
+            "cena": price,
+            "opis": description,
+            "url_proizvoda": product_url,
+            "url_slika": image_urls,
+            "specifikacije": specifications,
+            "kategorije": category_slug,
+            "dodatne_informacije": {
+                "tagline": tagline,
+                "ociscena_cena": clean_price(price),
+                "dostupne_boje": available_colors,
+                "dostupni_kvaliteti": available_qualities,
+                "pogodnosti": benefits
+            }
         }
         
     except RequestException as e:
@@ -163,9 +231,36 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
     except Exception as e:
         return f"Došlo je do nepredviđene greške za {product_url}: {e}"
 
+def get_brand_logo_url(main_url):
+    """
+    Dohvaća i vraća apsolutni URL logotipa brenda sa početne stranice.
+    """
+    try:
+        response = scraper.get(main_url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Pronalazimo <img> tag sa alt atributom 'Bowers & Wilkins'
+        logo_img = soup.find('img', alt='Bowers & Wilkins')
+        if logo_img and logo_img.get('src'):
+            # Spajamo relativnu putanju sa osnovnim URL-om sajta da bismo dobili apsolutnu
+            relative_logo_url = logo_img['src']
+            return urljoin(main_url, relative_logo_url)
+        
+    except RequestException as e:
+        print(f"Greška pri dohvaćanju URL-a logotipa: {e}")
+        return None
+    except Exception as e:
+        print(f"Došlo je do nepredviđene greške: {e}")
+        return None
+
 def main():
     main_url = "https://www.bowerswilkins.com/en-us/"
-    brand_logo_url = "https://www.bowerswilkins.com/on/demandware.static/Sites-bowers_us-Site/-/en_US/v1757417695243/images/icons/BW-logo-B-W-L.svg"
+    
+    # Sada dinamički dohvaćamo URL logotipa umesto da ga hardkodiramo
+    brand_logo_url = get_brand_logo_url(main_url)
+    if not brand_logo_url:
+        print("Upozorenje: Nije pronađen URL logotipa brenda. Skripta će nastaviti bez logotipa.")
     
     print("Pronalazim kategorije...")
     categories = get_categories(main_url)
@@ -196,7 +291,7 @@ def main():
                 result = scrape_product_details(scraper, link, brand_logo_url)
                 
                 if isinstance(result, dict):
-                    product_url = result.get('URL proizvoda')
+                    product_url = result.get('url_proizvoda')
                     if product_url and product_url not in scraped_urls:
                         all_products_data.append(result)
                         scraped_urls.add(product_url)
