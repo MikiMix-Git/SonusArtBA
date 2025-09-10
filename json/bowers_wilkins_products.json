@@ -15,7 +15,21 @@
         "kategorije": "loudspeakers",
         "dodatne_informacije": {
             "tagline": "Iconic 120v floor-standing speakers",
-            "ociscena_cena": 110000.0
+            "ociscena_cena": 110000.0,
+            "dostupne_boje": [
+                "Black",
+                "Midnight Blue",
+                "Silver",
+                "White"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -35,7 +49,18 @@
         "kategorije": "loudspeakers",
         "dodatne_informacije": {
             "tagline": "Tower speaker",
-            "ociscena_cena": 70000.0
+            "ociscena_cena": 70000.0,
+            "dostupne_boje": [
+                "Vintage Walnut"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -54,7 +79,21 @@
         "kategorije": "wireless-speakers",
         "dodatne_informacije": {
             "tagline": "Beautiful design meets best-in-class sound",
-            "ociscena_cena": 899.0
+            "ociscena_cena": 899.0,
+            "dostupne_boje": [
+                "Space Grey",
+                "Solar Gold"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -74,7 +113,21 @@
         "kategorije": "wireless-speakers",
         "dodatne_informacije": {
             "tagline": "High-performance artfully designed wireless speaker",
-            "ociscena_cena": 559.0
+            "ociscena_cena": 559.0,
+            "dostupne_boje": [
+                "Midnight Grey",
+                "Pearl Gray"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -93,7 +146,20 @@
         "kategorije": "sound-bars",
         "dodatne_informacije": {
             "tagline": "Immersive Dolby Atmos sound bar",
-            "ociscena_cena": 999.0
+            "ociscena_cena": 999.0,
+            "dostupne_boje": [
+                "Black"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -112,7 +178,20 @@
         "kategorije": "over-ear-headphones",
         "dodatne_informacije": {
             "tagline": "Special-edition over-ear noise canceling headphones",
-            "ociscena_cena": 849.0
+            "ociscena_cena": 849.0,
+            "dostupne_boje": [
+                "Galvanic Grey & Papaya"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -131,7 +210,23 @@
         "kategorije": "over-ear-headphones",
         "dodatne_informacije": {
             "tagline": "Flagship noise-cancelling wireless headphone",
-            "ociscena_cena": 749.0
+            "ociscena_cena": 749.0,
+            "dostupne_boje": [
+                "Black",
+                "Royal Burgundy",
+                "Tan",
+                "Dark Forest"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -150,7 +245,22 @@
         "kategorije": "over-ear-headphones",
         "dodatne_informacije": {
             "tagline": "High-performance noise-cancelling wireless headphones",
-            "ociscena_cena": 479.0
+            "ociscena_cena": 479.0,
+            "dostupne_boje": [
+                "Anthracite Black",
+                "Canvas White",
+                "Indigo Blue"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -168,7 +278,24 @@
         "kategorije": "over-ear-headphones",
         "dodatne_informacije": {
             "tagline": "High-performance noise-cancelling wireless headphones",
-            "ociscena_cena": 399.0
+            "ociscena_cena": 399.0,
+            "dostupne_boje": [
+                "Anthracite Black",
+                "Cloud Grey",
+                "Forest Green",
+                "Ocean Blue",
+                "Ruby Red"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -187,7 +314,21 @@
         "kategorije": "over-ear-headphones",
         "dodatne_informacije": {
             "tagline": "High-performance noise-cancelling wireless headphone",
-            "ociscena_cena": 399.0
+            "ociscena_cena": 399.0,
+            "dostupne_boje": [
+                "Black"
+            ],
+            "dostupni_kvaliteti": [
+                "New",
+                "Refurbished"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -206,7 +347,21 @@
         "kategorije": "wireless-earbuds",
         "dodatne_informacije": {
             "tagline": "Special-edition in-ear True Wireless earbuds",
-            "ociscena_cena": 599.0
+            "ociscena_cena": 599.0,
+            "dostupne_boje": [
+                "Galvanic Grey & Papaya"
+            ],
+            "dostupni_kvaliteti": [
+                "New",
+                "Refurbished"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -224,7 +379,23 @@
         "kategorije": "wireless-earbuds",
         "dodatne_informacije": {
             "tagline": "Reference in-ear True Wireless earbuds",
-            "ociscena_cena": 499.0
+            "ociscena_cena": 499.0,
+            "dostupne_boje": [
+                "Anthracite Black",
+                "Midnight Blue",
+                "Jade Green",
+                "Dove White"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -242,7 +413,23 @@
         "kategorije": "wireless-earbuds",
         "dodatne_informacije": {
             "tagline": "High-performance in-ear True Wireless earbuds",
-            "ociscena_cena": 249.0
+            "ociscena_cena": 249.0,
+            "dostupne_boje": [
+                "Cloud Grey",
+                "Forest Green",
+                "Storm Grey",
+                "Glacier Blue"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -262,7 +449,22 @@
         "kategorije": "wireless-earbuds",
         "dodatne_informacije": {
             "tagline": "Flagship noise-cancelling True Wireless earbuds",
-            "ociscena_cena": 259.0
+            "ociscena_cena": 259.0,
+            "dostupne_boje": [
+                "Midnight Blue",
+                "Satin Black",
+                "Canvas White"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -282,7 +484,22 @@
         "kategorije": "wireless-earbuds",
         "dodatne_informacije": {
             "tagline": "Flagship noise-cancelling True Wireless earbuds",
-            "ociscena_cena": 259.0
+            "ociscena_cena": 259.0,
+            "dostupne_boje": [
+                "Midnight Blue",
+                "Satin Black",
+                "Canvas White"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -300,7 +517,21 @@
         "kategorije": "outdoor-speakers",
         "dodatne_informacije": {
             "tagline": "Versatile weather-resistant outdoor loudspeaker",
-            "ociscena_cena": 800.0
+            "ociscena_cena": 800.0,
+            "dostupne_boje": [
+                "Black",
+                "White"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -316,7 +547,21 @@
         "kategorije": "home-theatre",
         "dodatne_informacije": {
             "tagline": "Versatile compact satellite speaker",
-            "ociscena_cena": 275.0
+            "ociscena_cena": 275.0,
+            "dostupne_boje": [
+                "Matte Black",
+                "Matte White"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -334,7 +579,23 @@
         "kategorije": "recertified",
         "dodatne_informacije": {
             "tagline": "High-performance noise-cancelling wireless headphones",
-            "ociscena_cena": 229.0
+            "ociscena_cena": 229.0,
+            "dostupne_boje": [
+                "AnthraciteBlk",
+                "ForestGrn",
+                "CloudGrey",
+                "OceanBlu"
+            ],
+            "dostupni_kvaliteti": [
+                "Refurbished"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -352,7 +613,23 @@
         "kategorije": "recertified",
         "dodatne_informacije": {
             "tagline": "High-performance noise-cancelling wireless headphones",
-            "ociscena_cena": 229.0
+            "ociscena_cena": 229.0,
+            "dostupne_boje": [
+                "AnthraciteBlk",
+                "ForestGrn",
+                "CloudGrey",
+                "OceanBlu"
+            ],
+            "dostupni_kvaliteti": [
+                "Refurbished"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -371,7 +648,22 @@
         "kategorije": "over-ear-headphones",
         "dodatne_informacije": {
             "tagline": "Premium noise-cancelling wireless headphone",
-            "ociscena_cena": 149.0
+            "ociscena_cena": 149.0,
+            "dostupne_boje": [
+                "Black",
+                "Blue",
+                "Gray"
+            ],
+            "dostupni_kvaliteti": [
+                "Refurbished"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -390,7 +682,22 @@
         "kategorije": "over-ear-headphones",
         "dodatne_informacije": {
             "tagline": "Flagship noise-cancelling wireless headphone",
-            "ociscena_cena": 399.0
+            "ociscena_cena": 399.0,
+            "dostupne_boje": [
+                "Black",
+                "RoyalBurgundy",
+                "Tan"
+            ],
+            "dostupni_kvaliteti": [
+                "Refurbished"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -409,7 +716,23 @@
         "kategorije": "over-ear-headphones",
         "dodatne_informacije": {
             "tagline": "Flagship noise-cancelling wireless headphone",
-            "ociscena_cena": 749.0
+            "ociscena_cena": 749.0,
+            "dostupne_boje": [
+                "Black",
+                "Royal Burgundy",
+                "Tan",
+                "Dark Forest"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     },
     {
@@ -427,7 +750,24 @@
         "kategorije": "over-ear-headphones",
         "dodatne_informacije": {
             "tagline": "High-performance noise-cancelling wireless headphones",
-            "ociscena_cena": 399.0
+            "ociscena_cena": 399.0,
+            "dostupne_boje": [
+                "Anthracite Black",
+                "Cloud Grey",
+                "Forest Green",
+                "Ocean Blue",
+                "Ruby Red"
+            ],
+            "dostupni_kvaliteti": [
+                "New"
+            ],
+            "pogodnosti": {
+                "Free shipping": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "30-day returns": "https://www.bowerswilkins.com/en-us/support/return-policy.html",
+                "Lowest-price guarantee": "https://www.bowerswilkins.com/en-us/price-match.html",
+                "Free delivery": "https://www.bowerswilkins.com/en-us/support/shipping-policy.html",
+                "Price match": "https://www.bowerswilkins.com/en-us/price-match.html"
+            }
         }
     }
 ]
