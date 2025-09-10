@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--
 CHANGELOG
+v0.45.37 (2025-09-10) - Kritična ispravka: Dodan je novi brend Bowers & Wilkins. URL je uključen u `loadAndProcessData` funkciju, a podaci su normalizovani i spojeni sa postojećim podacima kako bi se osigurao pravilan prikaz svih novih proizvoda na stranici.
 v0.45.36 (2025-09-09) - Kritična ispravka: Primenjena logika za inverziju boje logotipa za Denon, slično kao za Argon Audio, kako bi se osigurala vidljivost na beloj pozadini.
 v0.45.35 (2025-09-09) - Kritična ispravka: Dodan je novi brend Denon. URL za Denon proizvode je uključen u `loadAndProcessData` funkciju i podaci su normalizovani i spojeni sa postojećim podacima. Promena osigurava da se svi proizvodi iz Denon izvora pravilno prikazuju na stranici.
 v0.45.34 (2025-09-04) - Kritična ispravka: Uklonjena je sekcija "Varijante" iz tabele za poređenje kako bi se osigurao čistiji prikaz specifikacija. Ova promena rešava zahtev da se podaci o bojama i uzorcima ne prikazuju u poređenju, fokusirajući se isključivo na tehničke detalje.
@@ -9,7 +10,7 @@ v0.45.32 (2025-09-04) - Kritična ispravka: Ispravljen prikaz uzoraka boja. Umes
 v0.45.31 (2025-08-29) - Kritična ispravka: Ispravljen nevažeći URL za Dynaudio podatke, rešena sintaksna greška pri dodeli varijable i korigovan uslov u događaju 'keydown' za navigaciju slika, čime je poboljšana stabilnost i funkcionalnost aplikacije.
 v0.45.30 (2025-08-29) - Kritična ispravka: Vrednost "Jedinica cene" iz izvornih podataka sada je pravilno prepoznata i prikazana u tabeli za poređenje, zajedno sa vrednošću "cena". Ovo rešava problem zbog kojeg podaci o cenama nisu bili vidljivi za neke proizvode.
 v0.45.29 (2025-08-29) - Kritična ispravka: Umesto URL-a boje, dodata je galerija slika za dostupne boje proizvoda. Na kartici proizvoda i u modalu sa detaljima, korisnici sada mogu da vide i kliknu na male sličice koje predstavljaju različite boje/završne obrade proizvoda, a glavna slika proizvoda se menja u skladu s tim.
-v0.45.28 (2025-08-29) - Kritična ispravka: Linkovi u sekciji 'linkovi_i_preuzimanja' u skočnom prozoru sa detaljima proizvoda sada su klikabilni. Funkcija formatiranja podataka je prilagođena da prepoznaje i kreira HTML hiperveze za svaki objekat sa URL-om i imenom, omogućavajući korisnicima da direktno pristupe uputstvima i dokumentima.
+v0.45.28 (2025-08-29) - Kritična ispravka: Linkovi u sekciji 'linkovi_i_preuzimanja' u skočnom prozoru sa detaljima proizvoda sada su klikabilni. Funkcija formatiranja podataka je prilagođena da prepozna i kreira HTML hiperveze za svaki objekat sa URL-om i imenom, omogućavajući korisnicima da direktno pristupe uputstvima i dokumentima.
 v0.45.27 (2025-08-29) - Kritična ispravka: Ispravljena greška u prikazu galerije slika za Dynaudio proizvode. Logika je ažurirana da pravilno prikazuje sve slike iz niza "url_slika" umesto da se oslanja na podniz "dostupne_boje". Sada će svi proizvodi sa više slika, uključujući i Dynaudio, imati funkcionalnu galeriju sa navigacionim dugmadima.
 v0.45.26 (2025-08-29) - Kritična ispravka: Dodata je puna navigacija za galeriju slika u punoj veličini. Sada se mogu koristiti dugmad 'prethodna' i 'sljedeća' za listanje kroz slike, a dodata je i podrška za navigaciju strelicama na tastaturi. Takođe je dodan i brojač slika.
 v0.45.25 (2025-08-29) - Kritična ispravka: Sve slike sada se prikazuju u punoj veličini u galeriji i modalima. Dodata je funkcija `showFullImage` koja otvara sliku u novom skočnom prozoru.
@@ -259,6 +260,8 @@ v0.45.9 (2025-02-21) - Promijenjen Argon Audio logo iz placeholder slike u URL i
             const argonUrl = 'https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/argon_audio_products_all_categories.json';
             const dynaudioUrl = 'https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/dynaudio_products.json';
             const denonUrl = 'https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/denon_products.json';
+            const bowersWilkinsUrl = 'https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/refs/heads/main/json/bowers_wilkins_products.json';
+
 
             /**
              * Funkcija za preuzimanje podataka sa URL-a.
@@ -295,11 +298,12 @@ v0.45.9 (2025-02-21) - Promijenjen Argon Audio logo iz placeholder slike u URL i
                 try {
                     console.log("Počinjem učitavanje i obradu podataka.");
                     
-                    const [marantzData, argonData, dynaudioData, denonData] = await Promise.all([
+                    const [marantzData, argonData, dynaudioData, denonData, bowersWilkinsData] = await Promise.all([
                         fetchData(marantzUrl),
                         fetchData(argonUrl),
                         fetchData(dynaudioUrl),
-                        fetchData(denonUrl)
+                        fetchData(denonUrl),
+                        fetchData(bowersWilkinsUrl)
                     ]);
                     
                     // Normalizuj Marantz podatke - JSON je direktan niz objekata
@@ -362,8 +366,23 @@ v0.45.9 (2025-02-21) - Promijenjen Argon Audio logo iz placeholder slike u URL i
                     })) : [];
                     console.log("Broj normalizovanih Denon proizvoda:", normalizedDenon.length);
 
+                    // Normalizuj Bowers & Wilkins podatke
+                    const normalizedBowersWilkins = (bowersWilkinsData && Array.isArray(bowersWilkinsData)) ? bowersWilkinsData.map(product => ({
+                        ime: product.ime_proizvoda || 'Nema imena',
+                        proizvodjac: 'Bowers & Wilkins',
+                        kategorija: product.kategorije && Array.isArray(product.kategorije) ? product.kategorije.join(', ') : 'Nema kategorije',
+                        cena: product.cena ? product.cena : 'Cena nije dostupna',
+                        slike: product.url_slika && Array.isArray(product.url_slika) ? product.url_slika : [],
+                        url: product.url_proizvoda || '',
+                        opis: product.opis || 'Nema opisa.',
+                        logo: product.brend_logo_url || '',
+                        originalniPodaci: product,
+                        id: product.url_proizvoda
+                    })) : [];
+                    console.log("Broj normalizovanih Bowers & Wilkins proizvoda:", normalizedBowersWilkins.length);
+
                     // Kombinuj sve proizvode u jednu listu
-                    allProducts = [...normalizedMarantz, ...normalizedArgon, ...normalizedDynaudio, ...normalizedDenon];
+                    allProducts = [...normalizedMarantz, ...normalizedArgon, ...normalizedDynaudio, ...normalizedDenon, ...normalizedBowersWilkins];
                     console.log("Svi proizvodi (spojeni):", allProducts);
                     console.log("Ukupan broj proizvoda:", allProducts.length);
 
