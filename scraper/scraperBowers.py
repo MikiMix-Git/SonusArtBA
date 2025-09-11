@@ -134,7 +134,7 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
         description = None
         description_selectors = [
             'div.product-short-description',
-            'div.short-description p', # Novi selektor dodan
+            'div.short-description p',
             'div.product-description-container p',
             'div.product-details-intro__description p',
             'div.product-details__summary p'
@@ -171,13 +171,31 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
                     value = value_tag.text.strip()
                     specifications[key] = value
 
-        # Izdvajanje dostupnih boja
+        # --- AŽURIRANO: Izdvajanje dostupnih boja i URL-ova uzoraka ---
         available_colors = []
-        color_swatches = soup.select('div.color-swatches-holder .swatch-value')
-        for swatch in color_swatches:
-            color = swatch.text.strip()
-            if color:
-                available_colors.append(color)
+        color_swatches = soup.select('span.color-swatch') # Selektuje roditeljski span
+        for swatch_span in color_swatches:
+            color_name_tag = swatch_span.select_one('.swatch-value')
+            color_image_tag = swatch_span.select_one('.swatch.color-value')
+            
+            color_name = color_name_tag.text.strip() if color_name_tag else None
+            color_url = None
+            
+            if color_image_tag and 'style' in color_image_tag.attrs:
+                style_attr = color_image_tag['style']
+                # Koristite regularni izraz za pronalaženje URL-a unutar atributa stila
+                match = re.search(r'url\((.*?)\)', style_attr)
+                if match:
+                    relative_url = match.group(1).replace('"', '').replace("'", '')
+                    # Pretvorite relativni URL u apsolutni
+                    color_url = urljoin(product_url, relative_url)
+            
+            if color_name:
+                available_colors.append({
+                    "boja": color_name,
+                    "url_uzorka": color_url
+                })
+        # --- KRAJ AŽURIRANJA ---
 
         # Izdvajanje dostupnih kvaliteta
         available_qualities = []

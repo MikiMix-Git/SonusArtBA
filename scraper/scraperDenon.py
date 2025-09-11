@@ -3,6 +3,7 @@
 # Prvo dohvaća glavne kategorije, a zatim iterira kroz svaku kategoriju, pronalazi URL-ove proizvoda i prikuplja detaljne informacije.
 # Izdvojeni podaci uključuju naziv proizvoda, cenu, opis, URL-ove slika, specifikacije i druge relevantne informacije.
 # Svi prikupljeni podaci se čuvaju u datoteci 'denon_products.json' u JSON formatu.
+# Izmenjena verzija skripta dodatno prikuplja informacije o varijacijama proizvoda, kao što su boja, kvalitet i URL-ove slika za te varijacije.
 
 import cloudscraper
 import json
@@ -215,6 +216,45 @@ def scrape_product_details(session, product_url, category_name, brand_logo_url):
                     "opis": feature_desc
                 })
 
+        # Izdvajanje varijacija
+        variations = {}
+        
+        # Varijacije kvaliteta
+        quality_options = []
+        quality_selector = 'div[data-attr="quality"] option'
+        quality_elements = soup.select(quality_selector)
+        for opt in quality_elements:
+            if opt.get('value'):
+                quality_options.append(opt.get_text(strip=True))
+        if quality_options:
+            variations['quality'] = quality_options
+
+        # Varijacije boje sa URL-ovima slika
+        color_variations = []
+        color_swatch_selector = 'span.color-swatch'
+        color_swatch_elements = soup.select(color_swatch_selector)
+        for swatch in color_swatch_elements:
+            color_name_element = swatch.select_one('.swatch-value')
+            color_image_element = swatch.select_one('.color-value')
+            
+            if color_name_element and color_image_element:
+                color_name = color_name_element.get_text(strip=True)
+                style_attr = color_image_element.get('style', '')
+                image_url = ''
+                if 'background-image: url(' in style_attr:
+                    image_url = style_attr.split('url(')[1].split(')')[0].strip("'\"")
+                    if not image_url.startswith('http'):
+                        image_url = "https://www.denon.com" + image_url
+                
+                color_variations.append({
+                    "name": color_name,
+                    "image_url": image_url
+                })
+
+        if color_variations:
+            variations['colors'] = color_variations
+        
+        # ID proizvoda
         product_id = product_url.split('/')[-1].replace('.html', '').replace('?dwvar_', '')
 
         return {
@@ -232,6 +272,7 @@ def scrape_product_details(session, product_url, category_name, brand_logo_url):
                 "funkcije": features,
                 "ocjene": ratings,
                 "glavne_funkcije": top_features,
+                "varijacije": variations,
             }
         }
 
