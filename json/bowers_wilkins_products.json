@@ -17,10 +17,22 @@
             "tagline": "Iconic 120v floor-standing speakers",
             "ociscena_cena": 110000.0,
             "dostupne_boje": [
-                "Black",
-                "Midnight Blue",
-                "Silver",
-                "White"
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Midnight Blue",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3860ed1e/swatches/midnight-blue.png"
+                },
+                {
+                    "boja": "Silver",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8bb00be6/swatches/silver.png"
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5a3e43a0/swatches/white.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -51,7 +63,10 @@
             "tagline": "Tower speaker",
             "ociscena_cena": 70000.0,
             "dostupne_boje": [
-                "Vintage Walnut"
+                {
+                    "boja": "Vintage Walnut",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8584ceb6/swatches/walnut.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -81,8 +96,14 @@
             "tagline": "Beautiful design meets best-in-class sound",
             "ociscena_cena": 899.0,
             "dostupne_boje": [
-                "Space Grey",
-                "Solar Gold"
+                {
+                    "boja": "Space Grey",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3b3b99e3/swatches/space-grey.png"
+                },
+                {
+                    "boja": "Solar Gold",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa6e123fd/swatches/cloud-gray.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -115,8 +136,14 @@
             "tagline": "High-performance artfully designed wireless speaker",
             "ociscena_cena": 559.0,
             "dostupne_boje": [
-                "Midnight Grey",
-                "Pearl Gray"
+                {
+                    "boja": "Midnight Grey",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwee456008/swatches/midnight-gray.png"
+                },
+                {
+                    "boja": "Pearl Gray",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw43c6bff7/swatches/pearl-gray.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -148,7 +175,10 @@
             "tagline": "Immersive Dolby Atmos sound bar",
             "ociscena_cena": 999.0,
             "dostupne_boje": [
-                "Black"
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -180,7 +210,10 @@
             "tagline": "Special-edition over-ear noise canceling headphones",
             "ociscena_cena": 849.0,
             "dostupne_boje": [
-                "Galvanic Grey & Papaya"
+                {
+                    "boja": "Galvanic Grey & Papaya",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw69a83b7c/swatches/gray-papaya.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -212,10 +245,22 @@
             "tagline": "Flagship noise-cancelling wireless headphone",
             "ociscena_cena": 749.0,
             "dostupne_boje": [
-                "Black",
-                "Royal Burgundy",
-                "Tan",
-                "Dark Forest"
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Royal Burgundy",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw83cd9a5e/swatches/burgundy.png"
+                },
+                {
+                    "boja": "Tan",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb7c721cd/swatches/tan.png"
+                },
+                {
+                    "boja": "Dark Forest",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw814d3b64/swatches/forest-green.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -247,9 +292,18 @@
             "tagline": "High-performance noise-cancelling wireless headphones",
             "ociscena_cena": 479.0,
             "dostupne_boje": [
-                "Anthracite Black",
-                "Canvas White",
-                "Indigo Blue"
+                {
+                    "boja": "Anthracite Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Canvas White",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5a3e43a0/swatches/white.png"
+                },
+                {
+                    "boja": "Indigo Blue",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw64b2ec95/swatches/ocean-blue.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -280,11 +334,26 @@
             "tagline": "High-performance noise-cancelling wireless headphones",
             "ociscena_cena": 399.0,
             "dostupne_boje": [
-                "Anthracite Black",
-                "Cloud Grey",
-                "Forest Green",
-                "Ocean Blue",
-                "Ruby Red"
+                {
+                    "boja": "Anthracite Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Cloud Grey",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa6e123fd/swatches/cloud-gray.png"
+                },
+                {
+                    "boja": "Forest Green",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw814d3b64/swatches/forest-green.png"
+                },
+                {
+                    "boja": "Ocean Blue",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw64b2ec95/swatches/ocean-blue.png"
+                },
+                {
+                    "boja": "Ruby Red",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcbed79dc/swatches/ruby-red.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -316,7 +385,10 @@
             "tagline": "High-performance noise-cancelling wireless headphone",
             "ociscena_cena": 399.0,
             "dostupne_boje": [
-                "Black"
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New",
@@ -349,7 +421,10 @@
             "tagline": "Special-edition in-ear True Wireless earbuds",
             "ociscena_cena": 599.0,
             "dostupne_boje": [
-                "Galvanic Grey & Papaya"
+                {
+                    "boja": "Galvanic Grey & Papaya",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw69a83b7c/swatches/gray-papaya.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New",
@@ -381,10 +456,22 @@
             "tagline": "Reference in-ear True Wireless earbuds",
             "ociscena_cena": 499.0,
             "dostupne_boje": [
-                "Anthracite Black",
-                "Midnight Blue",
-                "Jade Green",
-                "Dove White"
+                {
+                    "boja": "Anthracite Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Midnight Blue",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3860ed1e/swatches/midnight-blue.png"
+                },
+                {
+                    "boja": "Jade Green",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8aed0b1f/swatches/jade-green.png"
+                },
+                {
+                    "boja": "Dove White",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6648138d/swatches/dove-white.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -415,10 +502,22 @@
             "tagline": "High-performance in-ear True Wireless earbuds",
             "ociscena_cena": 249.0,
             "dostupne_boje": [
-                "Cloud Grey",
-                "Forest Green",
-                "Storm Grey",
-                "Glacier Blue"
+                {
+                    "boja": "Cloud Grey",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa6e123fd/swatches/cloud-gray.png"
+                },
+                {
+                    "boja": "Forest Green",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwbe8cf74d/swatches/forest-green-pi6.png"
+                },
+                {
+                    "boja": "Storm Grey",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw0a517b04/swatches/storm-gray.png"
+                },
+                {
+                    "boja": "Glacier Blue",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw91dfab3c/swatches/glacier-blue.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -451,9 +550,18 @@
             "tagline": "Flagship noise-cancelling True Wireless earbuds",
             "ociscena_cena": 259.0,
             "dostupne_boje": [
-                "Midnight Blue",
-                "Satin Black",
-                "Canvas White"
+                {
+                    "boja": "Midnight Blue",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3860ed1e/swatches/midnight-blue.png"
+                },
+                {
+                    "boja": "Satin Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Canvas White",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5a3e43a0/swatches/white.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -486,9 +594,18 @@
             "tagline": "Flagship noise-cancelling True Wireless earbuds",
             "ociscena_cena": 259.0,
             "dostupne_boje": [
-                "Midnight Blue",
-                "Satin Black",
-                "Canvas White"
+                {
+                    "boja": "Midnight Blue",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3860ed1e/swatches/midnight-blue.png"
+                },
+                {
+                    "boja": "Satin Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Canvas White",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5a3e43a0/swatches/white.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -519,8 +636,14 @@
             "tagline": "Versatile weather-resistant outdoor loudspeaker",
             "ociscena_cena": 800.0,
             "dostupne_boje": [
-                "Black",
-                "White"
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5a3e43a0/swatches/white.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -549,8 +672,14 @@
             "tagline": "Versatile compact satellite speaker",
             "ociscena_cena": 275.0,
             "dostupne_boje": [
-                "Matte Black",
-                "Matte White"
+                {
+                    "boja": "Matte Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Matte White",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5a3e43a0/swatches/white.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -581,10 +710,22 @@
             "tagline": "High-performance noise-cancelling wireless headphones",
             "ociscena_cena": 229.0,
             "dostupne_boje": [
-                "AnthraciteBlk",
-                "ForestGrn",
-                "CloudGrey",
-                "OceanBlu"
+                {
+                    "boja": "AnthraciteBlk",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "ForestGrn",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw814d3b64/swatches/forest-green.png"
+                },
+                {
+                    "boja": "CloudGrey",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa6e123fd/swatches/cloud-gray.png"
+                },
+                {
+                    "boja": "OceanBlu",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw64b2ec95/swatches/ocean-blue.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "Refurbished"
@@ -615,10 +756,22 @@
             "tagline": "High-performance noise-cancelling wireless headphones",
             "ociscena_cena": 229.0,
             "dostupne_boje": [
-                "AnthraciteBlk",
-                "ForestGrn",
-                "CloudGrey",
-                "OceanBlu"
+                {
+                    "boja": "AnthraciteBlk",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "ForestGrn",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw814d3b64/swatches/forest-green.png"
+                },
+                {
+                    "boja": "CloudGrey",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa6e123fd/swatches/cloud-gray.png"
+                },
+                {
+                    "boja": "OceanBlu",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw64b2ec95/swatches/ocean-blue.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "Refurbished"
@@ -650,9 +803,18 @@
             "tagline": "Premium noise-cancelling wireless headphone",
             "ociscena_cena": 149.0,
             "dostupne_boje": [
-                "Black",
-                "Blue",
-                "Gray"
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Blue",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw64b2ec95/swatches/ocean-blue.png"
+                },
+                {
+                    "boja": "Gray",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwba1d87ce/swatches/gray.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "Refurbished"
@@ -684,9 +846,18 @@
             "tagline": "Flagship noise-cancelling wireless headphone",
             "ociscena_cena": 399.0,
             "dostupne_boje": [
-                "Black",
-                "RoyalBurgundy",
-                "Tan"
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "RoyalBurgundy",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw83cd9a5e/swatches/burgundy.png"
+                },
+                {
+                    "boja": "Tan",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb7c721cd/swatches/tan.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "Refurbished"
@@ -718,10 +889,22 @@
             "tagline": "Flagship noise-cancelling wireless headphone",
             "ociscena_cena": 749.0,
             "dostupne_boje": [
-                "Black",
-                "Royal Burgundy",
-                "Tan",
-                "Dark Forest"
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Royal Burgundy",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw83cd9a5e/swatches/burgundy.png"
+                },
+                {
+                    "boja": "Tan",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb7c721cd/swatches/tan.png"
+                },
+                {
+                    "boja": "Dark Forest",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw814d3b64/swatches/forest-green.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
@@ -752,11 +935,26 @@
             "tagline": "High-performance noise-cancelling wireless headphones",
             "ociscena_cena": 399.0,
             "dostupne_boje": [
-                "Anthracite Black",
-                "Cloud Grey",
-                "Forest Green",
-                "Ocean Blue",
-                "Ruby Red"
+                {
+                    "boja": "Anthracite Black",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5bc35c49/swatches/black.png"
+                },
+                {
+                    "boja": "Cloud Grey",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa6e123fd/swatches/cloud-gray.png"
+                },
+                {
+                    "boja": "Forest Green",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw814d3b64/swatches/forest-green.png"
+                },
+                {
+                    "boja": "Ocean Blue",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw64b2ec95/swatches/ocean-blue.png"
+                },
+                {
+                    "boja": "Ruby Red",
+                    "url_uzorka": "https://www.bowerswilkins.com/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcbed79dc/swatches/ruby-red.png"
+                }
             ],
             "dostupni_kvaliteti": [
                 "New"
