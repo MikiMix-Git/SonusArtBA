@@ -1,8 +1,7 @@
 # Ovaj skrejper je napisan u Pythonu i koristi biblioteku 'cloudscraper' da bi zaobišao Cloudflare zaštitu.
-# Kod radi na principu sekvencijalnog (sinhronog) preuzimanja podataka.
-# Prvo dohvaća glavne kategorije, a zatim iterira kroz svaku kategoriju, pronalazi URL-ove proizvoda i prikuplja detaljne informacije.
-# Izdvojeni podaci uključuju naziv proizvoda, cenu, opis, URL-ove slika, specifikacije i druge relevantne informacije.
-# Svi prikupljeni podaci se čuvaju u datoteci 'bowers_wilkins_products.json' u JSON formatu.
+# NOVO U V3.2: Uklonjena su polja 'dostupni_kvaliteti' i 'pogodnosti' iz finalnog izlaznog rečnika
+# NOVO U V3.1: Uklonjena logika za prikupljanje 'dostupni_kvaliteti' i 'pogodnosti'.
+# Zadržana je ispravka V3.0 koja osigurava prikupljanje SVIH specifikacija.
 
 import cloudscraper
 import json
@@ -12,7 +11,14 @@ import os
 import time
 import random
 import re
+import logging 
+import sys
 from urllib.parse import urljoin, urlparse
+
+# --- KONSTANTE ZA VERZIJU I LOGOVANJE ---
+CODE_VERSION = "V3.2" # AŽURIRANO NA V3.2
+LOG_FILE = "scraper.log"
+OUTPUT_FILENAME = "bowers_wilkins_products.json"
 
 # Kreiranje jedne, sinhrone cloudscraper instance
 scraper = cloudscraper.create_scraper(
@@ -23,41 +29,117 @@ scraper = cloudscraper.create_scraper(
     }
 )
 
+def setup_logging():
+    """
+    Konfiguriše standardni Python modul za logovanje.
+    Postavlja logovanje i u fajl (scraper.log) i na konzolu.
+    """
+    logger = logging.getLogger()
+    # Podesite root logger na INFO nivo
+    logger.setLevel(logging.INFO) 
+    
+    # Uklanjanje postojećih handlera da bi se sprečilo dupliranje izlaza
+    if logger.hasHandlers():
+        logger.handlers.clear()
+
+    formatter = logging.Formatter(
+        '[%(asctime)s] [%(levelname)s] [V{}] %(message)s'.format(CODE_VERSION), 
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+    
+    # 1. Fajl Handler (Za čuvanje logova u datoteku)
+    file_handler = logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+    
+    # 2. Stream Handler (Za prikaz logova u konzoli)
+    stream_handler = logging.StreamHandler(sys.stdout)
+    stream_handler.setFormatter(formatter)
+    stream_handler.setLevel(logging.INFO)
+    logger.addHandler(stream_handler)
+    
+    logging.info(f"--- Logovanje započeto (Verzija: {CODE_VERSION}) ---")
+    
+    return logger
+
+def shutdown_logging(logger):
+    """
+    Pravilno zatvara sve handlere povezane sa logerom.
+    """
+    logging.info(f"--- Logovanje završeno (Fajl: {LOG_FILE}) ---")
+    for handler in logger.handlers[:]:
+        handler.close()
+        logger.removeHandler(handler)
+
+def load_existing_data(filename=OUTPUT_FILENAME):
+    """
+    Učitava postojeće podatke iz JSON fajla.
+    """
+    existing_data = []
+    existing_urls = set()
+    incomplete_urls = set()
+    
+    if os.path.exists(filename):
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                existing_data = json.load(f)
+                logging.info(f"Uspešno učitano {len(existing_data)} postojećih artikala iz {filename}.")
+                
+                for item in existing_data:
+                    url = item.get('url_proizvoda')
+                    if url:
+                        existing_urls.add(url)
+                        # Provera da li su podaci nekompletni (minimalno 3 specifikacije)
+                        is_incomplete = (
+                            not item.get('opis') or 
+                            not item.get('specifikacije') or 
+                            len(item.get('specifikacije', {})) < 3
+                        )
+                        
+                        if is_incomplete:
+                            incomplete_urls.add(url)
+                            logging.debug(f"Identifikovan nekompletan URL (za ponovno skrejpovanje): {url}")
+
+        except json.JSONDecodeError:
+            logging.error(f"Greška prilikom parsiranja JSON fajla: {filename}. Počinjem ponovno skrejpovanje svih podataka.")
+            existing_data = []
+        except Exception as e:
+            logging.error(f"Neuspešno učitavanje fajla {filename}: {e}.")
+            existing_data = []
+            
+    return existing_data, existing_urls, incomplete_urls
+
 def get_categories(main_url):
     """
     Pronalazi i vraća rečnik URL-ova svih glavnih kategorija proizvoda na stranici.
-    
-    Args:
-        main_url (str): Glavni URL web stranice.
-        
-    Returns:
-        dict: Rečnik s imenima kategorija kao ključevima i njihovim URL-ovima kao vrednostima.
     """
+    logging.info("Pokretanje dohvatanja kategorija sa glavne stranice.")
     categories = {}
     try:
         response = scraper.get(main_url)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Ažurirani selektor za pronalaženje glavnih kategorija iz glavnog menija
-        category_links = soup.select('ul.main-menu-list > li.main-menu-item > a')
-        
-        # Dodavanje linkova za prodaju i outlet, koji se ne nalaze u glavnom meniju
+        # Ciljanje navigacionih linkova za kategorije
+        category_links = soup.select('header nav a[href*="/category/"], header nav a[href*="/products/"]')
+        # Ciljanje specijalnih kategorija (outlet, recertified, sale, archive)
         special_links_selector = 'a[href*="/category/outlet/"], a[href*="/category/recertified/"], a[href*="/category/sale/"], a[href*="/category/archive/"]'
-        
         special_links = soup.select(special_links_selector)
-        
         all_links = category_links + special_links
 
         for link in all_links:
             href = link.get('href')
             if href:
                 full_url = urljoin(main_url, href)
-                
                 category_name = link.text.strip()
-                if category_name in categories:
+                
+                if not category_name or category_name.lower() in ["products", "home", "discover"]:
                     continue
                 
+                # Provera da li link već postoji da bi se izbeglo dupliranje
+                if category_name in categories:
+                    continue
+                    
                 if href.startswith('/'):
                     full_url = urljoin(main_url, href)
                 else:
@@ -65,9 +147,9 @@ def get_categories(main_url):
                 categories[category_name] = full_url
                 
     except RequestException as e:
-        print(f"Kritična greška prilikom pristupa web resursu: {e}")
+        logging.error(f"Kritična greška prilikom pristupa web resursu {main_url}: {e}")
     except Exception as e:
-        print(f"Došlo je do nepredviđene greške: {e}")
+        logging.error(f"Došlo je do nepredviđene greške prilikom parsiranja kategorija: {e}")
         
     return categories
 
@@ -81,7 +163,7 @@ def get_product_links_from_category(category_url):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Selektor za pronalaženje linkova proizvoda
+        # Ciljanje linkova koji sadrže '/product/' u href atributu
         product_elements = soup.select('a[href*="/product/"]')
         
         for product in product_elements:
@@ -91,27 +173,33 @@ def get_product_links_from_category(category_url):
                 product_links.append(full_url)
                 
     except RequestException as e:
-        print(f"Greška prilikom pristupa kategoriji {category_url}: {e}")
+        logging.error(f"Greška prilikom pristupa kategoriji {category_url}: {e}")
     except Exception as e:
-        print(f"Nije pronađen nijedan link za proizvod u kategoriji: {urlparse(category_url).path.split('/')[-2]}")
+        # Prikaz naziva kategorije u slučaju greške
+        category_name = urlparse(category_url).path.split('/')[-2]
+        logging.warning(f"Nije pronađen nijedan link za proizvod u kategoriji: {category_name}")
         
     return product_links
 
 def clean_price(price_string):
     """
-    Čisti string cene i konvertuje ga u float, uklanjajući $ i ,.
+    Čisti string cene i konvertuje ga u float.
+    Podržava formate poput $1,234.56, 1.234,56€, itd.
     """
     if price_string:
-        # Uklonite sve što nije cifra, tačka ili znak za par/komad
-        cleaned_price = re.sub(r'[^\d.,/]+', '', price_string)
-        # Zamena zareza tačkom za decimale
-        cleaned_price = cleaned_price.replace(',', '')
-        # Izolujte cenu pre znaka /
-        if '/' in cleaned_price:
-            cleaned_price = cleaned_price.split('/')[0].strip()
-        # Proverite da li je string prazan nakon čišćenja
-        if cleaned_price.strip():
-            return float(cleaned_price)
+        # Regex za hvatanje brojeva, tačaka i zareza
+        match = re.search(r'(\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?)', price_string)
+        if match:
+            cleaned_price = match.group(1).replace(',', '').replace('.', '', price_string.count('.')-1).strip()
+            # Moguća konverzija evropskog decimalnog zapisa (ako ima samo jedan zarez)
+            if cleaned_price.count(',') == 1 and cleaned_price.count('.') == 0:
+                 cleaned_price = cleaned_price.replace(',', '.')
+                 
+            try:
+                return float(cleaned_price)
+            except ValueError:
+                logging.warning(f"Nije moguće konvertovati očišćenu cenu '{cleaned_price}' u float.")
+                return None
     return None
 
 def scrape_product_details(scraper, product_url, brand_logo_url):
@@ -123,21 +211,24 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # Izdvajanje podataka
         product_title_tag = soup.find('h1', class_='product-name')
         product_title = product_title_tag.text.strip() if product_title_tag else None
 
         tagline_tag = soup.find('p', class_='product-tagline')
         tagline = tagline_tag.text.strip() if tagline_tag else None
 
-        # --- AŽURIRANO: Prikupljanje opisa pomoću više selektora ---
+        sku = None
+        # Prošireni selektori za SKU (Model Number, Product Meta)
+        sku_tag = soup.select_one('div.product-model-number, div.product-meta-item:has(strong:-soup-contains("Model")) span.product-meta-value, span.model-number')
+        if sku_tag:
+            sku = sku_tag.text.strip()
+        
         description = None
+        # Prošireni selektori za opis
         description_selectors = [
-            'div.product-short-description',
-            'div.short-description p',
-            'div.product-description-container p',
-            'div.product-details-intro__description p',
-            'div.product-details__summary p'
+            'div.product-short-description', 'div.short-description p', 'div.product-description-container p',
+            'div.product-details-intro__description p', 'div.product-details__summary p',
+            'div.product-features-container .product-features-intro p', 'div[data-component-name="ProductShortDescription"] p'
         ]
         
         for selector in description_selectors:
@@ -145,91 +236,150 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
             if description_tag:
                 description = description_tag.text.strip()
                 break
-        # --- KRAJ AŽURIRANJA ---
+        
+        price_text = None
+        # Prošireni selektori za cenu
+        price_selectors = ['div.price', 'span.price-new', 'span.product-price', 'div[data-price-value]', '.price-value']
 
-        price = None
-        price_tag = soup.find('div', class_='price')
-        if price_tag:
-            price_text = price_tag.text
-            # Regularni izraz za pronalaženje cijene, uključujući i opcionalni "/ pair"
-            match = re.search(r'(\$\d{1,3}(?:,\d{3})*(?:\.\d+)?)(?:\s*/\s*pair)?', price_text)
-            if match:
-                price = match.group(1).strip()
+        for selector in price_selectors:
+            price_tag = soup.select_one(selector)
+            if price_tag:
+                if 'data-price-value' in price_tag.attrs:
+                    price_text = price_tag['data-price-value']
+                else:
+                    price_text = price_tag.get_text(strip=True)
+                break
         
-        # Ažurirani selektor za URL-ove slika
-        image_urls = [img.get('data-pswp-src') for img in soup.select('div.pswp-gallery a[data-pswp-src]')]
+        price = price_text 
+
+        # Prikupljanje URL-ova slika
+        image_urls = [urljoin(product_url, img.get('data-pswp-src'))
+                      for img in soup.select('div.pswp-gallery a[data-pswp-src]')]
         
+        # --- LOGIKA ZA SPECIFIKACIJE (V3.0/V3.2 - Prikuplja sve sekcije) ---
         specifications = {}
-        spec_section = soup.find('div', class_='specifications')
-        if spec_section:
-            spec_rows = spec_section.find_all('div', class_='specs-item')
+        
+        # Prošireni selektori za kontejner specifikacija
+        spec_containers = soup.select(
+            'div.specifications-wrapper, div.specifications, div.product-specifications, table.spec-table, ul.specs-list, '
+            'div.tech-specifications, div.product-features, div.spec-group, dl.tech-specs-list, '
+            'div.pdp-specifications, div.tech-data-block' 
+        )
+        
+        # Selektori za pojedinačne specifikacije
+        row_selectors = 'ul.specifications-list > li, div.specs-item, tr, li, div.feature-item, div.spec-row, dt, dd, ' \
+                        'div.tech-spec-row, div.spec-detail-item' 
+        
+        for spec_section in spec_containers:
+            spec_rows = spec_section.select(row_selectors)
+            
+            if not spec_rows:
+                 # Backup plan: traži sve unutar sekcije (ako je kontejner pronađen, ali selektori reda nisu radili)
+                 spec_rows = spec_section.find_all(['li', 'div', 'tr', 'dt', 'dd']) 
+
+            last_key = None # Koristi se za dt/dd parove
+            
             for row in spec_rows:
-                key_tag = row.find('div', class_='specs-item-title')
-                value_tag = row.find('div', class_='specs-item-info')
+                key = None
+                value = None
+                
+                # 1. Prioritetno traženje klasa 'name' i 'value' (i specifičnih tehničkih labele)
+                key_tag = row.select_one('span.name, .tech-spec-label') 
+                value_tag = row.select_one('span.value, .tech-spec-value') 
+                
                 if key_tag and value_tag:
                     key = key_tag.text.strip()
-                    value = value_tag.text.strip()
-                    specifications[key] = value
+                    
+                    # Bolje rukovanje višestrukim vrednostima unutar value tag-a (npr. dimenzije u više redova)
+                    for br in value_tag.find_all(['br', 'br/']): 
+                        br.replace_with('[NEWLINE_BR]')
+                        
+                    value = value_tag.get_text(separator=' ', strip=True) 
+                    value = value.replace('[NEWLINE_BR]', '\n').strip()
+                    last_key = key # Resetujemo last_key nakon uspešnog pronalaska para
 
-        # --- AŽURIRANO: Izdvajanje dostupnih boja i URL-ova uzoraka ---
+                # 2. Povratak na opšte selektore (postojeća V2.8 logika)
+                elif row.name in ['li', 'div', 'tr']:
+                    # Prošireni ključevi (naslovi, strong tagovi)
+                    key_tag = row.select_one('div.specs-item-title, th, strong, .feature-title, .spec-label, .tech-spec-key, h3, .key-title') 
+                    # Proširene vrednosti (td, p tagovi, value tekst klase)
+                    value_tag = row.select_one('div.specs-item-info, td, .feature-value, .spec-value, .tech-spec-value, p, .value-text') 
+                    
+                    if key_tag and value_tag:
+                        key = key_tag.text.strip()
+                        value = value_tag.get_text(separator=' ', strip=True)
+                        last_key = key # Resetujemo last_key nakon uspešnog pronalaska para
+                    
+                # 3. Logika za DL (Definition List) - DT/DD parove
+                elif row.name == 'dt':
+                    last_key = row.get_text(strip=True)
+                    continue 
+                    
+                elif row.name == 'dd' and last_key:
+                    key = last_key
+                    value = row.get_text(separator=' ', strip=True)
+                    last_key = None 
+                    
+                else:
+                    continue # Nije pronađen validan par u ovom redu
+                
+                # Dodavanje u rečnik specifikacija (uz proveru dužine ključa zbog neželjenih tagova)
+                if key and value and len(key) < 100:
+                    specifications[key] = value
+            
+            # Kod nastavlja petlju da bi prikupio SVE grupe (Size & weight, Technical details, Finishes).
+            
+        # --- KRAJ LOGIKE ZA SPECIFIKACIJE ---
+
+        # Prikupljanje dostupnih boja (Ovo ostaje, jer se ne traži uklanjanje)
         available_colors = []
-        color_swatches = soup.select('span.color-swatch') # Selektuje roditeljski span
+        color_swatches = soup.select('span.color-swatch, .product-color-selector .color-item')
         for swatch_span in color_swatches:
             color_name_tag = swatch_span.select_one('.swatch-value')
-            color_image_tag = swatch_span.select_one('.swatch.color-value')
+            color_image_tag = swatch_span.select_one('.swatch.color-value, .color-swatch-image')
             
-            color_name = color_name_tag.text.strip() if color_name_tag else None
+            color_name = color_name_tag.text.strip() if color_name_tag else swatch_span.get('data-color-name')
             color_url = None
             
             if color_image_tag and 'style' in color_image_tag.attrs:
                 style_attr = color_image_tag['style']
-                # Koristite regularni izraz za pronalaženje URL-a unutar atributa stila
                 match = re.search(r'url\((.*?)\)', style_attr)
                 if match:
                     relative_url = match.group(1).replace('"', '').replace("'", '')
-                    # Pretvorite relativni URL u apsolutni
                     color_url = urljoin(product_url, relative_url)
             
             if color_name:
-                available_colors.append({
-                    "boja": color_name,
-                    "url_uzorka": color_url
-                })
-        # --- KRAJ AŽURIRANJA ---
+                available_colors.append({"boja": color_name, "url_uzorka": color_url})
 
-        # Izdvajanje dostupnih kvaliteta
-        available_qualities = []
-        quality_options = soup.select('div[data-attr="quality"] select option')
-        for option in quality_options:
-            quality = option.text.strip()
-            if quality and quality != 'Select Quality':
-                available_qualities.append(quality)
-        
-        # Izdvajanje pogodnosti
-        benefits = {}
-        benefit_items = soup.select('ul.pdp-breadcrumb-features li')
-        for item in benefit_items:
-            title_tag = item.find('span', class_='pdp-breadcrumb-features--title')
-            link_tag = item.find('a')
-            if title_tag and link_tag:
-                title = title_tag.text.strip()
-                link = link_tag.get('href')
-                if title and link:
-                    benefits[title] = urljoin(product_url, link)
+        # Uklonjeno: dostupni_kvaliteti
+        # Uklonjeno: pogodnosti
 
-        # Izdvajanje kategorije iz URL-a proizvoda
+        # Ekstrakcija kategorije iz URL-a
         parsed_url = urlparse(product_url)
         path_segments = parsed_url.path.split('/')
+        category_slug = 'N/A'
         try:
+            # Traži se segment posle '/product/'
             product_index = path_segments.index('product')
-            category_slug = path_segments[product_index + 1]
-        except (ValueError, IndexError):
-            category_slug = 'N/A'
+            if len(path_segments) > product_index + 1:
+                category_slug = path_segments[product_index + 1]
+        except ValueError:
+            # Ako 'product' nije u URL-u, pokušaj da nađeš 'category'
+            try:
+                category_index = path_segments.index('category')
+                if len(path_segments) > category_index + 1:
+                    category_slug = path_segments[category_index + 1]
+            except ValueError:
+                 category_slug = 'N/A' # Ostaje N/A
+
+        logging.info(f"Uspešno prikupljeni detalji za: {product_title}")
 
         return {
             "ime_proizvoda": product_title,
+            "sku": sku, 
             "brend_logo_url": brand_logo_url,
-            "cena": price,
+            "cena_raw": price, 
+            "cena_float": clean_price(price), 
             "opis": description,
             "url_proizvoda": product_url,
             "url_slika": image_urls,
@@ -237,16 +387,17 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
             "kategorije": category_slug,
             "dodatne_informacije": {
                 "tagline": tagline,
-                "ociscena_cena": clean_price(price),
                 "dostupne_boje": available_colors,
-                "dostupni_kvaliteti": available_qualities,
-                "pogodnosti": benefits
+                # Uklonjeno: "dostupni_kvaliteti" - Uklonjeno iz V3.2
+                # Uklonjeno: "pogodnosti" - Uklonjeno iz V3.2
             }
         }
         
     except RequestException as e:
+        logging.error(f"Greška prilikom prikupljanja podataka za {product_url}: {e}")
         return f"Greška prilikom prikupljanja podataka za {product_url}: {e}"
     except Exception as e:
+        logging.error(f"Došlo je do nepredviđene greške za {product_url}: {e}")
         return f"Došlo je do nepredviđene greške za {product_url}: {e}"
 
 def get_brand_logo_url(main_url):
@@ -258,77 +409,113 @@ def get_brand_logo_url(main_url):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Pronalazimo <img> tag sa alt atributom 'Bowers & Wilkins'
-        logo_img = soup.find('img', alt='Bowers & Wilkins')
+        # Ciljanje img taga u headeru
+        logo_img = soup.select_one('header img[alt*="Bowers"], header img.site-logo, header a[aria-label="Home"] img')
+        
         if logo_img and logo_img.get('src'):
-            # Spajamo relativnu putanju sa osnovnim URL-om sajta da bismo dobili apsolutnu
             relative_logo_url = logo_img['src']
             return urljoin(main_url, relative_logo_url)
         
     except RequestException as e:
-        print(f"Greška pri dohvaćanju URL-a logotipa: {e}")
+        logging.error(f"Greška pri dohvaćanju URL-a logotipa: {e}")
         return None
     except Exception as e:
-        print(f"Došlo je do nepredviđene greške: {e}")
+        logging.error(f"Došlo je do nepredviđene greške pri dohvaćanju logotipa: {e}")
         return None
 
 def main():
-    main_url = "https://www.bowerswilkins.com/en-us/"
+    # 1. Postavljanje logovanja
+    logger = setup_logging()
     
-    # Sada dinamički dohvaćamo URL logotipa umesto da ga hardkodiramo
-    brand_logo_url = get_brand_logo_url(main_url)
-    if not brand_logo_url:
-        print("Upozorenje: Nije pronađen URL logotipa brenda. Skripta će nastaviti bez logotipa.")
-    
-    print("Pronalazim kategorije...")
-    categories = get_categories(main_url)
-    
-    if not categories:
-        print("Nije pronađena nijedna kategorija. Proverite URL ili selektore.")
-        return
+    try:
+        logging.info(f"Skripta započeta (Inkementalno skrejpovanje).")
+        main_url = "https://www.bowerswilkins.com/en-us/"
         
-    print(f"Pronađeno {len(categories)} kategorija. Pokrećem prikupljanje podataka...")
-
-    all_products_data = []
-    scraped_urls = set()
-
-    for category_name, category_url in categories.items():
-        print(f"\nObrađujem kategoriju: {category_name} ({category_url})")
+        # 2. Učitavanje postojećih podataka i identifikacija URL-ova
+        existing_data, existing_urls, incomplete_urls = load_existing_data(OUTPUT_FILENAME)
         
-        product_links = get_product_links_from_category(category_url)
-
-        if not product_links:
-            print(f"Nije pronađen nijedan link za proizvod u kategoriji: {category_name}")
-            continue
-
-        print(f"Pronađeno {len(product_links)} proizvoda. Prikupljam detalje...")
+        # Filter: uklanjamo nekompletne proizvode iz postojećih podataka. Oni će biti zamenjeni novim podacima.
+        final_products_data = [
+            item for item in existing_data 
+            if item.get('url_proizvoda') not in incomplete_urls
+        ]
         
-        for link in product_links:
-            try:
+        newly_scraped_data = []
+        scraped_in_this_run = set() 
+
+        brand_logo_url = get_brand_logo_url(main_url)
+        
+        logging.info("Pronalazim kategorije...")
+        categories = get_categories(main_url)
+        
+        if not categories:
+            logging.error("Nije pronađena nijedna kategorija. Izlazak iz skripte.")
+            return
+            
+        logging.info(f"Pronađeno {len(categories)} kategorija.")
+
+        for category_name, category_url in categories.items():
+            logging.info(f"\n--- Obrađujem kategoriju: {category_name} ---")
+            
+            # Pauza za smanjenje opterećenja servera
+            time.sleep(random.uniform(1.0, 2.5)) 
+            
+            product_links = get_product_links_from_category(category_url)
+
+            if not product_links:
+                logging.info(f"Nije pronađen nijedan link za proizvod u kategoriji: {category_name}")
+                continue
+
+            unique_product_links = list(set(product_links))
+            
+            logging.info(f"Pronađeno {len(unique_product_links)} jedinstvenih URL-ova za proizvode.")
+            
+            for link in unique_product_links:
+                # Odluka o skrejpovanju: 
+                # Skrejpovati ako je URL POTPUNO NOV 
+                # ILI ako je bio ranije skrejpovan ali je OZBILJNO NEKOMPLETAN.
+                should_scrape = link not in existing_urls or link in incomplete_urls
+                
+                # Provera da li je već skrejpovan u ovom ciklusu (zbog dupliranih linkova u različitim kategorijama)
+                if link in scraped_in_this_run:
+                    continue 
+
+                if not should_scrape:
+                    logging.info(f"Preskakanje kompletnog i postojećeg proizvoda: {link}")
+                    continue
+                
+                # Pauza pre skrejpovanja detalja proizvoda
                 time.sleep(random.uniform(0.5, 1.5))
+                
                 result = scrape_product_details(scraper, link, brand_logo_url)
                 
                 if isinstance(result, dict):
-                    product_url = result.get('url_proizvoda')
-                    if product_url and product_url not in scraped_urls:
-                        all_products_data.append(result)
-                        scraped_urls.add(product_url)
-                    else:
-                        print(f"Preskakanje duplog proizvoda: {product_url}")
+                    newly_scraped_data.append(result)
+                    scraped_in_this_run.add(link)
                 else:
-                    print(f"Zabeležena greška tokom prikupljanja podataka: {result}")
-            
-            except Exception as e:
-                print(f"Došlo je do nepredviđene greške: {e}")
+                    logging.warning(f"Zabeležena greška za link: {link}. Nije dodato u nove podatke.")
 
-    output_filename = "bowers_wilkins_products.json"
-    if all_products_data:
-        with open(output_filename, "w", encoding="utf-8") as f:
-            json.dump(all_products_data, f, indent=4, ensure_ascii=False)
+        # 3. KOMBINOVANJE I ČUVANJE
+        final_products_data.extend(newly_scraped_data)
+
+        if final_products_data:
+            try:
+                with open(OUTPUT_FILENAME, "w", encoding="utf-8") as f:
+                    json.dump(final_products_data, f, indent=4, ensure_ascii=False)
+                    
+                total_scraped = len(final_products_data)
+                newly_added = len(newly_scraped_data)
+                
+                logging.info(f"\nOperacija uspešno završena. {newly_added} novih/ažuriranih artikala je prikupljeno.")
+                logging.info(f"Ukupno {total_scraped} artikala je sačuvano u datoteci: {OUTPUT_FILENAME}.")
+            except Exception as e:
+                logging.critical(f"Kritična greška pri čuvanju JSON datoteke '{OUTPUT_FILENAME}': {e}")
+        else:
+            logging.warning("\nOperacija završena. Nije prikupljen nijedan artikal.")
             
-        print(f"\nOperacija uspešno završena. {len(all_products_data)} artikala je zabeleženo u datoteci: {output_filename}.")
-    else:
-        print("\nOperacija završena. Nije prikupljen nijedan artikal.")
+    finally:
+        # 4. Pravilno zatvaranje handlera
+        shutdown_logging(logger)
 
 if __name__ == "__main__":
     main()
