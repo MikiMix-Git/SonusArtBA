@@ -1,7 +1,6 @@
 # Ovaj skrejper je napisan u Pythonu i koristi biblioteku 'cloudscraper' da bi zaobišao Cloudflare zaštitu.
-# NOVO U V3.2: Uklonjena su polja 'dostupni_kvaliteti' i 'pogodnosti' iz finalnog izlaznog rečnika
-# NOVO U V3.1: Uklonjena logika za prikupljanje 'dostupni_kvaliteti' i 'pogodnosti'.
-# Zadržana je ispravka V3.0 koja osigurava prikupljanje SVIH specifikacija.
+# NOVO U V3.3: Preimenovana 'cena_raw' u 'cena' i potpuno uklonjena 'cena_float' i prateća funkcija za čišćenje cene.
+# NOVO U V3.2: Uklonjena su polja 'dostupni_kvaliteti' i 'pogodnosti' iz finalnog izlaznog rečnika.
 
 import cloudscraper
 import json
@@ -16,7 +15,7 @@ import sys
 from urllib.parse import urljoin, urlparse
 
 # --- KONSTANTE ZA VERZIJU I LOGOVANJE ---
-CODE_VERSION = "V3.2" # AŽURIRANO NA V3.2
+CODE_VERSION = "V3.3" # AŽURIRANO NA V3.3
 LOG_FILE = "scraper.log"
 OUTPUT_FILENAME = "bowers_wilkins_products.json"
 
@@ -181,26 +180,7 @@ def get_product_links_from_category(category_url):
         
     return product_links
 
-def clean_price(price_string):
-    """
-    Čisti string cene i konvertuje ga u float.
-    Podržava formate poput $1,234.56, 1.234,56€, itd.
-    """
-    if price_string:
-        # Regex za hvatanje brojeva, tačaka i zareza
-        match = re.search(r'(\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?)', price_string)
-        if match:
-            cleaned_price = match.group(1).replace(',', '').replace('.', '', price_string.count('.')-1).strip()
-            # Moguća konverzija evropskog decimalnog zapisa (ako ima samo jedan zarez)
-            if cleaned_price.count(',') == 1 and cleaned_price.count('.') == 0:
-                 cleaned_price = cleaned_price.replace(',', '.')
-                 
-            try:
-                return float(cleaned_price)
-            except ValueError:
-                logging.warning(f"Nije moguće konvertovati očišćenu cenu '{cleaned_price}' u float.")
-                return None
-    return None
+# Uklonjena je funkcija clean_price, jer konverzija u float više nije potrebna.
 
 def scrape_product_details(scraper, product_url, brand_logo_url):
     """
@@ -250,13 +230,13 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
                     price_text = price_tag.get_text(strip=True)
                 break
         
-        price = price_text 
+        cena = price_text # Direktno koristimo sirovu cenu
 
         # Prikupljanje URL-ova slika
         image_urls = [urljoin(product_url, img.get('data-pswp-src'))
                       for img in soup.select('div.pswp-gallery a[data-pswp-src]')]
         
-        # --- LOGIKA ZA SPECIFIKACIJE (V3.0/V3.2 - Prikuplja sve sekcije) ---
+        # --- LOGIKA ZA SPECIFIKACIJE (V3.3 - Prikuplja sve sekcije) ---
         specifications = {}
         
         # Prošireni selektori za kontejner specifikacija
@@ -327,11 +307,9 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
                 if key and value and len(key) < 100:
                     specifications[key] = value
             
-            # Kod nastavlja petlju da bi prikupio SVE grupe (Size & weight, Technical details, Finishes).
-            
         # --- KRAJ LOGIKE ZA SPECIFIKACIJE ---
 
-        # Prikupljanje dostupnih boja (Ovo ostaje, jer se ne traži uklanjanje)
+        # Prikupljanje dostupnih boja
         available_colors = []
         color_swatches = soup.select('span.color-swatch, .product-color-selector .color-item')
         for swatch_span in color_swatches:
@@ -350,9 +328,6 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
             
             if color_name:
                 available_colors.append({"boja": color_name, "url_uzorka": color_url})
-
-        # Uklonjeno: dostupni_kvaliteti
-        # Uklonjeno: pogodnosti
 
         # Ekstrakcija kategorije iz URL-a
         parsed_url = urlparse(product_url)
@@ -378,8 +353,7 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
             "ime_proizvoda": product_title,
             "sku": sku, 
             "brend_logo_url": brand_logo_url,
-            "cena_raw": price, 
-            "cena_float": clean_price(price), 
+            "cena": cena, # PROMENJENO: Sada se zove 'cena'
             "opis": description,
             "url_proizvoda": product_url,
             "url_slika": image_urls,
@@ -388,8 +362,7 @@ def scrape_product_details(scraper, product_url, brand_logo_url):
             "dodatne_informacije": {
                 "tagline": tagline,
                 "dostupne_boje": available_colors,
-                # Uklonjeno: "dostupni_kvaliteti" - Uklonjeno iz V3.2
-                # Uklonjeno: "pogodnosti" - Uklonjeno iz V3.2
+                # Uklonjeno: 'dostupni_kvaliteti' i 'pogodnosti'
             }
         }
         
