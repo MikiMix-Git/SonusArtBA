@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi-Fi Proizvodi - Demo v31</title>
+    <title>Hi-Fi Proizvodi - Demo v39</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -67,10 +67,29 @@
         .color-sample:hover {
             transform: scale(1.1);
         }
+        /* Stilovi za klikabilne filtere */
+        .filter-button {
+            background-color: #374151;
+            color: #D1D5DB;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        .filter-button:hover {
+            background-color: #4B5563;
+        }
+        .filter-button.active {
+            background-color: #2563EB;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body class="p-6 md:p-12">
-    <!-- Verzija koda: 31 - Ažurirano: 2025-09-11 -->
+    <!-- Verzija koda: 39 - Ažurirano: 2025-09-11 -->
 
     <main class="max-w-7xl mx-auto">
         
@@ -90,7 +109,19 @@
                 </select>
             </div>
 
-            <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Kontejner za klikabilne filtere -->
+            <div id="quick-filters-container" class="flex flex-col items-center justify-center gap-4 mt-4">
+                <h2 class="text-white text-2xl font-semibold mt-4 mb-2">Glavne kategorije</h2>
+                <div id="main-category-filters" class="flex flex-wrap justify-center gap-4">
+                    <!-- Glavne kategorije će biti dinamički unete ovde -->
+                </div>
+                <h3 class="text-white text-xl font-semibold mt-4 mb-2">Podkategorije</h3>
+                <div id="subcategory-filters" class="flex flex-wrap justify-center gap-4">
+                    <!-- Podkategorije će biti dinamički unete ovde na osnovu izabrane glavne kategorije -->
+                </div>
+            </div>
+
+            <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-8">
                 <!-- Proizvodi će biti dinamički uneti ovde -->
             </div>
         </section>
@@ -133,14 +164,16 @@
         const searchInput = document.getElementById('search-input');
         const searchButton = document.getElementById('search-button');
         const brandFilter = document.getElementById('brand-filter');
+        const quickFiltersContainer = document.getElementById('quick-filters-container');
+        const mainCategoryFiltersContainer = document.getElementById('main-category-filters');
+        const subcategoryFiltersContainer = document.getElementById('subcategory-filters');
         const productModal = document.getElementById('product-modal');
         const modalBody = document.getElementById('modal-body');
         const closeModalButton = document.getElementById('close-modal');
         let allProducts = [];
-        // Nova globalna varijabla za čuvanje trenutno prikazanih proizvoda
         let currentDisplayedProducts = [];
+        let activeFilters = { mainCategory: null, subcategory: null };
 
-        // Mapa brendova za lakše prepoznavanje i prikaz
         const brandsMap = {
             'argon_audio': 'Argon Audio',
             'bowerswilkins': 'Bowers & Wilkins',
@@ -149,13 +182,45 @@
             'marantz': 'Marantz'
         };
 
-        // Funkcija za renderovanje kartica proizvoda
+        // Hijerarhijska mapa kategorija sa odgovarajućim brend-specifičnim terminima.
+        const categoryMapping = {
+            'Slušalice': {
+                'Preko glave': ['over-ear-headphones', 'closed-back', 'on-ear', 'overear', 'headphones'],
+                'Bežične bubice': ['wireless-earbuds', 'true wireless', 'in-ear', 'perL'],
+                'Gaming': ['gaming headset']
+            },
+            'Zvučnici': {
+                'Podnostojeći': ['floorstand-loudspeakers', 'floorstand', 'kolone', 'floor standing speakers', 'loudspeakers'],
+                'Kompaktni': ['bookshelf-speakers', 'bookshelf', 'regalni'],
+                'Soundbarovi': ['soundbar', 'sound-bars'],
+                'Subwooferi': ['subwoofers', 'subwoofer', 'active-subwoofers', 'subwoofers-speakers'],
+                'Prenosni/Bežični': ['wireless-speakers', 'bluetooth-speakers', 'outdoor-speakers', 'denon home wireless speakers', 'active speakers']
+            },
+            'Pojačala': {
+                'Integrisana': ['integrated-amplifiers', 'integrated', 'amplifiers'],
+                'Stereo Risiveri': ['receivers-stereo', 'stereo-receivers', 'receivers'],
+                'Pred-pojačala': ['pre-amplifiers', 'preamp']
+            },
+            'Komponente': {
+                'AV Risiveri': ['av-receivers', 'av receivers', 'av separates', 'x-series av receivers', 's-series av receivers', 'home-theatre'],
+                'CD Plejeri': ['cd-players', 'cd'],
+                'Muzički strimeri': ['music-streamers', 'network-audio-players'],
+                'Gramofoni': ['turntables']
+            },
+            'Sistemi': {
+                'Mini Sistemi': ['mini systems'],
+                'Home Theatre': ['home-theatre', 'home theater']
+            },
+            'Pribor': {
+                'Pribor': ['accessories', 'cables', 'turntable-accessories', 'speaker-accessories', 'stands']
+            }
+        };
+
         function renderProducts(products) {
             console.log("Renderovanje proizvoda...");
             if (productContainer) {
-                // Pre nego što renderujemo, sačuvamo trenutnu listu proizvoda
                 currentDisplayedProducts = products;
-                productContainer.innerHTML = ''; // Očisti prethodne proizvode
+                productContainer.innerHTML = '';
                 if (products.length === 0) {
                     productContainer.innerHTML = '<p class="text-center text-gray-500 text-xl col-span-full">Nema pronađenih proizvoda.</p>';
                 } else {
@@ -166,11 +231,10 @@
                         
                         const mainImageUrl = product.url_slika && product.url_slika.length > 0 ? product.url_slika[0] : 'https://placehold.co/400x300/4B5563/FFFFFF?text=Slika+nedostupna';
                         
-                        // Logika za uslovnu inverziju boje logotipa
                         let logoClass = '';
                         if (product.brend_logo_url) {
                             if (product.brend_logo_url.includes('Argon_Audio_TextOnly_NEG.png') || 
-                                product.brend_logo_url.includes('hubfs/logo.svg') || // Dynaudio
+                                product.brend_logo_url.includes('hubfs/logo.svg') ||
                                 product.brend_logo_url.includes('denon.com') ||
                                 product.brend_logo_url.includes('marantz.com') ||
                                 product.brend_logo_url.includes('bowerswilkins.com/on/demandware.static')) {
@@ -179,7 +243,6 @@
                         }
                         
                         productCard.innerHTML = `
-                            <!-- Dodat logotip brenda sa uslovnom klasom za inverziju boje -->
                             <img src="${product.brend_logo_url}" alt="Brend logo" class="h-8 object-contain mb-2 ${logoClass}">
                             <img src="${mainImageUrl}" alt="${product.ime_proizvoda}" class="w-full h-48 object-cover rounded-xl mb-4">
                             <h3 class="text-lg font-semibold text-black mb-2 text-center">${product.ime_proizvoda}</h3>
@@ -198,12 +261,10 @@
             }
         }
 
-        // Funkcija za prikaz detalja o proizvodu u modalnom dijalogu
         function showProductDetails(product) {
             console.log("Prikazivanje detalja proizvoda:", product.ime_proizvoda);
-            modalBody.innerHTML = ''; // Očisti prethodni sadržaj
+            modalBody.innerHTML = '';
 
-            // Logika za uslovnu inverziju boje logotipa
             let logoClass = '';
             if (product.brend_logo_url) {
                 if (product.brend_logo_url.includes('Argon_Audio_TextOnly_NEG.png') || 
@@ -215,15 +276,12 @@
                 }
             }
             
-            // Dodavanje logotipa na vrh modalnog prikaza
             const logo = document.createElement('img');
             logo.src = product.brend_logo_url;
             logo.alt = 'Brend logo';
             logo.className = `h-10 object-contain mx-auto mb-4 ${logoClass}`;
             modalBody.appendChild(logo);
 
-
-            // Sekcija za galeriju slika
             const gallerySection = document.createElement('div');
             gallerySection.className = 'flex flex-col items-center mb-8';
 
@@ -233,7 +291,6 @@
             const thumbnailsContainer = document.createElement('div');
             thumbnailsContainer.className = 'flex flex-wrap gap-2 justify-center';
             
-            // Prikaz slika
             if (product.url_slika && product.url_slika.length > 0) {
                 mainImage.src = product.url_slika[0];
                 mainImage.alt = product.ime_proizvoda;
@@ -257,18 +314,14 @@
             gallerySection.appendChild(thumbnailsContainer);
             modalBody.appendChild(gallerySection);
 
-
-            // Naslov proizvoda u modalnom dijalogu
             const title = document.createElement('h2');
             title.textContent = product.ime_proizvoda;
             title.className = 'text-3xl font-bold mb-4';
             modalBody.appendChild(title);
 
-            // Funkcija za rekurzivno renderovanje detalja
             const renderDetails = (data, container) => {
                 for (const key in data) {
                     if (data.hasOwnProperty(key)) {
-                        // Preskoči url_slika, brend_logo_url i url_proizvoda jer su već prikazani ili će biti
                         if (key === 'url_slika' || key === 'brend_logo_url' || key === 'url_proizvoda') continue;
                         
                         const value = data[key];
@@ -296,7 +349,6 @@
                                 functionsContainer.appendChild(funcItem);
                             });
                             container.appendChild(functionsContainer);
-
                         } else if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
                             const subSection = document.createElement('div');
                             subSection.innerHTML = `<p class="font-bold mt-4">${formattedKey}:</p>`;
@@ -306,7 +358,7 @@
                             subSection.appendChild(subContainer);
                             container.appendChild(subSection);
                         } else if (Array.isArray(value) && value.length > 0) {
-                            if (typeof value[0] === 'object' && value[0].hasOwnProperty('ime_linka') && value[0].hasOwnProperty('url')) {
+                             if (typeof value[0] === 'object' && value[0].hasOwnProperty('ime_linka') && value[0].hasOwnProperty('url')) {
                                 console.log("Prepoznati linkovi, renderovanje liste linkova.");
                                 const linksContainer = document.createElement('div');
                                 linksContainer.className = 'mt-2';
@@ -380,10 +432,8 @@
                 }
             };
 
-            // Renderovanje svih detalja
             renderDetails(product, modalBody);
 
-            // Dodavanje linka na kraju modala
             const readMoreLink = document.createElement('a');
             readMoreLink.href = product.url_proizvoda;
             readMoreLink.textContent = 'Saznaj više';
@@ -394,35 +444,56 @@
             productModal.classList.remove('hidden');
         }
 
-        // Funkcija za pretraživanje proizvoda
-        function searchProducts() {
-            console.log("Pretraga pokrenuta.");
+        function filterAndSearchProducts() {
+            console.log("Filter i pretraga pokrenuti.");
             const searchTerm = searchInput.value.toLowerCase();
             const selectedBrand = brandFilter.value;
-
-            let productsToFilter = allProducts;
-            if (selectedBrand !== 'all') {
-                productsToFilter = allProducts.filter(product => {
-                    const brandMatch = product.brend_logo_url.toLowerCase().includes(selectedBrand);
-                    return brandMatch;
-                });
+            
+            let allMatchingTerms = [];
+            
+            if (activeFilters.subcategory) {
+                const mainCategory = activeFilters.mainCategory;
+                const subcategory = activeFilters.subcategory;
+                if (categoryMapping[mainCategory] && categoryMapping[mainCategory][subcategory]) {
+                    allMatchingTerms = categoryMapping[mainCategory][subcategory];
+                }
+            } else if (activeFilters.mainCategory && activeFilters.mainCategory !== 'all') {
+                const mainCategory = activeFilters.mainCategory;
+                if (categoryMapping[mainCategory]) {
+                    for (const subcategory in categoryMapping[mainCategory]) {
+                        allMatchingTerms = allMatchingTerms.concat(categoryMapping[mainCategory][subcategory]);
+                    }
+                }
+            } else {
+                allMatchingTerms = null;
             }
 
-            const filteredProducts = productsToFilter.filter(product => {
-                const productName = product.ime_proizvoda ? product.ime_proizvoda.toLowerCase() : '';
-                const productDescription = product.opis ? product.opis.toLowerCase() : '';
-                return productName.includes(searchTerm) || productDescription.includes(searchTerm);
+            const filteredProducts = allProducts.filter(product => {
+                const textMatch = (product.ime_proizvoda && product.ime_proizvoda.toLowerCase().includes(searchTerm)) ||
+                                  (product.opis && product.opis.toLowerCase().includes(searchTerm));
+
+                const brandMatch = selectedBrand === 'all' || (product.brend_logo_url && product.brend_logo_url.toLowerCase().includes(selectedBrand));
+                
+                let categoryMatch = true;
+                if (allMatchingTerms) {
+                    categoryMatch = false;
+                    const productCategories = product.kategorije || [];
+                    const productCategoriesArray = Array.isArray(productCategories) ? productCategories : [productCategories];
+                    
+                    for (const prodCat of productCategoriesArray) {
+                        if (allMatchingTerms.includes(prodCat.toLowerCase())) {
+                            categoryMatch = true;
+                            break;
+                        }
+                    }
+                }
+
+                return textMatch && brandMatch && categoryMatch;
             });
+
             renderProducts(filteredProducts);
         }
 
-        // Funkcija za filtriranje po brendu
-        function filterByBrand() {
-            console.log("Filtriranje po brendu pokrenuto.");
-            searchProducts(); // Pozovi funkciju za pretragu koja sada uzima u obzir i filter
-        }
-
-        // Funkcija za popunjavanje padajućeg menija za brendove
         function populateBrandFilter(products) {
             console.log("Popunjavanje filtera za brendove.");
             const brandNamesSet = new Set();
@@ -441,7 +512,6 @@
                 }
             });
 
-            // Kreiranje opcija na osnovu sakupljenih brendova
             brandNamesSet.forEach(brandKey => {
                 const brandName = brandsMap[brandKey] || brandKey;
                 const option = document.createElement('option');
@@ -450,8 +520,43 @@
                 brandFilter.appendChild(option);
             });
         }
+
+        function populateMainCategoryFilters() {
+            console.log("Popunjavanje filtera za glavne kategorije.");
+            mainCategoryFiltersContainer.innerHTML = '';
+            for (const mainCategory in categoryMapping) {
+                const button = document.createElement('span');
+                button.className = 'filter-button';
+                button.textContent = mainCategory;
+                button.setAttribute('data-category-type', 'main');
+                button.setAttribute('data-category-value', mainCategory);
+                mainCategoryFiltersContainer.appendChild(button);
+            }
+            const allProductsButton = document.createElement('span');
+            allProductsButton.className = 'filter-button';
+            allProductsButton.textContent = 'Svi proizvodi';
+            allProductsButton.setAttribute('data-category-type', 'main');
+            allProductsButton.setAttribute('data-category-value', 'all');
+            mainCategoryFiltersContainer.appendChild(allProductsButton);
+        }
         
-        // Funkcija za preuzimanje JSON podataka
+        function populateSubcategoryFilters(mainCategory) {
+            subcategoryFiltersContainer.innerHTML = '';
+            if (mainCategory === 'all' || !categoryMapping[mainCategory]) {
+                return;
+            }
+            
+            const subcategories = categoryMapping[mainCategory];
+            for (const subcategory in subcategories) {
+                const button = document.createElement('span');
+                button.className = 'filter-button';
+                button.textContent = subcategory;
+                button.setAttribute('data-category-type', 'sub');
+                button.setAttribute('data-category-value', subcategory);
+                subcategoryFiltersContainer.appendChild(button);
+            }
+        }
+        
         async function fetchProducts() {
             console.log("Preuzimanje JSON fajlova...");
             try {
@@ -465,41 +570,87 @@
                 );
                 
                 const results = await Promise.all(productsPromises);
-                allProducts = results.flat(); // Spoji sve proizvode u jedan niz
+                allProducts = results.flat();
                 console.log("Svi proizvodi su preuzeti:", allProducts.length);
                 renderProducts(allProducts);
                 populateBrandFilter(allProducts);
+                populateMainCategoryFilters();
             } catch (error) {
                 console.error("Došlo je do greške prilikom preuzimanja proizvoda:", error);
                 productContainer.innerHTML = '<p class="text-center text-red-500 text-xl col-span-full">Došlo je do greške pri učitavanju proizvoda.</p>';
             }
         }
         
-        // Funkcija za inicijalizaciju i upravljanje događajima
         function init() {
             console.log("Inicijalizacija...");
             fetchProducts();
 
-            // Slušanje događaja na dugmetu za pretragu
             if (searchButton) {
-                searchButton.addEventListener('click', searchProducts);
+                searchButton.addEventListener('click', filterAndSearchProducts);
             }
             
-            // Slušanje događaja na input polju za pretragu (na pritisak Entera)
             if (searchInput) {
                 searchInput.addEventListener('keypress', (e) => {
                     if (e.key === 'Enter') {
-                        searchProducts();
+                        filterAndSearchProducts();
                     }
                 });
             }
 
-            // Slušanje događaja na padajućem meniju za brendove
             if (brandFilter) {
-                brandFilter.addEventListener('change', filterByBrand);
+                brandFilter.addEventListener('change', filterAndSearchProducts);
             }
 
-            // Slušanje događaja na kontejneru proizvoda za otvaranje modala
+            // Slušanje klikova na dugmadima za glavne kategorije
+            if (mainCategoryFiltersContainer) {
+                mainCategoryFiltersContainer.addEventListener('click', (event) => {
+                    const button = event.target.closest('.filter-button');
+                    if (button) {
+                        const value = button.getAttribute('data-category-value');
+                        
+                        if (activeFilters.mainCategory === value) {
+                            // Drugi klik - isključi filter
+                            activeFilters.mainCategory = null;
+                            activeFilters.subcategory = null;
+                            button.classList.remove('active');
+                            populateSubcategoryFilters(null);
+                        } else {
+                            // Prvi klik - uključi filter
+                            document.querySelectorAll('#main-category-filters .filter-button').forEach(btn => btn.classList.remove('active'));
+                            button.classList.add('active');
+                            activeFilters.mainCategory = value;
+                            activeFilters.subcategory = null;
+                            populateSubcategoryFilters(value);
+                        }
+                        
+                        filterAndSearchProducts();
+                    }
+                });
+            }
+
+            // Slušanje klikova na dugmadima za podkategorije
+            if (subcategoryFiltersContainer) {
+                subcategoryFiltersContainer.addEventListener('click', (event) => {
+                    const button = event.target.closest('.filter-button');
+                    if (button) {
+                        const value = button.getAttribute('data-category-value');
+                        
+                        if (activeFilters.subcategory === value) {
+                             // Drugi klik - isključi filter
+                            activeFilters.subcategory = null;
+                            button.classList.remove('active');
+                        } else {
+                            // Prvi klik - uključi filter
+                            document.querySelectorAll('#subcategory-filters .filter-button').forEach(btn => btn.classList.remove('active'));
+                            button.classList.add('active');
+                            activeFilters.subcategory = value;
+                        }
+                        
+                        filterAndSearchProducts();
+                    }
+                });
+            }
+
             if (productContainer) {
                 productContainer.addEventListener('click', (event) => {
                     const card = event.target.closest('.card');
@@ -512,14 +663,12 @@
                 });
             }
             
-            // Slušanje događaja za zatvaranje modala
             if (closeModalButton) {
                 closeModalButton.addEventListener('click', () => {
                     productModal.classList.add('hidden');
                 });
             }
 
-            // Slušanje događaja za zatvaranje modala klikom izvan njega
             if (productModal) {
                 productModal.addEventListener('click', (e) => {
                     if (e.target === productModal) {
@@ -529,7 +678,6 @@
             }
         }
 
-        // Pokreni sve kada je dokument spreman
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
