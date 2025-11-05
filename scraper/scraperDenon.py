@@ -1,9 +1,6 @@
-# Ovaj skrejper je napisan u Pythonu i koristi biblioteku 'cloudscraper' da bi zaobišao Cloudflare zaštitu na Denon web stranici.
-# Kod radi na principu sekvencijalnog (sinhronog) preuzimanja podataka.
-# Prvo dohvaća glavne kategorije, a zatim iterira kroz svaku kategoriju, pronalazi URL-ove proizvoda i prikuplja detaljne informacije.
-# Izdvojeni podaci uključuju naziv proizvoda, cenu, opis, URL-ove slika, specifikacije i druge relevantne informacije.
-# Svi prikupljeni podaci se čuvaju u datoteci 'denon_products.json' u JSON formatu.
-# Izmenjena verzija skripta dodatno prikuplja informacije o varijacijama proizvoda, kao što su boja, kvalitet i URL-ove slika za te varijacije.
+# scraperDenon_v1.1.3.py
+# LOGOVANJE PO MODELU scraperArgon.py
+# INKREMENTALNO + POPRAVKE SKU & KATEGORIJE
 
 import cloudscraper
 import json
@@ -12,361 +9,305 @@ from requests.exceptions import RequestException
 import os
 import time
 import random
+import re
+import logging
+import sys
 
-# Kreiranje jedne, sinhrone cloudscraper instance
+# --- KONSTANTE ---
+CODE_VERSION = "VA10.3"
+LOG_FILE = "argon_style_denom_v1.1.3.log"
+OUTPUT_JSON = "denon_products_v1.1.3.json"
+MAIN_URL = "https://www.denon.com/en-us"
+
 scraper = cloudscraper.create_scraper(
-    browser={
-        'browser': 'chrome',
-        'platform': 'windows',
-        'mobile': False
-    }
+    browser={'browser': 'chrome', 'platform': 'windows', 'mobile': False}
 )
 
-def get_categories(main_url):
-    """
-    Pronalazi i vraća rečnik URL-ova svih glavnih kategorija proizvoda na Denon stranici.
-    
-    Args:
-        main_url (str): Glavni URL Denon web stranice.
-        
-    Returns:
-        dict: Rečnik s imenima kategorija kao ključevima i njihovim URL-ovima kao vrednostima.
-    """
-    categories = {}
-    print(f"Traženje kategorija na glavnoj stranici: {main_url}")
-    
-    # Lista nevažećih kategorija koje treba preskočiti
-    invalid_categories = {
-        'Featured Products', 'All Featured Products', 'Products', 'All Products',
-        '8K', 'Slimline', 'Dolby Atmos', 'Wireless Streaming', 'Home Theater',
-        'Hi-Fi', 'AV Receivers & Amplifiers', 'Sound Bars & Home Theater',
-        'Headphones', 'Hi-Fi Components', 'Turntables', 'Home Cinema Systems',
-        'Wireless Speakers', 'Outlet', 'Special Offers', 'Discover', 'Explore', 'Learn more',
-        'Learn About HEOS®', 'Help Me Choose' # Dodato
-    }
-    
+# --- LOGOVANJE (kao Argon) ---
+def setup_logging():
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    if logger.hasHandlers():
+        logger.handlers.clear()
+
+    formatter = logging.Formatter(
+        '[%(asctime)s] [%(levelname)s] [{}] %(message)s'.format(CODE_VERSION),
+        datefmt='%H:%M:%S'
+    )
+
+    file_handler = logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+
+    logging.info("========== FINAL SKREJPER ZAPOČET ==========")
+    logging.info(f"LOG: {LOG_FILE} | IZLAZ: {OUTPUT_JSON}")
+    logging.info(f"GLAVNI URL: {MAIN_URL}")
+    logging.info("===========================================")
+
+def shutdown_logging():
+    logging.info("========== SKREJPER ZAVRŠEN ==========")
+    for handler in logging.getLogger().handlers[:]:
+        handler.close()
+        logging.getLogger().removeHandler(handler)
+
+# --- UČITAVANJE POSTOJEĆIH ---
+def load_existing_data():
+    existing_urls = set()
+    incomplete_urls = set()
+    data = []
+
+    if os.path.exists(OUTPUT_JSON):
+        try:
+            with open(OUTPUT_JSON, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            logging.info(f"UČITANO: {len(data)} postojećih")
+            for p in data:
+                url = p.get("url_proizvoda")
+                if url:
+                    if is_complete(p):
+                        existing_urls.add(url)
+                    else:
+                        incomplete_urls.add(url)
+        except Exception as e:
+            logging.error(f"GREŠKA UČITAVANJA: {e}")
+    else:
+        logging.info("NEMA POSTOJEĆEG JSON-a – POČINJE OD NULE")
+
+    return data, existing_urls, incomplete_urls
+
+def is_complete(p):
+    req = ["ime_proizvoda", "sku", "cena", "url_proizvoda", "kategorije"]
+    return all(p.get(k) and p[k] != "Nedostupan" for k in req) and len(p.get("url_slika", [])) > 0
+
+# --- KATEGORIJE ---
+def get_categories():
+    logging.info("DOHVATANJE KATEGORIJA...")
+    cats = {}
+    invalid = {'Featured Products', 'All Products', 'Wireless Speakers', 'Outlet', 'Discover', 'Learn more', 'Help Me Choose'}
+
     try:
-        response = scraper.get(main_url)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # Novi, precizniji selektori
-        category_item_selectors = [
-            'header li.category-item a[href*="/category/"]',  # Glavni linkovi u padajućem meniju
-            'header li.nav-item-product a[href*="/category/"]' # Linkovi kategorija bez podkategorija
-        ]
-        
-        all_links = []
-        for selector in category_item_selectors:
-            all_links.extend(soup.select(selector))
-        
-        if not all_links:
-            print("Nema pronađenih kategorija. Proverite selektore.")
-            return categories
+        r = scraper.get(MAIN_URL, timeout=15)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, 'html.parser')
 
-        for item in all_links:
-            category_name = item.select_one('.dropdown-item--title, .nav-link--category-name')
-            link_url = item.get('href')
+        for sel in ['header li.category-item a[href*="/category/"]', 'header li.nav-item-product a[href*="/category/"]']:
+            links = soup.select(sel)
+            if links:
+                for l in links:
+                    name_el = l.select_one('.dropdown-item--title, .nav-link--category-name')
+                    href = l.get('href')
+                    if name_el and href:
+                        name = name_el.get_text(strip=True)
+                        if name in invalid:
+                            continue
+                        full = "https://www.denon.com" + href if not href.startswith('http') else href
+                        if full not in cats.values():
+                            cats[name] = full
+                break
 
-            if not category_name or not link_url:
-                continue
-
-            category_name = category_name.get_text(strip=True)
-            
-            # Provera da li je link validan URL i da li je kategorija u listi za preskakanje
-            if category_name in invalid_categories or not (link_url.startswith('http') or link_url.startswith('/en-us/')):
-                continue
-            
-            if not link_url.startswith('http'):
-                full_link = "https://www.denon.com" + link_url
-            else:
-                full_link = link_url
-            
-            if full_link not in categories.values():
-                categories[category_name] = full_link
-        
-        print(f"Pronađene kategorije: {', '.join(categories.keys())}")
-        return categories
-    
-    except RequestException as e:
-        print(f"Greška tokom pristupa web resursu: {e}")
-        return categories
+        logging.info(f"KATEGORIJE PRONAĐENE: {len(cats)}")
+        return cats
     except Exception as e:
-        print(f"Došlo je do nepredviđene greške: {e}")
-        return categories
+        logging.error(f"GREŠKA KATEGORIJE: {e}")
+        return {}
 
-def get_brand_logo(main_url):
-    """
-    Dohvaća URL logotipa brenda sa glavne stranice.
-    """
+# --- LOGO ---
+def get_logo():
     try:
-        response = scraper.get(main_url)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        logo_element = soup.select_one('a.logo-home img, img[alt="Denon"]')
-        
-        if logo_element and 'src' in logo_element.attrs:
-            logo_src = logo_element['src']
-            if not logo_src.startswith('http'):
-                full_logo_url = "https://www.denon.com" + logo_src
-            else:
-                full_logo_url = logo_src
-            return full_logo_url
-        
-    except RequestException as e:
-        print(f"Greška prilikom dohvaćanja logotipa: {e}")
-        return None
-    
+        r = scraper.get(MAIN_URL, timeout=10)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, 'html.parser')
+        el = soup.select_one('a.logo-home img, img[alt="Denon"]')
+        if el and 'src' in el.attrs:
+            src = el['src']
+            return "https://www.denon.com" + src if not src.startswith('http') else src
+    except:
+        pass
     return None
 
-def scrape_product_details(session, product_url, category_name, brand_logo_url):
-    """
-    Sinhrona funkcija za prikupljanje detalja o proizvodu.
-    """
+# --- SKREJP DETALJA ---
+def scrape_details(url, logo):
+    logging.info(f"SKREJPUJEM: {url}")
     try:
-        print(f"Pristupanje stranici: {product_url}")
-        
-        response = session.get(product_url)
-        response.raise_for_status()
-        html = response.text
-        soup = BeautifulSoup(html, 'html.parser')
+        r = scraper.get(url, timeout=15)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, 'html.parser')
 
-        ratings = "Ocene nedostupne"
-        ratings_element = soup.select_one('.yotpo-sr-bottom-line-text')
-        if ratings_element:
-            ratings = ratings_element.get_text(strip=True)
-
-        top_features = []
-        top_features_elements = soup.select('ul.top-features li, ul.features-list li')
-        for li in top_features_elements:
-            top_features.append(li.get_text(strip=True))
-
-        name = "Naziv nedostupan"
-        name_selectors = ['h1.product-hero__product-name', 'h1.product-name', 'h1.product-hero__title', 'div.product-hero__header h1']
-        for selector in name_selectors:
-            name_element = soup.select_one(selector)
-            if name_element:
-                name = name_element.get_text(strip=True)
+        name = "Nedostupan"
+        for s in ['h1.product-hero__product-name', 'h1.product-name']:
+            el = soup.select_one(s)
+            if el:
+                name = el.get_text(strip=True)
                 break
-        
-        description = "Opis nije dostupan"
-        description_selectors = ['div.short-description p', 'div.product-hero__product-description p']
-        for selector in description_selectors:
-            description_element = soup.select_one(selector)
-            if description_element:
-                description = description_element.get_text(strip=True)
+
+        desc = "Opis nije dostupan"
+        for s in ['div.short-description p', 'div.product-hero__product-description p']:
+            el = soup.select_one(s)
+            if el:
+                desc = el.get_text(strip=True)
                 break
-        
+
         tagline = "Tagline nedostupan"
-        tagline_selectors = ['p.product-tagline', 'div.product-tagline']
-        for selector in tagline_selectors:
-            tagline_element = soup.select_one(selector)
-            if tagline_element:
-                tagline = tagline_element.get_text(strip=True)
+        for s in ['p.product-tagline', 'div.product-tagline']:
+            el = soup.select_one(s)
+            if el:
+                tagline = el.get_text(strip=True)
                 break
 
-        product_price_selector = 'div.price .value'
-        price_element = soup.select_one(product_price_selector)
-        
-        price = "Cena nije definisana"
-        if price_element:
-            price = price_element.get_text(strip=True)
-        
-        image_urls = []
-        image_elements = soup.select('div.product-hero__image-wrapper img, picture img.img-fluid, .product-gallery-item img, div.product-image-container img')
-        for img_element in image_elements:
-            image_src = img_element.get('src')
-            if image_src:
-                if not image_src.startswith('http'):
-                    full_url = "https://www.denon.com" + image_src
-                else:
-                    full_url = image_src
-                
-                if full_url not in image_urls:
-                    image_urls.append(full_url)
-        
-        if not image_urls:
-            image_urls.append("URL slike nedostupan")
+        price = soup.select_one('div.price .value')
+        price = price.get_text(strip=True) if price else "Cena nije definisana"
 
-        specs_item_selector = 'ul.specifications-list li, table.technical-specifications tbody tr'
-        spec_name_selector = 'span.name, td:nth-child(1)'
-        spec_value_selector = 'span.value, td:nth-child(2)'
-        
-        specifications = {}
-        spec_items = soup.select(specs_item_selector)
-        for item in spec_items:
-            name_element = item.select_one(spec_name_selector)
-            value_element = item.select_one(spec_value_selector)
-            if name_element and value_element:
-                spec_name = name_element.get_text(strip=True)
-                spec_value = value_element.get_text(strip=True)
-                specifications[spec_name] = spec_value
-        
-        features = []
-        feature_blocks = soup.select('div.pdp-animated-feature, div.product-feature-block')
-        for block in feature_blocks:
-            feature_title_element = block.select_one('a.btn-link, h2, h3')
-            feature_desc_element = block.select_one('p.p-regular, p')
-            if feature_title_element and feature_desc_element:
-                feature_title = feature_title_element.get_text(strip=True)
-                feature_desc = feature_desc_element.get_text(strip=True)
-                features.append({
-                    "naslov": feature_title,
-                    "opis": feature_desc
-                })
+        imgs = []
+        for img in soup.select('div.product-hero__image-wrapper img, picture img.img-fluid'):
+            src = img.get('src')
+            if src:
+                full = "https://www.denon.com" + src if not src.startswith('http') else src
+                if full not in imgs:
+                    imgs.append(full)
+        if not imgs:
+            imgs = ["URL slike nedostupan"]
 
-        # Izdvajanje varijacija
-        variations = {}
-        
-        # Varijacije kvaliteta
-        quality_options = []
-        quality_selector = 'div[data-attr="quality"] option'
-        quality_elements = soup.select(quality_selector)
-        for opt in quality_elements:
-            if opt.get('value'):
-                quality_options.append(opt.get_text(strip=True))
-        if quality_options:
-            variations['quality'] = quality_options
+        specs = {}
+        for row in soup.select('ul.specifications-list li, table.technical-specifications tbody tr'):
+            k = row.select_one('span.name, td:nth-child(1)')
+            v = row.select_one('span.value, td:nth-child(2)')
+            if k and v:
+                specs[k.get_text(strip=True)] = v.get_text(strip=True)
 
-        # Varijacije boje sa URL-ovima slika
-        color_variations = []
-        color_swatch_selector = 'span.color-swatch'
-        color_swatch_elements = soup.select(color_swatch_selector)
-        for swatch in color_swatch_elements:
-            color_name_element = swatch.select_one('.swatch-value')
-            color_image_element = swatch.select_one('.color-value')
-            
-            if color_name_element and color_image_element:
-                color_name = color_name_element.get_text(strip=True)
-                style_attr = color_image_element.get('style', '')
-                image_url = ''
-                if 'background-image: url(' in style_attr:
-                    image_url = style_attr.split('url(')[1].split(')')[0].strip("'\"")
-                    if not image_url.startswith('http'):
-                        image_url = "https://www.denon.com" + image_url
-                
-                color_variations.append({
-                    "name": color_name,
-                    "image_url": image_url
-                })
+        # SKU
+        m = re.search(r'/([^/]+)\.html', url)
+        sku = m.group(1) if m else "Nedostupan"
 
-        if color_variations:
-            variations['colors'] = color_variations
-        
-        # ID proizvoda
-        product_id = product_url.split('/')[-1].replace('.html', '').replace('?dwvar_', '')
+        # KATEGORIJA
+        cat = "Kategorija nedostupna"
+        bc = soup.select_one('ul.breadcrumb li:last-child a, nav[aria-label="breadcrumb"] li:last-child a')
+        if bc:
+            cat = bc.get_text(strip=True)
+        else:
+            m2 = re.search(r'/en-us/product/([^/]+)/', url)
+            if m2:
+                cat = m2.group(1).replace('-', ' ').title()
 
-        return {
+        # BOJE
+        colors = []
+        for sw in soup.select('span.color-swatch'):
+            n = sw.select_one('.swatch-value')
+            i = sw.select_one('.color-value')
+            if n and i:
+                style = i.get('style', '')
+                img_url = ''
+                if 'background-image: url(' in style:
+                    img_url = style.split('url(')[1].split(')')[0].strip("'\"")
+                    if not img_url.startswith('http'):
+                        img_url = "https://www.denon.com" + img_url
+                colors.append({"boja": n.get_text(strip=True), "url_uzorka": img_url})
+
+        result = {
             "ime_proizvoda": name,
-            "brend_logo_url": brand_logo_url,
+            "sku": sku,
+            "brend_logo_url": logo,
             "cena": price,
-            "opis": description,
-            "url_proizvoda": product_url,
-            "url_slika": list(image_urls),
-            "specifikacije": specifications,
-            "kategorije": [category_name],
+            "opis": desc,
+            "url_proizvoda": url,
+            "url_slika": imgs,
+            "specifikacije": specs,
+            "kategorije": cat,
             "dodatne_informacije": {
-                "id": product_id,
                 "tagline": tagline,
-                "funkcije": features,
-                "ocjene": ratings,
-                "glavne_funkcije": top_features,
-                "varijacije": variations,
+                "dostupne_boje": colors
             }
         }
 
-    except RequestException as e:
-        print(f"Greška tokom pristupa detaljima za {product_url}: {e}")
-        return None
+        if is_complete(result):
+            logging.info(f"ZAVRŠENO: {name} | Cena: {price} | Boje: {len(colors)}")
+        else:
+            logging.warning(f"NEPOTPUN: {name}")
+
+        return result
+
     except Exception as e:
-        print(f"Došlo je do nepredviđene greške prilikom obrade detalja za {product_url}: {e}")
+        logging.error(f"GREŠKA: {url} | {e}")
         return None
 
+# --- MAIN ---
 def main():
-    """
-    Glavna sinhrona funkcija za pokretanje procesa preuzimanja podataka.
-    """
-    main_page_url = "https://www.denon.com/en-us"
-    
-    brand_logo_url = get_brand_logo(main_page_url)
-    if brand_logo_url:
-        print(f"Pronađen URL logotipa brenda: {brand_logo_url}")
-    else:
-        print("Nije pronađen URL logotipa brenda. Nastavlja se bez logotipa.")
+    setup_logging()
+    try:
+        existing_data, done_urls, retry_urls = load_existing_data()
+        logo = get_logo()
+        cats = get_categories()
+        if not cats:
+            logging.critical("NEMA KATEGORIJA – PREKID")
+            return
 
-    categories = get_categories(main_page_url)
+        new_products = []
+        new_count = 0
+        updated_count = 0
 
-    if not categories:
-        print("Nema kategorija za prikupljanje. Prekidanje operacije.")
-        return
+        for name, url in cats.items():
+            logging.info(f"KATEGORIJA: '{name}' → {url}")
+            time.sleep(random.uniform(1, 2))
 
-    all_products_data = []
-    scraped_urls = set()
-    
-    for category_name, list_url in categories.items():
-        print(f"\nIniciranje procesa ekstrakcije URL-ova proizvoda za kategoriju: {category_name} sa domena: {list_url}")
-        
-        try:
-            response = scraper.get(list_url)
-            response.raise_for_status()
-            html = response.text
-            soup = BeautifulSoup(html, 'html.parser')
-                
-            product_links = []
-            product_tile_selectors = [
-                'a.product-tile-link',
-                'div.product-tile-wrapper.plp-tile-wrapper a',
-                'div.product-list__item a',
-                'div.product-tile a'
-            ]
+            try:
+                r = scraper.get(url, timeout=15)
+                r.raise_for_status()
+                soup = BeautifulSoup(r.text, 'html.parser')
 
-            for selector in product_tile_selectors:
-                links = soup.select(selector)
-                if links:
-                    for link_element in links:
-                        href = link_element.get('href')
-                        if href and 'product' in href:
-                            full_link = "https://www.denon.com" + href if not href.startswith('http') else href
-                            product_links.append(full_link)
-                    break
-            
-            if not product_links:
-                print(f"Nema pronađenih URL-ova proizvoda u kategoriji '{category_name}'. Proverite selektore.")
-                continue
-            
-            print(f"Identifikovano je {len(set(product_links))} jedinstvenih URL-ova proizvoda.")
-            
-            for link in set(product_links):
-                # Dodajte nasumičnu pauzu
-                time.sleep(random.uniform(0.5, 1.5))
-                result = scrape_product_details(scraper, link, category_name, brand_logo_url)
-                
-                if isinstance(result, dict):
-                    product_url = result.get('url_proizvoda')
-                    if product_url and product_url not in scraped_urls:
-                        all_products_data.append(result)
-                        scraped_urls.add(product_url)
-                    else:
-                        print(f"Preskakanje duplog proizvoda: {product_url}")
-                else:
-                    print(f"Zabeležena greška tokom prikupljanja podataka: {result}")
-        
-        except RequestException as e:
-            print(f"Kritična greška tokom pristupa web resursu za kategoriju {category_name}: {e}")
-        except Exception as e:
-            print(f"Došlo je do nepredviđene greške: {e}")
+                links = []
+                for sel in ['a.product-tile-link', 'div.product-tile-wrapper a']:
+                    els = soup.select(sel)
+                    if els:
+                        for el in els:
+                            h = el.get('href')
+                            if h and 'product' in h:
+                                full = "https://www.denon.com" + h if not h.startswith('http') else h
+                                links.append(full)
+                        break
 
-    output_filename = "denon_products.json"
-    if all_products_data:
-        with open(output_filename, "w", encoding="utf-8") as f:
-            json.dump(all_products_data, f, indent=4, ensure_ascii=False)
-            
-        print(f"\nOperacija uspešno završena. {len(all_products_data)} artikala je zabeleženo u datoteci: {output_filename}.")
-    else:
-        print("\nNijedan proizvod nije pronađen. Kreiranje datoteke je preskočeno.")
-    
-    print("Proces preuzimanja podataka je finalizovan.")
+                unique = list(set(links))
+                logging.info(f"PRONAĐENO: {len(unique)} linkova")
+
+                for link in unique:
+                    if link in done_urls:
+                        continue
+                    if link in retry_urls:
+                        logging.info(f"PONOVO: {link}")
+
+                    time.sleep(random.uniform(0.5, 1.5))
+                    res = scrape_details(link, logo)
+
+                    if res:
+                        if is_complete(res):
+                            if link in retry_urls:
+                                updated_count += 1
+                                logging.info(f"AŽURIRANO: {res['ime_proizvoda']}")
+                            else:
+                                new_count += 1
+                                new_products.append(res)
+                                logging.info(f"NOVO: {res['ime_proizvoda']}")
+                        else:
+                            new_products.append(res)  # čuvaj i nepotpune
+
+            except Exception as e:
+                logging.error(f"GREŠKA KATEGORIJA '{name}': {e}")
+
+        # ČUVANJE
+        final = existing_data + new_products
+        with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
+            json.dump(final, f, indent=4, ensure_ascii=False)
+
+        logging.info(f"UKUPNO SAČUVANO: {len(final)} | NOVO: {new_count} | AŽURIRANO: {updated_count}")
+
+    except KeyboardInterrupt:
+        logging.warning("PREKINUTO")
+    except Exception as e:
+        logging.critical(f"KRITIČNA GREŠKA: {e}")
+    finally:
+        shutdown_logging()
 
 if __name__ == "__main__":
     main()
