@@ -1,684 +1,470 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi-Fi Proizvodi - Demo v39</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Audio Katalog – GitHub Live</title>
     <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --border: #ddd;
+            --radius: 12px;
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #121212;
-            color: #E0E0E0;
+            background: #f5f7fa;
+            color: var(--primary);
+            line-height: 1.6;
         }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .controls {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-box, .filter-select {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .search-box:focus, .filter-select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+        }
+
+        .stats {
+            font-size: 0.9rem;
+            color: #666;
+            margin-left: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
         .card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            cursor: pointer;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
+
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
         }
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
+
+        .card-img {
+            height: 200px;
+            background: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img img {
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.75);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 50;
+            object-fit: contain;
+            background: white;
+            transition: transform 0.3s ease;
         }
-        .modal-content {
-            background-color: #f5f5f5;
-            padding: 2rem;
-            border-radius: 1rem;
-            max-width: 90%;
-            max-height: 90%;
-            overflow-y: auto;
-            color: #1a1a1a;
-            position: relative;
-        }
-        .thumbnail-image {
-            transition: transform 0.2s, border 0.2s;
-            cursor: pointer;
-        }
-        .thumbnail-image:hover {
+
+        .card:hover .card-img img {
             transform: scale(1.05);
-            border: 2px solid #3B82F6;
         }
-        /* CSS klasa za inverziju boje logotipa */
-        .invert-logo {
-            filter: invert(1);
+
+        .brand-logo {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            object-fit: contain;
+            background: white;
+            padding: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 2;
         }
-        .color-sample {
-            display: inline-block;
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            border: 2px solid #ccc;
-            margin: 0.5rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s;
+
+        .card-body {
+            padding: 1rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
-        .color-sample:hover {
-            transform: scale(1.1);
-        }
-        /* Stilovi za klikabilne filtere */
-        .filter-button {
-            background-color: #374151;
-            color: #D1D5DB;
-            padding: 0.5rem 1.5rem;
-            border-radius: 9999px;
-            cursor: pointer;
-            transition: background-color 0.2s, color 0.2s;
-            font-size: 0.875rem;
+
+        .card-title {
+            font-size: 1.1rem;
             font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
-        .filter-button:hover {
-            background-color: #4B5563;
+
+        .card-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 0.5rem 0;
         }
-        .filter-button.active {
-            background-color: #2563EB;
-            color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+        .card-sku {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-category {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-transform: capitalize;
+        }
+
+        .colors {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: auto;
+            padding-top: 0.75rem;
+        }
+
+        .color-swatch {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #ccc;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-swatch img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .color-swatch.hex {
+            background: var(--swatch-color);
+        }
+
+        .specs {
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+            color: #555;
+            max-height: 60px;
+            overflow: hidden;
+        }
+
+        .specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .specs li {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .loading, .no-results {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #777;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+            }
+            .stats {
+                margin-left: 0;
+            }
+            header h1 {
+                font-size: 1.6rem;
+            }
         }
     </style>
 </head>
-<body class="p-6 md:p-12">
-    <!-- Verzija koda: 39 - Ažurirano: 2025-09-11 -->
+<body>
+    <header>
+        <h1>Audio Katalog</h1>
+        <p class="subtitle">Live podaci sa GitHub-a – Svi brendovi</p>
+    </header>
 
-    <main class="max-w-7xl mx-auto">
-        
-        <section class="text-center mb-10">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Prikaz proizvoda</h1>
-            <p class="text-lg md:text-xl text-gray-400">Ovo su proizvodi učitani direktno iz JSON fajlova sa GitHub repozitorijuma.</p>
-        </section>
-
-        <section class="pt-20">
-            <!-- Kontejner za pretragu i filter - sada plutajući (sticky) -->
-            <div id="search-filter-container" class="sticky top-0 z-30 bg-[#121212] py-4 shadow-lg flex flex-col md:flex-row items-center justify-center gap-4">
-                <input type="text" id="search-input" placeholder="Pretraži proizvode..." class="p-3 w-full md:w-96 rounded-full bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <button id="search-button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">Pretraži</button>
-                <!-- Dodat padajući meni za brendove -->
-                <select id="brand-filter" class="p-3 w-full md:w-auto rounded-full bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="all">Svi brendovi</option>
-                </select>
-            </div>
-
-            <!-- Kontejner za klikabilne filtere -->
-            <div id="quick-filters-container" class="flex flex-col items-center justify-center gap-4 mt-4">
-                <h2 class="text-white text-2xl font-semibold mt-4 mb-2">Glavne kategorije</h2>
-                <div id="main-category-filters" class="flex flex-wrap justify-center gap-4">
-                    <!-- Glavne kategorije će biti dinamički unete ovde -->
-                </div>
-                <h3 class="text-white text-xl font-semibold mt-4 mb-2">Podkategorije</h3>
-                <div id="subcategory-filters" class="flex flex-wrap justify-center gap-4">
-                    <!-- Podkategorije će biti dinamički unete ovde na osnovu izabrane glavne kategorije -->
-                </div>
-            </div>
-
-            <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-8">
-                <!-- Proizvodi će biti dinamički uneti ovde -->
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="text-center mt-20 text-gray-500 text-sm">
-        <p>&copy; 2025 Hi-Fi Info. Sva prava zadržana.</p>
-    </footer>
-
-    <!-- Modal za prikaz detalja o proizvodu -->
-    <div id="product-modal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <button id="close-modal" class="absolute top-4 right-4 text-gray-600 hover:text-black text-3xl font-bold">
-                &times;
-            </button>
-            <div id="modal-body">
-                <!-- Detalji o proizvodu biće uneti ovde -->
-            </div>
-        </div>
+    <div class="controls">
+        <input type="text" class="search-box" placeholder="Pretraži po imenu proizvoda..." id="searchInput" />
+        <select class="filter-select" id="brandFilter">
+            <option value="">Svi brendovi</option>
+        </select>
+        <select class="filter-select" id="categoryFilter">
+            <option value="">Sve kategorije</option>
+        </select>
+        <div class="stats" id="stats">Učitavanje sa GitHub-a...</div>
     </div>
 
-    <script>
-        var __app_id = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-        var __firebase_config = typeof __firebase_config !== 'undefined' ? __firebase_config : '{"apiKey": "YOUR_API_KEY", "projectId": "YOUR_PROJECT_ID"}';
-        var __initial_auth_token = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : 'YOUR_AUTH_TOKEN';
-        
-        console.log("Početak izvršavanja skripte.");
+    <div class="container">
+        <div id="loading" class="loading">Učitavanje JSON fajlova sa GitHub-a...</div>
+        <div id="grid" class="grid" style="display: none;"></div>
+        <div id="noResults" class="no-results" style="display: none;">Nema rezultata.</div>
+    </div>
 
-        const githubBaseUrl = 'https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/';
+    <footer class="footer">
+        <p>web_app_v1.1.0 | Podaci sa <a href="https://github.com/MikiMix-Git/SonusArtBA/tree/f0561b6b2f32ad28e0cb25e761e52acc57743370/json" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script>
+        // --- GITHUB RAW URL-ovi (na osnovu unetih imena fajlova) ---
+        const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/f0561b6b2f32ad28e0cb25e761e52acc57743370/json";
         const jsonFiles = [
-            'bowers_wilkins_products.json',
-            'denon_products.json',
-            'dynaudio_products.json',
-            'argon_audio_products_all_categories.json',
-            'marantz_all_products.json'
+            `${GITHUB_RAW_BASE}/argon_audio_products_all_categories.json`,
+            `${GITHUB_RAW_BASE}/bowers_wilkins_products.json`,
+            `${GITHUB_RAW_BASE}/denon_products.json`,
+            `${GITHUB_RAW_BASE}/dynaudio_products.json`,
+            `${GITHUB_RAW_BASE}/marantz_all_products.json`,
+            `${GITHUB_RAW_BASE}/qacoustics_products.json`
         ];
 
-        const productContainer = document.getElementById('product-container');
-        const searchInput = document.getElementById('search-input');
-        const searchButton = document.getElementById('search-button');
-        const brandFilter = document.getElementById('brand-filter');
-        const quickFiltersContainer = document.getElementById('quick-filters-container');
-        const mainCategoryFiltersContainer = document.getElementById('main-category-filters');
-        const subcategoryFiltersContainer = document.getElementById('subcategory-filters');
-        const productModal = document.getElementById('product-modal');
-        const modalBody = document.getElementById('modal-body');
-        const closeModalButton = document.getElementById('close-modal');
+        // --- PODACI ---
         let allProducts = [];
-        let currentDisplayedProducts = [];
-        let activeFilters = { mainCategory: null, subcategory: null };
+        let brands = new Set();
+        let categories = new Set();
 
-        const brandsMap = {
-            'argon_audio': 'Argon Audio',
-            'bowerswilkins': 'Bowers & Wilkins',
-            'denon': 'Denon',
-            'dynaudio': 'Dynaudio',
-            'marantz': 'Marantz'
-        };
+        // --- DOM ELEMENTI ---
+        const grid = document.getElementById('grid');
+        const loading = document.getElementById('loading');
+        const noResults = document.getElementById('noResults');
+        const searchInput = document.getElementById('searchInput');
+        const brandFilter = document.getElementById('brandFilter');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const stats = document.getElementById('stats');
 
-        // Hijerarhijska mapa kategorija sa odgovarajućim brend-specifičnim terminima.
-        const categoryMapping = {
-            'Slušalice': {
-                'Preko glave': ['over-ear-headphones', 'closed-back', 'on-ear', 'overear', 'headphones'],
-                'Bežične bubice': ['wireless-earbuds', 'true wireless', 'in-ear', 'perL'],
-                'Gaming': ['gaming headset']
-            },
-            'Zvučnici': {
-                'Podnostojeći': ['floorstand-loudspeakers', 'floorstand', 'kolone', 'floor standing speakers', 'loudspeakers'],
-                'Kompaktni': ['bookshelf-speakers', 'bookshelf', 'regalni'],
-                'Soundbarovi': ['soundbar', 'sound-bars'],
-                'Subwooferi': ['subwoofers', 'subwoofer', 'active-subwoofers', 'subwoofers-speakers'],
-                'Prenosni/Bežični': ['wireless-speakers', 'bluetooth-speakers', 'outdoor-speakers', 'denon home wireless speakers', 'active speakers']
-            },
-            'Pojačala': {
-                'Integrisana': ['integrated-amplifiers', 'integrated', 'amplifiers'],
-                'Stereo Risiveri': ['receivers-stereo', 'stereo-receivers', 'receivers'],
-                'Pred-pojačala': ['pre-amplifiers', 'preamp']
-            },
-            'Komponente': {
-                'AV Risiveri': ['av-receivers', 'av receivers', 'av separates', 'x-series av receivers', 's-series av receivers', 'home-theatre'],
-                'CD Plejeri': ['cd-players', 'cd'],
-                'Muzički strimeri': ['music-streamers', 'network-audio-players'],
-                'Gramofoni': ['turntables']
-            },
-            'Sistemi': {
-                'Mini Sistemi': ['mini systems'],
-                'Home Theatre': ['home-theatre', 'home theater']
-            },
-            'Pribor': {
-                'Pribor': ['accessories', 'cables', 'turntable-accessories', 'speaker-accessories', 'stands']
-            }
-        };
+        // --- UČITAVANJE SA GITHUB-A ---
+        async function loadJsonFiles() {
+            const promises = jsonFiles.map(url => 
+                fetch(url)
+                    .then(r => {
+                        if (!r.ok) throw new Error(`Greška 404: ${url}`);
+                        return r.json();
+                    })
+                    .then(data => Array.isArray(data) ? data : [])
+                    .catch(err => {
+                        console.warn(`Neuspešno učitavanje: ${url} → ${err.message}`);
+                        return [];
+                    })
+            );
 
-        function renderProducts(products) {
-            console.log("Renderovanje proizvoda...");
-            if (productContainer) {
-                currentDisplayedProducts = products;
-                productContainer.innerHTML = '';
-                if (products.length === 0) {
-                    productContainer.innerHTML = '<p class="text-center text-gray-500 text-xl col-span-full">Nema pronađenih proizvoda.</p>';
-                } else {
-                    products.forEach((product, index) => {
-                        const productCard = document.createElement('div');
-                        productCard.className = 'card bg-white rounded-2xl shadow-xl overflow-hidden p-6 flex flex-col items-center text-black';
-                        productCard.setAttribute('data-product-index', index);
-                        
-                        const mainImageUrl = product.url_slika && product.url_slika.length > 0 ? product.url_slika[0] : 'https://placehold.co/400x300/4B5563/FFFFFF?text=Slika+nedostupna';
-                        
-                        let logoClass = '';
-                        if (product.brend_logo_url) {
-                            if (product.brend_logo_url.includes('Argon_Audio_TextOnly_NEG.png') || 
-                                product.brend_logo_url.includes('hubfs/logo.svg') ||
-                                product.brend_logo_url.includes('denon.com') ||
-                                product.brend_logo_url.includes('marantz.com') ||
-                                product.brend_logo_url.includes('bowerswilkins.com/on/demandware.static')) {
-                                logoClass = 'invert-logo';
-                            }
-                        }
-                        
-                        productCard.innerHTML = `
-                            <img src="${product.brend_logo_url}" alt="Brend logo" class="h-8 object-contain mb-2 ${logoClass}">
-                            <img src="${mainImageUrl}" alt="${product.ime_proizvoda}" class="w-full h-48 object-cover rounded-xl mb-4">
-                            <h3 class="text-lg font-semibold text-black mb-2 text-center">${product.ime_proizvoda}</h3>
-                            <p class="text-blue-600 font-bold text-lg mb-4 text-center">${product.cena}</p>
-                            <p class="text-gray-600 text-sm text-center mb-4 flex-grow">${product.opis.substring(0, 100)}...</p>
-                            <a href="${product.url_proizvoda}" target="_blank" class="read-more-btn text-blue-600 hover:text-blue-800">
-                                Saznaj više
-                            </a>
-                        `;
-                        productContainer.appendChild(productCard);
-                    });
-                    console.log(`Renderovano je ${products.length} proizvoda.`);
-                }
-            } else {
-                console.error("Kontejner za proizvode nije pronađen.");
-            }
-        }
+            const results = await Promise.all(promises);
+            allProducts = results.flat();
 
-        function showProductDetails(product) {
-            console.log("Prikazivanje detalja proizvoda:", product.ime_proizvoda);
-            modalBody.innerHTML = '';
+            // Ekstrakcija brendova
+            allProducts.forEach(p => {
+                const logo = p.brend_logo_url || '';
+                if (logo.includes('qacoustics')) brands.add('Q Acoustics');
+                else if (logo.includes('dynaudio')) brands.add('Dynaudio');
+                else if (logo.includes('marantz')) brands.add('Marantz');
+                else if (logo.includes('denon')) brands.add('Denon');
+                else if (logo.includes('bowerswilkins') || logo.includes('bowers')) brands.add('Bowers & Wilkins');
+                else if (logo.includes('argon')) brands.add('Argon Audio');
+                else brands.add('Nepoznat');
 
-            let logoClass = '';
-            if (product.brend_logo_url) {
-                if (product.brend_logo_url.includes('Argon_Audio_TextOnly_NEG.png') || 
-                    product.brend_logo_url.includes('hubfs/logo.svg') ||
-                    product.brend_logo_url.includes('denon.com') ||
-                    product.brend_logo_url.includes('marantz.com') ||
-                    product.brend_logo_url.includes('bowerswilkins.com/on/demandware.static')) {
-                    logoClass = 'invert-logo';
-                }
-            }
-            
-            const logo = document.createElement('img');
-            logo.src = product.brend_logo_url;
-            logo.alt = 'Brend logo';
-            logo.className = `h-10 object-contain mx-auto mb-4 ${logoClass}`;
-            modalBody.appendChild(logo);
-
-            const gallerySection = document.createElement('div');
-            gallerySection.className = 'flex flex-col items-center mb-8';
-
-            const mainImage = document.createElement('img');
-            mainImage.className = 'w-full h-auto rounded-xl mb-4 object-contain max-h-96';
-            
-            const thumbnailsContainer = document.createElement('div');
-            thumbnailsContainer.className = 'flex flex-wrap gap-2 justify-center';
-            
-            if (product.url_slika && product.url_slika.length > 0) {
-                mainImage.src = product.url_slika[0];
-                mainImage.alt = product.ime_proizvoda;
-
-                product.url_slika.forEach(url => {
-                    const thumbnail = document.createElement('img');
-                    thumbnail.src = url;
-                    thumbnail.alt = product.ime_proizvoda;
-                    thumbnail.className = 'w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-blue-500 thumbnail-image';
-                    thumbnail.addEventListener('click', () => {
-                        mainImage.src = url;
-                    });
-                    thumbnailsContainer.appendChild(thumbnail);
-                });
-            } else {
-                mainImage.src = 'https://placehold.co/400x300/4B5563/FFFFFF?text=Slika+nedostupna';
-                mainImage.alt = 'Slika nedostupna';
-            }
-
-            gallerySection.appendChild(mainImage);
-            gallerySection.appendChild(thumbnailsContainer);
-            modalBody.appendChild(gallerySection);
-
-            const title = document.createElement('h2');
-            title.textContent = product.ime_proizvoda;
-            title.className = 'text-3xl font-bold mb-4';
-            modalBody.appendChild(title);
-
-            const renderDetails = (data, container) => {
-                for (const key in data) {
-                    if (data.hasOwnProperty(key)) {
-                        if (key === 'url_slika' || key === 'brend_logo_url' || key === 'url_proizvoda') continue;
-                        
-                        const value = data[key];
-                        const detailRow = document.createElement('div');
-                        detailRow.className = 'mb-2';
-                        
-                        const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-                        
-                        if (key === 'funkcije' && Array.isArray(value)) {
-                            console.log("Prepoznate funkcije, renderovanje prilagođene liste.");
-                            const functionsContainer = document.createElement('div');
-                            functionsContainer.className = 'mt-4';
-                            const functionsTitle = document.createElement('p');
-                            functionsTitle.textContent = "Funkcije:";
-                            functionsTitle.className = "font-bold text-xl mb-2";
-                            functionsContainer.appendChild(functionsTitle);
-                            
-                            value.forEach(func => {
-                                const funcItem = document.createElement('div');
-                                funcItem.className = 'bg-gray-100 rounded-lg p-4 mb-2 shadow-sm';
-                                funcItem.innerHTML = `
-                                    <p class="font-semibold text-lg text-blue-600">${func.naslov}</p>
-                                    <p class="text-gray-600 text-sm">${func.opis}</p>
-                                `;
-                                functionsContainer.appendChild(funcItem);
-                            });
-                            container.appendChild(functionsContainer);
-                        } else if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-                            const subSection = document.createElement('div');
-                            subSection.innerHTML = `<p class="font-bold mt-4">${formattedKey}:</p>`;
-                            const subContainer = document.createElement('div');
-                            subContainer.className = 'ml-4 border-l border-gray-600 pl-2';
-                            renderDetails(value, subContainer);
-                            subSection.appendChild(subContainer);
-                            container.appendChild(subSection);
-                        } else if (Array.isArray(value) && value.length > 0) {
-                             if (typeof value[0] === 'object' && value[0].hasOwnProperty('ime_linka') && value[0].hasOwnProperty('url')) {
-                                console.log("Prepoznati linkovi, renderovanje liste linkova.");
-                                const linksContainer = document.createElement('div');
-                                linksContainer.className = 'mt-2';
-                                value.forEach(link => {
-                                    const linkElement = document.createElement('a');
-                                    linkElement.href = link.url;
-                                    linkElement.textContent = link.ime_linka;
-                                    linkElement.target = '_blank';
-                                    linkElement.className = 'block text-blue-600 hover:text-blue-800 underline mb-1';
-                                    linksContainer.appendChild(linkElement);
-                                });
-                                detailRow.innerHTML = `<p class="font-bold">${formattedKey}:</p>`;
-                                detailRow.appendChild(linksContainer);
-                                container.appendChild(detailRow);
-                            } else if (typeof value[0] === 'object' && (value[0].hasOwnProperty('url_uzorka') || value[0].hasOwnProperty('image_url') || value[0].hasOwnProperty('url_slike') || value[0].hasOwnProperty('ime_boje'))) {
-                                console.log("Prepoznate varijante/boje, renderovanje uzoraka.");
-                                const variantsContainer = document.createElement('div');
-                                variantsContainer.className = 'flex flex-wrap gap-4 mt-2';
-                                value.forEach(variant => {
-                                    const variantWrapper = document.createElement('div');
-                                    variantWrapper.className = 'flex flex-col items-center gap-1 text-center';
-                                    
-                                    const url = variant.url_slike || variant.url_uzorka || variant.image_url;
-                                    const name = variant.ime_boje || variant.boja || variant.ime || variant.name;
-                                    
-                                    let sampleElement;
-                                    if (url && url.includes('http')) {
-                                        const sampleImage = document.createElement('img');
-                                        sampleImage.src = url;
-                                        sampleImage.alt = name;
-                                        sampleImage.className = 'w-12 h-12 rounded-full border border-gray-400 object-cover color-sample';
-                                        sampleElement = sampleImage;
-                                    } else if (url) {
-                                        const sampleDiv = document.createElement('div');
-                                        sampleDiv.className = 'w-12 h-12 rounded-full border border-gray-400 color-sample';
-                                        sampleDiv.style.background = url;
-                                        sampleElement = sampleDiv;
-                                    } else {
-                                        const sampleDiv = document.createElement('div');
-                                        sampleDiv.className = 'w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center text-xs color-sample';
-                                        sampleDiv.textContent = name;
-                                        sampleElement = sampleDiv;
-                                    }
-                                    variantWrapper.appendChild(sampleElement);
-                                    const nameSpan = document.createElement('span');
-                                    nameSpan.textContent = name;
-                                    nameSpan.className = 'text-xs text-gray-600';
-                                    variantWrapper.appendChild(nameSpan);
-                                    variantsContainer.appendChild(variantWrapper);
-                                });
-                                detailRow.innerHTML = `<p class="font-bold">${formattedKey}:</p>`;
-                                detailRow.appendChild(variantsContainer);
-                                container.appendChild(detailRow);
-                            } else {
-                                const list = document.createElement('ul');
-                                list.className = 'list-disc list-inside ml-4';
-                                value.forEach(item => {
-                                    const listItem = document.createElement('li');
-                                    listItem.textContent = typeof item === 'object' ? JSON.stringify(item) : item;
-                                    list.appendChild(listItem);
-                                });
-                                detailRow.innerHTML = `<p class="font-bold">${formattedKey}:</p>`;
-                                detailRow.appendChild(list);
-                                container.appendChild(detailRow);
-                            }
-                        } else {
-                            detailRow.innerHTML = `<p><span class="font-bold">${formattedKey}:</span> ${value}</p>`;
-                            container.appendChild(detailRow);
-                        }
-                    }
-                }
-            };
-
-            renderDetails(product, modalBody);
-
-            const readMoreLink = document.createElement('a');
-            readMoreLink.href = product.url_proizvoda;
-            readMoreLink.textContent = 'Saznaj više';
-            readMoreLink.target = '_blank';
-            readMoreLink.className = 'mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300';
-            modalBody.appendChild(readMoreLink);
-
-            productModal.classList.remove('hidden');
-        }
-
-        function filterAndSearchProducts() {
-            console.log("Filter i pretraga pokrenuti.");
-            const searchTerm = searchInput.value.toLowerCase();
-            const selectedBrand = brandFilter.value;
-            
-            let allMatchingTerms = [];
-            
-            if (activeFilters.subcategory) {
-                const mainCategory = activeFilters.mainCategory;
-                const subcategory = activeFilters.subcategory;
-                if (categoryMapping[mainCategory] && categoryMapping[mainCategory][subcategory]) {
-                    allMatchingTerms = categoryMapping[mainCategory][subcategory];
-                }
-            } else if (activeFilters.mainCategory && activeFilters.mainCategory !== 'all') {
-                const mainCategory = activeFilters.mainCategory;
-                if (categoryMapping[mainCategory]) {
-                    for (const subcategory in categoryMapping[mainCategory]) {
-                        allMatchingTerms = allMatchingTerms.concat(categoryMapping[mainCategory][subcategory]);
-                    }
-                }
-            } else {
-                allMatchingTerms = null;
-            }
-
-            const filteredProducts = allProducts.filter(product => {
-                const textMatch = (product.ime_proizvoda && product.ime_proizvoda.toLowerCase().includes(searchTerm)) ||
-                                  (product.opis && product.opis.toLowerCase().includes(searchTerm));
-
-                const brandMatch = selectedBrand === 'all' || (product.brend_logo_url && product.brend_logo_url.toLowerCase().includes(selectedBrand));
-                
-                let categoryMatch = true;
-                if (allMatchingTerms) {
-                    categoryMatch = false;
-                    const productCategories = product.kategorije || [];
-                    const productCategoriesArray = Array.isArray(productCategories) ? productCategories : [productCategories];
-                    
-                    for (const prodCat of productCategoriesArray) {
-                        if (allMatchingTerms.includes(prodCat.toLowerCase())) {
-                            categoryMatch = true;
-                            break;
-                        }
-                    }
-                }
-
-                return textMatch && brandMatch && categoryMatch;
+                if (p.kategorije) categories.add(p.kategorije);
             });
 
-            renderProducts(filteredProducts);
+            populateFilters();
+            renderProducts();
+            loading.style.display = 'none';
+            grid.style.display = 'grid';
         }
 
-        function populateBrandFilter(products) {
-            console.log("Popunjavanje filtera za brendove.");
-            const brandNamesSet = new Set();
-            products.forEach(product => {
-                if (product.brend_logo_url) {
-                    let brandKey = '';
-                    for (const key in brandsMap) {
-                        if (product.brend_logo_url.toLowerCase().includes(key)) {
-                            brandKey = key;
-                            break;
-                        }
-                    }
-                    if (brandKey) {
-                        brandNamesSet.add(brandKey);
-                    }
-                }
+        // --- POPUNJAVANJE FILTERA ---
+        function populateFilters() {
+            [...brands].sort().forEach(b => {
+                const opt = document.createElement('option');
+                opt.value = b;
+                opt.textContent = b;
+                brandFilter.appendChild(opt);
             });
 
-            brandNamesSet.forEach(brandKey => {
-                const brandName = brandsMap[brandKey] || brandKey;
-                const option = document.createElement('option');
-                option.value = brandKey;
-                option.textContent = brandName;
-                brandFilter.appendChild(option);
+            [...categories].sort().forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                opt.textContent = c;
+                categoryFilter.appendChild(opt);
             });
         }
 
-        function populateMainCategoryFilters() {
-            console.log("Popunjavanje filtera za glavne kategorije.");
-            mainCategoryFiltersContainer.innerHTML = '';
-            for (const mainCategory in categoryMapping) {
-                const button = document.createElement('span');
-                button.className = 'filter-button';
-                button.textContent = mainCategory;
-                button.setAttribute('data-category-type', 'main');
-                button.setAttribute('data-category-value', mainCategory);
-                mainCategoryFiltersContainer.appendChild(button);
-            }
-            const allProductsButton = document.createElement('span');
-            allProductsButton.className = 'filter-button';
-            allProductsButton.textContent = 'Svi proizvodi';
-            allProductsButton.setAttribute('data-category-type', 'main');
-            allProductsButton.setAttribute('data-category-value', 'all');
-            mainCategoryFiltersContainer.appendChild(allProductsButton);
+        // --- FILTRIRANJE ---
+        function getFilteredProducts() {
+            const query = searchInput.value.toLowerCase().trim();
+            const brand = brandFilter.value;
+            const category = categoryFilter.value;
+
+            return allProducts.filter(p => {
+                const matchesSearch = !query || (p.ime_proizvoda && p.ime_proizvoda.toLowerCase().includes(query));
+                const matchesBrand = !brand || getBrand(p) === brand;
+                const matchesCategory = !category || p.kategorije === category;
+                return matchesSearch && matchesBrand && matchesCategory;
+            });
         }
-        
-        function populateSubcategoryFilters(mainCategory) {
-            subcategoryFiltersContainer.innerHTML = '';
-            if (mainCategory === 'all' || !categoryMapping[mainCategory]) {
+
+        function getBrand(product) {
+            const logo = product.brend_logo_url || '';
+            if (logo.includes('qacoustics')) return 'Q Acoustics';
+            if (logo.includes('dynaudio')) return 'Dynaudio';
+            if (logo.includes('marantz')) return 'Marantz';
+            if (logo.includes('denon')) return 'Denon';
+            if (logo.includes('bowerswilkins') || logo.includes('bowers')) return 'Bowers & Wilkins';
+            if (logo.includes('argon')) return 'Argon Audio';
+            return 'Nepoznat';
+        }
+
+        // --- RENDEROVANJE ---
+        function renderProducts() {
+            const filtered = getFilteredProducts();
+            grid.innerHTML = '';
+
+            if (filtered.length === 0) {
+                noResults.style.display = 'block';
+                grid.style.display = 'none';
+                stats.textContent = `0 proizvoda`;
                 return;
             }
-            
-            const subcategories = categoryMapping[mainCategory];
-            for (const subcategory in subcategories) {
-                const button = document.createElement('span');
-                button.className = 'filter-button';
-                button.textContent = subcategory;
-                button.setAttribute('data-category-type', 'sub');
-                button.setAttribute('data-category-value', subcategory);
-                subcategoryFiltersContainer.appendChild(button);
-            }
-        }
-        
-        async function fetchProducts() {
-            console.log("Preuzimanje JSON fajlova...");
-            try {
-                const productsPromises = jsonFiles.map(file => 
-                    fetch(githubBaseUrl + file).then(response => {
-                        if (!response.ok) {
-                            throw new Error(`HTTP greška! status: ${response.status}`);
+
+            noResults.style.display = 'none';
+            grid.style.display = 'grid';
+            stats.textContent = `${filtered.length} od ${allProducts.length} proizvoda`;
+
+            filtered.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const brand = getBrand(product);
+                const logoUrl = product.brend_logo_url || '';
+                const mainImg = (product.url_slika && product.url_slika[0]) 
+                    ? product.url_slika[0] 
+                    : 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>?</text></svg>';
+
+                const specs = Object.entries(product.specifikacije || {})
+                    .slice(0, 3)
+                    .map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`)
+                    .join('');
+
+                const colorsHtml = (product.dodatne_informacije?.dostupne_boje || [])
+                    .slice(0, 5)
+                    .map(c => {
+                        if (c.url_uzorka && c.url_uzorka.startsWith('http')) {
+                            return `<div class="color-swatch"><img src="${c.url_uzorka}" alt="${c.boja}" onerror="this.style.display='none'"/></div>`;
+                        } else if (c.url_uzorka && c.url_uzorka.startsWith('#')) {
+                            return `<div class="color-swatch hex" style="--swatch-color: ${c.url_uzorka};"></div>`;
                         }
-                        return response.json();
+                        return `<div class="color-swatch" style="background:#ccc;"></div>`;
                     })
-                );
-                
-                const results = await Promise.all(productsPromises);
-                allProducts = results.flat();
-                console.log("Svi proizvodi su preuzeti:", allProducts.length);
-                renderProducts(allProducts);
-                populateBrandFilter(allProducts);
-                populateMainCategoryFilters();
-            } catch (error) {
-                console.error("Došlo je do greške prilikom preuzimanja proizvoda:", error);
-                productContainer.innerHTML = '<p class="text-center text-red-500 text-xl col-span-full">Došlo je do greške pri učitavanju proizvoda.</p>';
-            }
-        }
-        
-        function init() {
-            console.log("Inicijalizacija...");
-            fetchProducts();
+                    .join('');
 
-            if (searchButton) {
-                searchButton.addEventListener('click', filterAndSearchProducts);
-            }
-            
-            if (searchInput) {
-                searchInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') {
-                        filterAndSearchProducts();
+                card.innerHTML = `
+                    <div class="card-img">
+                        ${logoUrl ? `<img src="${logoUrl}" alt="${brand}" class="brand-logo" onerror="this.style.display='none'"/>` : ''}
+                        <img src="${mainImg}" alt="${product.ime_proizvoda}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>?</text></svg>'"/>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-category">${product.kategorije || 'N/A'}</div>
+                        <div class="card-title">${product.ime_proizvoda || 'Nema imena'}</div>
+                        <div class="card-sku">SKU: ${product.sku || 'N/A'}</div>
+                        <div class="card-price">${product.cena || 'Cena nedostupna'}</div>
+                        ${specs ? `<div class="specs"><ul>${specs}</ul></div>` : ''}
+                        <div class="colors">${colorsHtml}</div>
+                    </div>
+                `;
+
+                card.addEventListener('click', () => {
+                    if (product.url_proizvoda) {
+                        window.open(product.url_proizvoda, '_blank');
                     }
                 });
-            }
 
-            if (brandFilter) {
-                brandFilter.addEventListener('change', filterAndSearchProducts);
-            }
-
-            // Slušanje klikova na dugmadima za glavne kategorije
-            if (mainCategoryFiltersContainer) {
-                mainCategoryFiltersContainer.addEventListener('click', (event) => {
-                    const button = event.target.closest('.filter-button');
-                    if (button) {
-                        const value = button.getAttribute('data-category-value');
-                        
-                        if (activeFilters.mainCategory === value) {
-                            // Drugi klik - isključi filter
-                            activeFilters.mainCategory = null;
-                            activeFilters.subcategory = null;
-                            button.classList.remove('active');
-                            populateSubcategoryFilters(null);
-                        } else {
-                            // Prvi klik - uključi filter
-                            document.querySelectorAll('#main-category-filters .filter-button').forEach(btn => btn.classList.remove('active'));
-                            button.classList.add('active');
-                            activeFilters.mainCategory = value;
-                            activeFilters.subcategory = null;
-                            populateSubcategoryFilters(value);
-                        }
-                        
-                        filterAndSearchProducts();
-                    }
-                });
-            }
-
-            // Slušanje klikova na dugmadima za podkategorije
-            if (subcategoryFiltersContainer) {
-                subcategoryFiltersContainer.addEventListener('click', (event) => {
-                    const button = event.target.closest('.filter-button');
-                    if (button) {
-                        const value = button.getAttribute('data-category-value');
-                        
-                        if (activeFilters.subcategory === value) {
-                             // Drugi klik - isključi filter
-                            activeFilters.subcategory = null;
-                            button.classList.remove('active');
-                        } else {
-                            // Prvi klik - uključi filter
-                            document.querySelectorAll('#subcategory-filters .filter-button').forEach(btn => btn.classList.remove('active'));
-                            button.classList.add('active');
-                            activeFilters.subcategory = value;
-                        }
-                        
-                        filterAndSearchProducts();
-                    }
-                });
-            }
-
-            if (productContainer) {
-                productContainer.addEventListener('click', (event) => {
-                    const card = event.target.closest('.card');
-                    if (card) {
-                        const productIndex = card.getAttribute('data-product-index');
-                        if (currentDisplayedProducts[productIndex]) {
-                            showProductDetails(currentDisplayedProducts[productIndex]);
-                        }
-                    }
-                });
-            }
-            
-            if (closeModalButton) {
-                closeModalButton.addEventListener('click', () => {
-                    productModal.classList.add('hidden');
-                });
-            }
-
-            if (productModal) {
-                productModal.addEventListener('click', (e) => {
-                    if (e.target === productModal) {
-                        productModal.classList.add('hidden');
-                    }
-                });
-            }
+                grid.appendChild(card);
+            });
         }
 
-        document.addEventListener('DOMContentLoaded', init);
+        // --- EVENT LISTENERI ---
+        searchInput.addEventListener('input', renderProducts);
+        brandFilter.addEventListener('change', renderProducts);
+        categoryFilter.addEventListener('change', renderProducts);
+
+        // --- INICIJALIZACIJA ---
+        loadJsonFiles().catch(err => {
+            loading.innerHTML = `<p style="color:red;">Greška: ${err.message}</p>`;
+            console.error(err);
+        });
     </script>
 </body>
 </html>
