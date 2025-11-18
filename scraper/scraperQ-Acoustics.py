@@ -1,8 +1,8 @@
-# scraperQAcoustics_v1.2.1.py
-# PRODUKCIJA – v1.2.1
-# POPRAVKA: Sintaksa u re.sub() – dodato re. i zatvorena zagrada
-# LOG_FILE = qacoustics_production.log
-# OUTPUT_JSON = qacoustics_final.json
+# scraperQAcoustics_v1.2.7.py
+# PRODUKCIJA – v1.2.7 (18.11.2025.)
+# IZMENE U ODNOSU NA v1.2.6:
+# 1. Promenjen naziv izlaznog JSON fajla u qacoustics_products.json (po zahtevu)
+# 2. Sve ostale funkcionalnosti identične v1.2.6 (specifikacije, debug logovi, kategorije)
 
 import cloudscraper
 import json
@@ -14,11 +14,12 @@ import logging
 import sys
 from urllib.parse import urljoin
 import re
+import base64
 
 # --- KONSTANTE ---
 CODE_VERSION = "VA10.3"
 LOG_FILE = "qacoustics_production.log"
-OUTPUT_JSON = "qacoustics_final.json"
+OUTPUT_JSON = "qacoustics_products.json"  # ← PROMENJENO
 MAIN_URL = "https://www.qacoustics.com"
 COLLECTIONS_URL = "https://www.qacoustics.com/collections"
 TEST_MODE = False
@@ -29,46 +30,52 @@ scraper = cloudscraper.create_scraper(
     delay=15
 )
 
-# --- KATEGORIJE PO TIPU ---
-TYPE_MAPPING = {
-    "Bookshelf": "Bookshelf Speakers",
-    "Floorstanding": "Floorstanding Speakers",
-    "Center": "Center Speakers",
-    "Subwoofer": "Subwoofers",
-    "Wall": "Wall Speakers",
-    "Ceiling": "Ceiling Speakers",
-    "Outdoor": "Outdoor Speakers"
+# --- MAPIRANJE BOJA ---
+COLOR_MAP = {
+    "Black": "#000000", "White": "#FFFFFF", "Satin Black": "#000000", "Satin White": "#FFFFFF",
+    "Oak": "#D2B48C", "Holme Oak": "#D2B48C", "Rosewood": "#65000B", "Santos Rosewood": "#65000B",
+    "Silver": "#CCCCCC"
+}
+
+# --- MAPIRANJE KATEGORIJA ---
+CATEGORY_FALLBACK = {
+    "concept-300-speaker-stand-pair": "Speaker Stands",
+    "tensegrity-speaker-stand-pair-with-universal-adapter-plate": "Speaker Stands",
+    "fs50-series-speaker-stand-pair": "Speaker Stands",
+    "q-fs75-speaker-stand-pair": "Speaker Stands",
+    "3030fsi-floor-stands": "Speaker Stands",
+    "wb75-wall-bracket-single": "Wall Brackets"
 }
 
 # --- LOGOVANJE ---
 def setup_logging():
     logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
+    logger.setLevel(logging.DEBUG)
     if logger.hasHandlers():
         logger.handlers.clear()
     formatter = logging.Formatter(
-        '[%(asctime)s] [%(levelname)s] [{}] %(message)s'.format(CODE_VERSION),
+        '[%(asctime)s] [%(levelname)s] %(message)s',
         datefmt='%H:%M:%S'
     )
     file_handler = logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')
+    file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
+    
     console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(logging.DEBUG)
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
-    logging.info("========== Q-ACOUSTICS SKREJPER ZAPOČET (PRODUKCIJA v1.2.1) ==========")
-    logging.info(f"LOG: {LOG_FILE} | IZLAZ: {OUTPUT_JSON}")
-    logging.info(f"TEST MODE: {'UKLJUČENO' if TEST_MODE else 'ISKLJUČENO'} | MAX: {MAX_PRODUCTS}")
-    logging.info(f"GLAVNI URL: {MAIN_URL}")
-    logging.info("=================================================================")
+    
+    logging.info("========== Q-ACOUSTICS SKREJPER ZAPOČET (v1.2.7 – PROMENJEN NAZIV IZLAZNOG FAJLA) ==========")
 
 def shutdown_logging():
-    logging.info("========== SKREJPER ZAVRŠEN ==========")
+    logging.info("========== SKREJPER ZAVRŠEN =========")
     for handler in logging.getLogger().handlers[:]:
         handler.close()
         logging.getLogger().removeHandler(handler)
 
-# --- UČITAVANJE PODATAKA ---
+# --- UČITAVANJE POSTOJEĆIH PODATKA ---
 def load_existing_data():
     existing_handles = set()
     data = []
@@ -83,8 +90,6 @@ def load_existing_data():
                     existing_handles.add(handle)
         except Exception as e:
             logging.error(f"GREŠKA UČITAVANJA: {e}")
-    else:
-        logging.info("POČINJE OD NULE")
     return data, existing_handles
 
 # --- LOGO ---
@@ -98,7 +103,7 @@ def get_brand_logo():
             return urljoin(MAIN_URL, el['src'])
     except Exception as e:
         logging.warning(f"Logo greška: {e}")
-    return "https://www.qacoustics.com/cdn/shop/files/QAcoustics_Logo.png"
+    return "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915"
 
 # --- KATEGORIJE ---
 def get_categories():
@@ -134,130 +139,137 @@ def get_product_json(product_handle):
         logging.warning(f"JSON greška za {product_handle}: {e}")
         return {}
 
-# --- HTML PARSIRANJE ---
-def parse_html(soup, json_data):
+# --- EKSTREMNO DETALJNO PARSIRANJE HTML-a ---
+def parse_html(soup, json_data, handle):
     opis = ""
     specs = {}
 
-    short_desc = soup.select_one('div.productsummary p')
-    if short_desc:
+    # Opis – isti kao ranije
+    meta_desc = soup.find('meta', {'name': 'description'})
+    if meta_desc and meta_desc.get('content'):
+        opis = meta_desc['content'].strip()
+        logging.debug(f"[OPIS] Meta description: {opis[:150]}...")
+
+    short_desc = soup.select_one('div.productsummary p, .product-short-description p')
+    if short_desc and not opis:
         opis = short_desc.get_text(separator=' ', strip=True)
+        logging.debug(f"[OPIS] Short description: {opis[:150]}...")
 
     if not opis or len(opis) < 100:
-        overview = soup.select_one('section.tabsection[data-tab="OVERVIEW"]')
+        overview = soup.select_one('section.tabsection[data-tab="OVERVIEW"], #product-description, .product__description')
         if overview:
-            text_parts = []
-            for p in overview.find_all(['p', 'h3'], recursive=True):
-                text = p.get_text(strip=True)
-                if text and text not in ['OVERVIEW', 'Key Features']:
-                    text_parts.append(text)
+            text_parts = [p.get_text(strip=True) for p in overview.find_all('p') if p.get_text(strip=True)]
             if text_parts:
                 opis = ' '.join(text_parts)
+                logging.debug(f"[OPIS] Detaljan opis iz tabova: {opis[:150]}...")
 
-    ul_specs = soup.select_one('ul.specs')
+    # === SPECIJALNI PARSIRANJE SPECIFIKACIJA ===
+    logging.debug(f"[SPECS] Počinjem parsiranje specifikacija za {handle}")
+
+    # 1. PRIORITET: <ul><li>Key: Value</li></ul> ili <li>Key Value</li>
+    ul_specs = soup.select_one('ul.specs, ul.product-specs, div.specs ul')
     if ul_specs:
+        logging.debug(f"[SPECS] Aktiviran parser <ul><li> – pronađeno {len(ul_specs.find_all('li'))} stavki")
         for li in ul_specs.find_all('li'):
             text = li.get_text(strip=True)
-            if '<b>' in str(li) or ':' in text:
-                b = li.find('b')
-                if b:
-                    k = b.get_text(strip=True).rstrip(':')
-                    v = li.get_text(separator=' ', strip=True).replace(k, '', 1).strip()
-                    if k and v:
-                        specs[k] = v
+            if ':' in text:
+                key, val = text.split(':', 1)
+                key = key.strip()
+                val = val.strip()
+                specs[key] = val
+                logging.debug(f"   └─ <ul> SPEC: {key} → {val}")
+            elif text:
+                parts = text.split(None, 1)
+                if len(parts) >= 2:
+                    key = parts[0] + " " + " ".join(parts[1].split()[:1]) if len(parts) > 2 else parts[0]
+                    val = " ".join(parts[1:] if len(parts) > 2 else parts[1:])
+                    specs[key.strip()] = val.strip()
+                    logging.debug(f"   └─ <ul> SPEC (bez :): {key.strip()} → {val.strip()}")
 
-    return opis, specs
+    # 2. FALLBACK: <table> redovi
+    if not specs:
+        table = soup.select_one('table.specs-table, table')
+        if table:
+            logging.debug(f"[SPECS] Aktiviran parser <table> – pronađeno redova: {len(table.find_all('tr'))}")
+            for tr in table.find_all('tr'):
+                cells = tr.find_all(['td', 'th'])
+                if len(cells) >= 2:
+                    key = cells[0].get_text(strip=True).rstrip(':')
+                    val = cells[1].get_text(strip=True)
+                    specs[key] = val
+                    logging.debug(f"   └─ <table> SPEC: {key} → {val}")
 
-# --- JSON-LD FALLBACK ---
-def parse_json_ld(soup):
-    specs = {}
-    try:
-        script = soup.find('script', type='application/ld+json')
-        if script and script.string:
-            ld_data = json.loads(script.string)
-            if isinstance(ld_data, dict):
-                offers = ld_data.get('offers', {})
-                if isinstance(offers, dict):
-                    specs['MPN'] = offers.get('mpn', '')
-                    specs['GTIN'] = offers.get('gtin13', offers.get('gtin', ''))
-                specs['Brend'] = ld_data.get('brand', {}).get('name', '')
-    except Exception as e:
-        logging.warning(f"JSON-LD greška: {e}")
-    return specs
+    logging.debug(f"[SPECS] UKUPNO pronađeno specifikacija: {len(specs)}")
 
-# --- ODREĐIVANJE KATEGORIJE IZ NAZIVA ---
-def get_category_from_title(title):
-    title_upper = title.upper()
-    for key, value in TYPE_MAPPING.items():
-        if key.upper() in title_upper:
-            return value
-    match = re.search(r'(\d{3,4}[A-Za-z]?) SERIES', title_upper)
-    if match:
-        return f"Serija: {match.group(1)}"
-    return "Uncategorized"
+    # Kategorija – isti fallback kao ranije
+    category = "Nepoznato"
+    breadcrumb = soup.select_one('nav.breadcrumb, .breadcrumbs')
+    if breadcrumb:
+        crumbs = breadcrumb.find_all('a')
+        if crumbs:
+            category = crumbs[-1].get_text(strip=True)
+            logging.debug(f"[KATEGORIJA] Iz breadcrumb-a: {category}")
+    if category == "Nepoznato" and handle in CATEGORY_FALLBACK:
+        category = CATEGORY_FALLBACK[handle]
+        logging.debug(f"[KATEGORIJA] Fallback iz mape: {category}")
 
-# --- SKREJP PROIZVODA ---
-def scrape_product(product_url, logo, collection_name):
+    return opis or "Opis nedostupan", specs, category
+
+# --- DATA URI BOJE ---
+def get_color_data_uri(color_name):
+    hex_color = COLOR_MAP.get(color_name, "#CCCCCC")
+    svg = f'<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="{hex_color}"/></svg>'
+    b64 = base64.b64encode(svg.encode('utf-8')).decode('utf-8')
+    return f"data:image/svg+xml;base64,{b64}"
+
+# --- GLAVNA FUNKCIJA ZA JEDAN PROIZVOD ---
+def scrape_product(product_url, logo, coll_name):
     handle = product_url.split('/products/')[-1].split('?')[0]
+    logging.debug(f"\n=== POČINJEM OBRAĐIVATI: {handle} ===")
     json_data = get_product_json(handle)
     if not json_data:
         return None
 
-    title = json_data.get('title', 'Nedostupan')
-    category = get_category_from_title(title)
+    title = json_data.get('title', 'Nepoznato')
+    variants = json_data.get('variants', [])
+    price_str = variants[0].get('price', '0') if variants else '0'
+    try:
+        price = f"${float(price_str):,.2f}"
+    except:
+        price = f"${price_str}"
 
+    sku = variants[0].get('sku', 'Nedostupan') if variants else 'Nedostupan'
+
+    # Slike
+    images = []
+    for img in json_data.get('images', []):
+        src = img.get('src', '').split('?')[0]
+        if src:
+            full = urljoin("https://cdn.shopify.com", src)
+            images.append(full)
+    logging.debug(f"[SLIKE] Pronađeno {len(images)} slika")
+
+    # HTML parsiranje
     try:
         r = scraper.get(product_url, timeout=15)
         r.raise_for_status()
         soup = BeautifulSoup(r.text, 'html.parser')
-
-        opis, html_specs = parse_html(soup, json_data)
-        ld_specs = parse_json_ld(soup)
-        specs = {**ld_specs, **html_specs}
-
-        if not opis:
-            body_html = json_data.get('body_html', '')
-            if body_html:
-                opis = re.sub('<[^<]+?>', '', body_html).strip()  # ISPRAVLJENO
-
+        opis, specs, precise_category = parse_html(soup, json_data, handle)
     except Exception as e:
-        logging.warning(f"HTML greška: {e}")
-        opis = re.sub('<[^<]+?>', '', json_data.get('body_html', '')).strip()
-        specs = {}
+        logging.warning(f"HTML greška za {handle}: {e}")
+        opis, specs, precise_category = "Opis nedostupan", {}, coll_name
 
-    # CENA
-    variants = json_data.get('variants', [])
-    price = "Cena nije definisana"
-    if variants:
-        price_str = variants[0].get('price', '')
-        try:
-            price_float = float(price_str)
-            price = f"${price_float:,.2f}"
-        except:
-            price = f"${price_str}"
-
-    sku = variants[0].get('sku', 'Nedostupan') if variants else 'Nedostupan'
-    available = any(v.get('available') for v in variants)
-
-    # SLIKE
-    images = []
-    base_img_url = "https://www.qacoustics.com"
-    for img in json_data.get('images', []):
-        src = img.get('src', '')
-        if src:
-            src = src.replace('/cdn/', '/cdn/shop/')
-            images.append(urljoin(base_img_url, src))
-
-    # BOJE
+    # Boje
     colors = []
-    for i, v in enumerate(variants):
+    for v in variants:
         opt1 = v.get('option1')
         if opt1 and opt1 != "Default Title":
-            img_src = images[i] if i < len(images) else None
-            colors.append({
-                "boja": opt1,
-                "url_uzorka": img_src
-            })
+            colors.append({"boja": opt1, "url_uzorka": get_color_data_uri(opt1)})
+            logging.debug(f"[BOJA] Dodata: {opt1}")
+
+    category = precise_category if precise_category != "Nepoznato" else coll_name
+
+    logging.debug(f"[ZAVRŠETAK] Specs ukupno: {len(specs)} | Boje: {len(colors)} | Kategorija: {category}")
 
     result = {
         "ime_proizvoda": title,
@@ -275,14 +287,14 @@ def scrape_product(product_url, logo, collection_name):
         }
     }
 
-    logging.info(f"ZAVRŠENO: {title} | Cena: {price} | Boje: {len(colors)} | Dostupno: {'Da' if available else 'Ne'} | Spec: {len(specs)} | Opis: {len(opis)} zn | Kategorija: {category}")
+    logging.info(f"ZAVRŠENO: {title} | Spec: {len(specs)} | Boje: {len(colors)} | Kat: {category}")
     return result
 
 # --- LINKOVI IZ KOLEKCIJE ---
 def get_product_links_from_collection(coll_url, coll_name):
     links = []
-    handle = coll_url.split('/collections/')[-1].split('?')[0]
-    json_url = f"{MAIN_URL}/collections/{handle}/products.json"
+    handle_coll = coll_url.split('/collections/')[-1].split('?')[0]
+    json_url = f"{MAIN_URL}/collections/{handle_coll}/products.json"
     try:
         r = scraper.get(json_url, timeout=15)
         if r.status_code == 200:
@@ -294,7 +306,7 @@ def get_product_links_from_collection(coll_url, coll_name):
             return links
     except:
         pass
-    logging.info(f"JSON nedostupan → HTML fallback za '{coll_name}'")
+
     try:
         r = scraper.get(coll_url, timeout=15)
         r.raise_for_status()
@@ -305,7 +317,6 @@ def get_product_links_from_collection(coll_url, coll_name):
                 full = urljoin(coll_url, href).split('?')[0]
                 if full not in [l[0] for l in links]:
                     links.append((full, coll_name))
-        logging.info(f"Kolekcija '{coll_name}': {len(links)} proizvoda (HTML)")
     except Exception as e:
         logging.error(f"Greška kolekcija '{coll_name}': {e}")
     return links
@@ -322,14 +333,11 @@ def main():
             return
 
         new_products = []
-        updated_products = 0
         scraped_count = 0
 
         for name, url in cats.items():
             if scraped_count >= MAX_PRODUCTS and not TEST_MODE:
-                logging.info(f"MAX DOSTIGNUT ({MAX_PRODUCTS}) – PREKID")
                 break
-
             logging.info(f"KATEGORIJA: '{name}' → {url}")
             time.sleep(random.uniform(1.0, 2.0))
 
@@ -339,16 +347,7 @@ def main():
                     break
 
                 handle = product_url.split('/products/')[-1].split('?')[0]
-
                 if handle in existing_handles:
-                    for p in existing_data:
-                        if p.get("url_proizvoda", "").split('/products/')[-1].split('?')[0] == handle:
-                            new_cat = get_category_from_title(p['ime_proizvoda'])
-                            if p.get("kategorije") != new_cat:
-                                p["kategorije"] = new_cat
-                                updated_products += 1
-                                logging.info(f"AŽURIRANO: {p['ime_proizvoda']} | Nova kategorija: {new_cat}")
-                            break
                     continue
 
                 time.sleep(random.uniform(0.5, 1.0))
@@ -357,13 +356,12 @@ def main():
                     new_products.append(res)
                     existing_handles.add(handle)
                     scraped_count += 1
-                    logging.info(f"SKREJPANO {scraped_count}")
 
         final = existing_data + new_products
-        with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
+        with open(OUTPUT_JSON, "w", encoding="utf-8") as f:  # ← SADA qacoustics_products.json
             json.dump(final, f, indent=4, ensure_ascii=False)
 
-        logging.info(f"SAČUVANO: {len(final)} | NOVO: {len(new_products)} | AŽURIRANO: {updated_products}")
+        logging.info(f"SAČUVANO: {len(final)} proizvoda u fajl: {OUTPUT_JSON}")
 
     except KeyboardInterrupt:
         logging.warning("PREKINUTO OD STRANE KORISNIKA")
