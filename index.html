@@ -3,271 +3,99 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Audio Katalog – GitHub Live</title>
+    <title>Audio Katalog – Detaljan Prikaz</title>
     <style>
         :root {
             --primary: #1a1a1a;
             --secondary: #2c3e50;
             --accent: #e74c3c;
             --light: #ecf0f1;
-            --dark: #2c3e50;
             --border: #ddd;
             --radius: 12px;
             --shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #f5f7fa; color: var(--primary); line-height: 1.6; }
 
-        body {
-            background: #f5f7fa;
-            color: var(--primary);
-            line-height: 1.6;
-        }
+        header { background: var(--primary); color: white; padding: 1.5rem 0; text-align: center; box-shadow: var(--shadow); }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .subtitle { font-size: 1rem; opacity: 0.9; }
 
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            box-shadow: var(--shadow);
-        }
+        .controls { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+        .search-box, .filter-select { padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: var(--radius); font-size: 1rem; flex: 1; min-width: 200px; }
+        .search-box:focus, .filter-select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(231,76,60,0.2); }
+        .stats { font-size: 0.9rem; color: #666; margin-left: auto; }
 
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
 
-        .subtitle {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
+        .card { background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
 
-        .controls {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-        }
+        .card-img { height: 200px; background: #eee; position: relative; overflow: hidden; }
+        .card-img img { width: 100%; height: 100%; object-fit: contain; background: white; transition: transform 0.3s ease; }
+        .card:hover .card-img img { transform: scale(1.05); }
+        .brand-logo { position: absolute; top: 8px; left: 8px; width: 40px; height: 40px; border-radius: 8px; object-fit: contain; background: white; padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 2; }
 
-        .search-box, .filter-select {
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            font-size: 1rem;
-            flex: 1;
-            min-width: 200px;
-        }
+        .card-body { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--secondary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .card-price { font-size: 1.3rem; font-weight: 700; color: var(--accent); margin: 0.5rem 0; }
+        .card-sku { font-size: 0.85rem; color: #777; margin-bottom: 0.5rem; }
+        .card-category { font-size: 0.85rem; color: var(--accent); font-weight: 500; margin-bottom: 0.5rem; text-transform: capitalize; }
+        .colors { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; padding-top: 0.75rem; }
+        .color-swatch { width: 24px; height: 24px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 0 1px #ccc; overflow: hidden; }
+        .color-swatch img { width: 100%; height: 100%; object-fit: cover; }
+        .color-swatch.hex { background: var(--swatch-color); }
 
-        .search-box:focus, .filter-select:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
-        }
+        /* MODAL */
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; overflow-y: auto; }
+        .modal.active { display: flex; align-items: center; justify-content: center; }
+        .modal-content { background: white; border-radius: var(--radius); max-width: 900px; width: 95%; max-height: 95vh; overflow-y: auto; position: relative; }
+        .modal-close { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #aaa; z-index: 10; }
+        .modal-close:hover { color: var(--accent); }
 
-        .stats {
-            font-size: 0.9rem;
-            color: #666;
-            margin-left: auto;
-        }
+        .modal-header { padding: 1.5rem; background: var(--primary); color: white; border-radius: var(--radius) var(--radius) 0 0; }
+        .modal-title { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .modal-brand { font-size: 1rem; opacity: 0.9; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+        .modal-body { padding: 2rem; }
+        .gallery { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem; justify-content: center; }
+        .gallery img { max-width: 200px; max-height: 200px; object-fit: contain; cursor: pointer; border: 2px solid transparent; border-radius: 8px; }
+        .gallery img:hover { border-color: var(--accent); }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
+        .modal-info { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .modal-desc { grid-column: span 2; margin-bottom: 1.5rem; line-height: 1.8; }
+        .specs-table { width: 100%; border-collapse: collapse; }
+        .specs-table th, .specs-table td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #eee; }
+        .specs-table th { background: #f9f9f9; width: 40%; }
+        .colors-big { display: flex; gap: 12px; flex-wrap: wrap; margin: 1rem 0; }
+        .colors-big .color-swatch { width: 40px; height: 40px; }
 
-        .card {
-            background: white;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
+        .modal-footer { padding: 1.5rem; text-align: center; background: #f9f9f9; border-top: 1px solid var(--border); }
+        .btn { padding: 0.75rem 1.5rem; background: var(--accent); color: white; border: none; border-radius: var(--radius); cursor: pointer; font-size: 1rem; }
+        .btn:hover { background: #c0392b; }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-        }
-
-        .card-img {
-            height: 200px;
-            background: #eee;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            background: white;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover .card-img img {
-            transform: scale(1.05);
-        }
-
-        .brand-logo {
-            position: absolute;
-            top: 8px;
-            left: 8px;
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            object-fit: contain;
-            background: white;
-            padding: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            z-index: 2;
-        }
-
-        .card-body {
-            padding: 1rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .card-price {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin: 0.5rem 0;
-        }
-
-        .card-sku {
-            font-size: 0.85rem;
-            color: #777;
-            margin-bottom: 0.5rem;
-        }
-
-        .card-category {
-            font-size: 0.85rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            text-transform: capitalize;
-        }
-
-        .colors {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            margin-top: auto;
-            padding-top: 0.75rem;
-        }
-
-        .color-swatch {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            border: 2px solid white;
-            box-shadow: 0 0 0 1px #ccc;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .color-swatch img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .color-swatch.hex {
-            background: var(--swatch-color);
-        }
-
-        .specs {
-            margin-top: 0.75rem;
-            font-size: 0.8rem;
-            color: #555;
-            max-height: 60px;
-            overflow: hidden;
-        }
-
-        .specs ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .specs li {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: #777;
-            font-size: 0.9rem;
-            margin-top: 3rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .loading, .no-results {
-            text-align: center;
-            padding: 3rem 1rem;
-            color: #777;
-            font-size: 1.1rem;
-        }
+        .loading, .no-results { text-align: center; padding: 3rem 1rem; color: #777; font-size: 1.1rem; }
+        .footer { text-align: center; padding: 2rem 1rem; color: #777; font-size: 0.9rem; margin-top: 3rem; border-top: 1px solid var(--border); }
 
         @media (max-width: 768px) {
-            .controls {
-                flex-direction: column;
-            }
-            .stats {
-                margin-left: 0;
-            }
-            header h1 {
-                font-size: 1.6rem;
-            }
+            .modal-info { grid-template-columns: 1fr; }
+            .controls { flex-direction: column; }
+            .stats { margin-left: 0; }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Audio Katalog</h1>
-        <p class="subtitle">Live podaci sa GitHub-a – Svi brendovi</p>
+        <p class="subtitle">Live podaci sa GitHub-a – Detaljan prikaz proizvoda</p>
     </header>
 
     <div class="controls">
         <input type="text" class="search-box" placeholder="Pretraži po imenu proizvoda..." id="searchInput" />
-        <select class="filter-select" id="brandFilter">
-            <option value="">Svi brendovi</option>
-        </select>
-        <select class="filter-select" id="categoryFilter">
-            <option value="">Sve kategorije</option>
-        </select>
+        <select class="filter-select" id="brandFilter"><option value="">Svi brendovi</option></select>
+        <select class="filter-select" id="categoryFilter"><option value="">Sve kategorije</option></select>
         <div class="stats" id="stats">Učitavanje sa GitHub-a...</div>
     </div>
 
@@ -277,12 +105,39 @@
         <div id="noResults" class="no-results" style="display: none;">Nema rezultata.</div>
     </div>
 
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-brand" id="modalBrand"></div>
+            </div>
+            <div class="modal-body">
+                <div class="gallery" id="modalGallery"></div>
+                <div class="modal-info">
+                    <div class="modal-desc" id="modalDesc"></div>
+                    <div>
+                        <p><strong>SKU:</strong> <span id="modalSKU"></span></p>
+                        <p><strong>Cena:</strong> <span id="modalPrice" style="font-size:1.5rem;color:var(--accent);font-weight:700;"></span></p>
+                        <p><strong>Kategorija:</strong> <span id="modalCategory"></span></p>
+                        <p id="taglineSection"><strong>Tagline:</strong> <span id="modalTagline"></span></p>
+                    </div>
+                </div>
+                <div class="colors-big" id="modalColors"></div>
+                <table class="specs-table" id="modalSpecs"></table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" id="modalLink">Idi na originalnu stranicu</button>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
-        <p>web_app_v1.1.0 | Podaci sa <a href="https://github.com/MikiMix-Git/SonusArtBA/tree/f0561b6b2f32ad28e0cb25e761e52acc57743370/json" target="_blank">GitHub</a></p>
+        <p>web_app_v1.2.0 | Podaci sa <a href="https://github.com/MikiMix-Git/SonusArtBA/tree/f0561b6b2f32ad28e0cb25e761e52acc57743370/json" target="_blank">GitHub</a></p>
     </footer>
 
     <script>
-        // --- GITHUB RAW URL-ovi (na osnovu unetih imena fajlova) ---
         const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/f0561b6b2f32ad28e0cb25e761e52acc57743370/json";
         const jsonFiles = [
             `${GITHUB_RAW_BASE}/argon_audio_products_all_categories.json`,
@@ -293,12 +148,7 @@
             `${GITHUB_RAW_BASE}/qacoustics_products.json`
         ];
 
-        // --- PODACI ---
-        let allProducts = [];
-        let brands = new Set();
-        let categories = new Set();
-
-        // --- DOM ELEMENTI ---
+        let allProducts = [], brands = new Set(), categories = new Set();
         const grid = document.getElementById('grid');
         const loading = document.getElementById('loading');
         const noResults = document.getElementById('noResults');
@@ -307,35 +157,35 @@
         const categoryFilter = document.getElementById('categoryFilter');
         const stats = document.getElementById('stats');
 
-        // --- UČITAVANJE SA GITHUB-A ---
-        async function loadJsonFiles() {
-            const promises = jsonFiles.map(url => 
-                fetch(url)
-                    .then(r => {
-                        if (!r.ok) throw new Error(`Greška 404: ${url}`);
-                        return r.json();
-                    })
-                    .then(data => Array.isArray(data) ? data : [])
-                    .catch(err => {
-                        console.warn(`Neuspešno učitavanje: ${url} → ${err.message}`);
-                        return [];
-                    })
-            );
+        // MODAL ELEMENTI
+        const modal = document.getElementById('modal');
+        const modalClose = document.getElementById('modalClose');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBrand = document.getElementById('modalBrand');
+        const modalGallery = document.getElementById('modalGallery');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalSKU = document.getElementById('modalSKU');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalTagline = document.getElementById('modalTagline');
+        const taglineSection = document.getElementById('taglineSection');
+        const modalColors = document.getElementById('modalColors');
+        const modalSpecs = document.getElementById('modalSpecs');
+        const modalLink = document.getElementById('modalLink');
 
+        async function loadJsonFiles() {
+            const promises = jsonFiles.map(url => fetch(url).then(r => r.ok ? r.json() : []).catch(() => []));
             const results = await Promise.all(promises);
             allProducts = results.flat();
 
-            // Ekstrakcija brendova
             allProducts.forEach(p => {
                 const logo = p.brend_logo_url || '';
                 if (logo.includes('qacoustics')) brands.add('Q Acoustics');
                 else if (logo.includes('dynaudio')) brands.add('Dynaudio');
                 else if (logo.includes('marantz')) brands.add('Marantz');
                 else if (logo.includes('denon')) brands.add('Denon');
-                else if (logo.includes('bowerswilkins') || logo.includes('bowers')) brands.add('Bowers & Wilkins');
+                else if (logo.includes('bowers')) brands.add('Bowers & Wilkins');
                 else if (logo.includes('argon')) brands.add('Argon Audio');
-                else brands.add('Nepoznat');
-
                 if (p.kategorije) categories.add(p.kategorije);
             });
 
@@ -345,122 +195,137 @@
             grid.style.display = 'grid';
         }
 
-        // --- POPUNJAVANJE FILTERA ---
         function populateFilters() {
-            [...brands].sort().forEach(b => {
-                const opt = document.createElement('option');
-                opt.value = b;
-                opt.textContent = b;
-                brandFilter.appendChild(opt);
-            });
-
-            [...categories].sort().forEach(c => {
-                const opt = document.createElement('option');
-                opt.value = c;
-                opt.textContent = c;
-                categoryFilter.appendChild(opt);
-            });
+            [...brands].sort().forEach(b => { const o = document.createElement('option'); o.value = b; o.textContent = b; brandFilter.appendChild(o); });
+            [...categories].sort().forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; categoryFilter.appendChild(o); });
         }
 
-        // --- FILTRIRANJE ---
-        function getFilteredProducts() {
-            const query = searchInput.value.toLowerCase().trim();
-            const brand = brandFilter.value;
-            const category = categoryFilter.value;
-
-            return allProducts.filter(p => {
-                const matchesSearch = !query || (p.ime_proizvoda && p.ime_proizvoda.toLowerCase().includes(query));
-                const matchesBrand = !brand || getBrand(p) === brand;
-                const matchesCategory = !category || p.kategorije === category;
-                return matchesSearch && matchesBrand && matchesCategory;
-            });
-        }
-
-        function getBrand(product) {
-            const logo = product.brend_logo_url || '';
+        function getBrand(p) {
+            const logo = p.brend_logo_url || '';
             if (logo.includes('qacoustics')) return 'Q Acoustics';
             if (logo.includes('dynaudio')) return 'Dynaudio';
             if (logo.includes('marantz')) return 'Marantz';
             if (logo.includes('denon')) return 'Denon';
-            if (logo.includes('bowerswilkins') || logo.includes('bowers')) return 'Bowers & Wilkins';
+            if (logo.includes('bowers')) return 'Bowers & Wilkins';
             if (logo.includes('argon')) return 'Argon Audio';
             return 'Nepoznat';
         }
 
-        // --- RENDEROVANJE ---
+        function getFilteredProducts() {
+            const q = searchInput.value.toLowerCase().trim();
+            const b = brandFilter.value;
+            const c = categoryFilter.value;
+            return allProducts.filter(p => {
+                const ms = !q || (p.ime_proizvoda && p.ime_proizvoda.toLowerCase().includes(q));
+                const mb = !b || getBrand(p) === b;
+                const mc = !c || p.kategorije === c;
+                return ms && mb && mc;
+            });
+        }
+
         function renderProducts() {
             const filtered = getFilteredProducts();
             grid.innerHTML = '';
-
-            if (filtered.length === 0) {
-                noResults.style.display = 'block';
-                grid.style.display = 'none';
-                stats.textContent = `0 proizvoda`;
-                return;
-            }
-
-            noResults.style.display = 'none';
-            grid.style.display = 'grid';
+            if (!filtered.length) { noResults.style.display = 'block'; grid.style.display = 'none'; stats.textContent = '0 proizvoda'; return; }
+            noResults.style.display = 'none'; grid.style.display = 'grid';
             stats.textContent = `${filtered.length} od ${allProducts.length} proizvoda`;
 
-            filtered.forEach(product => {
+            filtered.forEach(p => {
                 const card = document.createElement('div');
                 card.className = 'card';
-
-                const brand = getBrand(product);
-                const logoUrl = product.brend_logo_url || '';
-                const mainImg = (product.url_slika && product.url_slika[0]) 
-                    ? product.url_slika[0] 
-                    : 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>?</text></svg>';
-
-                const specs = Object.entries(product.specifikacije || {})
-                    .slice(0, 3)
-                    .map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`)
-                    .join('');
-
-                const colorsHtml = (product.dodatne_informacije?.dostupne_boje || [])
-                    .slice(0, 5)
-                    .map(c => {
-                        if (c.url_uzorka && c.url_uzorka.startsWith('http')) {
-                            return `<div class="color-swatch"><img src="${c.url_uzorka}" alt="${c.boja}" onerror="this.style.display='none'"/></div>`;
-                        } else if (c.url_uzorka && c.url_uzorka.startsWith('#')) {
-                            return `<div class="color-swatch hex" style="--swatch-color: ${c.url_uzorka};"></div>`;
-                        }
-                        return `<div class="color-swatch" style="background:#ccc;"></div>`;
-                    })
-                    .join('');
+                const mainImg = (p.url_slika && p.url_slika[0]) ? p.url_slika[0] : 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>?</text></svg>';
+                const colorsHtml = (p.dodatne_informacije?.dostupne_boje || []).slice(0,5).map(c => {
+                    if (c.url_uzorka && c.url_uzorka.startsWith('http')) return `<div class="color-swatch"><img src="${c.url_uzorka}" onerror="this.style.display='none'"/></div>`;
+                    if (c.url_uzorka && c.url_uzorka.startsWith('#')) return `<div class="color-swatch hex" style="--swatch-color:${c.url_uzorka};"></div>`;
+                    return `<div class="color-swatch" style="background:#ccc;"></div>`;
+                }).join('');
 
                 card.innerHTML = `
                     <div class="card-img">
-                        ${logoUrl ? `<img src="${logoUrl}" alt="${brand}" class="brand-logo" onerror="this.style.display='none'"/>` : ''}
-                        <img src="${mainImg}" alt="${product.ime_proizvoda}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>?</text></svg>'"/>
+                        ${p.brend_logo_url ? `<img src="${p.brend_logo_url}" alt="${getBrand(p)}" class="brand-logo" onerror="this.style.display='none'"/>` : ''}
+                        <img src="${mainImg}" alt="${p.ime_proizvoda}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>?</text></svg>'"/>
                     </div>
                     <div class="card-body">
-                        <div class="card-category">${product.kategorije || 'N/A'}</div>
-                        <div class="card-title">${product.ime_proizvoda || 'Nema imena'}</div>
-                        <div class="card-sku">SKU: ${product.sku || 'N/A'}</div>
-                        <div class="card-price">${product.cena || 'Cena nedostupna'}</div>
-                        ${specs ? `<div class="specs"><ul>${specs}</ul></div>` : ''}
+                        <div class="card-category">${p.kategorije || 'N/A'}</div>
+                        <div class="card-title">${p.ime_proizvoda || 'Nema imena'}</div>
+                        <div class="card-sku">SKU: ${p.sku || 'N/A'}</div>
+                        <div class="card-price">${p.cena || 'Cena nedostupna'}</div>
                         <div class="colors">${colorsHtml}</div>
                     </div>
                 `;
-
-                card.addEventListener('click', () => {
-                    if (product.url_proizvoda) {
-                        window.open(product.url_proizvoda, '_blank');
-                    }
-                });
-
+                card.onclick = () => openModal(p);
                 grid.appendChild(card);
             });
         }
 
-        // --- EVENT LISTENERI ---
+        function openModal(product) {
+            modalTitle.textContent = product.ime_proizvoda || 'Nema imena';
+            modalBrand.textContent = getBrand(product);
+            modalSKU.textContent = product.sku || 'N/A';
+            modalPrice.textContent = product.cena || 'Cena nedostupna';
+            modalCategory.textContent = product.kategorije || 'N/A';
+            modalDesc.innerHTML = product.opis ? product.opis.replace(/\n/g, '<br>') : 'Opis nije dostupan';
+
+            const tagline = product.dodatne_informacije?.tagline;
+            if (tagline && tagline !== 'Tagline nedostupan') {
+                modalTagline.textContent = tagline;
+                taglineSection.style.display = 'block';
+            } else taglineSection.style.display = 'none';
+
+            // Galerija
+            modalGallery.innerHTML = '';
+            const images = product.url_slika || [];
+            if (images.length === 0) modalGallery.innerHTML = '<p>Nema slika</p>';
+            images.forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.onerror = () => img.src = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>?</text></svg>';
+                img.onclick = () => window.open(src, '_blank');
+                modalGallery.appendChild(img);
+            });
+
+            // Boje
+            modalColors.innerHTML = '';
+            (product.dodatne_informacije?.dostupne_boje || []).forEach(c => {
+                const div = document.createElement('div');
+                div.className = 'color-swatch';
+                div.title = c.boja || '';
+                if (c.url_uzorka && c.url_uzorka.startsWith('http')) {
+                    const img = document.createElement('img');
+                    img.src = c.url_uzorka;
+                    img.alt = c.boja;
+                    div.appendChild(img);
+                } else if (c.url_uzorka && c.url_uzorka.startsWith('#')) {
+                    div.classList.add('hex');
+                    div.style.setProperty('--swatch-color', c.url_uzorka);
+                }
+                modalColors.appendChild(div);
+            });
+
+            // Specifikacije
+            modalSpecs.innerHTML = '';
+            const specs = product.specifikacije || {};
+            if (Object.keys(specs).length === 0) {
+                modalSpecs.innerHTML = '<tr><td colspan="2">Nema specifikacija</td></tr>';
+            } else {
+                Object.entries(specs).forEach(([k, v]) => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<th>${k}</th><td>${v}</td>`;
+                    modalSpecs.appendChild(tr);
+                });
+            }
+
+            modalLink.onclick = () => window.open(product.url_proizvoda, '_blank');
+            modal.classList.add('active');
+        }
+
+        modalClose.onclick = () => modal.classList.remove('active');
+        modal.onclick = e => { if (e.target === modal) modal.classList.remove('active'); };
+
         searchInput.addEventListener('input', renderProducts);
         brandFilter.addEventListener('change', renderProducts);
         categoryFilter.addEventListener('change', renderProducts);
 
-        // --- INICIJALIZACIJA ---
         loadJsonFiles().catch(err => {
             loading.innerHTML = `<p style="color:red;">Greška: ${err.message}</p>`;
             console.error(err);
