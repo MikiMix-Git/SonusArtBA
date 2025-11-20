@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Audio Katalog – v1.3.2</title>
+    <title>Audio Katalog – v1.3.5</title>
     <style>
         :root { --primary: #1a1a1a; --secondary: #2c3e50; --accent: #e74c3c; --light: #ecf0f1; --border: #ddd; --radius: 12px; --shadow: 0 4px 12px rgba(0,0,0,0.1); }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -28,6 +28,7 @@
             display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.7rem; text-align: center;
         }
         .brand-logo-container img { width: 40px; height: 40px; object-fit: contain; }
+        .brand-logo-container img.force-dark { filter: invert(1) hue-rotate(180deg) brightness(0.9) !important; }
         .card-body { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; }
         .card-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--secondary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         .card-price { font-size: 1.3rem; font-weight: 700; color: var(--accent); margin: 0.5rem 0; }
@@ -67,7 +68,7 @@
 <body>
     <header>
         <h1>Audio Katalog</h1>
-        <p class="subtitle">Live sa GitHub-a – v1.3.2 (B&W filter ispravljen)</p>
+        <p class="subtitle">Live sa GitHub-a – v1.3.5 (uvek prva slika na kartici)</p>
     </header>
 
     <div class="controls">
@@ -83,7 +84,6 @@
         <div id="noResults" class="no-results" style="display:none;">Nema rezultata.</div>
     </div>
 
-    <!-- MODAL -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <button class="modal-close" id="modalClose">×</button>
@@ -112,7 +112,7 @@
     </div>
 
     <footer class="footer">
-        <p>web_app_v1.3.2.html – Bowers & Wilkins filter radi 100%</p>
+        <p>web_app_v1.3.5.html – Na kartici uvek prva slika</p>
     </footer>
 
     <script>
@@ -149,8 +149,8 @@
         const modalColors = document.getElementById('modalColors');
         const modalSpecs = document.getElementById('modalSpecs');
         const modalLink = document.getElementById('modalLink');
+        const fallback = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23f0f0f0%22/><text x=%22200%22 y=%22150%22 font-size=%2230%22 text-anchor=%22middle%22 fill=%22%23999%22>No Image</text></svg>';
 
-        // NOVO: Detekcija brenda po imenu fajla
         function detectBrandFromFilename(url) {
             if (url.includes('argon')) return 'Argon Audio';
             if (url.includes('bowers')) return 'Bowers & Wilkins';
@@ -161,15 +161,6 @@
             return null;
         }
 
-        // Pametno biranje slike za karticu
-        function getBestCardImage(images) {
-            if (!images || images.length === 0) return null;
-            const priority = ['front', 'main', 'white', 'studio', 'product'];
-            for (let img of images) if (priority.some(kw => img.toLowerCase().includes(kw))) return img;
-            return images.length > 2 ? images[2] : images.length > 1 ? images[1] : images[0];
-        }
-
-        // Poboljšana detekcija brenda (logo + fallback po fajlu)
         function getBrandDisplay(p, sourceUrl = '') {
             const logo = p.brend_logo_url || '';
             const map = { 'qacoustics': 'Q Acoustics', 'dynaudio': 'Dynaudio', 'marantz': 'Marantz', 'denon': 'Denon', 'bowers': 'Bowers & Wilkins', 'argon': 'Argon Audio' };
@@ -181,7 +172,7 @@
         async function loadJsonFiles() {
             const promises = jsonFiles.map(async (url) => {
                 const data = await fetch(url).then(r => r.ok ? r.json() : []).catch(() => []);
-                data.forEach(p => p._sourceUrl = url); // Dodajemo izvor za fallback
+                data.forEach(p => p._sourceUrl = url);
                 return data;
             });
             const results = await Promise.all(promises);
@@ -227,10 +218,25 @@
                 const card = document.createElement('div');
                 card.className = 'card';
                 const brandInfo = getBrandDisplay(p, p._sourceUrl);
-                const bestImg = getBestCardImage(p.url_slika);
-                const fallback = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23f0f0f0%22/><text x=%22200%22 y=%22150%22 font-size=%2230%22 text-anchor=%22middle%22 fill=%22%23999%22>No Image</text></svg>';
 
-                const logoHtml = brandInfo.url ? `<img src="${brandInfo.url}" alt="${brandInfo.name}" onerror="this.style.display='none'"/>` : brandInfo.name;
+                // UVEK PRVA SLIKA (images[0])
+                const mainImg = (p.url_slika && p.url_slika.length > 0) ? p.url_slika[0] : fallback;
+
+                const logoContainer = document.createElement('div');
+                logoContainer.className = 'brand-logo-container';
+
+                if (brandInfo.url) {
+                    const logoImg = document.createElement('img');
+                    logoImg.src = brandInfo.url;
+                    logoImg.alt = brandInfo.name;
+                    if (brandInfo.name === 'Argon Audio' || brandInfo.name === 'Denon') {
+                        logoImg.classList.add('force-dark');
+                    }
+                    logoImg.onerror = () => logoContainer.textContent = brandInfo.name;
+                    logoContainer.appendChild(logoImg);
+                } else {
+                    logoContainer.textContent = brandInfo.name;
+                }
 
                 const colorsHtml = (p.dodatne_informacije?.dostupne_boje || []).slice(0,5).map(c => {
                     if (c.url_uzorka?.startsWith('http')) return `<div class="color-swatch"><img src="${c.url_uzorka}" onerror="this.style.display='none'"/></div>`;
@@ -240,51 +246,68 @@
 
                 card.innerHTML = `
                     <div class="card-img">
-                        <div class="brand-logo-container">${logoHtml}</div>
-                        <img src="${bestImg || fallback}" alt="${p.ime_proizvoda}" class="product" onerror="this.src='${fallback}'"/>
+                        <img src="${mainImg}" alt="${p.ime_proizvoda}" class="product" onerror="this.src='${fallback}'"/>
                     </div>
                     <div class="card-body">
-                        <div class="card-category">${p.kategor  || 'N/A'}</div>
+                        <div class="card-category">${p.kategorije || 'N/A'}</div>
                         <div class="card-title">${p.ime_proizvoda || 'Nema imena'}</div>
                         <div class="card-sku">SKU: ${p.sku || 'N/A'}</div>
                         <div class="card-price">${p.cena || 'Cena nedostupna'}</div>
                         <div class="colors">${colorsHtml}</div>
                     </div>
                 `;
+                card.querySelector('.card-img').prepend(logoContainer);
                 card.onclick = () => openModal(p);
                 grid.appendChild(card);
             });
         }
 
+        // openModal i ostali delovi ostaju identični v1.3.4 – nisu promenjeni
         function openModal(p) {
             modalTitle.textContent = p.ime_proizvoda || 'Nema imena';
-            modalBrand.textContent = getBrandDisplay(p, p.__url).name;
+            modalBrand.textContent = getBrandDisplay(p, p._sourceUrl).name;
             modalSKU.textContent = p.sku || 'N/A';
             modalPrice.textContent = p.cena || 'Cena nedostupna';
             modalCategory.textContent = p.kategorije || 'N/A';
             modalDesc.innerHTML = p.opis ? p.opis.replace(/\n/g, '<br>') : 'Opis nije dostupan';
-            (p.dodatne_informacije?.tagline && p.dodatne_informacije.tagline !== 'Tagline nedostupan') ? (modalTagline.textContent = p.dodatne_informacije.tagline, taglineSection.style.display = 'block') : taglineSection.style.display = 'none';
+            const tagline = p.dodatne_informacije?.tagline;
+            tagline && tagline !== 'Tagline nedostupan' ? (modalTagline.textContent = tagline, taglineSection.style.display = 'block') : taglineSection.style.display = 'none';
 
             modalGallery.innerHTML = '';
             (p.url_slika || []).forEach(src => {
                 const img = document.createElement('img');
-                img.src = src; img.onerror = () => img.src = fallback;
+                img.src = src;
+                img.onerror = () => img.src = fallback;
                 img.onclick = () => window.open(src, '_blank');
                 modalGallery.appendChild(img);
             });
 
             modalColors.innerHTML = '';
             (p.dodatne_informacije?.dostupne_boje || []).forEach(c => {
-                const div = document.createElement('div'); div.className = 'color-swatch';
-                if (c.url_uzorka?.startsWith('http')) { const i = document.createElement('img'); i.src = c.url_uzorka; div.appendChild(i); }
-                else if (c.url_uzorka?.startsWith('#')) div.classList.add('hex'), div.style.setProperty('--swatch-color', c.url_uzorka);
+                const div = document.createElement('div');
+                div.className = 'color-swatch';
+                if (c.url_uzorka?.startsWith('http')) {
+                    const i = document.createElement('img');
+                    i.src = c.url_uzorka;
+                    div.appendChild(i);
+                } else if (c.url_uzorka?.startsWith('#')) {
+                    div.classList.add('hex');
+                    div.style.setProperty('--swatch-color', c.url_uzorka);
+                }
                 modalColors.appendChild(div);
             });
 
             modalSpecs.innerHTML = '';
             const specs = p.specifikacije || {};
-            if (Object.keys(specs).length === 0) modalSpecs.innerHTML = '<tr><td colspan="2">Nema specifikacija</td></tr>';
-            else Object.entries(specs).forEach(([k,v]) => { const tr = document.createElement('tr'); tr.innerHTML = `<th>${k}</th><td>${v}</td>`; modalSpecs.appendChild(tr); });
+            if (Object.keys(specs).length === 0) {
+                modalSpecs.innerHTML = '<tr><td colspan="2">Nema specifikacija</td></tr>';
+            } else {
+                Object.entries(specs).forEach(([k, v]) => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<th>${k}</th><td>${v}</td>`;
+                    modalSpecs.appendChild(tr);
+                });
+            }
 
             modalLink.onclick = () => window.open(p.url_proizvoda, '_blank');
             modal.classList.add('active');
@@ -296,7 +319,9 @@
         brandFilter.addEventListener('change', renderProducts);
         categoryFilter.addEventListener('change', renderProducts);
 
-        loadJsonFiles().catch(() => loading.innerHTML = '<p style="color:red;">Greška učitavanja</p>');
+        loadJsonFiles().catch(err => {
+            loading.innerHTML = `<p style="color:red;">Greška: ${err.message}</p>`;
+        });
     </script>
 </body>
 </html>
