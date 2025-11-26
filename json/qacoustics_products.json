@@ -1,397 +1,5 @@
 [
     {
-        "ime_proizvoda": "5010 Bookshelf Speaker pair",
-        "sku": "709059",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$999.00",
-        "opis": "Small enough to keep a low profile, but with sound big and accomplished enough to draw attention to itself. If you want off-the-scale performance from a discreet, compact and easy-to-position loudspeaker, the 5010 bookshelf speaker fits the bill as nicely as it fits your space.",
-        "url_proizvoda": "https://www.qacoustics.com/products/5010",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5010_Black_Angle_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5010_White_Angle_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5010_Oak_Angle_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5010_Rosewood_Angle_NoGrill.jpg"
-        ],
-        "specifikacije": {
-            "Bass": "unit1 x 110 mm (4.5 in)",
-            "Treble": "unit1 x 25 mm (1.0 in)",
-            "Frequency": "response(-6dB)56Hz - 30 kHz",
-            "Nominal": "impedance6 Ω",
-            "Minimum": "impedance3.3 Ω",
-            "Sensitivity": "(2.83V @ 1kHz)86.3 dB/w/m",
-            "Recommended": "amplifier power15-90 W",
-            "Crossover": "frequency2.5 kHz",
-            "Effective": "volume5.0 L",
-            "Dimensions": "(per loudspeaker / HxWxD)264 x 160 x 263 mm\n(10.4 x 6.3 x 10.4 in)",
-            "Weight": "(per loudspeaker)5.6 kg (12.3 lbs)"
-        },
-        "kategorije": "5000 SERIES",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Oak",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Rosewood",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
-                }
-            ]
-        }
-    },
-    {
-        "ime_proizvoda": "5020 Bookshelf Speaker pair",
-        "sku": "711018",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,199.00",
-        "opis": "Experience all the scale and power of your favourite music without letting your loudspeaker dominate your room. The 5020 standmounting speaker will put your right in the heart of the music without putting itself at the heart of your space.",
-        "url_proizvoda": "https://www.qacoustics.com/products/5020-bookshelf-speaker",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_Black_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_Rosewood_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_Oak_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_White_NoGrill.jpg"
-        ],
-        "specifikacije": {
-            "Bass": "unit1 x 125 mm (5.0 in)",
-            "Treble": "unit1 x 25 mm (1.0 in)",
-            "Frequency": "response(-6dB)53 Hz - 30 kHz",
-            "Nominal": "impedance6 Ω",
-            "Minimum": "impedance3.3 Ω",
-            "Sensitivity": "(2.83V @ 1kHz)87.9 dB/w/m",
-            "Recommended": "amplifier power25-100 W",
-            "Crossover": "frequency2.5 kHz",
-            "Effective": "volume6.8 L",
-            "Dimensions": "(per loudspeaker / HxWxD)284 x 180 x 293 mm\n(11.2 x 7.1 x 11.5 in)",
-            "Weight": "(per loudspeaker)7.0 kg (15.4 lbs)"
-        },
-        "kategorije": "5000 SERIES",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Oak",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Rosewood",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
-                }
-            ]
-        }
-    },
-    {
-        "ime_proizvoda": "5040 Floorstanding Speaker pair",
-        "sku": "709064",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,499.00",
-        "opis": "5040 is a notably compact floorstander with a modest footprint - which means it’s ideal for those environments where space is at a premium but the desire for full-scale audio excitement (as well a visual gratification) is strong.",
-        "url_proizvoda": "https://www.qacoustics.com/products/5040-floorstanding-speaker",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5040_Black_Angle_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5040_White_Angle_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5040_Oak_Angle_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5040_Rosewood_Angle_NoGrill.jpg"
-        ],
-        "specifikacije": {
-            "Bass": "unit2 x 125 mm (5.0 in)",
-            "Treble": "unit1 x 25 mm (1.0 in)",
-            "Frequency": "response(-6dB)39 Hz - 30 kHz",
-            "Nominal": "impedance6 Ω",
-            "Minimum": "impedance3.0 Ω",
-            "Sensitivity": "(2.83V @ 1kHz)91.5 dB/w/m",
-            "Recommended": "amplifier power25-150 W",
-            "Crossover": "frequency2.5 kHzz",
-            "Effective": "volume27 L",
-            "Dimensions (per loudspeaker / HxWxD)Inc spikes and stabiliser": "967 x 293 x 361 mm\n(38.1 x 11.5 x 14.2 in)",
-            "Weight": "(per loudspeaker)18.0 kg (39.7 lbs)"
-        },
-        "kategorije": "5000 SERIES",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Oak",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Rosewood",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
-                }
-            ]
-        }
-    },
-    {
-        "ime_proizvoda": "5050 Floorstanding Speaker pair",
-        "sku": "709068",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$2,499.00",
-        "opis": "Where sheer scale, widescreen sound-staging and complete audio-fidelity are concerned, the 5050 outperforms its nominal competition with ease. If you have a bigger space to fill with the most beautifully and accurately reproduced sound, the 5050 floorstander is the speaker you need. Supplied with magnetically fixed grilles.",
-        "url_proizvoda": "https://www.qacoustics.com/products/5050-floorstanding-speaker-pair",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_Black_Angle_NoGrill_1.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_Oak_Angle_NoGrill_1.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_Rosewood_Angle_NoGrill_1.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_White_Angle_NoGrill_1.jpg"
-        ],
-        "specifikacije": {
-            "Bass": "unit2 x 150 mm (6.0 in)",
-            "Treble": "unit1 x 25 mm (1.0 in)",
-            "Frequency": "response(-6dB)37 Hz - 30 kHz",
-            "Nominal": "impedance6 Ω",
-            "Minimum": "impedance3.0 Ω",
-            "Sensitivity": "(2.83V @ 1kHz)91.8 dB/w/m",
-            "Recommended": "amplifier power25-150 W",
-            "Crossover": "frequency2.7 kHz",
-            "Effective": "volume39.7 L",
-            "Dimensions (per loudspeaker / HxWxD)Inc spikes and stabiliser": "1017 x 366 x 336 mm\n(40.0 x 15.2 x 13.2 in)",
-            "Weight": "(per loudspeaker)21.6 kg (47.6 lbs)"
-        },
-        "kategorije": "5000 SERIES",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Oak",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Rosewood",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
-                }
-            ]
-        }
-    },
-    {
-        "ime_proizvoda": "5090 Center Speaker",
-        "sku": "709072",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$799.00",
-        "opis": "Designed to project dialogue ahead of even the most full-on Hollywood action movie soundtrack, and to deliver all the subtlety and nuance of art-house favourites with equal ease and conviction. Put the 5090 at the centre of your home cinema system and get the complete picture.",
-        "url_proizvoda": "https://www.qacoustics.com/products/5090-center-speaker",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5090_Angle_Black_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5090_White_Angle_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5090_Oak_Angle_NoGrill.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5090_Rosewood_Angle_NoGrill.jpg"
-        ],
-        "specifikacije": {
-            "Bass": "unit2 x 110 mm (4.5 in)",
-            "Treble": "unit1 x 25 mm (1.0 in)",
-            "Frequency": "response(-6dB)57 Hz - 30 kHz",
-            "Nominal": "impedance6 Ω",
-            "Minimum": "impedance3.2 Ω",
-            "Sensitivity": "(2.83V @ 1kHz)90.5 dB/w/m",
-            "Recommended": "amplifier power25-150 W",
-            "Crossover": "frequency2.1 kHz",
-            "Effective": "volume7.8 L",
-            "Dimensions": "(per loudspeaker / HxWxD)164 x 430 x 243 mm\n(6.5 x 16.9 x 9.6 in)",
-            "Weight": "(per loudspeaker)8.5 kg (18.7 lbs)"
-        },
-        "kategorije": "5000 SERIES",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Oak",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Rosewood",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
-                }
-            ]
-        }
-    },
-    {
-        "ime_proizvoda": "3020c Bookshelf Speaker",
-        "sku": "709025",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$639.00",
-        "opis": "If you want scale in your sound but not in the size of your loudspeaker cabinet, you want the new 3020c standmount. It’s ready and able to let you experience all the power and dynamism of your favourite music, but without dominating your living space.",
-        "url_proizvoda": "https://www.qacoustics.com/products/3020c-bookshelf-speaker",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3020c_frontangle_nogrille_pinoak_1200x_84e66268-7c35-45d6-b173-ebd2aa45b7ff.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3020c_frontangled_nogrille_clarowalnut_1200x_dc89c94c-e8c5-40c1-8d5c-32e8fe3fe4bf.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3020c_frontangle_nogrille_satinwhite_1200x_789d04f9-cfe8-4d70-9dff-7e7c34d2184f.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3020c_frontangled_nogrille_satinblack_1200x_031eb0dc-d450-4877-ac64-731c517734df.webp"
-        ],
-        "specifikacije": {
-            "Bass Unit": "1 x 120 mm (4.75 in)",
-            "Treble Unit": "1 x 22 mm (0.9 in)",
-            "Frequency Response (-6 dB)": "60 Hz – 30 kHz",
-            "Nominal Impedance": "6 Ω",
-            "Minimum Impedance": "3.7 Ω",
-            "Sensitivity (1 m, 2.83 Vrms @ 1 kHz)": "87.0 dB",
-            "Recommended Amplifier Power": "25-90 W",
-            "Crossover Frequency": "2.6 kHz",
-            "Effective Volume": "6.9 L",
-            "Dimensions (HxWxD)": "279 x 175 x 281 mm (11.0 x 6.9 x 11.1 in)",
-            "Weight": "5.5 Kg (12.1 lbs)"
-        },
-        "kategorije": "3000c SERIES",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Oak",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Walnut",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
-                }
-            ]
-        }
-    },
-    {
-        "ime_proizvoda": "3010c Bookshelf Speaker",
-        "sku": "709021",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$479.00",
-        "opis": "A compact and discreet loudspeaker that won’t draw attention to itself - at least, not until it starts performing. If you want a small, easy-to-position speaker that sounds way bigger than it looks, this bookshelf model fits the bill (and your space) perfectly.",
-        "url_proizvoda": "https://www.qacoustics.com/products/3010c-bookshelf-speaker",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3010c_frontangle_nogrille_pinoak_1200x_7f8a03db-9421-4f49-9a2a-29ebc2100eb3.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3010c_frontangle_nogrille_satinwhite_1200x_fc6c4371-a315-4fcf-a7f5-eea01723d874.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3010c_frontangled_nogrille_clarowalnut_1200x_56b16d9e-2ba0-489d-84c3-6aaba2d42eb3.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3010c_frontangled_nogrille_satinblack_1200x_1c4b5864-3405-4ec7-b701-43e825acd1a5.webp"
-        ],
-        "specifikacije": {
-            "Bass Unit": "1 x 101 mm (4.0 in)",
-            "Treble Unit": "1 x 22 mm (0.9 in)",
-            "Frequency Response (-6 dB)": "60 Hz – 30 kHz",
-            "Nominal Impedance": "6 Ω",
-            "Minimum Impedance": "3.7 Ω",
-            "Sensitivity (1 m, 2.83 Vrms @ 1 kHz)": "85.0 dB",
-            "Recommended Amplifier Power": "15-80 W",
-            "Crossover Frequency": "3.1 kHz",
-            "Effective Volume": "4.5 L",
-            "Dimensions (HxWxD)": "254 x 155 x 251 mm (10.0 x 6.1 x 9.9 in)",
-            "Weight": "4.4 Kg (9.7 lbs)"
-        },
-        "kategorije": "3000c SERIES",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Oak",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Walnut",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
-                }
-            ]
-        }
-    },
-    {
-        "ime_proizvoda": "3030c Standmount Speaker",
-        "sku": "709029",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$799.00",
-        "opis": "Sometimes you want your music to hit hard and dig deep - but that doesn’t mean you need a great big loudspeaker with a great big driver. No, it means you need the 3030c - the standmount with the greatest bass extension and low-end drive in the range.",
-        "url_proizvoda": "https://www.qacoustics.com/products/3030c-standmount-speaker",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3030c_frontangle_nogrille_pinoak_1200x_7598fca5-37a3-490f-a563-ffd77fb71af5.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3030c_frontangle_nogrille_clarowalnut_1200x_f917efa0-47f3-43ca-a4bf-beb51c414ddf.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3030c_frontangle_nogrille_satinwhite_1200x_2a4ec4bc-1990-44fe-a8da-4609706e8deb.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3030c_frontangle_nogrille_satinblack_1200x_b7b249ef-2cab-487b-85f6-cd043cd831a0.webp"
-        ],
-        "specifikacije": {
-            "Bass Unit": "1 x 142 mm (5.5 in)",
-            "Treble Unit": "1 x 22 mm (0.9 in)",
-            "Frequency Response (-6 dB)": "48 Hz – 30 kHz",
-            "Nominal Impedance": "6 Ω",
-            "Minimum Impedance": "3.9 Ω",
-            "Sensitivity (1 m, 2.83 Vrms @ 1 kHz)": "86.5 dB",
-            "Recommended Amplifier Power": "25-90 W",
-            "Crossover Frequency": "2.5 kHz",
-            "Effective Volume": "12.5 L",
-            "Dimensions (HxWxD)": "324 x 205 x 329 mm (12.8 x 8.1 x 13.0 in)",
-            "Weight": "7.5 Kg (16.5 lbs)"
-        },
-        "kategorije": "3000c SERIES",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Oak",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Walnut",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
-                }
-            ]
-        }
-    },
-    {
         "ime_proizvoda": "M20 HD Powered Wireless Music System",
         "sku": "709076",
         "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
@@ -415,22 +23,17 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/m20_walnut_rear_pair.jpg"
         ],
         "specifikacije": {
-            "Tweeter22mm": "(0.87 in)",
-            "Mid": "Bass / Driver125mm (4.92 in)",
-            "Frequency": "response55Hz - 22kHz",
-            "Crossover": "frequency2.4kHz",
-            "InputsBluetooth®": "5.0 (with aptX™, aptX™ HD, aptX™ Low Latency, SBC and AAC compatibility)USB (24bit/192kHz compatibility)Digital optical (24bit/192kHz compatibility)Stereo RCA (line level)3.5mm (line level)",
-            "Bluetooth®": "5.0 (with aptX™, aptX™ HD, aptX™ Low Latency, SBC and AAC compatibility)",
-            "USB": "(24bit/192kHz compatibility)",
-            "Digital": "optical (24bit/192kHz compatibility)",
-            "Stereo": "RCA (line level)",
-            "3.5mm": "(line level)",
-            "Power2": "x 65w",
-            "Cabinet": "typeTwo-way reflex ported",
-            "Dimensions279mm": "(H) x 170mm (W) x 296mm (D) (11 x 6.7 x 11.65 in)",
-            "Weight5.1kg": "(11.25 lbs) (passive speaker), 5.5kg (12.2 lbs) (powered speaker)"
+            "Tweeter": "22mm (0.87 in)",
+            "Mid Bass / Driver": "125mm (4.92 in)",
+            "Frequency response": "55Hz - 22kHz",
+            "Crossover frequency": "2.4kHz",
+            "Inputs": "Bluetooth® 5.0 (with aptX™, aptX™ HD, aptX™ Low Latency, SBC and AAC compatibility)\nUSB (24bit/192kHz compatibility)\nDigital optical (24bit/192kHz compatibility)\nStereo RCA (line level)\n3.5mm (line level)",
+            "Power": "2 x 65w",
+            "Cabinet type": "Two-way reflex ported",
+            "Dimensions": "279mm (H) x 170mm (W) x 296mm (D) (11 x 6.7 x 11.65 in)",
+            "Weight": "5.1kg (11.25 lbs) (passive speaker), 5.5kg (12.2 lbs) (powered speaker)"
         },
-        "kategorije": "BOOKSHELF",
+        "kategorije": "Bookshelf",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -477,7 +80,7 @@
             "Tweeter": "22 mm (0.9 in)",
             "Weight": "4.1kg (9 lbs)"
         },
-        "kategorije": "BOOKSHELF",
+        "kategorije": "Bookshelf",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -528,7 +131,7 @@
             "Tweeter": "22 mm (0.9 in)",
             "Weight": "4.8kg (10.6 lbs)"
         },
-        "kategorije": "BOOKSHELF",
+        "kategorije": "Bookshelf",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -586,7 +189,7 @@
             "Treble Unit": "22 mm (0.9 in)",
             "Weight": "6.4kg (14.1 lbs)"
         },
-        "kategorije": "BOOKSHELF",
+        "kategorije": "Bookshelf",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -624,20 +227,20 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/isobase2.jpg"
         ],
         "specifikacije": {
-            "Bass": "unit1 x 125 mm (5.0 in)",
-            "Treble": "unit1 x 25 mm (0.9 in)",
-            "Frequency": "response(-6dB)54 Hz - 30 kHz",
-            "Nominal": "impedance6 Ω",
-            "Minimum": "impedance3.9 Ω",
-            "Sensitivity": "(2.83V @ 1kHz)87 dB/w/m",
-            "Recommended": "amplifier power25-100 W",
-            "Crossover": "frequency2.4 kHz",
-            "Distortion": "(120Hz - 20kHz, @2.83Vrms)<0.2%",
-            "Effective": "volume7.0 L",
-            "Dimensions": "(per loudspeaker / HxWxD)284 x 180 x 319 mm (11.2 x 7.1 x 12.6 in)",
-            "Weight": "(per loudspeaker)7.9 kg (17.4 lbs)"
+            "Bass unit": "1 x 125 mm (5.0 in)",
+            "Treble unit": "1 x 25 mm (0.9 in)",
+            "Frequency response(-": "6dB)54 Hz - 30 kHz",
+            "Nominal impedance": "6 Ω",
+            "Minimum impedance": "3.9 Ω",
+            "Sensitivity (": "2.83V @ 1kHz)87 dB/w/m",
+            "Recommended amplifier power": "25-100 W",
+            "Crossover frequency": "2.4 kHz",
+            "Distortion (": "120Hz - 20kHz, @2.83Vrms)<0.2%",
+            "Effective volume": "7.0 L",
+            "Dimensions (per loudspeaker / HxWxD)": "284 x 180 x 319 mm (11.2 x 7.1 x 12.6 in)",
+            "Weight (per loudspeaker)": "7.9 kg (17.4 lbs)"
         },
-        "kategorije": "BOOKSHELF",
+        "kategorije": "Bookshelf",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -726,7 +329,7 @@
             "Sensitivity": "84dB",
             "Weight": "14.5kg (32 lbs)"
         },
-        "kategorije": "BOOKSHELF",
+        "kategorije": "Bookshelf",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -740,6 +343,251 @@
                 },
                 {
                     "boja": "Black & Rosewood",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "5010 Bookshelf Speaker pair",
+        "sku": "709059",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
+        "cena": "$999.00",
+        "opis": "Small enough to keep a low profile, but with sound big and accomplished enough to draw attention to itself. If you want off-the-scale performance from a discreet, compact and easy-to-position loudspeaker, the 5010 bookshelf speaker fits the bill as nicely as it fits your space.",
+        "url_proizvoda": "https://www.qacoustics.com/products/5010",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5010_Black_Angle_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5010_White_Angle_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5010_Oak_Angle_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5010_Rosewood_Angle_NoGrill.jpg"
+        ],
+        "specifikacije": {
+            "Bass unit": "1 x 110 mm (4.5 in)",
+            "Treble unit": "1 x 25 mm (1.0 in)",
+            "Frequency response(-": "6dB)56Hz - 30 kHz",
+            "Nominal impedance": "6 Ω",
+            "Minimum impedance": "3.3 Ω",
+            "Sensitivity (": "2.83V @ 1kHz)86.3 dB/w/m",
+            "Recommended amplifier power": "15-90 W",
+            "Crossover frequency": "2.5 kHz",
+            "Effective volume": "5.0 L",
+            "Dimensions (per loudspeaker / HxWxD)": "264 x 160 x 263 mm",
+            "Weight (per loudspeaker)": "5.6 kg (12.3 lbs)"
+        },
+        "kategorije": "Bookshelf",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Oak",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Rosewood",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "5020 Bookshelf Speaker pair",
+        "sku": "711018",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
+        "cena": "$1,199.00",
+        "opis": "Experience all the scale and power of your favourite music without letting your loudspeaker dominate your room. The 5020 standmounting speaker will put your right in the heart of the music without putting itself at the heart of your space.",
+        "url_proizvoda": "https://www.qacoustics.com/products/5020-bookshelf-speaker",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_Black_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_Rosewood_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_Oak_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_White_NoGrill.jpg"
+        ],
+        "specifikacije": {
+            "Bass unit": "1 x 125 mm (5.0 in)",
+            "Treble unit": "1 x 25 mm (1.0 in)",
+            "Frequency response(-": "6dB)53 Hz - 30 kHz",
+            "Nominal impedance": "6 Ω",
+            "Minimum impedance": "3.3 Ω",
+            "Sensitivity (": "2.83V @ 1kHz)87.9 dB/w/m",
+            "Recommended amplifier power": "25-100 W",
+            "Crossover frequency": "2.5 kHz",
+            "Effective volume": "6.8 L",
+            "Dimensions (per loudspeaker / HxWxD)": "284 x 180 x 293 mm",
+            "Weight (per loudspeaker)": "7.0 kg (15.4 lbs)"
+        },
+        "kategorije": "Bookshelf",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Oak",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Rosewood",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "3010c Bookshelf Speaker",
+        "sku": "709021",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
+        "cena": "$479.00",
+        "opis": "A compact and discreet loudspeaker that won’t draw attention to itself - at least, not until it starts performing. If you want a small, easy-to-position speaker that sounds way bigger than it looks, this bookshelf model fits the bill (and your space) perfectly.",
+        "url_proizvoda": "https://www.qacoustics.com/products/3010c-bookshelf-speaker",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3010c_frontangle_nogrille_pinoak_1200x_7f8a03db-9421-4f49-9a2a-29ebc2100eb3.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3010c_frontangle_nogrille_satinwhite_1200x_fc6c4371-a315-4fcf-a7f5-eea01723d874.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3010c_frontangled_nogrille_clarowalnut_1200x_56b16d9e-2ba0-489d-84c3-6aaba2d42eb3.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3010c_frontangled_nogrille_satinblack_1200x_1c4b5864-3405-4ec7-b701-43e825acd1a5.webp"
+        ],
+        "specifikacije": {
+            "Bass Unit:": "1 x 101 mm (4.0 in)",
+            "Treble Unit:": "1 x 22 mm (0.9 in)",
+            "Frequency Response (-": "6 dB): 60 Hz – 30 kHz",
+            "Nominal Impedance:": "6 Ω",
+            "Minimum Impedance:": "3.7 Ω",
+            "Sensitivity (": "1 m, 2.83 Vrms @ 1 kHz): 85.0 dB",
+            "Recommended Amplifier Power:": "15-80 W",
+            "Crossover Frequency:": "3.1 kHz",
+            "Effective Volume:": "4.5 L",
+            "Dimensions (HxWxD):": "254 x 155 x 251 mm (10.0 x 6.1 x 9.9 in)",
+            "Weight:": "4.4 Kg (9.7 lbs)"
+        },
+        "kategorije": "Bookshelf",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Oak",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Walnut",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "3020c Bookshelf Speaker",
+        "sku": "709025",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
+        "cena": "$639.00",
+        "opis": "If you want scale in your sound but not in the size of your loudspeaker cabinet, you want the new 3020c standmount. It’s ready and able to let you experience all the power and dynamism of your favourite music, but without dominating your living space.",
+        "url_proizvoda": "https://www.qacoustics.com/products/3020c-bookshelf-speaker",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3020c_frontangle_nogrille_pinoak_1200x_84e66268-7c35-45d6-b173-ebd2aa45b7ff.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3020c_frontangled_nogrille_clarowalnut_1200x_dc89c94c-e8c5-40c1-8d5c-32e8fe3fe4bf.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3020c_frontangle_nogrille_satinwhite_1200x_789d04f9-cfe8-4d70-9dff-7e7c34d2184f.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3020c_frontangled_nogrille_satinblack_1200x_031eb0dc-d450-4877-ac64-731c517734df.webp"
+        ],
+        "specifikacije": {
+            "Bass Unit:": "1 x 120 mm (4.75 in)",
+            "Treble Unit:": "1 x 22 mm (0.9 in)",
+            "Frequency Response (-": "6 dB): 60 Hz – 30 kHz",
+            "Nominal Impedance:": "6 Ω",
+            "Minimum Impedance:": "3.7 Ω",
+            "Sensitivity (": "1 m, 2.83 Vrms @ 1 kHz): 87.0 dB",
+            "Recommended Amplifier Power:": "25-90 W",
+            "Crossover Frequency:": "2.6 kHz",
+            "Effective Volume:": "6.9 L",
+            "Dimensions (HxWxD):": "279 x 175 x 281 mm (11.0 x 6.9 x 11.1 in)",
+            "Weight:": "5.5 Kg (12.1 lbs)"
+        },
+        "kategorije": "Bookshelf",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Oak",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Walnut",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "3030c Standmount Speaker",
+        "sku": "709029",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
+        "cena": "$799.00",
+        "opis": "Sometimes you want your music to hit hard and dig deep - but that doesn’t mean you need a great big loudspeaker with a great big driver. No, it means you need the 3030c - the standmount with the greatest bass extension and low-end drive in the range.",
+        "url_proizvoda": "https://www.qacoustics.com/products/3030c-standmount-speaker",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3030c_frontangle_nogrille_pinoak_1200x_7598fca5-37a3-490f-a563-ffd77fb71af5.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3030c_frontangle_nogrille_clarowalnut_1200x_f917efa0-47f3-43ca-a4bf-beb51c414ddf.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3030c_frontangle_nogrille_satinwhite_1200x_2a4ec4bc-1990-44fe-a8da-4609706e8deb.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3030c_frontangle_nogrille_satinblack_1200x_b7b249ef-2cab-487b-85f6-cd043cd831a0.webp"
+        ],
+        "specifikacije": {
+            "Bass Unit:": "1 x 142 mm (5.5 in)",
+            "Treble Unit:": "1 x 22 mm (0.9 in)",
+            "Frequency Response (-": "6 dB): 48 Hz – 30 kHz",
+            "Nominal Impedance:": "6 Ω",
+            "Minimum Impedance:": "3.9 Ω",
+            "Sensitivity (": "1 m, 2.83 Vrms @ 1 kHz): 86.5 dB",
+            "Recommended Amplifier Power:": "25-90 W",
+            "Crossover Frequency:": "2.5 kHz",
+            "Effective Volume:": "12.5 L",
+            "Dimensions (HxWxD):": "324 x 205 x 329 mm (12.8 x 8.1 x 13.0 in)",
+            "Weight:": "7.5 Kg (16.5 lbs)"
+        },
+        "kategorije": "Bookshelf",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Oak",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Walnut",
                     "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
                 }
             ]
@@ -794,7 +642,7 @@
             "Tweeter": "22 mm (0.9 in)",
             "Weight": "17.8kg (39.2 lbs)"
         },
-        "kategorije": "FLOORSTANDING",
+        "kategorije": "Floorstanding",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -840,20 +688,20 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/isobase2_05039ef3-eda8-48c6-92cd-dc3d58a00cd5.jpg"
         ],
         "specifikacije": {
-            "Bass": "unit2 x 125 mm (5.0 in)",
-            "Treble": "unit1 x 25 mm (0.9 in)",
-            "Frequency": "response(-6dB)42 Hz - 30 kHz",
-            "Nominal": "impedance6 Ω",
-            "Minimum": "impedance3.6 Ω",
-            "Sensitivity": "(2.83V @ 1kHz)90.5 dB/w/m",
-            "Recommended": "amplifier power25-150 W",
-            "Crossover": "frequency2.1 kHz",
-            "Distortion": "(120Hz - 20kHz, @2.83Vrms)<0.2%",
-            "Effective": "volume28.8 L",
-            "Dimensions (per loudspeaker / HxWxD)Inc spikes and stabiliser": "1025 x 418 x 319 mm (40.4 x 16.5 x 12.6 in), Cabinet width: 180 mm (7.1 in)",
-            "Weight": "(per loudspeaker)22.9 kg (50.5 lbs)"
+            "Bass unit": "2 x 125 mm (5.0 in)",
+            "Treble unit": "1 x 25 mm (0.9 in)",
+            "Frequency response(-": "6dB)42 Hz - 30 kHz",
+            "Nominal impedance": "6 Ω",
+            "Minimum impedance": "3.6 Ω",
+            "Sensitivity (": "2.83V @ 1kHz)90.5 dB/w/m",
+            "Recommended amplifier power": "25-150 W",
+            "Crossover frequency": "2.1 kHz",
+            "Distortion (": "120Hz - 20kHz, @2.83Vrms)<0.2%",
+            "Effective volume": "28.8 L",
+            "Dimensions (per loudspeaker / HxWxD)Inc spikes and stabiliser:": "1025 x 418 x 319 mm (40.4 x 16.5 x 12.6 in), Cabinet width: 180 mm (7.1 in)",
+            "Weight (per loudspeaker)": "22.9 kg (50.5 lbs)"
         },
-        "kategorije": "FLOORSTANDING",
+        "kategorije": "Floorstanding",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -922,7 +770,7 @@
             "Recommended Power": "25 - 200 W",
             "Weight": "42kg (92.6 lbs)"
         },
-        "kategorije": "FLOORSTANDING",
+        "kategorije": "Floorstanding",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -937,6 +785,104 @@
                 {
                     "boja": "White & Light Oak",
                     "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "5040 Floorstanding Speaker pair",
+        "sku": "709064",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
+        "cena": "$1,999.00",
+        "opis": "5040 is a notably compact floorstander with a modest footprint - which means it’s ideal for those environments where space is at a premium but the desire for full-scale audio excitement (as well a visual gratification) is strong.",
+        "url_proizvoda": "https://www.qacoustics.com/products/5040-floorstanding-speaker",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5040_Black_Angle_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5040_White_Angle_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5040_Oak_Angle_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5040_Rosewood_Angle_NoGrill.jpg"
+        ],
+        "specifikacije": {
+            "Bass unit": "2 x 125 mm (5.0 in)",
+            "Treble unit": "1 x 25 mm (1.0 in)",
+            "Frequency response(-": "6dB)39 Hz - 30 kHz",
+            "Nominal impedance": "6 Ω",
+            "Minimum impedance": "3.0 Ω",
+            "Sensitivity (": "2.83V @ 1kHz)91.5 dB/w/m",
+            "Recommended amplifier power": "25-150 W",
+            "Crossover frequency": "2.5 kHzz",
+            "Effective volume": "27 L",
+            "Dimensions (per loudspeaker / HxWxD)Inc spikes and stabiliser:": "967 x 293 x 361 mm",
+            "Weight (per loudspeaker)": "18.0 kg (39.7 lbs)"
+        },
+        "kategorije": "Floorstanding",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Oak",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Rosewood",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "5050 Floorstanding Speaker pair",
+        "sku": "709068",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
+        "cena": "$2,499.00",
+        "opis": "Where sheer scale, widescreen sound-staging and complete audio-fidelity are concerned, the 5050 outperforms its nominal competition with ease. If you have a bigger space to fill with the most beautifully and accurately reproduced sound, the 5050 floorstander is the speaker you need. Supplied with magnetically fixed grilles.",
+        "url_proizvoda": "https://www.qacoustics.com/products/5050-floorstanding-speaker-pair",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_Black_Angle_NoGrill_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_Oak_Angle_NoGrill_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_Rosewood_Angle_NoGrill_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_White_Angle_NoGrill_1.jpg"
+        ],
+        "specifikacije": {
+            "Bass unit": "2 x 150 mm (6.0 in)",
+            "Treble unit": "1 x 25 mm (1.0 in)",
+            "Frequency response(-": "6dB)37 Hz - 30 kHz",
+            "Nominal impedance": "6 Ω",
+            "Minimum impedance": "3.0 Ω",
+            "Sensitivity (": "2.83V @ 1kHz)91.8 dB/w/m",
+            "Recommended amplifier power": "25-150 W",
+            "Crossover frequency": "2.7 kHz",
+            "Effective volume": "39.7 L",
+            "Dimensions (per loudspeaker / HxWxD)Inc spikes and stabiliser:": "1017 x 366 x 336 mm",
+            "Weight (per loudspeaker)": "21.6 kg (47.6 lbs)"
+        },
+        "kategorije": "Floorstanding",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Oak",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Rosewood",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
                 }
             ]
         }
@@ -959,9 +905,9 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_rear_white.jpg"
         ],
         "specifikacije": {
-            "Supply": "Voltage100V-240 VAC, 50-60 Hz"
+            "Supply Voltage": "100V-240 VAC, 50-60 Hz"
         },
-        "kategorije": "FLOORSTANDING",
+        "kategorije": "Floorstanding",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1015,7 +961,7 @@
             "Treble Unit": "22 mm (0.9 in)",
             "Weight": "6kg (13.2 lbs)"
         },
-        "kategorije": "HOME THEATER",
+        "kategorije": "Home Theater",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1052,7 +998,7 @@
             "Frequency Response": "(+3 dB, -6 dB) 35 - 250 Hz",
             "Weight": "8.5kg (18.7 lbs)"
         },
-        "kategorije": "HOME THEATER",
+        "kategorije": "Home Theater",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1062,68 +1008,6 @@
                 },
                 {
                     "boja": "Carbon Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
-                }
-            ]
-        }
-    },
-    {
-        "ime_proizvoda": "3000i 5.1 (3050i) Home Theater Speaker Package",
-        "sku": "709046",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$2,265.00",
-        "opis": "The 3050i 5.1 cinema package boasts P2P™ (Point to Point) bracing for additional cabinet stability for a purer, more dynamic home cinema sound.",
-        "url_proizvoda": "https://www.qacoustics.com/products/3000i-5-1-3050i-home-theater-speaker-package",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa365kit-cfg_englishwalnut.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa365kit-cfg_graphitegrey.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa365kit-cfg_arcticwhite.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa365kit-cfg_carbonblack.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/q_acoustics_3050i_floorstanding_speakers_pair_arctic_white_4__2.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa3518_back_2.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa3574_frontback_3.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa3574_main_2.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa3598_anglegrill_1.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa3598_back_2.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qac-o-qa3598_front_3.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qacoustics-3010-white-pair_3.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/qacoustics-3050-white-pair_2.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/q_acoustics_3050i_floorstanding_speakers_pair_arctic_white_3__2.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/What_HiFi_Award_2019_3050i_Package.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/SoundImage_2019_9fc99034-36e4-413c-98ce-e6dc82ff8c2b.png",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/whathifi_2018_3050i_5.1.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/home_cinema_best_buy.jpg"
-        ],
-        "specifikacije": {
-            "Bass Unit": "3010i Speaker: 100 mm (4 in), 3050i Speaker: 2 x 165 mm ( 6.5 in), 3090i Speaker:  2 x 100 mm (4 in), 3060s Subwoofer: 200 mm (8 in)",
-            "Crossover Frequency": "3010i Speaker: 2.6 kHz, 3090i Speaker: 2.7 kHz, 3060s Subwoofer: 35 – 250 Hz (var), 3050i Speaker: 2.5 Hz (var)",
-            "Dimensions": "(H/D/W) 3010i Speaker: 5.9\" x 10.0\" x 9.9\" 3090i Speaker: 16.9\" x 6.0\" x 8.5\" 3060s Subwoofer: 18.9\" x 11.8\" x 5.9\" 3050i Speaker: 12.2\" x 40.2\" x 12.2\"",
-            "Effective Volume": "3010i Speaker: 4.0 L (244 cu in), 3090i Speaker: 6.6 L (403 cu in), 3060s Subwoofer: 10.6 L (647 cu in), 3050i Speaker: 32.4 L (1977 cu in)",
-            "Enclosure Type": "Speakers: 2-Way Reflex, 3060s Subwoofer: Infinite Baffle",
-            "Frequency Response": "3010i Speaker: (+3 dB, -6 dB) 65 Hz - 30 kHz, 3050i Speaker: (+3 dB, -6 dB) 44 Hz - 30 kHz, 3090i Speaker: (+3 dB, -6 dB) 75 Hz - 30 kHz, 3060s Subwoofer:(+3 dB, -6 dB): 35 - 250 Hz",
-            "Impedance": "6 Ohm",
-            "Minimum Impedance": "4 Ohm",
-            "Sensitivity": "3010i Speaker: 86 dB (2.83 V@1 m), 3090i Speaker: 89 dB (2.83 V@1 m), 3050i Speaker: 91 dB (2.83 V@1 m)",
-            "Treble Unit": "22 mm (0.9 in)"
-        },
-        "kategorije": "HOME THEATER",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Graphite Grey",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "English Walnut",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Carbon Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Arctic White",
                     "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
                 }
             ]
@@ -1152,20 +1036,20 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/p2p_c192b462-3df4-4451-a7e2-23e264038a0b.jpg"
         ],
         "specifikacije": {
-            "Bass": "unit2 x 125 mm (5.0 in)",
-            "Treble": "unit1 x 25 mm (0.9 in)",
-            "Frequency": "response(-6dB)67 Hz - 30 kHz",
-            "Nominal": "impedance6 Ω",
-            "Minimum": "impedance3.7 Ω",
-            "Sensitivity": "(2.83V @ 1kHz)90 dB/w/m",
-            "Recommended": "amplifier power25-150 W",
-            "Crossover": "frequency2.1 kHz",
-            "Distortion": "(120Hz - 20kHz, @2.83Vrms)<0.2%",
-            "Effective": "volume11 L",
-            "Dimensions": "(per loudspeaker / HxWxD)184 x 550 x 259 mm (7.2 x 21.7 x 10.2 in)",
-            "Weight": "(per loudspeaker)12.3 kg (27.1 lbs)"
+            "Bass unit": "2 x 125 mm (5.0 in)",
+            "Treble unit": "1 x 25 mm (0.9 in)",
+            "Frequency response(-": "6dB)67 Hz - 30 kHz",
+            "Nominal impedance": "6 Ω",
+            "Minimum impedance": "3.7 Ω",
+            "Sensitivity (": "2.83V @ 1kHz)90 dB/w/m",
+            "Recommended amplifier power": "25-150 W",
+            "Crossover frequency": "2.1 kHz",
+            "Distortion (": "120Hz - 20kHz, @2.83Vrms)<0.2%",
+            "Effective volume": "11 L",
+            "Dimensions (per loudspeaker / HxWxD)": "184 x 550 x 259 mm (7.2 x 21.7 x 10.2 in)",
+            "Weight (per loudspeaker)": "12.3 kg (27.1 lbs)"
         },
-        "kategorije": "HOME THEATER",
+        "kategorije": "Home Theater",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1213,13 +1097,62 @@
             "Enclosure Type": "Ported",
             "Weight": "13.6kg (30 lbs)"
         },
-        "kategorije": "HOME THEATER",
+        "kategorije": "Home Theater",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
                 {
                     "boja": "Graphite",
                     "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "5090 Center Speaker",
+        "sku": "709072",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
+        "cena": "$799.00",
+        "opis": "Designed to project dialogue ahead of even the most full-on Hollywood action movie soundtrack, and to deliver all the subtlety and nuance of art-house favourites with equal ease and conviction. Put the 5090 at the centre of your home cinema system and get the complete picture.",
+        "url_proizvoda": "https://www.qacoustics.com/products/5090-center-speaker",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5090_Angle_Black_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5090_White_Angle_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5090_Oak_Angle_NoGrill.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5090_Rosewood_Angle_NoGrill.jpg"
+        ],
+        "specifikacije": {
+            "Bass unit": "2 x 110 mm (4.5 in)",
+            "Treble unit": "1 x 25 mm (1.0 in)",
+            "Frequency response(-": "6dB)57 Hz - 30 kHz",
+            "Nominal impedance": "6 Ω",
+            "Minimum impedance": "3.2 Ω",
+            "Sensitivity (": "2.83V @ 1kHz)90.5 dB/w/m",
+            "Recommended amplifier power": "25-150 W",
+            "Crossover frequency": "2.1 kHz",
+            "Effective volume": "7.8 L",
+            "Dimensions (per loudspeaker / HxWxD)": "164 x 430 x 243 mm",
+            "Weight (per loudspeaker)": "8.5 kg (18.7 lbs)"
+        },
+        "kategorije": "Home Theater",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Oak",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0QyQjQ4QyIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Rosewood",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzY1MDAwQiIvPjwvc3ZnPg=="
                 }
             ]
         }
@@ -1236,23 +1169,23 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/White_Sub80_Top_Angle.jpg"
         ],
         "specifikacije": {
-            "Enclosure type": "Infinite baffle",
-            "Bass unit diameter": "203 mm (8 in)",
-            "Effective volume": "13.9 litres",
-            "Max SPL @ 1 m": "107 dB",
-            "Frequency response (-6dB)": "36 Hz – 250 Hz",
-            "Low pass crossover range": "50 Hz – 250 Hz",
-            "Peak amplifier power": "400 W",
-            "Continuous amplifier power": "200 W",
-            "THD @ rated power": "0.09%",
-            "Input sensitivity (max gain)": "300 mv rms",
-            "Maximum input level": "2.1 V rms",
-            "Input impedance": "20 kΩ",
-            "Noise floor (A wtd)": "50 μV",
-            "Dimensions (HxWxD)": "315 x 315 x 347 mm (12.4 x 12.4 x 13.6 in)",
-            "Weight (per loudspeaker)": "15 kg (33 lbs)"
+            "Enclosure type: Infinite baffle": "",
+            "Bass unit diameter:": "203 mm (8 in)",
+            "Effective volume:": "13.9 litres",
+            "Max SPL @": "1 m: 107 dB",
+            "Frequency response (-": "6dB): 36 Hz – 250 Hz",
+            "Low pass crossover range:": "50 Hz – 250 Hz",
+            "Peak amplifier power:": "400 W",
+            "Continuous amplifier power:": "200 W",
+            "THD @ rated power:": "0.09%",
+            "Input sensitivity (max gain):": "300 mv rms",
+            "Maximum input level:": "2.1 V rms",
+            "Input impedance:": "20 kΩ",
+            "Noise floor (A wtd):": "50 μV",
+            "Dimensions (HxWxD):": "315 x 315 x 347 mm (12.4 x 12.4 x 13.6 in)",
+            "Weight (per loudspeaker):": "15 kg (33 lbs)"
         },
-        "kategorije": "HOME THEATER",
+        "kategorije": "Home Theater",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1279,23 +1212,23 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Black_Sub100_Top_Angle.jpg"
         ],
         "specifikacije": {
-            "Enclosure type": "Infinite baffle",
-            "Bass unit diameter": "254 mm (10 in)",
-            "Effective volume": "23.5 litres",
-            "Max SPL @ 1 m": "111 dB",
-            "Frequency response (-6dB)": "32 Hz – 250 Hz",
-            "Low pass crossover range": "40 Hz – 250 Hz",
-            "Peak amplifier power": "500 W",
-            "Continuous amplifier power": "250 W",
-            "THD @ rated power": "0.09%",
-            "Input sensitivity (max gain)": "300 mv rms",
-            "Maximum input level": "2.1 V rms",
-            "Input impedance": "20 kΩ",
-            "Noise floor (A wtd)": "50 μV",
-            "Dimensions (HxWxD)": "350 x 350 x 382 mm (13.7 x 13.7 x 15 in)",
-            "Weight (per loudspeaker)": "16.7 kg (36.8 lbs)"
+            "Enclosure type: Infinite baffle": "",
+            "Bass unit diameter:": "254 mm (10 in)",
+            "Effective volume:": "23.5 litres",
+            "Max SPL @": "1 m: 111 dB",
+            "Frequency response (-": "6dB): 32 Hz – 250 Hz",
+            "Low pass crossover range:": "40 Hz – 250 Hz",
+            "Peak amplifier power:": "500 W",
+            "Continuous amplifier power:": "250 W",
+            "THD @ rated power:": "0.09%",
+            "Input sensitivity (max gain):": "300 mv rms",
+            "Maximum input level:": "2.1 V rms",
+            "Input impedance:": "20 kΩ",
+            "Noise floor (A wtd):": "50 μV",
+            "Dimensions (HxWxD):": "350 x 350 x 382 mm (13.7 x 13.7 x 15 in)",
+            "Weight (per loudspeaker):": "16.7 kg (36.8 lbs)"
         },
-        "kategorije": "HOME THEATER",
+        "kategorije": "Home Theater",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1322,23 +1255,23 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/White_Sub120_Top_Angle_b5dd78a6-9c3d-4b74-8ebb-524eb85b73f2.jpg"
         ],
         "specifikacije": {
-            "Enclosure type": "Infinite baffle",
-            "Bass unit diameter": "305 mm (12 in)",
-            "Effective volume": "44.1 litres",
-            "Max SPL @ 1 m": "114 dB",
-            "Frequency response (-6dB)": "28 Hz – 250 Hz",
-            "Low pass crossover range": "40 Hz – 250 Hz",
-            "Peak amplifier power": "600 W",
-            "Continuous amplifier power": "300 W",
-            "THD @ rated power": "0.09%",
-            "Input sensitivity (max gain)": "300 mv rms",
-            "Maximum input level": "2.1 V rms",
-            "Input impedance": "20 kΩ",
-            "Noise floor (A wtd)": "50 μV",
-            "Dimensions (HxWxD)": "400 x 400 x 432 mm (15.7 x 15.7 x 17.0 in)",
-            "Weight (per loudspeaker)": "22.5 kg (49.6 lbs)"
+            "Enclosure type: Infinite baffle": "",
+            "Bass unit diameter:": "305 mm (12 in)",
+            "Effective volume:": "44.1 litres",
+            "Max SPL @": "1 m: 114 dB",
+            "Frequency response (-": "6dB): 28 Hz – 250 Hz",
+            "Low pass crossover range:": "40 Hz – 250 Hz",
+            "Peak amplifier power:": "600 W",
+            "Continuous amplifier power:": "300 W",
+            "THD @ rated power:": "0.09%",
+            "Input sensitivity (max gain):": "300 mv rms",
+            "Maximum input level:": "2.1 V rms",
+            "Input impedance:": "20 kΩ",
+            "Noise floor (A wtd):": "50 μV",
+            "Dimensions (HxWxD):": "400 x 400 x 432 mm (15.7 x 15.7 x 17.0 in)",
+            "Weight (per loudspeaker):": "22.5 kg (49.6 lbs)"
         },
-        "kategorije": "HOME THEATER",
+        "kategorije": "Home Theater",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1384,7 +1317,7 @@
             "Loop Resistance": "13.4 Ω/m",
             "Wire Gauge": "14 AWG"
         },
-        "kategorije": "QED CABLES",
+        "kategorije": "Qed Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1425,7 +1358,7 @@
             "Inductance": "0.57 µH/m",
             "Loop Resistance": "8.0 mΩ/m"
         },
-        "kategorije": "QED CABLES",
+        "kategorije": "Qed Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1466,7 +1399,7 @@
             "Loop Resistance": "0.021 Ω/m",
             "Wire Gauge": "16 AWG"
         },
-        "kategorije": "QED CABLES",
+        "kategorije": "Qed Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1496,17 +1429,18 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/gaxt.jpg"
         ],
         "specifikacije": {
-            "Cross-sectional": "area2.5 mm2",
-            "Wire": "gauge14 AWG",
-            "Jacket": "outside diameter11.5 mm",
-            "Loop": "resistance14.8 mΩ/m",
+            "Cross-sectional area": "2.5 mm2",
+            "Wire gauge": "14 AWG",
+            "Jacket outside diameter": "11.5 mm",
+            "Loop inductance": "0.58 μH/m",
+            "Loop resistance": "14.8 mΩ/m",
             "Capacitance": "42.0 pF/m",
-            "Dissipation": "factor @ 10 kHz0.0090",
-            "Conductors9": "x 19/0.13 mm OFC + 1 x 19/0.13 mm UP-OCC",
-            "InsulationLDPE": "jacket with 100% coverage of golden/mylar tape wrap",
-            "Plugs": "and spadesQED Airloc™ Forte banana plugs"
+            "Dissipation factor @": "10 kHz0.0090",
+            "Conductors": "9 x 19/0.13 mm OFC + 1 x 19/0.13 mm UP-OCC",
+            "InsulationLDPE jacket with": "100% coverage of golden/mylar tape wrap",
+            "Plugs and spades": "QED Airloc™ Forte banana plugs"
         },
-        "kategorije": "QED CABLES",
+        "kategorije": "Qed Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1538,7 +1472,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/sub2_e674b61e-25ae-464a-977a-4e0204778fd2.jpg"
         ],
         "specifikacije": {},
-        "kategorije": "QED CABLES",
+        "kategorije": "Qed Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1570,13 +1504,14 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/sub1_4c399d9c-cef3-45a8-b6a1-fe1aaaa97893.jpg"
         ],
         "specifikacije": {
-            "Conductor": "Section 0.30 mm2",
-            "Parallel": "Capacitance 124 pF/m",
-            "Loop": "Inductance 0.33 μH",
-            "Dissipation": "Factor @ 10 kHz 0.0210",
-            "Outside": "Diameter 6 mm"
+            "Conductor Section": "0.30 mm2",
+            "Parallel Capacitance": "124 pF/m",
+            "Loop Resistance": "0.076 Ohm/m",
+            "Loop Inductance": "0.33 μH",
+            "Dissipation Factor @": "10 kHz 0.0210",
+            "Outside Diameter": "6 mm"
         },
-        "kategorije": "QED CABLES",
+        "kategorije": "Qed Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1610,7 +1545,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/WB75-wall-bracket-with-speaker_50ef3bcd-c09f-4ad2-97cf-cd520dbdcdab.jpg"
         ],
         "specifikacije": {},
-        "kategorije": "ACCESSORIES",
+        "kategorije": "Accessories",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1642,7 +1577,7 @@
             "Dimensions": "682 x 250 x 290 mm (26.9 x 9.8 x 11.4 in)",
             "Weight": "6.2kg (13.7 lbs)"
         },
-        "kategorije": "ACCESSORIES",
+        "kategorije": "Accessories",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
