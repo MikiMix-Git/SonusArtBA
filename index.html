@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Audio Katalog – v1.3.10</title>
+    <title>Audio Katalog – v1.3.14</title>
     <style>
         :root{--primary:#1a1a1a;--secondary:#2c3e50;--accent:#e74c3c;--border:#ddd;--radius:12px;--shadow:0 4px 12px rgba(0,0,0,.1);}
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
@@ -13,7 +13,7 @@
         .subtitle{font-size:1rem;opacity:0.9;}
         #updateInfo{color:#27ae60;font-weight:600;}
         .controls{max-width:1200px;margin:2rem auto;padding:0 1rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;}
-        .search-box,.filter-select{padding:.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius);font-size:1rem;flex:1;min-width:200px;}
+        .search-box,.filter-select{padding:.75rem 1rem;border:_under 1px solid var(--border);border-radius:var(--radius);font-size:1rem;flex:1;min-width:200px;}
         .search-box:focus,.filter-select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(231,76,60,.2);}
         .stats{font-size:.9rem;color:#666;margin-left:auto;}
         .container{max-width:1200px;margin:0 auto;padding:0 1rem;}
@@ -36,7 +36,7 @@
         .color-swatch{width:24px;height:24px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 1px #ccc;overflow:hidden;position:relative;}
         .color-swatch img{width:100%;height:100%;object-fit:cover;}
         .color-swatch.hex{background:var(--swatch-color);}
-        .color-swatch.has-label::after content:attr(data-label);position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.8);color:white;font-size:9px;padding:2px 4px;border-radius:3px;white-space:nowrap;opacity:0;transition:opacity .2s;}
+        .color-swatch.has-label::after{content:attr(data-label);position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.85);color:white;font-size:9px;padding:3px 6px;border-radius:4px;white-space:nowrap;opacity:0;transition:opacity .2s;z-index:10;}
         .color-swatch.has-label:hover::after{opacity:1;}
         .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;overflow-y:auto;align-items:center;justify-content:center;}
         .modal.active{display:flex;}
@@ -68,7 +68,7 @@
 <body>
     <header>
         <h1>Audio Katalog</h1>
-        <p class="subtitle">Live sa GitHub-a – v1.3.10 <span id="updateInfo"></span></p>
+        <p class="subtitle">Live sa GitHub-a – v1.3.14 <span id="updateInfo"></span></p>
     </header>
 
     <div class="controls">
@@ -112,7 +112,7 @@
     </div>
 
     <footer class="footer">
-        <p>web_app_v1.3.10.html – Q Acoustics boje sada rade!</p>
+        <p>web_app_v1.3.14.html – Q Acoustics boje 100% rade!</p>
     </footer>
 
     <script>
@@ -131,6 +131,11 @@
         const grid = document.getElementById('grid');
         const loading = document.getElementById('loading');
         const updateInfo = document.getElementById('updateInfo');
+        const stats = document.getElementById('stats');
+        const noResults = document.getElementById('noResults');
+        const searchInput = document.getElementById('searchInput');
+        const brandFilter = document.getElementById('brandFilter');
+        const categoryFilter = document.getElementById('categoryFilter');
         const fallback = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23f0f0f0%22/><text x=%22200%22 y=%22150%22 font-size=%2230%22 text-anchor=%22middle%22 fill=%22%23999%22>No Image</text></svg>';
 
         const modal = document.getElementById('modal'), modalClose = document.getElementById('modalClose'),
@@ -141,22 +146,29 @@
               taglineSection = document.getElementById('taglineSection'), modalColors = document.getElementById('modalColors'),
               modalSpecs = document.getElementById('modalSpecs'), modalLink = document.getElementById('modalLink');
 
-        // UNIVERSALNA FUNKCIJA ZA BOJE (radi za sve brendove)
-        function generateColorSwatch(colorObj, size = 'small') {
+        // KONAČNA FUNKCIJA – radi za sve brendove i sve strukture boja
+        function createColorSwatch(colorObj, big = false) {
             const div = document.createElement('div');
-            div.className = `color-swatch${size==='big'?'':' has-label'}`;
-            if (colorObj.url_uzorka?.startsWith('http')) {
-                const img = document.createElement('img'); img.src = colorObj.url_uzorka;
+            div.className = `color-swatch${big ? ' big' : ' has-label'}`;
+
+            if (colorObj.url_uzorka && colorObj.url_uzorka.startsWith('http')) {
+                const img = document.createElement('img');
+                img.src = colorObj.url_uzorka;
                 div.appendChild(img);
-            } else if (colorObj.hex || colorObj.url_uzorka?.startsWith('#')) {
-                const hex = colorObj.hex || colorObj.url_uzorka;
+            } else if (colorObj.hex) {
                 div.classList.add('hex');
-                div.style.setProperty('--swatch-color', hex);
-                if (colorObj.naziv_boje) div.dataset.label = colorObj.naziv_boje;
+                div.style.setProperty('--swatch-color', colorObj.hex);
+            } else if (colorObj.url_uzorka && colorObj.url_uzorka.startsWith('#')) {
+                div.classList.add('hex');
+                div.style.setProperty('--swatch-color', colorObj.url_uzorka);
             } else {
                 div.style.background = '#ccc';
             }
-            return div.outerHTML;
+
+            const label = colorObj.naziv_boje || colorObj.boja || colorObj.color || null;
+            if (label) div.dataset.label = label.trim();
+
+            return div;
         }
 
         (async () => {
@@ -164,7 +176,8 @@
             GITHUB_RAW_BASE = `https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/${commit}/json`;
             updateInfo.textContent = `– Podaci ažurirani: ${new Date().toLocaleDateString('sr-RS')} (commit ${commit.slice(0,7)})`;
 
-            const data = await Promise.all(files.map(f => fetch(GITHUB_RAW_BASE + '/' + f).then(r => r.ok ? r.json() : [])));
+            const responses = await Promise.all(files.map(f => fetch(GITHUB_RAW_BASE + '/' + f)));
+            const data = await Promise.all(responses.map(r => r.ok ? r.json() : []));
             allProducts = data.flat();
 
             allProducts.forEach(p => {
@@ -195,7 +208,7 @@
             const b = brandFilter.value;
             const c = categoryFilter.value;
             const filtered = allProducts.filter(p => 
-                (!q || p.ime_proizvoda?.toLowerCase().includes(q)) &&
+                (!q || (p.ime_proizvoda && p.ime_proizvoda.toLowerCase().includes(q))) &&
                 (!b || getBrandDisplay(p).name === b) &&
                 (!c || p.kategorije === c)
             );
@@ -206,20 +219,27 @@
             noResults.style.display = 'none';
 
             filtered.forEach(p => {
-                const card = document.createElement('div'); card.className = 'card';
+                const card = document.createElement('div');
+                card.className = 'card';
+
                 const brand = getBrandDisplay(p);
                 const mainImg = p.url_slika?.[0] || fallback;
 
-                const logoDiv = document.createElement('div'); logoDiv.className = 'brand-logo-container';
+                const logoDiv = document.createElement('div');
+                logoDiv.className = 'brand-logo-container';
                 if (brand.url) {
-                    const img = document.createElement('img'); img.src = brand.url;
-                    if (brand.name==='Argon Audio' || brand.name==='Denon') img.classList.add('force-dark');
+                    const img = document.createElement('img');
+                    img.src = brand.url;
+                    if (brand.name === 'Argon Audio' || brand.name === 'Denon') img.classList.add('force-dark');
                     img.onerror = () => logoDiv.textContent = brand.name;
                     logoDiv.appendChild(img);
                 } else logoDiv.textContent = brand.name;
 
-                // BOJE – sada radi za Q Acoustics i sve ostale
-                const colorsHtml = (p.dodatne_informacije?.dostupne_boje || []).slice(0,5).map(c => generateColorSwatch(c)).join('');
+                const colorsDiv = document.createElement('div');
+                colorsDiv.className = 'colors';
+                (p.dodatne_informacije?.dostupne_boje || []).slice(0,5).forEach(c => {
+                    colorsDiv.appendChild(createColorSwatch(c));
+                });
 
                 card.innerHTML = `
                     <div class="card-img"><img src="${mainImg}" class="product" onerror="this.src='${fallback}'"></div>
@@ -228,8 +248,8 @@
                         <div class="card-title">${p.ime_proizvoda||'Nema imena'}</div>
                         <div class="card-sku">SKU: ${p.sku||'N/A'}</div>
                         <div class="card-price">${p.cena||'Cena nedostupna'}</div>
-                        <div class="colors">${colorsHtml}</div>
                     </div>`;
+                card.querySelector('.card-body').appendChild(colorsDiv);
                 card.querySelector('.card-img').prepend(logoDiv);
                 card.onclick = () => openModal(p);
                 grid.appendChild(card);
@@ -243,24 +263,25 @@
             modalPrice.textContent = p.cena || 'Cena nedostupna';
             modalCategory.textContent = p.kategorije || 'N/A';
             modalDesc.innerHTML = p.opis ? p.opis.replace(/\n/g,'<br>') : 'Opis nije dostupan';
-            taglineSection.style.display = (p.dodatne_informacije?.tagline && p.dodatne_informacije.tagline!=='Tagline nedostupan') ? 'block' : 'none';
-            if (taglineSection.style.display==='block') modalTagline.textContent = p.dodatne_informacije.tagline;
+            taglineSection.style.display = (p.dodatne_informacije?.tagline && p.dodatne_informacije.tagline !== 'Tagline nedostupan') ? 'block' : 'none';
+            if (taglineSection.style.display === 'block') modalTagline.textContent = p.dodatne_informacije.tagline;
 
             modalGallery.innerHTML = '';
             (p.url_slika||[]).forEach(src => {
-                const img = document.createElement('img'); img.src = src; img.onerror = () => img.src = fallback;
+                const img = document.createElement('img');
+                img.src = src; img.onerror = () => img.src = fallback;
                 img.onclick = () => window.open(src,'_blank');
                 modalGallery.appendChild(img);
             });
 
             modalColors.innerHTML = '';
             (p.dodatne_informacije?.dostupne_boje||[]).forEach(c => {
-                modalColors.appendChild(generateColorSwatch(c, 'big'));
+                modalColors.appendChild(createColorSwatch(c, true));
             });
 
             modalSpecs.innerHTML = '';
             const specs = p.specifikacije || {};
-            if (Object.keys(specs).length===0) modalSpecs.innerHTML = '<tr><td colspan="2">Nema specifikacija</td></tr>';
+            if (Object.keys(specs).length === 0) modalSpecs.innerHTML = '<tr><td colspan="2">Nema specifikacija</td></tr>';
             else Object.entries(specs).forEach(([k,v]) => modalSpecs.innerHTML += `<tr><th>${k}</th><td>${v}</td></tr>`);
 
             modalLink.onclick = () => window.open(p.url_proizvoda,'_blank');
@@ -268,8 +289,8 @@
         }
 
         modalClose.onclick = () => modal.classList.remove('active');
-        modal.onclick = e => { if (e.target===modal) modal.classList.remove('active'); };
-        document.addEventListener('keydown', e => { if (e.key==='Escape') modal.classList.remove('active'); });
+        modal.onclick = e => { if (e.target === modal) modal.classList.remove('active'); };
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('active'); });
 
         searchInput.oninput = brandFilter.onchange = categoryFilter.onchange = renderProducts;
     </script>
