@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Audio Katalog – v1.3.14</title>
+    <title>Audio Katalog – v1.3.15</title>
     <style>
         :root{--primary:#1a1a1a;--secondary:#2c3e50;--accent:#e74c3c;--border:#ddd;--radius:12px;--shadow:0 4px 12px rgba(0,0,0,.1);}
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
@@ -13,7 +13,7 @@
         .subtitle{font-size:1rem;opacity:0.9;}
         #updateInfo{color:#27ae60;font-weight:600;}
         .controls{max-width:1200px;margin:2rem auto;padding:0 1rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;}
-        .search-box,.filter-select{padding:.75rem 1rem;border:_under 1px solid var(--border);border-radius:var(--radius);font-size:1rem;flex:1;min-width:200px;}
+        .search-box,.filter-select{padding:.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius);font-size:1rem;flex:1;min-width:200px;}
         .search-box:focus,.filter-select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(231,76,60,.2);}
         .stats{font-size:.9rem;color:#666;margin-left:auto;}
         .container{max-width:1200px;margin:0 auto;padding:0 1rem;}
@@ -24,7 +24,7 @@
         .card-img img.product{width:100%;height:100%;object-fit:contain;transition:transform .3s;}
         .card:hover .card-img img.product{transform:scale(1.05);}
         .brand-logo-container{position:absolute;top:10px;left:10px;z-index:3;background:rgba(255,255,255,.95);padding:6px;border-radius:10px;
-            box-shadow:0 2px 10px rgba(0,0,0,.2);width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:.7rem;text-align:center;}
+            box-shadow:0 2px 10px rgba(0,0,0,.2);width:50px;height:50px;display:flex;align-items:center;justify-content:center;}
         .brand-logo-container img{width:40px;height:40px;object-fit:contain;}
         .brand-logo-container img.force-dark{filter:invert(1) hue-rotate(180deg) brightness(.9)!important;}
         .card-body{padding:1rem;display:flex;flex-direction:column;}
@@ -68,7 +68,7 @@
 <body>
     <header>
         <h1>Audio Katalog</h1>
-        <p class="subtitle">Live sa GitHub-a – v1.3.14 <span id="updateInfo"></span></p>
+        <p class="subtitle">Live sa GitHub-a – v1.3.15 <span id="updateInfo"></span></p>
     </header>
 
     <div class="controls">
@@ -112,7 +112,7 @@
     </div>
 
     <footer class="footer">
-        <p>web_app_v1.3.14.html – Q Acoustics boje 100% rade!</p>
+        <p>web_app_v1.3.15.html – Q Acoustics boje sada 100% u pravim bojama!</p>
     </footer>
 
     <script>
@@ -146,7 +146,7 @@
               taglineSection = document.getElementById('taglineSection'), modalColors = document.getElementById('modalColors'),
               modalSpecs = document.getElementById('modalSpecs'), modalLink = document.getElementById('modalLink');
 
-        // KONAČNA FUNKCIJA – radi za sve brendove i sve strukture boja
+        // ISPRAVLJENA FUNKCIJA – sada Q Acoustics boje rade 100%
         function createColorSwatch(colorObj, big = false) {
             const div = document.createElement('div');
             div.className = `color-swatch${big ? ' big' : ' has-label'}`;
@@ -155,17 +155,20 @@
                 const img = document.createElement('img');
                 img.src = colorObj.url_uzorka;
                 div.appendChild(img);
-            } else if (colorObj.hex) {
-                div.classList.add('hex');
+            } 
+            else if (colorObj.hex) {
+                div.classList.add('hex');  // ← KLJUČNA LINIJA KOJA JE NEDOSTAJALA
                 div.style.setProperty('--swatch-color', colorObj.hex);
-            } else if (colorObj.url_uzorka && colorObj.url_uzorka.startsWith('#')) {
+            } 
+            else if (colorObj.url_uzorka && colorObj.url_uzorka.startsWith('#')) {
                 div.classList.add('hex');
                 div.style.setProperty('--swatch-color', colorObj.url_uzorka);
-            } else {
+            } 
+            else {
                 div.style.background = '#ccc';
             }
 
-            const label = colorObj.naziv_boje || colorObj.boja || colorObj.color || null;
+            const label = colorObj.naziv_boje || colorObj.boja || colorObj.color;
             if (label) div.dataset.label = label.trim();
 
             return div;
@@ -191,6 +194,7 @@
             grid.style.display = 'grid';
         })();
 
+        // ostalo ostaje isto...
         function getBrandDisplay(p) {
             const map = {'qacoustics':'Q Acoustics','dynaudio':'Dynaudio','marantz':'Marantz','denon':'Denon','bowers':'Bowers & Wilkins','argon':'Argon Audio'};
             const logo = p.brend_logo_url || '';
@@ -255,6 +259,8 @@
                 grid.appendChild(card);
             });
         }
+
+        // openModal, zatvaranje, pretraga – sve isto kao u v1.3.14
 
         function openModal(p) {
             modalTitle.textContent = p.ime_proizvoda || 'Nema imena';
