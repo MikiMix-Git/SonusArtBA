@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Audio Katalog – v1.3.7</title>
+    <title>Audio Katalog – v1.3.8</title>
     <style>
-        :root { --primary:#1a1a1a; --secondary:#2c3e50; --accent:#e74c3c; --border:#ddd; --radius:12px; --shadow:0 4px 12px rgba(0,0,0,.1); }
+        :root{--primary:#1a1a1a;--secondary:#2c3e50;--accent:#e74c3c;--border:#ddd;--radius:12px;--shadow:0 4px 12px rgba(0,0,0,.1);}
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
         body{background:#f5f7fa;color:var(--primary);line-height:1.6;}
         header{background:var(--primary);color:white;padding:1.5rem 0;text-align:center;box-shadow:var(--shadow);}
@@ -23,9 +23,8 @@
         .card-img{height:220px;background:#fff;position:relative;overflow:hidden;}
         .card-img img.product{width:100%;height:100%;object-fit:contain;transition:transform .3s;}
         .card:hover .card-img img.product{transform:scale(1.05);}
-        .brand-logo-container{position:absolute;top:10px;left:10px;z-index:3;background:rgba(255,255,255,.95);
-            padding:6px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.2);width:50px;height:50px;
-            display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:.7rem;text-align:center;}
+        .brand-logo-container{position:absolute;top:10px;left:10px;z-index:3;background:rgba(255,255,255,.95);padding:6px;border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,.2);width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:.7rem;text-align:center;}
         .brand-logo-container img{width:40px;height:40px;object-fit:contain;}
         .brand-logo-container img.force-dark{filter:invert(1) hue-rotate(180deg) brightness(.9)!important;}
         .card-body{padding:1rem;display:flex;flex-direction:column;}
@@ -37,14 +36,37 @@
         .color-swatch{width:24px;height:24px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 1px #ccc;overflow:hidden;}
         .color-swatch img{width:100%;height:100%;object-fit:cover;}
         .color-swatch.hex{background:var(--swatch-color);}
+        .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;overflow-y:auto;align-items:center;justify-content:center;}
+        .modal.active{display:flex;}
+        .modal-content{background:white;border-radius:var(--radius);max-width:900px;width:95%;max-height:95vh;overflow-y:auto;position:relative;}
+        .modal-close{position:absolute;top:10px;right:15px;background:none;border:none;font-size:2rem;cursor:pointer;color:#aaa;z-index:10;}
+        .modal-close:hover{color:var(--accent);}
+        .modal-header{padding:1.5rem;background:var(--primary);color:white;border-radius:var(--radius) var(--radius) 0 0;}
+        .modal-title{font-size:1.8rem;margin-bottom:.5rem;}
+        .modal-brand{font-size:1rem;opacity:.9;}
+        .modal-body{padding:2rem;}
+        .gallery{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:2rem;justify-content:center;}
+        .gallery img{max-width:200px;max-height:200px;object-fit:contain;cursor:pointer;border:2px solid transparent;border-radius:8px;}
+        .gallery img:hover{border-color:var(--accent);}
+        .modal-info{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+        .modal-desc{grid-column:span 2;margin-bottom:1.5rem;line-height:1.8;}
+        .specs-table{width:100%;border-collapse:collapse;}
+        .specs-table th,.specs-table td{padding:.75rem;text-align:left;border-bottom:1px solid #eee;}
+        .specs-table th{background:#f9f9f9;width:40%;}
+        .colors-big{display:flex;gap:12px;flex-wrap:wrap;margin:1rem 0;}
+        .colors-big .color-swatch{width:40px;height:40px;}
+        .modal-footer{padding:1.5rem;text-align:center;background:#f9f9f9;border-top:1px solid var(--border);}
+        .btn{padding:.75rem 1.5rem;background:var(--accent);color:white;border:none;border-radius:var(--radius);cursor:pointer;font-size:1rem;}
+        .btn:hover{background:#c0392b;}
         .loading,.no-results{text-align:center;padding:3rem 1rem;color:#777;font-size:1.1rem;}
         .footer{text-align:center;padding:2rem 1rem;color:#777;font-size:.9rem;margin-top:3rem;border-top:1px solid var(--border);}
+        @media(max-width:768px){.modal-info{grid-template-columns:1fr;}.controls{flex-direction:column;}.stats{margin-left:0;}}
     </style>
 </head>
 <body>
     <header>
         <h1>Audio Katalog</h1>
-        <p class="subtitle">Live sa GitHub-a – v1.3.7 <span id="updateInfo"></span></p>
+        <p class="subtitle">Live sa GitHub-a – v1.3.8 <span id="updateInfo"></span></p>
     </header>
 
     <div class="controls">
@@ -55,39 +77,56 @@
     </div>
 
     <div class="container">
-        <div id="loading" class="loading">Učitavanje najnovijih podataka sa GitHub-a...</div>
+        <div id="loading" class="loading">Učitavanje najnovijih podataka...</div>
         <div id="grid" class="grid" style="display:none;"></div>
         <div id="noResults" class="no-results" style="display:none;">Nema rezultata.</div>
     </div>
 
+    <!-- POTPUNO FUNKCIONALAN MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-brand" id="modalBrand"></div>
+            </div>
+            <div class="modal-body">
+                <div class="gallery" id="modalGallery"></div>
+                <div class="modal-info">
+                    <div class="modal-desc" id="modalDesc"></div>
+                    <div>
+                        <p><strong>SKU:</strong> <span id="modalSKU"></span></p>
+                        <p><strong>Cena:</strong> <span id="modalPrice"></span></p>
+                        <p><strong>Kategorija:</strong> <span id="modalCategory"></span></p>
+                        <p id="taglineSection"><strong>Tagline:</strong> <span id="modalTagline"></span></p>
+                    </div>
+                </div>
+                <div class="colors-big" id="modalColors"></div>
+                <table class="specs-table" id="modalSpecs"></table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" id="modalLink">Idi na originalnu stranicu</button>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
-        <p>web_app_v1.3.7.html – automatski prati najnoviji commit</p>
+        <p>web_app_v1.3.8.html – automatski commit + potpuno funkcionalan modal</p>
     </footer>
 
     <script>
-        // AUTOMATSKO PREPOZNAVANJE NAJNOVIJEG COMMIT-A
+        // AUTOMATSKI COMMIT
         async function getLatestCommit() {
             try {
                 const res = await fetch('https://api.github.com/repos/MikiMix-Git/SonusArtBA/commits/main');
-                if (!res.ok) throw new Error('API greška');
+                if (!res.ok) throw new Error();
                 const data = await res.json();
                 return data.sha;
-            } catch (e) {
-                console.warn('Ne mogu dohvatiti commit, koristim fallback', e);
-                return '50d26ef9994e5858c77f5dc995aff403f99ea1af'; // posljednji poznati
-            }
+            } catch { return '50d26ef9994e5858c77f5dc995aff403f99ea1af'; }
         }
 
         let GITHUB_RAW_BASE = '';
-        const jsonFiles = [
-            '/argon_audio_products_all_categories.json',
-            '/bowers_wilkins_products.json',
-            '/denon_products.json',
-            '/dynaudio_products.json',
-            '/marantz_all_products.json',
-            '/qacoustics_products.json'
-        ];
-
+        const jsonFiles = ['/argon_audio_products_all_categories.json','/bowers_wilkins_products.json','/denon_products.json','/dynaudio_products.json','/marantz_all_products.json','/qacoustics_products.json'];
         let allProducts = [], brands = new Set(), categories = new Set();
         const grid = document.getElementById('grid');
         const loading = document.getElementById('loading');
@@ -99,29 +138,36 @@
         const updateInfo = document.getElementById('updateInfo');
         const fallback = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23f0f0f0%22/><text x=%22200%22 y=%22150%22 font-size=%2230%22 text-anchor=%22middle%22 fill=%22%23999%22>No Image</text></svg>';
 
-        // GLAVNI POČETAK – sve čeka najnoviji commit
+        // MODAL ELEMENTI
+        const modal = document.getElementById('modal');
+        const modalClose = document.getElementById('modalClose');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBrand = document.getElementById('modalBrand');
+        const modalGallery = document.getElementById('modalGallery');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalSKU = document.getElementById('modalSKU');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalTagline = document.getElementById('modalTagline');
+        const taglineSection = document.getElementById('taglineSection');
+        const modalColors = document.getElementById('modalColors');
+        const modalSpecs = document.getElementById('modalSpecs');
+        const modalLink = document.getElementById('modalLink');
+
         (async () => {
             const latestCommit = await getLatestCommit();
             GITHUB_RAW_BASE = `https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/${latestCommit}/json`;
+            updateInfo.textContent = `– Podaci ažurirani: ${new Date().toLocaleDateString('sr-RS')} (commit ${latestCommit.slice(0,7)})`;
 
-            // Prikaz korisniku da su podaci svježi
-            const date = new Date().toLocaleDateString('sr-RS');
-            updateInfo.textContent = `– Podaci ažurirani: ${date} (commit ${latestCommit.slice(0,7)})`;
-
-            // Sada učitavamo sve fajlove sa najnovijim commit-om
-            const promises = jsonFiles.map(async file => {
-                const url = GITHUB_RAW_BASE + file;
-                const data = await fetch(url).then(r => r.ok ? r.json() : []).catch(() => []);
-                data.forEach(p => p._sourceUrl = url);
+            const results = await Promise.all(jsonFiles.map(async f => {
+                const data = await fetch(GITHUB_RAW_BASE + f).then(r => r.ok ? r.json() : []).catch(() => []);
+                data.forEach(p => p._sourceUrl = GITHUB_RAW_BASE + f);
                 return data;
-            });
-
-            const results = await Promise.all(promises);
+            }));
             allProducts = results.flat();
 
             allProducts.forEach(p => {
-                const brand = getBrandDisplay(p, p._sourceUrl).name;
-                brands.add(brand);
+                brands.add(getBrandDisplay(p, p._sourceUrl).name);
                 if (p.kategorije) categories.add(p.kategorije);
             });
 
@@ -131,13 +177,12 @@
             grid.style.display = 'grid';
         })();
 
-        function getBrandDisplay(p, sourceUrl = '') {
+        function getBrandDisplay(p, src = '') {
             const logo = p.brend_logo_url || '';
-            const map = { 'qacoustics':'Q Acoustics', 'dynaudio':'Dynaudio', 'marantz':'Marantz', 'denon':'Denon', 'bowers':'Bowers & Wilkins', 'argon':'Argon Audio' };
-            for (const key in map) if (logo.includes(key)) return { name:map[key], url:logo };
-            const fb = /([^\/]+)\_products/.exec(sourceUrl);
-            const name = fb ? map[fb[1]] || fb[1] : 'Audio';
-            return { name, url:logo || null };
+            const map = {'qacoustics':'Q Acoustics','dynaudio':'Dynaudio','marantz':'Marantz','denon':'Denon','bowers':'Bowers & Wilkins','argon':'Argon Audio'};
+            for (const k in map) if (logo.includes(k)) return {name:map[k], url:logo};
+            const fb = /([^\/]+)_products/.exec(src);
+            return {name:fb && map[fb[1]] || 'Audio', url:logo || null};
         }
 
         function populateFilters() {
@@ -168,7 +213,7 @@
                 const card = document.createElement('div');
                 card.className = 'card';
                 const brandInfo = getBrandDisplay(p, p._sourceUrl);
-                const mainImg = (p.url_slika && p.url_slika.length > 0) ? p.url_slika[0] : fallback;
+                const mainImg = p.url_slika?.[0] || fallback;
 
                 const logoContainer = document.createElement('div');
                 logoContainer.className = 'brand-logo-container';
@@ -188,24 +233,61 @@
                 }).join('');
 
                 card.innerHTML = `
-                    <div class="card-img">
-                        <img src="${mainImg}" alt="${p.ime_proizvoda}" class="product" onerror="this.src='${fallback}'"/>
-                    </div>
+                    <div class="card-img"><img src="${mainImg}" alt="${p.ime_proizvoda}" class="product" onerror="this.src='${fallback}'"/></div>
                     <div class="card-body">
                         <div class="card-category">${p.kategorije || 'N/A'}</div>
                         <div class="card-title">${p.ime_proizvoda || 'Nema imena'}</div>
                         <div class="card-sku">SKU: ${p.sku || 'N/A'}</div>
                         <div class="card-price">${p.cena || 'Cena nedostupna'}</div>
                         <div class="colors">${colorsHtml}</div>
-                    </div>
-                `;
+                    </div>`;
                 card.querySelector('.card-img').prepend(logoContainer);
-                card.onclick = () => alert('Modal će biti dodat u sledećoj verziji'); // privremeno
+                card.onclick = () => openModal(p);
                 grid.appendChild(card);
             });
         }
 
-        // Event listeneri
+        function openModal(p) {
+            modalTitle.textContent = p.ime_proizvoda || 'Nema imena';
+            modalBrand.textContent = getBrandDisplay(p, p._sourceUrl).name;
+            modalSKU.textContent = p.sku || 'N/A';
+            modalPrice.textContent = p.cena || 'Cena nedostupna';
+            modalCategory.textContent = p.kategorije || 'N/A';
+            modalDesc.innerHTML = p.opis ? p.opis.replace(/\n/g, '<br>') : 'Opis nije dostupan';
+            const tagline = p.dodatne_informacije?.tagline;
+            tagline && tagline !== 'Tagline nedostupan' ? (modalTagline.textContent = tagline, taglineSection.style.display = 'block') : taglineSection.style.display = 'none';
+
+            modalGallery.innerHTML = '';
+            (p.url_slika || []).forEach(src => {
+                const img = document.createElement('img');
+                img.src = src; img.onerror = () => img.src = fallback;
+                img.onclick = () => window.open(src, '_blank');
+                modalGallery.appendChild(img);
+            });
+
+            modalColors.innerHTML = '';
+            (p.dodatne_informacije?.dostupne_boje || []).forEach(c => {
+                const div = document.createElement('div'); div.className = 'color-swatch';
+                if (c.url_uzorka?.startsWith('http')) { const i=document.createElement('img'); i.src=c.url_uzorka; div.appendChild(i); }
+                else if (c.url_uzorka?.startsWith('#')) { div.classList.add('hex'); div.style.setProperty('--swatch-color', c.url_uzorka); }
+                modalColors.appendChild(div);
+            });
+
+            modalSpecs.innerHTML = '';
+            const specs = p.specifikacije || {};
+            if (!Object.keys(specs).length) modalSpecs.innerHTML = '<tr><td colspan="2">Nema specifikacija</td></tr>';
+            else Object.entries(specs).forEach(([k,v]) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<th>${k}</th><td>${v}</td>`;
+                modalSpecs.appendChild(tr);
+            });
+
+            modalLink.onclick = () => window.open(p.url_proizvoda, '_blank');
+            modal.classList.add('active');
+        }
+
+        modalClose.onclick = () => modal.classList.remove('active');
+        modal.onclick = e => { if (e.target === modal) modal.classList.remove('active'); };
         searchInput.addEventListener('input', renderProducts);
         brandFilter.addEventListener('change', renderProducts);
         categoryFilter.addEventListener('change', renderProducts);
