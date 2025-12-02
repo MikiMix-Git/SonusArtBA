@@ -23,14 +23,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/m20_walnut_rear_pair.jpg"
         ],
         "specifikacije": {
-            "Tweeter": "22mm (0.87 in)",
-            "Mid Bass / Driver": "125mm (4.92 in)",
-            "Frequency response": "55Hz - 22kHz",
-            "Crossover frequency": "2.4kHz",
-            "InputsBluetooth®": "5.0 (with aptX™, aptX™ HD, aptX™ Low Latency, SBC and AAC compatibility)USB (24bit/192kHz compatibility)Digital optical (24bit/192kHz compatibility)Stereo RCA (line level)3.5mm (line level)",
-            "Power": "2 x 65w",
-            "Dimensions": "279mm (H) x 170mm (W) x 296mm (D) (11 x 6.7 x 11.65 in)",
-            "Weight": "5.1kg (11.25 lbs) (passive speaker), 5.5kg (12.2 lbs) (powered speaker)"
+            "Supported devices": "iOS 12+ and Android™ 8.0+ with ARCore 1.9 support."
         },
         "kategorije": "BOOKSHELF",
         "dodatne_informacije": {
@@ -48,7 +41,8 @@
                     "boja": "White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA8Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gODAKAP/bAEMAAgEBAQEBAgEBAQICAgICBAMCAgICBQQEAwQGBQYGBgUGBgYHCQgGBwkHBgYICwgJCgoKCgoGCAsMCwoMCQoKCv/bAEMBAgICAgICBQMDBQoHBgcKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCv/AABEIAGQAZAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAgEDBAn/xAAmEAEAAwACAQQBBAMAAAAAAAABAAIRITESAzJBUaETImFxgZHR/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAZEQEBAQEBAQAAAAAAAAAAAAAAARESAjH/2gAMAwEAAhEDEQA/APpdcDok0seJtNfvZt13JXp8UAnscwrVN8ZNgHCba1vLuSqusluBr1BWtTQ77iNepLdHMM5epVSqvEXArh9yarXisysuK9P5l3Xck0DNmqrrLJq26m9QOCRZQ0nW1RqaSPEvX6z8xZjLn52+4mKPRkSD1tRdSHg4gXzSb3Og56tnWVcDomWqVWx/qY2bcslmjbAOEyFV1iZswEHuRYBwlzL1OHO5BlF6l2AcJniV6IVXWa8/Q16kXqrhuHWS4ls0cmpvJE7np0sakSc0VhuxKw8NyTNDPGq6km3ulNwcmGWs8QJibYBwki6klmjYee/ibfx6O4xKm9/MnNGRMqqazYkwIiJoXT2kSSycDEDprmbNahTz/EmNfuBLSl3ya/mbWta9Erxs85MRHGBiFrJn+Zj6daj8v3KeTJHqLXK1eIGlRPPOfuaBYFmZbMHjJtTDIEIFmp0S2tQeI8Krudze4HOJVwOiRVU1gXWompEwsnAxA6WAcJku4YuSIFVsBizLIukyIB4GYfp2DzNf7mXU6kVVNYHX9bx/bWpn9zC7aysUf2n/ACbhuwERECfU+JFPaS/U+JFPaQNiIgehB4ZLR3gm2UNJlbK4sDPC31MRHGW223iGfzMtXDV1+4EoPZItUrgEuEHsgR6fqZQ2uyx03IrlTxDiICIiAt4ePJzOfqZWo0MltR7h9OieOcECIm2AcIgehqNNySVB0IiAv7ZGuZsRAREQEREDBfNJsRATLqdMRAm/uYiIH//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -91,7 +85,8 @@
                     "boja": "Carbon Black",
                     "url_uzorka": "data:image/jpeg;base64,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"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -142,7 +137,8 @@
                     "boja": "Carbon Black",
                     "url_uzorka": "data:image/jpeg;base64,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"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -200,7 +196,8 @@
                     "boja": "Carbon Black",
                     "url_uzorka": "data:image/jpeg;base64,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"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -226,18 +223,8 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/isobase2.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "1 x 125 mm (5.0 in)",
-            "Treble unit": "1 x 25 mm (0.9 in)",
-            "Frequency response(-": "6dB)54 Hz - 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.9 Ω",
-            "Sensitivity (": "2.83V @ 1kHz)87 dB/w/m",
-            "Recommended amplifier power": "25-100 W",
-            "Crossover frequency": "2.4 kHz",
-            "Distortion (": "120Hz - 20kHz, @2.83Vrms)<0.2%",
-            "Effective volume": "7.0 L",
-            "Dimensions (per loudspeaker / HxWxD)": "284 x 180 x 319 mm (11.2 x 7.1 x 12.6 in)",
-            "Weight (per loudspeaker)": "7.9 kg (17.4 lbs)"
+            "two-fold": "Intermodulation distortion caused by interactions between",
+            "Supported devices": "iOS 12+ and Android™ 8.0+ with ARCore 1.9 support."
         },
         "kategorije": "BOOKSHELF",
         "dodatne_informacije": {
@@ -255,7 +242,8 @@
                     "boja": "Gloss White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -344,7 +332,8 @@
                     "boja": "Black & Rosewood",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAGwAAAwEAAwEAAAAAAAAAAAAAAgMEAAEFBgf/xAAzEAACAAUBBQUHBAMAAAAAAAAAAQIDESExBQRBUXGBEjIzNMETFEJSYXKCImKRsSM10f/EABkBAAIDAQAAAAAAAAAAAAAAAAACAwQFAf/EABwRAQADAQEAAwAAAAAAAAAAAAABAjEyMwMREv/aAAwDAQACEQMRAD8AKHusOHDBgTSujlZRYjUZkuyo+A2DutfQVDmoyFptNMLaDILK4cr1ADgx1AG1TwyzS3Tbpb4RL+yKDHUs02+2QJcTk47XqHpNkXaU6J8Vcj2nvss2Pwpq31RHP8VlGrVvxC3Rb1oHtl9rmU+UDQbKj+ZBbR5mIWOiTyCBOmHkwyDHUxKR84NRvCOG1R3Dl7y4zxQdxr6MOVaFVBhyuYYAxXwHAnTAEvHRjIGqZ3ABwY6lul226W38y/sigx1LNO85BzOTjteoek2XE+LdVXI5/iNlezeXnLfRWJJu/mUatW/ELdGacVnW6C2nzT5itAs4q/MM2lr3p33i17JPLmBpK7McRbuRiadI+b0fBjYGr3BOYcliLM8yHK5hi4btNDKp4Y/2DJeOjDgTpgCXgbK4fQ5+pAoE6Y3lmmedl8yWHK5lWmX2uVTiwnHa9Q9HIapNvuRHMa7UV9xXKxO+1EUzvPkUatS/ELdFycz/ADURxovE20v/ADx0vyFr2J8zFDE8Qv8Agxpc19hf9MTTqJ86iw+QUF06ANpp0YyVnqTs9zLTUN1uDgx1OXhnECaV0ANlbhsm0bb4CpeOjGwY6HagyFOuCvSk1tsmqw7kkNKOr3FWlww++wU7WUNbHa9Q9FAmvbtr4SOb6FtG4ZyS+FEUxN1otxRq1ZxZovcfM0fmYuZtF7j5nE3x4ha9knkcGOpjQYMTTpHzqFNQuqGys9QIsPkHKz1LEazzTGMk3hDgyXjoxsr0FQWVxsr0ADLtJo9ulrjEqfyRQp1wWaP5+Q/3epHfJNTuHplBCvbNNWXE6+L4l9S+HvT3uornXxOkcTXAqVa11ekJwwPtKn6t5xOvPjSD0lOOVVp2iBja95ivvFr2WfMUOEY0CaV0YmnUL548MOUnWtABkru9CeNZ43dOgUqyuDBZX4nKs7kgMo+A2DH4gQXgbQcGPxAGy95ZpHnZP3EctriWaR52Sv3EU4emvSQ3lT6HWx2jbfA7KW0pM+r3HWzU6xW3FWrTvxDstHvJdPmEO21Rt8SjRPC6E8xNT5lVvFjoW8zTGhTorPBiUkY+djJXd6GMWGYN4XNBQqsST4mMAMbcLcMNkMgx+JjABycr7i7R/wDYSvu9TGOTiT49h6F+FPIZvoYxVq1Luy0LweonabTo+ZjCx0S3I1E6K5jGJUUY/9k="
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -361,17 +350,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5010_Rosewood_Angle_NoGrill.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "1 x 110 mm (4.5 in)",
-            "Treble unit": "1 x 25 mm (1.0 in)",
-            "Frequency response(-": "6dB)56Hz - 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.3 Ω",
-            "Sensitivity (": "2.83V @ 1kHz)86.3 dB/w/m",
-            "Recommended amplifier power": "15-90 W",
-            "Crossover frequency": "2.5 kHz",
-            "Effective volume": "5.0 L",
-            "Dimensions (per loudspeaker / HxWxD)": "264 x 160 x 263 mm",
-            "Weight (per loudspeaker)": "5.6 kg (12.3 lbs)"
+            "Available in four stylish finishes": "Satin Black,Satin White, Santos Rosewood and Holme Oak."
         },
         "kategorije": "BOOKSHELF",
         "dodatne_informacije": {
@@ -393,7 +372,8 @@
                     "boja": "Rosewood",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -410,17 +390,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_White_NoGrill.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "1 x 125 mm (5.0 in)",
-            "Treble unit": "1 x 25 mm (1.0 in)",
-            "Frequency response(-": "6dB)53 Hz - 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.3 Ω",
-            "Sensitivity (": "2.83V @ 1kHz)87.9 dB/w/m",
-            "Recommended amplifier power": "25-100 W",
-            "Crossover frequency": "2.5 kHz",
-            "Effective volume": "6.8 L",
-            "Dimensions (per loudspeaker / HxWxD)": "284 x 180 x 293 mm",
-            "Weight (per loudspeaker)": "7.0 kg (15.4 lbs)"
+            "Available in four stylish finishes": "Satin Black,Satin White, Santos Rosewood and Holme Oak."
         },
         "kategorije": "BOOKSHELF",
         "dodatne_informacije": {
@@ -442,7 +412,8 @@
                     "boja": "Rosewood",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -491,7 +462,8 @@
                     "boja": "Walnut",
                     "url_uzorka": "data:image/jpeg;base64,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"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -540,7 +512,8 @@
                     "boja": "Walnut",
                     "url_uzorka": "data:image/jpeg;base64,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"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -589,7 +562,8 @@
                     "boja": "Walnut",
                     "url_uzorka": "data:image/jpeg;base64,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"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -661,7 +635,8 @@
                     "boja": "Arctic White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -687,18 +662,10 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/isobase2_05039ef3-eda8-48c6-92cd-dc3d58a00cd5.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "2 x 125 mm (5.0 in)",
-            "Treble unit": "1 x 25 mm (0.9 in)",
-            "Frequency response(-": "6dB)42 Hz - 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.6 Ω",
-            "Sensitivity (": "2.83V @ 1kHz)90.5 dB/w/m",
-            "Recommended amplifier power": "25-150 W",
-            "Crossover frequency": "2.1 kHz",
-            "Distortion (": "120Hz - 20kHz, @2.83Vrms)<0.2%",
-            "Effective volume": "28.8 L",
             "Dimensions (per loudspeaker / HxWxD)Inc spikes and stabiliser": "1025 x 418 x 319 mm (40.4 x 16.5 x 12.6 in), Cabinet width: 180 mm (7.1 in)",
-            "Weight (per loudspeaker)": "22.9 kg (50.5 lbs)"
+            "two-fold": "Intermodulation distortion caused by interactions between",
+            "Supported devices": "iOS 12+ and Android™ 8.0+ with ARCore 1.9 support.",
+            "Inc spikes and stabiliser": "1025 x 418 x 319 mm (40.4 x 16.5 x 12.6 in), Cabinet width: 180 mm (7.1 in)"
         },
         "kategorije": "FLOORSTANDING",
         "dodatne_informacije": {
@@ -716,7 +683,8 @@
                     "boja": "Gloss White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -785,7 +753,8 @@
                     "boja": "White & Light Oak",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -802,17 +771,8 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5040_Rosewood_Angle_NoGrill.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "2 x 125 mm (5.0 in)",
-            "Treble unit": "1 x 25 mm (1.0 in)",
-            "Frequency response(-": "6dB)39 Hz - 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.0 Ω",
-            "Sensitivity (": "2.83V @ 1kHz)91.5 dB/w/m",
-            "Recommended amplifier power": "25-150 W",
-            "Crossover frequency": "2.5 kHzz",
-            "Effective volume": "27 L",
             "Dimensions (per loudspeaker / HxWxD)Inc spikes and stabiliser": "967 x 293 x 361 mm\n(38.1 x 11.5 x 14.2 in)",
-            "Weight (per loudspeaker)": "18.0 kg (39.7 lbs)"
+            "Arrives in four stylish finishes": "Satin Black,Satin White, Santos Rosewood and Holme Oak."
         },
         "kategorije": "FLOORSTANDING",
         "dodatne_informacije": {
@@ -834,7 +794,8 @@
                     "boja": "Rosewood",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -851,17 +812,8 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_White_Angle_NoGrill_1.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "2 x 150 mm (6.0 in)",
-            "Treble unit": "1 x 25 mm (1.0 in)",
-            "Frequency response(-": "6dB)37 Hz - 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.0 Ω",
-            "Sensitivity (": "2.83V @ 1kHz)91.8 dB/w/m",
-            "Recommended amplifier power": "25-150 W",
-            "Crossover frequency": "2.7 kHz",
-            "Effective volume": "39.7 L",
             "Dimensions (per loudspeaker / HxWxD)Inc spikes and stabiliser": "1017 x 366 x 336 mm\n(40.0 x 15.2 x 13.2 in)",
-            "Weight (per loudspeaker)": "21.6 kg (47.6 lbs)"
+            "Arrives in four stylish finishes": "Satin Black,Satin White, Santos Rosewood and Holme Oak."
         },
         "kategorije": "FLOORSTANDING",
         "dodatne_informacije": {
@@ -883,7 +835,8 @@
                     "boja": "Rosewood",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -904,12 +857,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_rear_white.jpg"
         ],
         "specifikacije": {
-            "Supply Voltage": "100V-240 VAC, 50-60 Hz",
             "Convenience": "2 x 100 watts of built-in amplification means no extra boxes required",
-            "Numerous": "connectivity options means M40 can deal with any sound source, such as a TV, turntable (with a built-in preamp), games console, set-top box, CD player, network streamer.",
-            "Frequency": "Response (-6dB)",
-            "Analogue": "(2 x Phono)",
-            "Sensitivity": "700 mV RMS, Max. input level 2.15 V RMS",
             "TOSLINK (Maximum resolution": "24 bit/192 kHz)",
             "Type B connector (Maximum resolution": "24 bit/192 kHz)"
         },
@@ -929,7 +877,8 @@
                     "boja": "Walnut",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAcBCf/EADUQAQABAwIDBAMRAAAAAAAAAAABAgMHBQgJERIhMUGBBGWlExUiQkRHYWRxdJSVobS1wdH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAgMB/8QAHxEBAAIBBQADAAAAAAAAAAAAAAEDAhEyM3GBISIj/9oADAMBAAIRAxEAPwDshw366atgOFKojtnF2h8/wNpbEW4c9r3DYNhaxE8+nFuhfsbK0s651qjxd0ftl3IA0QAAAAAAAAAAjHDs5RsJwtNFXVM4r0Dq89PsTKzozw7LVFjYThaxRPOaMWaDE8/uFmP6/RZmdUaVx40v58u5AGjMAAAAAAAAABH+H7TE7FMM1z3zi7QZ7Oz5BY/1YEf4ftuLexbDNM1T8HFugx7PsLBHizw2R4u75uy7kAaIAAAAAAAAAASPYPNM7HMN8vHF2gfx/o6uR3z9qS7DrdFvZJh2iiOURi/QYiOfq70dWvFnhtjxdvNl3IA0QAAAAAAAAAAlGxXojZViCmmO7GOhcvy+xCr+Pklex61RZ2Z4jt0dnTjTQ48ve+yqjPDZHi7eXLuQBogAAAAAAAAABLtk9UVbOsSzEd+NNDn2fYVFMdmFmPRdoOJ7PLp6MbaHTMRPq+wpvOerl9CMY+seKsnWyWgLSAAAAAAAAAAm2zmimnaRizlHzdaJ3z9QswpHx/IE4bIdz5JaApwAAAAAAAAAB//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -979,7 +928,8 @@
                     "boja": "Carbon Black",
                     "url_uzorka": "data:image/jpeg;base64,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"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1016,7 +966,8 @@
                     "boja": "Carbon Black",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA8Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gODAKAP/bAEMAAgEBAQEBAgEBAQICAgICBAMCAgICBQQEAwQGBQYGBgUGBgYHCQgGBwkHBgYICwgJCgoKCgoGCAsMCwoMCQoKCv/bAEMBAgICAgICBQMDBQoHBgcKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCv/AABEIAGQAZAMBIgACEQEDEQH/xAAeAAACAgIDAQEAAAAAAAAAAAAABAIKAwcBBggJBf/EAEgQAAECBAIDCgcLDQAAAAAAAAABAwIEETEHcQUJgQYIEiEyQVFhs8ETMzZSdHWCNDVicnOjpKWxsrUUJSY5QkZTZGVmoaK0/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAMCAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABMRL/2gAMAwEAAhEDEQA/APlGEdvZMda8ZOGyZGeVBDZMjkxxXXMytW2DkTl77TZ2EPkW16c928RrJvxqGyMH3eHuR4HROzXaKOh3BruGJa6ZC7XcNyzVaKnQaDMtdMh+WTgUiToqItpSqDcrzZAeztRm9wdYzuLg87R2l1+rJg+9p8CtRy7TWQ7gk/l9LfhcwffW4TAAAFKMAiuuYGelAThsmQNd5OG65joSbumRsjBtz9DnE6J2Y7RTXTF1yNi4MeTTnrF/7ymR3VtaqijbVochNq0OQxL32m5gda7huV5hRruG5XmOj15qSnfAax/D1fPXScP1bMn37hSiInUV/wDUp/rHMPPltI/hsyWAQmAAAKU0NkyOIuWhEE5aE1E08ahlMcV1zADKxy1zNh4O+S8x6e/9hrxruNg4MeT73rR37GwO9py9pnl77RaV8XsQzS10yNzB+g13DUnfYItW2DkrzZHR601MbiNaxbDpxeecnYfoTxYHuV8dTlGjesKw1c87Sr8P0R8sHItUqEwAABSjAiieDThdIKvCiSLpJqMrXecxXXM4hsmQQX9oDK3yE+MbCwg94pn1jH91s15C6iRKnWbAwgd/M856xi7BkDvLLtIUToQaaWqVEmlqleoZZsmZuYHWXKIiU5huWdEWLLmNSR0eq9UC6jOsDwyX+JpuNPmHCwtAlIUTqK8GqWe/J9/3hfF5+6GBP9HSxAEwAABShjttIk43aJToIVrxk1E4bJkSg5SGOC+wmBOC/tGwcHHaaMn0/qEPZtGvmu87/g97in/ToOzaA7wytURRppynF0CbLlEROhBlpa8fUbmBxpa8fUNyvMINW2Dks5RETqOj0xqppnwG/wCsLPh7rJaH7xYub8XD8VCuJquZvwe/2wp+Fu0kYfnULHiJRKBMAAAUn4rrmSi5CEIbJkD37ORNRkhsmRKDlIRhsmRxDy1AzHecJPe6f9ITs0OhwcpDvmE3uGe+Wb+xAO7I6iRqnWNMupRMhBmyZjrLlERKcxuYHYXk4KZGdhauIvUItvcY3KO8Z0eh9WU5Tf34UJT9+dH9qhZJK2erOWu/pwoX+/dF/wDU2WTAmAAAKT5OGyZABNRCK65gAAZW0rFDU7/hXBC3o2YchTjWequaNIiAAHa4UpCiJ0DMvyNgAbmBlq2wbk+WmQAdHo/ViNQLv6sJo1Tji3daNr7MxCqf5Qsi2AAmAAAP/9k="
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1042,18 +993,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/p2p_c192b462-3df4-4451-a7e2-23e264038a0b.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "2 x 125 mm (5.0 in)",
-            "Treble unit": "1 x 25 mm (0.9 in)",
-            "Frequency response(-": "6dB)67 Hz - 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.7 Ω",
-            "Sensitivity (": "2.83V @ 1kHz)90 dB/w/m",
-            "Recommended amplifier power": "25-150 W",
-            "Crossover frequency": "2.1 kHz",
-            "Distortion (": "120Hz - 20kHz, @2.83Vrms)<0.2%",
-            "Effective volume": "11 L",
-            "Dimensions (per loudspeaker / HxWxD)": "184 x 550 x 259 mm (7.2 x 21.7 x 10.2 in)",
-            "Weight (per loudspeaker)": "12.3 kg (27.1 lbs)"
+            "Supported devices": "iOS 12+ and Android™ 8.0+ with ARCore 1.9 support."
         },
         "kategorije": "HOME THEATER",
         "dodatne_informacije": {
@@ -1071,7 +1011,8 @@
                     "boja": "Gloss White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAGQABAQEBAQEAAAAAAAAAAAAAAAIDAQUJ/8QAIRABAAIBBAMBAQEAAAAAAAAAAAISQQEDYZERE8EiMYH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/APs4Q1pyDDaNAjrbsQVt5UnbyoGg5GVsOgr2cKRHS3SwXGNcugAAu0eWAgral5wqOtu2cNactI6V7B2Mq4WzaA7GVcLZrjK2AVtfFojrXpcNb8Ar2cKZtAAAeWAA0ZtAGjNcZWwDsP00jHSOdekw265cjG2QWral4wl3a+AtozV7OAUADywcjK2AdaR1t2zaR0r2A7GVcOANvZw7GNcoXGVsA67tfHHY616BYANAAeT7ODbylW3kFK9nCQGgANHduXnH9cIfkGg5GVsOgu/4v4x/HUwjeFPPjlQK9nAkB5a4xrlCvZwCghpfgBpHW3YR0r2AuMrYdTt5UDsZVwtPr5UCtqXjCkbXxYAAPLABrs/z/HABoACtvKgBoADu18WAAAP/2Q=="
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1111,7 +1052,8 @@
                     "boja": "Graphite",
                     "url_uzorka": "data:image/jpeg;base64,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"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1128,17 +1070,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/5090_Rosewood_Angle_NoGrill.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "2 x 110 mm (4.5 in)",
-            "Treble unit": "1 x 25 mm (1.0 in)",
-            "Frequency response(-": "6dB)57 Hz - 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.2 Ω",
-            "Sensitivity (": "2.83V @ 1kHz)90.5 dB/w/m",
-            "Recommended amplifier power": "25-150 W",
-            "Crossover frequency": "2.1 kHz",
-            "Effective volume": "7.8 L",
-            "Dimensions (per loudspeaker / HxWxD)": "164 x 430 x 243 mm",
-            "Weight (per loudspeaker)": "8.5 kg (18.7 lbs)"
+            "Available in four stylish finishes": "Satin Black,Satin White, Santos Rosewood and Holme Oak."
         },
         "kategorije": "HOME THEATER",
         "dodatne_informacije": {
@@ -1160,7 +1092,8 @@
                     "boja": "Rosewood",
                     "url_uzorka": "data:image/jpeg;base64,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"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1203,7 +1136,8 @@
                     "boja": "Satin White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1246,7 +1180,8 @@
                     "boja": "Satin White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1289,7 +1224,8 @@
                     "boja": "Satin White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1321,24 +1257,21 @@
             "Inductance": "0.52 µH/m",
             "Jacket OD": "3.96 mm",
             "Loop Resistance": "13.4 Ω/m",
-            "Wire Gauge": "14 AWG",
-            "What": "makes XT25 unique?"
+            "Wire Gauge": "14 AWG"
         },
         "kategorije": "QED CABLES",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": [
+            "dostupne_boje": [],
+            "dostupne_dužine": [
                 {
-                    "boja": "2m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAUHBggCAwQBCf/EADIQAAEDAwIEBAQFBQAAAAAAAAEAAgMEBQYHERIhMUEIEyJRFDJxgSRSYWJyFiMzQoL/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAgMBBP/EAB4RAQEAAgIDAQEAAAAAAAAAAAABAjEDERIhQVFx/9oADAMBAAIRAxEAPwD9/EREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEQcgAEQEREBERAREQEREBERAREQauR3vxP6c1EdTjmp8l5pyS6S05NSMqWOH7KlnC9v8AFxJ9+an7L42L/ZGtZqvordIYo2firljr21cUQ3+Z8JIkaPoH7e5XOpo8poKQXKCmbU0m/EJYXNk+/Gzoo+ru1juLGnI6NrHE77uJB+5PX6r0eMu4j+VcGAa8aO6lsazDM9oKmZ/SkfIYpgfby5A1wI7jbkswbuAAT27LUjMtBMAz9vxVMyB72uMsAI3MTjz42PbzY/8AcvNZsr8TOhsUdPjmcSX21xuAjo8rk88MYB/jFQ31D2aT1Wd4vw8rL7bgoqI0q8eWnWVSCw6p2eqwy7N2a8XMcVJM7fbdk45AE9OLbl1V30NfQ3OkZXWysjmgkAfHNE8Oa9p5hwI5EEcwR1UWXG9VUss9PQiAgjcIuOiIiAiIgIiIK0ufh1sUErqzELrVWqfsaWXgb9x3WNX/AATUKysLbpZKG/QbbPqA009Rw+/p9Lz+rupV4DpyXzk7cKplZS9XbWl9psVXXNhs9yks1wa0BlFdCad7z7NePRIPr1XOtqcsxj8Pk9tEzHt9bgwDce+zeTvqOSvzJcDxjK6d1PeLXFLxD5nN3Vf3TRbJcYhk/oe6sqKEkl9mr2OlhP8AEHmz/notMeSXabj79Kvu2Jaf6hWv4OGGBrxuWMLeEwk/MNu26xHHrNrT4brga/SHJJRZQ8vnsFcRNRynfchpPqid+reisa8WTH31PwOQWyfGrkXbRyySOdTSv78M/RvPo13Md10TNy7Fh8LkcDa2jcz+3Ut2I4exG3J/LuOvVV86icp1Z2y3Q/xpYDqVUtxLPKQYrkrHhj7dcJR5M7+xglOwfxdQPm2V0tIc0OG/MdxstR8x0vwfUq2mcUlNKdvLePlO55hpP+ru4HZeLBNcNY/CyxlmyZ1VlmH0/NrJncdfRQb8JkZJ0kaPyHp22UXjvx2ZWbbjIoLTzUnC9VMYgy7Br7FXUU4HrjOzo3bc2Pb1a4dCD0IU6N9uay0sREQEREEHp5kFblGJW++3GOJs1TSMkkETSG7uaCdtydhuVOdOiIu5eqTQiIuCPvmNWS/Ub6a6W9krXA77jmqK1LohpbVRvxOplZT1NUYpbfM4Ppy3f8hHI/qiLTC1WP1GZrbKOwQQX6zRGnnmhZI7ynENBcASAPbn0O67oqSjyDGm11xooi4hzXMYzZh+yIru2EVjS3656C6p4/fNN5zSC+XMUd1on+qnqI+LYFzOXqA6EFbvN5bNHt3RFzm3Dj25IiLFqIiIP//Z"
+                    "dužina": "2m"
                 },
                 {
-                    "boja": "3m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAUHBggCAwQBCf/EADIQAAEDAwIEBAQFBQAAAAAAAAEAAgMEBQYHERIhMUEIEyJRFDJxgSRSYWJyFiMzQoL/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAgMBBP/EAB4RAQEAAgIDAQEAAAAAAAAAAAABAjEDERIhQVFx/9oADAMBAAIRAxEAPwD9/EREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEQcgAEQEREBERAREQEREBERAREQauR3vxP6c1EdTjmp8l5pyS6S05NSMqWOH7KlnC9v8AFxJ9+an7L42L/ZGtZqvordIYo2firljr21cUQ3+Z8JIkaPoH7e5XOpo8poKQXKCmbU0m/EJYXNk+/Gzoo+ru1juLGnI6NrHE77uJB+5PX6r0eMu4j+VcGAa8aO6lsazDM9oKmZ/SkfIYpgfby5A1wI7jbkswbuAAT27LUjMtBMAz9vxVMyB72uMsAI3MTjz42PbzY/8AcvNZsr8TOhsUdPjmcSX21xuAjo8rk88MYB/jFQ31D2aT1Wd4vw8rL7bgoqI0q8eWnWVSCw6p2eqwy7N2a8XMcVJM7fbdk45AE9OLbl1V30NfQ3OkZXWysjmgkAfHNE8Oa9p5hwI5EEcwR1UWXG9VUss9PQiAgjcIuOiIiAiIgIiIK0ufh1sUErqzELrVWqfsaWXgb9x3WNX/AATUKysLbpZKG/QbbPqA009Rw+/p9Lz+rupV4DpyXzk7cKplZS9XbWl9psVXXNhs9yks1wa0BlFdCad7z7NePRIPr1XOtqcsxj8Pk9tEzHt9bgwDce+zeTvqOSvzJcDxjK6d1PeLXFLxD5nN3Vf3TRbJcYhk/oe6sqKEkl9mr2OlhP8AEHmz/notMeSXabj79Kvu2Jaf6hWv4OGGBrxuWMLeEwk/MNu26xHHrNrT4brga/SHJJRZQ8vnsFcRNRynfchpPqid+reisa8WTH31PwOQWyfGrkXbRyySOdTSv78M/RvPo13Md10TNy7Fh8LkcDa2jcz+3Ut2I4exG3J/LuOvVV86icp1Z2y3Q/xpYDqVUtxLPKQYrkrHhj7dcJR5M7+xglOwfxdQPm2V0tIc0OG/MdxstR8x0vwfUq2mcUlNKdvLePlO55hpP+ru4HZeLBNcNY/CyxlmyZ1VlmH0/NrJncdfRQb8JkZJ0kaPyHp22UXjvx2ZWbbjIoLTzUnC9VMYgy7Br7FXUU4HrjOzo3bc2Pb1a4dCD0IU6N9uay0sREQEREEHp5kFblGJW++3GOJs1TSMkkETSG7uaCdtydhuVOdOiIu5eqTQiIuCPvmNWS/Ub6a6W9krXA77jmqK1LohpbVRvxOplZT1NUYpbfM4Ppy3f8hHI/qiLTC1WP1GZrbKOwQQX6zRGnnmhZI7ynENBcASAPbn0O67oqSjyDGm11xooi4hzXMYzZh+yIru2EVjS3656C6p4/fNN5zSC+XMUd1on+qnqI+LYFzOXqA6EFbvN5bNHt3RFzm3Dj25IiLFqIiIP//Z"
+                    "dužina": "3m"
                 },
                 {
-                    "boja": "5m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAUHBggCAwQBCf/EADIQAAEDAwIEBAQFBQAAAAAAAAEAAgMEBQYHERIhMUEIEyJRFDJxgSRSYWJyFiMzQoL/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAgMBBP/EAB4RAQEAAgIDAQEAAAAAAAAAAAABAjEDERIhQVFx/9oADAMBAAIRAxEAPwD9/EREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEQcgAEQEREBERAREQEREBERAREQauR3vxP6c1EdTjmp8l5pyS6S05NSMqWOH7KlnC9v8AFxJ9+an7L42L/ZGtZqvordIYo2firljr21cUQ3+Z8JIkaPoH7e5XOpo8poKQXKCmbU0m/EJYXNk+/Gzoo+ru1juLGnI6NrHE77uJB+5PX6r0eMu4j+VcGAa8aO6lsazDM9oKmZ/SkfIYpgfby5A1wI7jbkswbuAAT27LUjMtBMAz9vxVMyB72uMsAI3MTjz42PbzY/8AcvNZsr8TOhsUdPjmcSX21xuAjo8rk88MYB/jFQ31D2aT1Wd4vw8rL7bgoqI0q8eWnWVSCw6p2eqwy7N2a8XMcVJM7fbdk45AE9OLbl1V30NfQ3OkZXWysjmgkAfHNE8Oa9p5hwI5EEcwR1UWXG9VUss9PQiAgjcIuOiIiAiIgIiIK0ufh1sUErqzELrVWqfsaWXgb9x3WNX/AATUKysLbpZKG/QbbPqA009Rw+/p9Lz+rupV4DpyXzk7cKplZS9XbWl9psVXXNhs9yks1wa0BlFdCad7z7NePRIPr1XOtqcsxj8Pk9tEzHt9bgwDce+zeTvqOSvzJcDxjK6d1PeLXFLxD5nN3Vf3TRbJcYhk/oe6sqKEkl9mr2OlhP8AEHmz/notMeSXabj79Kvu2Jaf6hWv4OGGBrxuWMLeEwk/MNu26xHHrNrT4brga/SHJJRZQ8vnsFcRNRynfchpPqid+reisa8WTH31PwOQWyfGrkXbRyySOdTSv78M/RvPo13Md10TNy7Fh8LkcDa2jcz+3Ut2I4exG3J/LuOvVV86icp1Z2y3Q/xpYDqVUtxLPKQYrkrHhj7dcJR5M7+xglOwfxdQPm2V0tIc0OG/MdxstR8x0vwfUq2mcUlNKdvLePlO55hpP+ru4HZeLBNcNY/CyxlmyZ1VlmH0/NrJncdfRQb8JkZJ0kaPyHp22UXjvx2ZWbbjIoLTzUnC9VMYgy7Br7FXUU4HrjOzo3bc2Pb1a4dCD0IU6N9uay0sREQEREEHp5kFblGJW++3GOJs1TSMkkETSG7uaCdtydhuVOdOiIu5eqTQiIuCPvmNWS/Ub6a6W9krXA77jmqK1LohpbVRvxOplZT1NUYpbfM4Ppy3f8hHI/qiLTC1WP1GZrbKOwQQX6zRGnnmhZI7ynENBcASAPbn0O67oqSjyDGm11xooi4hzXMYzZh+yIru2EVjS3656C6p4/fNN5zSC+XMUd1on+qnqI+LYFzOXqA6EFbvN5bNHt3RFzm3Dj25IiLFqIiIP//Z"
+                    "dužina": "5m"
                 }
             ]
         }
@@ -1368,18 +1301,16 @@
         "kategorije": "QED CABLES",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": [
+            "dostupne_boje": [],
+            "dostupne_dužine": [
                 {
-                    "boja": "2m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHQAAAQUBAQEBAAAAAAAAAAAACQAFBgcICgQDAf/EADwQAAEDAwIEBAIHBwQDAQAAAAECAwQFBhEABwgSITEJE0FhMlEUIiNCUnGBChVikaGx0SQzkqJDU8HC/8QAHQEAAAYDAQAAAAAAAAAAAAAAAQIDBAUGAAcICf/EACsRAAIBAwMDBAEEAwAAAAAAAAECAAMEEQUhMQYSQQcTIlFxMjNywYGh0f/aAAwDAQACEQMRAD8Aoyy9+KjBkocRUlJHPjpntq7ds+MSXT5CUfvDnHOByqT06awDSb8msNp5lqV1z8epBRtyJSXgoSFoIOQQvGlxUHmGBIhVbH4qLdr6UR6ihtCuTPPzddW9Ym+NRgrS/Z97Ott/+kv8yP8Aj2/poR1u71yac00fp6CtauXOT9UatCzOJqfSkpTDqa2ijvyKA5tHwpg98MNZXGrdlD8tq6IKJbQ+JyKn/GrmsTi824udCWZtWMZw/dkpCf7aD9t9xjTIqQiTUeZKuXIPv31cFp8UdoVcpbnuBK8c/P0/loj01ztBAQwtlMvW36xHTJgz0LbUnIcQeZP9NOLctl1HmIfSRjPTQ17C3wqUJaJFp3s4hAGPLD6uX+RONTi4vEVrm01suy7sjRJz7jBMRCVcpJPbpprXqJbp3Odo9sNJvtTuRQtl7mJwMTY1+7tWrYEFyoV6ssRmkd1vOBOPyz8X6aoS9fEl23pL7jdDbmVBI7PJAQj+Z0PrdfiwvveKsSK3c9UceBK1MxQsBttH3VtgjATqnpF0Xju5Mfan11VMokZSvOUyvHnEdkpPf9c6qF71MVqdlBcib+6c9EqdSmtTUqhz5A2AhKB4ymydOqJg1tUxLyfiEVzzj/16asjb7xSuGi9pCILd8PQXVLwU1emLZT/y7aEBCvNqPIXauy9jR1uj/eqkxHMfyB6/W9tSmPtXdMinN1O7b9qC+QqLsWGQ0E49saY0up74NuAZYdS9FemVo/FmRvvP9cQ6VE3Et64aa1VqXU0SY7oy0/FcStDg+YOloDlE4uzt/EVa9q7pXQ1FjunLTMwlKF9MgZHTt20tSA6pUD5JvKTU9CNXFQ+3VPb4+PiDZuKz919tZP0O+bPnwuTGVuxigdO/xDXlp9zwn3S19IUlaV4UArPTXUNvN4a21W4MB+FMt+DNaVnlj1OIHFde/wBoP86wPxN/s/8AtnVFPVW16BNob5Kj59MCn2QR+IA5GrfgTQvuEQR8K4nEHKZRPXPxeunOn3zPhvNlSicLwOur53o8HLiM2xeemWI41XYqOblTHXlwY/hODrNl67c7tbaTPo182VNp7iCCoSGVYyO/UaMDiAGBlk0HdeZDSlPnOBXT/wAh9NTO1d750dwJfnKGFZ6qHfWa4d1IDwbekcqwvA5z/jXufuiQ2tLiJJIPfB0cP9wy4M27t/xPVE1Jml06pKCuYFxaXewHfXtv3eyr33cYYdmuuIQAhlKl8w6dsZ1k7Z67pNNh1G4ZbfMk5YZz6KPc6n22N9RI8mTc1YkEx6WlbvKfvHGEj+eqP1Fe1armkvAnWXof0fSTSjqtUZdj8c+BLmvaumkSYlk/T/NmOpS9Ui04csNn4GQT2UfkNfm5d6R7ap8OwIKy3Ndb/wBY2MAREn4Uqx99X9NVntZfKJsisbqXMhLzcQ+aUPHJcd+7/LUFRuNUq1cUu461JWXJbzilqWckg9s+/vqpU7dnYg7ATpG20uo7YI2G/wCTNQ7aXXSKDGRFiRlNAIz9VZyT8yc5J99WPG3GU8ylbkvCDnKEYGc/lrIFubklUpIbmBzpj48dP01Ora3IkNJ+jqeyodlOED++hwaZ4jO96fLt3nmabgv2cqOHjRaenzCVgqpyFqVn1JKSSdLVIU7c51MVPmVNQPy5tLRPbp/Uizo9fPP+zDscMPGvshxSWlHuDbG8os0LTiRAcVyPtH3QTq2lQ6dUWFGMhICs5Wkc6VZ75Hc657KrsNvvwn3Kjcrh3u6e2yytK0NsrUOh+YT0V+udba4GvHMpdyzI23vFNTk0aqIUlKKuPswon8aVA41uNsrPN8IG4hBbt4ebDuxLr0yix1vLzzPNYCk579QM6oHe3w5LNvmK8x+4INVbKiTGqMUBZB78rgxn+etQWVuJb170KLWqBWGZkWUhJjyo68oV+ZB1IcNvNqDnKtJGMems5ibD7gS+JjwTdo58l1L1szrWlBKlIkJZP0cEeuUk/V99Yp3t8GrfOxUvVDbyqM1uEyOZKWHBzY+Ss5I107VC1KJNjfQ3IjakYI8txAUnB9MH09tVbfPBxtfXyuoRaQ5TJBGS9SX/ACOZXujJQfyxrNoA24nLtL2tv7ajb16BflCep8z6ao+XISUjA+Xz00RrklU+2XqM2R5cteHVYB5uuf76Lj463AvcFs7Hx9z6NOE+LTZ3I+G6aG3W0rGEKWRhPfvoNLtT5ClpROWlKCkq9CNU3V7ZqdwSRsZ3D6Ka9bXfSS0QflTOCP8AMm711yollMWxFdSEyHS++Uq747A6+EtpMaiJnuuglxxTfJn5euowupoTIbWFAA5yMfPXuqdXS4iPGC+gz0/PUIB2jab9oXlNUc5k1sCkO1aQtLbiWUsMLcckH/r7aVCumorlf6iQp9ITgJUAcnTNCr66XQpbMd8pMhvy1cvqn5a9m3q4aauy/PeCWm+ZZBHy03IJJkuKiu2CM7SUMbkNBJD0dfMFEEcxGPbS1DJ9bROqUmahYbDshSggJGBk6Ws9pYPtW53hHNqOIcTI6ItTeLiVpAUhxeQQNO+4/DZtZvrAVV6Qy3TqmoBYlMJ5Vcw9eh1h3bbeNUhtl1a3GXeRJDazjmJ1obabiFqFGeR5srnQD0OT8OtvEK08jVYCTnaLid4wfDuuQRXag/WrZS4AW5Ki4gJHoOnT9NEb4ffGC4Zt0LBNw3NdrdvyWG8TIsxJJW5+Fr56GFxF8ddmJtdVl0+nRpc51P1luoz5KfxfI6z/AG/uVHcUpL/0ZI5vsw2Bytp/Gfkn3HXSLKqmG2Ocwvu7HjpbVWw86du9tK7cDSeblkLWmOOn8JydVKf2laxbUqBj31sFPhRwcqkRak04rOc/CrkPbQtKzfV67iVhca1J4i01Lqm3ZwyhC1DulKjk8366rLcSjbLW5IcpUt+qVyvH/cSg4CemO4z6axnHgTFRe6H8t/xI/D88TDaOs7OR904VOl1yItldJuJxDCy6r4UpKunMFdtAi8QHhuufhQ3vqFhXDDW22XVuxZXLytykE5Qts9cpI1nO549029VHK9QaHNpPKtK2VMrUlSVJOQoHOQc+uvlWuJXda8mWKLf13Tq6y0jkbVU5Jeej9MYStWVYx6ZxqJv6K3NLtbkcTZHQXUjdL6lkNim4w3/fzJR+/G3IjcnnGE9xr1uVppwsPhffX4xsbukuzY97Uu3n6hRJrWWKjAR5jXP+Fah8CvY6aI1CuQRXuejSv9JnzfsCPLx3Kup+r76qNW0dM5E6g03rOjeoDTcEHHnzJga0hVM+r+PHf006UysLbhLW2QD5RBPsdQeJUC5DDYUkp5eYlSu5+Q05U6qlcZTXMR9TTUoR4myLDqAvUBzyI/wqoPJwVj4jjppajbFWDaOU/PS0TAjpNb+I3llX/Yl0UF1GVON+QAGsApxj+/668MDf28LPo8hqYgqWEcrC1Kxg/wD3RjeOLwi5MKnSq7ZlOXKZQhRQlsdU4/FoNHG5t/P2suMWQ9HCJLXOt9CgQU/h1tPdQSJ5fI4PxPMikbcep1mTIqUypBTnnJPOtSicH/8AGnWg307XHEUtufywEL+2XylK5avkSOob/LGqNqFzv09TcBqUoqdADqgfQen5e2nmVe7lMoKKJBfKH5KEodcSerLZ9BpPOTkxQGXRcW8s+TIFrbfPGMwF8sqW1jlbUruEJH1Sf4sZ99S7bKhUOkJZMVCXZC/jkqGVfqTrO9pVNEJKExXi2Onwn5asy0Ly+hMhhLrh5viwdB5iiMEMlPEtY153nDiQdu2Y3Mtag6p5WM4/trN1y7RXlbxcRWUR2XW1ZxnBz+ffWtrTuOLIAEhwLUCS2VHOM6jm7vD9bW5lQNYhXDLjPH/fQzlQX+h6D9NEdA0dU6hUEGfbwluO9jg53rjW/utT41a27rrqY1y0eoN+c02hfdxCDnC0e2M+udHbneFX4e/FLaid2Nh0R4CKuxzpqdvy0vRypRyW3EElIOPTGNc0e4u1VA2znrhPVaaJrePqOrABx2OR6++r/wDDe8WXfvgA3DiS7RvB6o26t1sVG3ZayqO60O5QnP1XOXp0xpk1BAxJGcyWoXl0qj2ahRvsQrF8/s2MFYqKrSv6lOxZn2nkriKaIV80E5I/IHWDOJLwgeIrhivCXb13UCU7DdWoUutMMkxVoHotQyQrR4OAzxOOHHjntCPWtq7oj/vQRkmpW3IUEy4q/vYSfiSP4daIrNhWdelMVHmwI8mMtHWO8ylSMn1IPY+4wdNqulWtdMocSzaV6mdUaLXC1X7lHgzjxvDba87MuB+3a9QpEeRHOFJcTgqHorS11LbieF7wt7gXGq4avsjSHHy0lta2xyA4yegz76WmB0OrnkS/J62UigLUt5om6KVT5dHeTLjtlKgecFAIUPUEeuubLx+7Cotu8aN2TWaEpuGachSUIOACpGQenvrpaqqQ5T3uQZJaVy5+ega/tGHD8+m6Ze6UGmuSGqpR0treR0Qh9sYIyfbVupboV87Tm19qinxvARToCWFrnuKPKVqHX5DTUahJemqklwgraHlk/dx21YN72q7TrIgzAzzKlKUCr5kDB/rqDV2nKpmWlJIXyJSB8ydIZEc4Mcbdu90LUhxHKG+xHXOp3blwnlDjco5C8Zz6aq2lxxTUeVIWQlKMnOvZbtxSmivLx5c5QMDpoYB2mg7Xu55tbZU+Wl8+G05zzatK1dxY7CksPISlXyIKv7azBQbuS802W3/iOVH8P+NTy3LwUwpuBGmNtqdc5G3C6fqH8Ss9k++sivdjmaGuS19uNwIzbdapkJUoIysuICyf16arW9+H6wlRFqoUGntPrc+yDSQCnpjp+mqu3Wv6VLr6aPZdXkTVnlb85sqKnHSckJHX6hHwnude5vYXinhUdrcG4KZWadA5gpuY7Bc8kZ7DKk4wr7pOh9vvG2TF0uhTOTHPa7dXeXhP3SibgbZ1+dTajBlBxt5h9QPKOw6YBHseh0e3wsfH62r4nWYG1u9jsa17vW2lAlreAi1BR/CT0Sr2PTQIKBfFNuqW3bG68COxUlt8kapKJ8uR7HPQK9gNM90Wfdlh1lVbtp4tONKQ609CXzDPzGMDOo8o9NspJsVLe/pdlQD8+Z2VU66KRUITcpwJPMn6qweZKx80n1Hvpa5oOHX9oj4sditrYW2dWqzNXNPUQxKqYKnQ2QMIyrJIHXuT30tHF0ccRi2jVe7Zp07FptTXIU9CkjGdY08V7amyNwOHi5YtzUgPCJDkLjkHBQSjJ9u+lpakKZIaQFf9kzma3ItqlRtsqX5basxq2W0FSs5Qo5IP66qTc2mQ0X7BjJaw2pbRKc9s6WlpuP1mOxusjN6tNsznGUJHKpXKR7abYzaGF+Q2nAT2+elpazJiZ5npteU+2sISvotGVDThcs+WzGYcafUlRVglJxkfI/MaWlozQ82/4Mu2Vj17cO4L5ue32KrOt+2XalTRUU+a0l9IwklB6FIHYdtal4Sr4vbiQtHd5/eS7p1ZZVEbiswHnAmNGQ49jLbQAQhSR0ScdPz66WlqS04DtjG+2c/wP9TNHiFcL212x+6SNvrNbnOQHqSZZNQkJdcQ5z4ylQSMdP11QeyFy1S4ahNsmuOiVBjtHyfOBLiQOyebuR+fX30tLTO/AWqMR1pzNjmfa7dvbaTXpCERSAl1SfunOFEeo0tLS1HkDMsqu+OZ/9k="
+                    "dužina": "2m"
                 },
                 {
-                    "boja": "3m",
-                    "url_uzorka": "data:image/jpeg;base64,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"
+                    "dužina": "3m"
                 },
                 {
-                    "boja": "5m",
-                    "url_uzorka": "data:image/jpeg;base64,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"
+                    "dužina": "5m"
                 }
             ]
         }
@@ -1404,24 +1335,21 @@
             "Inductance": "0.47 µH/m",
             "Jacket OD": "3.90mm",
             "Loop Resistance": "0.021 Ω/m",
-            "Wire Gauge": "16 AWG",
-            "Silver": "plated 99.999% OFC conductors"
+            "Wire Gauge": "16 AWG"
         },
         "kategorije": "QED CABLES",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": [
+            "dostupne_boje": [],
+            "dostupne_dužine": [
                 {
-                    "boja": "2.5m",
-                    "url_uzorka": "data:image/jpeg;base64,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"
+                    "dužina": "2.5m"
                 },
                 {
-                    "boja": "3m",
-                    "url_uzorka": "data:image/jpeg;base64,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"
+                    "dužina": "3m"
                 },
                 {
-                    "boja": "5m",
-                    "url_uzorka": "data:image/jpeg;base64,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"
+                    "dužina": "5m"
                 }
             ]
         }
@@ -1436,32 +1364,20 @@
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/gaxt.jpg"
         ],
-        "specifikacije": {
-            "Cross-sectional area": "2.5 mm2",
-            "Wire gauge": "14 AWG",
-            "Jacket outside diameter": "11.5 mm",
-            "Loop inductance": "0.58 μH/m",
-            "Loop resistance": "14.8 mΩ/m",
-            "Capacitance": "42.0 pF/m",
-            "Dissipation factor @": "10 kHz0.0090",
-            "Conductors": "9 x 19/0.13 mm OFC + 1 x 19/0.13 mm UP-OCC",
-            "InsulationLDPE jacket with": "100% coverage of golden/mylar tape wrap"
-        },
+        "specifikacije": {},
         "kategorije": "QED CABLES",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": [
+            "dostupne_boje": [],
+            "dostupne_dužine": [
                 {
-                    "boja": "2m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHAABAAEFAQEAAAAAAAAAAAAAAAcBAwUGCAQJ/8QAKxAAAgEEAQMDAwQDAAAAAAAAAAECAwQFEQYSITEHIlETMkEUJHGRQmHx/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAUHAQIEAwb/xAAfEQEAAgICAgMAAAAAAAAAAAAAAQIDBAUREjEhQVH/2gAMAwEAAhEDEQA/APv4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAt0a0K1KNalNyg0mml9yfhlwhf0s9ZJWltTjct18fPaqQhNzqW7+VtbcSXcfkrbK2lO/xdzGtQqJOFSDT3/wA/s4dPdxbmLypPz+NrVtX29YKJvXuK+TuadgADIAAAAAAAAAAOKOLcuyfHrqjeTr3l9SqycalWEYVI6a8e2fXv+O5L3E/Ua64Zc0r7FVlOyuZfuLOrPST1/jCWul/3/vZzxe2NrgqSubyzrZDG3epULilVUKilvXTKDX3L89T013SNp9NPUi1h1YOmr5W1aW40ZyjVafjaT7L+FoqTQ38mllisz1Kbza8XjusOw+NcqxfK7GOQxNzGUWl10m/fTfxJfgybk1LXyc4cL5bkuKZmP6W7r0fqd6bq2kqalvwpd3GSJv4fz2x5VQVCeqN4km6T7Kp8uG/KLG4/k8W5SImerInJitSfTYQUT03t77/BUlO3kAAyAAAAAAAAOI8ZOU+Z3PA77V1ZXlvGpcyrxXXOb8TfTqPVH8S6d9u+zTeTQoYS8rW2NtoUlbVHCLimnJPt7teQCm9+I8Jn7fQa0z0k704tJcp43KpkL66g7aCdL6NzJJaXjTbRufHMrfPGTk67+pZQbt62/fHS3rfwASXE2tF6TEuXPEJr9Ps9kM9w6hlsg4Srd4uUY6T1ryZ5ykqsY9XaS348AFnYZmcNUXb2uAA9GoAAAAAAAD//2Q=="
+                    "dužina": "2m"
                 },
                 {
-                    "boja": "3m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHAABAAEFAQEAAAAAAAAAAAAAAAcBAwUGCAQJ/8QAKxAAAgEEAQMDAwQDAAAAAAAAAAECAwQFEQYSITEHIlETMkEUJHGRQmHx/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAUHAQIEAwb/xAAfEQEAAgICAgMAAAAAAAAAAAAAAQIDBAUREjEhQVH/2gAMAwEAAhEDEQA/APv4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAt0a0K1KNalNyg0mml9yfhlwhf0s9ZJWltTjct18fPaqQhNzqW7+VtbcSXcfkrbK2lO/xdzGtQqJOFSDT3/wA/s4dPdxbmLypPz+NrVtX29YKJvXuK+TuadgADIAAAAAAAAAAOKOLcuyfHrqjeTr3l9SqycalWEYVI6a8e2fXv+O5L3E/Ua64Zc0r7FVlOyuZfuLOrPST1/jCWul/3/vZzxe2NrgqSubyzrZDG3epULilVUKilvXTKDX3L89T013SNp9NPUi1h1YOmr5W1aW40ZyjVafjaT7L+FoqTQ38mllisz1Kbza8XjusOw+NcqxfK7GOQxNzGUWl10m/fTfxJfgybk1LXyc4cL5bkuKZmP6W7r0fqd6bq2kqalvwpd3GSJv4fz2x5VQVCeqN4km6T7Kp8uG/KLG4/k8W5SImerInJitSfTYQUT03t77/BUlO3kAAyAAAAAAAAOI8ZOU+Z3PA77V1ZXlvGpcyrxXXOb8TfTqPVH8S6d9u+zTeTQoYS8rW2NtoUlbVHCLimnJPt7teQCm9+I8Jn7fQa0z0k704tJcp43KpkL66g7aCdL6NzJJaXjTbRufHMrfPGTk67+pZQbt62/fHS3rfwASXE2tF6TEuXPEJr9Ps9kM9w6hlsg4Srd4uUY6T1ryZ5ykqsY9XaS348AFnYZmcNUXb2uAA9GoAAAAAAAD//2Q=="
+                    "dužina": "3m"
                 },
                 {
-                    "boja": "5m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHAABAAEFAQEAAAAAAAAAAAAAAAcBAwUGCAQJ/8QAKxAAAgEEAQMDAwQDAAAAAAAAAAECAwQFEQYSITEHIlETMkEUJHGRQmHx/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAUHAQIEAwb/xAAfEQEAAgICAgMAAAAAAAAAAAAAAQIDBAUREjEhQVH/2gAMAwEAAhEDEQA/APv4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAt0a0K1KNalNyg0mml9yfhlwhf0s9ZJWltTjct18fPaqQhNzqW7+VtbcSXcfkrbK2lO/xdzGtQqJOFSDT3/wA/s4dPdxbmLypPz+NrVtX29YKJvXuK+TuadgADIAAAAAAAAAAOKOLcuyfHrqjeTr3l9SqycalWEYVI6a8e2fXv+O5L3E/Ua64Zc0r7FVlOyuZfuLOrPST1/jCWul/3/vZzxe2NrgqSubyzrZDG3epULilVUKilvXTKDX3L89T013SNp9NPUi1h1YOmr5W1aW40ZyjVafjaT7L+FoqTQ38mllisz1Kbza8XjusOw+NcqxfK7GOQxNzGUWl10m/fTfxJfgybk1LXyc4cL5bkuKZmP6W7r0fqd6bq2kqalvwpd3GSJv4fz2x5VQVCeqN4km6T7Kp8uG/KLG4/k8W5SImerInJitSfTYQUT03t77/BUlO3kAAyAAAAAAAAOI8ZOU+Z3PA77V1ZXlvGpcyrxXXOb8TfTqPVH8S6d9u+zTeTQoYS8rW2NtoUlbVHCLimnJPt7teQCm9+I8Jn7fQa0z0k704tJcp43KpkL66g7aCdL6NzJJaXjTbRufHMrfPGTk67+pZQbt62/fHS3rfwASXE2tF6TEuXPEJr9Ps9kM9w6hlsg4Srd4uUY6T1ryZ5ykqsY9XaS348AFnYZmcNUXb2uAA9GoAAAAAAAD//2Q=="
+                    "dužina": "5m"
                 }
             ]
         }
@@ -1482,18 +1398,16 @@
         "kategorije": "QED CABLES",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": [
+            "dostupne_boje": [],
+            "dostupne_dužine": [
                 {
-                    "boja": "3m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHgABAAEEAgMAAAAAAAAAAAAAAAgBAgkKBAYDBQf/xAAvEAACAQMDAwIEBQUAAAAAAAAAAQIDBBEFByEGEjEIQQkTYXEUIlJigRUWMlGR/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAIDBAH/xAAeEQEBAQABBAMAAAAAAAAAAAAAAQIxAxESIUFRYf/aAAwDAQACEQMRAD8Az8AA0ZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAInenb4v8A6X96aVGy6u1afSN/VjzPVU1Zdy84rtJJfulhJctolJo+uaZr9lR1TQ9Qo3drcfmt7i3qKUKsH4lF+JR58rK+pPf9VqeN4c0FXBpZKFJAAAAAAAAAAAAAGqx0nuLqui3auKN3OnOMu6Moyw8/dEm/S78RreTYfU4VOitw7ywoyadWz+epW1SWfM6U8wf3az9SG/5+9qOXjw37HloajXs5JRk8584Rzu+yXlne9Nfxr9v+t40dE3r0ONhdRajX1TRmp0oS4x82k5OdPP7e7PsvYmbt9uzt5upo8Nf286xsNYtZRUnOzrJygm8YnDmcX90jWG6V3N1LS7mk/wAZV7Y8Qj38Rb44XhfwSB2J9YvWu22p2+qdL9X3+n1qOFGra3Tg/Ph4/wAl9HlF+THfRl4bDKc+7359+HFfT2eS8x4emL4yV5e07XSd89Fo6lSlTS/rGnKNKvheHKm+K+P1QUMe6ZODanfTavenR46vt51na3ycc1LdT7K1PK8Sg+c/VcFyz7YaxrPLt4KKamvytZzz2yykVKSAAAAAAAA1V9xundO0lOtYqcZKUvde38HVIL5i7Z+8eWAZdo7cW1bBuNPsi2sSWHnk9rpGpXlol8is1z/sAjXK30XoDrXqCzvKcra6UHKce5wWG+fdokxsXu91/ot9Q1bSdfrW11RlH5dzb1JQmuf1RaYAknd5r3GTj0BeqjdveTUf7O3E1C01CnRtpTjeyt3Gu+1cJtNRf3cc/UlBC9rSqW0HjFec1LjxjOMf8AOj5cW/VcuqnSTqJt5lFYfhc4AB5EgAPQAAH//Z"
+                    "dužina": "3m"
                 },
                 {
-                    "boja": "6m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHgABAAEEAgMAAAAAAAAAAAAAAAgBAgkKBAYDBQf/xAAvEAACAQMDAwIEBQUAAAAAAAAAAQIDBBEFByEGEjEIQQkTYXEUIlJigRUWMlGR/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAIDBAH/xAAeEQEBAQABBAMAAAAAAAAAAAAAAQIxAxESIUFRYf/aAAwDAQACEQMRAD8Az8AA0ZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAInenb4v8A6X96aVGy6u1afSN/VjzPVU1Zdy84rtJJfulhJctolJo+uaZr9lR1TQ9Qo3drcfmt7i3qKUKsH4lF+JR58rK+pPf9VqeN4c0FXBpZKFJAAAAAAAAAAAAAGqx0nuLqui3auKN3OnOMu6Moyw8/dEm/S78RreTYfU4VOitw7ywoyadWz+epW1SWfM6U8wf3az9SG/5+9qOXjw37HloajXs5JRk8584Rzu+yXlne9Nfxr9v+t40dE3r0ONhdRajX1TRmp0oS4x82k5OdPP7e7PsvYmbt9uzt5upo8Nf286xsNYtZRUnOzrJygm8YnDmcX90jWG6V3N1LS7mk/wAZV7Y8Qj38Rb44XhfwSB2J9YvWu22p2+qdL9X3+n1qOFGra3Tg/Ph4/wAl9HlF+THfRl4bDKc+7359+HFfT2eS8x4emL4yV5e07XSd89Fo6lSlTS/rGnKNKvheHKm+K+P1QUMe6ZODanfTavenR46vt51na3ycc1LdT7K1PK8Sg+c/VcFyz7YaxrPLt4KKamvytZzz2yykVKSAAAAAAAA1V9xundO0lOtYqcZKUvde38HVIL5i7Z+8eWAZdo7cW1bBuNPsi2sSWHnk9rpGpXlol8is1z/sAjXK30XoDrXqCzvKcra6UHKce5wWG+fdokxsXu91/ot9Q1bSdfrW11RlH5dzb1JQmuf1RaYAknd5r3GTj0BeqjdveTUf7O3E1C01CnRtpTjeyt3Gu+1cJtNRf3cc/UlBC9rSqW0HjFec1LjxjOMf8AOj5cW/VcuqnSTqJt5lFYfhc4AB5EgAPQAAH//Z"
+                    "dužina": "6m"
                 },
                 {
-                    "boja": "10m",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAHgABAAEEAgMAAAAAAAAAAAAAAAgBAgkKBAYDBQf/xAAvEAACAQMDAwIEBQUAAAAAAAAAAQIDBBEFByEGEjEIQQkTYXEUIlJigRUWMlGR/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAIDBAH/xAAeEQEBAQABBAMAAAAAAAAAAAAAAQIxAxESIUFRYf/aAAwDAQACEQMRAD8Az8AA0ZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAInenb4v8A6X96aVGy6u1afSN/VjzPVU1Zdy84rtJJfulhJctolJo+uaZr9lR1TQ9Qo3drcfmt7i3qKUKsH4lF+JR58rK+pPf9VqeN4c0FXBpZKFJAAAAAAAAAAAAAGqx0nuLqui3auKN3OnOMu6Moyw8/dEm/S78RreTYfU4VOitw7ywoyadWz+epW1SWfM6U8wf3az9SG/5+9qOXjw37HloajXs5JRk8584Rzu+yXlne9Nfxr9v+t40dE3r0ONhdRajX1TRmp0oS4x82k5OdPP7e7PsvYmbt9uzt5upo8Nf286xsNYtZRUnOzrJygm8YnDmcX90jWG6V3N1LS7mk/wAZV7Y8Qj38Rb44XhfwSB2J9YvWu22p2+qdL9X3+n1qOFGra3Tg/Ph4/wAl9HlF+THfRl4bDKc+7359+HFfT2eS8x4emL4yV5e07XSd89Fo6lSlTS/rGnKNKvheHKm+K+P1QUMe6ZODanfTavenR46vt51na3ycc1LdT7K1PK8Sg+c/VcFyz7YaxrPLt4KKamvytZzz2yykVKSAAAAAAAA1V9xundO0lOtYqcZKUvde38HVIL5i7Z+8eWAZdo7cW1bBuNPsi2sSWHnk9rpGpXlol8is1z/sAjXK30XoDrXqCzvKcra6UHKce5wWG+fdokxsXu91/ot9Q1bSdfrW11RlH5dzb1JQmuf1RaYAknd5r3GTj0BeqjdveTUf7O3E1C01CnRtpTjeyt3Gu+1cJtNRf3cc/UlBC9rSqW0HjFec1LjxjOMf8AOj5cW/VcuqnSTqJt5lFYfhc4AB5EgAPQAAH//Z"
+                    "dužina": "10m"
                 }
             ]
         }
@@ -1510,36 +1424,20 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/sub1_50732762-5e2c-4bc4-8951-bbd18dc3426d.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/sub1_4c399d9c-cef3-45a8-b6a1-fe1aaaa97893.jpg"
         ],
-        "specifikacije": {
-            "Conductor Section": "0.30 mm2",
-            "Parallel Capacitance": "124 pF/m",
-            "Loop Resistance": "0.076 Ohm/m",
-            "Loop Inductance": "0.33 μH",
-            "Dissipation Factor @": "10 kHz 0.0210",
-            "Outside Diameter": "6 mm",
-            "Reference": "Subwoofer 40, the new standard for timing, accuracy and rhyth",
-            "with": "99.99% Silver Plated Oxygen Free Copper",
-            "Twin": "leaf 24c Gold plated QED Analoc2™ RCA plugs featuring high purity copper contacts, hollow centre pin and low eddy current design",
-            "Conductor": "Section 0.30 mm2",
-            "Parallel": "Capacitance 124 pF/m",
-            "Loop": "Resistance 0.076 Ohm/m",
-            "Outside": "Diameter 6 mm"
-        },
+        "specifikacije": {},
         "kategorije": "QED CABLES",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": [
+            "dostupne_boje": [],
+            "dostupne_dužine": [
                 {
-                    "boja": "3m",
-                    "url_uzorka": "data:image/jpeg;base64,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"
+                    "dužina": "3m"
                 },
                 {
-                    "boja": "6m",
-                    "url_uzorka": "data:image/jpeg;base64,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"
+                    "dužina": "6m"
                 },
                 {
-                    "boja": "10m",
-                    "url_uzorka": "data:image/jpeg;base64,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"
+                    "dužina": "10m"
                 }
             ]
         }
@@ -1558,9 +1456,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/WB75-wall-bracket_7900577d-c8a8-4e20-afb5-504811c2b3a7.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/products/WB75-wall-bracket-with-speaker_50ef3bcd-c09f-4ad2-97cf-cd520dbdcdab.jpg"
         ],
-        "specifikacije": {
-            "Concept": "30 Bookshelf Speaker Pair"
-        },
+        "specifikacije": {},
         "kategorije": "ACCESSORIES",
         "dodatne_informacije": {
             "tagline": null,
@@ -1573,7 +1469,8 @@
                     "boja": "White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1591,8 +1488,7 @@
         ],
         "specifikacije": {
             "Dimensions": "682 x 250 x 290 mm (26.9 x 9.8 x 11.4 in)",
-            "Weight": "6.2kg (13.7 lbs)",
-            "Compatible": "with Q Acoustics Concept 30, 5020, 5010, 3010i, 3020i, Q Active 200, M20 and the upcoming 3020c and 3010c speaker models."
+            "Weight": "6.2kg (13.7 lbs)"
         },
         "kategorije": "ACCESSORIES",
         "dodatne_informacije": {
@@ -1606,7 +1502,8 @@
                     "boja": "White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1634,8 +1531,7 @@
         ],
         "specifikacije": {
             "Dimensions": "635 x 245 x 340 mm (25 x 9.6 x 13.4 in)",
-            "Weight": "6.2kg (13.7 lbs)",
-            "Designed": "to fit Q Acoustics 3030i bookshelf speakers"
+            "Weight": "6.2kg (13.7 lbs)"
         },
         "kategorije": "ACCESSORIES",
         "dodatne_informacije": {
@@ -1649,7 +1545,8 @@
                     "boja": "White",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1674,10 +1571,8 @@
         "specifikacije": {
             "Dimensions": "H/W/D: 638 x 286 x 338mm (25.1 x 11.3 x 13.3in) per standCarton Dimensions H/W/D: 720 x 145 x 260mm (28.3 x 5.7 x 10.2in) per pair",
             "Weight": "5.5kg (12.1lbs) per pair",
-            "Compatible": "with Q Active 200 speakers and overall dimensions on the stand are H x W x D 922 x 286 x 338mm (36.3 x 11.3 x 13.3in)",
             "H/W/D": "638 x 286 x 338mm (25.1 x 11.3 x 13.3in) per stand",
-            "Carton Dimensions H/W/D": "720 x 145 x 260mm (28.3 x 5.7 x 10.2in) per pair",
-            "Concept": "30 Bookshelf Speaker Pair"
+            "Carton Dimensions H/W/D": "720 x 145 x 260mm (28.3 x 5.7 x 10.2in) per pair"
         },
         "kategorije": "ACCESSORIES",
         "dodatne_informacije": {
@@ -1687,7 +1582,8 @@
                     "boja": "Stainless Steel",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1709,7 +1605,6 @@
         "specifikacije": {
             "Dimensions": "H/W/D: 690 x 492 x 430mm (27.1” x 19.3” x 16.9”)  |  Carton Dimensions H/W/D: 780 x 740 x 460mm (30.7” x 29.1” x 18.1”)",
             "Weight": "3.9kg (8.6lbs) per stand  | Packaged Weight:  12.30kg (27.11 lbs) pair",
-            "Concept": "300 Speaker Stand Pair | Q Acoustics",
             "H/W/D": "690 x 492 x 430mm (27.1” x 19.3” x 16.9”)  |  Carton Dimensions H/W/D: 780 x 740 x 460mm (30.7” x 29.1” x 18.1”)",
             "3.9kg (8.6lbs) per stand  | Packaged Weight": "12.30kg (27.11 lbs) pair"
         },
@@ -1721,7 +1616,8 @@
                     "boja": "Silver",
                     "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
                 }
-            ]
+            ],
+            "dostupne_dužine": []
         }
     },
     {
@@ -1743,13 +1639,13 @@
             "Weight": "4.1kg / 9lbs (per stand)",
             "This Stand will fit with some of the world’s best loved audiophile stand-mount speakers; top plate carries 20kg / 44lbs per speaker and the plate size is W/D": "6.3” x 9.4” (160 x 240mm)",
             "Dimensions H/W/D": "27.1” x 19.3” x 16.9” (690 x 492 x 430mm)",
-            "W/D": "6.3” x 9.4” (160 x 240mm)",
-            "Concept": "300 Bookshelf Speaker Pair"
+            "W/D": "6.3” x 9.4” (160 x 240mm)"
         },
         "kategorije": "ACCESSORIES",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": []
+            "dostupne_boje": [],
+            "dostupne_dužine": []
         }
     }
 ]
