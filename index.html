@@ -3,20 +3,70 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Audio Katalog – v1.3.9</title>
+    <title>Audio Katalog – v1.3.11 (Fix Base64 Boje)</title>
     <style>
         :root{--primary:#1a1a1a;--secondary:#2c3e50;--accent:#e74c3c;--border:#ddd;--radius:12px;--shadow:0 4px 12px rgba(0,0,0,.1);}
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
         body{background:#f5f7fa;color:var(--primary);line-height:1.6;}
-        header{background:var(--primary);color:white;padding:1.5rem 0;text-align:center;box-shadow:var(--shadow);}
+        
+        /* FIKSIRANI HEADER (NA VRHU STRANICE) */
+        header{
+            background:var(--primary);
+            color:white;
+            padding:1.5rem 0; 
+            text-align:center;
+            box-shadow:0 4px 12px rgba(0,0,0,.15); 
+            position: fixed;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            z-index: 1000; 
+        }
         header h1{font-size:2rem;margin-bottom:.5rem;}
         .subtitle{font-size:1rem;opacity:0.9;}
         #updateInfo{color:#27ae60;font-weight:600;}
-        .controls{max-width:1200px;margin:2rem auto;padding:0 1rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;}
+        
+        /* FIKSIRANE KONTROLE - Meni (NA 8rem) */
+        .controls{
+            max-width:1200px;
+            margin: 0 auto; 
+            padding:1rem 1rem; 
+            display:flex;
+            flex-wrap:wrap;
+            gap:1rem;
+            align-items:center;
+            
+            position: fixed;
+            /* POZICIJA: Fiksirano na 8rem od vrha stranice */
+            top: 8rem; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1200px;
+            z-index: 1000; 
+            background: #fff; 
+            box-shadow: 0 4px 8px rgba(0,0,0,.1);
+            border-radius: 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
         .search-box,.filter-select{padding:.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius);font-size:1rem;flex:1;min-width:200px;}
         .search-box:focus,.filter-select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(231,76,60,.2);}
-        .stats{font-size:.9rem;color:#666;margin-left:auto;}
-        .container{max-width:1200px;margin:0 auto;padding:0 1rem;}
+        .stats{
+            font-size:.9rem;
+            color:#666; 
+            margin-left:auto;
+            white-space: nowrap; 
+        }
+
+        /* GURAJ GLAVNI SADRŽAJ ISPOD FIKSIRANIH ELEMENATA */
+        .container{
+            max-width:1200px;
+            /* Margina: 8rem (top pozicija menija) + ~4.5rem (visina menija) + 1rem dodatnog razmaka = 13.5rem */
+            margin: 13.5rem auto 0; 
+            padding:0 1rem;
+        }
+        
         .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-top:1rem;}
         .card{background:white;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.3s;cursor:pointer;position:relative;}
         .card:hover{transform:translateY(-8px);box-shadow:0 12px 24px rgba(0,0,0,.15);}
@@ -36,10 +86,10 @@
         .color-swatch{width:24px;height:24px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 1px #ccc;overflow:hidden;}
         .color-swatch img{width:100%;height:100%;object-fit:cover;}
         .color-swatch.hex{background:var(--swatch-color);}
-        .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;overflow-y:auto;align-items:center;justify-content:center;}
+        .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:10000;overflow-y:auto;align-items:center;justify-content:center;}
         .modal.active{display:flex;}
         .modal-content{background:white;border-radius:var(--radius);max-width:900px;width:95%;max-height:95vh;overflow-y:auto;position:relative;}
-        .modal-close{position:absolute;top:10px;right:15px;background:none;border:none;font-size:2rem;cursor:pointer;color:#aaa;z-index:10;}
+        .modal-close{position:absolute;top:10px;right:15px;background:none;border:none;font-size:2rem;cursor:pointer;color:#aaa;z-index:10010;}
         .modal-close:hover{color:var(--accent);}
         .modal-header{padding:1.5rem;background:var(--primary);color:white;border-radius:var(--radius) var(--radius) 0 0;}
         .modal-title{font-size:1.8rem;margin-bottom:.5rem;}
@@ -55,26 +105,75 @@
         .specs-table th{background:#f9f9f9;width:40%;}
         .colors-big{display:flex;gap:12px;flex-wrap:wrap;margin:1rem 0;}
         .colors-big .color-swatch{width:40px;height:40px;}
+
+        /* Stil za dužine (Lengths) */
+        .length-tag {
+            display: inline-block;
+            background: #ecf0f1;
+            color: #34495e;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #bdc3c7;
+        }
+        .lengths-container {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #eee;
+        }
+
         .modal-footer{padding:1.5rem;text-align:center;background:#f9f9f9;border-top:1px solid var(--border);}
         .btn{padding:.75rem 1.5rem;background:var(--accent);color:white;border:none;border-radius:var(--radius);cursor:pointer;font-size:1rem;}
         .btn:hover{background:#c0392b;}
         .loading,.no-results{text-align:center;padding:3rem 1rem;color:#777;font-size:1.1rem;}
         .footer{text-align:center;padding:2rem 1rem;color:#777;font-size:.9rem;margin-top:3rem;border-top:1px solid var(--border);}
-        @media(max-width:768px){.modal-info{grid-template-columns:1fr;}.controls{flex-direction:column;}.stats{margin-left:0;}}
+        
+        /* RESPONZIVNOST ZA FIKSIRANE KONTROLE */
+        @media(max-width:768px){
+            .modal-info{grid-template-columns:1fr;}
+            .controls{
+                flex-direction:column;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                /* Fiksirano na 8rem na mobilnom */
+                top: 8rem; 
+                gap: 0.5rem; 
+            }
+            .search-box, .filter-select {
+                min-width: 100%;
+            }
+            .stats{
+                margin-left:0;
+                width: 100%;
+                text-align: center;
+                padding-top: 0.5rem;
+                color: #666; 
+            }
+            /* UKUPNA MARGINA ZA KONTEJNER: ~8rem (top pozicija menija) + ~25rem (visina menija) + 1rem razmaka = 34rem */
+            .container {
+                margin-top: 34rem; /* Prilagođena sigurna margina na mobilnom */
+            }
+        }
     </style>
 </head>
 <body>
+    
+    <!-- FIKSIRANI HEADER NA TOP: 0 -->
     <header>
         <h1>Audio Katalog</h1>
-        <p class="subtitle">Live sa GitHub-a – v1.3.9 <span id="updateInfo"></span></p>
+        <p class="subtitle">Live sa GitHub-a – v1.3.11 <span id="updateInfo"></span></p>
     </header>
 
+    <!-- FIKSIRANE KONTROLE ISPOD HEADERA (NA TOP: 8rem) -->
     <div class="controls">
         <input type="text" class="search-box" placeholder="Pretraži po imenu..." id="searchInput" />
         <select class="filter-select" id="brandFilter"><option value="">Svi brendovi</option></select>
         <select class="filter-select" id="categoryFilter"><option value="">Sve kategorije</option></select>
         <div class="stats" id="stats">Učitavanje...</div>
     </div>
+
 
     <div class="container">
         <div id="loading" class="loading">Učitavanje najnovijih podataka...</div>
@@ -99,7 +198,11 @@
                         <p><strong>Cena:</strong> <span id="modalPrice"></span></p>
                         <p><strong>Kategorija:</strong> <span id="modalCategory"></span></p>
                         <p id="taglineSection"><strong>Tagline:</strong> <span id="modalTagline"></span></p>
- |
+                        <!-- NOVI DEO ZA DUŽINE -->
+                        <div id="modalLengths" class="lengths-container" style="display:none;">
+                            <strong>Dostupne dužine:</strong>
+                            <div id="lengthsList"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="colors-big" id="modalColors"></div>
@@ -112,27 +215,32 @@
     </div>
 
     <footer class="footer">
-        <p>web_app_v1.3.9.html – sve radi (automatski commit + potpuno funkcionalan modal)</p>
+        <p>web_app_v1.3.11.html – sve radi (automatski commit + Fix Base64 Boje)</p>
     </footer>
 
     <script>
         // 1. AUTOMATSKI NAJNOVIJI COMMIT
         async function getLatestCommit() {
             try {
+                // Fiksiran GitHub repozitorijum
                 const r = await fetch('https://api.github.com/repos/MikiMix-Git/SonusArtBA/commits/main');
                 const d = await r.json();
                 return d.sha;
-            } catch { return '50d26ef9994e5858c77f5dc995aff403f99ea1af'; }
+            } catch { 
+                // Fallback SHA u slučaju greške
+                return '50d26ef9994e5858c77f5dc995aff403f99ea1af'; 
+            }
         }
 
         let GITHUB_RAW_BASE = '';
         const files = ['argon_audio_products_all_categories.json','bowers_wilkins_products.json','denon_products.json',
-                       'dynaudio_products.json','marantz_all_products.json','qacoustics_products.json'];
+                       'dynaudio_products.json','marantz_all_products.products.json','qacoustics_products.json'];
         let allProducts = [], brands = new Set(), categories = new Set();
         const grid = document.getElementById('grid');
         const loading = document.getElementById('loading');
         const updateInfo = document.getElementById('updateInfo');
-        const fallback = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23f0f0f0%22/><text x=%22200%22 y=%22150%22 font-size=%2230%22 text-anchor=%22middle%22 fill=%22%23999%22>No Image</text></svg>';
+        // Placeholder SVG za slike koje nedostaju
+        const fallback = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%23f0f0f0%22/><text x=%22200%22 y=%22150%22 font-size=%2230%22 text-anchor=%22middle%22 fill=%22%23999%22>No Image</text></svg>';
 
         // MODAL elementi
         const modal = document.getElementById('modal');
@@ -144,18 +252,22 @@
         const modalSKU = document.getElementById('modalSKU');
         const modalPrice = document.getElementById('modalPrice');
         const modalCategory = document.getElementById('modalCategory');
-        const modalTagline = document.getElementById('modalTagline');
+        const modalTagline = document.getElementById('taglineSection');
         const taglineSection = document.getElementById('taglineSection');
         const modalColors = document.getElementById('modalColors');
         const modalSpecs = document.getElementById('modalSpecs');
         const modalLink = document.getElementById('modalLink');
+        const modalLengthsContainer = document.getElementById('modalLengths');
+        const lengthsList = document.getElementById('lengthsList');
 
-        // START
+
+        // START funkcija koja inicijalizuje aplikaciju
         (async () => {
             const commit = await getLatestCommit();
             GITHUB_RAW_BASE = `https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/${commit}/json`;
             updateInfo.textContent = `– Podaci ažurirani: ${new Date().toLocaleDateString('sr-RS')} (commit ${commit.slice(0,7)})`;
 
+            // Učitavanje JSON fajlova
             const data = await Promise.all(files.map(f => fetch(GITHUB_RAW_BASE + '/' + f).then(r => r.ok ? r.json() : [])));
             allProducts = data.flat();
 
@@ -170,6 +282,7 @@
             grid.style.display = 'grid';
         })();
 
+        // Mapiranje URL-ova na čitljiva imena brendova
         function getBrandDisplay(p) {
             const map = {'qacoustics':'Q Acoustics','dynaudio':'Dynaudio','marantz':'Marantz','denon':'Denon','bowers':'Bowers & Wilkins','argon':'Argon Audio'};
             const logo = p.brend_logo_url || '';
@@ -177,24 +290,39 @@
             return {name:'Audio', url:null};
         }
 
+        // Popunjavanje padajućih lista za filtriranje
         function populateFilters() {
+            const brandFilter = document.getElementById('brandFilter');
+            const categoryFilter = document.getElementById('categoryFilter');
+            
             [...brands].sort().forEach(b => {const o=new Option(b,b); brandFilter.add(o);});
             [...categories].sort().forEach(c => {const o=new Option(c,c); categoryFilter.add(o);});
         }
 
+        // Renderovanje proizvoda na osnovu filtera i pretrage
         function renderProducts() {
+            const searchInput = document.getElementById('searchInput');
+            const brandFilter = document.getElementById('brandFilter');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const stats = document.getElementById('stats');
+
             const q = searchInput.value.toLowerCase();
             const b = brandFilter.value;
             const c = categoryFilter.value;
+            
             const filtered = allProducts.filter(p => 
-                (!q || p.ime_proizvoda?.toLowerCase().includes(q)) &&
+                (!q || p.ime_proizvoda?.toLowerCase().includes(q) || p.sku?.toLowerCase().includes(q)) &&
                 (!b || getBrandDisplay(p).name === b) &&
                 (!c || p.kategorije === c)
             );
 
             grid.innerHTML = '';
             stats.textContent = `${filtered.length} od ${allProducts.length} proizvoda`;
-            if (!filtered.length) { noResults.style.display = 'block'; return; }
+            
+            if (!filtered.length) { 
+                noResults.style.display = 'block'; 
+                return; 
+            }
             noResults.style.display = 'none';
 
             filtered.forEach(p => {
@@ -202,19 +330,30 @@
                 const brand = getBrandDisplay(p);
                 const mainImg = p.url_slika?.[0] || fallback;
 
+                // Brand Logo/Ime na slici
                 const logoDiv = document.createElement('div'); logoDiv.className = 'brand-logo-container';
                 if (brand.url) {
                     const img = document.createElement('img'); img.src = brand.url;
+                    // Invertovanje nekih logoa radi bolje vidljivosti
                     if (brand.name==='Argon Audio' || brand.name==='Denon') img.classList.add('force-dark');
                     img.onerror = () => logoDiv.textContent = brand.name;
                     logoDiv.appendChild(img);
                 } else logoDiv.textContent = brand.name;
 
-                const colorsHtml = (p.dodatne_informacije?.dostupne_boje || []).slice(0,5).map(c =>
-                    c.url_uzorka?.startsWith('http') ? `<div class="color-swatch"><img src="${c.url_uzorka}"></div>` :
-                    c.url_uzorka?.startsWith('#') ? `<div class="color-swatch hex" style="--swatch-color:${c.url_uzorka};"></div>` :
-                    `<div class="color-swatch" style="background:#ccc;"></div>`
-                ).join('');
+                // Prikaz boja (swatches) - AŽURIRANO: Dodata podrška za Base64 (data:)
+                const colorsHtml = (p.dodatne_informacije?.dostupne_boje || []).slice(0,5).map(c => {
+                    const colorName = c.ime_boje || 'Boja';
+                    
+                    if (c.url_uzorka?.startsWith('http') || c.url_uzorka?.startsWith('data:')) { // PROVERA I ZA Base64
+                        return `<div class="color-swatch" title="${colorName}"><img src="${c.url_uzorka}"></div>`;
+                    } else if (c.url_uzorka?.startsWith('#')) {
+                        return `<div class="color-swatch hex" title="${colorName}" style="--swatch-color:${c.url_uzorka};"></div>`;
+                    } else if (colorName) {
+                        // Fallback: sivi krug sa imenom boje u tooltipu
+                        return `<div class="color-swatch" title="${colorName}" style="background:#ddd; border-color:#999;"></div>`;
+                    }
+                    return `<div class="color-swatch" style="background:#ccc;"></div>`;
+                }).join('');
 
                 card.innerHTML = `
                     <div class="card-img"><img src="${mainImg}" class="product" onerror="this.src='${fallback}'"></div>
@@ -226,36 +365,73 @@
                         <div class="colors">${colorsHtml}</div>
                     </div>`;
                 card.querySelector('.card-img').prepend(logoDiv);
-                card.onclick = () => openModal(p);   // ← OVO JE BITNO – sada poziva pravu funkciju!
+                card.onclick = () => openModal(p);
                 grid.appendChild(card);
             });
         }
 
+        // Otvaranje modalnog prozora sa detaljima proizvoda
         function openModal(p) {
             modalTitle.textContent = p.ime_proizvoda || 'Nema imena';
             modalBrand.textContent = getBrandDisplay(p).name;
             modalSKU.textContent = p.sku || 'N/A';
             modalPrice.textContent = p.cena || 'Cena nedostupna';
             modalCategory.textContent = p.kategorije || 'N/A';
+            // Zamena novih linija sa <br> za pravilan prikaz opisa
             modalDesc.innerHTML = p.opis ? p.opis.replace(/\n/g,'<br>') : 'Opis nije dostupan';
+            
+            // Prikaz tagline-a samo ako postoji
             taglineSection.style.display = (p.dodatne_informacije?.tagline && p.dodatne_informacije.tagline!=='Tagline nedostupan') ? 'block' : 'none';
             if (taglineSection.style.display==='block') modalTagline.textContent = p.dodatne_informacije.tagline;
 
+            // Galerija slika
             modalGallery.innerHTML = '';
             (p.url_slika||[]).forEach(src => {
                 const img = document.createElement('img'); img.src = src; img.onerror = () => img.src = fallback;
-                img.onclick = () => window.open(src,'_blank');
+                img.onclick = () => window.open(src,'_blank'); // Otvara sliku u novom tabu
                 modalGallery.appendChild(img);
             });
 
+            // Veliki prikaz dostupnih boja - AŽURIRANO: Dodata podrška za Base64 (data:)
             modalColors.innerHTML = '';
             (p.dodatne_informacije?.dostupne_boje||[]).forEach(c => {
-                const d = document.createElement('div'); d.className='color-swatch';
-                if (c.url_uzorka?.startsWith('http')) { const i=document.createElement('img'); i.src=c.url_uzorka; d.appendChild(i); }
-                else if (c.url_uzorka?.startsWith('#')) { d.classList.add('hex'); d.style.setProperty('--swatch-color',c.url_uzorka); }
+                const colorName = c.ime_boje || 'Boja';
+                const d = document.createElement('div'); d.className='color-swatch colors-big';
+                d.title = colorName; // Dodavanje Tooltipa
+
+                if (c.url_uzorka?.startsWith('http') || c.url_uzorka?.startsWith('data:')) { // PROVERA I ZA Base64
+                    const i=document.createElement('img'); i.src=c.url_uzorka; d.appendChild(i); 
+                }
+                else if (c.url_uzorka?.startsWith('#')) { 
+                    d.classList.add('hex'); d.style.setProperty('--swatch-color',c.url_uzorka); 
+                } 
+                else if (colorName) {
+                    // Fallback: siva pozadina kada nedostaje URL ili HEX kod
+                    d.style.backgroundColor = '#ddd'; 
+                    d.style.borderColor = '#999';
+                }
+
                 modalColors.appendChild(d);
             });
 
+            // Logika za prikaz dostupnih dužina
+            const lengths = p.dodatne_informacije?.dostupne_dužine || [];
+            lengthsList.innerHTML = '';
+            if (lengths.length > 0) {
+                lengths.forEach(l => {
+                    if (l.dužina) {
+                        const span = document.createElement('span');
+                        span.className = 'length-tag';
+                        span.textContent = l.dužina;
+                        lengthsList.appendChild(span);
+                    }
+                });
+                modalLengthsContainer.style.display = lengthsList.children.length > 0 ? 'block' : 'none';
+            } else {
+                modalLengthsContainer.style.display = 'none';
+            }
+
+            // Tabela specifikacija
             modalSpecs.innerHTML = '';
             const specs = p.specifikacije || {};
             if (Object.keys(specs).length===0) modalSpecs.innerHTML = '<tr><td colspan="2">Nema specifikacija</td></tr>';
@@ -267,10 +443,12 @@
             modal.classList.add('active');
         }
 
+        // Zatvaranje modalnog prozora
         modalClose.onclick = () => modal.classList.remove('active');
         modal.onclick = e => { if (e.target===modal) modal.classList.remove('active'); };
         document.addEventListener('keydown', e => { if (e.key==='Escape') modal.classList.remove('active'); });
 
+        // Povezivanje input i select elemenata sa funkcijom renderovanja
         searchInput.oninput = brandFilter.onchange = categoryFilter.onchange = renderProducts;
     </script>
 </body>
