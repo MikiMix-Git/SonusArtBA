@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Audio Katalog – v1.3.11 (Fix Base64 Boje)</title>
+    <title>Audio Katalog – v1.3.12 (Dodat Polk Audio)</title>
     <style>
         :root{--primary:#1a1a1a;--secondary:#2c3e50;--accent:#e74c3c;--border:#ddd;--radius:12px;--shadow:0 4px 12px rgba(0,0,0,.1);}
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
@@ -163,7 +163,7 @@
     <!-- FIKSIRANI HEADER NA TOP: 0 -->
     <header>
         <h1>Audio Katalog</h1>
-        <p class="subtitle">Live sa GitHub-a – v1.3.11 <span id="updateInfo"></span></p>
+        <p class="subtitle">Live sa GitHub-a – v1.3.12 <span id="updateInfo"></span></p>
     </header>
 
     <!-- FIKSIRANE KONTROLE ISPOD HEADERA (NA TOP: 8rem) -->
@@ -215,7 +215,7 @@
     </div>
 
     <footer class="footer">
-        <p>web_app_v1.3.11.html – sve radi (automatski commit + Fix Base64 Boje)</p>
+        <p>web_app_v1.3.12.html – dodato učitavanje Polk Audio proizvoda</p>
     </footer>
 
     <script>
@@ -233,8 +233,10 @@
         }
 
         let GITHUB_RAW_BASE = '';
+        // DODAT polkaudio_products.json
         const files = ['argon_audio_products_all_categories.json','bowers_wilkins_products.json','denon_products.json',
-                       'dynaudio_products.json','marantz_all_products.products.json','qacoustics_products.json'];
+                       'dynaudio_products.json','marantz_all_products.products.json','qacoustics_products.json',
+                       'polkaudio_products.json'];
         let allProducts = [], brands = new Set(), categories = new Set();
         const grid = document.getElementById('grid');
         const loading = document.getElementById('loading');
@@ -284,7 +286,16 @@
 
         // Mapiranje URL-ova na čitljiva imena brendova
         function getBrandDisplay(p) {
-            const map = {'qacoustics':'Q Acoustics','dynaudio':'Dynaudio','marantz':'Marantz','denon':'Denon','bowers':'Bowers & Wilkins','argon':'Argon Audio'};
+            // DODAT 'polkaudio' mapiranje
+            const map = {
+                'qacoustics':'Q Acoustics',
+                'dynaudio':'Dynaudio',
+                'marantz':'Marantz',
+                'denon':'Denon',
+                'bowers':'Bowers & Wilkins',
+                'argon':'Argon Audio',
+                'polkaudio':'Polk Audio' // Novo
+            };
             const logo = p.brend_logo_url || '';
             for (const k in map) if (logo.includes(k)) return {name:map[k], url:logo};
             return {name:'Audio', url:null};
@@ -334,8 +345,8 @@
                 const logoDiv = document.createElement('div'); logoDiv.className = 'brand-logo-container';
                 if (brand.url) {
                     const img = document.createElement('img'); img.src = brand.url;
-                    // Invertovanje nekih logoa radi bolje vidljivosti
-                    if (brand.name==='Argon Audio' || brand.name==='Denon') img.classList.add('force-dark');
+                    // Proširena lista za invertovanje logotipa
+                    if (brand.name==='Argon Audio' || brand.name==='Denon' || brand.name==='Polk Audio') img.classList.add('force-dark');
                     img.onerror = () => logoDiv.textContent = brand.name;
                     logoDiv.appendChild(img);
                 } else logoDiv.textContent = brand.name;
