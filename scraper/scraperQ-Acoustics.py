@@ -1,11 +1,10 @@
 # scraperQ-Acoustics TEST_v1.5.5_backup.py
 # =============================================
-# VERZIJA: v1.5.6 (16.12.2025.) — POBOLJŠANA LOGIKA UZORAKA BOJA IZ SLIKA
+# VERZIJA: v1.5.9 (16.12.2025.) — KATEGORIJE IZ HANDLE-A URL-a
 # =============================================
-# • Implementirana poboljšana funkcija find_image_for_color:
-#   - Bolje rukovanje složenim imenima boja (npr. "Graphite Grey").
-#   - Pretraga pojedinačnih reči iz imena boje u URL-u kako bi se podudarale
-#     sa formatima poput 'm_qacoustics-3050-graphite-pair_1.jpg'.
+# • Ažurirana funkcija get_categories za generisanje naziva kategorije
+#   direktno iz URL handle-a (npr. 'bookshelf-speakers' -> 'Bookshelf Speakers').
+# • Dodata funkcija to_title_case za konverziju handle-a u naslov.
 # • Ažuriran CODE_VERSION.
 # =============================================
 
@@ -24,7 +23,7 @@ from urllib.parse import urljoin
 from PIL import Image
 from io import BytesIO
 
-CODE_VERSION = "v1.5.6"
+CODE_VERSION = "v1.5.9"
 LOG_FILE = "qacoustics_production.log"
 OUTPUT_JSON = "qacoustics_products.json"
 MAIN_URL = "https://www.qacoustics.com"
@@ -35,6 +34,17 @@ scraper = cloudscraper.create_scraper(
     browser={'browser': 'chrome', 'platform': 'windows', 'mobile': False},
     delay=15
 )
+
+# === POMOĆNA FUNKCIJA ZA FORMATIRANJE HANDLE-A ===
+def to_title_case(handle):
+    """
+    Konvertuje handle iz URL-a (npr. 'bookshelf-speakers') u format naslova 
+    (npr. 'Bookshelf Speakers').
+    """
+    if not handle:
+        return "Nepoznata Kategorija"
+    # Zamena crtica razmacima i kapitalizacija svake reči
+    return handle.replace('-', ' ').title()
 
 # === MAPIRANJE BOJA ZA PRONALAŽENJE SLIKE ===
 # Ključ je normalizovan naziv boje. Vrednost je lista ključnih reči za pretragu u URL-u.
@@ -216,26 +226,48 @@ def get_brand_logo():
     except: pass
     return "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915"
 
-# === KATEGORIJE ===
+# === KATEGORIJE (AŽURIRANO u v1.5.9) ===
 def get_categories():
-    logging.info("Dohvatanje kategorija...")
+    logging.info("Dohvatanje kategorija iz URL-a (handle)...")
     cats = {}
     try:
         r = scraper.get(COLLECTIONS_URL, timeout=15)
         r.raise_for_status()
         soup = BeautifulSoup(r.text, 'html.parser')
+        
+        # Održavamo samo generičke nazive koji nisu prave kategorije proizvoda
+        blocked = ['all','shop','new','sale','spares', 'q acoustics 3000c range', 'concept range', 'concept series']
+        
         for a in soup.select('a[href*="/collections/"]'):
             href = a.get('href')
-            name = a.get_text(strip=True)
-            if not href or not name or '/products/' in href: continue
-            blocked = ['all','shop','new','sale','spares','3000i','3000c','5000','q acoustics 3000c range','concept range','concept series']
-            if any(b in name.lower() for b in blocked): continue
+            
+            if not href or '/products/' in href: continue
+            
+            url_handle = href.split('/collections/')[-1].split('?')[0].lower()
+            
+            # Provera da li je handle blokiran
+            is_blocked = False
+            for b in blocked:
+                if b in url_handle:
+                    is_blocked = True
+                    break
+            
+            if is_blocked:
+                logging.debug(f"Preskačem blokirani handle: {url_handle}")
+                continue
+                
+            # === KLJUČNA PROMENA: KORIŠTENJE HANDLE-A ZA NAZIV KATEGORIJE ===
+            name = to_title_case(url_handle)
             full = urljoin(COLLECTIONS_URL, href).split('?')[0]
+            
             if full not in cats.values():
                 cats[name] = full
-        logging.info(f"Pronađeno {len(cats)} kategorija: {', '.join(cats.keys())}")
+                
+        logging.info(f"Pronađeno {len(cats)} kategorija (iz URL-a): {', '.join(cats.keys())}")
+        
     except Exception as e:
         logging.error(f"Greška kategorije: {e}")
+        
     return cats
 
 # === JSON API ===
@@ -368,8 +400,16 @@ def parse_html(soup, json_data, handle):
     bc = soup.select_one('nav.breadcrumb, .breadcrumbs')
     if bc:
         links = bc.find_all('a')
-        if links: cat = links[-1].get_text(strip=True).title()
-
+        if links: 
+            # Koristimo handle poslednjeg linka, ne tekst linka, za kategoriju proizvoda
+            last_link = links[-1].get('href', '')
+            if '/collections/' in last_link:
+                # Izvlačenje handle-a
+                url_handle = last_link.split('/collections/')[-1].split('?')[0]
+                cat = to_title_case(url_handle)
+            else:
+                cat = links[-1].get_text(strip=True).title() # Fallback na tekst
+            
     return opis or "Opis nedostupan", specs, cat
 
 # === LINKOVI IZ KOLEKCIJE ===
@@ -474,6 +514,7 @@ def scrape_product(product_url, logo, coll_name):
     title = data.get('title', 'Nepoznato')
     variants = data.get('variants', [])
     
+    # Prva varijanta se koristi za cenu i SKU, jer se na Q Acoustics obicno varijacije odnose na boju/duzinu
     price = f"${float(variants[0]['price']):,.2f}" if variants and variants[0].get('price') else "$0.00"
     sku = variants[0].get('sku', '') if variants else ''
     title_lower = title.lower()
@@ -555,22 +596,13 @@ def main():
         existing_data, existing_handles = load_existing_data()
         logo = get_brand_logo()
         cats = get_categories()
+        
         if not cats:
             logging.critical("NEMA KATEGORIJA – PREKID")
             return
 
         new = []
         count = 0
-
-        initial_categories = {
-            "3000i Range": f"{MAIN_URL}/collections/3000i-range",
-            "5000 Range": f"{MAIN_URL}/collections/5000-range",
-            "Concept Range": f"{MAIN_URL}/collections/concept-series",
-            "Subwoofers": f"{MAIN_URL}/collections/subwoofers"
-        }
-        for name, url in initial_categories.items():
-            if name not in cats:
-                cats[name] = url
 
         for name, url in cats.items():
             if count >= MAX_PRODUCTS: break
