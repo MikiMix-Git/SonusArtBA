@@ -6,7 +6,13 @@
         "cena": "$799.00 / pair",
         "opis": "The R200 large bookshelf speakers feature a 6.5\" mid woofer and 1\" tweeter delivering extra bass and superior high frequency sound to your home.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/bookshelf/reserve-r200/300029.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4c35eed4/polk/PDP_Images/Home-Speakers/Bookshelf/Reserve/Reserve-R200-Black/Reserve-R200-Black_Image_pair-angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7659a5b4/polk/PDP_Images/Home-Speakers/Bookshelf/Reserve/Reserve-R200-Black/Reserve-R200-Black_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw0ae1897b/polk/PDP_Images/Home-Speakers/Bookshelf/Reserve/Reserve-R200-Black/Reserve-R200-Black_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3592b871/polk/PDP_Images/Home-Speakers/Bookshelf/Reserve/Reserve-R200-Black/Reserve-R200-Black_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf5a4eaa2/polk/PDP_Images/Home-Speakers/Bookshelf/Reserve/Reserve-R200-Black/Reserve-R200-Black_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Standmount",
             "UOM (Sold As)": "Pair",
@@ -62,7 +68,13 @@
         "opis": "Polk MagniFi Max AX Soundbar with 10\" Wireless Subwoofer: Enjoy immersive Dolby Atmos and DTS:X with Polk's SDA technology. Free shipping direct from Polk.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/system-products/magnifi-max-ax/300542.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3c3a923d/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_sound-bar-subwoofer-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6cafbb38/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_sound-bar-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5a18f30f/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_sound-bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd90b57a6/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_subwoofer-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe0b42850/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_remote.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb9220d01/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX_Lifestyle_3.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6e75efd0/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX_Lifestyle_2.jpg?sw=2160"
         ],
         "specifikacije": {
             "Total Pieces": "2",
@@ -111,7 +123,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -124,7 +136,11 @@
         "cena": "$729.00",
         "opis": "Shop the 80 F/X-LS Vanishing In-Ceiling Speaker with 8\" Driver, Timbre-matched to the LSiM Series. Shop direct with Polk and get free shipping.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-ceiling/80-fx-ls/112792.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa16e0250/polk/PDP_Images/Built-In/In-Ceiling/Luxury-Series/80FX-LS/80FX-LS_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8dc4d6ee/polk/PDP_Images/Built-In/In-Ceiling/Luxury-Series/80FX-LS/80FX-LS_Image_grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe5cf15ae/polk/PDP_Images/Built-In/In-Ceiling/Luxury-Series/80FX-LS/80FX-LS_Image_angle-right-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Polk’s Wafer-thin Sheer Grille™ - White, Paintable",
@@ -166,7 +182,15 @@
         "cena": "$449.00 / pair",
         "opis": "The Atrium6 all-weather outdoor speakers feature a 5.25\" mid woofer and 1\" tweeter to easily fill large spaces with high-quality sound. Learn more.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/outdoor-speakers/atrium-6/112616.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5cf30f19/polk/PDP_Images/Outdoor/Atrium/Atrium-6-Black/Atrium-6-Black_Image_angle-left-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw1f7be82c/polk/PDP_Images/Outdoor/Atrium/Atrium-6-Black/Atrium-6-Black_Image_angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw10305265/polk/PDP_Images/Outdoor/Atrium/Atrium-6-Black/Atrium-6-Black_Image_side.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw30e244d0/polk/PDP_Images/Outdoor/Atrium/Atrium-6-Black/Atrium-6-Black_Image_side-2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8f9d7d1e/polk/PDP_Images/Outdoor/Atrium/Atrium-6-Black/Atrium-6-Black_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw09e9fa6e/polk/PDP_Images/Outdoor/Atrium/Atrium-6-Black/Atrium-6-Black_Image_closeup.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc1d492a1/polk/PDP_Images/Outdoor/Atrium/Atrium-6-Black/Atrium-6-Black_Image_in-situ.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Cabinet Warranty": "5 Years - Original Purchaser Only",
@@ -214,7 +238,11 @@
         "cena": "$279.00",
         "opis": "The MM6502 6.5\" component speaker system is marine certified and provides an upgrade beyond the factory set up in your car, boat, motorcycle or ATV.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/mm6502/112438.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwca93bc9b/polk/PDP_Images/Car-Marine/MM1/MM6502/MM6502_Image-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc81f8f3f/polk/PDP_Images/Car-Marine/MM1/MM6502/MM6502_Image_pair.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa4cd3bf2/polk/PDP_Images/Car-Marine/MM1/MM6502/MM6502_AF_Product-back.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Included Accessories": "• (2) Grilles• (2) Mounting Hardware• (2) Wiring Harness• (2) Plastic Adapters• (2) Surface & Flush Mounting Kits",
@@ -256,7 +284,15 @@
         "opis": "Polk Signa S2D Sound Bar with Wireless Subwoofer. Enjoy Dolby Digital Surround Sound and wireless music streaming. Shop direct with Polk and get free shipping.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/system-products/signa-s2d/300731.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7c4856f8/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/signa-s2d_image_1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwaa748983/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3c39e108/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4094285c/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-closeup-2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3d07171f/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw909ce653/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_sub-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw87844bc8/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwab334abb/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_5050_prod-insitu-familyroom.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw83f16a5e/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_USP_prod-lifestyle-tv-stand.jpg?sw=2160"
         ],
         "specifikacije": {
             "Total Pieces": "2",
@@ -286,7 +322,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -299,7 +335,15 @@
         "cena": "$699.00",
         "opis": "Bring amazing audio into your home with the Reserve R400 Center Channel Speakers. Expect Great Sound™ with Polk. Click to learn more.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/center-channel/reserve-r400/300032.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw67305f4e/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R400-Black/Reserve-R400-Black_Image_angle-right-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9ffdddbd/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R400-Black/Reserve-R400-Black_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4117efbb/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R400-Black/Reserve-R400-Black_Image_front-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwaef9d732/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R400-Black/Reserve-R400-Black_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw92d55425/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R400-Black/Reserve-R400-Black_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd1ca05e4/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R400-Black/Reserve-R400-Black_Image_in-situ1.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc871ea6e/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R400-Black/Reserve-R400-Black_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Performance Center Channel",
             "UOM (Sold As)": "Each",
@@ -350,7 +394,16 @@
         "cena": "$599.00 / pair",
         "opis": "Bring amazing audio to your home with the Reserve R900 Height Module. Experience theatrical sound with Polk. Expect Great Sound™.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/height-modules/reserve-r900/300036.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw36536b12/polk/PDP_Images/Home-Speakers/Height-Module/Reserve/Reserve-R900-White/Reserve-R900-White_Image-pair-angle-left-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3cf67f2d/polk/PDP_Images/Home-Speakers/Height-Module/Reserve/Reserve-R900-White/Reserve-R900-White_Image-pair-angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw160cefbe/polk/PDP_Images/Home-Speakers/Height-Module/Reserve/Reserve-R900-White/Reserve-R900-White_Image-on-top.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcbdbde3b/polk/PDP_Images/Home-Speakers/Height-Module/Reserve/Reserve-R900-White/Reserve-R900-White_Image-bottom.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd20b0209/polk/PDP_Images/Home-Speakers/Height-Module/Reserve/Reserve-R900-White/Reserve-R900-White_Image-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw173dce2b/polk/PDP_Images/Home-Speakers/Height-Module/Reserve/Reserve-R900-White/Reserve-R900-White_Image-pair-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe67444a0/polk/PDP_Images/Home-Speakers/Height-Module/Reserve/Reserve-R900-White/Reserve-R900-White_Image-pair-front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8ca0ca20/polk/PDP_Images/Home-Speakers/Height-Module/Reserve/Reserve-R900-White/Reserve-R900-White_Image_in-situ.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Height Module",
             "UOM (Sold As)": "Pair",
@@ -405,7 +458,15 @@
         "cena": "$499.00",
         "opis": "Bring amazing audio into your home with the Reserve R300 Center Channel Speakers. Expect Great Sound™ with Polk. Click to learn more.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/center-channel/reserve-r300/300030.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw0221b1ef/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R300-Black/Reserve-R300-Black_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb6582ffd/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R300-Black/Reserve-R300-Black_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw32066436/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R300-Black/Reserve-R300-Black_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd40c720b/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R300-Black/Reserve-R300-Black_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd6f0fcee/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R300-Black/Reserve-R300-Black_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw20a2e818/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R300-Black/Reserve-R300-Black_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwff5bc24e/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R300-Black/Reserve-R300_USP_prod-lifestyle-living-room.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Compact Center Channel",
             "UOM (Sold As)": "Each",
@@ -456,7 +517,18 @@
         "cena": "$449.00 / each",
         "opis": "The Signature Elite ES55 floor standing speaker features a 1\" tweeter and two 6.5\" drivers to enhance your music, movies and gaming experiences.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/floor-standing/signature-elite-es55/300368.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd4a5f779/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw0f8b15b8/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4a17dd37/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5afe73cc/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb1b52510/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw91ae3b43/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_closeup-bottom.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8446aa06/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw2eab9e49/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_closeup-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwaf9f3a09/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb869f2f5/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES55-White/Signature-Elite-ES55-White_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Quantity Included": "1",
             "Height": "41.5\" (105.41 cm)",
@@ -502,7 +574,16 @@
         "cena": "$299.00",
         "opis": "The Signature Elite ES30 center channel speaker features a 1\" tweeter and two 5.25\" drivers to enhance your music, movies and gaming experiences.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/center-channel/signature-elite-es30/300365.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7566edb5/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES30-White/Signature-Elite-ES30-White_Image_front-stand.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf52c482d/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES30-White/Signature-Elite-ES30-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw62980c26/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES30-White/Signature-Elite-ES30-White_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw03c0c777/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES30-White/Signature-Elite-ES30-White_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe3757db4/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES30-White/Signature-Elite-ES30-White_Image_closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw1ecb9da7/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES30-White/Signature-Elite-ES30-White_Image_closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwbd1c3a6f/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES30-White/Signature-Elite-ES30-White_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwed83b5a4/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES30-White/Signature-Elite-ES30-White_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Frequency Response": "55 Hz → 40 kHz",
             "Depth": "10.6\" (26.92 cm)",
@@ -540,49 +621,21 @@
         }
     },
     {
-        "ime_proizvoda": "Monitor XT60",
-        "sku": "300146-01-00-005",
-        "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
-        "cena": "$185.00 / eachMSRP:Price reduced from$229.00",
-        "opis": "The Monitor XT60 tower speaker features a 1\" tweeter, a 6.5\" woofer & two 6.5\" bass radiators which is best for serious movie and music enthusiasts.",
-        "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/floor-standing/monitor-xt60/300146-new.html",
-        "url_slika": [],
-        "specifikacije": {
-            "Qty Included": "1",
-            "Width": "7.5\" (19.05cm)",
-            "Height": "36.4\" (92.5cm)",
-            "Depth": "9.09\" (23.08cm)",
-            "Weight": "20Ibs/9.07kg",
-            "Driver Complement": "• (1) 1\" (2.54 cm) Terylene Dome Tweeter• (1) 6.5\" (16.51 cm) Bi-laminate Paper Woofer",
-            "Bass Radiators": "(2) 6.5\" (16.51cm) Passive Bass Radiators",
-            "Crossover Frequency": "2200 Hz",
-            "Sensitivity (1 watt @ 1 meter)": "86 dB",
-            "Total Frequency Response": "38Hz → 40,000Hz",
-            "Recommended Amplifier Power Per Channel": "25 watts → 200 watts",
-            "Impedance": "Compatible with 4- and 8-ohm outputs",
-            "Speaker Inputs": "(1) Pair of 5-way nickel plated binding posts",
-            "Mounting Type": "1/4\" 20 Threaded Insert or Keyhole Hanger"
-        },
-        "kategorije": "Home Speakers",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                }
-            ],
-            "dostupne_dužine": []
-        }
-    },
-    {
         "ime_proizvoda": "Monitor XT15",
         "sku": "300147-01-00-005",
         "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
-        "cena": "$149.00 / pairMSRP:Price reduced from$179.00",
+        "cena": "$179.00 / pair",
         "opis": "The Monitor XT15 bookshelf speakers feature a 1\" tweeter and a 5.25\" woofer that maximize movies and music with high-res sound and effortless bass.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/satellite-surround/monitor-xt15/300147.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5cffae86/polk/PDP_Images/Home-Speakers/Bookshelf/Monitor-XT/Monitor-XT15-Black/Monitor-XT15-Black_Image_pair-front-angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd69d6119/polk/PDP_Images/Home-Speakers/Bookshelf/Monitor-XT/Monitor-XT15-Black/Monitor-XT15-Black_Image_pair-angle-right-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw63f8eae2/polk/PDP_Images/Home-Speakers/Bookshelf/Monitor-XT/Monitor-XT15-Black/Monitor-XT15-Black_Image_pair-front-straight-on-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwda84fa34/polk/PDP_Images/Home-Speakers/Bookshelf/Monitor-XT/Monitor-XT15-Black/Monitor-XT15-Black_Image_pair-straight-on-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8ca04ee6/polk/PDP_Images/Home-Speakers/Bookshelf/Monitor-XT/Monitor-XT15-Black/Monitor-XT15-Black_Image_pair-front-straight-on-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd492c877/polk/PDP_Images/Home-Speakers/Bookshelf/Monitor-XT/Monitor-XT15-Black/Monitor-XT15-Black_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw70b53508/polk/PDP_Images/Home-Speakers/Bookshelf/Monitor-XT/Monitor-XT15-Black/Monitor-XT15-Black_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Qty Included": "Pair",
             "Width": "6.5\" (16.51cm)",
@@ -615,7 +668,18 @@
         "cena": "$1,199.00 / each",
         "opis": "Reserve R700 Floor-Standing Speaker | Polk Audio",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/floor-standing/reserve-r700/300035.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7b507a67/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9f2babc4/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw003a822a/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7ca245b5/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7fc91264/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw65f91cb9/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf57fccae/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw14a0f998/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_angle-left-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw1d8c05bd/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw1f3b7c2a/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R700-Black/Reserve-R700-Black_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Floorstanding Loudspeaker",
             "UOM (Sold As)": "Each",
@@ -666,7 +730,12 @@
         "cena": "$899.00",
         "opis": "The 12\" Signature Elite ES12 subwoofer enhances the largest home-theater and music systems. Equipped with a robust Class D amplifier, Power Port™ technology, and Time-Smart Phase Control, the ES12 delivers impactful bass with unparalleled precision. Its sleek cabinet complements Signature Elite systems and fits anywhere.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/subwoofers/signature-elite-es12/300885.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd8115373/polk/PDP_Images/Home-Speakers/Subwoofer/ES12_SUB/Signature-Elite-Sub-ES12_Buystack_745502-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwba24f196/polk/PDP_Images/Home-Speakers/Subwoofer/ES12_SUB/Signature-Elite-Sub-ES12_Buystack_745502.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw91ddc949/polk/PDP_Images/Home-Speakers/Subwoofer/ES12_SUB/Signature-Elite-Sub-ES12_Buystack_745502-2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw32160043/polk/PDP_Images/Home-Speakers/Subwoofer/ES12_SUB/Signature-Elite-Sub-ES12_Buystack_745502-3.png?sw=2160"
+        ],
         "specifikacije": {
             "Technical features": "12\" mineral-filled polypropylene cone woofer, Dual Power Port®",
             "Audio Inputs": "LFE (RCA), Stereo line level (2 RCA)",
@@ -696,7 +765,17 @@
         "cena": "$899.00 / each",
         "opis": "The Reserve R600 Dolby Atmos 5.1.2 Gold Home Theater System elegantly balances premium Hi-Fi quality and design with powerful 3D surround sound performance.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/floor-standing/reserve-r600/300034.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwef410b48/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R600-White/Reserve-R600-White_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwdbe2ca98/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R600-White/Reserve-R600-White_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw007c935e/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R600-White/Reserve-R600-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4f74270e/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R600-White/Reserve-R600-White_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe5b82451/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R600-White/Reserve-R600-White_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf446bea1/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R600-White/Reserve-R600-White_Image_angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa430f7d1/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R600-White/Reserve-R600-White_Image_angle-left-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw17a9d871/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R600-White/Reserve-R600-White_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw2a495e34/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R600-White/Reserve-R600-White_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Floorstanding Loudspeaker",
             "UOM (Sold As)": "Each",
@@ -751,7 +830,17 @@
         "cena": "$699.00 / each",
         "opis": "Reserve R500 Floor-Standing Speaker | Polk Audio",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/floor-standing/reserve-r500/300033.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwbb7d213e/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R500-White/Reserv-R500-White_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw98f3db83/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R500-White/Reserv-R500-White_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3d22b1ca/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R500-White/Reserv-R500-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9023d92c/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R500-White/Reserv-R500-White_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw1e2744e7/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R500-White/Reserv-R500-White_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc5376ac2/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R500-White/Reserv-R500-White_Image_angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw36a1482b/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R500-White/Reserv-R500-White_Image_angle-left-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw50cd2da1/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R500-White/Reserve-R500-White_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw92c7bb62/polk/PDP_Images/Home-Speakers/Floor-Standing/Reserve/Reserve-R500-White/Reserve-R500-White_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Floorstanding Loudspeaker",
             "UOM (Sold As)": "Each",
@@ -806,7 +895,12 @@
         "cena": "$699.00",
         "opis": "This versatile 10\" subwoofer enhances low-end performance of midsize home-theater and music systems with a robust amplifier, Power Ports, and advanced controls. Equipped with a robust Class D amplifier, Power Port technology, and Time-Smart Phase Control, the ES10 subwoofer delivers balanced, impactful bass with unparalleled precision. Its sleek cabinet complements Signature Elite systems and fits anywhere.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/subwoofers/signature-elite-es10/300884.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa7a4ccf5/polk/PDP_Images/Home-Speakers/Subwoofer/ES10_SUB/Signature-Elite-Sub-ES10_Buystack_745453-2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa9b5ed39/polk/PDP_Images/Home-Speakers/Subwoofer/ES10_SUB/Signature-Elite-Sub-ES10_Buystack_745453.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwfb9f5ee5/polk/PDP_Images/Home-Speakers/Subwoofer/ES10_SUB/Signature-Elite-Sub-ES10_Buystack_745453-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw57928f96/polk/PDP_Images/Home-Speakers/Subwoofer/ES10_SUB/Signature-Elite-Sub-ES10_Buystack_745453-4.png?sw=2160"
+        ],
         "specifikacije": {
             "Technical Features": "10\" mineral-filled polypropylene cone woofer, Dual Power Port®",
             "Audio Inputs": "LFE (RCA), Stereo line level (2 RCA)",
@@ -836,7 +930,12 @@
         "cena": "$699.00 / pair",
         "opis": "The Reserve R100 features a pair of compact premium bookshelf speakers with a smooth midrange and detail, effortless bass and exceptional value.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/bookshelf/reserve-r100/300028.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw726a324f/polk/PDP_Images/Home-Speakers/Bookshelf/Reserve/Reserve-R100-White/Reserve-R100-White_Image_pair-angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw191dbeb7/polk/PDP_Images/Home-Speakers/Bookshelf/Reserve/Reserve-R100-White/Reserve-R100-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9afc2f48/polk/PDP_Images/Home-Speakers/Bookshelf/Reserve/Reserve-R100-White/Reserve-R100-White_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd03172ca/polk/PDP_Images/Home-Speakers/Bookshelf/Reserve/Reserve-R100-White/Reserve-R100-White_Image_back.png?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Standmount (Bookshelf)",
             "UOM (Sold As)": "Pair",
@@ -890,7 +989,14 @@
         "cena": "$649.00",
         "opis": "The Polk Reserve R350 slim center channel speaker is the perfect discrete speaker for your home theater. This compact 5” unit can fit almost anywhere. With a 1” Pinnacle tweeter and four 4” Turbine woofers, you get clear, crisp vocals for your favorite movies and shows. With exceptional versatility, the R350 is also a left/center/right speaker, so you can use up to three units as your front stage.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/center-channel/reserve-r350/300031.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4a5b9b08/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R350-White/Reserve-R350-White_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6e7becfe/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R350-White/Reserve-R350-White_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw12bb863d/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R350-White/Reserve-R350-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6efec96f/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R350-White/Reserve-R350-White_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa0729642/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R350-White/Reserve-R350-White_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9830a915/polk/PDP_Images/Home-Speakers/Center-Channel/Reserve/Reserve-R350-White/Reserve-R350-White_Image_in-situ.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Low Profile L/C/R Center Channel(Use as Left, center or right)",
             "UOM (Sold As)": "Each",
@@ -945,7 +1051,17 @@
         "cena": "$599.00 / each",
         "opis": "The Signature Elite ES60 floor standing speaker features a 1\" tweeter and three 6.5\" drivers to enhance your music, movies and gaming experiences.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/floor-standing/signature-elite-es60/300369.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw01a372da/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES60-White/Signature-Elite-ES60-White_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw31628fa9/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES60-White/Signature-Elite-ES60-White_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc1bbe862/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES60-White/Signature-Elite-ES60-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw200bd8cd/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES60-White/Signature-Elite-ES60-White_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9954fe2f/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES60-White/Signature-Elite-ES60-White_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc7acd079/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES60-White/Signature-Elite-ES60-White_Image_angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd16e1914/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES60-White/Signature-Elite-ES60-White_Image_closeup-bottom.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwca6dbec3/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES60-White/Signature-Elite-ES60-White_Image_closeup-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8dbb7ce3/polk/PDP_Images/Home-Speakers/Floor-Standing/Signature-Elite/Signature-Elite-ES60-White/Signature-Elite-ES60-White_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Sensitivity (2.83V @ 1m)": "90 dB",
             "Total Frequency Response": "32 Hz → 40 kHz",
@@ -988,7 +1104,13 @@
         "cena": "$449.00",
         "opis": "The Signature Elite ES8 8\" subwoofer enhances the low-end performance of compact home-theater systems. Equipped with a robust Class D amplifier, Power Port technology, and Time-Smart Phase Control, the ES10 subwoofer delivers balanced, impactful bass with unparalleled precision. Its sleek cabinet complements Signature Elite systems and fits anywhere.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/subwoofers/signature-elite-es8/300883.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb5ef6a4f/polk/PDP_Images/Home-Speakers/Subwoofer/ES08_SUB/Signature-Elite-Sub-ES8_Buy-Stack_745403-3.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw853c8442/polk/PDP_Images/Home-Speakers/Subwoofer/ES08_SUB/Signature-Elite-Sub-ES8_Buy-Stack_745403-2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7ecd414f/polk/PDP_Images/Home-Speakers/Subwoofer/ES08_SUB/Signature-Elite-Sub-ES8_Buy-Stack_745403.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe3db9122/polk/PDP_Images/Home-Speakers/Subwoofer/ES08_SUB/Signature-Elite-Sub-ES8_Buy-Stack_745403-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwafbf13c3/polk/PDP_Images/Home-Speakers/Subwoofer/ES08_SUB/Signature-Elite-Sub-ES8_Buy-Stack_745403-4.png?sw=2160"
+        ],
         "specifikacije": {
             "Technical features": "8\" mineral-filled polypropylene cone woofer, Power Port ®",
             "Audio Inputs": "LFE (RCA), Stereo line level (2 RCA)",
@@ -1018,7 +1140,12 @@
         "cena": "$449.00 / pair",
         "opis": "Add Dolby Atmos-certified height modules to Signature Elite ES20, ES55, and ES60 and Signature S20, S55, and S60 speakers to elevate immersive home theater experiences with lifelike overhead sound.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/height-modules/signature-elite-es90/300849.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw0bae1ea9/polk/PDP_Images/Home-Speakers/Height-Module/Signature Elite/ES90-Black/Signature-Elite-ES90_image_front-grille_na.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd4537fea/polk/PDP_Images/Home-Speakers/Height-Module/Signature Elite/ES90-Black/Signature-Elite-ES90_image_front-grille_na-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw63aac1c3/polk/PDP_Images/Home-Speakers/Height-Module/Signature Elite/ES90-Black/Signature-Elite-ES90_image_front-grille_na-2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw2674cde7/polk/PDP_Images/Home-Speakers/Height-Module/Signature Elite/ES90-Black/Signature-Elite-ES90_image_front-grille_na-3.png?sw=2160"
+        ],
         "specifikacije": {
             "Speaker Type": "Height (topper)",
             "Quantity Included": "Pair",
@@ -1054,6 +1181,57 @@
         }
     },
     {
+        "ime_proizvoda": "Signature Elite ES20",
+        "sku": "300364-03-00-005",
+        "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
+        "cena": "$399.00 / pair",
+        "opis": "The Signature Elite ES20 bookshelf speaker features a 1\" terylene tweeter and a 6.5\" driver to enhance your music, movies and gaming experiences.",
+        "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/bookshelf/signature-elite-es20/300364.html",
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw1927ecb7/polk/PDP_Images/Home-Speakers/Bookshelf/Signature-Elite/Signature-Elite-ES20-White/Signature-Elite-ES20-White_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwfa632b55/polk/PDP_Images/Home-Speakers/Bookshelf/Signature-Elite/Signature-Elite-ES20-White/Signature-Elite-ES20-White_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw72bb14b7/polk/PDP_Images/Home-Speakers/Bookshelf/Signature-Elite/Signature-Elite-ES20-White/Signature-Elite-ES20-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw025b2946/polk/PDP_Images/Home-Speakers/Bookshelf/Signature-Elite/Signature-Elite-ES20-White/Signature-Elite-ES20-White_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw84ff2980/polk/PDP_Images/Home-Speakers/Bookshelf/Signature-Elite/Signature-Elite-ES20-White/Signature-Elite-ES20-White_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa6f0525e/polk/PDP_Images/Home-Speakers/Bookshelf/Signature-Elite/Signature-Elite-ES20-White/Signature-Elite-ES20-White_Image_closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw28f8a45e/polk/PDP_Images/Home-Speakers/Bookshelf/Signature-Elite/Signature-Elite-ES20-White/Signature-Elite-ES20_5050_prod-insitu-closeup.jpg?sw=2160"
+        ],
+        "specifikacije": {
+            "Quantity Included": "Pair",
+            "Height": "14.8\" (37.59 cm)",
+            "Width": "8.5\" (21.59 cm)",
+            "Depth": "13.8\" (35.05 cm)",
+            "Weight": "17 lbs (7.71 kg)",
+            "Driver Complement": "• (1) 1\" (2.54 cm) d (Round) Terylene High-Res Dome Tweeter• (1) 6.5\" (16.51 cm) d (Round) Dynamic Balance Mica Reinforced Polypropylene Driver",
+            "Driver Enclosure Type": "PowerPort Bass Vented",
+            "Total Frequency Response": "41 Hz → 40 kHz",
+            "Sensitivity (2.83V @1m)": "86 dB",
+            "Recommended Amplifier Power Per Channel": "20 watts → 125 watts",
+            "Crossover Frequency": "2.4 kHz",
+            "Impedance": "Compatible with 4 and 8 ohm outputs",
+            "Inputs": "(1) Pair of 5-way Binding Posts - Gold Plated"
+        },
+        "kategorije": "Home Speakers",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "White",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                },
+                {
+                    "boja": "Brown",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzhCNDUxMyIvPjwvc3ZnPg=="
+                }
+            ],
+            "dostupne_dužine": []
+        }
+    },
+    {
         "ime_proizvoda": "Signa S4",
         "sku": "300443-01-00-101",
         "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
@@ -1061,7 +1239,16 @@
         "opis": "Polk Signa S4 Soundbar with Dolby Atmos 3.1.2 and wireless subwoofer. Enjoy immersive sound with this award-winning soundbar. Free shipping direct from Polk.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/sound-bars/signa-s4/300443-new.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw93786ea7/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/signa-s4_image_1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe3d70621/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/Signa-S4_Image_bar-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwabc8e3e3/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/Signa-S4_Image_bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6d1e424f/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/Signa-S4_Image_bar-closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9b95c882/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/Signa-S4_Image_bar-closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf6621c9d/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/Signa-S4_Image_sub-angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa0174648/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/Signa-S4_Image_sub-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwad7a2ca4/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/Signa-S4_Image_sub-bottom.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwfc0a7f1c/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/Signa-S4_Image_remote.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf89fb85c/polk/PDP_Images/Sound-Bars/Signa/Signa-S4/Signa-S4_Image_in-situ.jpg?sw=2160"
         ],
         "specifikacije": {
             "Sound Bar": "L/R Tweeter: (2) 1” / 25mm (Round)L/R Mid: (2) 4.7 x 1.6” / 120mm x 40mm (Racetrack)Full Range Center: (1) 1” / 25mm (Round)L/R Elevation: (2) 2.6” / 66mm (Round)",
@@ -1082,7 +1269,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1096,7 +1283,14 @@
         "opis": "The React sound bar features big, detailed, virtual surround sound with Alexa built-in. Control the volume and adjust sound modes with your voice.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/sound-bars/react-sound-bar/300045-new.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw30643959/polk/PDP_Images/Sound-Bars/React/React-Bar/react-bar_image_1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwff8e7450/polk/PDP_Images/Sound-Bars/React/React-Bar/React-Bar_Image_bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd48d26b0/polk/PDP_Images/Sound-Bars/React/React-Bar/React-Bar_Image_bar-closeup-top.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw1e562944/polk/PDP_Images/Sound-Bars/React/React-Bar/React-Bar_Image_bar-closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6bac8194/polk/PDP_Images/Sound-Bars/React/React-Bar/React-Bar_Image_sub-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd25d55f4/polk/PDP_Images/Sound-Bars/React/React-Bar/React-Bar_Image_remote.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw826665f8/polk/PDP_Images/Sound-Bars/React/React-Bar/React-Bar_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf37e33ec/polk/PDP_Images/Sound-Bars/React/React-Bar/React-Bar_Image_in-situ2.jpg?sw=2160"
         ],
         "specifikacije": {
             "Inputs": "(1) HDMI (ARC) output, optical input forTV audio, Bluetooth, (1) USB-A (for firmware updates), Bluetooth",
@@ -1113,7 +1307,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1127,7 +1321,15 @@
         "opis": "Polk MagniFi Max AX SR Sound Bar & Wireless Speakers: Dolby Atmos, DTS:X, & Voice Adjust for crystal clear dialog. Shop direct with Polk and get free shipping.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/sound-bars/magnifi-series/magnifi-max-ax-sr/300543-new.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw23ebfd0a/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-SR-Black/Magnifi-Max-AX-SR_Image_Group.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dweb1200ee/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-SR-Black/Magnfi-Max-AX-SR_Image_Sound-Bar-Back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6e6b424d/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-SR-Black/Magnifi-Max-AX-SR_Image_Sound-Bar-Closeup.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwad194ab2/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-SR-Black/Magnifi-Max-AX-SR-Black_Image_sound-bar-back-close-up.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwfee3bbad/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-SR-Black/Magnfi-Max-AX-SR_Image_Subwoofer.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw33b289ba/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-SR-Black/Magnfi-Max-AX-SR_Image_Subwoofer-Back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb72cc769/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-SR-Black/Magnfi-Max-AX-SR_Image_Remote.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5d9f896e/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-SR-Black/Polk-Magnfi-Max-AX-SR_Image_Lifestyle-1.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw2bc85494/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-SR-Black/Polk-Magnfi-Max-AX-SR_Image_Lifestyle-2.jpg?sw=2160"
         ],
         "specifikacije": {
             "Total Pieces": "4",
@@ -1178,7 +1380,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1192,7 +1394,13 @@
         "opis": "Polk MagniFi Max AX Soundbar with 10\" Wireless Subwoofer: Enjoy immersive Dolby Atmos and DTS:X with Polk's SDA technology. Free shipping direct from Polk.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/sound-bars/magnifi-max-ax/300542-new.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3c3a923d/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_sound-bar-subwoofer-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6cafbb38/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_sound-bar-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5a18f30f/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_sound-bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd90b57a6/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_subwoofer-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe0b42850/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX-Black_Image_remote.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb9220d01/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX_Lifestyle_3.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6e75efd0/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Max-AX-Black/Magnifi-Max-AX_Lifestyle_2.jpg?sw=2160"
         ],
         "specifikacije": {
             "Total Pieces": "2",
@@ -1241,7 +1449,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1255,7 +1463,16 @@
         "opis": "The ultra-compact MagniFi Mini AX sound bar is equipped with an advanced 5-speaker array and down-firing subwoofer to deliver immersive audio playback.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/sound-bars/magnifi-mini-ax/300410-new.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6c46e59d/polk/MagnifiMiniAX_2023.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4f40db06/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_sound-bar-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw48d02be4/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_sound-bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcc9642bc/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_sound-bar-top.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4e8c07d1/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_sound-bar-top-close-up.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb77f2b6f/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_subwoofer-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw64d8e7aa/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_subwoofer-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa78acc4f/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_subwoofer-top-angle-right-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw71bb78db/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_remote.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcc8b8550/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_in-situ.jpg?sw=2160"
         ],
         "specifikacije": {
             "Inputs": "(1) HDMI (eARC)(1) Optical(1) Analog 3.5mm(1) USB-A (for firmware updates)",
@@ -1281,7 +1498,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1295,7 +1512,15 @@
         "opis": "Polk Signa S4D Soundbar with Dolby Atmos and 5.9\" Subwoofer: Enjoy immersive, 360-degree sound with Dolby Atmos. Shop direct with Polk and get free shipping.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/sound-bars/signa-s4d/300732-new.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd96384c6/polk/PDP_Images/Sound-Bars/Signa/Signa-S4D/signa-s4d_image_1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc80145f9/polk/PDP_Images/Sound-Bars/Signa/Signa-S4D/Signa-S4D_Image_bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc67db80a/polk/PDP_Images/Sound-Bars/Signa/Signa-S4D/Signa-S4D_Image_bar-closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6408e272/polk/PDP_Images/Sound-Bars/Signa/Signa-S4D/Signa-S4D_Image_bar-closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3280d7a1/polk/PDP_Images/Sound-Bars/Signa/Signa-S4D/Signa-S4D_Image_sub-angle-left-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw153f2930/polk/PDP_Images/Sound-Bars/Signa/Signa-S4D/Signa-S4D_Image_sub-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwfe868359/polk/PDP_Images/Sound-Bars/Signa/Signa-S4D/Signa-S4D_Image_sub-angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw24d45a65/polk/PDP_Images/Sound-Bars/Signa/Signa-S4D/Signa-S4D_USP_prod-remote.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe625150d/polk/PDP_Images/Sound-Bars/Signa/Signa-S4D/Signa-S4D_Lifestyle_3.jpg?sw=2160"
         ],
         "specifikacije": {
             "Sound Bar": "L/R Tweeter: (2) 1” / 25mm (Round)L/R Mid: (2) 4.7 x 1.6” / 120mm x 40mm (Racetrack)Full Range Center: (1) 1” / 25mm (Round)L/R Elevation: (2) 2.6” / 66mm (Round)",
@@ -1319,7 +1544,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1333,7 +1558,16 @@
         "opis": "The Signa S3 sound bar features two 1.25\" midranges and two 1\" tweeters to deliver a room-filling home theater and music streaming experience.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/sound-bars/signa-s3/300001-new.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw014a8cdf/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/signa-s3_image_1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw068cbe84/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/Signa-S3_Image_bar-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8182101f/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/Signa-S3_Image_bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3a1f7913/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/Signa-S3_Image_bar-closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwef51aed1/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/Signa-S3_Image_bar-closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf4a51b6f/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/Signa-S3_Image_sub-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4c7f97de/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/Signa-S3_Image_sub-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw094b3aef/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/Signa-S3_Image_remote.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4655d0e6/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/Signa-S3_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwffddff46/polk/PDP_Images/Sound-Bars/Signa/Signa-S3/Signa-S3_Image_in-situ2.jpg?sw=2160"
         ],
         "specifikacije": {
             "Total Pieces": "2",
@@ -1362,7 +1596,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1376,7 +1610,15 @@
         "opis": "Polk Signa S2D Sound Bar with Wireless Subwoofer. Enjoy Dolby Digital Surround Sound and wireless music streaming. Shop direct with Polk and get free shipping.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/sound-bars/bluetooth-sound-bars/signa-s2d/300731-new.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7c4856f8/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/signa-s2d_image_1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwaa748983/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3c39e108/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4094285c/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-closeup-2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3d07171f/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw909ce653/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_sub-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw87844bc8/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_Image_bar-closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwab334abb/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_5050_prod-insitu-familyroom.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw83f16a5e/polk/PDP_Images/Sound-Bars/Signa/Signa-S2D/Signa-S2D_USP_prod-lifestyle-tv-stand.jpg?sw=2160"
         ],
         "specifikacije": {
             "Total Pieces": "2",
@@ -1406,7 +1648,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1420,7 +1662,15 @@
         "opis": "The Signa S2 sound bar features two 1.25\" mid-ranges and two 1\" tweeters and includes a 5.25\" wireless woofer for immersive home theater experiences.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/sound-bars/signa-s2/112625-new.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9e190f3b/polk/PDP_Images/Sound-Bars/Signa/Signa-S2/signa-s2_image_1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc6e8c1ca/polk/PDP_Images/Sound-Bars/Signa/Signa-S2/Signa-S2_Image_bar-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw434105da/polk/PDP_Images/Sound-Bars/Signa/Signa-S2/Signa-S2_Image_bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcafed012/polk/PDP_Images/Sound-Bars/Signa/Signa-S2/Signa-S2_Image_bar-closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw95868a22/polk/PDP_Images/Sound-Bars/Signa/Signa-S2/Signa-S2_Image_bar-closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7ceadf93/polk/PDP_Images/Sound-Bars/Signa/Signa-S2/Signa-S2_Image_sub-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw809e0512/polk/PDP_Images/Sound-Bars/Signa/Signa-S2/Signa-S2_Image_remote.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7db5fca2/polk/PDP_Images/Sound-Bars/Signa/Signa-S2/Signa-S2_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw56fac170/polk/PDP_Images/Sound-Bars/Signa/Signa-S2/Signa-S2_Image_in-situ2.jpg?sw=2160"
         ],
         "specifikacije": {
             "Total Pieces": "2",
@@ -1449,7 +1699,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1462,7 +1712,14 @@
         "cena": "$199.00 / pair",
         "opis": "The SR2 speakers adds true wireless surround sound to Polk sound bars with a super-simple setup. Wall mountable or simply place them on a shelf.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/satellite-surround/sr2/300111-new.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb05cb55a/polk/PDP_Images/Home-Speakers/Satellite-Surround/SR2-Wireless-Surrounds/SR2-Wireless-Surrounds_Image_angle-right-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9fe7cab7/polk/PDP_Images/Home-Speakers/Satellite-Surround/SR2-Wireless-Surrounds/SR2-Wireless-Surrounds_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc82c7097/polk/PDP_Images/Home-Speakers/Satellite-Surround/SR2-Wireless-Surrounds/SR2-Wireless-Surrounds_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa4746345/polk/PDP_Images/Home-Speakers/Satellite-Surround/SR2-Wireless-Surrounds/SR2-Wireless-Surrounds_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5065f8b5/polk/PDP_Images/Home-Speakers/Satellite-Surround/SR2-Wireless-Surrounds/SR2-Wireless-Surrounds_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf86ebacb/polk/PDP_Images/Home-Speakers/Satellite-Surround/SR2-Wireless-Surrounds/SR2-Wireless-Surrounds_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Dimensions": "(L)198.9mm x (W)102.9mm x (H)113.5mm(L)7.83” x (W)4.05” x (H)4.47”0.83kg / 1.83lbs",
             "What’s in the Box": "- 2 SR2 Speakers- Power supply x2- Quick Start Guide- Registration Card",
@@ -1489,7 +1746,9 @@
         "cena": "$429.00MSRP:Price reduced from$667.00",
         "opis": "The Polk React 4.1 Surround Sound System combines a React Sound Bar, Subwoofer and SR2 surround sound speakers for a compact home theater with voice control.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/home-theater-systems/react-surround-system/BN1019-SF.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwde69796d/polk/PDP_Images/Home-Speakers/Home-Theater-System/React/React-Surround-System/React-Surround-System_Image_group.png?sw=2160"
+        ],
         "specifikacije": {
             "Brand": "Polk",
             "Quality": "New",
@@ -1517,7 +1776,15 @@
         "cena": "$99.00MSRP:Price reduced from$199.00",
         "opis": "Bring amazing audio into your home with the REACT SUB subwoofer. Expect Great Sound™ with Polk. Click to learn more.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/subwoofers/react-sub/300126-new.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf54e1cd2/polk/PDP_Images/Home-Speakers/Subwoofer/React/React-Sub/React-Sub_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwce7c976e/polk/PDP_Images/Home-Speakers/Subwoofer/React/React-Sub/React-Sub_Image_top-angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw24c43e66/polk/PDP_Images/Home-Speakers/Subwoofer/React/React-Sub/React-Sub_Image_angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe73c318f/polk/PDP_Images/Home-Speakers/Subwoofer/React/React-Sub/React-Sub_Image_top.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw640f924b/polk/PDP_Images/Home-Speakers/Subwoofer/React/React-Sub/React-Sub_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw065a6f10/polk/PDP_Images/Home-Speakers/Subwoofer/React/React-Sub/React-Sub_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dweeed1e47/polk/PDP_Images/Home-Speakers/Subwoofer/React/React-Sub/React-Sub_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Dimensions": "(L)419mm x (W)218mm x (H)348mm(L)16.5” x (W)8.6” x (H)13.7”7.5kg / 16.5lbs",
             "Drivers": "(1) 7” Woofer",
@@ -1545,7 +1812,16 @@
         "opis": "The ultra-compact MagniFi Mini AX sound bar is equipped with an advanced 5-speaker array and down-firing subwoofer to deliver immersive audio playback.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/system-products/magnifi-mini-ax/300410.html",
         "url_slika": [
-            "https://embed-ssl.wistia.com/deliveries/c202c3e5c3868ec7eecbabbf9e31676873474f26.webp?image_crop_resized=640x360"
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6c46e59d/polk/MagnifiMiniAX_2023.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4f40db06/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_sound-bar-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw48d02be4/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_sound-bar-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcc9642bc/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_sound-bar-top.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4e8c07d1/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_sound-bar-top-close-up.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb77f2b6f/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_subwoofer-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw64d8e7aa/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_subwoofer-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa78acc4f/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_subwoofer-top-angle-right-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw71bb78db/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_remote.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcc8b8550/polk/PDP_Images/Sound-Bars/Magnifi/Magnifi-Mini-AX-Black/Magnifi-Mini-AX-Black_Image_in-situ.jpg?sw=2160"
         ],
         "specifikacije": {
             "Inputs": "(1) HDMI (eARC)(1) Optical(1) Analog 3.5mm(1) USB-A (for firmware updates)",
@@ -1571,7 +1847,7 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCABkAGQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
                 }
             ],
             "dostupne_dužine": []
@@ -1584,7 +1860,13 @@
         "cena": "$349.00 / pair",
         "opis": "Shop our outdoor speaker collection to learn more about the Atrium5 All-weather Outdoor Loudspeakers. Expect Great Sound™.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/outdoor-speakers/atrium-5/112598.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw453a4ca3/polk/PDP_Images/Outdoor/Atrium/Atrium-5-White/Atrium-5-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf9599eee/polk/PDP_Images/Outdoor/Atrium/Atrium-5-White/Atrium-5_White_Image_Single_Front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9582aa21/polk/PDP_Images/Outdoor/Atrium/Atrium-5-White/Atrium-5_White_Image_Side.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw17338684/polk/PDP_Images/Outdoor/Atrium/Atrium-5-White/Atrium-5_White_Image_Inside.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa95850b2/polk/PDP_Images/Outdoor/Atrium/Atrium-5-White/Atrium-5_White_Image_Back.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Cabinet Warranty": "5 Years - Original Purchaser Only",
@@ -1632,7 +1914,14 @@
         "cena": "$329.00",
         "opis": "Experience high quality designs with superior sound when choosing 255c-LS Vanishing LS Series In-Wall Center Channel Speaker speakers.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-wall/255c-ls/112773.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7e8652ec/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/255C-LS/255C-LS_Image_front1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7314585d/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/255C-LS/255C-LS_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd7ec0d3b/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/255C-LS/255C-LS_Image_front_with_grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwad23d7da/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/255C-LS/255C-LS_Image_front_angled.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa10802d7/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/255C-LS/255C-LS_Image_back_angled.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw29dcb491/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/255C-LS/255C-LS_Image_details.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Wall Mounting Template• (1) Polk’s Wafer-thin Sheer Grille™ - White, Paintable",
@@ -1676,7 +1965,9 @@
         "cena": "$299.00 / pair",
         "opis": "The RC85i in-wall speaker features a 8\" mid woofer and 1\" tweeter, perfect for applications that demand higher volume levels and deeper bass response.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-wall/rc85i/112726-new.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw404ee42a/polk/PDP_Images/Built-In/In-Wall/RC85i/RC85I_Image_front.png?sw=2160"
+        ],
         "specifikacije": {
             "": "",
             "Perfect for Dolby Atmos & DTS": "X",
@@ -1702,7 +1993,9 @@
         "cena": "$279.00",
         "opis": "Klippel Distortion Optimization for perfect motor structure, voice coil alignment and suspension, delivering the best performance at any volume level.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-wall/v65/112777.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe8e634d0/polk/PDP_Images/Built-In/In-Ceiling/Vanishing-Series/V65/V65_Image_front.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Polk’s Wafer-thin Sheer Grille™ - White, Paintable",
@@ -1745,7 +2038,9 @@
         "cena": "$249.00 / pair",
         "opis": "The value-packed RC65is are ideal for the left and right front or surround channels of an in-wall home theater. You can also use a pair of these with your favorite amp for a music system with minimal visual clutter. A 6-1/2\" woofer and 3/4\" tweeter deliver sweet sound. Team them up with a powered subwoofer for a rockin' 2.1 system.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-ceiling/rc65i/112722.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw404f8ccf/polk/PDP_Images/Built-In/In-Wall/RC65I/RC65I_Image_front-cover-stacked.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Carton 1": "8 lbs (3.63 kg)",
@@ -1778,7 +2073,12 @@
         "cena": "$199.00",
         "opis": "Experience high quality designs with superior sound when choosing 70-RT Vanishing RT Series In-Ceiling Three-Way Loudspeaker speakers. Expect Great Sound™.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-ceiling/70-rt/112762.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8dc23aed/polk/PDP_Images/Built-In/In-Ceiling/Reference-Theater/70-RT/70-RT_Image_front1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwfd3d8f89/polk/PDP_Images/Built-In/In-Ceiling/Reference-Theater/70-RT/70-RT_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw85a9b1ce/polk/PDP_Images/Built-In/In-Ceiling/Reference-Theater/70-RT/70-RT_Image_front_with_grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwba529072/polk/PDP_Images/Built-In/In-Ceiling/Reference-Theater/70-RT/70-RT_Image_side.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Polk’s Wafer-thin Sheer Grille™ - White, Paintable",
@@ -1819,7 +2119,9 @@
         "cena": "$179.00",
         "opis": "Take practically invisible in-ceiling sound practically anywhere in your home, including the bathroom and transitional spaces like porches and sunrooms, with the MC60. Easy to install, the compact, basic MC60 delivers surprising performance without costing a bundle.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-ceiling/mc60/112751-new.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd8c7ae8b/polk/APDP_Images/Archive-Built-In/MC60/MC60_Image_front-cover.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) White Grille, Paintable",
@@ -1859,7 +2161,17 @@
         "cena": "$149.00",
         "opis": "The RC6s in-ceiling speaker delivers both channels of a stereo signal from a single overhead location. It's perfect for a bathroom, kitchen, hallway, or anywhere else that you want great stereo sound from just one hideaway speaker.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/rci-series/rc6s/112782.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw860d8b29/polk/PDP_Images/Built-In/In-Ceiling/RC6S/RC6S_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc763e58f/polk/PDP_Images/Built-In/In-Ceiling/RC6S/RC6S_Image_cover.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd35104f0/polk/PDP_Images/Built-In/In-Ceiling/RC6S/RC6S_Image_angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa20a4b3a/polk/PDP_Images/Built-In/In-Ceiling/RC6S/RC6S_Image_side.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw557d20a8/polk/PDP_Images/Built-In/In-Ceiling/RC6S/RC6S_Image_inside.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa0442060/polk/PDP_Images/Built-In/In-Ceiling/RC6S/RC6S_Image_cover-split.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa693ca5a/polk/PDP_Images/Built-In/In-Ceiling/RC6S/RC6S_Image_closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw56b60ba0/polk/PDP_Images/Built-In/In-Ceiling/RC6S/RC6S_Image_closeup-2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc307214a/polk/PDP_Images/Built-In/In-Ceiling/RC6S/RC6S_Image_in-situ.jpg?sw=2160"
+        ],
         "specifikacije": {
             "": "",
             "Perfect for Dolby Atmos & DTS": "X",
@@ -1885,7 +2197,15 @@
         "cena": "$399.00",
         "opis": "The Signature Elite ES35 center channel speaker features a 1\" tweeter and six 3\" drivers to enhance your music, movies and gaming experiences.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/center-channel/signature-elite-es35/300366.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd043f6e2/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES35-Brown/Signature-Elite-ES35-Brown_Image_front-stand.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe468ef14/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES35-Brown/Signature-Elite-ES35-Brown_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwba005289/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES35-Brown/Signature-Elite-ES35-Brown_Image_front-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc53e4ba5/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES35-Brown/Signature-Elite-ES35-Brown_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4b286148/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES35-Brown/Signature-Elite-ES35-Brown_Image_closeup-back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb6deb98c/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES35-Brown/Signature-Elite-ES35-Brown_Image_in-situ.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw72f53d93/polk/PDP_Images/Home-Speakers/Center-Channel/Signature-Elite/Signature-Elite-ES35-Brown/Signature-Elite-ES35-Brown_Image_in-situ2.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Availability": "US Internationally",
             "Orientation": "Vertical - Horizontal",
@@ -1933,7 +2253,15 @@
         "cena": "$379.00",
         "opis": "Experience high quality designs with superior sound when choosing 265-LS Vanishing LS Series In-Wall Loudspeaker with Dual 6.5",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-wall/265-ls/112790.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8f0ec66d/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/265-LS/265-LS_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw32628110/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/265-LS/265-LS_Image_grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwbe5f25ca/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/265-LS/265-LS_Image_front_2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe390f4dd/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/265-LS/265-LS_Image_back.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw00fe125c/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/265-LS/265-LS_Image-back-angled.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9fb4b132/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/265-LS/265-LS_Image_side.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9b45ec4f/polk/PDP_Images/Built-In/In-Wall/Luxury-Series/265-LS/265-LS_Image_close-up.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Lower and Upper -3dB Limits": "41 Hz → 29,000 Hz",
             "Nominal Impedance": "8 ohms",
@@ -1976,7 +2304,12 @@
         "cena": "$299.00 / each",
         "opis": "Shop our outdoor speaker collection to learn more about the Atrium8 SDI All-weather Outdoor Loudspeakers. Expect Great Sound™.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/outdoor-speakers/atrium-8/112675-new.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw76026976/polk/PDP_Images/Outdoor/Atrium/Atrium-8-White/Atrium-8-White_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe5157483/polk/PDP_Images/Outdoor/Atrium/Atrium-8-White/Atrium-8-White_Image_angle-left.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3b3c2702/polk/PDP_Images/Outdoor/Atrium/Atrium-8-White/Atrium-8-White_Image_side.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5dc5f6fe/polk/PDP_Images/Outdoor/Atrium/Atrium-8-White/Atrium-8-White_Image_back.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Cabinet Warranty": "5 Years - Original Purchaser Only",
@@ -2023,7 +2356,12 @@
         "cena": "$299.00",
         "opis": "Polk V85 8.5\" Rectangular In-Wall Speaker: Perfect for any room with its wafer-thin Sheer-Grille and silk dome tweeter. Shop direct with Polk and get free shipping.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-wall/v85/112781.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa4b8d8f0/polk/PDP_Images/Built-In/In-Wall/Vanishing-Series/V85/V85_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw2185a72b/polk/PDP_Images/Built-In/In-Wall/Vanishing-Series/V85/V85_Image_cover.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6d28b681/polk/PDP_Images/Built-In/In-Wall/Vanishing-Series/V85/V85_Image_closeup-1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9dce4db9/polk/PDP_Images/Built-In/In-Wall/Vanishing-Series/V85/V85_Image_closeup-2.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "•  (1) Polk’s Wafer-thin Sheer Grille™ - White, Paintable",
@@ -2063,7 +2401,14 @@
         "cena": "$279.00",
         "opis": "Experience high quality designs with superior sound when choosing 265-RT Vanishing RT Series In-Wall Loudspeaker speakers. Expect Great Sound™.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-wall/265-rt/112785-new.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw803a6a42/polk/PDP_Images/Built-In/In-Wall/Reference-Theater/265-RT/265-RT_Image-front1.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw2fec7bd3/polk/PDP_Images/Built-In/In-Wall/Reference-Theater/265-RT/265-RT_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe5ec7e40/polk/PDP_Images/Built-In/In-Wall/Reference-Theater/265-RT/265-RT_Image-front_with_grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw21c97ca3/polk/PDP_Images/Built-In/In-Wall/Reference-Theater/265-RT/265-RT_Image-side.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw08d831c1/polk/PDP_Images/Built-In/In-Wall/Reference-Theater/265-RT/265-RT_Image-back-angled.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwdc0724c8/polk/PDP_Images/Built-In/In-Wall/Reference-Theater/265-RT/265-RT_Image_detail.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Polk’s Wafer-thin Sheer Grille™ - White, Paintable",
@@ -2101,13 +2446,112 @@
         }
     },
     {
+        "ime_proizvoda": "Monitor XT35",
+        "sku": "300149-01-00-005",
+        "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
+        "cena": "$279.00",
+        "opis": "The Monitor XT35 is a low-profile center channel speaker that features a 1\" tweeter and four 3\" woofers for hi-res sound that won't block your TV.",
+        "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/monitor-xt35/300149-new.html",
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc88bdf1d/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_front-straight-on-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw66247599/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_front-straight-on-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3e5fe18b/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_front-angle-left-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwffb1488f/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_front-angle-left-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3129b90c/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_back-wall-mount-close-up.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw60182928/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_back-straight-on.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwbf2f107b/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_back-angle-left-powerport-close-up.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa36399fc/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_in-situ.png?sw=2160"
+        ],
+        "specifikacije": {
+            "Qty Included": "1",
+            "Height": "4.15\" (10.60 cm)",
+            "Width": "24.4\" (62.00 cm)",
+            "Depth": "5.55\" (14.10 cm)",
+            "Weight": "14 lbs (6.4 kg)",
+            "Front Array Driver Complement": "• (1) 1\" (2.54 cm) Terylene Dome Tweeter• (4) 3\" (7.62 cm) Bi-laminate Paper Woofers",
+            "Enclosure Type": "Two front ports",
+            "Total Frequency Response": "57 Hz → 40,000 Hz",
+            "Lower and Upper -3dB Limits": "84 Hz → 26,000 Hz",
+            "Recommended Amplifier Power Per Channel": "25 watts → 200 watts",
+            "Sensitivity (1 watt @ 1 meter)": "87dB SPL",
+            "Tweeter/Midrange Crossover Frequency": "2500Hz",
+            "Inputs": "Nickel-plated 5-way binding posts",
+            "Mounting Type": "1/4\" 20 Threaded Insert or Keyhole Hanger",
+            "Wall-Mountable (keyhole slots)": "Yes",
+            "Available Finishes": "Matte black"
+        },
+        "kategorije": "Home",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                }
+            ],
+            "dostupne_dužine": []
+        }
+    },
+    {
+        "ime_proizvoda": "Monitor XT35",
+        "sku": "300149-01-00-005",
+        "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
+        "cena": "$279.00",
+        "opis": "The Monitor XT35 is a low-profile center channel speaker that features a 1\" tweeter and four 3\" woofers for hi-res sound that won't block your TV.",
+        "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/monitor-xt35/300149.html",
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc88bdf1d/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_front-straight-on-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw66247599/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_front-straight-on-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3e5fe18b/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_front-angle-left-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwffb1488f/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_front-angle-left-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw3129b90c/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_back-wall-mount-close-up.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw60182928/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_back-straight-on.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwbf2f107b/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_back-angle-left-powerport-close-up.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa36399fc/polk/PDP_Images/Home-Speakers/Center-Channel/Monitor-XT/Monitor-XT35-Black/Monitor-XT35-Black_Image_in-situ.png?sw=2160"
+        ],
+        "specifikacije": {
+            "Qty Included": "1",
+            "Height": "4.15\" (10.60 cm)",
+            "Width": "24.4\" (62.00 cm)",
+            "Depth": "5.55\" (14.10 cm)",
+            "Weight": "14 lbs (6.4 kg)",
+            "Front Array Driver Complement": "• (1) 1\" (2.54 cm) Terylene Dome Tweeter• (4) 3\" (7.62 cm) Bi-laminate Paper Woofers",
+            "Enclosure Type": "Two front ports",
+            "Total Frequency Response": "57 Hz → 40,000 Hz",
+            "Lower and Upper -3dB Limits": "84 Hz → 26,000 Hz",
+            "Recommended Amplifier Power Per Channel": "25 watts → 200 watts",
+            "Sensitivity (1 watt @ 1 meter)": "87dB SPL",
+            "Tweeter/Midrange Crossover Frequency": "2500Hz",
+            "Inputs": "Nickel-plated 5-way binding posts",
+            "Mounting Type": "1/4\" 20 Threaded Insert or Keyhole Hanger",
+            "Wall-Mountable (keyhole slots)": "Yes",
+            "Available Finishes": "Matte black"
+        },
+        "kategorije": "Home",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
+                }
+            ],
+            "dostupne_dužine": []
+        }
+    },
+    {
         "ime_proizvoda": "Atrium 4",
         "sku": "112577-03-00-001",
         "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
         "cena": "$249.00 / pair",
         "opis": "The Atrium4 all-weather outdoor speakers feature a 4.5\" midwoofer and 3/4\" tweeter in a compact enclosure. Fills large spaces with high-quality sound.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/outdoor-speakers/atrium-4/112577.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7e8a5820/polk/PDP_Images/Outdoor/Atrium/Atrium-4-White/Atrium-4-White_Image_left-angle-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb98acef9/polk/PDP_Images/Outdoor/Atrium/Atrium-4-White/Atrium-4-White_Image_front-right-angle.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw42c39b48/polk/PDP_Images/Outdoor/Atrium/Atrium-4-White/Atrium-4-White_Image_side.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa41b5ec3/polk/PDP_Images/Outdoor/Atrium/Atrium-4-White/Atrium-4-White_Image_back.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Cabinet Warranty": "5 Years - Original Purchaser Only",
@@ -2149,84 +2593,23 @@
         }
     },
     {
-        "ime_proizvoda": "RC80i",
-        "sku": "112724-00-00-001",
-        "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
-        "cena": "$249.00",
-        "opis": "The RC80I in-ceiling speakers feature an 8\" mid woofer and 1\" tweeter that are perfect for areas requiring big sound without speaker clutter.",
-        "url_proizvoda": "https://www.polkaudio.com/en-us/product/built-in-speakers/in-ceiling/rc80i/112724-new.html",
-        "url_slika": [],
-        "specifikacije": {
-            "": "",
-            "Perfect for Dolby Atmos & DTS": "X",
-            "Quality": "New",
-            "Color": "White",
-            "Perfect for Dolby Atmos, DTS": "X, Auro 3D & IMAX Enhanced home theaters."
-        },
-        "kategorije": "Built-In",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                }
-            ],
-            "dostupne_dužine": []
-        }
-    },
-    {
-        "ime_proizvoda": "Signature Elite ES10",
-        "sku": "300362-01-00-005",
-        "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
-        "cena": "$249.00 / pair",
-        "opis": "The Signature Elite ES10 bookshelf speaker features a 1\" terylene tweeter and a 4\" driver to enhance your music, movies and gaming experiences.",
-        "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/satellite-surround/signature-elite-es10/300362.html",
-        "url_slika": [],
-        "specifikacije": {
-            "Depth": "6.1\" (15.5 cm)",
-            "Height": "8.4\" (21.3 cm)",
-            "Weight": "6 lbs (2.7 kg)",
-            "Width": "5.4\" (13.7 cm)",
-            "Quantity Included": "Pair",
-            "Front Array Driver Complement": "• (1) 1\" (2.54 cm) d (Round) Terylene High-Res Dome Tweeter• (1) 4\" (10.16 cm) d (Round) Dynamic Balance Mica Reinforced Polypropylene Driver",
-            "Speaker Inputs": "(1) Pair of 5-way Binding Posts - Gold Plated",
-            "Mounting Type": "Key hole slot & 1/4\"-20 threaded insert",
-            "Recommended Amplifier Power Per Channel": "20 watts → 100 watts",
-            "Sensitivity (2.83V @1m)": "84 dB",
-            "Total Frequency Response": "80 Hz → 40 kHz",
-            "Crossover Frequency": "2.1 Hz",
-            "Impedance": "Compatible with 4 and 8 ohm outputs",
-            "Inputs": "Single gold-plated 5-way binding posts"
-        },
-        "kategorije": "Home Speakers",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg=="
-                },
-                {
-                    "boja": "Brown",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzhCNDUxMyIvPjwvc3ZnPg=="
-                }
-            ],
-            "dostupne_dužine": []
-        }
-    },
-    {
         "ime_proizvoda": "Atrium Sub100",
         "sku": "112584-14-00-001",
         "brend_logo_url": "https://www.polkaudio.com/on/demandware.static/Sites-Polkaudio-US-Site/-/default/dw1f0c7e6f/images/polkaudio-logo.svg",
         "cena": "$549.00",
         "opis": "Polk Atrium Sub100 Outdoor Passive Subwoofer: Enjoy the booming bass of your backyard with this all-weather subwoofer. Free shipping direct with Polk.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/outdoor-speakers/atrium-100-sub/112584.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb2da5a02/polk/PDP_Images/Outdoor/Atrium/Atrium-100-Sub-Terracotta/Atrium-100-Sub-Terracotta_Image_front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw74fe7062/polk/PDP_Images/Outdoor/Atrium/Atrium-100-Sub-Terracotta/Atrium-100-Sub-Terracotta_Image_side.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd8b0242a/polk/PDP_Images/Outdoor/Atrium/Atrium-100-Sub-Terracotta/Atrium-100-Sub-Terracotta_Image_closeup.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4a7f7f08/polk/PDP_Images/Outdoor/Atrium/Atrium-100-Sub-Terracotta/Atrium-100-Sub-Terracotta_Image_bottom.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc6fefd37/polk/PDP_Images/Outdoor/Atrium/Atrium-100-Sub-Terracotta/Atrium-100-Sub-Terracotta_Image_font-set-2.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8a8eda85/polk/PDP_Images/Outdoor/Atrium/Atrium-100-Sub-Terracotta/Atrium-100-Sub-Terracotta_Image_font-set-3.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf8092c50/polk/PDP_Images/Outdoor/Atrium/Atrium-100-Sub-Terracotta/Atrium-100-Sub-Terracotta_Image_font-set-4.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwa413d0bb/polk/PDP_Images/Outdoor/Atrium/Atrium-100-Sub-Terracotta/Atrium-100-Sub_Lifestyle_1.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf04cb5ff/polk/PDP_Images/Outdoor/Atrium/Atrium-100-Sub-Terracotta/Atrium-100-Sub_Lifestyle_4.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Weatherproof Aluminum Grille• (1) Waterproof IP68 Rated Junction box• (4) Wire Nuts• (1) Owner’s Manual",
@@ -2273,7 +2656,15 @@
         "cena": "$349.00",
         "opis": "Polk Audio's Signature Series S15 bookshelf speakers deliver dynamic sound with a wide soundstage and deep bass. Crafted with Polk's proprietary Dynamic Balance technology, these speakers provide a clear, detailed sound.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/outdoor-speakers/atrium-series/atrium-sat300/112977.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw7cb3b63a/polk/PDP_Images/Outdoor/Atrium/Atrium-300-Sat-Brown/Atrium-300-Sat-Brown_Image_angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw49c548c7/polk/PDP_Images/Outdoor/Atrium/Atrium-300-Sat-Brown/Atrium-300-Sat-Brown_Image_angle-right.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc1ff4d81/polk/PDP_Images/Outdoor/Atrium/Atrium-300-Sat-Brown/Atrium-300-Sat-Brown_Image_front-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwf74f6bcf/polk/PDP_Images/Outdoor/Atrium/Atrium-300-Sat-Brown/Atrium-300-Sat-Brown_Image_close-up-tweeter.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwef001df4/polk/PDP_Images/Outdoor/Atrium/Atrium-300-Sat-Brown/Atrium-300-Sat-Brown_Image_angle-right-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw95318baf/polk/PDP_Images/Outdoor/Atrium/Atrium-300-Sat-Brown/Atrium-300-Sat-Brown_Image_in-situ2.jpg?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4cd5146f/polk/PDP_Images/Outdoor/Atrium/Atrium-300-Sat-Brown/Atrium-300-Sat-Brown_Image_in-situ1.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Ground Stake• (1) Security Plate• (1) Pendant Cap• (1) Rubber Bumper• (1) Eyebolt• (2) Fasten Connectors• (1) Registration Card• (1) Mounting Template• (1) #10 Pan Head Screw• (2) #6 Pan Head Screws• (1) Lock Washer• (2) Wire Nuts• (1) Owner's Manual",
@@ -2316,7 +2707,9 @@
         "cena": "$4,069.00MSRP:Price reduced from$4,791.00",
         "opis": "High-Performance All-Weather System With Denon Avr-X3800H Receiver",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/home-theater-systems/atrium-multi-zone-powered-system/BN1057-SF.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw77f4c69a/polk/PDP_Images/Home-Speakers/Home-Theater-System/Military-Makeover/Outdoor/MM-Outdoor-qty.png?sw=2160"
+        ],
         "specifikacije": {
             "Quality": "New",
             "Color": "Black"
@@ -2340,7 +2733,9 @@
         "cena": "$2,543.00MSRP:Price reduced from$2,992.00",
         "opis": "High-Performance Atrium All-Weather Outdoor System",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/home-speakers/home-theater-systems/atrium-all-weather-system/BN1061-SF.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcc9b1c64/polk/PDP_Images/Home-Speakers/Home-Theater-System/Military-Makeover/Outdoor/MM-Outdoor-Mini-qty.png?sw=2160"
+        ],
         "specifikacije": {
             "Quality": "New",
             "Color": "Black"
@@ -2364,7 +2759,9 @@
         "cena": "$130.00",
         "opis": "The DB1242 SVC 12\" single voice subwoofer is marine rated and drives effortless bass in a space saving design for cars, boats, or ATVs. Shop online.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db1242-svc/112444.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw17ec16a0/polk/PDP_Images/Car-Marine/DB-Plus/DB1242-SVC/DB1242-SVC_Image_front-straight-on-no-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Stainless Steel Mounting Hardware",
@@ -2403,7 +2800,9 @@
         "cena": "$110.00",
         "opis": "The DB652 5.25\" round coaxial speakers are marine certified and provided crystal clear sound for your car, boat, motorcycle or ATV. Shop online today.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db652/112452.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw486385da/polk/PDP_Images/Car-Marine/DB-Plus/DB652/DB652_Image_pair-front-angle-right-no-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Drivers Warranty": "1 years",
@@ -2440,7 +2839,9 @@
         "cena": "$100.00",
         "opis": "The DB522 5.25\" round coaxial speakers are marine certified and provided crystal clear sound for your car, boat, motorcycle or ATV. Shop online today.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db522/112448.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd59dc857/polk/PDP_Images/Car-Marine/DB-Plus/DB522/DB522_Image_front-straight-on-angle-right-no-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Drivers Warranty": "1 years",
@@ -2476,7 +2877,9 @@
         "cena": "$200.00",
         "opis": "The DB5252 5.25\" component speaker system is marine certified and provided crystal clear sound for your car, boat, motorcycle or ATV. Shop here today.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db5252/112449.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwc9f80484/polk/PDP_Images/Car-Marine/DB-Plus/DB5252/DB5252_Image_complete-set-no-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "6",
             "Drivers Warranty": "1 years",
@@ -2513,7 +2916,9 @@
         "cena": "$200.00",
         "opis": "The DB5252 6.5\" component speaker system is marine certified and provided crystal clear sound for your car, boat, motorcycle or ATV. Shop here today.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db6502/112451.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw99c3a6d4/polk/PDP_Images/Car-Marine/DB-Plus/DB6502/DB6502_Image_complete-set-no-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "6",
             "Drivers Warranty": "1 years",
@@ -2550,7 +2955,9 @@
         "cena": "$179.00",
         "opis": "The MM1242 SVC 12\" single voice subwoofer is marine rated, ultra-durable and delivers thunderous bass. Upgrade your car, boat, or ATV today.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/mm1242-svc/112432.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd4840eeb/polk/PDP_Images/Car-Marine/MM1/MM1242-SVC/MM1242-SVC_AF_Product-front.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Stainless Steel Mounting Hardware",
@@ -2584,7 +2991,9 @@
         "cena": "$130.00",
         "opis": "The DB1242 DVC 12\" dual voice subwoofer is marine rated and drives effortless bass in a space saving design for cars, boats, or ATVs. Shop online.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db1242-dvc/112445.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw623bbf75/polk/PDP_Images/Car-Marine/DB-Plus/DB1242-DVC/DB1242-SVC_Image_front-straight-on-no-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Stainless Steel Mounting Hardware",
@@ -2617,7 +3026,9 @@
         "cena": "$110.00",
         "opis": "The DB1042 SVC 10\" single voice subwoofer is marine rated and drives crystal clear bass in a space saving design for cars, boats, or ATVs. Shop online.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db1042-svc/112442-new.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw8e9894b5/polk/PDP_Images/Car-Marine/DB-Plus/DB1042-SVC/DB1042-SVC_Image_front-angle-right-no-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Stainless Steel Mounting Hardware",
@@ -2656,7 +3067,9 @@
         "cena": "$90.00",
         "opis": "The DB402 4\" round coaxial speakers are marine rated and provided crystal clear sound for your car, boat, motorcycle or ATV. Shop online today.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db402/112446.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw4ddb6c61/polk/PDP_Images/Car-Marine/DB-Plus/DB402/DB402_Image_pair-front-straight-on-no-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Drivers Warranty": "1 years",
@@ -2693,7 +3106,10 @@
         "cena": "$90.00",
         "opis": "The DB462 4\" x 6\" coaxial speakers are marine certified and provided crystal clear sound for your car, boat, motorcycle or ATV. Shop online today.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db462/112447.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw84560394/polk/PDP_Images/Car-Marine/DB-Plus/DB462/DB462_Image_Front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw22ff7b22/polk/PDP_Images/Car-Marine/DB-Plus/DB462/DB462_Image_Single.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Drivers Warranty": "1 years",
@@ -2731,7 +3147,11 @@
         "cena": "$140.00",
         "opis": "The DB692 6\" x 9\" 3-way coaxial speakers are marine certified and provided crystal clear sound for your car, boat, motorcycle or ATV. Shop here today.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db692/112453.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwb6963340/polk/PDP_Images/Car-Marine/DB-Plus/DB692/DB692_Image_pair-front-angle-right-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwfbbfcd5d/polk/PDP_Images/Car-Marine/DB-Plus/DB692/DB692_Image_angle-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw49bc4afe/polk/PDP_Images/Car-Marine/DB-Plus/DB692/DB692_Image_back.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Drivers Warranty": "1 years",
@@ -2769,7 +3189,9 @@
         "cena": "$100.00",
         "opis": "The DB842 DVC 8\" dual voice subwoofer is marine rated and drives crystal clear bass in a space saving design for cars, boats, or ATVs. Shop online.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/db842/112455.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw5fab914c/polk/PDP_Images/Car-Marine/DB-Plus/DB842-DVC/DB842-DVC_Image_front-angle-right-no-grille.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Stainless Steel Mounting Hardware",
@@ -2808,7 +3230,15 @@
         "cena": "$229.00",
         "opis": "The MM692 6\" x 9\" 3-way speakers are marine certified and made from non-resonant Dynamic Balance materials for crystal clear highs, mids and lows.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/mm692/112440.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwd764a45b/polk/PDP_Images/Car-Marine/MM1/MM692-Black/MM692-Black_Image_angle-right-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6a83fcd3/polk/PDP_Images/Car-Marine/MM1/MM692-Black/MM692-Black_Image_single-straight-on-front-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwefa57b34/polk/PDP_Images/Car-Marine/MM1/MM692-Black/MM692-Black_Image_single-angle-right-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwe9158472/polk/PDP_Images/Car-Marine/MM1/MM692-Black/MM692-Black_Image_single-angle-right-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwacf187bb/polk/PDP_Images/Car-Marine/MM1/MM692-Black/MM692-Black_Image_single-back-no-grille.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcdcbd270/polk/PDP_Images/Car-Marine/MM1/MM692-Black/MM692-Black_Image_subwoofer-close-up.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw61946d5b/polk/PDP_Images/Car-Marine/MM1/MM692-Black/MM692-Black_Image_tweeter-close-up.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Included Accessories": "• (2) Grilles• (2) Mounting Hardware• (2) Wiring Harness",
@@ -2849,7 +3279,9 @@
         "cena": "$179.00",
         "opis": "The MM1242 DVC 12\" dual voice subwoofer is marine rated, ultra-durable and delivers thunderous bass. Upgrade your car, boat, or ATV today.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/mm1242-dvc/112433.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dwcc33bbe1/polk/PDP_Images/Car-Marine/MM1/MM1242-DVC/MM1242-DVC_AF_Product-front.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Stainless Steel Mounting Hardware",
@@ -2888,7 +3320,9 @@
         "cena": "$179.00",
         "opis": "The MM522 5\" x 7\" coaxial speakers are marine certified and provides an audio upgrade beyond the factory set up in your car, boat, motorcycle or ATV.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/mm572/112437.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6cb98ab2/polk/PDP_Images/Car-Marine/MM1/MM572/MM572_Image-front.png?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Included Accessories": "• (2) Mounting Hardware• (2) Wiring Harness",
@@ -2924,7 +3358,11 @@
         "cena": "$179.00",
         "opis": "The MM522 5.25\" coaxial speakers are marine certified and provides an audio upgrade beyond the factory set up in your car, boat, motorcycle or ATV.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/mm522/112436.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw52357caa/polk/PDP_Images/Car-Marine/MM1/MM522/MM522-Image-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw9204f1bd/polk/PDP_Images/Car-Marine/MM1/MM522/MM522_Image-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw34ebec9a/polk/PDP_Images/Car-Marine/MM1/MM522/MM522_AF_Product-back.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "2",
             "Included Accessories": "• (2) Grille• (2) Mounting Hardware• (2) Wiring Harness",
@@ -2965,7 +3403,10 @@
         "cena": "$169.00",
         "opis": "The MM1042 DVC 10\" dual voice subwoofer is marine rated and delivers deep bass that you'll find in recording studio. Upgrade your car, boat, or ATV.",
         "url_proizvoda": "https://www.polkaudio.com/en-us/product/car-and-marine-speakers/mm1042-dvc/112431.html",
-        "url_slika": [],
+        "url_slika": [
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw47011f7e/polk/PDP_Images/Car-Marine/MM1/MM1042-DVC/MM1042-DVC_AF_Product-front.png?sw=2160",
+            "https://www.polkaudio.com/dw/image/v2/BGJH_PRD/on/demandware.static/-/Sites-master-catalog-soundunited/default/dw6976688b/polk/PDP_Images/Car-Marine/MM1/MM1042-DVC/MM1042-DVC_AF_Product-front.jpg?sw=2160"
+        ],
         "specifikacije": {
             "Total Pieces": "1",
             "Included Accessories": "• (1) Stainless Steel Mounting Hardware",
