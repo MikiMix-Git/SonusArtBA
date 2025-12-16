@@ -1,10 +1,9 @@
 # scraperQ-Acoustics TEST_v1.5.5_backup.py
 # =============================================
-# VERZIJA: v1.5.9 (16.12.2025.) — KATEGORIJE IZ HANDLE-A URL-a
+# VERZIJA: v1.6.0 (16.12.2025.) — DODAVANJE OBAVEZNIH KATEGORIJA
 # =============================================
-# • Ažurirana funkcija get_categories za generisanje naziva kategorije
-#   direktno iz URL handle-a (npr. 'bookshelf-speakers' -> 'Bookshelf Speakers').
-# • Dodata funkcija to_title_case za konverziju handle-a u naslov.
+# • Ažurirana funkcija get_categories da eksplicitno uključi 'Speaker Cables' 
+#   i 'Accessories' kao fallback, u slučaju da nisu pronađeni u navigaciji.
 # • Ažuriran CODE_VERSION.
 # =============================================
 
@@ -23,7 +22,7 @@ from urllib.parse import urljoin
 from PIL import Image
 from io import BytesIO
 
-CODE_VERSION = "v1.5.9"
+CODE_VERSION = "v1.6.0"
 LOG_FILE = "qacoustics_production.log"
 OUTPUT_JSON = "qacoustics_products.json"
 MAIN_URL = "https://www.qacoustics.com"
@@ -60,43 +59,31 @@ COLOR_SEARCH_MAP = {
     "oak": ["oak", "hrast", "bezh"], 
     "pineoak": ["pineoak", "bor", "svetlosivo"], 
     "grey": ["grey", "siva", "gray"],
-    "graphitegrey": ["graphitegrey", "grafit", "tamnosiva", "graphite"], # Dodato 'graphite'
+    "graphitegrey": ["graphitegrey", "grafit", "tamnosiva", "graphite"], 
     "lacqueredblack": ["lacqueredblack", "sjajnocrna"], 
     "lacqueredwhite": ["lacqueredwhite", "sjajnobela"],
     "naturaloak": ["naturaloak", "prirodni", "natural"],
-    "graphite": ["graphite", "grafit"], # Dodato samo 'graphite' za jednostavnije pretrage
-    # Dodajte druge boje ako su potrebne
+    "graphite": ["graphite", "grafit"], 
 }
 
-# === PRONALAŽENJE SLIKE ZA BOJU (Poboljšana verzija v1.5.6) ===
+# === PRONALAŽENJE SLIKE ZA BOJU ===
 def find_image_for_color(color_name, product_images):
     """
     Pokušava pronaći URL slike (koja verovatno prikazuje uzorak/teksturu)
     u listi svih slika proizvoda, na osnovu naziva boje.
-    
-    Tražimo podudaranje po:
-    1. Celom normalizovanom imenu (npr. "graphitegrey").
-    2. Ključnim rečima iz COLOR_SEARCH_MAP (npr. "grafit", "engwalnut").
-    3. Pojedinačnim rečima iz imena boje (npr. "graphite" iz "Graphite Grey").
     """
     
     normalized_name = color_name.lower().replace(' ', '')
-    
-    # Razdvajanje imena boje u pojedinačne reči za fleksibilnu pretragu
     name_words = re.findall(r'\b\w+\b', color_name.lower())
     
-    # Kombinovana lista termina za pretragu
-    search_terms = set([normalized_name]) # 1. Puno ime
+    search_terms = set([normalized_name])
     
-    # Dodavanje definisanih ključnih reči iz mape
     if normalized_name in COLOR_SEARCH_MAP:
         search_terms.update(COLOR_SEARCH_MAP[normalized_name])
     
-    # Dodavanje pojedinačnih reči iz imena boje (npr. 'graphite' i 'grey')
     search_terms.update(name_words)
     
-    # Izbegavanje pretraživanja previše generičkih reči
-    generic_banned_words = {"grey", "black", "white", "satin", "lacquered", "natural", "carbon", "english", "pair"} # Dodato 'pair' za veću preciznost
+    generic_banned_words = {"grey", "black", "white", "satin", "lacquered", "natural", "carbon", "english", "pair"}
     
     final_search_terms = [
         term.lower() for term in search_terms 
@@ -105,14 +92,11 @@ def find_image_for_color(color_name, product_images):
     
     logging.debug(f"Ključne reči za pretragu za '{color_name}': {final_search_terms}")
     
-    # Glavna petlja za pretragu slika
     for term in final_search_terms:
         for img_url in product_images:
             img_url_lower = img_url.lower()
             
-            # Provera da li se termin nalazi u URL-u, a da nije deo reči 'swatch'
             if term in img_url_lower and ("swatch" not in img_url_lower): 
-                # Dodatna provera da URL ne sadrži nešto što očito diskvalifikuje sliku
                 if "diagram" in img_url_lower or "manual" in img_url_lower or "spec" in img_url_lower:
                     continue
                     
@@ -126,11 +110,9 @@ def find_image_for_color(color_name, product_images):
 def get_svg_fallback(color_name):
     """
     Vraća Base64 SVG za jednostavne boje ako CDN link nije dostupan.
-    Prošireno mapiranje za specifične Q Acoustics boje.
     """
     normalized_name = color_name.lower().replace(' ', '')
     
-    # Mapa heksadecimalnih kodova
     color_hex_map = {
         "black": "#000000",
         "satinblack": "#1f1f1f", 
@@ -156,28 +138,23 @@ def get_svg_fallback(color_name):
     svg = f'<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="{hex_color}"/></svg>'
     return f"data:image/svg+xml;base64,{base64.b64encode(svg.encode()).decode()}"
 
-# === GENERISANJE URL-a UZORKA BOJE (NOVA VERZIJA) ===
+# === GENERISANJE URL-a UZORKA BOJE ===
 def get_color_sample_url(image_url):
     """
     Konvertuje puni URL slike Shopify proizvoda u URL malog uzorka (swatch) slike (100x100 piksela).
-    Primer: .../image.jpg?v=... -> .../image_100x.jpg
     """
     if not image_url:
         return None
     
-    # Uklanjanje postojećih parametara za veličinu (npr. ?width=72 ili &width=72) i verzije
     base_url = image_url.split('?')[0]
     
-    # Pronalaženje tačke pre ekstenzije (.jpg, .png, itd.)
     parts = base_url.rsplit('.', 1)
     if len(parts) == 2:
-        # Ubacujemo '_100x' pre ekstenzije
         return f"{parts[0]}_100x.{parts[1]}"
     
-    # Ako nema ekstenzije ili URL nije tipičan, vraćamo original
     return image_url
 
-# === LOGOVANJE (Ažuriran CODE_VERSION) ===
+# === LOGOVANJE ===
 def setup_logging():
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
@@ -226,23 +203,28 @@ def get_brand_logo():
     except: pass
     return "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915"
 
-# === KATEGORIJE (AŽURIRANO u v1.5.9) ===
+# === KATEGORIJE (AŽURIRANO u v1.6.0) ===
 def get_categories():
     logging.info("Dohvatanje kategorija iz URL-a (handle)...")
     cats = {}
+    
+    # Lista handle-a koje treba isključiti
+    blocked = ['all','shop','new','sale','spares', 'q acoustics 3000c range', 'concept range', 'concept series']
+    
+    # Lista handle-a koje MORAJU biti uključene (kao fallback)
+    MANDATORY_COLLECTIONS = ['speaker-cables', 'accessories']
+    
     try:
         r = scraper.get(COLLECTIONS_URL, timeout=15)
         r.raise_for_status()
         soup = BeautifulSoup(r.text, 'html.parser')
-        
-        # Održavamo samo generičke nazive koji nisu prave kategorije proizvoda
-        blocked = ['all','shop','new','sale','spares', 'q acoustics 3000c range', 'concept range', 'concept series']
         
         for a in soup.select('a[href*="/collections/"]'):
             href = a.get('href')
             
             if not href or '/products/' in href: continue
             
+            # Ekstrakcija i normalizacija handle-a
             url_handle = href.split('/collections/')[-1].split('?')[0].lower()
             
             # Provera da li je handle blokiran
@@ -256,14 +238,29 @@ def get_categories():
                 logging.debug(f"Preskačem blokirani handle: {url_handle}")
                 continue
                 
-            # === KLJUČNA PROMENA: KORIŠTENJE HANDLE-A ZA NAZIV KATEGORIJE ===
             name = to_title_case(url_handle)
             full = urljoin(COLLECTIONS_URL, href).split('?')[0]
             
+            # Dodavanje pronađene kategorije
             if full not in cats.values():
                 cats[name] = full
+        
+        # === V1.6.0: DODAVANJE OBAVEZNIH KATEGORIJA KAO FALLBACK ===
+        for mandatory_handle in MANDATORY_COLLECTIONS:
+            # Provera da li je URL već pronađen u nekoj varijanti (proveravamo po handle-u u URL-u)
+            search_url_part = f"/collections/{mandatory_handle}"
+            is_found = any(search_url_part in c for c in cats.values())
+            
+            if not is_found:
+                name = to_title_case(mandatory_handle)
+                full_url = urljoin(MAIN_URL, f"/collections/{mandatory_handle}")
                 
-        logging.info(f"Pronađeno {len(cats)} kategorija (iz URL-a): {', '.join(cats.keys())}")
+                # Dodavanje kao fallback
+                if full_url not in cats.values():
+                    cats[name] = full_url
+                    logging.info(f"Dodata obavezna kategorija (fallback): {name}")
+                
+        logging.info(f"Pronađeno {len(cats)} kategorija (iz URL-a + fallback): {', '.join(cats.keys())}")
         
     except Exception as e:
         logging.error(f"Greška kategorije: {e}")
@@ -401,14 +398,12 @@ def parse_html(soup, json_data, handle):
     if bc:
         links = bc.find_all('a')
         if links: 
-            # Koristimo handle poslednjeg linka, ne tekst linka, za kategoriju proizvoda
             last_link = links[-1].get('href', '')
             if '/collections/' in last_link:
-                # Izvlačenje handle-a
                 url_handle = last_link.split('/collections/')[-1].split('?')[0]
                 cat = to_title_case(url_handle)
             else:
-                cat = links[-1].get_text(strip=True).title() # Fallback na tekst
+                cat = links[-1].get_text(strip=True).title()
             
     return opis or "Opis nedostupan", specs, cat
 
@@ -439,7 +434,7 @@ def get_links(coll_url, coll_name):
         logging.error(f"Greška kolekcija {coll_name}: {e}")
     return links
 
-# === PARSIRANJE BOJA IZ HTML-a (Koristi find_image_for_color v1.5.6) ===
+# === PARSIRANJE BOJA IZ HTML-a ===
 def parse_colors_from_html(soup, is_qed_cable, product_images):
     colors = []
     swatches_ul = soup.select_one('ul.swatches, ul.swatches--round, div.product-form__variants ul, .color-swatch-list')
@@ -473,32 +468,24 @@ def parse_colors_from_html(soup, is_qed_cable, product_images):
 
             if color_name:
                 if is_qed_cable:
-                    # Logika za dužine kablova
                     if 'Length' in color_name or re.search(r'\d+(\.\d+)?\s*(m|ft)', color_name, re.IGNORECASE):
                         if not any(l.get('dužina') == color_name for l in colors):
                              colors.append({"dužina": color_name})
                 else:
-                    # Logika za boje zvučnika
                     sample_url = None
                     
                     if full_url_uzorka:
-                        # Scenario A: Pronađen direktan URL uzorka (kao i pre)
                         sample_url = get_color_sample_url(full_url_uzorka)
                     else:
-                        # Scenario B: URL nije pronađen, boja je definisana samo imenom (npr. --swatch-background: walnut;)
-                        # Pokušavamo da pronađemo sliku proizvoda koja odgovara boji
                         matching_image = find_image_for_color(color_name, product_images)
                         
                         if matching_image:
-                            # 3. Ako je slika pronađena, koristimo je za generisanje malog uzorka
                             sample_url = get_color_sample_url(matching_image)
                             logging.debug(f"Pronađen URL slike za uzorak boje '{color_name}': {sample_url}")
                         else:
-                            # 4. Ako slika NIJE pronađena, koristimo SVG fallback
                             sample_url = get_svg_fallback(color_name)
                             logging.debug(f"Korišćen SVG fallback za boju: {color_name}")
                         
-                    # Osiguravamo da nema duplikata boja
                     if sample_url and not any(c.get('boja') == color_name for c in colors):
                         colors.append({"boja": color_name, "url_uzorka": sample_url})
 
@@ -514,7 +501,6 @@ def scrape_product(product_url, logo, coll_name):
     title = data.get('title', 'Nepoznato')
     variants = data.get('variants', [])
     
-    # Prva varijanta se koristi za cenu i SKU, jer se na Q Acoustics obicno varijacije odnose na boju/duzinu
     price = f"${float(variants[0]['price']):,.2f}" if variants and variants[0].get('price') else "$0.00"
     sku = variants[0].get('sku', '') if variants else ''
     title_lower = title.lower()
@@ -524,7 +510,6 @@ def scrape_product(product_url, logo, coll_name):
         ('qed' in title_lower and any(word in title_lower for word in ['cable', 'subwoofer', 'hdmi', 'optical', 'speaker cable', 'interconnect', 'performance', 'reference']))
     )
 
-    # Lista SVIH slika proizvoda
     product_images = []
     for img in data.get('images', []):
         src = img.get('src', '').split('?')[0]
@@ -540,8 +525,6 @@ def scrape_product(product_url, logo, coll_name):
         logging.error(f"Greška pri dohvatanju HTML-a ili parsiranju: {e}")
         opis, specs, cat = "Opis nedostupan", {}, coll_name
         
-    # === POBOLJŠANA EKSTRAKCIJA BOJA/DUŽINA IZ HTML SWATCHES-A ===
-    # Sada prosleđujemo listu svih slika proizvoda
     extracted_variants = parse_colors_from_html(soup, is_qed_cable, product_images)
     
     colors = []
@@ -557,12 +540,10 @@ def scrape_product(product_url, logo, coll_name):
                         lengths.append({"dužina": opt})
     else:
         colors = [v for v in extracted_variants if 'boja' in v]
-        # Ako HTML nije dao boje (što je malo verovatno nakon ove promene, ali za svaki slučaj)
         if not colors and variants:
             for v in variants:
                 opt = v.get('option1')
                 if opt and opt != "Default Title":
-                    # Korišćenje SVG fallback-a jer nemamo garanciju da je slika pronađena
                     sample = get_svg_fallback(opt)
                     if not any(c['boja'] == opt for c in colors):
                         colors.append({"boja": opt, "url_uzorka": sample})
@@ -577,7 +558,7 @@ def scrape_product(product_url, logo, coll_name):
         "cena": price,
         "opis": opis,
         "url_proizvoda": product_url,
-        "url_slika": product_images, # Koristimo listu slika dobijenu iz JSON-a
+        "url_slika": product_images,
         "specifikacije": specs,
         "kategorije": category,
         "dodatne_informacije": {
@@ -589,7 +570,7 @@ def scrape_product(product_url, logo, coll_name):
     logging.info(f"{CODE_VERSION} | ZAVRŠENO: {title} | Boja: {len(colors)} | Dužina: {len(lengths)} | Spec: {len(specs)}")
     return result
 
-# === MAIN (Ažuriran CODE_VERSION) ===
+# === MAIN ===
 def main():
     setup_logging()
     try:
