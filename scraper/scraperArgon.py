@@ -1,5 +1,7 @@
 # scraperArgonFINAL_V13.py
 # VERZIJA A10.2: BOJE IZ --swatch-background + KATEGORIJA IZ HTML-a
+# POPRAVKA: Poboljšano prikupljanje dostupnih boja – thumbnail slike iz labela (kao na sajtu)
+# Dodato čišćenje URL uzorka (uklanjanje &width parametara)
 # 100% AUTOMATSKI, BEZ MAPE, BEZ LOGIKE
 
 import cloudscraper
@@ -21,7 +23,7 @@ OUTPUT_FILENAME = "argon_audio_final_v13.json"
 MAIN_URL = "https://argonaudio.com/"
 COLLECTIONS_URL = "https://argonaudio.com/collections/"
 
-SKIP_COLLECTIONS = {"Spareparts", "testbfcm", "Unwrap The Gift Of Sound", "Black Days", "test", "sale", "featured"}
+SKIP_COLLECTIONS = {"Spareparts", "testbfcm", "Unwrap The Gift Of Sound", "Black Days", "test", "sale", "featured", "christmas"}
 
 scraper = cloudscraper.create_scraper(
     browser={'browser': 'chrome', 'platform': 'windows', 'mobile': False}
@@ -42,7 +44,7 @@ def setup_logging():
     logger.addHandler(stream_handler)
     logging.info("="*80)
     logging.info(f"FINAL SKREJPER ZAPOČET: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    logging.info(f"VERZIJA: {CODE_VERSION} – BOJE IZ --swatch-background")
+    logging.info(f"VERZIJA: {CODE_VERSION} – POPRAVLJENE DOSTUPNE BOJE (thumbnail iz labela)")
     logging.info("="*80)
     return logger
 
@@ -85,8 +87,12 @@ def get_categories():
         soup = BeautifulSoup(resp.text, 'html.parser')
         for a in soup.select('a[href*="/collections/"]'):
             href = a.get('href')
-            name = a.get_text(strip=True)
-            if not href or not name or name.lower() in ['all', 'shop', 'new', 'sale', 'home', 'featured']:
+            if not href:
+                continue
+            # Izvuci ime iz URL sluga umesto teksta linka – sprečava promo poruke
+            slug = href.split('/')[-1].split('?')[0]
+            name = slug.replace('-', ' ').title()
+            if not name or name.lower() in ['all', 'shop', 'new', 'sale', 'home', 'featured']:
                 continue
             if any(skip.lower() in name.lower() for skip in SKIP_COLLECTIONS):
                 continue
@@ -165,11 +171,6 @@ def scrape_product(product_url, logo_url, assigned_collection):
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
 
-        # KATEGORIJA
-        cat_link = soup.select_one('div.product-info__block-item a[href*="/collections/"]')
-        if cat_link:
-            product_category = cat_link.get_text(strip=True)
-
         # SPECIFIKACIJE
         for row in soup.select('.feature-chart__table-row'):
             k = row.select_one('.feature-chart__heading')
@@ -180,48 +181,50 @@ def scrape_product(product_url, logo_url, assigned_collection):
                 if key and val:
                     specs[key] = val
 
-        # BOJE – NOVI PARSER
-        for label in soup.select('label.color-swatch'):
+        # BOJE – POBOLJŠANI PARSER (thumbnail iz img u labelu, kao na sajtu)
+        seen_colors = set()
+        for label in soup.select('label.thumbnail-swatch, label.color-swatch'):
+            # Ime boje iz sr-only
             sr = label.select_one('.sr-only')
             color_name = sr.get_text(strip=True) if sr else None
-            if not color_name:
+            if not color_name or color_name in seen_colors:
                 continue
+            seen_colors.add(color_name)
 
-            for_attr = label.get('for', '')
-            variant_id = None
-            match = re.search(r'option\d+-(\d+)', for_attr)
-            if match:
-                variant_id = int(match.group(1))
-
-            style = label.get('style', '')
+            # Thumbnail slika iz img unutar labela
+            img_tag = label.find('img')
             img_url = None
-
-            # 1. URL iz --swatch-background
-            url_match = re.search(r'url\(([^)]+)\)', style)
-            if url_match:
-                raw_url = url_match.group(1)
+            if img_tag and img_tag.get('src'):
+                raw_url = img_tag['src']
                 if raw_url.startswith('//'):
                     raw_url = 'https:' + raw_url
-                img_url = re.sub(r'&width=\d+', '', raw_url)
+                # Čišćenje parametara (kao &width=...)
+                img_url = re.sub(r'&width=\d+', '', raw_url.split('&v=')[0])
 
-            # 2. Gradient → hex
-            elif 'linear-gradient' in style:
-                hex_match = re.search(r'#([0-9a-fA-F]{6})', style)
-                if hex_match:
-                    img_url = '#' + hex_match.group(1).upper()
-
-            # 3. Fallback: JSON slika
-            if not img_url and variant_id:
-                img_url = next((img['src'].split('?')[0] for img in json_data.get('images', []) if variant_id in img.get('variant_ids', [])), None)
+            # Fallback na stari parser ako nema thumbnaila
+            if not img_url:
+                style = label.get('style', '')
+                url_match = re.search(r'url\(([^)]+)\)', style)
+                if url_match:
+                    raw_url = url_match.group(1)
+                    if raw_url.startswith('//'):
+                        raw_url = 'https:' + raw_url
+                    img_url = re.sub(r'&width=\d+', '', raw_url)
 
             colors.append({
                 "boja": color_name,
-                "url_uzorka": img_url
+                "url_uzorka": img_url or ""
             })
+
+        # KATEGORIJA
+        if assigned_collection:
+            logging.debug(f"Kategorija za {product_url}: koristim assigned_collection '{assigned_collection}'")
+            product_category = assigned_collection
 
     except Exception as e:
         logging.warning(f"HTML greška: {e}")
 
+    # KONAČNA KATEGORIJA
     category = product_category or "Ostalo"
 
     logging.info(f"ZAVRŠENO: {title} | Cena: {cena} | Boje: {len(colors)} | Kategorija: {category}")
