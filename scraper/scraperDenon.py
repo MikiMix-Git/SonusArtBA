@@ -1,6 +1,12 @@
 # scraperDenon_v1.1.3.py
 # LOGOVANJE PO MODELU scraperArgon.py
 # INKREMENTALNO + POPRAVKE SKU & KATEGORIJE
+# POPRAVKA: Dodata logika za izbegavanje duplikata po clean URL-u (bez parametara)
+# POPRAVKA: Normalizovani URL-ovi u existing_urls, incomplete_urls i processed_urls
+# POPRAVKA: URL_proizvoda se čuva bez parametara
+# POPRAVKA: Uklonjeno 'Wireless Speakers' iz invalid seta
+# POPRAVKA: Ispravljen regex za SKU da radi bez .html
+# POPRAVKA: Ispravljeni nazivi LOG_FILE i OUTPUT_JSON
 
 import cloudscraper
 import json
@@ -15,7 +21,7 @@ import sys
 
 # --- KONSTANTE ---
 CODE_VERSION = "VA10.3"
-LOG_FILE = "argon_style_denom_v1.1.3.log"
+LOG_FILE = "denon_v1.1.3.log"
 OUTPUT_JSON = "denon_products_v1.1.3.json"
 MAIN_URL = "https://www.denon.com/en-us"
 
@@ -66,12 +72,13 @@ def load_existing_data():
                 data = json.load(f)
             logging.info(f"UČITANO: {len(data)} postojećih")
             for p in data:
-                url = p.get("url_proizvoda")
-                if url:
+                url = p.get("url_proizvoda", "")
+                clean_url = url.split('?')[0]
+                if clean_url:
                     if is_complete(p):
-                        existing_urls.add(url)
+                        existing_urls.add(clean_url)
                     else:
-                        incomplete_urls.add(url)
+                        incomplete_urls.add(clean_url)
         except Exception as e:
             logging.error(f"GREŠKA UČITAVANJA: {e}")
     else:
@@ -87,7 +94,7 @@ def is_complete(p):
 def get_categories():
     logging.info("DOHVATANJE KATEGORIJA...")
     cats = {}
-    invalid = {'Featured Products', 'All Products', 'Wireless Speakers', 'Outlet', 'Discover', 'Learn more', 'Help Me Choose'}
+    invalid = {'Featured Products', 'All Products', 'Outlet', 'Discover', 'Learn more', 'Help Me Choose'}  # Uklonjeno 'Wireless Speakers'
 
     try:
         r = scraper.get(MAIN_URL, timeout=15)
@@ -131,6 +138,7 @@ def get_logo():
 
 # --- SKREJP DETALJA ---
 def scrape_details(url, logo):
+    clean_url = url.split('?')[0]
     logging.info(f"SKREJPUJEM: {url}")
     try:
         r = scraper.get(url, timeout=15)
@@ -178,8 +186,8 @@ def scrape_details(url, logo):
             if k and v:
                 specs[k.get_text(strip=True)] = v.get_text(strip=True)
 
-        # SKU
-        m = re.search(r'/([^/]+)\.html', url)
+        # SKU - POPRAVLJENO: Uzima poslednji segment URL-a
+        m = re.search(r'/([^/]+)$', clean_url)
         sku = m.group(1) if m else "Nedostupan"
 
         # KATEGORIJA
@@ -188,7 +196,7 @@ def scrape_details(url, logo):
         if bc:
             cat = bc.get_text(strip=True)
         else:
-            m2 = re.search(r'/en-us/product/([^/]+)/', url)
+            m2 = re.search(r'/en-us/product/([^/]+)/', clean_url)
             if m2:
                 cat = m2.group(1).replace('-', ' ').title()
 
@@ -212,7 +220,7 @@ def scrape_details(url, logo):
             "brend_logo_url": logo,
             "cena": price,
             "opis": desc,
-            "url_proizvoda": url,
+            "url_proizvoda": clean_url,
             "url_slika": imgs,
             "specifikacije": specs,
             "kategorije": cat,
@@ -247,6 +255,7 @@ def main():
         new_products = []
         new_count = 0
         updated_count = 0
+        processed_urls = set()
 
         for name, url in cats.items():
             logging.info(f"KATEGORIJA: '{name}' → {url}")
@@ -272,25 +281,31 @@ def main():
                 logging.info(f"PRONAĐENO: {len(unique)} linkova")
 
                 for link in unique:
-                    if link in done_urls:
+                    clean_link = link.split('?')[0]
+                    if clean_link in processed_urls:
+                        logging.info(f"PRESKOČENO (već procesuirano u ovom run-u): {clean_link}")
                         continue
-                    if link in retry_urls:
+                    if clean_link in done_urls and clean_link not in retry_urls:
+                        logging.info(f"PRESKOČENO (već kompletan): {clean_link}")
+                        continue
+                    if clean_link in retry_urls:
                         logging.info(f"PONOVO: {link}")
 
                     time.sleep(random.uniform(0.5, 1.5))
                     res = scrape_details(link, logo)
 
                     if res:
+                        processed_urls.add(clean_link)
                         if is_complete(res):
-                            if link in retry_urls:
+                            if clean_link in retry_urls:
                                 updated_count += 1
                                 logging.info(f"AŽURIRANO: {res['ime_proizvoda']}")
                             else:
                                 new_count += 1
-                                new_products.append(res)
                                 logging.info(f"NOVO: {res['ime_proizvoda']}")
                         else:
-                            new_products.append(res)  # čuvaj i nepotpune
+                            logging.warning(f"NEPOTPUN: {res['ime_proizvoda']}")
+                        new_products.append(res)
 
             except Exception as e:
                 logging.error(f"GREŠKA KATEGORIJA '{name}': {e}")
