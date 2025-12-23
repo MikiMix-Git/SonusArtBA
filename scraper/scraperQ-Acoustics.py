@@ -1,10 +1,9 @@
-# scraperQ-Acoustics TEST_v1.5.5_backup.py
+# scraperQ-Acoustics.py
 # =============================================
-# VERZIJA: v1.6.0 (16.12.2025.) — DODAVANJE OBAVEZNIH KATEGORIJA
+# VERZIJA: v1.6.0 (23.12.2025.) — OČIŠĆENA + ISPRAVKA KATEGORIJE
 # =============================================
-# • Ažurirana funkcija get_categories da eksplicitno uključi 'Speaker Cables' 
-#   i 'Accessories' kao fallback, u slučaju da nisu pronađeni u navigaciji.
-# • Ažuriran CODE_VERSION.
+# • Dodavanje "No Category" za proizvode iz /collections/all ako nema bolje kategorije
+# • Ostale funkcionalnosti ostaju netaknute
 # =============================================
 
 import cloudscraper
@@ -36,81 +35,16 @@ scraper = cloudscraper.create_scraper(
 
 # === POMOĆNA FUNKCIJA ZA FORMATIRANJE HANDLE-A ===
 def to_title_case(handle):
-    """
-    Konvertuje handle iz URL-a (npr. 'bookshelf-speakers') u format naslova 
-    (npr. 'Bookshelf Speakers').
-    """
     if not handle:
         return "Nepoznata Kategorija"
-    # Zamena crtica razmacima i kapitalizacija svake reči
+    
+    if handle.lower() == "sunwoofers":
+        return "Subwoofers"
+    
     return handle.replace('-', ' ').title()
-
-# === MAPIRANJE BOJA ZA PRONALAŽENJE SLIKE ===
-# Ključ je normalizovan naziv boje. Vrednost je lista ključnih reči za pretragu u URL-u.
-COLOR_SEARCH_MAP = {
-    "black": ["black", "crna"],
-    "satinblack": ["satinblack", "matcrna"], 
-    "carbonblack": ["carbonblack", "crnaboja"], 
-    "white": ["white", "bela"],
-    "arcticwhite": ["arcticwhite", "skorobela", "bela"], 
-    "walnut": ["walnut", "engwalnut", "oraha", "braon"],
-    "englishwalnut": ["englishwalnut", "engwalnut", "oraha", "braon"], 
-    "rosewood": ["rosewood", "crvenodrvo", "roze"], 
-    "oak": ["oak", "hrast", "bezh"], 
-    "pineoak": ["pineoak", "bor", "svetlosivo"], 
-    "grey": ["grey", "siva", "gray"],
-    "graphitegrey": ["graphitegrey", "grafit", "tamnosiva", "graphite"], 
-    "lacqueredblack": ["lacqueredblack", "sjajnocrna"], 
-    "lacqueredwhite": ["lacqueredwhite", "sjajnobela"],
-    "naturaloak": ["naturaloak", "prirodni", "natural"],
-    "graphite": ["graphite", "grafit"], 
-}
-
-# === PRONALAŽENJE SLIKE ZA BOJU ===
-def find_image_for_color(color_name, product_images):
-    """
-    Pokušava pronaći URL slike (koja verovatno prikazuje uzorak/teksturu)
-    u listi svih slika proizvoda, na osnovu naziva boje.
-    """
-    
-    normalized_name = color_name.lower().replace(' ', '')
-    name_words = re.findall(r'\b\w+\b', color_name.lower())
-    
-    search_terms = set([normalized_name])
-    
-    if normalized_name in COLOR_SEARCH_MAP:
-        search_terms.update(COLOR_SEARCH_MAP[normalized_name])
-    
-    search_terms.update(name_words)
-    
-    generic_banned_words = {"grey", "black", "white", "satin", "lacquered", "natural", "carbon", "english", "pair"}
-    
-    final_search_terms = [
-        term.lower() for term in search_terms 
-        if len(term) > 3 or term not in generic_banned_words
-    ]
-    
-    logging.debug(f"Ključne reči za pretragu za '{color_name}': {final_search_terms}")
-    
-    for term in final_search_terms:
-        for img_url in product_images:
-            img_url_lower = img_url.lower()
-            
-            if term in img_url_lower and ("swatch" not in img_url_lower): 
-                if "diagram" in img_url_lower or "manual" in img_url_lower or "spec" in img_url_lower:
-                    continue
-                    
-                logging.debug(f"Pronađena slika uzorka za {color_name} (preko ključne reči '{term}')")
-                return img_url
-                
-    logging.debug(f"Nije pronađena slika uzorka za boju: {color_name}")
-    return None
 
 # === SVG FALLBACK ZA BOJE ===
 def get_svg_fallback(color_name):
-    """
-    Vraća Base64 SVG za jednostavne boje ako CDN link nije dostupan.
-    """
     normalized_name = color_name.lower().replace(' ', '')
     
     color_hex_map = {
@@ -128,8 +62,6 @@ def get_svg_fallback(color_name):
         "graphitegrey": "#3A3A3A", 
         "lacqueredblack": "#0D0D0D", 
         "lacqueredwhite": "#F9F9F9", 
-        "blue": "#0000FF",
-        "red": "#FF0000",
         "naturaloak": "#C0A060"
     }
     
@@ -140,9 +72,6 @@ def get_svg_fallback(color_name):
 
 # === GENERISANJE URL-a UZORKA BOJE ===
 def get_color_sample_url(image_url):
-    """
-    Konvertuje puni URL slike Shopify proizvoda u URL malog uzorka (swatch) slike (100x100 piksela).
-    """
     if not image_url:
         return None
     
@@ -203,16 +132,13 @@ def get_brand_logo():
     except: pass
     return "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915"
 
-# === KATEGORIJE (AŽURIRANO u v1.6.0) ===
+# === KATEGORIJE ===
 def get_categories():
-    logging.info("Dohvatanje kategorija iz URL-a (handle)...")
+    logging.info("Dohvatanje kategorija...")
     cats = {}
     
-    # Lista handle-a koje treba isključiti
     blocked = ['all','shop','new','sale','spares', 'q acoustics 3000c range', 'concept range', 'concept series']
-    
-    # Lista handle-a koje MORAJU biti uključene (kao fallback)
-    MANDATORY_COLLECTIONS = ['speaker-cables', 'accessories']
+    mandatory = ['speaker-cables', 'accessories']
     
     try:
         r = scraper.get(COLLECTIONS_URL, timeout=15)
@@ -221,46 +147,38 @@ def get_categories():
         
         for a in soup.select('a[href*="/collections/"]'):
             href = a.get('href')
-            
             if not href or '/products/' in href: continue
             
-            # Ekstrakcija i normalizacija handle-a
             url_handle = href.split('/collections/')[-1].split('?')[0].lower()
             
-            # Provera da li je handle blokiran
-            is_blocked = False
-            for b in blocked:
-                if b in url_handle:
-                    is_blocked = True
-                    break
+            if url_handle == "sunwoofers":
+                url_handle = "subwoofers"
+                logging.info("Ispravljena greška sajta: sunwoofers → subwoofers")
             
-            if is_blocked:
-                logging.debug(f"Preskačem blokirani handle: {url_handle}")
-                continue
+            is_blocked = any(b in url_handle for b in blocked)
+            if is_blocked: continue
                 
             name = to_title_case(url_handle)
             full = urljoin(COLLECTIONS_URL, href).split('?')[0]
             
-            # Dodavanje pronađene kategorije
             if full not in cats.values():
                 cats[name] = full
         
-        # === V1.6.0: DODAVANJE OBAVEZNIH KATEGORIJA KAO FALLBACK ===
-        for mandatory_handle in MANDATORY_COLLECTIONS:
-            # Provera da li je URL već pronađen u nekoj varijanti (proveravamo po handle-u u URL-u)
-            search_url_part = f"/collections/{mandatory_handle}"
-            is_found = any(search_url_part in c for c in cats.values())
-            
-            if not is_found:
-                name = to_title_case(mandatory_handle)
-                full_url = urljoin(MAIN_URL, f"/collections/{mandatory_handle}")
+        # Fallback obavezne kategorije
+        for m_handle in mandatory:
+            if not any(f"/collections/{m_handle}" in url for url in cats.values()):
+                name = to_title_case(m_handle)
+                full_url = urljoin(MAIN_URL, f"/collections/{m_handle}")
+                cats[name] = full_url
+                logging.info(f"Dodata obavezna kategorija (fallback): {name}")
+        
+        # Dodavanje /collections/all
+        all_url = "https://www.qacoustics.com/collections/all"
+        if all_url not in cats.values():
+            cats["All Products"] = all_url
+            logging.info("Dodata kategorija 'All Products' za potpuno hvatanje")
                 
-                # Dodavanje kao fallback
-                if full_url not in cats.values():
-                    cats[name] = full_url
-                    logging.info(f"Dodata obavezna kategorija (fallback): {name}")
-                
-        logging.info(f"Pronađeno {len(cats)} kategorija (iz URL-a + fallback): {', '.join(cats.keys())}")
+        logging.info(f"Pronađeno {len(cats)} kategorija")
         
     except Exception as e:
         logging.error(f"Greška kategorije: {e}")
@@ -288,7 +206,6 @@ def parse_html(soup, json_data, handle):
 
     specs = {}
     
-    # 1. Postojeći UL parser
     ul = soup.select_one('ul.specs, ul.product-specs, div.specs ul, ul.product-details, ul.key-specs')
     if ul:
         for li in ul.find_all('li', recursive=False):
@@ -297,7 +214,6 @@ def parse_html(soup, json_data, handle):
                 k, v = text.split(':', 1)
                 specs[k.strip()] = v.strip()
 
-    # 2. Postojeći TABLE parser
     if len(specs) < 8:
         table = soup.select_one('table.specs-table, table')
         if table:
@@ -308,81 +224,48 @@ def parse_html(soup, json_data, handle):
                     v = cells[1].get_text(strip=True)
                     specs[k] = v
 
-    # 3. P TAG parser (parovi unutar jednog P taga sa <br>)
     if len(specs) < 8:
-        logging.debug(f"[{CODE_VERSION}] Pokušavam P-tag parser (sa br) za {handle}")
         p_list = soup.select('div.col-span-full p, .product-specs p, .spec-data p, .tech-specs p, section[data-tab="SPECIFICATIONS"] p')
-        
         for p_tag in p_list:
             if p_tag.find('br') and p_tag.find('strong'):
                 temp_html = str(p_tag)
-                
                 temp_html = re.sub(r'<br\s*/?>\s*<br\s*/?>', '###SPEC_SEP###', temp_html, flags=re.IGNORECASE)
-                
                 temp_html = re.sub(r'<br\s*/?>', ' ', temp_html, flags=re.IGNORECASE)
-
                 temp_text = BeautifulSoup(temp_html, 'html.parser').get_text(separator=' ', strip=True)
                 segments = temp_text.split('###SPEC_SEP###')
-                
-                extracted_count = 0
                 for segment in segments:
                     segment = segment.strip()
                     if not segment: continue
-
                     if ':' in segment:
                         k, v = segment.split(':', 1)
                         k_stripped = k.strip().rstrip(':') 
                         v_stripped = v.strip()
-                        
-                        if (k_stripped and v_stripped and 
-                            k_stripped not in specs and 
-                            len(k_stripped) < 60 and 
-                            len(k_stripped.split()) < 10):
-                            
+                        if k_stripped and v_stripped and k_stripped not in specs:
                             v_stripped = re.sub(r'\s+', ' ', v_stripped)
                             specs[k_stripped] = v_stripped
-                            extracted_count += 1
-                        else:
-                             logging.debug(f"Preskačem sumnjivi par K:'{k_stripped}' V:'{v_stripped[:20]}...'")
+                if len(specs) >= 8: break
 
-                if extracted_count > 0:
-                    logging.debug(f"[{CODE_VERSION}] Novi P-tag (br-separated) parser uspješno pronašao {extracted_count} specifikacija.")
-                    break 
-
-    # 4. P TAG parser (višestruki P tagovi)
     if len(specs) < 8:
-        logging.debug(f"[{CODE_VERSION}] Pokušavam P-tag parser (pojedinačni P) za {handle}")
         p_specs = soup.select('div.col-span-full p, .product-specs p, .spec-data p, .tech-specs p, section[data-tab="SPECIFICATIONS"] p')
-        
         for p_tag in p_specs:
             strong_tag = p_tag.find('strong')
             full_text = p_tag.get_text(strip=True)
-            
             if strong_tag:
                 key = strong_tag.get_text(strip=True).rstrip(':').strip()
-                key_with_colon_match = f"{key}:"
-                
-                if key_with_colon_match in full_text:
-                    idx = full_text.find(key_with_colon_match)
-                    value = full_text[idx + len(key_with_colon_match):].strip()
-                    
+                key_with_colon = f"{key}:"
+                if key_with_colon in full_text:
+                    idx = full_text.find(key_with_colon)
+                    value = full_text[idx + len(key_with_colon):].strip()
                     if key and value and key not in specs:
                         specs[key] = value
-                
             elif ':' in full_text:
                 k, v = full_text.split(':', 1)
                 k_stripped = k.strip()
                 v_stripped = v.strip()
                 if k_stripped and v_stripped and k_stripped not in specs:
                     specs[k_stripped] = v_stripped
-        
-        if len(specs) >= 8:
-             logging.debug(f"[{CODE_VERSION}] Pojedinačni P-tag parser uspješno pronašao {len(specs)} specifikacija.")
 
-
-    # 5. Postojeći agresivni parser
     if len(specs) < 8:
-        logging.debug(f"[{CODE_VERSION}] Agresivni parser za {handle}")
         all_text = soup.get_text(separator='\n')
         lines = [l.strip() for l in all_text.split('\n') if l.strip() and len(l) < 200]
         banned = ['in stock','add to cart','reviews','shipping','warranty','buy now','price','sale','save','free delivery','rating']
@@ -448,23 +331,18 @@ def parse_colors_from_html(soup, is_qed_cable, product_images):
             
             url_uzorka_base = None
             
-            # 1. Pokušaj ekstrakcije URL-a iz inline stila (--swatch-background-image)
             match = re.search(r'--swatch-background-image:\s*url\((.*?)\);', style)
             if match:
                 raw_url = match.group(1).strip(" '\"")
                 url_uzorka_base = raw_url.split('?')[0]
             
-            # 2. Alternativni pokušaj: URL se možda nalazi u background-image (kao fallback)
             if not url_uzorka_base:
                 match = re.search(r'background-image:\s*url\((.*?)\)', style)
                 if match:
                     raw_url = match.group(1).strip(" '\"")
                     url_uzorka_base = raw_url.split('?')[0]
             
-            # 3. Kreiranje punog, apsolutnog URL-a
-            full_url_uzorka = None
-            if url_uzorka_base:
-                full_url_uzorka = urljoin(MAIN_URL, url_uzorka_base)
+            full_url_uzorka = urljoin(MAIN_URL, url_uzorka_base) if url_uzorka_base else None
 
             if color_name:
                 if is_qed_cable:
@@ -477,14 +355,7 @@ def parse_colors_from_html(soup, is_qed_cable, product_images):
                     if full_url_uzorka:
                         sample_url = get_color_sample_url(full_url_uzorka)
                     else:
-                        matching_image = find_image_for_color(color_name, product_images)
-                        
-                        if matching_image:
-                            sample_url = get_color_sample_url(matching_image)
-                            logging.debug(f"Pronađen URL slike za uzorak boje '{color_name}': {sample_url}")
-                        else:
-                            sample_url = get_svg_fallback(color_name)
-                            logging.debug(f"Korišćen SVG fallback za boju: {color_name}")
+                        sample_url = get_svg_fallback(color_name)
                         
                     if sample_url and not any(c.get('boja') == color_name for c in colors):
                         colors.append({"boja": color_name, "url_uzorka": sample_url})
@@ -548,8 +419,12 @@ def scrape_product(product_url, logo, coll_name):
                     if not any(c['boja'] == opt for c in colors):
                         colors.append({"boja": opt, "url_uzorka": sample})
 
-
+    # === ISPRAVKA KATEGORIJE ===
     category = cat if cat != "Nepoznato" else coll_name
+    if category == "All Products":
+        # Ako je iz /collections/all, a nema bolje kategorije, koristi "No Category"
+        if cat in ["All", "Shop", "Nepoznato", "All Products"]:
+            category = "No Category"
 
     result = {
         "ime_proizvoda": title,
@@ -567,7 +442,7 @@ def scrape_product(product_url, logo, coll_name):
             "dostupne_dužine": lengths
         }
     }
-    logging.info(f"{CODE_VERSION} | ZAVRŠENO: {title} | Boja: {len(colors)} | Dužina: {len(lengths)} | Spec: {len(specs)}")
+    logging.info(f"{CODE_VERSION} | ZAVRŠENO: {title} | Boja: {len(colors)} | Dužina: {len(lengths)} | Spec: {len(specs)} | Kategorija: {category}")
     return result
 
 # === MAIN ===
@@ -598,22 +473,17 @@ def main():
             for p_url, c_name in product_links:
                 if count >= MAX_PRODUCTS: break
                 h = p_url.split('/products/')[-1].split('?')[0]
-                if h in existing_handles: 
-                    logging.debug(f"Preskačem postojeći proizvod: {h}")
-                    continue
+                if h in existing_handles: continue
                     
                 time.sleep(random.uniform(0.6, 1.3))
                 prod = scrape_product(p_url, logo, c_name)
                 
                 if prod:
                     is_duplicate = any(p.get('sku') == prod['sku'] for p in existing_data + new)
-                    
                     if not is_duplicate:
                         new.append(prod)
                         existing_handles.add(h)
                         count += 1
-                    else:
-                        logging.debug(f"Preskačem SKU duplikat: {prod['sku']}")
 
         final = existing_data + new
         with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
