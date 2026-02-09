@@ -1335,7 +1335,7 @@
             "Dimensions (H x W x L)": "6.3 x 25.2 x 22.0 cm",
             "Dimensions incl. packaging (H x W x L)": "support.nordichifi.com/sa1mk2"
         },
-        "kategorije": "Stereo Amplifier",
+        "kategorije": "Amplifiers",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1401,7 +1401,7 @@
             "Color": "Black White Blue",
             "Dimensions (H x W x L)": "support.nordichifi.com/sa2"
         },
-        "kategorije": "Stereo Amplifier",
+        "kategorije": "Amplifiers",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1524,7 +1524,7 @@
             "Power consumption (w)": "2.1",
             "Standby power consumption": "support.nordichifi.com/solo"
         },
-        "kategorije": "Music Streamer",
+        "kategorije": "Music Streamers",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
@@ -1568,7 +1568,7 @@
             "Standby power consumption": "<0.5 W",
             "Manual": "support.nordichifi.com/stream2mk3"
         },
-        "kategorije": "Music Streamer",
+        "kategorije": "Music Streamers",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": []
@@ -1604,10 +1604,657 @@
             "Standby power consumption": "<0.5 W",
             "Manual": "support.nordichifi.com/stream3mk2"
         },
-        "kategorije": "Music Streamer",
+        "kategorije": "Music Streamers",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": []
+        }
+    },
+    {
+        "ime_proizvoda": "TT MK2",
+        "sku": "ARGTTMK2ELAM",
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "269,00 EUR",
+        "opis": "<p>The TT MK2 is the ultimate value-for-money turntable, delivering an exceptional plug-and-play experience with effortless usability, superb design, and sound quality that rivals models three times its cost. With a built-in RIAA preamp, it’s effortlessly compatible with any amplifier or active speakers, making it the perfect entry point into the world of vinyl.</p>",
+        "url_proizvoda": "https://argonaudio.com/products/tt-mk2",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2EAGR_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2EAGR_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2EAGR_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2EAGR_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2EAGR_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2EAGR_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2EAGR_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2GR_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2GR_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2GR_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2GR_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2GR_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2GR_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2GR_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2SAMA_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2SAMA_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2SAMA_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2SAMA_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2SAMA_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2SAMA_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2SAMA_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2WA_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2WA_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2WA_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2WA_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2WA_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2WA_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2WA_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2_DIMENSIONS_1500x1500_9ef0d3ef-b44b-472a-85ff-d1ba4e861d18.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2_SPECS_1500x1500_eda502e9-26d7-4a47-8919-f08ee039ef16.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_ARGFENRISA5WA_L_01_80b4ca95-50c2-476e-b340-28e861fc44cd.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2WA_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2GR_L_3-_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_L_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_L_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_ARGFENRISA5WH_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BL_ARGFENRISA5WH_L_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2EAGR_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_L_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_ARGFENRISA5WH_L_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_ARGFENRISA5WH_L_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2ELAM_ARGFENRISA5WH_L_03-_2.jpg"
+        ],
+        "specifikacije": {
+            "Pickup": "Audio-Technica AT3600L (MM)",
+            "Speeds (rpm)": "33/45",
+            "Plate": "Iron",
+            "Drive": "Belt",
+            "Plinth": "MDF",
+            "Platter weight": "1800 g",
+            "Platter bearing": "Ball",
+            "Tone arm": "Aluminium",
+            "Effective tonearm length": "8.6\"",
+            "Effective arm mass": "8 g",
+            "Rotation Speed Variation": "±1.5%",
+            "Signal-to-Noise (db)": "55",
+            "Wow and flutter": "≤ 0.06%",
+            "Automatic": "False",
+            "Recommended tracking force": "3.5 g",
+            "Additional Features": "Easy speed adjustment through the bottom",
+            "Included in the box": "Power Supply (1.8 m) RCA Cable (1.5 m) Dust cover",
+            "Color": "Electric Amber (Lacquer) Black (Matte Lacquer) Pine Green (Lacquer) Earth Grey (Lacquer) Atlantic Blue (Lacquer) Satin Mahogany (PVC) Walnut (Veneer)",
+            "Dimensions (H x W x L)": "support.nordichifi.com/ttmk2"
+        },
+        "kategorije": "Turntables",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Electric Amber (Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTTMK2ELAM_O_04.jpg?v=1725522313"
+                },
+                {
+                    "boja": "Black (Matte Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTTMK2BK_O_04.jpg?v=1725522313"
+                },
+                {
+                    "boja": "Pine Green (Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTTMK2GR_O_04.jpg?v=1725522313"
+                },
+                {
+                    "boja": "Earth Grey (Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTTMK2EAGR_O_04.jpg?v=1725522314"
+                },
+                {
+                    "boja": "Atlantic Blue (Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTTMK2BL_O_04.jpg?v=1725522313"
+                },
+                {
+                    "boja": "Satin Mahogany (PVC)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTTMK2SAMA_O_04.jpg?v=1725522314"
+                },
+                {
+                    "boja": "Walnut (Veneer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTTMK2WA_O_04.jpg?v=1725522314"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "TT-3",
+        "sku": "ARGTT3ASH",
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "399,00 EUR",
+        "opis": "<p>Our TT-3 record player is the record player you want. It’s easy to connect to your speakers or amp and with its classy design, it will instantly bump your cultural status up a class or two.</p>",
+        "url_proizvoda": "https://argonaudio.com/products/tt-3",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3ASH_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3ASH_2_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3ASH_6.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3ASH_5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3ASH_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3WH_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3WH_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3WH_5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3WH_6.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3BK_2_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3BK_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3BK_7.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3_DIMENSIONS_1500x1500_cf1cf24b-86fc-417f-8ab8-4223274197ec.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3_SPECS_1500x1500_f5c09f99-cd11-480c-8bb8-dd08ea886b9c.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3BK_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3ASH_L_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3WH_L_1_1691b15b-7725-44f8-9260-81dffabdfde6.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3WH_L_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3BK_L_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3WH_L_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3ASH_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3BK_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3BK_5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3BK_6.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGTT3WH_7.jpg"
+        ],
+        "specifikacije": {
+            "Pickup": "Ortofon OM5e (MM)",
+            "Speeds (rpm)": "33/45",
+            "Plate": "Aluminium",
+            "Drive": "Belt",
+            "Plinth": "MDF",
+            "Platter weight": "560 g",
+            "Platter bearing": "Ball",
+            "Tone arm": "Aluminium",
+            "Effective tonearm length": "8.8\"",
+            "Effective arm mass": "21.7 g",
+            "Rotation Speed Variation": "±2%",
+            "Signal-to-Noise (db)": "67",
+            "Wow and flutter": "≤ 0.06%",
+            "Automatic": "False",
+            "Acceptable cartridge weight": "4.9 - 8.4 g",
+            "Recommended tracking force": "1.75 g",
+            "Included in the box": "Power Supply (1.5 m) RCA Cable (1.0 m) Dust cover",
+            "Color": "Ash (PVC) Black (Matte Lacquer) White (Matte Lacquer)",
+            "Dimensions (H x W x L)": "12.1 x 42.0 x 35.5 cm",
+            "Dimensions incl. packaging (H x W x L)": "support.nordichifi.com/tt-3"
+        },
+        "kategorije": "Turntables",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Ash (PVC)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/products/ARGTT3ASH_1.jpg?v=1707728921"
+                },
+                {
+                    "boja": "Black (Matte Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/products/ARGTT3BK_2_1.jpg?v=1707728325"
+                },
+                {
+                    "boja": "White (Matte Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/products/ARGTT3WH_1.jpg?v=1707728325"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "TT-3 PLUS",
+        "sku": "ARGTT3PLUSBK",
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "529,00 EUR",
+        "opis": "<p>TT-3 PLUS is the perfect mix of hi-fi performance and sleek, modern design – all at an exceptional value. Equipped with a factory-fitted Ortofon 2M Red pickup, it delivers impressive sound quality right out of the box. The sturdy build and belt-driven motor ensure stability and long-lasting durability. Plus, with the built-in RIAA amplifier, setup is a breeze – just plug in your active speakers or amplifier, and you're ready to spin.</p>",
+        "url_proizvoda": "https://argonaudio.com/products/tt-3-plus",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSBK_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSBK_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSBK_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSBK_O_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSBK_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSBK_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSBK_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSBK_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_O_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_O_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUS_DIMENSIONS_1500x1500_842f980e-740c-4284-8562-fee3fdcd8fc2.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUS_SPECS_1500x1500_1451adbb-3992-4406-b67e-a0a41ad229b0.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_ARGFORTEA5MK2BK_L_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_L_01_f6be4aff-c4ba-4178-905e-d05dabb61453.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWA_L_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_ARGFORTEA4MK2WH_L_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT3PLUSWH_L_01_b3340b88-9afa-4007-b78f-e338d74ee1c8.jpg"
+        ],
+        "specifikacije": {
+            "Pickup": "Ortofon 2M Red (MM)",
+            "Speeds (rpm)": "33/45",
+            "Plate": "Aluminium",
+            "Drive": "Belt",
+            "Plinth": "MDF",
+            "Platter weight": "700 g",
+            "Platter bearing": "Ball",
+            "Tone arm": "Carbon Fibre / Aluminium",
+            "Effective tonearm length": "8.8\"",
+            "Effective arm mass": "21.3 g",
+            "Rotation Speed Variation": "±2%",
+            "Signal-to-Noise (db)": "67",
+            "Wow and flutter": "≤ 0.06%",
+            "Automatic": "False",
+            "Acceptable cartridge weight": "15.5-19 g",
+            "Recommended tracking force": "1.8 g",
+            "Additional Features": "ATS (Anisotropic Torsion Stabilizer) Dampened platter",
+            "Included in the box": "Power Supply (1.5 m) RCA Cable (1.0 m) Dust cover",
+            "Color": "support.nordichifi.com/tt3plus"
+        },
+        "kategorije": "Turntables",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black (Matte Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTT3PLUSBK_O_01.jpg?v=1727357705"
+                },
+                {
+                    "boja": "Walnut (Veneer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTT3PLUSWA_O_01.jpg?v=1762986445"
+                },
+                {
+                    "boja": "White (Matte Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTT3PLUSWH_O_01.jpg?v=1764334549"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "TT-4 MK2",
+        "sku": "ARGTT4MK2WA",
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "799,00 EUR",
+        "opis": "<p>Refining the EISA award-winning TT-4, the MK2 offers a stunning combination of fantastic sound and exceptional build quality. Its robust plinth and heavy, rubber-dampened aluminium platter set the foundation for exceptional performance. The specially designed carbon fibre tonearm and pre-fitted Ortofon 2M Blue cartridge provide the precision required for truly audiophile-grade sound. With its built-in high-quality RIAA preamp, the TT-4 MK2 is ready to plug into any amplifier or active speakers straight out of the box.</p>\n<p><em>Please note: Natural wood finishes may vary slightly in colour and grain due to the natural characteristics of wood.</em></p>",
+        "url_proizvoda": "https://argonaudio.com/products/tt-4-mk2",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WA_O_01_47080579-21ee-4dfb-bec4-6253632221f7.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WA_O_02_ede9b79e-e595-4d98-95bb-2786fe720144.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WA_O_03_2dd76de2-3cfb-4901-8129-c7e3b4aeabae.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WA_O_04_9b2bd9b7-55c4-47b9-8f8b-a1afddf82532.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WA_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WA_O_06_5fbd1967-7418-40e3-a5eb-3eab7d36437f.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WA_O_07_3ff6f81d-335d-4a80-b034-f9e9ed2f1029.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WA_O_08_2ff4a092-73ae-4498-9b80-f9529d30a667.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2BK_O_01_2f19de6d-35a7-4c69-947a-e97f97f37382.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2BK_O_02_897fcfac-e763-404c-98c1-b7cbb09eaffa.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2BK_O_03_35cadbdc-f2bf-47c5-935a-940ec5777de5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2BK_O_04_887f13a9-5d3d-4717-b900-9a76624d8b27.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2BK_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2BK_O_06_b8eb3929-be06-428d-b0a0-544afa92437b.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2BK_O_07_1cbaa65e-2529-4e1e-918a-07b83b4d9d13.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2BK_O_08_b9b1848f-0b1e-40eb-9647-2736dd3d6563.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_O_01_1f8cb584-c243-40ae-a43f-6aff863d0b6d.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_O_02_08bda330-40c3-4438-a9c7-f694957a4b6e.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_O_03_ec31003e-794c-4fb2-9b3e-e84f1ea25417.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_O_04_ef718d66-878e-4308-b389-f2dddbb736e0.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_O_06_f1739aec-ff21-48d8-92bf-d8c57f05f333.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_O_07_011559df-4008-45b7-b4b9-973bafc1f224.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_O_08_49b0085d-2cc2-4705-ba75-e5adedbd86a3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WH_O_01_41889993-3763-4967-8fd1-fbec14d39985.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WH_O_02_2dbd7d26-2547-4db7-a84d-80093ee9e7ad.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WH_O_03_cd05ab90-26c0-4406-9201-535d427bea19.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WH_O_04_e4422c8d-f3ae-4283-9fe5-f3aab66ccdfc.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WH_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WH_O_06_059befe4-dd6c-4999-ae99-c24bf19cccaa.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WH_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WH_O_08_9e77aca2-7f2c-475f-ac86-32299e1254a7.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2_DIMENSIONS_1500x1500_fd72e57c-ffd5-441f-96a4-f7ea5d245376.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2_SPECS_1500x1500_59b2a176-8467-43d0-ad4a-5c38a7a115de.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WA_ARGFORTEA5WIFIWA_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2WH_ARGFORTEA5WIFIWH_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2BK_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_L_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4MK2MA_L_12.jpg"
+        ],
+        "specifikacije": {
+            "Pickup": "Ortofon 2M Blue (MM)",
+            "Speeds (rpm)": "33/45",
+            "Plate": "Aluminium",
+            "Drive": "Belt",
+            "Plinth": "MDF",
+            "Platter weight": "1730 g",
+            "Platter bearing": "Ball",
+            "Tone arm": "Carbon Fibre / Aluminium",
+            "Effective tonearm length": "8.8\"",
+            "Effective arm mass": "16.2 g",
+            "Rotation Speed Variation": "±2%",
+            "Signal-to-Noise (db)": "67",
+            "Wow and flutter": "≤ 0.06%",
+            "Automatic": "False",
+            "Acceptable cartridge weight": "4.9 - 10.9 g",
+            "Recommended tracking force": "1.8 g",
+            "Additional Features": "ATS (Anisotropic Torsion Stabilizer) Dampened platter",
+            "Included in the box": "Power supply (1.5M) RCA cable (1.0M) Dust cover",
+            "Color": "support.nordichifi.com/tt4mk2"
+        },
+        "kategorije": "Turntables",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Walnut (Veneer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTT4MK2WA_O_01_47080579-21ee-4dfb-bec4-6253632221f7.jpg?v=1751880363"
+                },
+                {
+                    "boja": "Black (Matte Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTT4MK2BK_O_01_2f19de6d-35a7-4c69-947a-e97f97f37382.jpg?v=1751880364"
+                },
+                {
+                    "boja": "Mahogany (Veneer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTT4MK2MA_O_01_1f8cb584-c243-40ae-a43f-6aff863d0b6d.jpg?v=1751880364"
+                },
+                {
+                    "boja": "White (Matte Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTT4MK2WH_O_01_41889993-3763-4967-8fd1-fbec14d39985.jpg?v=1751880363"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "TT-4 SPECIAL EDITION",
+        "sku": "ARGTT4SEHGBK",
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "999,00 EUR",
+        "opis": "<p>Celebrating our first ever EISA-award, we wanted to do something very special… So we took our award-winning TT-4 turntable and made it even better! We’ve improved upon almost all aspects of the turntable, from the platter to the internal wiring, and most importantly, the TT-4 Special Edition comes pre-fitted with the fantastic Ortofon 2M Bronze pickup. Get proper high-end analog sound, but still in a true Argon Audio plug-n-play package!</p>",
+        "url_proizvoda": "https://argonaudio.com/products/tt-4-special-edition",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SE_DIMENSIONS_1500x1500_bc68387c-e339-4507-ba7b-bc7a8cd8a20d.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SE_SPECS_1500x1500_16a7c7b8-36ca-4d46-ab50-acd4744a9085.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_L_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_L_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_L_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_L_4_d4f50338-4968-4982-862c-2f797f93dedb.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_C_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_C_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_C_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_C_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_C_7.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_C_8.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_C_5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTT4SEHGBK_C_6.jpg"
+        ],
+        "specifikacije": {
+            "Pickup": "Ortofon 2M Bronze (MM)",
+            "Speeds (rpm)": "33/45",
+            "Plate": "Aluminium",
+            "Drive": "Belt",
+            "Plinth": "MDF",
+            "Platter weight": "1730 g",
+            "Platter bearing": "Ball",
+            "Tone arm": "Carbon Fibre / Aluminium",
+            "Effective tonearm length": "8.8\"",
+            "Effective arm mass": "16.2 g",
+            "Rotation Speed Variation": "±2%",
+            "Signal-to-Noise (db)": "67",
+            "Wow and flutter": "≤ 0.06%",
+            "Automatic": "False",
+            "Acceptable cartridge weight": "4.9 - 10.9 g",
+            "Recommended tracking force": "1.5 g",
+            "Additional Features": "ATS (Anisotropic Torsion Stabilizer) Dampened platter",
+            "Included in the box": "Power Supply (1.5 m) RCA Cable (1.0 m) Dust cover",
+            "Color": "support.nordichifi.com/tt4se"
+        },
+        "kategorije": "Turntables",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black (High-Gloss Lacquer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTT4SEHGBK_O_01.jpg?v=1743661523"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "TT SIGNATURE",
+        "sku": "ARGTTSDACH",
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "1.699,00 EUR",
+        "opis": "<p>The TT Signature redefines analogue listening. Featuring a floating suspension system and a precision photo-sensor-controlled motor, the TT Signature ensures exceptional stability and audio clarity. The carbon fibre tonearm, enhanced with our groundbreaking ATS technology, comes pre-fitted with the renowned Ortofon 2M Black cartridge, ensuring detailed and accurate sound reproduction. Drawing inspiration from the golden age of hi-fi and infused with modern precision, the TT Signature is crafted for those who cherish the ritual of vinyl and the authenticity it brings to every note.</p>",
+        "url_proizvoda": "https://argonaudio.com/products/tt-signature",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_09.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_O_10.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_08.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_09.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_O_10.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTS_DIMENSIONS_1500x1500_04bd1f7b-bed0-4d42-b7b6-58eebc6109ce.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTS_SPECS_1500x1500_983ab84e-0949-4795-9415-05b52a4e2e20.png",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_C_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_C_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_C_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_C_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_C_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSWA_C_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTSDACH_ARGTTSWA_C_5.jpg"
+        ],
+        "specifikacije": {
+            "Pickup": "Ortofon 2M Black (MM)",
+            "Speeds (rpm)": "33/45",
+            "Plate": "Aluminium (die-cast)",
+            "Drive": "Belt",
+            "Plinth": "MDF with aluminium layer",
+            "Platter weight": "1600 g",
+            "Platter bearing": "Ball",
+            "Tone arm": "Carbon Fibre",
+            "Effective tonearm length": "8.8\"",
+            "Effective arm mass": "15.4 g",
+            "Rotation Speed Variation": "±0.33%",
+            "Wow and flutter": "≤ 0.04%",
+            "Automatic": "False",
+            "Acceptable cartridge weight": "6-12 g",
+            "Recommended tracking force": "1.5 g",
+            "Additional Features": "Floating suspension Motor with photo sensor Rubber damping ATS (Anisotropic Torsion Stabilizer)",
+            "Included in the box": "Dust cover RCA cable (1.0M) Power supply (1.5M)",
+            "Color": "Dark Cherry (Veneer) Walnut (Veneer)",
+            "Dimensions (H x W x L)": "15.4 x 45 x 36.8",
+            "Dimensions incl. packaging (H x W x L)": "support.nordichifi.com/signature"
+        },
+        "kategorije": "Turntables",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Dark Cherry (Veneer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTTSDACH_O_01.jpg?v=1746434103"
+                },
+                {
+                    "boja": "Walnut (Veneer)",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGTTSWA_O_01.jpg?v=1746434103"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "QUIET STORM",
+        "sku": "ARGHPQUIETSTORMBK",
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "169,00 EUR",
+        "opis": "<p>Enjoy the quiet in the middle of the storm with these active noise-canceling wireless headphones. Sporting high-quality 40 mm dynamic drivers and a rock-solid Bluetooth 5.0 connection, Quiet Storm is sure to bring you hours and hours of great listening experiences – all while providing best-in-class comfort and battery capacity.</p>",
+        "url_proizvoda": "https://argonaudio.com/products/quiet-storm",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGHPQUIETSTORMBK_O_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGHPQUIETSTORMBK_O_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGHPQUIETSTORMBK_O_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGHPQUIETSTORMBK_O_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGHPQUIETSTORMBK_O_5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/products/ARGHPQUIETSTORMBK_O_6.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_C_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_C_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_C_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_C_5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_O_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_O_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_O_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_O_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_O_5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_O_6.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_C_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_C_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_C_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_L_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_L_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_L_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_L_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_L_06.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_L_07.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBK_L_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_L_05.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_L_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPQUIETSTORMBL_L_01.jpg"
+        ],
+        "specifikacije": {
+            "Wireless connectivity": "Bluetooth",
+            "Bluetooth version": "Bluetooth 5.0",
+            "Audio formats": "AAC",
+            "Headphone type": "Over-Ear",
+            "Headphone connection": "Wireless",
+            "Driver": "40 mm",
+            "Battery life (h)": "30",
+            "ANC type": "Hybrid",
+            "Charge time (h)": "2",
+            "Quick charge": "5 min quick charges gives 2 hours",
+            "Acoustic construction": "Closed",
+            "Additional Features": "Standby-Time up to 300 hours",
+            "Included in the box": "support.nordichifi.com/quietstorm"
+        },
+        "kategorije": "Headphones",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/products/ARGHPQUIETSTORMBK_O_1.jpg?v=1673259617"
+                },
+                {
+                    "boja": "Blue",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGHPQUIETSTORMBL_O_1.jpg?v=1707731644"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "SOUL3",
+        "sku": "ARGHPSOUL3BK",
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "119,00 EUR",
+        "opis": "<p>SOUL3 might just be the best budget pick in their category. We've stripped these headphones down to the core, crafting the ultimate product. No frills. Pure, superior sound and rock-solid wireless connection. Stay stylish while enjoying your favorite tunes with 25 hours of wireless audio and luxuriously soft ear pads for premium comfort.</p>",
+        "url_proizvoda": "https://argonaudio.com/products/soul3",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_O_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_O_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_O_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_O_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_O_5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_O_7.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_C_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_C_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_C_03.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_C_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_O_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_O_3.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_O_2.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_O_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_O_5.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_O_7.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BK_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_L_02.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_L_04.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGHPSOUL3BRBK_L_03.jpg"
+        ],
+        "specifikacije": {
+            "Wireless connectivity": "Bluetooth",
+            "Bluetooth version": "Bluetooth 5.0",
+            "Audio formats": "AAC aptX",
+            "Headphone type": "Over-Ear",
+            "Headphone connection": "Wireless",
+            "Driver": "50 mm",
+            "Battery life (h)": "25",
+            "Charge time (h)": "2",
+            "Acoustic construction": "Closed",
+            "Additional Features": "Soft Protein Leather Ear Pads",
+            "Included in the box": "Carrying Hardcase USB-C Cable (30 cm) Audio Cable (1 meter / 3.5 mm minijack)",
+            "Color": "Black Bronze Black",
+            "Dimensions incl. packaging (H x W x L)": "20 x 9 x 6 cm",
+            "Net weight": "0.29 kg",
+            "Gross weight": "support.nordichifi.com/soul3"
+        },
+        "kategorije": "Headphones",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGHPSOUL3BK_O_1.jpg?v=1689846890"
+                },
+                {
+                    "boja": "Bronze Black",
+                    "url_uzorka": "https://argonaudio.com/cdn/shop/files/ARGHPSOUL3BRBK_O_1.jpg?v=1694171134"
+                }
+            ]
         }
     },
     {
@@ -1629,7 +2276,7 @@
             "Color": "White",
             "Dimensions incl. packaging (H x W x L)": "3 x 20.5 x 10 cm"
         },
-        "kategorije": "Ostalo",
+        "kategorije": "Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": []
@@ -1920,7 +2567,7 @@
             "Net weight": "0.14 g",
             "Gross weight": "0.15 kg"
         },
-        "kategorije": "Ostalo",
+        "kategorije": "Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": []
@@ -1960,7 +2607,7 @@
             "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ESSCL1SUB_ESSCLYSPLIT.jpg"
         ],
         "specifikacije": {},
-        "kategorije": "Ostalo",
+        "kategorije": "Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": []
@@ -1977,7 +2624,7 @@
             "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ESSCL1IN_O_1.jpg"
         ],
         "specifikacije": {},
-        "kategorije": "Ostalo",
+        "kategorije": "Cables",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": []
@@ -2108,7 +2755,7 @@
             "Net weight": "0.7 kg",
             "Gross weight": "1.4 kg"
         },
-        "kategorije": "Ostalo",
+        "kategorije": "Speaker Accessories",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": []
@@ -2144,7 +2791,7 @@
             "Power consumption (w)": "0.4",
             "Manual": "support.nordichifi.com/articles/196-manual-argon-audio-phono1"
         },
-        "kategorije": "RIAA",
+        "kategorije": "Amplifiers",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": []
@@ -2292,10 +2939,173 @@
             "Power consumption (w)": "0.45",
             "Manual": "support.nordichifi.com/articles/226-manual-essentials-wireless-connect"
         },
-        "kategorije": "Wireless Adapter",
+        "kategorije": "Accessories",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": []
+        }
+    },
+    {
+        "ime_proizvoda": "FENRIS A5 + TT MK2",
+        "sku": null,
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "558,00 EUR",
+        "opis": "<p class=\"MsoNormal\"><span lang=\"EN-US\" style=\"mso-ansi-language: EN-US;\">Live out your turntable dream with the perfect entry-level setup. TT MK2 is the ultimate value-for-money turntable, delivering great sound and an exceptional plug-and-play experience. FENRIS A5 are powerful and convenient active speakers, that are sure to get you rocking within minutes. Together, they deliver a full-fledged hi-fi system that’s big on sound and low on cost.</span></p>",
+        "url_proizvoda": "https://argonaudio.com/products/fenris-a5-tt-mk2",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_FENRISA5BK_O_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGTTMK2BK_FENRISA5BK_O_2.jpg"
+        ],
+        "specifikacije": {},
+        "kategorije": "Stereo System",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Electric Amber (Lacquer)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Black (Matte Lacquer)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Pine Green (Lacquer)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Earth Grey (Lacquer)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Black (PVC)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "White (PVC)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Ash (PVC)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Walnut (PVC)",
+                    "url_uzorka": ""
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "FORTE A5 + TT-3 PLUS",
+        "sku": null,
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "1.038,00 EUR",
+        "opis": "<p class=\"MsoNormal\"><span lang=\"EN-US\" style=\"mso-ansi-language: EN-US;\">This setup is for the vinyl connoisseurs. The TT-3 PLUS is a serious hi-fi turntable with a sturdy build, built-in RIAA, and a pre-fitted Ortofon 2M Red pickup, to give you an authentic, rich vinyl experience. Paired with the audiophile FORTE A5 active speakers, you get a beautiful symphony of precision and style. A full-bodied setup that satisfies both your keen ears and eyes.</span></p>",
+        "url_proizvoda": "https://argonaudio.com/products/forte-a5-tt-3-plus",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGFORTEA5BK_ARGTT3PLUSWA_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGFORTEA5BK_ARGTT3PLUSWA_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGFORTEA5BK_ARGTT3PLUSBK_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGFORTEA5BK_ARGTT3PLUSBK_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGFORTEA5WH_ARGTT3PLUSWH_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGFORTEA5WH_ARGTT3PLUSWH_L_01.jpg"
+        ],
+        "specifikacije": {},
+        "kategorije": "Stereo System",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "White (Matte Lacquer)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Black (Matte Lacquer)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Walnut (Veneer)",
+                    "url_uzorka": ""
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "FENRIS A4 + MALMÖ SUB 8",
+        "sku": null,
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "768,00 EUR",
+        "opis": "<p class=\"MsoNormal\"><span style=\"mso-ansi-language: EN-US;\" lang=\"EN-US\">Experience rich and impactful audio with this powerful, space-saving stereo system. Our FENRIS A4 speakers deliver surprisingly big sound, with Bluetooth 5.0 and HDMI ARC for a plug-and-play TV experience or a seamless wireless sound setup. Paired with the MALMÖ SUB 8 to feel every explosion, car chase, and jump-scare, bringing both classics and new favorites to life, all at an affordable price. Forget soundbars — this setup will blow them away, without question!</span></p>",
+        "url_proizvoda": "https://argonaudio.com/products/fenris-a4-malmo-sub-8",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGFENRISA4BK_ARGMALMOSUB8BK_O_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGFENRISA4BK_ARGMALMOSUB8BK_O_2.jpg"
+        ],
+        "specifikacije": {},
+        "kategorije": "Stereo System",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Ash (PVC)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Black (PVC)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "White (PVC)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Walnut (PVC)",
+                    "url_uzorka": ""
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "STUDIE 3 + MALMÖ SUB 6",
+        "sku": null,
+        "brend_logo_url": "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png",
+        "cena": "698,00 EUR",
+        "opis": "<p class=\"MsoNormal\"><span lang=\"EN-US\" style=\"mso-ansi-language: EN-US;\">The perfect compact sound duo. STUDIE 3 active speakers deliver expansive, clear audio while fitting seamlessly into any desk setup. Pair them with the super-compact MALMÖ SUB 6, which will amaze you with its precise and punchy bass. Together, you have a sound system that’s big on performance, small on space, and easy on your budget. Best of all, they’re plug-and-play, ready to deliver amazing sound right out of the box.</span></p>",
+        "url_proizvoda": "https://argonaudio.com/products/studie-3-malmo-sub-6",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGSTUDIE3BK_ARGMALMO6BK_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGSTUDIE3BK_ARGMALMO6BK_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGSTUDIE3WH_ARGMALMO6WH_O_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGSTUDIE3WH_ARGMALMO6WH_L_01.jpg",
+            "https://cdn.shopify.com/s/files/1/0264/7428/3096/files/ARGSTUDIE3BK_ARGMALMOSUB8WA_L_03.jpg"
+        ],
+        "specifikacije": {},
+        "kategorije": "Stereo System",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black (Matte Lacquer)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "White (Matte Lacquer)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "White (PVC)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Walnut (PVC)",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Black (PVC)",
+                    "url_uzorka": ""
+                }
+            ]
         }
     }
 ]
