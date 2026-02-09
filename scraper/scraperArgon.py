@@ -1,9 +1,3 @@
-# scraperArgonFINAL_V13.py
-# VERZIJA A10.2: BOJE IZ --swatch-background + KATEGORIJA IZ HTML-a
-# POPRAVKA: Poboljšano prikupljanje dostupnih boja – thumbnail slike iz labela (kao na sajtu)
-# Dodato čišćenje URL uzorka (uklanjanje &width parametara)
-# 100% AUTOMATSKI, BEZ MAPE, BEZ LOGIKE
-
 import cloudscraper
 import json
 from bs4 import BeautifulSoup
@@ -17,46 +11,108 @@ from datetime import datetime
 import re
 
 # --- KONSTANTE ---
-CODE_VERSION = "A10.2"
-LOG_FILE = "argon_final_v13.log"
-OUTPUT_FILENAME = "argon_audio_final_v13.json"
+CODE_VERSION = "A10.8"
+LOG_FILE = f"argon_final_{CODE_VERSION}.txt"
+OUTPUT_FILENAME = f"argon_audio_final_{CODE_VERSION}.json"
 MAIN_URL = "https://argonaudio.com/"
-COLLECTIONS_URL = "https://argonaudio.com/collections/"
 
-SKIP_COLLECTIONS = {"Spareparts", "testbfcm", "Unwrap The Gift Of Sound", "Black Days", "test", "sale", "featured", "christmas"}
+COLLECTION_JSON_ENDPOINTS_RAW = """
+Svi proizvodi (glavni endpoint): https://argonaudio.com/products.json?limit=250
+All kolekcija: https://argonaudio.com/collections/all/products.json
+
+Active Speakers: https://argonaudio.com/collections/active-speakers/products.json
+Fenris: https://argonaudio.com/collections/fenris/products.json
+Forte: https://argonaudio.com/collections/forte/products.json
+Forte Wifi: https://argonaudio.com/collections/forte-wifi/products.json
+Passive Speakers: https://argonaudio.com/collections/passive-speakers/products.json
+Subwoofers: https://argonaudio.com/collections/subwoofers/products.json
+Amplifiers: https://argonaudio.com/collections/amplifiers/products.json
+Music Streamers: https://argonaudio.com/collections/music-streamers/products.json
+Turntables: https://argonaudio.com/collections/turntables/products.json
+Headphones: https://argonaudio.com/collections/headphones/products.json
+Cables: https://argonaudio.com/collections/cables/products.json
+Accessories/Speaker Cable: https://argonaudio.com/collections/accessories/Speaker-Cable/products.json
+Speaker Accessories: https://argonaudio.com/collections/speaker-accessories/products.json
+Speaker Stands: https://argonaudio.com/collections/speaker-stands/products.json
+Speakers Brackets: https://argonaudio.com/collections/speakers-brackets/products.json
+Turntable Accessories: https://argonaudio.com/collections/turntable-accessories/products.json
+Christmas: https://argonaudio.com/collections/christmas/products.json
+Amplifiers Streaming: https://argonaudio.com/collections/amplifiers-streaming/products.json
+Black Days: https://argonaudio.com/collections/black-days/products.json
+Dts Play Fi: https://argonaudio.com/collections/dts-play-fi/products.json
+Accessories: https://argonaudio.com/collections/accessories/products.json
+Frontpage: https://argonaudio.com/collections/frontpage/products.json
+Systems: https://argonaudio.com/collections/systems/products.json
+Radio: https://argonaudio.com/collections/radio/products.json
+Spareparts: https://argonaudio.com/collections/spareparts/products.json
+Speakers: https://argonaudio.com/collections/speakers/products.json
+"""
+
+SKIP_KEYWORDS = {
+    "black days", "christmas", "frontpage", "spareparts", "test",
+    "all kolekcija", "svi proizvodi (glavni endpoint)"
+}
+
+CATEGORY_MAP = {
+    "cable": "Cables",
+    "cables": "Cables",
+    "speaker cable": "Cables",
+    "subwoofer cable": "Cables",
+    "usb-c": "Cables",
+    "connect kit": "Cables",
+    "fenris / sa subwoofer connect kit": "Cables",
+    "forte subwoofer connect kit": "Cables",
+    "speakers brackets": "Speakers Brackets",
+    "speaker brackets": "Speakers Brackets",
+    "speaker stands": "Speaker Stands",
+    "speaker accessories": "Speaker Accessories",
+    "turntable accessories": "Turntable Accessories",
+    "on-wall speakers": "On-Wall Speakers",
+    "stereo amplifier": "Amplifiers",
+    "music streamer": "Music Streamers",
+    "turntable": "Turntables",
+    "wireless headphone": "Headphones",
+    "riaa": "Amplifiers",
+    "wireless adapter": "Accessories",
+}
 
 scraper = cloudscraper.create_scraper(
     browser={'browser': 'chrome', 'platform': 'windows', 'mobile': False}
 )
 
-# --- LOGOVANJE ---
 def setup_logging():
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     if logger.hasHandlers():
         logger.handlers.clear()
-    formatter = logging.Formatter('[%(asctime)s] [%(levelname)s] [V{}] %(message)s'.format(CODE_VERSION), datefmt='%H:%M:%S')
+
+    formatter = logging.Formatter(
+        '[%(asctime)s] [%(levelname)s] [V{}] %(message)s'.format(CODE_VERSION),
+        datefmt='%H:%M:%S'
+    )
+
     file_handler = logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
+
     stream_handler = logging.StreamHandler(sys.stdout)
     stream_handler.setFormatter(formatter)
     logger.addHandler(stream_handler)
-    logging.info("="*80)
+
+    logging.info("=" * 80)
     logging.info(f"FINAL SKREJPER ZAPOČET: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    logging.info(f"VERZIJA: {CODE_VERSION} – POPRAVLJENE DOSTUPNE BOJE (thumbnail iz labela)")
-    logging.info("="*80)
+    logging.info(f"VERZIJA: {CODE_VERSION} - Korišćenje products.json endpointa za kategorije")
+    logging.info("=" * 80)
     return logger
 
 def shutdown_logging(logger):
-    logging.info("="*80)
+    logging.info("=" * 80)
     logging.info(f"SKREJPER ZAVRŠEN: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    logging.info("="*80)
+    logging.info("=" * 80)
     for h in logger.handlers[:]:
         h.close()
         logger.removeHandler(h)
 
-# --- LOGO ---
 def get_brand_logo_url():
     logging.info("Dohvatanje logotipa...")
     try:
@@ -72,62 +128,76 @@ def get_brand_logo_url():
                 return full
     except Exception as e:
         logging.warning(f"Logo greška: {e}")
+
     fallback = "https://argonaudio.com/cdn/shop/files/Argon_Audio_TextOnly_NEG.png"
     logging.info(f"Logo fallback: {fallback}")
     return fallback
 
-# --- KATEGORIJE ---
+def normalize_category(cat_name):
+    if not cat_name:
+        logging.debug("normalize_category: prazna kategorija, vraćam 'Ostalo'")
+        return "Ostalo"
+    cat_key = cat_name.strip().lower()
+    normalized = CATEGORY_MAP.get(cat_key, cat_name)
+    if normalized == cat_name:
+        logging.debug(f"normalize_category: nema mapiranja za '{cat_name}', vraćam original")
+    else:
+        logging.debug(f"normalize_category: '{cat_name}' mapirano na '{normalized}'")
+    return normalized
+
 def get_categories():
-    logging.info(f"Dohvatanje kategorija sa: {COLLECTIONS_URL}")
+    logging.info("Parsiranje products.json endpointa za kategorije...")
     categories = {}
-    seen = set()
-    try:
-        resp = scraper.get(COLLECTIONS_URL, timeout=15)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, 'html.parser')
-        for a in soup.select('a[href*="/collections/"]'):
-            href = a.get('href')
-            if not href:
+    seen_urls = set()
+
+    for line in COLLECTION_JSON_ENDPOINTS_RAW.strip().split('\n'):
+        line = line.strip()
+        if not line or ':' not in line:
+            continue
+
+        try:
+            cat_name_raw, json_url = line.split(':', 1)
+            cat_name = cat_name_raw.strip()
+            json_url = json_url.strip()
+
+            if any(skip in cat_name.lower() for skip in SKIP_KEYWORDS):
+                logging.info(f"Preskačem kategoriju (zbog ključne reči): '{cat_name}'")
                 continue
-            # Izvuci ime iz URL sluga umesto teksta linka – sprečava promo poruke
-            slug = href.split('/')[-1].split('?')[0]
-            name = slug.replace('-', ' ').title()
-            if not name or name.lower() in ['all', 'shop', 'new', 'sale', 'home', 'featured']:
-                continue
-            if any(skip.lower() in name.lower() for skip in SKIP_COLLECTIONS):
-                continue
-            full = urljoin(COLLECTIONS_URL, href)
-            if full not in seen:
-                seen.add(full)
-                categories[name] = full
-                logging.info(f"Kategorija: '{name}' → {full}")
-    except Exception as e:
-        logging.error(f"Greška: {e}")
-    logging.info(f"UKUPNO: {len(categories)}")
+
+            if json_url not in seen_urls:
+                categories[cat_name] = json_url
+                seen_urls.add(json_url)
+                logging.info(f"Dodata kategorija: '{cat_name}' -> {json_url}")
+            else:
+                logging.debug(f"URL '{json_url}' već dodat, preskačem.")
+
+        except Exception as e:
+            logging.warning(f"Greška prilikom parsiranja linije '{line}': {e}")
+
+    logging.info(f"UKUPNO kategorija za obradu: {len(categories)}")
     return categories
 
-# --- PROIZVODI ---
-def get_product_links_from_category(cat_url, cat_name):
-    logging.info(f"Obrađujem: '{cat_name}'")
+def get_product_links_from_category(products_json_url, cat_name):
+    logging.info(f"Dohvatanje proizvoda iz JSON-a za kategoriju '{cat_name}' sa: {products_json_url}")
     links = []
     try:
-        resp = scraper.get(cat_url)
+        resp = scraper.get(products_json_url, timeout=15)
         resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, 'html.parser')
-        for a in soup.select('a[href*="/products/"]'):
-            href = a.get('href')
-            if href:
-                full = urljoin(cat_url, href)
-                if '?variant=' in full:
-                    continue
-                if full not in links:
-                    links.append(full)
-        logging.info(f"Kategorija '{cat_name}': {len(links)} proizvoda")
+        json_data = resp.json()
+
+        products = json_data.get('products', [])
+        for product in products:
+            handle = product.get('handle')
+            if handle:
+                full_product_url = urljoin(MAIN_URL, f"/products/{handle}")
+                if full_product_url not in links:
+                    links.append(full_product_url)
+
+        logging.info(f"Kategorija '{cat_name}': pronađeno {len(links)} proizvoda iz JSON-a")
     except Exception as e:
-        logging.error(f"Greška: {e}")
+        logging.error(f"Greška prilikom dohvatanja proizvoda iz JSON-a za kategoriju '{cat_name}' ({products_json_url}): {e}")
     return links
 
-# --- JSON API ---
 def get_json_data(product_url):
     json_api_url = product_url.split('?')[0] + '.json'
     try:
@@ -135,12 +205,11 @@ def get_json_data(product_url):
         response.raise_for_status()
         return response.json().get('product')
     except Exception as e:
-        logging.warning(f"JSON greška: {e}")
+        logging.warning(f"JSON greška za {product_url}: {e}")
         return None
 
-# --- SKREJPOVANJE ---
 def scrape_product(product_url, logo_url, assigned_collection):
-    logging.info(f"SKREJPUJEM: {product_url}")
+    logging.info(f"Skrejpujem proizvod: {product_url}")
     json_data = get_json_data(product_url)
     if not json_data:
         return None
@@ -149,29 +218,26 @@ def scrape_product(product_url, logo_url, assigned_collection):
     description = json_data.get('body_html') or ''
     sku = json_data.get('variants', [{}])[0].get('sku')
 
-    # CENA
     price_str = json_data.get('variants', [{}])[0].get('price')
     cena = None
     if price_str:
         try:
             cena_float = float(price_str)
             cena = f"{cena_float:,.2f} EUR".replace(",", "X").replace(".", ",").replace("X", ".")
-        except: pass
+        except Exception:
+            pass
 
-    # SLIKE
     images = [img['src'].split('?')[0] for img in json_data.get('images', [])]
 
-    # HTML
     colors = []
     specs = {}
-    product_category = None
+    precise_category = None
 
     try:
         resp = scraper.get(product_url, timeout=15)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
 
-        # SPECIFIKACIJE
         for row in soup.select('.feature-chart__table-row'):
             k = row.select_one('.feature-chart__heading')
             v = row.select_one('.feature-chart__value')
@@ -181,30 +247,25 @@ def scrape_product(product_url, logo_url, assigned_collection):
                 if key and val:
                     specs[key] = val
 
-        # BOJE – POBOLJŠANI PARSER (thumbnail iz img u labelu, kao na sajtu)
         seen_colors = set()
         for label in soup.select('label.thumbnail-swatch, label.color-swatch'):
-            # Ime boje iz sr-only
             sr = label.select_one('.sr-only')
             color_name = sr.get_text(strip=True) if sr else None
             if not color_name or color_name in seen_colors:
                 continue
             seen_colors.add(color_name)
 
-            # Thumbnail slika iz img unutar labela
             img_tag = label.find('img')
             img_url = None
             if img_tag and img_tag.get('src'):
                 raw_url = img_tag['src']
                 if raw_url.startswith('//'):
                     raw_url = 'https:' + raw_url
-                # Čišćenje parametara (kao &width=...)
                 img_url = re.sub(r'&width=\d+', '', raw_url.split('&v=')[0])
 
-            # Fallback na stari parser ako nema thumbnaila
             if not img_url:
                 style = label.get('style', '')
-                url_match = re.search(r'url\(([^)]+)\)', style)
+                url_match = re.search(r'url$$([^)]+)$$', style)
                 if url_match:
                     raw_url = url_match.group(1)
                     if raw_url.startswith('//'):
@@ -216,18 +277,26 @@ def scrape_product(product_url, logo_url, assigned_collection):
                 "url_uzorka": img_url or ""
             })
 
-        # KATEGORIJA
-        if assigned_collection:
-            logging.debug(f"Kategorija za {product_url}: koristim assigned_collection '{assigned_collection}'")
-            product_category = assigned_collection
+        product_type_div = soup.select_one('div.product-info__type a')
+        if product_type_div:
+            precise_category = product_type_div.get_text(strip=True)
+
+        # Normalizacija i fallback logika
+        if precise_category:
+            precise_category = normalize_category(precise_category)
+
+        if not precise_category or precise_category == "Ostalo":
+            precise_category = normalize_category(assigned_collection)
+
+        if not precise_category or precise_category == "Ostalo":
+            precise_category = "Ostalo"
 
     except Exception as e:
-        logging.warning(f"HTML greška: {e}")
+        logging.warning(f"HTML greška za proizvod {product_url}: {e}")
+        if not precise_category or precise_category == "Ostalo":
+            precise_category = normalize_category(assigned_collection) or "Ostalo"
 
-    # KONAČNA KATEGORIJA
-    category = product_category or "Ostalo"
-
-    logging.info(f"ZAVRŠENO: {title} | Cena: {cena} | Boje: {len(colors)} | Kategorija: {category}")
+    logging.info(f"Gotova obrada: {title} | Cena: {cena} | Boje: {len(colors)} | Kategorija: {precise_category}")
 
     return {
         "ime_proizvoda": title,
@@ -238,14 +307,13 @@ def scrape_product(product_url, logo_url, assigned_collection):
         "url_proizvoda": product_url,
         "url_slika": images,
         "specifikacije": specs,
-        "kategorije": category,
+        "kategorije": precise_category,
         "dodatne_informacije": {
             "tagline": None,
             "dostupne_boje": colors
         }
     }
 
-# --- MAIN ---
 def main():
     logger = setup_logging()
     try:
@@ -259,17 +327,33 @@ def main():
         logo = get_brand_logo_url()
         categories = get_categories()
 
-        for cat_name, cat_url in categories.items():
+        logging.info("Sve kategorije za obradu:")
+        for cat in categories:
+            logging.info(f" - {cat}")
+
+        for cat_name, products_json_url in categories.items():
             time.sleep(random.uniform(1.5, 3.0))
-            product_links = get_product_links_from_category(cat_url, cat_name)
+            product_links = get_product_links_from_category(products_json_url, cat_name)
+            logging.info(f"Broj proizvoda u kategoriji '{cat_name}': {len(product_links)}")
+
             for link in product_links:
                 if link in existing_urls:
+                    logging.debug(f"Preskačem već postojeći proizvod: {link}")
                     continue
                 time.sleep(random.uniform(0.8, 1.8))
                 result = scrape_product(link, logo, cat_name)
                 if result:
                     final_data.append(result)
                     existing_urls.add(link)
+
+        # Dodatno logovanje kategorija neposredno pre čuvanja JSON fajla
+        logging.info("Pregled kategorija proizvoda pre čuvanja JSON fajla:")
+        category_counts = {}
+        for item in final_data:
+            cat = item.get("kategorije", "Ostalo")
+            category_counts[cat] = category_counts.get(cat, 0) + 1
+        for cat, count in category_counts.items():
+            logging.info(f" - {cat}: {count} proizvoda")
 
         with open(OUTPUT_FILENAME, 'w', encoding='utf-8') as f:
             json.dump(final_data, f, indent=4, ensure_ascii=False)
