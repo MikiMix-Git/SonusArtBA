@@ -11,7 +11,7 @@ from datetime import datetime
 import re
 
 # --- KONSTANTE ---
-CODE_VERSION = "Q1.10"  # Verzija sa najnovijom izmenom za boje
+CODE_VERSION = "Q1.10"  # Verzija sa najnovijom izmenom za boje i duplikate
 LOG_FILE = f"q_acoustics_scraper_{CODE_VERSION}.log"
 OUTPUT_FILENAME = f"q_acoustics_products_{CODE_VERSION}.json"
 MAIN_URL = "https://www.qacoustics.com/"
@@ -384,6 +384,9 @@ def main():
                 logging.info(f"Broj proizvoda u kategoriji '{cat_name}': {len(product_links)}")
 
                 for link in product_links:
+                    if link in existing_urls:
+                        logging.info(f"Preskačem duplikat proizvoda sa URL-om: {link}")
+                        continue
                     time.sleep(random.uniform(0.8, 1.8))
                     result = scrape_product(link, logo, cat_name)
                     if result:
@@ -404,6 +407,9 @@ def main():
             logging.info(f"Broj proizvoda u kategoriji '{cat_name}': {len(product_links)}")
 
             for link in product_links:
+                if link in existing_urls:
+                    logging.info(f"Preskačem duplikat proizvoda sa URL-om: {link}")
+                    continue
                 time.sleep(random.uniform(0.8, 1.8))
                 result = scrape_product(link, logo, cat_name)
                 if result:
