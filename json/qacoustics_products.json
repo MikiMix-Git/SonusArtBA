@@ -2,9 +2,9 @@
     {
         "ime_proizvoda": "3010c Bookshelf Speaker",
         "sku": "709024",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$479.00",
-        "opis": "A compact and discreet loudspeaker that won’t draw attention to itself - at least, not until it starts performing. If you want a small, easy-to-position speaker that sounds way bigger than it looks, this bookshelf model fits the bill (and your space) perfectly.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "479,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>A compact and discreet loudspeaker that won’t draw attention to itself - at least, not until it starts performing. If you want a small, easy-to-position speaker that sounds way bigger than it looks, this bookshelf model fits the bill (and your space) perfectly.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/3010c-bookshelf-speaker",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3010c_frontangle_nogrille_pinoak_1200x_b4068ff1-f662-4419-8304-470bccd2e1f7.jpg",
@@ -31,72 +31,29 @@
             "dostupne_boje": [
                 {
                     "boja": "Oak",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3010c_frontangle_nogrille_pinoak_1200x_b4068ff1-f662-4419-8304-470bccd2e1f7_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3010c_frontangle_nogrille_pinoak_1200x_b4068ff1-f662-4419-8304-470bccd2e1f7.jpg?v=1765727300&width=72"
                 },
                 {
                     "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3010c_frontangled_nogrille_satinblack_1200x_7e3cfe19-28fb-4bf5-9e67-33f50b527e7a_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3010c_frontangled_nogrille_satinblack_1200x_7e3cfe19-28fb-4bf5-9e67-33f50b527e7a.jpg?v=1765727300&width=72"
                 },
                 {
                     "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3010c_frontangle_nogrille_satinwhite_1200x_0ab336ee-041c-4f69-981f-eccd3eec3bd5_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3010c_frontangle_nogrille_satinwhite_1200x_0ab336ee-041c-4f69-981f-eccd3eec3bd5.jpg?v=1765727300&width=72"
                 },
                 {
                     "boja": "Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3010c_frontangled_nogrille_clarowalnut_1200x_46f7c036-651d-411a-adbb-8199f38235d9_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3010c_frontangled_nogrille_clarowalnut_1200x_46f7c036-651d-411a-adbb-8199f38235d9.jpg?v=1765727300&width=72"
                 }
-            ],
-            "dostupne_dužine": []
-        }
-    },
-    {
-        "ime_proizvoda": "3010i Compact Bookshelf Speaker Pair",
-        "sku": "711014",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$379.00",
-        "opis": "Boasting room-filling sound with its 100mm (4 in) and 22mm (0.9 in) precision drivers, focussing on power-to-size ratio, the crossover has been revised to take advantage of a larger cabinet volume to enhance sensitivity and bass extension.",
-        "url_proizvoda": "https://www.qacoustics.com/products/3010i-compact-bookshelf-speaker-pair",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_qacoustics-3010-black-pair_1.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_qacoustics-3010-walnut-pair_1.jpg"
-        ],
-        "specifikacije": {
-            "Enclosure type": "2-way reflex",
-            "Bass unit": "100 mm (4 in)",
-            "Treble unit": "22 mm (0.9 in)",
-            "Frequency response (+3 dB, –6 dB)": "65 Hz – 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "4 Ω",
-            "Sensitivity (2.83 Vrms @ 1 m)": "86 dB",
-            "Stereo amplifier power": "15–75 W",
-            "AV receiver (2 ch. driven)": "50–125 W",
-            "Crossover frequency": "2.6 kHz",
-            "Effective volume": "4.0 L (244 cu in)",
-            "Dimensions (H×W×D)": "253 × 150 × 252 mm (10.0 × 5.9 × 10 in)",
-            "Weight (per speaker)": "4.1 kg (9.0 lbs)"
-        },
-        "kategorije": "Bookshelf Speakers",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Carbon Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_qacoustics-3010-black-pair_1_100x.jpg"
-                },
-                {
-                    "boja": "English Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_qacoustics-3010-walnut-pair_1_100x.jpg"
-                }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "3020c Bookshelf Speaker",
         "sku": "709026",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$639.00",
-        "opis": "If you want scale in your sound but not in the size of your loudspeaker cabinet, you want the new 3020c standmount. It’s ready and able to let you experience all the power and dynamism of your favourite music, but without dominating your living space.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "639,00 EUR",
+        "opis": "<div class=\"keyfeatures\">\n<p>If you want scale in your sound but not in the size of your loudspeaker cabinet, you want the new 3020c standmount. It’s ready and able to let you experience all the power and dynamism of your favourite music, but without dominating your living space.</p>\n</div>\n<form action=\"https://www.qacoustics.co.uk/cart/add\" method=\"post\" enctype=\"multipart/form-data\" id=\"addtocardform\"></form>",
         "url_proizvoda": "https://www.qacoustics.com/products/3020c-bookshelf-speaker",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3020c_frontangle_nogrille_satinwhite_1200x_789d04f9-cfe8-4d70-9dff-7e7c34d2184f.jpg",
@@ -123,30 +80,29 @@
             "dostupne_boje": [
                 {
                     "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3020c_frontangle_nogrille_satinwhite_1200x_789d04f9-cfe8-4d70-9dff-7e7c34d2184f_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3020c_frontangle_nogrille_satinwhite_1200x_789d04f9-cfe8-4d70-9dff-7e7c34d2184f.jpg?v=1765728834&width=72"
                 },
                 {
                     "boja": "Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3020c_frontangled_nogrille_clarowalnut_1200x_dc89c94c-e8c5-40c1-8d5c-32e8fe3fe4bf_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3020c_frontangled_nogrille_clarowalnut_1200x_dc89c94c-e8c5-40c1-8d5c-32e8fe3fe4bf.jpg?v=1765728834&width=72"
                 },
                 {
                     "boja": "Oak",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3020c_frontangle_nogrille_pinoak_1200x_84e66268-7c35-45d6-b173-ebd2aa45b7ff_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3020c_frontangle_nogrille_pinoak_1200x_84e66268-7c35-45d6-b173-ebd2aa45b7ff.jpg?v=1765728834&width=72"
                 },
                 {
                     "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3020c_frontangled_nogrille_satinblack_1200x_031eb0dc-d450-4877-ac64-731c517734df_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3020c_frontangled_nogrille_satinblack_1200x_031eb0dc-d450-4877-ac64-731c517734df.jpg?v=1765728834&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "3020i Bookshelf Speaker Pair",
         "sku": "709042",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$479.00",
-        "opis": "The Q 3020i is a bookshelf or stand mount speaker from Q Acoustics core loudspeaker offering, designed to deliver beautiful sound into your home, using the latest technological enhancements applied to the full 3000i series.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "479,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>The Q 3020i is a bookshelf or stand mount speaker from Q Acoustics core loudspeaker offering, designed to deliver beautiful sound into your home, using the latest technological enhancements applied to the full 3000i series.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/3020i-bookshelf-speaker-pair",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_qacoustics-3020-walnut-pair_1.jpg",
@@ -176,22 +132,21 @@
             "dostupne_boje": [
                 {
                     "boja": "English Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_qacoustics-3020-walnut-pair_1_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_qacoustics-3020-walnut-pair_1.jpg?v=1765731587&width=72"
                 },
                 {
                     "boja": "Carbon Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_qacoustics-3020-black-pair_2_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_qacoustics-3020-black-pair_2.jpg?v=1765731587&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "3030i Bookshelf Speaker Pair",
         "sku": "709044",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$619.00",
-        "opis": "Q Acoustics 3030i bookshelf speaker is the latest addition to the Award-winning 3000i speaker range. Designed to deliver the biggest, most commanding sound ever achieved by a speaker of this type and price.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "619,00 EUR",
+        "opis": "<span data-mce-fragment=\"1\">Q Acoustics 3030i bookshelf speaker is the latest addition to the Award-winning 3000i speaker range. Designed to deliver the biggest, most commanding sound ever achieved by a speaker of this type and price.</span>",
         "url_proizvoda": "https://www.qacoustics.com/products/3030i-bookshelf-speaker-pair",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_walnut_5.jpg",
@@ -230,22 +185,21 @@
             "dostupne_boje": [
                 {
                     "boja": "English Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_walnut_5_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_walnut_5.jpg?v=1765820918&width=72"
                 },
                 {
                     "boja": "Carbon Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_black_7_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_black_7.jpg?v=1765820921&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "5010 Bookshelf Speaker Pair",
         "sku": "709059",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$999.00",
-        "opis": "Small enough to keep a low profile, but with sound big and accomplished enough to draw attention to itself. If you want off-the-scale performance from a discreet, compact and easy-to-position loudspeaker, the 5010 bookshelf speaker fits the bill as nicely as it fits your space.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "999,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>Small enough to keep a low profile, but with sound big and accomplished enough to draw attention to itself. If you want off-the-scale performance from a discreet, compact and easy-to-position loudspeaker, the 5010 bookshelf speaker fits the bill as nicely as it fits your space.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/5010",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5010_Black_Angle_NoGrill.jpg",
@@ -254,17 +208,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5010_Oak_Angle_NoGrill.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "1 × 110 mm (4.5 in)",
-            "Treble unit": "1 × 25 mm (1.0 in)",
-            "Frequency response (–6dB)": "56 Hz – 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.3 Ω",
-            "Sensitivity (2.83V @ 1kHz)": "86.3 dB/W/m",
-            "Recommended amplifier power": "15–90 W",
-            "Crossover frequency": "2.5 kHz",
-            "Effective volume": "5.0 L",
-            "Dimensions (per loudspeaker / H×W×D)": "264 × 160 × 263 mm (10.4 × 6.3 × 10.4 in)",
-            "Weight (per loudspeaker)": "5.6 kg (12.3 lbs)"
+            "Bass unit": "1 × 110 mm (4.5 in)Treble unit:1 × 25 mm (1.0 in)Frequency response (–6dB):56 Hz – 30 kHzNominal impedance:6 ΩMinimum impedance:3.3 ΩSensitivity (2.83V @ 1kHz):86.3 dB/W/mRecommended amplifier power:15–90 WCrossover frequency:2.5 kHzEffective volume:5.0 LDimensions (per loudspeaker / H×W×D):264 × 160 × 263 mm (10.4 × 6.3 × 10.4 in)Weight (per loudspeaker):5.6 kg (12.3 lbs)"
         },
         "kategorije": "Bookshelf Speakers",
         "dodatne_informacije": {
@@ -272,30 +216,29 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5010_Black_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5010_Black_Angle_NoGrill.jpg?v=1765728236&width=72"
                 },
                 {
                     "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5010_White_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5010_White_Angle_NoGrill.jpg?v=1765728236&width=72"
                 },
                 {
                     "boja": "Rosewood",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5010_Rosewood_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5010_Rosewood_Angle_NoGrill.jpg?v=1765728236&width=72"
                 },
                 {
                     "boja": "Oak",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5010_Oak_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5010_Oak_Angle_NoGrill.jpg?v=1765728134&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "5020 Bookshelf Speaker pair",
         "sku": "709063",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,199.00",
-        "opis": "Experience all the scale and power of your favourite music without letting your loudspeaker dominate your room. The 5020 standmounting speaker will put your right in the heart of the music without putting itself at the heart of your space.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.199,00 EUR",
+        "opis": "<p>Experience all the scale and power of your favourite music without letting your loudspeaker dominate your room. The 5020 standmounting speaker will put your right in the heart of the music without putting itself at the heart of your space.</p>",
         "url_proizvoda": "https://www.qacoustics.com/products/5020-bookshelf-speaker",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5020_Angle_Rosewood_NoGrill_9eb461df-45e8-4e39-a77c-b092cc6559c9.jpg",
@@ -322,30 +265,29 @@
             "dostupne_boje": [
                 {
                     "boja": "Rosewood",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5020_Angle_Rosewood_NoGrill_9eb461df-45e8-4e39-a77c-b092cc6559c9_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5020_Angle_Rosewood_NoGrill_9eb461df-45e8-4e39-a77c-b092cc6559c9.jpg?v=1765734391&width=72"
                 },
                 {
                     "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5020_Angle_Black_NoGrill_2daf640b-a64e-41ff-ace6-da80713cf1a7_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5020_Angle_Black_NoGrill_2daf640b-a64e-41ff-ace6-da80713cf1a7.jpg?v=1765734404&width=72"
                 },
                 {
                     "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5020_Angle_White_NoGrill_003e6501-3902-4739-b22b-28e2713af640_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5020_Angle_White_NoGrill_003e6501-3902-4739-b22b-28e2713af640.jpg?v=1765734404&width=72"
                 },
                 {
                     "boja": "Oak",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5020_Angle_Oak_NoGrill_d3371daf-28c2-4032-9ead-16b7da1c8004_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5020_Angle_Oak_NoGrill_d3371daf-28c2-4032-9ead-16b7da1c8004.jpg?v=1765734391&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "Concept 30 Bookshelf Speaker Pair",
         "sku": "709011",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,799.00",
-        "opis": "Taking acoustic technology and design cues from the flagship Concept 300, while also introducing new audio innovations, the Concept 30 standmount delivers truly high-end home audio performance.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.799,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>Taking acoustic technology and design cues from the flagship Concept 300, while also introducing new audio innovations, the Concept 30 standmount delivers truly high-end home audio performance.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/concept-30",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_concept-30-black-front-3-4-grille-off.jpg",
@@ -372,48 +314,37 @@
             "dostupne_boje": [
                 {
                     "boja": "Gloss Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-30-black-front-3-4-grille-off_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-30-black-front-3-4-grille-off.jpg?v=1765733026&width=72"
                 },
                 {
                     "boja": "Gloss Silver",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-30-grey-front-3-4-grille-off_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-30-grey-front-3-4-grille-off.jpg?v=1765733026&width=72"
                 },
                 {
                     "boja": "Gloss White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-30-white-front-3-4-grille-off_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-30-white-front-3-4-grille-off.jpg?v=1765733026&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "Concept 300 Bookshelf Speaker Pair",
-        "sku": "709006",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$3,599.00",
-        "opis": "The idea for the Concept 300 is simple, yet staggeringly ambitious. Built on the success of the floorstanding Concept 500 and delivering a stand mounting alternative that is more affordable without compromising performance and style",
+        "sku": "710817",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "6.399,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>This flagship standmount makes a cutting-edge design statement, while harbouring state-of-the-art acoustic innovations from its bigger brother, the Concept 500. Fused with ground-breaking speaker stand technology, the Concept 300 is Q Acoustics’ most progressive speaker yet.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/concept-300-bookshelf-speaker-pair",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QACOUSTICS_Concept300_Black_Rosewood_Front_Back_Grill_Off_Product_2.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QACOUSTICS_Concept300_Black_Rosewood_Front_Back_Grill_On_Product.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QACOUSTICS_Concept300_Silver_Ebony_Front_Back_Grill_Off_Product_2.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QACOUSTICS_Concept300_Silver_Ebony_Front_Back_Grill_On_Product.jpg"
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QACOUSTICS_Concept300_Silver_Ebony_Front_Back_Grill_On_Product.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/41jNpB8F6TL.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/61GidPSb1SL._AC_SL1500.jpg"
         ],
         "specifikacije": {
-            "Enclosure type": "2 way reflex",
-            "Mid/bass driver": "165mm",
-            "High frequency unit": "28mm",
-            "Frequency response": "55Hz - 30kHz",
-            "Nominal impedance": "6ohms",
-            "Minimum impedance": "4.7ohms",
-            "Sensitivity": "84dB",
-            "Stereo Amplifier Power": "25-200w",
-            "Crossover Frequency": "2.5kHz",
-            "Effective Volume": "11.4L",
-            "Dimensions W/H/D": "355 x 200 x 400 mm (14 x 7.9 x 15.7 in) cabinet",
-            "Weight": "14.5kg (per speaker)",
-            "Carton Dimensions W/H/D": "320 x 500 x 520mm",
-            "Packaged Weight": "16.6kg (per speaker)"
+            "Enclosure type": "2 way reflexMid/bass driver:165mmHigh frequency unit:28mmFrequency response:55Hz - 30kHzNominal impedance:6ohmsMinimum impedance:4.7ohmsSensitivity:84dBStereo Amplifier Power:25-200wCrossover Frequency:2.5kHzEffective Volume:11.4LDimensions W/H/D:355 x 200 x 400 mm (14 x 7.9 x 15.7 in) cabinetDimensions W/H/D:690 x 492 x 430 mm (27.2 x 19.4 x 16.9 in) standWeight:14.5kg (per speaker)Carton Dimensions W/H/D:320 x 500 x 520mmPackaged Weight:16.6kg (per speaker)",
+            "Concept 300 Tensegrity Stand": "Dimensions W/H/D:492 x 690 x 430mmWeight:3.9kg (per stand)Carton Dimensions W/H/D:740 x 780 x 460mmPackaged Weight:12.3kg (pair)"
         },
         "kategorije": "Bookshelf Speakers",
         "dodatne_informacije": {
@@ -421,26 +352,27 @@
             "dostupne_boje": [
                 {
                     "boja": "Black & Rosewood",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_QACOUSTICS_Concept300_Black_Rosewood_Front_Back_Grill_Off_Product_2_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_QACOUSTICS_Concept300_Black_Rosewood_Front_Back_Grill_Off_Product_2.jpg?v=1765731845&width=72"
                 },
                 {
                     "boja": "Silver & Ebony",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_QACOUSTICS_Concept300_Silver_Ebony_Front_Back_Grill_Off_Product_2_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_QACOUSTICS_Concept300_Silver_Ebony_Front_Back_Grill_Off_Product_2.jpg?v=1765731845&width=72"
+                },
+                {
+                    "boja": "White & Light Oak",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/41jNpB8F6TL.jpg?v=1769452415&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "3050i Floorstanding Speaker Pair",
         "sku": "709046",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,199.00",
-        "opis": "The Q 3050i speakers boast a range of unique technologies including HPE™ and P2P™ to ensure these floorstanding speakers deliver a truly exceptional sound.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.199,00 EUR",
+        "opis": "<span data-mce-fragment=\"1\">The Q 3050i speakers boast a range of unique technologies including HPE™ and P2P™ to ensure these floorstanding speakers deliver a truly exceptional sound.</span>",
         "url_proizvoda": "https://www.qacoustics.com/products/3050i-floorstanding-speaker-pair",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_qacoustics-3050-graphite-pair_1.jpg"
-        ],
+        "url_slika": [],
         "specifikacije": {
             "Enclosure type": "2-way reflex",
             "Bass unit": "2 × 165 mm (6.5 in)",
@@ -464,30 +396,29 @@
             "dostupne_boje": [
                 {
                     "boja": "Graphite Grey",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzNBM0EzQSIvPjwvc3ZnPg=="
+                    "url_uzorka": ""
                 },
                 {
                     "boja": "English Walnut",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzdCNTMzOCIvPjwvc3ZnPg=="
+                    "url_uzorka": ""
                 },
                 {
                     "boja": "Carbon Black",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzE4MTgxOCIvPjwvc3ZnPg=="
+                    "url_uzorka": ""
                 },
                 {
                     "boja": "Arctic White",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YwZjBmMCIvPjwvc3ZnPg=="
+                    "url_uzorka": ""
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "5040 Floorstanding Speaker pair",
         "sku": "709064",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,999.00",
-        "opis": "5040 is a notably compact floorstander with a modest footprint - which means it’s ideal for those environments where space is at a premium but the desire for full-scale audio excitement (as well a visual gratification) is strong.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.999,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>5040 is a notably compact floorstander with a modest footprint - which means it’s ideal for those environments where space is at a premium but the desire for full-scale audio excitement (as well a visual gratification) is strong.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/5040-floorstanding-speaker",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5040_Black_Angle_NoGrill.jpg",
@@ -496,17 +427,7 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5040_Oak_Angle_NoGrill.jpg"
         ],
         "specifikacije": {
-            "Bass unit": "2 × 125 mm (5.0 in)",
-            "Treble unit": "1 × 25 mm (1.0 in)",
-            "Frequency response (–6dB)": "39 Hz – 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.0 Ω",
-            "Sensitivity (2.83V @ 1kHz)": "91.5 dB/W/m",
-            "Recommended amplifier power": "25–150 W",
-            "Crossover frequency": "2.5 kHz",
-            "Effective volume": "27 L",
-            "Dimensions (per loudspeaker / H×W×D)": "Inc spikes and stabiliser: 967 × 361 × 293 mm (38.1 × 14.2 × 11.5 in)",
-            "Weight (per loudspeaker)": "18.0 kg (39.7 lbs)"
+            "Bass unit": "2 × 125 mm (5.0 in)Treble unit:1 × 25 mm (1.0 in)Frequency response (–6dB):39 Hz – 30 kHzNominal impedance:6 ΩMinimum impedance:3.0 ΩSensitivity (2.83V @ 1kHz):91.5 dB/W/mRecommended amplifier power:25–150 WCrossover frequency:2.5 kHzEffective volume:27 LDimensions (per loudspeaker / H×W×D):Inc spikes and stabiliser: 967 × 361 × 293 mm (38.1 × 14.2 × 11.5 in)Weight (per loudspeaker):18.0 kg (39.7 lbs)"
         },
         "kategorije": "Floorstanding Speakers",
         "dodatne_informacije": {
@@ -514,30 +435,29 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5040_Black_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5040_Black_Angle_NoGrill.jpg?v=1765729687&width=72"
                 },
                 {
                     "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5040_White_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5040_White_Angle_NoGrill.jpg?v=1765729687&width=72"
                 },
                 {
                     "boja": "Rosewood",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5040_Rosewood_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5040_Rosewood_Angle_NoGrill.jpg?v=1765729687&width=72"
                 },
                 {
                     "boja": "Oak",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5040_Oak_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5040_Oak_Angle_NoGrill.jpg?v=1765729673&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "5050 Floorstanding Speaker pair",
         "sku": "709068",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$2,499.00",
-        "opis": "Where sheer scale, widescreen sound-staging and complete audio-fidelity are concerned, the 5050 outperforms its nominal competition with ease. If you have a bigger space to fill with the most beautifully and accurately reproduced sound, the 5050 floorstander is the speaker you need. Supplied with magnetically fixed gri",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "2.499,00 EUR",
+        "opis": "<span data-mce-fragment=\"1\">Where sheer scale, widescreen sound-staging and complete audio-fidelity are concerned, the 5050 outperforms its nominal competition with ease. If you have a bigger space to fill with the most beautifully and accurately reproduced sound, the 5050 floorstander is the speaker you need. Supplied with magnetically fixed grilles.</span>",
         "url_proizvoda": "https://www.qacoustics.com/products/5050-floorstanding-speaker-pair",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_Black_Angle_NoGrill_1.jpg",
@@ -546,7 +466,6 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5050_Oak_Angle_NoGrill_1.jpg"
         ],
         "specifikacije": {
-            "Dimensions (per loudspeaker / H×W×D)": "110 × 32 × 43.9 cm (43.3 × 12.6 × 17.3 in)",
             "Bass unit": "2 × 150 mm (6.0 in)",
             "Treble unit": "1 × 25 mm (1.0 in)",
             "Frequency response (–6dB)": "37 Hz – 30 kHz",
@@ -556,6 +475,7 @@
             "Recommended amplifier power": "25–150 W",
             "Crossover frequency": "2.7 kHz",
             "Effective volume": "39.7 L",
+            "Dimensions (per loudspeaker / H×W×D)": "110 × 32 × 43.9 cm (43.3 × 12.6 × 17.3 in)",
             "Weight (per loudspeaker)": "24.79 kg (54.65 lbs)"
         },
         "kategorije": "Floorstanding Speakers",
@@ -564,30 +484,29 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5050_Black_Angle_NoGrill_1_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5050_Black_Angle_NoGrill_1.jpg?v=1765730764&width=72"
                 },
                 {
                     "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5050_White_Angle_NoGrill_1_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5050_White_Angle_NoGrill_1.jpg?v=1765730799&width=72"
                 },
                 {
                     "boja": "Rosewood",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5050_Rosewood_Angle_NoGrill_1_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5050_Rosewood_Angle_NoGrill_1.jpg?v=1765730799&width=72"
                 },
                 {
                     "boja": "Oak",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5050_Oak_Angle_NoGrill_1_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5050_Oak_Angle_NoGrill_1.jpg?v=1765730799&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "Concept 50 Floorstanding Speaker Pair",
         "sku": "709014",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$3,899.00",
-        "opis": "A sonic step-up from the Concept 30, this elegant floorstander takes everything great about its standmount brother but delivers more powerful audio, a deeper soundstage and increased bass extension through its leading-edge, low resonance cabinet.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "3.899,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>A sonic step-up from the Concept 30, this elegant floorstander takes everything great about its standmount brother but delivers more powerful audio, a deeper soundstage and increased bass extension through its leading-edge, low resonance cabinet.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/concept-50",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_concept-50-black-front-3-4-grille-off.jpg",
@@ -614,66 +533,53 @@
             "dostupne_boje": [
                 {
                     "boja": "Gloss Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-50-black-front-3-4-grille-off_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-50-black-front-3-4-grille-off.jpg?v=1765729316&width=72"
                 },
                 {
                     "boja": "Gloss Silver",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-50-grey-front-3-4-grille-off_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-50-grey-front-3-4-grille-off.jpg?v=1765729316&width=72"
                 },
                 {
                     "boja": "Gloss White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-50-white-front-3-4-grille-off_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-50-white-front-3-4-grille-off.jpg?v=1765729316&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "Concept 500 Floorstanding Speaker Pair",
         "sku": "709010",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$8,899.00",
-        "opis": "The top-of-the-range Concept speaker, this high-end floorstander is designed to appeal to discerning audiophiles. The Concept 500 achieves a perfect balance between art and science. It is a loudspeaker that is at once, stylish, contemporary, exquisite-sounding and astonishingly accurate,",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "8.899,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>The top-of-the-range Concept speaker, this high-end floorstander is designed to appeal to discerning audiophiles. The Concept 500 achieves a perfect balance between art and science. It is a loudspeaker that is at once, stylish, contemporary, exquisite-sounding and astonishingly accurate,</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/concept-500-floorstanding-speaker-pair",
         "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_Concept_500_White_3-4_front3_2_60af4e9e-b2fc-4703-8ea0-b72f4bb80590.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_Concept_500_White_Gloss_front3_99ded4ff-9f4a-4b6c-a18a-ce23d2cec7b0.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_Concept_500_White_3-4_rear3_b8bef08f-fed5-4b28-9f4f-62e80bc4dce0.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_Concept_500_White_side3_4a4bc3e3-688d-4fdc-973e-b0449373c063.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QAcoustics_Concept_500_Silver_Ebony_Front_Angle_Without_Grille_Detail_2_b10e9fa5-2f6f-48ea-9f2c-7116fad38a9d.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QAcoustics_Concept_500_Silver_Ebony_Rear_Full_Angle_Detail_06975fcf-dd77-4751-b057-a9d0e31ca34a.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QAcoustics_Concept_500_Silver_Ebony_Side_Full_With_Grille_Detail_99080795-30f6-49d0-80e7-acd3d670d100.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_Concept_500_Black_3-4_front1_2_3e9afaaa-f26d-4893-a6a7-7e927b66d9cb.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_Concept_500_Black_front2_6904681e-481e-4397-b979-6769575cc875.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_Concept_500_Black_3-4_rear1_eae95669-d13b-43b8-8241-612ba14474f0.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_Concept_500_Black_side2_eca9ec7f-2216-4b87-9e9d-40e00ee71a08.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_1_1_1975d2a6-8a10-4b96-be74-f1ecd1353b66.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_6_7c633437-b982-4926-b8ec-778c1cc5be0d.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_7_0eb88521-1df5-49db-aaa8-2a477ef8c499.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_8_ebcef613-9598-4775-8282-f79c31599c57.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_12_acc058fa-1f75-46b1-8fbe-a1aa3114d116.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QAcoustics_Concept_500_Silver_Ebony_Rear_Full_Angle_Detail_6ad790a3-dde9-43eb-b8bd-1c212fb0cd03.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QAcoustics_Concept_500_Silver_Ebony_Side_Full_With_Grille_Detail_be789569-9d17-4016-ad96-3ed39f6af191.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QACOUSTICS_Concept500_Full_Black_Base_2_Detail_ca5a121b-7aae-4143-a0dd-2df66b061252.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QACOUSTICS_Concept500_Silver_Ebony_Back_Detail_20c296e7-d00e-4f21-9d67-761cdb40cb11.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_1_1_a292f860-1556-44e8-8724-1a8df54bf0e2.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_6_5d2fbdef-39a2-43f1-894f-35f33148a5c3.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_7_b5f01946-736f-4a4b-b73f-f62bf5cc7f77.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_8_3d2e32a0-9345-427a-b894-fcaf3b746652.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_Q_Acoustics_White_12_dee04c52-49fe-4d2c-b78d-2e47aa2a9bc6.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QAcoustics_Concept_500_Silver_Ebony_Rear_Full_Angle_Detail_ef23ea8a-8314-4a4d-aa52-2ce16727adf3.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QAcoustics_Concept_500_Silver_Ebony_Side_Full_With_Grille_Detail_9eaa2b45-8b1a-4c59-98b0-c2b2cfef1773.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QACOUSTICS_Concept500_Full_Black_Base_2_Detail_974f005d-0c2d-47c7-90af-901a2783975d.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_QACOUSTICS_Concept500_Silver_Ebony_Back_Detail_21dabb8b-060f-4b12-8f56-4df0dd4db07e.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/31cXyU0LE-L.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/314HqX8Y7gL.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/61hhD9bbeTL.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/51Kxmb3AnnL.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/516fmaqbyVL.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/518_UeuiBcL.jpg"
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/518_UeuiBcL.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/31RbUGvqvoL.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/21_z3YxPV0L.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/61-dUqlM-cL.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/21ohwdX1GVL.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/61POuMpM9wL.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/619a66zmoML.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/71i6xiulNjL.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/31gB8wf_MbL.jpg"
         ],
         "specifikacije": {
-            "Frequency Response": "41 Hz - 30 kHz",
-            "Average Impedance": "6 Ω",
-            "Minimum Impedance": "3.7 Ω",
-            "Recommended Power": "25 - 200 W",
-            "Distortion (120 Hz - 20 kHz)": "0.2 %",
-            "Crossover Frequency": "2.5 kHz",
-            "Mid Bass / Driver": "2 x 165 mm",
-            "High Frequency Unit": "28 mm",
-            "Size (H x W x D)": "1150 x 400 x 350 mm (45.3 x 15.7 x 14.8 in) cabinet",
-            "Weight": "42kg (92.6 lbs)"
+            "Frequency Response": "41 Hz - 30 kHzAverage Impedance:6 ΩMinimum Impedance:3.7 ΩRecommended Power:25 - 200 WDistortion (120 Hz - 20 kHz):0.2 %Crossover Frequency:2.5 kHzMid Bass / Driver:2 x 165 mmHigh Frequency Unit:28 mmSize (H x W x D):1150 x 400 x 350 mm (45.3 x 15.7 x 14.8 in) cabinetSize (H x W x D):1175 x 400 x 375 mm (46.2 x 15.7 x 14.8 in) overallWeight:42kg (92.6 lbs)Links are provided toadjust the high frequency + or - 0.5 dB."
         },
         "kategorije": "Floorstanding Speakers",
         "dodatne_informacije": {
@@ -681,26 +587,25 @@
             "dostupne_boje": [
                 {
                     "boja": "White & Light Oak",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
+                    "url_uzorka": ""
                 },
                 {
                     "boja": "Silver & Ebony",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
+                    "url_uzorka": ""
                 },
                 {
                     "boja": "Black & Rosewood",
-                    "url_uzorka": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NDQ0NDQyIvPjwvc3ZnPg=="
+                    "url_uzorka": ""
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "3060s Active Subwoofer",
         "sku": "709053",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$599.00",
-        "opis": "Utilizing the technology that the rest of the 3000i series boasts, the Q 3060S slimline subwoofer is as powerful as it is attractive.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "599,00 EUR",
+        "opis": "<span data-mce-fragment=\"1\">Utilizing the technology that the rest of the 3000i series boasts, the Q 3060S slimline subwoofer is as powerful as it is attractive.</span>",
         "url_proizvoda": "https://www.qacoustics.com/products/3060s-active-subwoofer",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3572_main.jpg",
@@ -725,43 +630,28 @@
             "dostupne_boje": [
                 {
                     "boja": "English Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3572_main_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3572_main.jpg?v=1765732932&width=72"
                 },
                 {
                     "boja": "Carbon Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3573_main_1_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3573_main_1.jpg?v=1765732932&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "Q SUB80",
         "sku": "709081",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,099.00",
-        "opis": "Smaller rooms with smaller speakers still deserve big, well-controlled bass for listening to music or watching movies. The Q SUB80 with its 8in driver is the ideal partner for M20 or M40 active speakers or 3000c and 5000 Cinema Packs in ones or twos.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.099,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>Smaller rooms with smaller speakers still deserve big, well-controlled bass for listening to music or watching movies. The Q SUB80 with its 8in driver is the ideal partner for M20 or M40 active speakers or 3000c and 5000 Cinema Packs in ones or twos.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/q-sub80",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Black_Sub80_Top_Angle.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/White_Sub80_Top_Angle.jpg"
         ],
         "specifikacije": {
-            "Enclosure type": "Infinite baffle",
-            "Bass unit diameter": "203 mm (8 in)",
-            "Effective volume": "13.9 litres",
-            "Max SPL @ 1 m": "107 dB",
-            "Frequency response (-6dB)": "36 Hz – 250 Hz",
-            "Low pass crossover range": "50 Hz – 250 Hz",
-            "Peak amplifier power": "400 W",
-            "Continuous amplifier power": "200 W",
-            "THD @ rated power": "0.09%",
-            "Input sensitivity (max gain)": "300 mv rms",
-            "Maximum input level": "2.1 V rms",
-            "Input impedance": "20 kΩ",
-            "Noise floor (A wtd)": "50 μV",
-            "Dimensions (HxWxD)": "315 x 315 x 347 mm (12.4 x 12.4 x 13.6 in)",
-            "Weight (per loudspeaker)": "15 kg (33 lbs)"
+            "Enclosure type": "Infinite baffleBass unit diameter:203 mm (8 in)Effective volume:13.9 litresMax SPL @ 1 m:107 dBFrequency response (-6dB):36 Hz – 250 HzLow pass crossover range:50 Hz – 250 HzPeak amplifier power:400 WContinuous amplifier power:200 WTHD @ rated power:0.09%Input sensitivity (max gain):300 mv rmsMaximum input level:2.1 V rmsInput impedance:20 kΩNoise floor (A wtd):50 μVDimensions (HxWxD):315 x 315 x 347 mm (12.4 x 12.4 x 13.6 in)Weight (per loudspeaker):15 kg (33 lbs)"
         },
         "kategorije": "Subwoofers",
         "dodatne_informacije": {
@@ -769,43 +659,28 @@
             "dostupne_boje": [
                 {
                     "boja": "Satin Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Black_Sub80_Top_Angle_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Black_Sub80_Top_Angle.jpg?v=1765730176&width=72"
                 },
                 {
                     "boja": "Satin White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/White_Sub80_Top_Angle_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/White_Sub80_Top_Angle.jpg?v=1765730178&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "Q SUB120",
         "sku": "709084",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,399.00",
-        "opis": "No matter if it’s a stereo set-up or full-on surround-sound cinema system, the Q SUB120 can fill your listening room with that infra-bass Low Frequency Effect you can feel as well as hear. Big room with big speakers? No problem.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.399,00 EUR",
+        "opis": "<p>No matter if it’s a stereo set-up or full-on surround-sound cinema system, the Q SUB120 can fill your listening room with that infra-bass Low Frequency Effect you can feel as well as hear. Big room with big speakers? No problem.</p>",
         "url_proizvoda": "https://www.qacoustics.com/products/q-sub120",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Black_Sub120_Top_Angle_a03fe003-46a4-498f-be15-d1914383be93.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/White_Sub120_Top_Angle_b5dd78a6-9c3d-4b74-8ebb-524eb85b73f2.jpg"
         ],
         "specifikacije": {
-            "Enclosure type": "Infinite baffle",
-            "Bass unit diameter": "305 mm (12 in)",
-            "Effective volume": "44.1 litres",
-            "Max SPL @ 1 m": "114 dB",
-            "Frequency response (-6dB)": "28 Hz – 250 Hz",
-            "Low pass crossover range": "40 Hz – 250 Hz",
-            "Peak amplifier power": "600 W",
-            "Continuous amplifier power": "300 W",
-            "THD @ rated power": "0.09%",
-            "Input sensitivity (max gain)": "300 mv rms",
-            "Maximum input level": "2.1 V rms",
-            "Input impedance": "20 kΩ",
-            "Noise floor (A wtd)": "50 μV",
-            "Dimensions (HxWxD)": "400 x 400 x 432 mm (15.7 x 15.7 x 17.0 in)",
-            "Weight (per loudspeaker)": "22.5 kg (49.6 lbs)"
+            "Enclosure type": "Infinite baffleBass unit diameter:305 mm (12 in)Effective volume:44.1 litresMax SPL @ 1 m:114 dBFrequency response (-6dB):28 Hz – 250 HzLow pass crossover range:40 Hz – 250 HzPeak amplifier power:600 WContinuous amplifier power:300 WTHD @ rated power:0.09%Input sensitivity (max gain):300 mv rmsMaximum input level:2.1 V rmsInput impedance:20 kΩNoise floor (A wtd):50 μVDimensions (HxWxD):400 x 400 x 432 mm (15.7 x 15.7 x 17.0 in)Weight (per loudspeaker):22.5 kg (49.6 lbs)"
         },
         "kategorije": "Subwoofers",
         "dodatne_informacije": {
@@ -813,43 +688,28 @@
             "dostupne_boje": [
                 {
                     "boja": "Satin Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Black_Sub120_Top_Angle_a03fe003-46a4-498f-be15-d1914383be93_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Black_Sub120_Top_Angle_a03fe003-46a4-498f-be15-d1914383be93.jpg?v=1765735346&width=72"
                 },
                 {
                     "boja": "Satin White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/White_Sub120_Top_Angle_b5dd78a6-9c3d-4b74-8ebb-524eb85b73f2_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/White_Sub120_Top_Angle_b5dd78a6-9c3d-4b74-8ebb-524eb85b73f2.jpg?v=1765735346&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "Q SUB100",
         "sku": "711022",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,199.00",
-        "opis": "A bigger space demands bigger bass - and that’s exactly what the Q SUB100 provides. Its 10in driver and effortless performance make it the perfect low-frequency partner for our Concept loudspeakers, as well as every other medium-sized passive speaker in our line-up.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.199,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>A bigger space demands bigger bass - and that’s exactly what the Q SUB100 provides. Its 10in driver and effortless performance make it the perfect low-frequency partner for our Concept loudspeakers, as well as every other medium-sized passive speaker in our line-up.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/q-sub100",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/White_Sub100_Top_Angle.jpg",
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Black_Sub100_Top_Angle.jpg"
         ],
         "specifikacije": {
-            "Enclosure type": "Infinite baffle",
-            "Bass unit diameter": "203 mm (8 in)",
-            "Effective volume": "13.9 litres",
-            "Max SPL @ 1 m": "107 dB",
-            "Frequency response (-6dB)": "36 Hz – 250 Hz",
-            "Low pass crossover range": "50 Hz – 250 Hz",
-            "Peak amplifier power": "400 W",
-            "Continuous amplifier power": "200 W",
-            "THD @ rated power": "0.09%",
-            "Input sensitivity (max gain)": "300 mv rms",
-            "Maximum input level": "2.1 V rms",
-            "Input impedance": "20 kΩ",
-            "Noise floor (A wtd)": "50 μV",
-            "Dimensions (HxWxD)": "315 x 315 x 347 mm (12.4 x 12.4 x 13.6 in)",
-            "Weight (per loudspeaker)": "15 kg (33 lbs)"
+            "Enclosure type": "Infinite baffleBass unit diameter:203 mm (8 in)Effective volume:13.9 litresMax SPL @ 1 m:107 dBFrequency response (-6dB):36 Hz – 250 HzLow pass crossover range:50 Hz – 250 HzPeak amplifier power:400 WContinuous amplifier power:200 WTHD @ rated power:0.09%Input sensitivity (max gain):300 mv rmsMaximum input level:2.1 V rmsInput impedance:20 kΩNoise floor (A wtd):50 μVDimensions (HxWxD):315 x 315 x 347 mm (12.4 x 12.4 x 13.6 in)Weight (per loudspeaker):15 kg (33 lbs)"
         },
         "kategorije": "Subwoofers",
         "dodatne_informacije": {
@@ -857,22 +717,21 @@
             "dostupne_boje": [
                 {
                     "boja": "Satin White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/White_Sub100_Top_Angle_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/White_Sub100_Top_Angle.jpg?v=1765735386&width=72"
                 },
                 {
                     "boja": "Satin Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Black_Sub100_Top_Angle_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Black_Sub100_Top_Angle.jpg?v=1765735386&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "3070 Active Subwoofer",
         "sku": "711011",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$419.99",
-        "opis": "This powerful, 140watts rms, twin 170mm drive unit subwoofer will bring the full explosive majesty of blockbuster movie soundtracks into your living room.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "419,99 EUR",
+        "opis": "<span data-mce-fragment=\"1\">This powerful, 140watts rms, twin 170mm drive unit subwoofer will bring the full explosive majesty of blockbuster movie soundtracks into your living room.</span>",
         "url_proizvoda": "https://www.qacoustics.com/products/3070-active-subwoofer",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/3070sgraphite_1_1.jpg",
@@ -896,16 +755,32 @@
         "kategorije": "Subwoofers",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": [],
-            "dostupne_dužine": []
+            "dostupne_boje": [
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                }
+            ]
         }
     },
     {
         "ime_proizvoda": "3090Ci Center Speaker",
         "sku": "709055",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$319.00",
-        "opis": "The Q 3090Ci Centre Speaker delivers an immersive home cinema experience with precision twin 100mm (4\") and 22mm (0.9\") drivers, ensuring exceptional detail in every word and sound. Designed with technology from the broader 3000i range, it incorporates P2P bracing and new high-frequency drivers to ensure acoustic consi",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "319,00 EUR",
+        "opis": "The Q 3090Ci Centre Speaker delivers an immersive home cinema experience with precision twin 100mm (4\") and 22mm (0.9\") drivers, ensuring exceptional detail in every word and sound. Designed with technology from the broader 3000i range, it incorporates P2P bracing and new high-frequency drivers to ensure acoustic consistency across your setup.\n\nThanks to a decoupled tweeter design, the speaker reduces vibration interference for clearer, more refined sound. The mid/bass driver is constructed from coated paper and rubber surrounds for controlled resonance. The 3090Ci is crafted for easy positioning, matching the width of most AV receivers, and includes new low-profile binding posts for sleek cable integration.\n\nIt’s available in four modern finishes—Carbon Black, Arctic White, Graphite Grey, and English Walnut—each with chrome bezels and magnetic grilles, making it as attractive as it is powerful.",
         "url_proizvoda": "https://www.qacoustics.com/products/3090ci-center-speaker",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3592_angle.jpg",
@@ -940,68 +815,21 @@
             "dostupne_boje": [
                 {
                     "boja": "English Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3592_angle_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3592_angle.jpg?v=1765730567&width=72"
                 },
                 {
                     "boja": "Carbon Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3596_angle_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3596_angle.jpg?v=1765730567&width=72"
                 }
-            ],
-            "dostupne_dužine": []
-        }
-    },
-    {
-        "ime_proizvoda": "Concept 90 Center Channel Speaker",
-        "sku": "709017",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,299.00",
-        "opis": "At the heart of a Concept 5.1 home cinema set-up, the Concept 90 is our most high-performance centre channel speaker yet. Able to deliver astonishingly dynamic and ultra-clear dialogue, this speaker is the star of the Concept home cinema range.",
-        "url_proizvoda": "https://www.qacoustics.com/products/concept-90",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_concept-90-black-front-3-4-grille-off.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_concept-90-grey-front-3-4-grille-off.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_concept-90-white-front-3-4-grille-off.jpg"
-        ],
-        "specifikacije": {
-            "Bass unit": "2 × 125 mm (5.0 in)",
-            "Treble unit": "1 × 25 mm (1.0 in)",
-            "Frequency response (–6 dB)": "67 Hz – 30 kHz",
-            "Nominal impedance": "6 Ω",
-            "Minimum impedance": "3.7 Ω",
-            "Sensitivity (2.83 V @ 1 kHz)": "90 dB/W/m",
-            "Recommended amplifier power": "25–150 W",
-            "Crossover frequency": "2.1 kHz",
-            "Distortion (120 Hz – 20 kHz @ 2.83 Vrms)": "<0.2%",
-            "Effective volume": "11 L",
-            "Dimensions (per loudspeaker / H × W × D)": "184 × 550 × 259 mm (7.2 × 21.7 × 10.2 in)",
-            "Weight (per loudspeaker)": "12.3 kg (27.1 lbs)"
-        },
-        "kategorije": "Centered",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Gloss Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-90-black-front-3-4-grille-off_100x.jpg"
-                },
-                {
-                    "boja": "Gloss Silver",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-90-grey-front-3-4-grille-off_100x.jpg"
-                },
-                {
-                    "boja": "Gloss White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-90-white-front-3-4-grille-off_100x.jpg"
-                }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     },
     {
         "ime_proizvoda": "5090 Center Speaker",
         "sku": "709072",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$799.00",
-        "opis": "Designed to project dialogue ahead of even the most full-on Hollywood action movie soundtrack, and to deliver all the subtlety and nuance of art-house favourites with equal ease and conviction. Put the 5090 at the centre of your home cinema system and get the complete picture.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "799,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>Designed to project dialogue ahead of even the most full-on Hollywood action movie soundtrack, and to deliver all the subtlety and nuance of art-house favourites with equal ease and conviction. Put the 5090 at the centre of your home cinema system and get the complete picture.</span></p>",
         "url_proizvoda": "https://www.qacoustics.com/products/5090-center-speaker",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/5090_Angle_Black_NoGrill.jpg",
@@ -1028,29 +856,72 @@
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5090_Angle_Black_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5090_Angle_Black_NoGrill.jpg?v=1765734487&width=72"
                 },
                 {
                     "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5090_White_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5090_White_Angle_NoGrill.jpg?v=1765734487&width=72"
                 },
                 {
                     "boja": "Rosewood",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5090_Rosewood_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5090_Rosewood_Angle_NoGrill.jpg?v=1765734487&width=72"
                 },
                 {
                     "boja": "Oak",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5090_Oak_Angle_NoGrill_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/5090_Oak_Angle_NoGrill.jpg?v=1765734487&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "Concept 90 Center Channel Speaker",
+        "sku": "709017",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.299,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>At the heart of a Concept 5.1 home cinema set-up, the Concept 90 is our most high-performance centre channel speaker yet. Able to deliver astonishingly dynamic and ultra-clear dialogue, this speaker is the star of the Concept home cinema range.</span></p>",
+        "url_proizvoda": "https://www.qacoustics.com/products/concept-90",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_concept-90-black-front-3-4-grille-off.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_concept-90-grey-front-3-4-grille-off.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m_concept-90-white-front-3-4-grille-off.jpg"
+        ],
+        "specifikacije": {
+            "Bass unit": "2 × 125 mm (5.0 in)Treble unit:1 × 25 mm (1.0 in)",
+            "Frequency response (–6 dB)": "67 Hz – 30 kHz",
+            "Nominal impedance": "6 Ω",
+            "Minimum impedance": "3.7 Ω",
+            "Sensitivity (2.83 V @ 1 kHz)": "90 dB/W/m",
+            "Recommended amplifier power": "25–150 W",
+            "Crossover frequency": "2.1 kHz",
+            "Distortion (120 Hz – 20 kHz @ 2.83 Vrms)": "<0.2%",
+            "Effective volume": "11 L",
+            "Dimensions (per loudspeaker / H × W × D)": "184 × 550 × 259 mm (7.2 × 21.7 × 10.2 in)",
+            "Weight (per loudspeaker)": "12.3 kg (27.1 lbs)"
+        },
+        "kategorije": "Centered",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Gloss Black",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-90-black-front-3-4-grille-off.jpg?v=1765729515&width=72"
+                },
+                {
+                    "boja": "Gloss Silver",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-90-grey-front-3-4-grille-off.jpg?v=1765729515&width=72"
+                },
+                {
+                    "boja": "Gloss White",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m_concept-90-white-front-3-4-grille-off.jpg?v=1765729515&width=72"
+                }
+            ]
         }
     },
     {
         "ime_proizvoda": "Concept 300 Speaker Stand Pair",
         "sku": "709005",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,799.00",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.799,00 EUR",
         "opis": "Q Acoustics Concept 300 Speakers’ Tensegrity Stands redefine the relationship between the speaker and the stand by using a completely new design",
         "url_proizvoda": "https://www.qacoustics.com/products/concept-300-speaker-stand-pair",
         "url_slika": [
@@ -1061,76 +932,58 @@
         ],
         "specifikacije": {
             "Dimensions (HxWxD)": "H/W/D: 690 x 492 x 430mm (27.1” x 19.3” x 16.9”) | Carton Dimensions H/W/D: 780 x 740 x 460mm (30.7” x 29.1” x 18.1”)",
-            "Weight": "3.9kg (8.6lbs) per stand | Packaged Weight: 12.30kg (27.11 lbs) pair",
-            "H/W/D": "690 x 492 x 430mm (27.1” x 19.3” x 16.9”) | Carton Dimensions H/W/D: 780 x 740 x 460mm (30.7” x 29.1” x 18.1”)",
-            "3.9kg (8.6lbs) per stand | Packaged Weight": "12.30kg (27.11 lbs) pair"
+            "Weight": "3.9kg (8.6lbs) per stand | Packaged  12.30kg (27.11 lbs) pair"
         },
-        "kategorije": "Accessories",
+        "kategorije": "Svi proizvodi (glavni endpoint)",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": [],
-            "dostupne_dužine": []
+            "dostupne_boje": [
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                }
+            ]
         }
     },
     {
-        "ime_proizvoda": "Tensegrity Speaker Stand Pair with Universal Adapter Plate",
-        "sku": "711024",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,799.00",
-        "opis": "Q Acoustics Tensegrity Speaker Stands redefine the relationship between the speaker and the stand by using a completely new design and it is now suitable for other brands with a universal adapter plate.",
-        "url_proizvoda": "https://www.qacoustics.com/products/tensegrity-speaker-stand-pair-with-universal-adapter-plate-for-large-speakers",
+        "ime_proizvoda": "Q Acoustics WB50",
+        "sku": "709057",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "29,00 EUR",
+        "opis": "<p><meta charset=\"utf-8\"><span>The WB50 is a unique ‘Tilt and Turn’ loudspeaker bracket, which is adjusted via a single Allen bolt. This bracket allows for the 3010i, 3020i, 3010c, 3020c, 3090c along with the 5010 and M20 models to be mounted almost flat to the wall or angled down or sideways.</span></p>",
+        "url_proizvoda": "https://www.qacoustics.com/products/q-acoustics-wb50",
         "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa2160-kit_main.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa2160-kit_base.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa2160-kit_detail_1.jpg"
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Q-Acoustics-QA3100-1.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/3000-3000i-wall-bracket.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/3000wb_3000_wall_bracket_4.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/3000wb_3000_wall_bracket_5.jpg"
         ],
-        "specifikacije": {
-            "Overall Dimensions (HxWxD)": "27.1” x 19.3” x 16.9” (690 x 492 x 430mm)",
-            "Top Plate Dimensions (WxD)": "6.3” x 9.4” (160 x 240mm)",
-            "Weight": "4.1kg / 9lbs (per stand)",
-            "https": "//www.qacoustics.com/products/tensegrity-speaker-stand-pair-with-universal-adapter-plate-for-large-speakers",
-            "This Stand will fit with some of the world’s best loved audiophile stand-mount speakers; top plate carries 20kg / 44lbs per speaker and the plate size is W/D": "6.3” x 9.4” (160 x 240mm)"
-        },
-        "kategorije": "Accessories",
+        "specifikacije": {},
+        "kategorije": "Svi proizvodi (glavni endpoint)",
         "dodatne_informacije": {
             "tagline": null,
-            "dostupne_boje": [],
-            "dostupne_dužine": []
-        }
-    },
-    {
-        "ime_proizvoda": "Q FS75 Speaker Stand Pair",
-        "sku": "710818",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$699.00",
-        "opis": "Inspired by the ground-breaking Tensegrity stand developed by Q Acoustics for its high-end Concept 300 loudspeaker, the stand minimises resonance from the floor to the speaker cabinet (and vice-versa) thanks to its remarkable low-mass, low-reflectivity design",
-        "url_proizvoda": "https://www.qacoustics.com/products/q-fs75-speaker-stand-pair",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Q75_1200x_25839267-c934-482a-93f6-1bc343f1079d.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/fs75-1_1200x_296c455f-303c-47b0-b6b9-43d986e8d8c8.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/fs75-4_1200x_ec81b005-b3a3-41ab-830f-f18209071314.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/fs75-3_1200x_987e7899-4066-44ed-91b2-3d2435dbdd17.webp",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/fs75-2_1200x_dc77a79f-67a8-41e1-9ee8-f61e84ea4fe7.webp"
-        ],
-        "specifikacije": {
-            "Dimensions (HxWxD)": "638 x 286 x 338mm (25.1 x 11.3 x 13.3in) per stand Carton Dimensions H/W/D: 720 x 145 x 260mm (28.3 x 5.7 x 10.2in) per pair",
-            "Weight": "5.5kg (12.1lbs) per pair",
-            "https": "//www.qacoustics.com/products/q-fs75-speaker-stand-pair",
-            "Carton Dimensions H/W/D": "720 x 145 x 260mm (28.3 x 5.7 x 10.2in) per pair"
-        },
-        "kategorije": "Accessories",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [],
-            "dostupne_dužine": []
+            "dostupne_boje": [
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                }
+            ]
         }
     },
     {
         "ime_proizvoda": "3030FSi Floor Stands",
         "sku": "711013",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$279.00",
-        "opis": "Engineered to elevate your 3030i and 3030c speakers, the 3030FSi Floor Stands feature a robust triple-upright architecture with acoustically damped columns that minimize vibration and enhance sonic clarity. The precision-engineered design ensures optimal speaker positioning while maintaining structural integrity. Avail",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "279,00 EUR",
+        "opis": "<div class=\"keyfeatures\">\n<p><meta charset=\"utf-8\">Engineered to elevate your 3030i and 3030c speakers, the 3030FSi Floor Stands feature a robust triple-upright architecture with acoustically damped columns that minimize vibration and enhance sonic clarity.</p>\n<p>The precision-engineered design ensures optimal speaker positioning while maintaining structural integrity. Available in textured satin black or white finishes, these stands integrate seamlessly into any listening environment while providing the stable, vibration-free platform your speakers demand for accurate audio reproduction.</p>\n</div>\n<div class=\"price\" id=\"mainprice\"></div>\n<form action=\"https://www.qacoustics.co.uk/cart/add\" method=\"post\" enctype=\"multipart/form-data\" id=\"addtocardform\"></form>",
         "url_proizvoda": "https://www.qacoustics.com/products/3030fsi-floor-stands",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Q-Acoustics-3030i-Floor-Stand-In-Black.jpg",
@@ -1140,32 +993,237 @@
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Q-Acoustics-3030i-Floorstand-Side-In-White.jpg"
         ],
         "specifikacije": {
-            "Weight (per stand)": "6.2kg (13.7 lbs)",
+            "These stands are NOT compatible with the 3000 Series, 3010i - 3020i - 3010c - 3020c Speakers": "",
             "Paint coating": "Textured Satin Finish",
-            "Dimensions (H/W/D)": "635 x 245 x 340 mm (25 x 9.6 x 13.4 in)"
+            "Dimensions (H/W/D)": "635 x 245 x 340 mm (25 x 9.6 x 13.4 in)",
+            "Weight (per stand)": "6.2kg (13.7 lbs)"
         },
-        "kategorije": "Accessories",
+        "kategorije": "Svi proizvodi (glavni endpoint)",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Q-Acoustics-3030i-Floor-Stand-In-Black_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Q-Acoustics-3030i-Floor-Stand-In-Black.jpg?v=1765734293&width=72"
                 },
                 {
                     "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Q-Acoustics-3030i-Stand_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/Q-Acoustics-3030i-Stand.jpg?v=1765734320&width=72"
                 }
-            ],
-            "dostupne_dužine": []
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "Q Acoustics WB75 wall bracket (Single)",
+        "sku": "711016",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "99,00 EUR",
+        "opis": "<span data-mce-fragment=\"1\">A sturdy wall bracket boasting a 'tilt and turn' mechanism, a Concept 30 or 90 speaker can be mounted almost flat to the wall or angled down or sideways. Available in black or white finishes</span>",
+        "url_proizvoda": "https://www.qacoustics.com/products/q-acoustics-wb75-wall-bracket-single",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/wb75-wall-bracket_1200x_f6bc329a-1dd5-4c50-baf1-afb5eda17516.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/q_acoustics_wb75_speaker_-wall-bracket_with_concept_30_speakers_1200x_8d5581e0-4144-43ac-8118-9a430675481e.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/wb75-black_1200x_08e5d450-dbf8-46c5-8248-e81096dde3f1.jpg"
+        ],
+        "specifikacije": {
+            "Dimensions (HxWxD)": "119 x 102 x 231 mm (4.7 x 4.0 x 0.91 in)",
+            "Weight": "1.7Kg (3.7 lbs)"
+        },
+        "kategorije": "Svi proizvodi (glavni endpoint)",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "White",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/wb75-wall-bracket_1200x_f6bc329a-1dd5-4c50-baf1-afb5eda17516.jpg?v=1765734107&width=72"
+                },
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/wb75-black_1200x_08e5d450-dbf8-46c5-8248-e81096dde3f1.jpg?v=1765734107&width=72"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "Q Acoustics M40",
+        "sku": "709079",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.699,00 EUR",
+        "opis": "<div class=\"keyfeatures\">\n<p>The most convenient and cost-effective way to fill your home with full-size, powerful and immersive sound without filling your home with big, imposing loudspeakers. These quality micro-towers have the flexibility to support numerous wired and wireless sources of music.</p>\n</div>\n<div class=\"price\" id=\"mainprice\"></div>\n<form action=\"https://www.qacoustics.co.uk/cart/add\" method=\"post\" enctype=\"multipart/form-data\" id=\"addtocardform\"></form>",
+        "url_proizvoda": "https://www.qacoustics.com/products/q-acoustics-m40",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_black.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_rear_black.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_rear_black.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_white.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_rear_white.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_walnut.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_rearwalnut.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_rear_walnut.jpg"
+        ],
+        "specifikacije": {
+            "Power Supply Voltage": "100V–240 VAC, 50–60 HzPower Consumption:Standby <0.5 Watts, Typical use ~10 WAmplifier Performance:Peak Power Output 2 x 100 W, Rated Output Power 2 x 50 W RMS, THD @ Rated Power <0.7%Acoustics:Enclosure type 2-way reflex (ported), Mid/Bass unit 2 x 125 mm (5.0 in), Treble unit 1 x 22 mm (0.9 in), Crossover frequency 2.5 kHz, Frequency Response (-6dB) 38 Hz – 22 kHzInputs:Analogue (2 x Phono) Sensitivity 700 mV RMS, Max input 2.15 V RMS; Analogue (3.5mm Jack) Sensitivity 400 mV RMS, Max input 1.25 V RMS; Optical (S/PDIF) TOSLINK (Max resolution 24 bit/192 kHz); USB Type B (Max resolution 24 bit/192 kHz); Bluetooth® 5.0 (aptX™, aptX™ HD, aptX™ Low Latency, SBC, AAC)Outputs:Sub out (Phono) Max. Output 1 V RMSDimensions (W x H x D):250 mm x 710 mm x 296 mm (10” x 28” x 11.7”) with stabilisersWeight:Amplified speaker 12.4 kg (27 lb 5 oz), Passive speaker 11.8 kg (26 lb)"
+        },
+        "kategorije": "Svi proizvodi (glavni endpoint)",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcousticsM40_angled_pair_front_black.jpg?v=1765733756&width=72"
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcousticsM40_angled_pair_front_white.jpg?v=1765733756&width=72"
+                },
+                {
+                    "boja": "Walnut",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcousticsM40_angled_pair_front_walnut.jpg?v=1765733733&width=72"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "FS50 Series Speaker Stand (Pair)",
+        "sku": "709058",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "299,00 EUR",
+        "opis": "The Q Acoustics speaker stands suitable for 3010i and 3020i stand mount speakers. Allows you to get the best sound out of your speakers and fits in every room decoration.",
+        "url_proizvoda": "https://www.qacoustics.com/products/fs50-speaker-stand-pair",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3102_main.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3102_withspeakers.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3104_main_1.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3104_withspeaker.jpg"
+        ],
+        "specifikacije": {
+            "Dimensions (HxWxD)": "682 x 250 x 290 mm (26.9 x 9.8 x 11.4 in)",
+            "Weight": "6.2kg (13.7 lbs)"
+        },
+        "kategorije": "Svi proizvodi (glavni endpoint)",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3102_main.jpg?v=1765733464&width=72"
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3104_main_1.jpg?v=1765733464&width=72"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "Tensegrity Speaker Stand Pair with Universal Adapter Plate",
+        "sku": "711024",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "1.799,00 EUR",
+        "opis": "<span data-mce-fragment=\"1\">Q Acoustics Tensegrity Speaker Stands redefine the relationship between the speaker and the stand by using a completely new design and it is now suitable for other brands with a universal adapter plate.</span>",
+        "url_proizvoda": "https://www.qacoustics.com/products/tensegrity-speaker-stand-pair-with-universal-adapter-plate-for-large-speakers",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa2160-kit_main.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa2160-kit_base.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa2160-kit_detail_1.jpg"
+        ],
+        "specifikacije": {
+            "Overall Dimensions (HxWxD)": "27.1” x 19.3” x 16.9” (690 x 492 x 430mm)",
+            "Top Plate Dimensions (WxD)": "6.3” x 9.4” (160 x 240mm)",
+            "Weight": "4.1kg / 9lbs (per stand)"
+        },
+        "kategorije": "Svi proizvodi (glavni endpoint)",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "M20 HD Powered Wireless Music System",
+        "sku": "709076",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "729,00 EUR",
+        "opis": "<div class=\"keyfeatures\">\n<p>Designed to deliver stunning wireless high-resolution stereo sound, the flexible M20 HD audio system is the most powerful and immersive way to enjoy music, movies and gaming sound anywhere in the home.</p>\n</div>\n<form action=\"https://www.qacoustics.co.uk/cart/add\" method=\"post\" enctype=\"multipart/form-data\" id=\"addtocardform\"></form>",
+        "url_proizvoda": "https://www.qacoustics.com/products/m20-hd-wireless-music-system",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qacoustics-m20-product-studio-white-bground-08.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qacoustics-m20-product-studio-white-bground-11.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qacoustics-m20-product-studio-white-bground-16.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m20walnut.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m20_walnut_rear_pair.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m20white.jpg",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m20_white_rear_pair.jpg"
+        ],
+        "specifikacije": {
+            "Tweeter": "22mm (0.87 in)Mid Bass / Driver:125mm (4.92 in)Frequency Response:55Hz – 22kHzCrossover Frequency:2.4kHzInputs:Bluetooth® 5.0 (aptX™, aptX™ HD, aptX™ Low Latency, SBC, AAC), USB (24bit/192kHz), Digital Optical (24bit/192kHz), Stereo RCA (line level), 3.5mm (line level)Peak Power:2 x 65WContinuous Power:2 x 32WCabinet Type:Two-way reflex portedDimensions:279mm (H) x 170mm (W) x 296mm (D)Weight:5.1kg (passive speaker), 5.5kg (powered speaker)"
+        },
+        "kategorije": "Svi proizvodi (glavni endpoint)",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Black",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qacoustics-m20-product-studio-white-bground-08.jpg?v=1765733143&width=72"
+                },
+                {
+                    "boja": "Walnut",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m20walnut.jpg?v=1765733223&width=72"
+                },
+                {
+                    "boja": "White",
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m20white.jpg?v=1765733223&width=72"
+                }
+            ]
+        }
+    },
+    {
+        "ime_proizvoda": "Q FS75 Speaker Stand Pair",
+        "sku": "710818",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "699,00 EUR",
+        "opis": "<span data-mce-fragment=\"1\">Inspired by the ground-breaking Tensegrity stand developed by Q Acoustics for its high-end Concept 300 loudspeaker, the stand minimises resonance from the floor to the speaker cabinet (and vice-versa) thanks to its remarkable low-mass, low-reflectivity design</span>",
+        "url_proizvoda": "https://www.qacoustics.com/products/q-fs75-speaker-stand-pair",
+        "url_slika": [
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Q75_1200x_25839267-c934-482a-93f6-1bc343f1079d.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/fs75-1_1200x_296c455f-303c-47b0-b6b9-43d986e8d8c8.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/fs75-4_1200x_ec81b005-b3a3-41ab-830f-f18209071314.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/fs75-3_1200x_987e7899-4066-44ed-91b2-3d2435dbdd17.webp",
+            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/fs75-2_1200x_dc77a79f-67a8-41e1-9ee8-f61e84ea4fe7.webp"
+        ],
+        "specifikacije": {
+            "Dimensions (HxWxD)": "638 x 286 x 338mm (25.1 x 11.3 x 13.3in) per standCarton Dimensions H/W/D: 720 x 145 x 260mm (28.3 x 5.7 x 10.2in) per pair",
+            "Weight": "5.5kg (12.1lbs) per pair"
+        },
+        "kategorije": "Svi proizvodi (glavni endpoint)",
+        "dodatne_informacije": {
+            "tagline": null,
+            "dostupne_boje": [
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                },
+                {
+                    "boja": "Unknown",
+                    "url_uzorka": ""
+                }
+            ]
         }
     },
     {
         "ime_proizvoda": "3030c Standmount Speaker",
         "sku": "709029",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$799.00",
-        "opis": "Sometimes you want your music to hit hard and dig deep - but that doesn’t mean you need a great big loudspeaker with a great big driver. No, it means you need the 3030c - the standmount with the greatest bass extension and low-end drive in the range.",
+        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qlogo.svg",
+        "cena": "799,00 EUR",
+        "opis": "<div class=\"productinfo narrowwidth\">\n<div class=\"productsummary\">\n<p>Sometimes you want your music to hit hard and dig deep - but that doesn’t mean you need a great big loudspeaker with a great big driver. No, it means you need the 3030c - the standmount with the greatest bass extension and low-end drive in the range.</p>\n</div>\n</div>",
         "url_proizvoda": "https://www.qacoustics.com/products/3030c-standmount-speaker",
         "url_slika": [
             "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcoustics3030c_frontangle_nogrille_satinblack_1200x_b7b249ef-2cab-487b-85f6-cd043cd831a0.jpg",
@@ -1186,211 +1244,27 @@
             "Dimensions (H×W×D)": "324 × 205 × 329 mm (12.8 × 8.1 × 13.0 in)",
             "Weight": "7.5 kg (16.5 lbs)"
         },
-        "kategorije": "No Category",
+        "kategorije": "Svi proizvodi (glavni endpoint)",
         "dodatne_informacije": {
             "tagline": null,
             "dostupne_boje": [
                 {
                     "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3030c_frontangle_nogrille_satinblack_1200x_b7b249ef-2cab-487b-85f6-cd043cd831a0_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3030c_frontangle_nogrille_satinblack_1200x_b7b249ef-2cab-487b-85f6-cd043cd831a0.jpg?v=1765730245&width=72"
                 },
                 {
                     "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3030c_frontangle_nogrille_satinwhite_1200x_2a4ec4bc-1990-44fe-a8da-4609706e8deb_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3030c_frontangle_nogrille_satinwhite_1200x_2a4ec4bc-1990-44fe-a8da-4609706e8deb.jpg?v=1765730245&width=72"
                 },
                 {
                     "boja": "Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3030c_frontangle_nogrille_clarowalnut_1200x_f917efa0-47f3-43ca-a4bf-beb51c414ddf_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3030c_frontangle_nogrille_clarowalnut_1200x_f917efa0-47f3-43ca-a4bf-beb51c414ddf.jpg?v=1765730245&width=72"
                 },
                 {
                     "boja": "Oak",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3030c_frontangle_nogrille_pinoak_1200x_7598fca5-37a3-490f-a563-ffd77fb71af5_100x.jpg"
+                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcoustics3030c_frontangle_nogrille_pinoak_1200x_7598fca5-37a3-490f-a563-ffd77fb71af5.jpg?v=1765730246&width=72"
                 }
-            ],
-            "dostupne_dužine": []
-        }
-    },
-    {
-        "ime_proizvoda": "FS50 Series Speaker Stand (Pair)",
-        "sku": "709058",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$299.00",
-        "opis": "The Q Acoustics speaker stands suitable for 3010i and 3020i stand mount speakers. Allows you to get the best sound out of your speakers and fits in every room decoration.",
-        "url_proizvoda": "https://www.qacoustics.com/products/fs50-speaker-stand-pair",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3102_main.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3102_withspeakers.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3104_main_1.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qac-o-qa3104_withspeaker.jpg"
-        ],
-        "specifikacije": {
-            "Dimensions (HxWxD)": "682 x 250 x 290 mm (26.9 x 9.8 x 11.4 in)",
-            "Weight": "6.2kg (13.7 lbs)"
-        },
-        "kategorije": "No Category",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3102_main_100x.jpg"
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qac-o-qa3104_main_1_100x.jpg"
-                }
-            ],
-            "dostupne_dužine": []
-        }
-    },
-    {
-        "ime_proizvoda": "M20 HD Powered Wireless Music System",
-        "sku": "709076",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$729.00",
-        "opis": "Designed to deliver stunning wireless high-resolution stereo sound, the flexible M20 HD audio system is the most powerful and immersive way to enjoy music, movies and gaming sound anywhere in the home.",
-        "url_proizvoda": "https://www.qacoustics.com/products/m20-hd-wireless-music-system",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qacoustics-m20-product-studio-white-bground-08.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qacoustics-m20-product-studio-white-bground-11.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/qacoustics-m20-product-studio-white-bground-16.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m20walnut.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m20_walnut_rear_pair.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m20white.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/m20_white_rear_pair.jpg"
-        ],
-        "specifikacije": {
-            "Tweeter": "22mm (0.87 in)",
-            "Mid Bass / Driver": "125mm (4.92 in)",
-            "Frequency Response": "55Hz – 22kHz",
-            "Crossover Frequency": "2.4kHz",
-            "Inputs": "Bluetooth® 5.0 (aptX™, aptX™ HD, aptX™ Low Latency, SBC, AAC), USB (24bit/192kHz), Digital Optical (24bit/192kHz), Stereo RCA (line level), 3.5mm (line level)",
-            "Peak Power": "2 x 65W",
-            "Continuous Power": "2 x 32W",
-            "Cabinet Type": "Two-way reflex ported",
-            "Dimensions": "279mm (H) x 170mm (W) x 296mm (D)",
-            "Weight": "5.1kg (passive speaker), 5.5kg (powered speaker)"
-        },
-        "kategorije": "No Category",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/qacoustics-m20-product-studio-white-bground-08_100x.jpg"
-                },
-                {
-                    "boja": "Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m20walnut_100x.jpg"
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/m20white_100x.jpg"
-                }
-            ],
-            "dostupne_dužine": []
-        }
-    },
-    {
-        "ime_proizvoda": "Q Acoustics M40",
-        "sku": "709079",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$1,699.00",
-        "opis": "The most convenient and cost-effective way to fill your home with full-size, powerful and immersive sound without filling your home with big, imposing loudspeakers. These quality micro-towers have the flexibility to support numerous wired and wireless sources of music.",
-        "url_proizvoda": "https://www.qacoustics.com/products/q-acoustics-m40",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_black.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_rear_black.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_rear_black.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_white.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_rear_white.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_walnut.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_front_rearwalnut.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/QAcousticsM40_angled_pair_rear_walnut.jpg"
-        ],
-        "specifikacije": {
-            "Power Supply Voltage": "100V–240 VAC, 50–60 Hz",
-            "Power Consumption": "Standby <0.5 Watts, Typical use ~10 W",
-            "Amplifier Performance": "Peak Power Output 2 x 100 W, Rated Output Power 2 x 50 W RMS, THD @ Rated Power <0.7%",
-            "Acoustics": "Enclosure type 2-way reflex (ported), Mid/Bass unit 2 x 125 mm (5.0 in), Treble unit 1 x 22 mm (0.9 in), Crossover frequency 2.5 kHz, Frequency Response (-6dB) 38 Hz – 22 kHz",
-            "Inputs": "Analogue (2 x Phono) Sensitivity 700 mV RMS, Max input 2.15 V RMS; Analogue (3.5mm Jack) Sensitivity 400 mV RMS, Max input 1.25 V RMS; Optical (S/PDIF) TOSLINK (Max resolution 24 bit/192 kHz); USB Type B (Max resolution 24 bit/192 kHz); Bluetooth® 5.0 (aptX™, aptX™ HD, aptX™ Low Latency, SBC, AAC)",
-            "Outputs": "Sub out (Phono) Max. Output 1 V RMS",
-            "Dimensions (W x H x D)": "250 mm x 710 mm x 296 mm (10” x 28” x 11.7”) with stabilisers",
-            "Weight": "Amplified speaker 12.4 kg (27 lb 5 oz), Passive speaker 11.8 kg (26 lb)"
-        },
-        "kategorije": "No Category",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcousticsM40_angled_pair_front_black_100x.jpg"
-                },
-                {
-                    "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcousticsM40_angled_pair_front_white_100x.jpg"
-                },
-                {
-                    "boja": "Walnut",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/QAcousticsM40_angled_pair_front_walnut_100x.jpg"
-                }
-            ],
-            "dostupne_dužine": []
-        }
-    },
-    {
-        "ime_proizvoda": "Q Acoustics WB50",
-        "sku": "709057",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$29.00",
-        "opis": "The WB50 is a unique ‘Tilt and Turn’ loudspeaker bracket, which is adjusted via a single Allen bolt. This bracket allows for the 3010i, 3020i, 3010c, 3020c, 3090c along with the 5010 and M20 models to be mounted almost flat to the wall or angled down or sideways.",
-        "url_proizvoda": "https://www.qacoustics.com/products/q-acoustics-wb50",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/Q-Acoustics-QA3100-1.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/3000-3000i-wall-bracket.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/3000wb_3000_wall_bracket_4.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/3000wb_3000_wall_bracket_5.jpg"
-        ],
-        "specifikacije": {},
-        "kategorije": "No Category",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [],
-            "dostupne_dužine": []
-        }
-    },
-    {
-        "ime_proizvoda": "Q Acoustics WB75 wall bracket (Single)",
-        "sku": "711016",
-        "brend_logo_url": "https://www.qacoustics.com/cdn/shop/files/qalogo_small.png?v=1617783915",
-        "cena": "$99.00",
-        "opis": "A sturdy wall bracket boasting a 'tilt and turn' mechanism, a Concept 30 or 90 speaker can be mounted almost flat to the wall or angled down or sideways. Available in black or white finishes",
-        "url_proizvoda": "https://www.qacoustics.com/products/q-acoustics-wb75-wall-bracket-single",
-        "url_slika": [
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/wb75-wall-bracket_1200x_f6bc329a-1dd5-4c50-baf1-afb5eda17516.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/q_acoustics_wb75_speaker_-wall-bracket_with_concept_30_speakers_1200x_8d5581e0-4144-43ac-8118-9a430675481e.jpg",
-            "https://cdn.shopify.com/s/files/1/0018/1246/3731/files/wb75-black_1200x_08e5d450-dbf8-46c5-8248-e81096dde3f1.jpg"
-        ],
-        "specifikacije": {
-            "Dimensions (HxWxD)": "119 x 102 x 231 mm (4.7 x 4.0 x 0.91 in)",
-            "Weight": "1.7Kg (3.7 lbs)",
-            "Color": "White",
-            "https": "//www.qacoustics.com/products/q-acoustics-wb75-wall-bracket-single"
-        },
-        "kategorije": "No Category",
-        "dodatne_informacije": {
-            "tagline": null,
-            "dostupne_boje": [
-                {
-                    "boja": "White",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/wb75-wall-bracket_1200x_f6bc329a-1dd5-4c50-baf1-afb5eda17516_100x.jpg"
-                },
-                {
-                    "boja": "Black",
-                    "url_uzorka": "https://www.qacoustics.com/cdn/shop/files/wb75-black_1200x_08e5d450-dbf8-46c5-8248-e81096dde3f1_100x.jpg"
-                }
-            ],
-            "dostupne_dužine": []
+            ]
         }
     }
 ]
