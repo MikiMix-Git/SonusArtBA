@@ -1,466 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+  Verzija: 2.18
+  Datum: 2026-02-07
+  Opis: Rešen problem sa odsecanjem dugačkih specifikacija povećanjem max-height limita.
+        Optimizovana čitljivost teksta u opisima i specifikacijama.
+        Implementirana interaktivna galerija i unapređeni Lightbox.
+-->
 <html lang="sr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Audio Katalog – v1.3.12 (Dodat Polk Audio)</title>
-    <style>
-        :root{--primary:#1a1a1a;--secondary:#2c3e50;--accent:#e74c3c;--border:#ddd;--radius:12px;--shadow:0 4px 12px rgba(0,0,0,.1);}
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
-        body{background:#f5f7fa;color:var(--primary);line-height:1.6;}
-        
-        /* FIKSIRANI HEADER (NA VRHU STRANICE) */
-        header{
-            background:var(--primary);
-            color:white;
-            padding:1.5rem 0; 
-            text-align:center;
-            box-shadow:0 4px 12px rgba(0,0,0,.15); 
-            position: fixed;
-            top: 0; 
-            left: 0;
-            width: 100%;
-            z-index: 1000; 
-        }
-        header h1{font-size:2rem;margin-bottom:.5rem;}
-        .subtitle{font-size:1rem;opacity:0.9;}
-        #updateInfo{color:#27ae60;font-weight:600;}
-        
-        /* FIKSIRANE KONTROLE - Meni (NA 8rem) */
-        .controls{
-            max-width:1200px;
-            margin: 0 auto; 
-            padding:1rem 1rem; 
-            display:flex;
-            flex-wrap:wrap;
-            gap:1rem;
-            align-items:center;
-            
-            position: fixed;
-            /* POZICIJA: Fiksirano na 8rem od vrha stranice */
-            top: 8rem; 
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 1200px;
-            z-index: 1000; 
-            background: #fff; 
-            box-shadow: 0 4px 8px rgba(0,0,0,.1);
-            border-radius: 0;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .search-box,.filter-select{padding:.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius);font-size:1rem;flex:1;min-width:200px;}
-        .search-box:focus,.filter-select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(231,76,60,.2);}
-        .stats{
-            font-size:.9rem;
-            color:#666; 
-            margin-left:auto;
-            white-space: nowrap; 
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hi‑Fi Audio Proizvodi — V2.18</title>
+  
+  <style>
+    :root {
+      --gold: #d6b46a;
+      --light-gold: #f0c987;
+      --bg-dark: #0b0f14;
+      --card-bg: rgba(255, 255, 255, 0.07);
+      --input-bg: #1a1f26;
+      --text-white: #ffffff;
+      --text-gray: #ccc;
+    }
 
-        /* GURAJ GLAVNI SADRŽAJ ISPOD FIKSIRANIH ELEMENATA */
-        .container{
-            max-width:1200px;
-            /* Margina: 8rem (top pozicija menija) + ~4.5rem (visina menija) + 1rem dodatnog razmaka = 13.5rem */
-            margin: 13.5rem auto 0; 
-            padding:0 1rem;
-        }
-        
-        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-top:1rem;}
-        .card{background:white;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.3s;cursor:pointer;position:relative;}
-        .card:hover{transform:translateY(-8px);box-shadow:0 12px 24px rgba(0,0,0,.15);}
-        .card-img{height:220px;background:#fff;position:relative;overflow:hidden;}
-        .card-img img.product{width:100%;height:100%;object-fit:contain;transition:transform .3s;}
-        .card:hover .card-img img.product{transform:scale(1.05);}
-        .brand-logo-container{position:absolute;top:10px;left:10px;z-index:3;background:rgba(255,255,255,.95);padding:6px;border-radius:10px;
-            box-shadow:0 2px 10px rgba(0,0,0,.2);width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:.7rem;text-align:center;}
-        .brand-logo-container img{width:40px;height:40px;object-fit:contain;}
-        .brand-logo-container img.force-dark{filter:invert(1) hue-rotate(180deg) brightness(.9)!important;}
-        .card-body{padding:1rem;display:flex;flex-direction:column;}
-        .card-category{font-size:.85rem;color:var(--accent);font-weight:500;margin-bottom:.5rem;text-transform:capitalize;}
-        .card-title{font-size:1.1rem;font-weight:600;color:var(--secondary);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-        .card-sku{font-size:.85rem;color:#777;margin-bottom:.5rem;}
-        .card-price{font-size:1.3rem;font-weight:700;color:var(--accent);margin:.5rem 0;}
-        .colors{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:.75rem;}
-        .color-swatch{width:24px;height:24px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 1px #ccc;overflow:hidden;}
-        .color-swatch img{width:100%;height:100%;object-fit:cover;}
-        .color-swatch.hex{background:var(--swatch-color);}
-        .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:10000;overflow-y:auto;align-items:center;justify-content:center;}
-        .modal.active{display:flex;}
-        .modal-content{background:white;border-radius:var(--radius);max-width:900px;width:95%;max-height:95vh;overflow-y:auto;position:relative;}
-        .modal-close{position:absolute;top:10px;right:15px;background:none;border:none;font-size:2rem;cursor:pointer;color:#aaa;z-index:10010;}
-        .modal-close:hover{color:var(--accent);}
-        .modal-header{padding:1.5rem;background:var(--primary);color:white;border-radius:var(--radius) var(--radius) 0 0;}
-        .modal-title{font-size:1.8rem;margin-bottom:.5rem;}
-        .modal-brand{font-size:1rem;opacity:.9;}
-        .modal-body{padding:2rem;}
-        .gallery{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:2rem;justify-content:center;}
-        .gallery img{max-width:200px;max-height:200px;object-fit:contain;cursor:pointer;border:2px solid transparent;border-radius:8px;}
-        .gallery img:hover{border-color:var(--accent);}
-        .modal-info{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
-        .modal-desc{grid-column:span 2;margin-bottom:1.5rem;line-height:1.8;}
-        .specs-table{width:100%;border-collapse:collapse;}
-        .specs-table th,.specs-table td{padding:.75rem;text-align:left;border-bottom:1px solid #eee;}
-        .specs-table th{background:#f9f9f9;width:40%;}
-        .colors-big{display:flex;gap:12px;flex-wrap:wrap;margin:1rem 0;}
-        .colors-big .color-swatch{width:40px;height:40px;}
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background-color: var(--bg-dark);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid rgba(214, 180, 106, 0.2);
+    }
 
-        /* Stil za dužine (Lengths) */
-        .length-tag {
-            display: inline-block;
-            background: #ecf0f1;
-            color: #34495e;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            margin-right: 8px;
-            margin-bottom: 8px;
-            border: 1px solid #bdc3c7;
-        }
-        .lengths-container {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed #eee;
-        }
+    body {
+      margin: 0; font-family: 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-dark); color: #eee; min-height: 100vh;
+      background: radial-gradient(1200px 700px at 12% 8%, rgba(214,180,106,.16), transparent 55%),
+                  radial-gradient(900px 600px at 88% 12%, rgba(126,230,215,.14), transparent 60%),
+                  linear-gradient(180deg, #0b0f14, #0e151c);
+      background-attachment: fixed;
+    }
 
-        .modal-footer{padding:1.5rem;text-align:center;background:#f9f9f9;border-top:1px solid var(--border);}
-        .btn{padding:.75rem 1.5rem;background:var(--accent);color:white;border:none;border-radius:var(--radius);cursor:pointer;font-size:1rem;}
-        .btn:hover{background:#c0392b;}
-        .loading,.no-results{text-align:center;padding:3rem 1rem;color:#777;font-size:1.1rem;}
-        .footer{text-align:center;padding:2rem 1rem;color:#777;font-size:.9rem;margin-top:3rem;border-top:1px solid var(--border);}
-        
-        /* RESPONZIVNOST ZA FIKSIRANE KONTROLE */
-        @media(max-width:768px){
-            .modal-info{grid-template-columns:1fr;}
-            .controls{
-                flex-direction:column;
-                padding-left: 1rem;
-                padding-right: 1rem;
-                /* Fiksirano na 8rem na mobilnom */
-                top: 8rem; 
-                gap: 0.5rem; 
-            }
-            .search-box, .filter-select {
-                min-width: 100%;
-            }
-            .stats{
-                margin-left:0;
-                width: 100%;
-                text-align: center;
-                padding-top: 0.5rem;
-                color: #666; 
-            }
-            /* UKUPNA MARGINA ZA KONTEJNER: ~8rem (top pozicija menija) + ~25rem (visina menija) + 1rem razmaka = 34rem */
-            .container {
-                margin-top: 34rem; /* Prilagođena sigurna margina na mobilnom */
-            }
-        }
-    </style>
+    h1 { font-weight: 700; font-size: clamp(1.5rem, 5vw, 2.5rem); margin: 0 0 1rem 0; color: var(--gold); text-align: center; }
+
+    .filters { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; align-items: center; }
+    
+    input[type="search"], select { 
+      padding: 0.7rem 1rem; 
+      border-radius: 8px; 
+      border: 1px solid rgba(214, 180, 106, 0.4); 
+      background-color: var(--input-bg); 
+      color: var(--text-white); 
+      font-size: 0.95rem; 
+      min-width: 200px; 
+      outline: none; 
+      transition: border-color 0.2s;
+    }
+    
+    input[type="search"]:focus, select:focus {
+      border-color: var(--gold);
+    }
+
+    #products { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; padding: 2rem 1rem; max-width: 1400px; margin: 0 auto; }
+
+    article.product {
+      background: var(--card-bg); border-radius: 20px; padding: 1.5rem; display: flex; flex-direction: column;
+      border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; position: relative; overflow: hidden; 
+    }
+    article.product:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.6); border-color: rgba(214, 180, 106, 0.3); }
+
+    .product-logo { height: 40px; margin-bottom: 1.2rem; display: flex; align-items: center; }
+    .product-logo img { max-height: 100%; max-width: 150px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.8; }
+
+    .gallery-container { margin-bottom: 1.5rem; }
+    .main-image-container { background: white; border-radius: 12px; height: 220px; display: flex; align-items: center; justify-content: center; padding: 15px; cursor: pointer; overflow: hidden; }
+    .main-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.3s ease; }
+
+    .thumbnails { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: thin; scrollbar-color: var(--gold) transparent; }
+    .thumbnails img { width: 50px; height: 50px; object-fit: contain; background: white; border-radius: 4px; cursor: pointer; border: 2px solid transparent; flex-shrink: 0; }
+    .thumbnails img.active { border-color: var(--gold); }
+
+    .product-name { font-size: 1.25rem; color: var(--gold); margin: 0.5rem 0; line-height: 1.3; min-height: 3.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .product-price { font-family: 'Courier New', monospace; font-size: 1.3rem; font-weight: bold; color: var(--light-gold); margin-bottom: 1rem; }
+
+    .spec-list { list-style: none; padding: 0; margin: 0; }
+    .spec-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; }
+    .spec-label { color: var(--gold); font-weight: 600; margin-right: 15px; text-align: left; }
+    .spec-value { text-align: right; color: var(--text-white); font-weight: 400; }
+
+    .expand-btn { background: rgba(214, 180, 106, 0.1); border: 1px solid var(--gold); color: var(--gold); padding: 0.7rem; border-radius: 8px; cursor: pointer; margin-top: 1rem; font-size: 0.85rem; font-weight: bold; width: 100%; transition: background 0.2s; }
+    .expand-btn:hover { background: rgba(214, 180, 106, 0.2); }
+
+    .content-fold { 
+      max-height: 0; 
+      overflow: hidden; 
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); 
+    }
+    .content-fold.open { 
+      max-height: 4000px; 
+      transition: max-height 0.5s ease-in;
+      margin-top: 1rem; 
+      padding-bottom: 10px; 
+    }
+
+    #imageModal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; z-index: 2000; justify-content: center; align-items: center; padding: 20px; user-select: none; }
+    #imageModal.open { display: flex; }
+    .modal-content { position: relative; max-width: 95%; max-height: 90%; display: flex; align-items: center; justify-content: center; }
+    #modalImg { max-width: 100%; max-height: 90vh; border-radius: 8px; object-fit: contain; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+    .modal-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(214, 180, 106, 0.2); border: 1px solid var(--gold); color: var(--gold); width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; transition: all 0.2s; z-index: 2010; }
+    .modal-nav:hover { background: var(--gold); color: black; }
+    .modal-nav.prev { left: -70px; }
+    .modal-nav.next { right: -70px; }
+    .modal-close { position: absolute; top: -50px; right: 0; color: white; font-size: 2rem; cursor: pointer; }
+    .modal-counter { position: absolute; bottom: -40px; left: 50%; transform: translateX(-50%); color: var(--gold); font-size: 0.9rem; }
+
+    @media (max-width: 768px) {
+      .modal-nav.prev { left: 10px; }
+      .modal-nav.next { right: 10px; }
+      .modal-nav { width: 40px; height: 40px; background: rgba(0,0,0,0.5); }
+    }
+
+    .loader { text-align: center; padding: 100px; color: var(--gold); font-size: 1.2rem; }
+  </style>
 </head>
 <body>
+
+<header>
+  <h1>Hi‑Fi Audio Proizvodi</h1>
+  <div class="filters">
+    <input type="search" id="q" placeholder="Pretraži modele ili opis..." />
+    <select id="brandFilter"><option value="all">Svi brendovi</option></select>
+    <select id="typeFilter"><option value="all">Sve kategorije</option></select>
+  </div>
+</header>
+
+<main id="products">
+  <div class="loader">Učitavanje audio kataloga...</div>
+</main>
+
+<div id="imageModal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-nav prev" onclick="changeLightboxImage(-1)">&#10094;</div>
+    <img src="" id="modalImg" alt="Uvećano" />
+    <div class="modal-nav next" onclick="changeLightboxImage(1)">&#10095;</div>
+    <div class="modal-counter" id="modalCounter">1 / 1</div>
+  </div>
+</div>
+
+<script>
+  const BASE_URL = "https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/main/json/";
+  const FILES = [
+    "argon_audio_products_all_categories.json", "bowers_wilkins_products.json",
+    "denon_products.json", "dynaudio_products.json",
+    "marantz_all_products.json", "polkaudio_products.json", "qacoustics_products.json"
+  ];
+
+  let ALL_PRODUCTS = [];
+  let currentLightboxData = { images: [], index: 0 };
+  const productsGrid = document.getElementById('products');
+
+  function formatSpecs(specs) {
+    if (!specs || typeof specs !== 'object' || Object.keys(specs).length === 0) 
+        return '<p style="padding:10px; color:var(--text-gray);">Specifikacije nisu dostupne.</p>';
     
-    <!-- FIKSIRANI HEADER NA TOP: 0 -->
-    <header>
-        <h1>Audio Katalog</h1>
-        <p class="subtitle">Live sa GitHub-a – v1.3.12 <span id="updateInfo"></span></p>
-    </header>
+    let html = '<div class="spec-list">';
+    for (const [key, value] of Object.entries(specs)) {
+        if (value && value.toString().trim() !== "") {
+            html += `<div class="spec-item"><span class="spec-label">${key}</span><span class="spec-value">${value}</span></div>`;
+        }
+    }
+    html += '</div>';
+    return html;
+  }
 
-    <!-- FIKSIRANE KONTROLE ISPOD HEADERA (NA TOP: 8rem) -->
-    <div class="controls">
-        <input type="text" class="search-box" placeholder="Pretraži po imenu..." id="searchInput" />
-        <select class="filter-select" id="brandFilter"><option value="">Svi brendovi</option></select>
-        <select class="filter-select" id="categoryFilter"><option value="">Sve kategorije</option></select>
-        <div class="stats" id="stats">Učitavanje...</div>
-    </div>
+  function getBrandName(product, fileName) {
+    if (product.brand) return product.brand;
+    const name = fileName.split('_')[0];
+    return name.charAt(0).toUpperCase() + name.slice(1).replace('audio', ' Audio');
+  }
 
+  async function init() {
+    try {
+      const fetchPromises = FILES.map(async file => {
+        const resp = await fetch(BASE_URL + file);
+        if (!resp.ok) throw new Error(`Greška: ${file}`);
+        const data = await resp.json();
+        return data.map((p, idx) => ({ 
+          ...p, 
+          id: `prod-${file.replace('.json', '')}-${idx}`,
+          detectedBrand: getBrandName(p, file) 
+        }));
+      });
+      const results = await Promise.all(fetchPromises);
+      ALL_PRODUCTS = results.flat();
+      populateFilters();
+      render();
+    } catch (err) {
+      productsGrid.innerHTML = `<div class="loader" style="color:red">Greška pri učitavanju: ${err.message}</div>`;
+    }
+  }
 
-    <div class="container">
-        <div id="loading" class="loading">Učitavanje najnovijih podataka...</div>
-        <div id="grid" class="grid" style="display:none;"></div>
-        <div id="noResults" class="no-results" style="display:none;">Nema rezultata.</div>
-    </div>
+  function populateFilters() {
+    const brands = [...new Set(ALL_PRODUCTS.map(p => p.detectedBrand))].sort();
+    const types = [...new Set(ALL_PRODUCTS.map(p => p.kategorije).filter(Boolean))].sort();
+    const bSel = document.getElementById('brandFilter');
+    const tSel = document.getElementById('typeFilter');
+    brands.forEach(b => bSel.add(new Option(b, b)));
+    types.forEach(t => tSel.add(new Option(t, t)));
+  }
 
-    <!-- MODAL – potpuno funkcionalan -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">×</button>
-            <div class="modal-header">
-                <div class="modal-title" id="modalTitle"></div>
-                <div class="modal-brand" id="modalBrand"></div>
-            </div>
-            <div class="modal-body">
-                <div class="gallery" id="modalGallery"></div>
-                <div class="modal-info">
-                    <div class="modal-desc" id="modalDesc"></div>
-                    <div>
-                        <p><strong>SKU:</strong> <span id="modalSKU"></span></p>
-                        <p><strong>Cena:</strong> <span id="modalPrice"></span></p>
-                        <p><strong>Kategorija:</strong> <span id="modalCategory"></span></p>
-                        <p id="taglineSection"><strong>Tagline:</strong> <span id="modalTagline"></span></p>
-                        <!-- NOVI DEO ZA DUŽINE -->
-                        <div id="modalLengths" class="lengths-container" style="display:none;">
-                            <strong>Dostupne dužine:</strong>
-                            <div id="lengthsList"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="colors-big" id="modalColors"></div>
-                <table class="specs-table" id="modalSpecs"></table>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" id="modalLink">Idi na originalnu stranicu</button>
-            </div>
+  function render() {
+    const q = document.getElementById('q').value.toLowerCase();
+    const brand = document.getElementById('brandFilter').value;
+    const type = document.getElementById('typeFilter').value;
+
+    const filtered = ALL_PRODUCTS.filter(p => {
+      const matchQ = p.ime_proizvoda.toLowerCase().includes(q) || (p.opis && p.opis.toLowerCase().includes(q));
+      const matchB = brand === 'all' || p.detectedBrand === brand;
+      const matchT = type === 'all' || p.kategorije === type;
+      return matchQ && matchB && matchT;
+    });
+
+    productsGrid.innerHTML = filtered.map(p => {
+      const images = p.url_slika || [];
+      const hasGallery = images.length > 1;
+
+      return `
+      <article class="product" id="${p.id}">
+        <div class="product-logo">
+          ${p.brend_logo_url ? `<img src="${p.brend_logo_url}" alt="${p.detectedBrand}">` : `<span style="color:var(--gold);font-weight:bold">${p.detectedBrand}</span>`}
         </div>
-    </div>
 
-    <footer class="footer">
-        <p>web_app_v1.3.12.html – dodato učitavanje Polk Audio proizvoda</p>
-    </footer>
+        <div class="gallery-container">
+          <div class="main-image-container" onclick="openLightbox('${p.id}')">
+            <img src="${images[0] || 'https://via.placeholder.com/300x200?text=No+Image'}" 
+                 class="main-img" 
+                 alt="${p.ime_proizvoda}" 
+                 loading="lazy">
+          </div>
+          ${hasGallery ? `
+            <div class="thumbnails">
+              ${images.map((img, i) => `
+                <img src="${img}" 
+                     class="${i === 0 ? 'active' : ''}" 
+                     onclick="switchImage('${p.id}', '${img}', this)"
+                     alt="Sličica ${i+1}">
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
 
-    <script>
-        // 1. AUTOMATSKI NAJNOVIJI COMMIT
-        async function getLatestCommit() {
-            try {
-                // Fiksiran GitHub repozitorijum
-                const r = await fetch('https://api.github.com/repos/MikiMix-Git/SonusArtBA/commits/main');
-                const d = await r.json();
-                return d.sha;
-            } catch { 
-                // Fallback SHA u slučaju greške
-                return '50d26ef9994e5858c77f5dc995aff403f99ea1af'; 
-            }
-        }
+        <h2 class="product-name">${p.ime_proizvoda}</h2>
+        <div class="product-price">${p.cena || 'Pozovite za cenu'}</div>
 
-        let GITHUB_RAW_BASE = '';
-        // DODAT polkaudio_products.json
-        const files = ['argon_audio_products_all_categories.json','bowers_wilkins_products.json','denon_products.json',
-                       'dynaudio_products.json','marantz_all_products.products.json','qacoustics_products.json',
-                       'polkaudio_products.json'];
-        let allProducts = [], brands = new Set(), categories = new Set();
-        const grid = document.getElementById('grid');
-        const loading = document.getElementById('loading');
-        const updateInfo = document.getElementById('updateInfo');
-        // Placeholder SVG za slike koje nedostaju
-        const fallback = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%23f0f0f0%22/><text x=%22200%22 y=%22150%22 font-size=%2230%22 text-anchor=%22middle%22 fill=%22%23999%22>No Image</text></svg>';
+        <button class="expand-btn" onclick="toggleFold(this)">Opis Proizvoda ↓</button>
+        <div class="content-fold"><p style="font-size:0.95rem; padding:10px 5px; line-height:1.6; color:var(--text-gray)">${p.opis || 'Opis trenutno nije dostupan.'}</p></div>
+        
+        <button class="expand-btn" onclick="toggleFold(this)">Specifikacije ↓</button>
+        <div class="content-fold">${formatSpecs(p.specifikacije)}</div>
 
-        // MODAL elementi
-        const modal = document.getElementById('modal');
-        const modalClose = document.getElementById('modalClose');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalBrand = document.getElementById('modalBrand');
-        const modalGallery = document.getElementById('modalGallery');
-        const modalDesc = document.getElementById('modalDesc');
-        const modalSKU = document.getElementById('modalSKU');
-        const modalPrice = document.getElementById('modalPrice');
-        const modalCategory = document.getElementById('modalCategory');
-        const modalTagline = document.getElementById('taglineSection');
-        const taglineSection = document.getElementById('taglineSection');
-        const modalColors = document.getElementById('modalColors');
-        const modalSpecs = document.getElementById('modalSpecs');
-        const modalLink = document.getElementById('modalLink');
-        const modalLengthsContainer = document.getElementById('modalLengths');
-        const lengthsList = document.getElementById('lengthsList');
+        <a href="${p.url_proizvoda}" target="_blank" style="margin-top:auto; color:var(--gold); text-decoration:none; padding-top:1.5rem; font-weight:bold; text-align:center; font-size:0.9rem;">POGLEDAJ NA SAJTU →</a>
+      </article>
+    `}).join('');
+  }
 
+  window.switchImage = (productId, newSrc, thumbElement) => {
+    const card = document.getElementById(productId);
+    card.querySelector('.main-img').src = newSrc;
+    card.querySelectorAll('.thumbnails img').forEach(t => t.classList.remove('active'));
+    thumbElement.classList.add('active');
+  };
 
-        // START funkcija koja inicijalizuje aplikaciju
-        (async () => {
-            const commit = await getLatestCommit();
-            GITHUB_RAW_BASE = `https://raw.githubusercontent.com/MikiMix-Git/SonusArtBA/${commit}/json`;
-            updateInfo.textContent = `– Podaci ažurirani: ${new Date().toLocaleDateString('sr-RS')} (commit ${commit.slice(0,7)})`;
+  window.openLightbox = (productId) => {
+    const product = ALL_PRODUCTS.find(p => p.id === productId);
+    if (!product || !product.url_slika || product.url_slika.length === 0) return;
+    const currentSrc = document.getElementById(productId).querySelector('.main-img').src;
+    let startIndex = product.url_slika.indexOf(currentSrc);
+    if (startIndex === -1) startIndex = 0;
+    currentLightboxData = { images: product.url_slika, index: startIndex };
+    updateLightboxUI();
+    document.getElementById('imageModal').classList.add('open');
+  };
 
-            // Učitavanje JSON fajlova
-            const data = await Promise.all(files.map(f => fetch(GITHUB_RAW_BASE + '/' + f).then(r => r.ok ? r.json() : [])));
-            allProducts = data.flat();
+  function updateLightboxUI() {
+    const img = document.getElementById('modalImg');
+    const counter = document.getElementById('modalCounter');
+    const { images, index } = currentLightboxData;
+    img.src = images[index];
+    counter.textContent = `${index + 1} / ${images.length}`;
+  }
 
-            allProducts.forEach(p => {
-                brands.add(getBrandDisplay(p).name);
-                if (p.kategorije) categories.add(p.kategorije);
-            });
+  window.changeLightboxImage = (step) => {
+    const { images, index } = currentLightboxData;
+    let newIndex = (index + step + images.length) % images.length;
+    currentLightboxData.index = newIndex;
+    updateLightboxUI();
+  };
 
-            populateFilters();
-            renderProducts();
-            loading.style.display = 'none';
-            grid.style.display = 'grid';
-        })();
+  window.closeModal = () => document.getElementById('imageModal').classList.remove('open');
 
-        // Mapiranje URL-ova na čitljiva imena brendova
-        function getBrandDisplay(p) {
-            // DODAT 'polkaudio' mapiranje
-            const map = {
-                'qacoustics':'Q Acoustics',
-                'dynaudio':'Dynaudio',
-                'marantz':'Marantz',
-                'denon':'Denon',
-                'bowers':'Bowers & Wilkins',
-                'argon':'Argon Audio',
-                'polkaudio':'Polk Audio' // Novo
-            };
-            const logo = p.brend_logo_url || '';
-            for (const k in map) if (logo.includes(k)) return {name:map[k], url:logo};
-            return {name:'Audio', url:null};
-        }
+  window.toggleFold = (btn) => {
+    const fold = btn.nextElementSibling;
+    const isOpen = fold.classList.toggle('open');
+    btn.textContent = isOpen ? btn.textContent.replace('↓', '↑') : btn.textContent.replace('↑', '↓');
+  };
 
-        // Popunjavanje padajućih lista za filtriranje
-        function populateFilters() {
-            const brandFilter = document.getElementById('brandFilter');
-            const categoryFilter = document.getElementById('categoryFilter');
-            
-            [...brands].sort().forEach(b => {const o=new Option(b,b); brandFilter.add(o);});
-            [...categories].sort().forEach(c => {const o=new Option(c,c); categoryFilter.add(o);});
-        }
-
-        // Renderovanje proizvoda na osnovu filtera i pretrage
-        function renderProducts() {
-            const searchInput = document.getElementById('searchInput');
-            const brandFilter = document.getElementById('brandFilter');
-            const categoryFilter = document.getElementById('categoryFilter');
-            const stats = document.getElementById('stats');
-
-            const q = searchInput.value.toLowerCase();
-            const b = brandFilter.value;
-            const c = categoryFilter.value;
-            
-            const filtered = allProducts.filter(p => 
-                (!q || p.ime_proizvoda?.toLowerCase().includes(q) || p.sku?.toLowerCase().includes(q)) &&
-                (!b || getBrandDisplay(p).name === b) &&
-                (!c || p.kategorije === c)
-            );
-
-            grid.innerHTML = '';
-            stats.textContent = `${filtered.length} od ${allProducts.length} proizvoda`;
-            
-            if (!filtered.length) { 
-                noResults.style.display = 'block'; 
-                return; 
-            }
-            noResults.style.display = 'none';
-
-            filtered.forEach(p => {
-                const card = document.createElement('div'); card.className = 'card';
-                const brand = getBrandDisplay(p);
-                const mainImg = p.url_slika?.[0] || fallback;
-
-                // Brand Logo/Ime na slici
-                const logoDiv = document.createElement('div'); logoDiv.className = 'brand-logo-container';
-                if (brand.url) {
-                    const img = document.createElement('img'); img.src = brand.url;
-                    // Proširena lista za invertovanje logotipa
-                    if (brand.name==='Argon Audio' || brand.name==='Denon' || brand.name==='Polk Audio') img.classList.add('force-dark');
-                    img.onerror = () => logoDiv.textContent = brand.name;
-                    logoDiv.appendChild(img);
-                } else logoDiv.textContent = brand.name;
-
-                // Prikaz boja (swatches) - AŽURIRANO: Dodata podrška za Base64 (data:)
-                const colorsHtml = (p.dodatne_informacije?.dostupne_boje || []).slice(0,5).map(c => {
-                    const colorName = c.ime_boje || 'Boja';
-                    
-                    if (c.url_uzorka?.startsWith('http') || c.url_uzorka?.startsWith('data:')) { // PROVERA I ZA Base64
-                        return `<div class="color-swatch" title="${colorName}"><img src="${c.url_uzorka}"></div>`;
-                    } else if (c.url_uzorka?.startsWith('#')) {
-                        return `<div class="color-swatch hex" title="${colorName}" style="--swatch-color:${c.url_uzorka};"></div>`;
-                    } else if (colorName) {
-                        // Fallback: sivi krug sa imenom boje u tooltipu
-                        return `<div class="color-swatch" title="${colorName}" style="background:#ddd; border-color:#999;"></div>`;
-                    }
-                    return `<div class="color-swatch" style="background:#ccc;"></div>`;
-                }).join('');
-
-                card.innerHTML = `
-                    <div class="card-img"><img src="${mainImg}" class="product" onerror="this.src='${fallback}'"></div>
-                    <div class="card-body">
-                        <div class="card-category">${p.kategorije||'N/A'}</div>
-                        <div class="card-title">${p.ime_proizvoda||'Nema imena'}</div>
-                        <div class="card-sku">SKU: ${p.sku||'N/A'}</div>
-                        <div class="card-price">${p.cena||'Cena nedostupna'}</div>
-                        <div class="colors">${colorsHtml}</div>
-                    </div>`;
-                card.querySelector('.card-img').prepend(logoDiv);
-                card.onclick = () => openModal(p);
-                grid.appendChild(card);
-            });
-        }
-
-        // Otvaranje modalnog prozora sa detaljima proizvoda
-        function openModal(p) {
-            modalTitle.textContent = p.ime_proizvoda || 'Nema imena';
-            modalBrand.textContent = getBrandDisplay(p).name;
-            modalSKU.textContent = p.sku || 'N/A';
-            modalPrice.textContent = p.cena || 'Cena nedostupna';
-            modalCategory.textContent = p.kategorije || 'N/A';
-            // Zamena novih linija sa <br> za pravilan prikaz opisa
-            modalDesc.innerHTML = p.opis ? p.opis.replace(/\n/g,'<br>') : 'Opis nije dostupan';
-            
-            // Prikaz tagline-a samo ako postoji
-            taglineSection.style.display = (p.dodatne_informacije?.tagline && p.dodatne_informacije.tagline!=='Tagline nedostupan') ? 'block' : 'none';
-            if (taglineSection.style.display==='block') modalTagline.textContent = p.dodatne_informacije.tagline;
-
-            // Galerija slika
-            modalGallery.innerHTML = '';
-            (p.url_slika||[]).forEach(src => {
-                const img = document.createElement('img'); img.src = src; img.onerror = () => img.src = fallback;
-                img.onclick = () => window.open(src,'_blank'); // Otvara sliku u novom tabu
-                modalGallery.appendChild(img);
-            });
-
-            // Veliki prikaz dostupnih boja - AŽURIRANO: Dodata podrška za Base64 (data:)
-            modalColors.innerHTML = '';
-            (p.dodatne_informacije?.dostupne_boje||[]).forEach(c => {
-                const colorName = c.ime_boje || 'Boja';
-                const d = document.createElement('div'); d.className='color-swatch colors-big';
-                d.title = colorName; // Dodavanje Tooltipa
-
-                if (c.url_uzorka?.startsWith('http') || c.url_uzorka?.startsWith('data:')) { // PROVERA I ZA Base64
-                    const i=document.createElement('img'); i.src=c.url_uzorka; d.appendChild(i); 
-                }
-                else if (c.url_uzorka?.startsWith('#')) { 
-                    d.classList.add('hex'); d.style.setProperty('--swatch-color',c.url_uzorka); 
-                } 
-                else if (colorName) {
-                    // Fallback: siva pozadina kada nedostaje URL ili HEX kod
-                    d.style.backgroundColor = '#ddd'; 
-                    d.style.borderColor = '#999';
-                }
-
-                modalColors.appendChild(d);
-            });
-
-            // Logika za prikaz dostupnih dužina
-            const lengths = p.dodatne_informacije?.dostupne_dužine || [];
-            lengthsList.innerHTML = '';
-            if (lengths.length > 0) {
-                lengths.forEach(l => {
-                    if (l.dužina) {
-                        const span = document.createElement('span');
-                        span.className = 'length-tag';
-                        span.textContent = l.dužina;
-                        lengthsList.appendChild(span);
-                    }
-                });
-                modalLengthsContainer.style.display = lengthsList.children.length > 0 ? 'block' : 'none';
-            } else {
-                modalLengthsContainer.style.display = 'none';
-            }
-
-            // Tabela specifikacija
-            modalSpecs.innerHTML = '';
-            const specs = p.specifikacije || {};
-            if (Object.keys(specs).length===0) modalSpecs.innerHTML = '<tr><td colspan="2">Nema specifikacija</td></tr>';
-            else Object.entries(specs).forEach(([k,v]) => {
-                modalSpecs.innerHTML += `<tr><th>${k}</th><td>${v}</td></tr>`;
-            });
-
-            modalLink.onclick = () => window.open(p.url_proizvoda,'_blank');
-            modal.classList.add('active');
-        }
-
-        // Zatvaranje modalnog prozora
-        modalClose.onclick = () => modal.classList.remove('active');
-        modal.onclick = e => { if (e.target===modal) modal.classList.remove('active'); };
-        document.addEventListener('keydown', e => { if (e.key==='Escape') modal.classList.remove('active'); });
-
-        // Povezivanje input i select elemenata sa funkcijom renderovanja
-        searchInput.oninput = brandFilter.onchange = categoryFilter.onchange = renderProducts;
-    </script>
+  document.getElementById('q').oninput = render;
+  document.getElementById('brandFilter').onchange = render;
+  document.getElementById('typeFilter').onchange = render;
+  init();
+</script>
 </body>
 </html>
